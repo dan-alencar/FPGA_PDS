@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../../../../../AMD/2025.1/data/rsb/busdef" --include "../../../../fft_fpga_20251.gen/sources_1/ip/clk_wiz_0" --include "../../../../fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog" --include "/home/danilo-alencar/AMD/2025.1/Vivado/data/xilinx_vip/include" \
+"../../../../fft_fpga_20251.srcs/sources_1/new/video_pattern_gen.sv" \
+"../../../../fft_fpga_20251.srcs/sources_1/new/video_timing_gen.sv" \
+"../../../../fft_fpga_20251.srcs/sim_1/new/tb_video_pipeline.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
