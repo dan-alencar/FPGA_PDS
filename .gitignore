@@ -1,35 +1,16 @@
 # ==============================================================================
-# CROC FPGA Project - Git Ignore
+# Sintetizador FPGA Project - Git Ignore
 # ==============================================================================
 
 # ==============================================================================
 # VIVADO PROJECT OUTPUT (Gerado automaticamente)
 # ==============================================================================
-# A pasta Aging_V2 contém todo o projeto Vivado gerado.
+# A pasta fft_fpga contém todo o projeto Vivado gerado.
 # NÃO versionar - cada usuário deve gerar localmente.
-Aging_V2/
 
 # Logs de build do Vivado
 *.log
 *.jou
-
-# ==============================================================================
-# VIVADO TEMPORARY FILES
-# ==============================================================================
-*.str
-*.dcp
-*.wdf
-*.xml
-*.html
-.Xil/
-*.pb
-*.cache/
-*.hw/
-*.ip_user_files/
-*.runs/
-*.sim/
-*.srcs/
-*.gen/
 
 # ==============================================================================
 # PYTHON
