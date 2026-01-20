@@ -48,3 +48,17 @@ set_property PACKAGE_PIN P6 [get_ports {hdmi_tx_n[3]}]
 # - Do NOT use OBUFDS for TMDS clock
 # - Clock is serialized and driven by the PHY
 ####################################################################################################
+
+####################################################################################################
+# LEDs de Debug para o Bring-up do HDMI
+####################################################################################################
+
+set_property PACKAGE_PIN A10        [get_ports {led_debug[0]}] ;    # Bank 85 - VCCO_85 - IO_L11N_AD9N_85 - RED LED D31
+set_property PACKAGE_PIN AE15       [get_ports {led_debug[1]}] ;    # Bank 85 - VCCO_85 - IO_L3N_AD9N_84  - RGB LED D35 (RED)
+set_property PACKAGE_PIN AD15       [get_ports {led_debug[2]}] ;    # Bank 85 - VCCO_85 - IO_L3P_AD9P_84  - RGB LED D35 (GREEN)
+set_property PACKAGE_PIN AF13       [get_ports {led_debug[3]}] ;    # Bank 85 - VCCO_85 - IO_L2N_AD10N_84 - RGB LED D35 (BLUE)
+
+set_property IOSTANDARD LVCMOS33    [get_ports {led_debug[0]}] ;    # Bank 85 - VCCO_85 - IO_L11N_AD9N_85 - RED LED D31
+set_property IOSTANDARD LVCMOS18    [get_ports {led_debug[1]}] ;    # Bank 85 - VCCO_85 - IO_L3N_AD9N_84  - RGB LED D35 (RED)
+set_property IOSTANDARD LVCMOS18    [get_ports {led_debug[2]}] ;    # Bank 85 - VCCO_85 - IO_L3P_AD9P_84  - RGB LED D35 (GREEN)
+set_property IOSTANDARD LVCMOS18    [get_ports {led_debug[3]}] ;    # Bank 85 - VCCO_85 - IO_L2N_AD10N_84 - RGB LED D35 (BLUE)

@@ -19,7 +19,10 @@ module hdmi_phy_wrapper (
     // HDMI TMDS outputs (GTH lanes)
     // [0] Blue, [1] Green, [2] Red, [3] Clock
     output logic [3:0] hdmi_tx_p,
-    output logic [3:0] hdmi_tx_n
+    output logic [3:0] hdmi_tx_n,
+    
+    // LEDs de Debug para o Bring-up do HDMI
+    output logic [3:0] led_debug
 );
 
     // =========================================================
@@ -139,4 +142,9 @@ module hdmi_phy_wrapper (
         .drpclk             (clk_pixel)
     );
 
+    assign led_debug[0] = tx_refclk_rdy;
+    assign led_debug[1] = tvalid_4px;
+    assign led_debug[2] = de_4px;
+    assign led_debug[3] = phy_rst_n;
+    
 endmodule
