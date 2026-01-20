@@ -52,7 +52,7 @@
 
 `timescale 1 ns/1 ps
 
-module vid_phy_controller_v2_2_22_sync_pulse
+module vid_phy_controller_v2_2_20_sync_pulse
 #(
   parameter   C_NUM_SRETCH_REGS = 3,
   parameter   C_NUM_SYNC_REGS = 3

@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Tue Jan 20 19:20:39 2026
-# Process ID         : 394043
+# Start of session at: Tue Jan 20 17:43:21 2026
+# Process ID         : 148356
 # Current directory  : /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/synth_1
 # Command line       : vivado -log hdmi_phy_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_phy_wrapper.tcl
 # Log file           : /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/synth_1/hdmi_phy_wrapper.vds
@@ -13,13 +13,13 @@
 # Platform           : Linuxmint
 # Operating System   : Linux Mint 22.2
 # Processor Detail   : Intel(R) Core(TM) 5 210H
-# CPU Frequency      : 400.000 MHz
+# CPU Frequency      : 583.447 MHz
 # CPU Physical cores : 8
 # CPU Logical cores  : 12
 # Host memory        : 24783 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 26931 MB
-# Available Virtual  : 15682 MB
+# Available Virtual  : 17794 MB
 #-----------------------------------------------------------
 source hdmi_phy_wrapper.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/utils_1/imports/synth_1/hdmi_phy_wrapper.dcp
@@ -27,8 +27,6 @@ INFO: [Vivado 12-5825] Read reference checkpoint from /home/dan-alencar/Document
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top hdmi_phy_wrapper -part xcau15p-ffvb676-2-e
 Starting synth_design
-INFO: [IP_Flow 19-2162] IP 'vid_phy_controller_0' is locked:
-* IP file '/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0.xml' for IP 'vid_phy_controller_0' contains stale content.
 Attempting to get a license for feature 'Synthesis' and/or device 'xcau15p'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p'
 INFO: [Device 21-403] Loading part xcau15p-ffvb676-2-e
@@ -36,11 +34,11 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 394104
+INFO: [Synth 8-7075] Helper process launched with PID 148409
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2476.738 ; gain = 459.688 ; free physical = 5148 ; free virtual = 13359
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2447.566 ; gain = 451.688 ; free physical = 7426 ; free virtual = 15415
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'hdmi_phy_wrapper' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_phy_wrapper' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:16]
 INFO: [Synth 8-6157] synthesizing module 'video_pipeline_top' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/video_pipeline_top.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'video_timing_gen' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/video_timing_gen.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'video_timing_gen' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/video_timing_gen.sv:1]
@@ -53,56 +51,54 @@ INFO: [Synth 8-6155] done synthesizing module 'tmds_encoder_top' (0#1) [/home/da
 INFO: [Synth 8-6155] done synthesizing module 'video_pipeline_top' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/video_pipeline_top.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'tmds_packer_4px' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/tmds_packer_4px.sv:9]
 INFO: [Synth 8-6155] done synthesizing module 'tmds_packer_4px' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/tmds_packer_4px.sv:9]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/synth_1/.Xil/Vivado-394043-dan-alencar/realtime/vid_phy_controller_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/synth_1/.Xil/Vivado-394043-dan-alencar/realtime/vid_phy_controller_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'irq' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_status_sb_tx_tdata' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_status_sb_tx_tvalid' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_status_sb_tx_tready' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_awaddr' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_awprot' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_awvalid' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_awready' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_wdata' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_wstrb' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_wvalid' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_wready' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_bresp' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_bvalid' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_bready' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_araddr' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_arprot' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_arvalid' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_arready' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_rdata' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_rresp' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_rvalid' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_rready' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_aclk' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_aresetn' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-WARNING: [Synth 8-7023] instance 'phy_inst' of module 'vid_phy_controller_0' has 52 connections declared, but only 27 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:174]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_phy_wrapper' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:19]
-WARNING: [Synth 8-3917] design hdmi_phy_wrapper has port hdmi_tx_en driven by constant 1
-WARNING: [Synth 8-3917] design hdmi_phy_wrapper has port hdmi_clk_rst_n driven by constant 1
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/synth_1/.Xil/Vivado-148356-dan-alencar/realtime/vid_phy_controller_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/synth_1/.Xil/Vivado-148356-dan-alencar/realtime/vid_phy_controller_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'irq' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_status_sb_tx_tdata' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_status_sb_tx_tvalid' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_status_sb_tx_tready' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_awaddr' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_awprot' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_awvalid' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_awready' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_wdata' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_wstrb' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_wvalid' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_wready' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_bresp' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_bvalid' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_bready' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_araddr' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_arprot' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_arvalid' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_arready' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_rdata' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_rresp' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_rvalid' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_rready' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_aclk' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7071] port 'vid_phy_axi4lite_aresetn' of module 'vid_phy_controller_0' is unconnected for instance 'phy_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+WARNING: [Synth 8-7023] instance 'phy_inst' of module 'vid_phy_controller_0' has 52 connections declared, but only 27 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:104]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_phy_wrapper' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv:16]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2564.707 ; gain = 547.656 ; free physical = 5084 ; free virtual = 13296
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2543.535 ; gain = 547.656 ; free physical = 7350 ; free virtual = 15340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2570.645 ; gain = 553.594 ; free physical = 5084 ; free virtual = 13296
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2558.379 ; gain = 562.500 ; free physical = 7350 ; free virtual = 15339
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2570.645 ; gain = 553.594 ; free physical = 5084 ; free virtual = 13296
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2558.379 ; gain = 562.500 ; free physical = 7350 ; free virtual = 15339
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2570.645 ; gain = 0.000 ; free physical = 5084 ; free virtual = 13296
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2558.379 ; gain = 0.000 ; free physical = 7350 ; free virtual = 15339
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0/vid_phy_controller_0_in_context.xdc] for cell 'phy_inst'
-create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2680.109 ; gain = 22.812 ; free physical = 5110 ; free virtual = 13322
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2664.555 ; gain = 26.219 ; free physical = 7349 ; free virtual = 15323
 Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0/vid_phy_controller_0_in_context.xdc] for cell 'phy_inst'
 Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc]
 Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc]
@@ -110,16 +106,16 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_phy_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2680.109 ; gain = 0.000 ; free physical = 5110 ; free virtual = 13322
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2664.555 ; gain = 0.000 ; free physical = 7349 ; free virtual = 15323
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2680.145 ; gain = 0.000 ; free physical = 5110 ; free virtual = 13322
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2664.590 ; gain = 0.000 ; free physical = 7349 ; free virtual = 15323
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'phy_inst' at clock pin 'drpclk' is different from the actual clock period '6.734', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2680.145 ; gain = 663.094 ; free physical = 5146 ; free virtual = 13358
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2664.590 ; gain = 668.711 ; free physical = 7357 ; free virtual = 15331
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -127,16 +123,16 @@ Start Loading Part and Timing Information
 Loading part: xcau15p-ffvb676-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2688.113 ; gain = 671.062 ; free physical = 5146 ; free virtual = 13358
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2672.559 ; gain = 676.680 ; free physical = 7357 ; free virtual = 15331
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2688.113 ; gain = 671.062 ; free physical = 5146 ; free virtual = 13358
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2672.559 ; gain = 676.680 ; free physical = 7357 ; free virtual = 15331
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2688.113 ; gain = 671.062 ; free physical = 5137 ; free virtual = 13350
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2672.559 ; gain = 676.680 ; free physical = 7358 ; free virtual = 15333
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -145,7 +141,6 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   12 Bit       Adders := 1     
 	   2 Input   11 Bit       Adders := 1     
-	   2 Input    8 Bit       Adders := 1     
 	   4 Input    6 Bit       Adders := 3     
 	   3 Input    6 Bit       Adders := 3     
 	   5 Input    6 Bit       Adders := 3     
@@ -159,10 +154,10 @@ Detailed RTL Component Info :
 	               12 Bit    Registers := 1     
 	               11 Bit    Registers := 1     
 	               10 Bit    Registers := 3     
-	                8 Bit    Registers := 4     
+	                8 Bit    Registers := 3     
 	                6 Bit    Registers := 3     
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 6     
 +---Muxes : 
 	   5 Input   10 Bit        Muxes := 3     
 	   2 Input   10 Bit        Muxes := 6     
@@ -187,28 +182,26 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3917] design hdmi_phy_wrapper has port hdmi_tx_en driven by constant 1
-WARNING: [Synth 8-3917] design hdmi_phy_wrapper has port hdmi_clk_rst_n driven by constant 1
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2688.113 ; gain = 671.062 ; free physical = 5150 ; free virtual = 13368
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2672.559 ; gain = 676.680 ; free physical = 7332 ; free virtual = 15312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2947.789 ; gain = 930.738 ; free physical = 4976 ; free virtual = 13194
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2927.203 ; gain = 931.324 ; free physical = 7176 ; free virtual = 15156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2979.836 ; gain = 962.785 ; free physical = 4976 ; free virtual = 13194
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2958.250 ; gain = 962.371 ; free physical = 7153 ; free virtual = 15132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2979.836 ; gain = 962.785 ; free physical = 4976 ; free virtual = 13194
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2958.250 ; gain = 962.371 ; free physical = 7153 ; free virtual = 15132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -225,7 +218,6 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-4442] BlackBox module phy_inst has unconnected pin tx_refclk_rdy
 CRITICAL WARNING: [Synth 8-4442] BlackBox module phy_inst has unconnected pin vid_phy_status_sb_tx_tready
 CRITICAL WARNING: [Synth 8-4442] BlackBox module phy_inst has unconnected pin vid_phy_axi4lite_awaddr[9]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module phy_inst has unconnected pin vid_phy_axi4lite_awaddr[8]
@@ -297,37 +289,37 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module phy_inst has unconnected pin vi
 CRITICAL WARNING: [Synth 8-4442] BlackBox module phy_inst has unconnected pin vid_phy_axi4lite_aclk
 CRITICAL WARNING: [Synth 8-4442] BlackBox module phy_inst has unconnected pin vid_phy_axi4lite_aresetn
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3144.648 ; gain = 1127.598 ; free physical = 4844 ; free virtual = 13053
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3124.062 ; gain = 1128.184 ; free physical = 7024 ; free virtual = 15003
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3144.648 ; gain = 1127.598 ; free physical = 4844 ; free virtual = 13053
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3124.062 ; gain = 1128.184 ; free physical = 7024 ; free virtual = 15003
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3144.648 ; gain = 1127.598 ; free physical = 4844 ; free virtual = 13053
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3124.062 ; gain = 1128.184 ; free physical = 7024 ; free virtual = 15003
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3144.648 ; gain = 1127.598 ; free physical = 4844 ; free virtual = 13053
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3124.062 ; gain = 1128.184 ; free physical = 7024 ; free virtual = 15003
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3144.648 ; gain = 1127.598 ; free physical = 4844 ; free virtual = 13053
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3124.062 ; gain = 1128.184 ; free physical = 7024 ; free virtual = 15003
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3144.648 ; gain = 1127.598 ; free physical = 4844 ; free virtual = 13053
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3124.062 ; gain = 1128.184 ; free physical = 7022 ; free virtual = 15002
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -345,44 +337,43 @@ Report Cell Usage:
 |      |Cell               |Count |
 +------+-------------------+------+
 |1     |vid_phy_controller |     1|
-|2     |CARRY8             |     7|
-|3     |LUT1               |     6|
-|4     |LUT2               |    26|
-|5     |LUT3               |    19|
-|6     |LUT4               |    21|
-|7     |LUT5               |    20|
-|8     |LUT6               |    33|
-|9     |FDCE               |    88|
+|2     |CARRY8             |     3|
+|3     |LUT1               |     3|
+|4     |LUT2               |    24|
+|5     |LUT3               |    16|
+|6     |LUT4               |    20|
+|7     |LUT5               |    19|
+|8     |LUT6               |    20|
+|9     |FDCE               |    52|
 |10    |FDRE               |    53|
-|11    |IBUF               |     2|
-|12    |OBUF               |     6|
+|11    |IBUF               |     1|
 +------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3144.648 ; gain = 1127.598 ; free physical = 4844 ; free virtual = 13053
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3124.062 ; gain = 1128.184 ; free physical = 7022 ; free virtual = 15002
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 71 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3144.648 ; gain = 1018.098 ; free physical = 4844 ; free virtual = 13053
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3144.648 ; gain = 1127.598 ; free physical = 4844 ; free virtual = 13053
+Synthesis finished with 0 errors, 70 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 3124.062 ; gain = 1021.973 ; free physical = 7024 ; free virtual = 15004
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3124.062 ; gain = 1128.184 ; free physical = 7024 ; free virtual = 15004
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3144.648 ; gain = 0.000 ; free physical = 5008 ; free virtual = 13217
-INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3124.062 ; gain = 0.000 ; free physical = 7182 ; free virtual = 15162
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3144.648 ; gain = 0.000 ; free physical = 4916 ; free virtual = 13135
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3124.062 ; gain = 0.000 ; free physical = 7182 ; free virtual = 15162
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+  A total of 1 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
 
-Synth Design complete | Checksum: 63139d4b
+Synth Design complete | Checksum: 4995f674
 INFO: [Common 17-83] Releasing license: Synthesis
-39 Infos, 31 Warnings, 71 Critical Warnings and 0 Errors encountered.
+38 Infos, 27 Warnings, 70 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:24 . Memory (MB): peak = 3144.648 ; gain = 1520.957 ; free physical = 4894 ; free virtual = 13112
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2406.690; main = 2182.663; forked = 281.775
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4095.082; main = 3109.129; forked = 995.242
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 3124.062 ; gain = 1498.402 ; free physical = 7183 ; free virtual = 15163
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2419.280; main = 2171.188; forked = 282.118
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4119.309; main = 3124.066; forked = 995.242
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3144.648 ; gain = 0.000 ; free physical = 4891 ; free virtual = 13109
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3124.062 ; gain = 0.000 ; free physical = 7183 ; free virtual = 15163
 INFO: [Common 17-1381] The checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/synth_1/hdmi_phy_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file hdmi_phy_wrapper_utilization_synth.rpt -pb hdmi_phy_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 20 19:21:07 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 20 17:43:48 2026...

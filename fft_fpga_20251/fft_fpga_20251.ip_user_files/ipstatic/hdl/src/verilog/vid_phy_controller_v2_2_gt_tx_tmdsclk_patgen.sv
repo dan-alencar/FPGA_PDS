@@ -56,10 +56,10 @@
 
 */
 
-`include "vid_phy_controller_v2_2_22_defs.v"
+`include "vid_phy_controller_v2_2_20_defs.v"
 `default_nettype none
 
-module vid_phy_controller_v2_2_22_gt_tx_tmdsclk_patgen #
+module vid_phy_controller_v2_2_20_gt_tx_tmdsclk_patgen #
 (
 	parameter integer   TXDATA_WIDTH     = 40
 )

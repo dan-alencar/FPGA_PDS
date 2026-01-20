@@ -44,12 +44,12 @@
 // PART OF THIS FILE AT ALL TIMES.
 ////////////////////////////////////////////////////////////
 
-`include "vid_phy_controller_v2_2_22_defs.v"
+`include "vid_phy_controller_v2_2_20_defs.v"
 `timescale 1ns / 1ps
 
 //***********************************Entity Declaration*******************************
 
-module vid_phy_controller_v2_2_22_drp_control_hdmi #
+module vid_phy_controller_v2_2_20_drp_control_hdmi #
 (
   parameter   DRP_ADDR_WIDTH    =   9
 )

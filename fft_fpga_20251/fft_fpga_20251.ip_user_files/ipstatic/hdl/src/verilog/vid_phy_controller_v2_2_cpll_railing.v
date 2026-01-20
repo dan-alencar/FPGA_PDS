@@ -47,7 +47,7 @@
 `timescale 1ns / 1ps
 `define DLY #1
 
-module vid_phy_controller_v2_2_22_cpll_railing #
+module vid_phy_controller_v2_2_20_cpll_railing #
 (
        parameter     USE_BUFG            = 0 //set it to 1 if you want to use BUFG
 )

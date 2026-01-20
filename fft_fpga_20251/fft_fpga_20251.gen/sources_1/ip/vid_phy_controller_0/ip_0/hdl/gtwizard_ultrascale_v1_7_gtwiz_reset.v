@@ -50,7 +50,7 @@
 
 `timescale 1ps/1ps
 
-module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
+module gtwizard_ultrascale_v1_7_20_gtwiz_reset # (
 
   parameter real    P_FREERUN_FREQUENCY       = 200,
   parameter integer P_USE_CPLL_CAL            = 0,
@@ -111,7 +111,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Synchronize the "reset all" input signal into the free-running clock domain
   wire gtwiz_reset_all_sync;
-  gtwizard_ultrascale_v1_7_22_reset_synchronizer reset_synchronizer_gtwiz_reset_all_inst (
+  gtwizard_ultrascale_v1_7_20_reset_synchronizer reset_synchronizer_gtwiz_reset_all_inst (
     .clk_in  (gtwiz_reset_clk_freerun_in),
     .rst_in  (gtwiz_reset_all_in),
     .rst_out (gtwiz_reset_all_sync)
@@ -119,7 +119,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Synchronize the transceiver power good indicator
   wire gtpowergood_sync;
-  gtwizard_ultrascale_v1_7_22_bit_synchronizer bit_synchronizer_gtpowergood_inst (
+  gtwizard_ultrascale_v1_7_20_bit_synchronizer bit_synchronizer_gtpowergood_inst (
     .clk_in (gtwiz_reset_clk_freerun_in),
     .i_in   (gtpowergood_in),
     .o_out  (gtpowergood_sync)
@@ -260,7 +260,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
   assign gtwiz_reset_tx_any = gtwiz_reset_tx_pll_and_datapath_in  ||
                               gtwiz_reset_tx_pll_and_datapath_int ||
                               gtwiz_reset_tx_datapath_in;
-  gtwizard_ultrascale_v1_7_22_reset_synchronizer reset_synchronizer_gtwiz_reset_tx_any_inst (
+  gtwizard_ultrascale_v1_7_20_reset_synchronizer reset_synchronizer_gtwiz_reset_tx_any_inst (
     .clk_in  (gtwiz_reset_clk_freerun_in),
     .rst_in  (gtwiz_reset_tx_any),
     .rst_out (gtwiz_reset_tx_any_sync)
@@ -268,7 +268,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Synchronize the OR of the user input and internal TX PLL and data path reset signals
   wire gtwiz_reset_tx_pll_and_datapath_sync;
-  gtwizard_ultrascale_v1_7_22_reset_synchronizer reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst (
+  gtwizard_ultrascale_v1_7_20_reset_synchronizer reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst (
     .clk_in  (gtwiz_reset_clk_freerun_in),
     .rst_in  (gtwiz_reset_tx_pll_and_datapath_in || gtwiz_reset_tx_pll_and_datapath_int),
     .rst_out (gtwiz_reset_tx_pll_and_datapath_sync)
@@ -276,7 +276,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Use another synchronizer to delay the above signal for purposes of its detection following reset
   wire gtwiz_reset_tx_pll_and_datapath_dly;
-  gtwizard_ultrascale_v1_7_22_bit_synchronizer bit_synchronizer_gtwiz_reset_tx_pll_and_datapath_dly_inst (
+  gtwizard_ultrascale_v1_7_20_bit_synchronizer bit_synchronizer_gtwiz_reset_tx_pll_and_datapath_dly_inst (
     .clk_in (gtwiz_reset_clk_freerun_in),
     .i_in   (gtwiz_reset_tx_pll_and_datapath_sync),
     .o_out  (gtwiz_reset_tx_pll_and_datapath_dly)
@@ -284,7 +284,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Synchronize the TX data path reset user input
   wire gtwiz_reset_tx_datapath_sync;
-  gtwizard_ultrascale_v1_7_22_reset_synchronizer reset_synchronizer_gtwiz_reset_tx_datapath_inst (
+  gtwizard_ultrascale_v1_7_20_reset_synchronizer reset_synchronizer_gtwiz_reset_tx_datapath_inst (
     .clk_in  (gtwiz_reset_clk_freerun_in),
     .rst_in  (gtwiz_reset_tx_datapath_in),
     .rst_out (gtwiz_reset_tx_datapath_sync)
@@ -292,7 +292,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Use another synchronizer to delay the above signal for purposes of its detection following reset
   wire gtwiz_reset_tx_datapath_dly;
-  gtwizard_ultrascale_v1_7_22_bit_synchronizer bit_synchronizer_gtwiz_reset_tx_datapath_dly_inst (
+  gtwizard_ultrascale_v1_7_20_bit_synchronizer bit_synchronizer_gtwiz_reset_tx_datapath_dly_inst (
     .clk_in (gtwiz_reset_clk_freerun_in),
     .i_in   (gtwiz_reset_tx_datapath_sync),
     .o_out  (gtwiz_reset_tx_datapath_dly)
@@ -300,7 +300,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Synchronize the TX user clock active indicator
   wire gtwiz_reset_userclk_tx_active_sync;
-  gtwizard_ultrascale_v1_7_22_bit_synchronizer bit_synchronizer_gtwiz_reset_userclk_tx_active_inst (
+  gtwizard_ultrascale_v1_7_20_bit_synchronizer bit_synchronizer_gtwiz_reset_userclk_tx_active_inst (
     .clk_in (gtwiz_reset_clk_freerun_in),
     .i_in   (gtwiz_reset_userclk_tx_active_in),
     .o_out  (gtwiz_reset_userclk_tx_active_sync)
@@ -308,7 +308,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Synchronize the TX PLL lock indicator
   wire plllock_tx_sync;
-  gtwizard_ultrascale_v1_7_22_bit_synchronizer bit_synchronizer_plllock_tx_inst (
+  gtwizard_ultrascale_v1_7_20_bit_synchronizer bit_synchronizer_plllock_tx_inst (
     .clk_in (gtwiz_reset_clk_freerun_in),
     .i_in   (plllock_tx_in),
     .o_out  (plllock_tx_sync)
@@ -465,14 +465,14 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
   end
 
   // Hold the TX programmable divider in reset until the TX PLL has locked
-  gtwizard_ultrascale_v1_7_22_reset_synchronizer reset_synchronizer_txprogdivreset_inst (
+  gtwizard_ultrascale_v1_7_20_reset_synchronizer reset_synchronizer_txprogdivreset_inst (
     .clk_in  (gtwiz_reset_clk_freerun_in),
     .rst_in  (~plllock_tx_in),
     .rst_out (txprogdivreset_out)
   );
 
   // Synchronize the reset helper block TX reset done user output into the TXUSRCLK2 domain for user consumption
-  gtwizard_ultrascale_v1_7_22_reset_inv_synchronizer reset_synchronizer_tx_done_inst (
+  gtwizard_ultrascale_v1_7_20_reset_inv_synchronizer reset_synchronizer_tx_done_inst (
     .clk_in  (txusrclk2_in),
     .rst_in  (gtwiz_reset_tx_done_int),
     .rst_out (gtwiz_reset_tx_done_out)
@@ -504,7 +504,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
                               gtwiz_reset_rx_pll_and_datapath_int ||
                               gtwiz_reset_rx_datapath_in          ||
                               gtwiz_reset_rx_datapath_int;
-  gtwizard_ultrascale_v1_7_22_reset_synchronizer reset_synchronizer_gtwiz_reset_rx_any_inst (
+  gtwizard_ultrascale_v1_7_20_reset_synchronizer reset_synchronizer_gtwiz_reset_rx_any_inst (
     .clk_in  (gtwiz_reset_clk_freerun_in),
     .rst_in  (gtwiz_reset_rx_any),
     .rst_out (gtwiz_reset_rx_any_sync)
@@ -512,7 +512,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Synchronize the OR of the user input and internal RX PLL and data path reset signals
   wire gtwiz_reset_rx_pll_and_datapath_sync;
-  gtwizard_ultrascale_v1_7_22_reset_synchronizer reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst (
+  gtwizard_ultrascale_v1_7_20_reset_synchronizer reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst (
     .clk_in  (gtwiz_reset_clk_freerun_in),
     .rst_in  (gtwiz_reset_rx_pll_and_datapath_in || gtwiz_reset_rx_pll_and_datapath_int),
     .rst_out (gtwiz_reset_rx_pll_and_datapath_sync)
@@ -520,7 +520,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Use another synchronizer to delay the above signal for purposes of its detection following reset
   wire gtwiz_reset_rx_pll_and_datapath_dly;
-  gtwizard_ultrascale_v1_7_22_bit_synchronizer bit_synchronizer_gtwiz_reset_rx_pll_and_datapath_dly_inst (
+  gtwizard_ultrascale_v1_7_20_bit_synchronizer bit_synchronizer_gtwiz_reset_rx_pll_and_datapath_dly_inst (
     .clk_in (gtwiz_reset_clk_freerun_in),
     .i_in   (gtwiz_reset_rx_pll_and_datapath_sync),
     .o_out  (gtwiz_reset_rx_pll_and_datapath_dly)
@@ -528,7 +528,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Synchronize the RX data path reset user input
   wire gtwiz_reset_rx_datapath_sync;
-  gtwizard_ultrascale_v1_7_22_reset_synchronizer reset_synchronizer_gtwiz_reset_rx_datapath_inst (
+  gtwizard_ultrascale_v1_7_20_reset_synchronizer reset_synchronizer_gtwiz_reset_rx_datapath_inst (
     .clk_in  (gtwiz_reset_clk_freerun_in),
     .rst_in  (gtwiz_reset_rx_datapath_in || gtwiz_reset_rx_datapath_int),
     .rst_out (gtwiz_reset_rx_datapath_sync)
@@ -536,7 +536,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Use another synchronizer to delay the above signal for purposes of its detection following reset
   wire gtwiz_reset_rx_datapath_dly;
-  gtwizard_ultrascale_v1_7_22_bit_synchronizer bit_synchronizer_gtwiz_reset_rx_datapath_dly_inst (
+  gtwizard_ultrascale_v1_7_20_bit_synchronizer bit_synchronizer_gtwiz_reset_rx_datapath_dly_inst (
     .clk_in (gtwiz_reset_clk_freerun_in),
     .i_in   (gtwiz_reset_rx_datapath_sync),
     .o_out  (gtwiz_reset_rx_datapath_dly)
@@ -544,7 +544,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Synchronize the RX user clock active indicator
   wire gtwiz_reset_userclk_rx_active_sync;
-  gtwizard_ultrascale_v1_7_22_bit_synchronizer bit_synchronizer_gtwiz_reset_userclk_rx_active_inst (
+  gtwizard_ultrascale_v1_7_20_bit_synchronizer bit_synchronizer_gtwiz_reset_userclk_rx_active_inst (
     .clk_in (gtwiz_reset_clk_freerun_in),
     .i_in   (gtwiz_reset_userclk_rx_active_in),
     .o_out  (gtwiz_reset_userclk_rx_active_sync)
@@ -552,7 +552,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Synchronize the RX PLL lock indicator
   wire plllock_rx_sync;
-  gtwizard_ultrascale_v1_7_22_bit_synchronizer bit_synchronizer_plllock_rx_inst (
+  gtwizard_ultrascale_v1_7_20_bit_synchronizer bit_synchronizer_plllock_rx_inst (
     .clk_in (gtwiz_reset_clk_freerun_in),
     .i_in   (plllock_rx_in),
     .o_out  (plllock_rx_sync)
@@ -560,7 +560,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
 
   // Synchronize the RX CDR lock indicator
   wire rxcdrlock_sync;
-  gtwizard_ultrascale_v1_7_22_bit_synchronizer bit_synchronizer_rxcdrlock_inst (
+  gtwizard_ultrascale_v1_7_20_bit_synchronizer bit_synchronizer_rxcdrlock_inst (
     .clk_in (gtwiz_reset_clk_freerun_in),
     .i_in   (rxcdrlock_in),
     .o_out  (rxcdrlock_sync)
@@ -754,7 +754,7 @@ module gtwizard_ultrascale_v1_7_22_gtwiz_reset # (
   assign gtwiz_reset_rx_cdr_stable_out = rxcdrlock_sync;
 
   // Synchronize the reset helper block RX reset done user output into the RXUSRCLK2 domain for user consumption
-  gtwizard_ultrascale_v1_7_22_reset_inv_synchronizer reset_synchronizer_rx_done_inst (
+  gtwizard_ultrascale_v1_7_20_reset_inv_synchronizer reset_synchronizer_rx_done_inst (
     .clk_in  (rxusrclk2_in),
     .rst_in  (gtwiz_reset_rx_done_int),
     .rst_out (gtwiz_reset_rx_done_out)

@@ -49,7 +49,7 @@
 
 //***********************************Entity Declaration*******************************
 
-module vid_phy_controller_v2_2_22_drp_control #
+module vid_phy_controller_v2_2_20_drp_control #
 (
   parameter   DRP_ADDR_WIDTH    =   9
 )
