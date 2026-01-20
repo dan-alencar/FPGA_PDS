@@ -851,7 +851,7 @@ end
 assign cpllpd_ovrd_i = cpllpd_wait[95];
 assign cpllreset_ovrd_i = cpllreset_wait[127];
 
-vid_phy_controller_v2_2_20_sync_block
+vid_phy_controller_v2_2_22_sync_block
   sync_cpllpd
         (
            .clk             (gtrefclk0_in),
@@ -861,7 +861,7 @@ vid_phy_controller_v2_2_20_sync_block
 
 assign cpll_pd_i = cpllpd_sync || cpllpd_ovrd_i;
 
-vid_phy_controller_v2_2_20_sync_block
+vid_phy_controller_v2_2_22_sync_block
   sync_cpllreset
         (
            .clk             (gtrefclk0_in),

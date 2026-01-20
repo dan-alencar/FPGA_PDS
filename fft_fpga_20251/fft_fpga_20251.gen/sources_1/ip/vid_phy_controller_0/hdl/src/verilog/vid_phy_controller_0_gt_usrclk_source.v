@@ -319,7 +319,7 @@ module vid_phy_controller_0_gt_usrclk_source #
            assign MMCM_TX_DRPRDY  = DRP_Status_mmcm_txusrclk[16];
            assign MMCM_TX_DRPDO   = DRP_Status_mmcm_txusrclk[15:0];
 
-           vid_phy_controller_v2_2_20_drp_control_hdmi #  
+           vid_phy_controller_v2_2_22_drp_control_hdmi #  
           (
                .DRP_ADDR_WIDTH (7)
            )
@@ -451,7 +451,7 @@ module vid_phy_controller_0_gt_usrclk_source #
            assign MMCM_RX_DRPRDY  = DRP_Status_mmcm_rxusrclk[16];
            assign MMCM_RX_DRPDO   = DRP_Status_mmcm_rxusrclk[15:0];
            
-           vid_phy_controller_v2_2_20_drp_control_hdmi #  
+           vid_phy_controller_v2_2_22_drp_control_hdmi #  
            (
                .DRP_ADDR_WIDTH (7)
            )

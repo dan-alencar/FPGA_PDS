@@ -50,7 +50,7 @@
 
 `timescale 1ps/1ps
 
-module gtwizard_ultrascale_v1_7_20_gtwiz_userdata_rx #(
+module gtwizard_ultrascale_v1_7_22_gtwiz_userdata_rx #(
 
   parameter integer P_RX_USER_DATA_WIDTH       = 32,
   parameter integer P_RX_DATA_DECODING         = 0,

@@ -12,7 +12,7 @@
     v1.2 - Added enable inputs
 */
 
-`include "vid_phy_controller_v2_2_20_defs.v"
+`include "vid_phy_controller_v2_2_22_defs.v"
 `default_nettype none
 
 module vid_phy_controller_0_clkdet
@@ -362,7 +362,7 @@ xpm_cdc_array_single
     end
 
 // RX lock edge detector
-vid_phy_controller_v2_2_20_lib_edge_v1_0
+vid_phy_controller_v2_2_22_lib_edge_v1_0
     RX_FREQ_LOCK_EDGE_INST
     (
         .CLK_IN     (CLK_IN),
@@ -389,7 +389,7 @@ vid_phy_controller_v2_2_20_lib_edge_v1_0
     end
 
 // TX lock edge detector
-vid_phy_controller_v2_2_20_lib_edge_v1_0
+vid_phy_controller_v2_2_22_lib_edge_v1_0
     TX_FREQ_LOCK_EDGE_INST
     (
         .CLK_IN     (CLK_IN),
@@ -450,7 +450,7 @@ vid_phy_controller_v2_2_20_lib_edge_v1_0
     end
 
 // TX timer end edge detector
-vid_phy_controller_v2_2_20_lib_edge_v1_0
+vid_phy_controller_v2_2_22_lib_edge_v1_0
     TX_TMR_END_EDGE_INST
     (
         .CLK_IN     (CLK_IN),
@@ -528,7 +528,7 @@ vid_phy_controller_v2_2_20_lib_edge_v1_0
     end
 
 // RX timer end edge detector
-vid_phy_controller_v2_2_20_lib_edge_v1_0
+vid_phy_controller_v2_2_22_lib_edge_v1_0
     RX_TMR_END_EDGE_INST
     (
         .CLK_IN     (CLK_IN),

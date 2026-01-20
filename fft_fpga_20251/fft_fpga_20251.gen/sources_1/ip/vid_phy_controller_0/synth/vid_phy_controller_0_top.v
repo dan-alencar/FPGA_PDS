@@ -38,7 +38,7 @@
 // THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
 // PART OF THIS FILE AT ALL TIMES.
 
-`include "vid_phy_controller_v2_2_20_defs.v"
+`include "vid_phy_controller_v2_2_22_defs.v"
 `timescale 1ns / 1ps
 `define DLY #1
 
@@ -63,8 +63,8 @@ module vid_phy_controller_0_top #
         parameter integer C_TransceiverControl          = "false",
         parameter         c_sub_core_name               = "subcore",
         // GT Specific Parameters       
-        parameter integer C_Tx_No_Of_Channels           =  4,   // baoshan: get from modelparam
-        parameter integer C_Rx_No_Of_Channels           =  4,   // baoshan: get from modelparam
+        parameter integer C_Tx_No_Of_Channels           =  3,   // baoshan: get from modelparam
+        parameter integer C_Rx_No_Of_Channels           =  3,   // baoshan: get from modelparam
         parameter integer C_Tx_Protocol                 =  1,         // baoshan: get from modelparam
         parameter integer C_Rx_Protocol                 =  3,         // baoshan: get from modelparam
         parameter integer C_Tx_Dp_Protocol              =  0,         // DP 1.4 or DP2.0
@@ -82,7 +82,7 @@ module vid_phy_controller_0_top #
         parameter integer C_RX_TDATA_WIDTH              = 40,
         
         parameter integer C_Txrefclk_Rdy_Invert         = 0,
-        parameter integer C_Use_GT_CH4_HDMI             = 1,
+        parameter integer C_Use_GT_CH4_HDMI             = 0,
         
         // Parameters of Axi Slave Bus Interface vid_phy_axi4lite
         parameter integer C_vid_phy_axi4lite_DATA_WIDTH         = 32,
@@ -355,21 +355,21 @@ wire [0 : 0] gtwiz_reset_tx_done_out;
 wire [0 : 0] gtwiz_reset_rx_done_out;
 wire [17 : 0] gtwiz_gte4_cpll_cal_txoutclk_period_sync;
 wire [17 : 0] gtwiz_gte4_cpll_cal_cnt_tol_in_sync;        
-wire [71 : 0] gtwiz_gte4_cpll_cal_txoutclk_period_in;
-wire [71 : 0] gtwiz_gte4_cpll_cal_cnt_tol_in;        
-wire [3 : 0] gtwiz_gte4_cpll_cal_bufg_ce_in             = {4 {1'b1}};        
+wire [53 : 0] gtwiz_gte4_cpll_cal_txoutclk_period_in;
+wire [53 : 0] gtwiz_gte4_cpll_cal_cnt_tol_in;        
+wire [2 : 0] gtwiz_gte4_cpll_cal_bufg_ce_in             = {3 {1'b1}};        
 wire [0 : 0] gtwiz_reset_tx_done_out_sync;
 wire [0 : 0] gtwiz_reset_rx_done_out_sync;
-wire [3 : 0] gtrefclk0_in_int;
-wire [3 : 0] gtrefclk1_in_int;
-wire [3 : 0] gtgrefclk_in_int;     
-wire [3 : 0] gtnorthrefclk0_in_int;
-wire [3 : 0] gtnorthrefclk1_in_int;
-wire [3 : 0] gtsouthrefclk0_in_int;
-wire [3 : 0] gtsouthrefclk1_in_int;
-wire [159: 0] gtwiz_userdata_tx_in;
-wire [159: 0] gtwiz_userdata_rx_out;
-wire [159: 0] gtwiz_userdata_rx_out_i;   // for HDMI
+wire [2 : 0] gtrefclk0_in_int;
+wire [2 : 0] gtrefclk1_in_int;
+wire [2 : 0] gtgrefclk_in_int;     
+wire [2 : 0] gtnorthrefclk0_in_int;
+wire [2 : 0] gtnorthrefclk1_in_int;
+wire [2 : 0] gtsouthrefclk0_in_int;
+wire [2 : 0] gtsouthrefclk1_in_int;
+wire [119: 0] gtwiz_userdata_tx_in;
+wire [119: 0] gtwiz_userdata_rx_out;
+wire [119: 0] gtwiz_userdata_rx_out_i;   // for HDMI
 wire [16-1 : 0] drpaddr_common_in;
 wire [0 : 0] drpclk_common_in                        = drpclk_i;
 wire [15 : 0] drpdi_common_in;
@@ -381,7 +381,7 @@ wire [0 : 0] qpll1pd_in                              =  cfg_phy_mem_map_control_
 wire [2 : 0] qpll1refclksel_in                       =  cfg_phy_mem_map_control_b0[`QPLL1REFCLKSEL];
 wire [15 : 0] drpdo_common_out;
 wire [0 : 0] drprdy_common_out;
-wire [3 : 0] cplllock_out;
+wire [2 : 0] cplllock_out;
 wire [0 : 0] cplllock_out_dly;
 wire [0 : 0] qpll0lock_out;
 wire [0 : 0] qpll0lock_out_dly;
@@ -394,68 +394,68 @@ wire [0 : 0] refclkoutmonitor1_out;
 
     // HDMI uses these signals
     wire [0 : 0] qpll0outclk_out;
-    wire [3 : 0] qpll0outclk_out_int;
+    wire [2 : 0] qpll0outclk_out_int;
     wire [0 : 0] qpll0outrefclk_out;
-    wire [3 : 0] qpll0outrefclk_out_int;
-    wire [3 : 0] qpll1outclk_out_int;
-    wire [3 : 0] qpll1outrefclk_out_int;
-    wire [3 : 0] rxcdrhold_in;
-    wire [3 : 0] rxlpmhfovrden_in;
-    wire [3 : 0] rxlpmlfklovrden_in;
-    //wire [3 : 0] rxosovrden_in;
-    wire [3 : 0] rxlpmosovrden_in;
-    wire [3 : 0] txelecidle_in;
-    wire [3 : 0] txprgdivresetdone_out;
-    wire [19 : 0] txdiffctrl_in;
-    wire [3 : 0] txinhibit_in;
-    wire [7 : 0] txpd_in;
-    wire [3 : 0] txpolarity_in;
-    wire [19 : 0] txpostcursor_in;
-    wire [3 : 0] rxpolarity_in;
-    wire [3 : 0] rxcdrlock_out;
+    wire [2 : 0] qpll0outrefclk_out_int;
+    wire [2 : 0] qpll1outclk_out_int;
+    wire [2 : 0] qpll1outrefclk_out_int;
+    wire [2 : 0] rxcdrhold_in;
+    wire [2 : 0] rxlpmhfovrden_in;
+    wire [2 : 0] rxlpmlfklovrden_in;
+    //wire [2 : 0] rxosovrden_in;
+    wire [2 : 0] rxlpmosovrden_in;
+    wire [2 : 0] txelecidle_in;
+    wire [2 : 0] txprgdivresetdone_out;
+    wire [14 : 0] txdiffctrl_in;
+    wire [2 : 0] txinhibit_in;
+    wire [5 : 0] txpd_in;
+    wire [2 : 0] txpolarity_in;
+    wire [14 : 0] txpostcursor_in;
+    wire [2 : 0] rxpolarity_in;
+    wire [2 : 0] rxcdrlock_out;
 
-wire [11 : 0] cpllrefclksel_in;
-wire [39 : 0] drpaddr_in;
-wire [3 : 0] drpclk_in;
-wire [63 : 0] drpdi_in;
-wire [3 : 0] drpen_in;
-wire [3 : 0] drpwe_in;
-wire [11 : 0] loopback_in;
+wire [8 : 0] cpllrefclksel_in;
+wire [29 : 0] drpaddr_in;
+wire [2 : 0] drpclk_in;
+wire [47 : 0] drpdi_in;
+wire [2 : 0] drpen_in;
+wire [2 : 0] drpwe_in;
+wire [8 : 0] loopback_in;
 
-wire [3 : 0] rxlpmen_in;
-wire [7 : 0] rxpd_in;   
-wire [7 : 0] rxpllclksel_in;
-wire [3 : 0] rxprbscntreset_in;
-wire [15 : 0] rxprbssel_in;
-wire [7 : 0] rxsysclksel_in;
-wire [3 : 0] rxusrclk_in;
-wire [3 : 0] rxusrclk2_in;
+wire [2 : 0] rxlpmen_in;
+wire [5 : 0] rxpd_in;   
+wire [5 : 0] rxpllclksel_in;
+wire [2 : 0] rxprbscntreset_in;
+wire [11 : 0] rxprbssel_in;
+wire [5 : 0] rxsysclksel_in;
+wire [2 : 0] rxusrclk_in;
+wire [2 : 0] rxusrclk2_in;
 
-wire [7 : 0] txpllclksel_in;
-wire [3 : 0] txprbsforceerr_in;
-wire [15 : 0] txprbssel_in;
-wire [19 : 0] txprecursor_in;
-wire [7 : 0] txsysclksel_in;
-wire [3 : 0] txusrclk_in;
-wire [3 : 0] txusrclk2_in;
-wire [3 : 0] cpllfbclklost_out;
-wire [3 : 0] cpllrefclklost_out;
-wire [63 : 0] drpdo_out;
-wire [3 : 0] drprdy_out;
-wire [3 : 0] gtpowergood_out;        
-wire [3 : 0] gtrefclkmonitor_out;
-wire [11 : 0] rxbufstatus_out;
-wire [3 : 0] rxpmaresetdone_out;
-wire [3 : 0] rxprbserr_out;
-wire [3 : 0] rxprbserr_out_sync;
-wire [3 : 0] rxprbslocked_out;
-wire [3 : 0] rxresetdone_out;
-wire [7 : 0] txbufstatus_out;
-wire [3 : 0] txphaligndone_out;
-wire [3 : 0] txpmaresetdone_out;
-wire [3 : 0] txresetdone_out;
-wire [3 : 0] txoutclk_out;
-wire [3 : 0] rxoutclk_out;
+wire [5 : 0] txpllclksel_in;
+wire [2 : 0] txprbsforceerr_in;
+wire [11 : 0] txprbssel_in;
+wire [14 : 0] txprecursor_in;
+wire [5 : 0] txsysclksel_in;
+wire [2 : 0] txusrclk_in;
+wire [2 : 0] txusrclk2_in;
+wire [2 : 0] cpllfbclklost_out;
+wire [2 : 0] cpllrefclklost_out;
+wire [47 : 0] drpdo_out;
+wire [2 : 0] drprdy_out;
+wire [2 : 0] gtpowergood_out;        
+wire [2 : 0] gtrefclkmonitor_out;
+wire [8 : 0] rxbufstatus_out;
+wire [2 : 0] rxpmaresetdone_out;
+wire [2 : 0] rxprbserr_out;
+wire [2 : 0] rxprbserr_out_sync;
+wire [2 : 0] rxprbslocked_out;
+wire [2 : 0] rxresetdone_out;
+wire [5 : 0] txbufstatus_out;
+wire [2 : 0] txphaligndone_out;
+wire [2 : 0] txpmaresetdone_out;
+wire [2 : 0] txresetdone_out;
+wire [2 : 0] txoutclk_out;
+wire [2 : 0] rxoutclk_out;
 
 reg [23 : 0] b0_QPLL_LOCK_DLY_CNT;
 reg          b0_QPLL_LOCK_DLY;
@@ -470,7 +470,6 @@ reg          b0_TX_LINK_RDY;
 wire         b0_TX_PLL_LOCK;
 reg [23 : 0] b0_MMCM_TX_DRP_LOCKED_DLY_CNT;
 reg [23 : 0] b0_MMCM_RX_DRP_LOCKED_DLY_CNT;
-wire [39 : 0] patgen_userdata_tx_ch3;
 
   wire txusrclk2_in_ch0;
   wire rxusrclk2_in_ch0;
@@ -507,15 +506,6 @@ wire [39 : 0] patgen_userdata_tx_ch3;
     assign vid_phy_rx_axi4s_ch2_tdata        = gtwiz_userdata_rx_out[119: 80];
     assign vid_phy_rx_axi4s_ch2_tuser[0]     = 1'b0;
     assign vid_phy_rx_axi4s_ch2_tvalid       = (C_NIDRU==1)? vid_phy_rx_axi4s_tvalid[2] : 1'b1;
-
-    // ---------------------- Bank 0, GT Channel 3 ------------------------------
-    assign gtwiz_userdata_tx_in[159: 120] = patgen_userdata_tx_ch3;
-    assign vid_phy_tx_axi4s_ch3_tready    = 1'b1;
-
-//Use the 128bit here to output
-    assign vid_phy_rx_axi4s_ch3_tdata        = gtwiz_userdata_rx_out[159: 120];
-    assign vid_phy_rx_axi4s_ch3_tuser[0]     = 1'b0;
-    assign vid_phy_rx_axi4s_ch3_tvalid       = (C_NIDRU==1)? vid_phy_rx_axi4s_tvalid[3] : 1'b1;
 
 
 
@@ -571,23 +561,6 @@ wire [39 : 0] patgen_userdata_tx_ch3;
   assign txsysclksel_in[5: 4] = cfg_phy_mem_map_control_b0[`TXSYSCLKSEL]; 
   assign drpclk_in[2] = drpclk_i;
 
-  // ---------- Channel # 3 Assignments...
-  assign rxcdrhold_in[3] = cfg_phy_mem_map_control_b0[`CH4_RXCDRHOLD]; 
-  assign rxlpmhfovrden_in[3] = cfg_phy_mem_map_control_b0[`CH4_RXLPMHFOVRDEN];
-  assign rxlpmlfklovrden_in[3] = cfg_phy_mem_map_control_b0[`CH4_RXLPMLFKLOVRDEN];
-  assign rxlpmosovrden_in[3] = cfg_phy_mem_map_control_b0[`CH4_RXOSOVRDEN];
-  assign txpostcursor_in[19: 15] = cfg_phy_mem_map_control_b0[`CH4_TXPOSTCURSOR]; 
-  assign cpllrefclksel_in[11: 9] = cfg_phy_mem_map_control_b0[`CPLLREFCLKSEL];
-  assign loopback_in[11: 9] = cfg_phy_mem_map_control_b0[`CH4_LOOPBACK]; 
-  assign rxlpmen_in[3] = cfg_phy_mem_map_control_b0[`CH4_RXLPMEN]; //Removed dependency with RXUSRCLK2 sync
-  assign rxpd_in[7: 6] = cfg_phy_mem_map_control_b0[`CH4_RXPD]; 
-  assign rxpllclksel_in[7: 6] = cfg_phy_mem_map_control_b0[`RXPLLCLKSEL]; 
-  assign rxsysclksel_in[7: 6] = cfg_phy_mem_map_control_b0[`RXSYSCLKSEL];  
-  assign txpllclksel_in[7: 6] = cfg_phy_mem_map_control_b0[`TXPLLCLKSEL]; 
-  assign txprecursor_in[19: 15] = cfg_phy_mem_map_control_b0[`CH4_TXPRECURSOR]; 
-  assign txsysclksel_in[7: 6] = cfg_phy_mem_map_control_b0[`TXSYSCLKSEL]; 
-  assign drpclk_in[3] = drpclk_i;
-
 
   assign gtrefclk0_in_int[0]        = mgtrefclk0_i;
   assign gtrefclk1_in_int[0]        = mgtrefclk1_i;
@@ -622,17 +595,6 @@ wire [39 : 0] patgen_userdata_tx_ch3;
   assign qpll1outclk_out_int[2]     = qpll1outclk_out;
   assign qpll0outrefclk_out_int[2]  = qpll0outrefclk_out;
   assign qpll1outrefclk_out_int[2]  = qpll1outrefclk_out;
-  assign gtrefclk0_in_int[3]        = mgtrefclk0_i;
-  assign gtrefclk1_in_int[3]        = mgtrefclk1_i;
-  assign gtgrefclk_in_int[3]        = 1'b0;//gtgrefclk_in;     
-  assign gtnorthrefclk0_in_int[3]   = gtnorthrefclk0_in;
-  assign gtnorthrefclk1_in_int[3]   = gtnorthrefclk1_in;
-  assign gtsouthrefclk0_in_int[3]   = gtsouthrefclk0_in;
-  assign gtsouthrefclk1_in_int[3]   = gtsouthrefclk1_in;
-  assign qpll0outclk_out_int[3]     = qpll0outclk_out;
-  assign qpll1outclk_out_int[3]     = qpll1outclk_out;
-  assign qpll0outrefclk_out_int[3]  = qpll0outrefclk_out;
-  assign qpll1outrefclk_out_int[3]  = qpll1outrefclk_out;
 
     // Sync GT Wizard Resets
     xpm_cdc_array_single #(
@@ -658,8 +620,8 @@ wire [39 : 0] patgen_userdata_tx_ch3;
                         })
     );
 
-    wire [7 : 0] txpllclksel_in_drp;
-    wire [7 : 0] rxpllclksel_in_drp;
+    wire [5 : 0] txpllclksel_in_drp;
+    wire [5 : 0] rxpllclksel_in_drp;
 
     xpm_cdc_single #(
       .VERSION        (`XPM_CDC_VERSION       ),
@@ -803,54 +765,6 @@ wire [39 : 0] patgen_userdata_tx_ch3;
       .src_in          (rxpllclksel_in[5]),
       .dest_clk        (drpclk_i  ),
       .dest_out        (rxpllclksel_in_drp[5])
-  );
-   
-    xpm_cdc_single #(
-      .VERSION        (`XPM_CDC_VERSION       ),
-      .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-      .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-      .SRC_INPUT_REG  (1                      )
-    ) xpm_array_single_txpllclksel_in_drp6_inst (
-      .src_clk         (vid_phy_axi4lite_aclk        ),
-      .src_in          (txpllclksel_in[6]),
-      .dest_clk        (drpclk_i  ),
-      .dest_out        (txpllclksel_in_drp[6])
-    ); 
-
-    xpm_cdc_single #(
-      .VERSION        (`XPM_CDC_VERSION       ),
-      .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-      .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-      .SRC_INPUT_REG  (1                      )
-   ) xpm_array_single_rxpllclksel_in_drp6_inst (
-      .src_clk         (vid_phy_axi4lite_aclk        ),
-      .src_in          (rxpllclksel_in[6]),
-      .dest_clk        (drpclk_i  ),
-      .dest_out        (rxpllclksel_in_drp[6])
-  );
-   
-    xpm_cdc_single #(
-      .VERSION        (`XPM_CDC_VERSION       ),
-      .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-      .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-      .SRC_INPUT_REG  (1                      )
-    ) xpm_array_single_txpllclksel_in_drp7_inst (
-      .src_clk         (vid_phy_axi4lite_aclk        ),
-      .src_in          (txpllclksel_in[7]),
-      .dest_clk        (drpclk_i  ),
-      .dest_out        (txpllclksel_in_drp[7])
-    ); 
-
-    xpm_cdc_single #(
-      .VERSION        (`XPM_CDC_VERSION       ),
-      .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-      .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-      .SRC_INPUT_REG  (1                      )
-   ) xpm_array_single_rxpllclksel_in_drp7_inst (
-      .src_clk         (vid_phy_axi4lite_aclk        ),
-      .src_in          (rxpllclksel_in[7]),
-      .dest_clk        (drpclk_i  ),
-      .dest_out        (rxpllclksel_in_drp[7])
   );
    
 
@@ -1004,10 +918,6 @@ wire [39 : 0] patgen_userdata_tx_ch3;
   assign txusrclk2_in[2] = txusrclk2_in_ch0;
   assign rxusrclk_in[2]  = rxusrclk_in_ch0;
   assign rxusrclk2_in[2] = rxusrclk2_in_ch0;
-  assign txusrclk_in[3]  = txusrclk_in_ch0;
-  assign txusrclk2_in[3] = txusrclk2_in_ch0;
-  assign rxusrclk_in[3]  = rxusrclk_in_ch0;
-  assign rxusrclk2_in[3] = rxusrclk2_in_ch0;
 
    vid_phy_controller_0_gt_usrclk_source_8series  #
    (
@@ -1123,19 +1033,6 @@ begin
 end
 endgenerate
 
-    
-    vid_phy_controller_v2_2_20_gt_tx_tmdsclk_patgen
-    #(
-        .TXDATA_WIDTH   (40)
-    )
-    tx_tmdsclk_patgen_inst 
-    (
-        .CLK_IN         (vid_phy_axi4lite_aclk),
-        .TXUSRCLK_IN    (txusrclk2_in_ch0), 
-        .CTRL_EN_IN     (gtwiz_reset_tx_done_out),
-        .CTRL_RATIO_IN  (cfg_phy_mem_map_control_b0[`PATGEN_TX_TMDS_RATIO]),
-        .TXDATA_OUT     (patgen_userdata_tx_ch3)
-    );
 
 
   //------------------------------------------------------------------------
@@ -1233,7 +1130,7 @@ endgenerate
     // Instantiation of Axi Bus Interface vid_phy_axi4lite
     //------------------------------------------------------------------------
 
-    vid_phy_controller_v2_2_20_axi4lite # ( 
+    vid_phy_controller_v2_2_22_axi4lite # ( 
         .C_S_AXI_DATA_WIDTH(C_vid_phy_axi4lite_DATA_WIDTH),
         .C_S_AXI_ADDR_WIDTH(C_vid_phy_axi4lite_ADDR_WIDTH),
         .C_Tx_No_Of_Channels(C_Tx_No_Of_Channels),
@@ -1241,8 +1138,8 @@ endgenerate
         .C_TX_PLL_SELECTION(C_TX_PLL_SELECTION),
         .C_RX_PLL_SELECTION(C_RX_PLL_SELECTION),
         .C_Err_Irq_En(0),
-        .C_Use_GT_CH4_HDMI(1)
-    ) vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst (
+        .C_Use_GT_CH4_HDMI(0)
+    ) vid_phy_controller_v2_2_22_vid_phy_axi4lite_inst (
         .S_AXI_ACLK(vid_phy_axi4lite_aclk),
         .S_AXI_ARESETN(vid_phy_axi4lite_aresetn),
         .S_AXI_AWADDR(vid_phy_axi4lite_awaddr),
@@ -1290,7 +1187,7 @@ endgenerate
   assign DRP_Config_b0gt0[13]   = cfg_phy_mem_map_control_b0[`CH1_DRPWE];
   assign DRP_Config_b0gt0[31:16]= cfg_phy_mem_map_control_b0[`CH1_DRPDI];
 
-   vid_phy_controller_v2_2_20_drp_control_hdmi #  
+   vid_phy_controller_v2_2_22_drp_control_hdmi #  
    (
     .DRP_ADDR_WIDTH (10)
    )
@@ -1339,7 +1236,7 @@ endgenerate
   assign DRP_Config_b0gt1[13]   = cfg_phy_mem_map_control_b0[`CH2_DRPWE];
   assign DRP_Config_b0gt1[31:16]= cfg_phy_mem_map_control_b0[`CH2_DRPDI];
 
-   vid_phy_controller_v2_2_20_drp_control_hdmi #  
+   vid_phy_controller_v2_2_22_drp_control_hdmi #  
    (
     .DRP_ADDR_WIDTH (10)
    )
@@ -1388,7 +1285,7 @@ endgenerate
   assign DRP_Config_b0gt2[13]   = cfg_phy_mem_map_control_b0[`CH3_DRPWE];
   assign DRP_Config_b0gt2[31:16]= cfg_phy_mem_map_control_b0[`CH3_DRPDI];
 
-   vid_phy_controller_v2_2_20_drp_control_hdmi #  
+   vid_phy_controller_v2_2_22_drp_control_hdmi #  
    (
     .DRP_ADDR_WIDTH (10)
    )
@@ -1427,55 +1324,6 @@ endgenerate
     assign cfg_phy_mem_map_status_b0[`CH3_DRPRDY]  =  DRP_Status_b0gt2_16_sync;
     assign cfg_phy_mem_map_status_b0[`CH3_DRPBUSY] =  DRP_Status_b0gt2[17];
 
-  //----------------- DRP Control, Bank 0, GT 3 ----------------
-
-  wire [31:0] DRP_Config_b0gt3; 
-  wire [31:0] DRP_Status_b0gt3; 
-
-  assign DRP_Config_b0gt3[11:0] = {cfg_phy_mem_map_control_b0[`CH4_DRPADDR_US_MSB], cfg_phy_mem_map_control_b0[`CH4_DRPADDR]};
-  assign DRP_Config_b0gt3[12]   = cfg_phy_mem_map_control_b0[`CH4_DRPEN];
-  assign DRP_Config_b0gt3[13]   = cfg_phy_mem_map_control_b0[`CH4_DRPWE];
-  assign DRP_Config_b0gt3[31:16]= cfg_phy_mem_map_control_b0[`CH4_DRPDI];
-
-   vid_phy_controller_v2_2_20_drp_control_hdmi #  
-   (
-    .DRP_ADDR_WIDTH (10)
-   )
-   drp_control_b0gt3_inst
-   (
-     .Config_Clk          (vid_phy_axi4lite_aclk),
-     .Config_Rst          (vid_phy_axi4lite_areset),
-     .DRP_Config          (DRP_Config_b0gt3),
-     .DRP_Status          (DRP_Status_b0gt3),
-     .drp_txn_available   (drp_txn_available[3]),
-     .drp_rsp_read        (drp_rsp_read[3]),
-     .DRPCLK              (drpclk_in[3]),
-     .DRPBUSY             (1'b0),
-     .DRPEN               (drpen_in[3]),
-     .DRPWE               (drpwe_in[3]),
-     .DRPADDR             (drpaddr_in[39: 30]),
-     .DRPDI               (drpdi_in[63: 48]),
-     .DRPDO               (drpdo_out[63: 48]),
-     .DRPRDY              (drprdy_out[3])  
-   );
-
-   wire DRP_Status_b0gt3_16_sync;
-   xpm_cdc_single #(
-     .VERSION        (`XPM_CDC_VERSION       ),
-     .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-     .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-     .SRC_INPUT_REG  (0                      )
-   ) xpm_single_drp_rdy_b0gt3_inst (
-     .src_clk         ( drpclk_in[3]    ),
-     .src_in          ( DRP_Status_b0gt3[16] ),
-     .dest_clk        ( vid_phy_axi4lite_aclk ),
-     .dest_out        ( DRP_Status_b0gt3_16_sync )
-   );
-
-    assign cfg_phy_mem_map_status_b0[`CH4_DRPDO]   =  DRP_Status_b0gt3[15:0];
-    assign cfg_phy_mem_map_status_b0[`CH4_DRPRDY]  =  DRP_Status_b0gt3_16_sync;
-    assign cfg_phy_mem_map_status_b0[`CH4_DRPBUSY] =  DRP_Status_b0gt3[17];
-
   //--------------------------- DRP Control, Common ----------------------------
 
   wire [31:0] DRP_Config_common; 
@@ -1487,7 +1335,7 @@ endgenerate
   assign DRP_Config_common[31:16]= cfg_phy_mem_map_control[`COMMON_DRPDI];
  
   wire [10-1 : 0] drpaddr_common_int;
-   vid_phy_controller_v2_2_20_drp_control_hdmi #  
+   vid_phy_controller_v2_2_22_drp_control_hdmi #  
    (
     .DRP_ADDR_WIDTH (10)
    )
@@ -1654,8 +1502,6 @@ assign b0_rx_refclk_sel = 1'b0;
     assign cfg_phy_mem_map_status_b0[`CH2_RXGTPOWERGOOD]      =  gtpowergood_out[1];
     assign cfg_phy_mem_map_status_b0[`CH3_TXGTPOWERGOOD]      =  gtpowergood_out[2];
     assign cfg_phy_mem_map_status_b0[`CH3_RXGTPOWERGOOD]      =  gtpowergood_out[2];
-    assign cfg_phy_mem_map_status_b0[`CH4_TXGTPOWERGOOD]      =  gtpowergood_out[3];
-    assign cfg_phy_mem_map_status_b0[`CH4_RXGTPOWERGOOD]      =  gtpowergood_out[3];
   //Unused Status Bits
     assign cfg_phy_mem_map_status_b0[`CH1_TXPHINITDONE]       =  1'b0; // Not Available
     assign cfg_phy_mem_map_status_b0[`CH1_TXDLYRESETDONE]     =  1'b0; // Not Available
@@ -1663,8 +1509,6 @@ assign b0_rx_refclk_sel = 1'b0;
     assign cfg_phy_mem_map_status_b0[`CH2_TXDLYRESETDONE]     =  1'b0; // Not Available
     assign cfg_phy_mem_map_status_b0[`CH3_TXPHINITDONE]       =  1'b0; // Not Available
     assign cfg_phy_mem_map_status_b0[`CH3_TXDLYRESETDONE]     =  1'b0; // Not Available
-    assign cfg_phy_mem_map_status_b0[`CH4_TXPHINITDONE]       =  1'b0; // Not Available
-    assign cfg_phy_mem_map_status_b0[`CH4_TXDLYRESETDONE]     =  1'b0; // Not Available
 
   // ------------------------------------------- Synchronizers ------------------------------------------
 
@@ -1681,7 +1525,7 @@ assign b0_rx_refclk_sel = 1'b0;
     .dest_clk        (drpclk_i       ),
     .dest_out        (gtwiz_gte4_cpll_cal_txoutclk_period_sync)
   );
-  assign gtwiz_gte4_cpll_cal_txoutclk_period_in = {4 {gtwiz_gte4_cpll_cal_txoutclk_period_sync}};
+  assign gtwiz_gte4_cpll_cal_txoutclk_period_in = {3 {gtwiz_gte4_cpll_cal_txoutclk_period_sync}};
   xpm_cdc_array_single #(
     .VERSION        (`XPM_CDC_VERSION       ),
     .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
@@ -1694,7 +1538,7 @@ assign b0_rx_refclk_sel = 1'b0;
     .dest_clk        (drpclk_i       ),
     .dest_out        (gtwiz_gte4_cpll_cal_cnt_tol_in_sync)
   );
-  assign gtwiz_gte4_cpll_cal_cnt_tol_in = {4 {gtwiz_gte4_cpll_cal_cnt_tol_in_sync}};
+  assign gtwiz_gte4_cpll_cal_cnt_tol_in = {3 {gtwiz_gte4_cpll_cal_cnt_tol_in_sync}};
   // ---------------------- Synchronizer: User Clocking ----------------------------
 
   xpm_cdc_single #(
@@ -2271,167 +2115,7 @@ assign rxprbssel_in[11 : 8] = 4'b0;
 
   
 
-  // ---------------------- Synchronizer: GT Channel 3 :: Control Path ----------------------------
-
-//TX Only VPHY
-assign rxpolarity_in[3]     = 1'b0;
-assign rxprbscntreset_in[3] = 1'b0;
-assign cfg_phy_mem_map_status_b0[`CH4_RXPRBSERR] = 1'b0;
-
-//TX Only VPHY
-assign rxprbssel_in[15 : 12] = 4'b0;
-
-  xpm_cdc_array_single #(
-    .VERSION        (`XPM_CDC_VERSION       ),
-    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-    .WIDTH          ( 5                     ),
-    .SRC_INPUT_REG  ( 0                     )
-  ) xpm_array_single_txdiffctrl_b03_inst (
-    .src_clk         (vid_phy_axi4lite_aclk        ),
-    .src_in          ({cfg_phy_mem_map_control_b0[`CH4_TXDIFFCTRL],1'b0}), //As per UG576, TXDIFFCTRL[0] is unused
-    .dest_clk        (txusrclk2_in[3]       ),
-    .dest_out        (txdiffctrl_in[19 : 15])
-  );
-
-
-  xpm_cdc_single #(
-    .VERSION        (`XPM_CDC_VERSION       ),
-    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-    .SRC_INPUT_REG  (0                      )
-  ) xpm_array_single_txinhibit_b03_inst (
-    .src_clk         (vid_phy_axi4lite_aclk        ),
-    .src_in          (cfg_phy_mem_map_control_b0[`CH4_TXINHIBIT]),
-    .dest_clk        (txusrclk2_in[3]       ),
-    .dest_out        (txinhibit_in[3])
-  );
-
-  xpm_cdc_single #(
-    .VERSION        (`XPM_CDC_VERSION       ),
-    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-    .SRC_INPUT_REG  (0                      )
-  ) xpm_array_single_txpolarity_b03_inst (
-    .src_clk         (vid_phy_axi4lite_aclk        ),
-    .src_in          (cfg_phy_mem_map_control_b0[`CH4_TXPOLARITY]),
-    .dest_clk        (txusrclk2_in[3]       ),
-    .dest_out        (txpolarity_in[3])
-  );
-  
-  xpm_cdc_single #(
-    .VERSION        (`XPM_CDC_VERSION       ),
-    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-    .SRC_INPUT_REG  (0                      )
-  ) xpm_array_single_txprbsforceerr_b03_inst (
-    .src_clk         (vid_phy_axi4lite_aclk        ),
-    .src_in          (cfg_phy_mem_map_control_b0[`CH4_TXPRBSFORCEERR]),
-    .dest_clk        (txusrclk2_in[3]       ),
-    .dest_out        (txprbsforceerr_in[3])
-  );
-
-  xpm_cdc_array_single #(
-    .VERSION        (`XPM_CDC_VERSION       ),
-    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-    .WIDTH          (4                      ),
-    .SRC_INPUT_REG  (0                      )
-  ) xpm_array_single_txprbssel_b03_inst (
-    .src_clk         (vid_phy_axi4lite_aclk        ),
-    .src_in          ({cfg_phy_mem_map_control_b0[`CH4_TXPRBSSEL_US_MSB],cfg_phy_mem_map_control_b0[`CH4_TXPRBSSEL]}),
-    .dest_clk        (txusrclk2_in[3]       ),
-    .dest_out        (txprbssel_in[15 : 12])
-  );
-
-  xpm_cdc_array_single #(
-    .VERSION        (`XPM_CDC_VERSION       ),
-    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-    .WIDTH          ( 2                     ),
-    .SRC_INPUT_REG  ( 0                     )
-  ) xpm_array_single_txpd_b03_inst (
-    .src_clk         (vid_phy_axi4lite_aclk        ),
-    .src_in          (cfg_phy_mem_map_control_b0[`CH4_TXPD]),
-    .dest_clk        (txusrclk2_in[3]       ),
-    .dest_out        (txpd_in[7 : 6])
-  );
-
-  xpm_cdc_single #(
-    .VERSION        (`XPM_CDC_VERSION       ),
-    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-    .SRC_INPUT_REG  (1                      )
-  ) xpm_array_single_txelecidle_b03_inst (
-    .src_clk         (vid_phy_axi4lite_aclk        ),
-    .src_in          (cfg_phy_mem_map_control_b0[`CH4_TXELECIDLE] | ~cfg_phy_mem_map_control_b0[`OBUFTDS_TXUSRCLK_CLKOUT1_EN]),
-    .dest_clk        (txusrclk2_in[3]       ),
-    .dest_out        (txelecidle_in[3])
-  );
-
-  // ---------------------- Synchronizer: GT Channel 3 :: Status Path ----------------------------
-
-  xpm_cdc_single #(
-    .VERSION        (`XPM_CDC_VERSION       ),
-    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-    .SRC_INPUT_REG  (0                      )
-  ) xpm_array_single_rxpmaresetdone_b03_inst (
-    .src_clk         (rxusrclk2_in[3]       ),
-    .src_in          (rxpmaresetdone_out[3]),
-    .dest_clk        (vid_phy_axi4lite_aclk  ),
-    .dest_out        (cfg_phy_mem_map_status_b0[`CH4_RXPMARESETDONE])
-  );
-
-  assign cfg_phy_mem_map_status_b0[`CH4_RXRESETDONE] = gtwiz_reset_rx_done_out_sync;
-
-  xpm_cdc_array_single #(
-    .VERSION        (`XPM_CDC_VERSION       ),
-    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-    .WIDTH          ( 3                     ),
-    .SRC_INPUT_REG  ( 0                     )
-  ) xpm_array_single_rxbufstatus_b03_inst (
-    .src_clk         (rxusrclk2_in[3]        ),
-    .src_in          (rxbufstatus_out[11 : 9]),
-    .dest_clk        (vid_phy_axi4lite_aclk   ),
-    .dest_out        (cfg_phy_mem_map_status_b0[`CH4_RXBUFSTATUS])
-  );
-
-  assign cfg_phy_mem_map_status_b0[`CH4_TXRESETDONE] = gtwiz_reset_tx_done_out_sync;
-
-  xpm_cdc_array_single #(
-    .VERSION        (`XPM_CDC_VERSION       ),
-    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-    .WIDTH          ( 2                     ),
-    .SRC_INPUT_REG  ( 0                     )
-  ) xpm_array_single_txbufstatus_b03_inst (
-    .src_clk         (txusrclk2_in[3]        ),
-    .src_in          (txbufstatus_out[7 : 6]),
-    .dest_clk        (vid_phy_axi4lite_aclk   ),
-    .dest_out        (cfg_phy_mem_map_status_b0[`CH4_TXBUFSTATUS])
-  );
-
-  xpm_cdc_single #(
-    .VERSION        (`XPM_CDC_VERSION       ),
-    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
-    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
-    .SRC_INPUT_REG  (0                      )
-  ) xpm_array_single_txpmaresetdone_b03_inst (
-    .src_clk         (txusrclk2_in[3]       ),
-    .src_in          (txpmaresetdone_out[3]),
-    .dest_clk        (vid_phy_axi4lite_aclk  ),
-    .dest_out        (cfg_phy_mem_map_status_b0[`CH4_TXPMARESETDONE])
-  );
-
-  assign cfg_phy_mem_map_status_b0[`CH4_TXPHALIGNDONE] = gtwiz_buffbypass_tx_done_out_sync;
-
-    assign cfg_phy_mem_map_status_b0[`CH4_CPLLLOCK] = b0_CPLL_LOCK_DLY_SYNC_AXICLK;
-
-  
-
-  // ---------------------- Synchronizer: GT Common 4 :: Status Path ----------------------------
+  // ---------------------- Synchronizer: GT Common 3 :: Status Path ----------------------------
   xpm_cdc_single #(
     .VERSION        (`XPM_CDC_VERSION       ),
     .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),

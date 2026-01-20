@@ -439,7 +439,7 @@ module vid_phy_controller_0_gt_usrclk_source_8series #
            assign MMCM_TX_DRPDO   = DRP_Status_mmcm_txusrclk[15:0];
 		
        
-           vid_phy_controller_v2_2_20_drp_control_hdmi #  
+           vid_phy_controller_v2_2_22_drp_control_hdmi #  
           (
                .DRP_ADDR_WIDTH (7)
            )
@@ -511,9 +511,45 @@ module vid_phy_controller_0_gt_usrclk_source_8series #
            );
 
  	
-        //GT Channel is used as TX TMDS CLK source
-	    assign GT0_TX_MMCM_CLKOUT1_P_OUT = 1'b0;
-	    assign GT0_TX_MMCM_CLKOUT1_N_OUT = 1'b0;
+	   
+           // TX CLKOUT1 clock driver
+           wire obuftds_tx_en_t_out;
+           //CR982530 - Directly infer OSERDES instead of ODDR due to DRC error when Vivado 
+           //handles the ODDR to OSERDES mapping
+		   
+           OSERDESE3 #(
+               .ODDR_MODE           ("TRUE"),
+               .OSERDES_T_BYPASS    ("TRUE"),
+               .DATA_WIDTH          (8),                 
+               .INIT                (1'b0),                    
+               .IS_CLKDIV_INVERTED  (1'b0),      
+               .IS_CLK_INVERTED     (1'b0),         
+               .IS_RST_INVERTED     (1'b0),
+               .SIM_DEVICE          ("ULTRASCALE_PLUS")
+           )
+           GT0_TX_MMCM_CLKOUT1_ODDR_INST (
+               .OQ                  (gt0_txmmcm_clkout1_oddr_data_i),         
+               .T_OUT               (obuftds_tx_en_t_out),   
+               .CLK                 (GT0_TX_MMCM_CLKOUT1_OUT),       
+               .CLKDIV              (GT0_TX_MMCM_CLKOUT1_OUT),
+               .D                   ({4'h0,2'h3,~OBUFTDS_TX_EN,1'b1}),           
+               .RST                 (1'b0),       
+               .T                   (~OBUFTDS_TX_EN)            
+           );
+
+           // TX CLKOUT1 clock buffer
+           OBUFTDS
+           #(
+           	.IOSTANDARD		("DEFAULT"),
+           	.SLEW			("FAST")    
+           )
+           GT0_TX_MMCM_CLKOUT1_OBUFTDS_INST
+           (
+               .I			(gt0_txmmcm_clkout1_oddr_data_i),
+               .T			(obuftds_tx_en_t_out), // 3-state enable input (high disables output buffer)
+               .O			(GT0_TX_MMCM_CLKOUT1_P_OUT),
+               .OB			(GT0_TX_MMCM_CLKOUT1_N_OUT) 
+           );		   
 		   
     end else begin
 	
@@ -567,7 +603,7 @@ module vid_phy_controller_0_gt_usrclk_source_8series #
            assign MMCM_RX_DRPRDY  = DRP_Status_mmcm_rxusrclk[16];
            assign MMCM_RX_DRPDO   = DRP_Status_mmcm_rxusrclk[15:0];
            
-           vid_phy_controller_v2_2_20_drp_control_hdmi #  
+           vid_phy_controller_v2_2_22_drp_control_hdmi #  
            (
                .DRP_ADDR_WIDTH (7)
            )

@@ -47,6 +47,7 @@
 set_false_path -to [get_pins -of [get_cells -hierarchical -filter {name=~*arststages_ff_reg[*]}] -filter {REF_PIN_NAME == CLR || REF_PIN_NAME == PRE}]
 
 set_false_path -to [get_cells -hierarchical -filter {NAME =~ *gt_usrclk_source_inst/*gtwiz_userclk_tx_active_*_reg}]
+set_false_path -to [get_pins -of [get_cells -hierarchical -filter {NAME =~ *gt_usrclk_source_inst/*GT0_TX_MMCM_CLKOUT1_ODDR_INST}] -filter {REF_PIN_NAME=~D*}]
 
 #set_false_path -from [get_cells -hierarchical -filter {NAME =~*DRP_Config_Reg_reg[*]}] -to [get_cells -hierarchical -filter {NAME =~*DRPDI_reg[*]}]
 #set_false_path -from [get_cells -hierarchical -filter {NAME =~*DRP_Config_Reg_reg[*]}] -to [get_cells -hierarchical -filter {NAME =~*DRPADDR_reg[*]}]
@@ -80,20 +81,10 @@ set_min_delay 0.300 \
 
 
 
+
  	
+	   
 
-          
-
-create_waiver -type CDC -id CDC-13 -internal -scope -desc "waiver for cdc" -from [get_pins -of [get_cells -hier -filter {name=~ *vid_phy_controller*vid_phy_axi4lite_inst/slv_reg_0x158_reg[0]}] -filter {REF_PIN_NAME==C}]  -to [get_pins -of [get_cells -hier -filter {name=~ *gt_usrclk_source_inst/rx_mmcm.GT0_RX_MMCM_CLKOUT1_ODDR_INST}] -filter {REF_PIN_NAME==D[1]}]  -user "vid_phy_controller"
-
-
-create_waiver -type CDC -id CDC-10 -internal -scope -desc "CDC-10 waiver" -from [get_pins -of [get_cells -hierarchical -filter {name=~ *gen_cal_rx_en.mask_user_in_reg}] -filter {REF_PIN_NAME==C}] -to [get_pins -of [get_cells -hierarchical -filter {name=~*xpm_array_single_rxpmaresetdone_b*_inst/syncstages_ff_reg[0]}] -filter {REF_PIN_NAME==D}] -user "Video_Phy_Controller"  
-
-create_waiver -type CDC -id CDC-10 -internal -scope -desc "CDC-10 waiver" -from [get_pins -of [get_cells -hierarchical -filter {name=~ *cfg_phy_mem_map_control_b0_reg[30]}] -filter {REF_PIN_NAME==C}] -to [get_pins -of [get_cells -hierarchical -filter {name=~*reset_synchronizer_resetin_rx_inst/rst_in_meta_reg}] -filter {REF_PIN_NAME==PRE}] -user "Video_Phy_Controller"  
-
-create_waiver -type CDC -id CDC-10 -internal -scope -desc "CDC-10 waiver" -from [get_pins -of [get_cells -hierarchical -filter {name=~ *cfg_phy_mem_map_control_b0_reg[30]}] -filter {REF_PIN_NAME==C}] -to [get_pins -of [get_cells -hierarchical -filter {name=~*reset_synchronizer_resetin_tx_inst/rst_in_meta_reg}] -filter {REF_PIN_NAME==PRE}] -user "Video_Phy_Controller"
-
-
-
+            create_waiver -type CDC -id CDC-13 -internal -scope -desc "waiver for cdc" -from [get_pins -of [get_cells -hier -filter {name =~ *vid_phy_controller*vid_phy_axi4lite_inst/slv_reg_0x138_reg[0]}] -filter {REF_PIN_NAME == C}]  -to [get_pins -of  [get_cells -hier -filter  {name =~ *gt_usrclk_source_inst/tx_mmcm.GT0_TX_MMCM_CLKOUT1_ODDR_INST}] -filter {REF_PIN_NAME == D[1]}]  -user "vid_phy_controller"
 
 
