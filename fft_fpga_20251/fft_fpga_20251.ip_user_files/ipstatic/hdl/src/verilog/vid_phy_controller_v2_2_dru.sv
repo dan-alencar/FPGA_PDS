@@ -56,7 +56,7 @@
 
 `default_nettype none
 
-module vid_phy_controller_v2_2_22_dru #
+module vid_phy_controller_v2_2_20_dru #
 (
     // Users to add parameters here
     parameter integer       WIDTH_OUT  = 40
@@ -101,7 +101,7 @@ assign dru_clk_i = DRU_CLK_IN;
 genvar i;
 
 // Dru reset
-vid_phy_controller_v2_2_22_lib_rst_v1_0
+vid_phy_controller_v2_2_20_lib_rst_v1_0
     LRST_INST
     (
         .RST_IN     (dru_ctrl_rst),

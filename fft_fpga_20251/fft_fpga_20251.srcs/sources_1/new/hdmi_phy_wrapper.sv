@@ -2,45 +2,40 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Module Name: hdmi_phy_wrapper
 // Description:
-//   Top-level HDMI TX wrapper using Xilinx Video PHY Controller.
-//   - HDMI 1.4
-//   - 1080p60
-//   - 8 bits per color
-//   - TMDS generated in RTL
-//   
-//   Modified for AUBoard 15P:
-//   - TMDS data channels (0-2) use GTH transceivers in QUAD 226
-//   - TMDS clock uses separate I/O pins (HDMI_TX_CLK_P/N) in Bank 65
+//   HDMI 1.4 TX top-level
+//   - TMDS fully generated in RTL
+//   - Video PHY Controller used only as serializer / clocking
+//   - 4th GTH lane used as TMDS clock
 //////////////////////////////////////////////////////////////////////////////////
 
 module hdmi_phy_wrapper (
-    // Differential reference clock (from 8T49N241 clock generator)
+    // GTH reference clock (300 MHz differential)
     input  logic clk_ref_p,
     input  logic clk_ref_n,
 
-    // External reset (active high - directly directly connected to push button PB1)
+    // External reset (active high)
     input  logic rst,
 
-    // HDMI TX data outputs (GTH transceivers - 3 channels)
-    output logic [2:0] hdmi_tx_p,
-    output logic [2:0] hdmi_tx_n,
-    
-    // HDMI TX clock output (regular I/O pins, directly directly not GTH)
-    output logic hdmi_tx_clk_p,
-    output logic hdmi_tx_clk_n
+    // HDMI TMDS outputs (GTH lanes)
+    // [0] Blue, [1] Green, [2] Red, [3] Clock
+    output logic [3:0] hdmi_tx_p,
+    output logic [3:0] hdmi_tx_n
 );
 
-    // -------------------------------------------------
-    // Clocks & Reset (from PHY)
-    // -------------------------------------------------
+    // =========================================================
+    // PHY clocks & reset
+    // =========================================================
     logic clk_pixel;
+    logic clk_tmds;
     logic phy_rst_n;
+    logic tx_refclk_rdy;
 
-    assign phy_rst_n = ~rst;
+    // PHY reset only released when reference clock is ready
+    assign phy_rst_n = tx_refclk_rdy & ~rst;
 
-    // -------------------------------------------------
-    // Video Pipeline (1 pixel / clock)
-    // -------------------------------------------------
+    // =========================================================
+    // Video pipeline (1 pixel per clock)
+    // =========================================================
     logic [9:0] tmds_r;
     logic [9:0] tmds_g;
     logic [9:0] tmds_b;
@@ -59,9 +54,9 @@ module hdmi_phy_wrapper (
         .de        (de)
     );
 
-    // -------------------------------------------------
-    // TMDS Packers (4 pixels per beat)
-    // -------------------------------------------------
+    // =========================================================
+    // TMDS packers (4 pixels per beat)
+    // =========================================================
     logic [39:0] tmds_r_4px;
     logic [39:0] tmds_g_4px;
     logic [39:0] tmds_b_4px;
@@ -98,17 +93,17 @@ module hdmi_phy_wrapper (
         .valid_out (tvalid_4px)
     );
 
-    // -------------------------------------------------
+    // =========================================================
     // Video PHY Controller
-    // -------------------------------------------------
+    // =========================================================
     vid_phy_controller_0 phy_inst (
-        // Reference clock (GTH)
+        // Reference clock
         .mgtrefclk0_pad_p_in (clk_ref_p),
         .mgtrefclk0_pad_n_in (clk_ref_n),
 
-        // Generated video clocks
-        .tx_video_clk        (clk_pixel),
-        .tx_tmds_clk         (),
+        // Generated clocks
+        .tx_video_clk        (clk_pixel), // 148.5 MHz
+        .tx_tmds_clk         (clk_tmds),  // 742.5 MHz
         .txoutclk            (),
 
         // AXI4-Stream TX clock & reset
@@ -133,18 +128,14 @@ module hdmi_phy_wrapper (
         .vid_phy_tx_axi4s_ch2_tuser  (de_4px),
         .vid_phy_tx_axi4s_ch2_tready (),
 
-        // HDMI data outputs (GTH transceivers)
-        .phy_txp_out    (hdmi_tx_p),      // [2:0] - Goes to GTH TX pins
-        .phy_txn_out    (hdmi_tx_n),      // [2:0] - Goes to GTH TX pins
-        
-        // HDMI clock output (regular I/O pins via OBUFDS inside PHY or external)
-        .tx_tmds_clk_p  (hdmi_tx_clk_p),  // Goes to Bank 65 I/O pin T25
-        .tx_tmds_clk_n  (hdmi_tx_clk_n),  // Goes to Bank 65 I/O pin U25
+        // TMDS outputs (4 GTH lanes, lane 3 = clock)
+        .phy_txp_out (hdmi_tx_p),
+        .phy_txn_out (hdmi_tx_n),
 
-        // Sideband / DRP
+        // Sideband / status
         .vid_phy_sb_aclk    (clk_pixel),
         .vid_phy_sb_aresetn (phy_rst_n),
-        .tx_refclk_rdy      (1'b1),
+        .tx_refclk_rdy      (tx_refclk_rdy),
         .drpclk             (clk_pixel)
     );
 

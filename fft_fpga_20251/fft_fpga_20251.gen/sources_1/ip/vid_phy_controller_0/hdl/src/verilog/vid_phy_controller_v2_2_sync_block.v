@@ -51,7 +51,7 @@
 `timescale 1ps / 1ps
 
 //(* dont_touch = "yes" *)
-module vid_phy_controller_v2_2_22_sync_block
+module vid_phy_controller_v2_2_20_sync_block
   #(
   parameter INITIALISE = 6'b000000
 )

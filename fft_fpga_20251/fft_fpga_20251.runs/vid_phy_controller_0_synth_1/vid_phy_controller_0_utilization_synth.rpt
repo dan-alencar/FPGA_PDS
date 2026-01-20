@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Tue Jan 20 17:42:34 2026
-| Host         : dan-alencar running 64-bit Linux Mint 22.2
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Tue Jan 20 17:59:15 2026
+| Host         : daniloalencar.lesc.ufc.br running 64-bit Linux Mint 22.1
 | Command      : report_utilization -file vid_phy_controller_0_utilization_synth.rpt -pb vid_phy_controller_0_utilization_synth.pb
 | Design       : vid_phy_controller_0
 | Device       : xcau15p-ffvb676-2-e
@@ -32,22 +32,20 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               | 2926 |     0 |          0 |     77760 |  3.76 |
-|   LUT as Logic          | 2926 |     0 |          0 |     77760 |  3.76 |
+| CLB LUTs*               | 3411 |     0 |          0 |     77760 |  4.39 |
+|   LUT as Logic          | 3411 |     0 |          0 |     77760 |  4.39 |
 |   LUT as Memory         |    0 |     0 |          0 |     40320 |  0.00 |
-| CLB Registers           | 6237 |     0 |          0 |    155520 |  4.01 |
-|   Register as Flip Flop | 6237 |     0 |          0 |    155520 |  4.01 |
+| CLB Registers           | 7441 |     0 |          0 |    155520 |  4.78 |
+|   Register as Flip Flop | 7441 |     0 |          0 |    155520 |  4.78 |
 |   Register as Latch     |    0 |     0 |          0 |    155520 |  0.00 |
-| CARRY8                  |  153 |     0 |          0 |      9720 |  1.57 |
-| F7 Muxes                |   21 |     0 |          0 |     38880 |  0.05 |
-| F8 Muxes                |    0 |     0 |          0 |     19440 |  0.00 |
+| CARRY8                  |  189 |     0 |          0 |      9720 |  1.94 |
+| F7 Muxes                |  110 |     0 |          0 |     38880 |  0.28 |
+| F8 Muxes                |   13 |     0 |          0 |     19440 |  0.07 |
 | F9 Muxes                |    0 |     0 |          0 |      9720 |  0.00 |
-| Unique Control Sets     |  301 |       |          0 |     19440 |  1.55 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
 Warning! For any ECO changes, please run place_design if there are unplaced instances
-** Note: Available Control Sets calculated as Slices * 2, Review the Control Sets Report for more information regarding control sets.
 
 
 1.1 Summary of Registers by Type
@@ -62,10 +60,10 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 137   |          Yes |           - |          Set |
-| 363   |          Yes |           - |        Reset |
-| 81    |          Yes |         Set |            - |
-| 5656  |          Yes |       Reset |            - |
+| 164   |          Yes |           - |          Set |
+| 439   |          Yes |           - |        Reset |
+| 95    |          Yes |         Set |            - |
+| 6743  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -98,7 +96,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------------+------+-------+------------+-----------+-------+
 |     Site Type    | Used | Fixed | Prohibited | Available | Util% |
 +------------------+------+-------+------------+-----------+-------+
-| Bonded IOB       |    4 |     0 |          0 |       228 |  1.75 |
+| Bonded IOB       |    2 |     0 |          0 |       228 |  0.88 |
 |   HPIOB_M        |    0 |     0 |          0 |        72 |  0.00 |
 |   HPIOB_S        |    0 |     0 |          0 |        72 |  0.00 |
 |   HDIOB_M        |    0 |     0 |          0 |        36 |  0.00 |
@@ -122,7 +120,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 | BUFGCE     |    4 |     0 |          0 |        84 |  4.76 |
 | BUFGCE_DIV |    0 |     0 |          0 |        12 |  0.00 |
-| BUFG_GT    |    8 |     0 |          0 |        72 | 11.11 |
+| BUFG_GT    |   10 |     0 |          0 |        72 | 13.89 |
 | BUFGCTRL*  |    0 |     0 |          0 |        24 |  0.00 |
 | PLL        |    0 |     0 |          0 |         6 |  0.00 |
 | MMCM       |    1 |     0 |          0 |         3 | 33.33 |
@@ -136,7 +134,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------+------+-------+------------+-----------+-------+
 |    Site Type    | Used | Fixed | Prohibited | Available | Util% |
 +-----------------+------+-------+------------+-----------+-------+
-| GTHE4_CHANNEL   |    3 |     0 |          0 |        12 | 25.00 |
+| GTHE4_CHANNEL   |    4 |     0 |          0 |        12 | 33.33 |
 | GTHE4_COMMON    |    1 |     0 |          0 |         3 | 33.33 |
 | OBUFDS_GTE4     |    0 |     0 |          0 |         6 |  0.00 |
 | OBUFDS_GTE4_ADV |    0 |     0 |          0 |         6 |  0.00 |
@@ -167,26 +165,24 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +---------------+------+---------------------+
 |    Ref Name   | Used | Functional Category |
 +---------------+------+---------------------+
-| FDRE          | 5656 |            Register |
+| FDRE          | 6743 |            Register |
 | LUT6          | 1083 |                 CLB |
-| LUT4          |  814 |                 CLB |
-| LUT2          |  544 |                 CLB |
-| LUT5          |  517 |                 CLB |
-| FDCE          |  363 |            Register |
-| LUT3          |  255 |                 CLB |
-| LUT1          |  254 |                 CLB |
-| CARRY8        |  153 |                 CLB |
-| FDPE          |  137 |            Register |
-| FDSE          |   81 |            Register |
-| MUXF7         |   21 |                 CLB |
-| BUFG_GT       |    8 |               Clock |
-| BUFG_GT_SYNC  |    7 |               Clock |
+| LUT4          | 1015 |                 CLB |
+| LUT2          |  704 |                 CLB |
+| LUT5          |  684 |                 CLB |
+| FDCE          |  439 |            Register |
+| LUT3          |  328 |                 CLB |
+| LUT1          |  289 |                 CLB |
+| CARRY8        |  189 |                 CLB |
+| FDPE          |  164 |            Register |
+| MUXF7         |  110 |                 CLB |
+| FDSE          |   95 |            Register |
+| MUXF8         |   13 |                 CLB |
+| BUFG_GT       |   10 |               Clock |
+| BUFG_GT_SYNC  |    9 |               Clock |
+| GTHE4_CHANNEL |    4 |            Advanced |
 | BUFGCE        |    4 |               Clock |
-| GTHE4_CHANNEL |    3 |            Advanced |
-| OBUFT         |    2 |                 I/O |
-| OSERDESE3     |    1 |                 I/O |
 | MMCME4_ADV    |    1 |               Clock |
-| INV           |    1 |                 CLB |
 | IBUFDS_GTE4   |    1 |                 I/O |
 | GTHE4_COMMON  |    1 |            Advanced |
 +---------------+------+---------------------+

@@ -46,10 +46,10 @@
 
 
 `timescale 1 ns / 1 ps
-`include "vid_phy_controller_v2_2_22_defs.v"
+`include "vid_phy_controller_v2_2_20_defs.v"
 
 (* DowngradeIPIdentifiedWarnings="yes" *)
-module vid_phy_controller_v2_2_22_axi4lite #
+module vid_phy_controller_v2_2_20_axi4lite #
 	(
 		// Users to add parameters here
 
@@ -1337,7 +1337,7 @@ module vid_phy_controller_v2_2_22_axi4lite #
   assign clkdet_tx_timer_event_updated_re  = (~clkdet_tx_timer_event_updated_q & cfg_phy_mem_map_status[`CLKDET_TX_TMR_EVENT]);
   assign clkdet_rx_timer_event_updated_re  = (~clkdet_rx_timer_event_updated_q & cfg_phy_mem_map_status[`CLKDET_RX_TMR_EVENT]);
 
-  vid_phy_controller_v2_2_22_interrupts vid_phy_controller_interrupts_inst
+  vid_phy_controller_v2_2_20_interrupts vid_phy_controller_interrupts_inst
   (
     .clk                        (S_AXI_ACLK),
     .rst_n                      (S_AXI_ARESETN),

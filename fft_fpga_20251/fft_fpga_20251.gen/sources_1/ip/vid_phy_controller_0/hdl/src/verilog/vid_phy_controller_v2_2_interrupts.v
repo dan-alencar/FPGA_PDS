@@ -49,7 +49,7 @@
 
 //***********************************Entity Declaration*******************************
 
-module vid_phy_controller_v2_2_22_interrupts
+module vid_phy_controller_v2_2_20_interrupts
 (
   input  wire        clk,
   input  wire        rst_n,

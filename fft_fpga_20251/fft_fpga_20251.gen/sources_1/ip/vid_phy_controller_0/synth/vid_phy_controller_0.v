@@ -48,20 +48,18 @@
 
 
 // IP VLNV: xilinx.com:ip:vid_phy_controller:2.2
-// IP Revision: 22
+// IP Revision: 20
 
-(* X_CORE_INFO = "vid_phy_controller_0_top,Vivado 2025.2" *)
+(* X_CORE_INFO = "vid_phy_controller_0_top,Vivado 2025.1" *)
 (* CHECK_LICENSE_TYPE = "vid_phy_controller_0,vid_phy_controller_0_top,{}" *)
-(* CORE_GENERATION_INFO = "vid_phy_controller_0,vid_phy_controller_0_top,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=vid_phy_controller,x_ipVersion=2.2,x_ipCoreRevision=22,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_COMPONENT_NAME=vid_phy_controller_0,C_FAMILY=kintexuplus,C_DEVICE=xcau15p,C_SILICON_REVISION=0,C_SPEEDGRADE=-2,C_SupportLevel=1,C_TransceiverControl=false,c_sub_core_name=vid_phy_controller_0_gtwrapper,C_Tx_Protocol=1,C_Tx_Dp_Protocol=0,C_Rx_Protocol=3,C_Rx_Dp_Protocol=0,C_Tx_No_O\
-f_Channels=3,C_Rx_No_Of_Channels=3,C_TX_PLL_SELECTION=6,C_TX_REFCLK_SEL=0,C_RX_PLL_SELECTION=0,C_RX_REFCLK_SEL=1,C_NIDRU_REFCLK_SEL=0,C_vid_phy_tx_axi4s_ch_TDATA_WIDTH=40,C_vid_phy_tx_axi4s_ch_INT_TDATA_WIDTH=40,C_vid_phy_tx_axi4s_ch_TUSER_WIDTH=1,C_vid_phy_rx_axi4s_ch_TDATA_WIDTH=40,C_vid_phy_rx_axi4s_ch_INT_TDATA_WIDTH=40,C_vid_phy_rx_axi4s_ch_TUSER_WIDTH=1,C_vid_phy_control_sb_tx_TDATA_WIDTH=1,C_vid_phy_status_sb_tx_TDATA_WIDTH=8,C_vid_phy_control_sb_rx_TDATA_WIDTH=1,C_vid_phy_status_sb_rx_TD\
-ATA_WIDTH=1,C_vid_phy_axi4lite_DATA_WIDTH=32,C_vid_phy_axi4lite_ADDR_WIDTH=10,C_NIDRU=0,Tx_Buffer_Bypass=1,C_Txrefclk_Rdy_Invert=0,C_INPUT_PIXELS_PER_CLOCK=4,C_Hdmi_Fast_Switch=1,C_Err_Irq_En=0,C_Use_GT_CH4_HDMI=0,C_INT_WIDTH=0,C_TX_TDATA_WIDTH=40,C_RX_TDATA_WIDTH=40}" *)
+(* CORE_GENERATION_INFO = "vid_phy_controller_0,vid_phy_controller_0_top,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=vid_phy_controller,x_ipVersion=2.2,x_ipCoreRevision=20,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_COMPONENT_NAME=vid_phy_controller_0,C_FAMILY=kintexuplus,C_DEVICE=xcau15p,C_SILICON_REVISION=0,C_SPEEDGRADE=-2,C_SupportLevel=1,C_TransceiverControl=false,c_sub_core_name=vid_phy_controller_0_gtwrapper,C_Tx_Protocol=1,C_Tx_Dp_Protocol=0,C_Rx_Protocol=3,C_Rx_Dp_Protocol=0,C_Tx_No_O\
+f_Channels=4,C_Rx_No_Of_Channels=4,C_TX_PLL_SELECTION=6,C_TX_REFCLK_SEL=0,C_RX_PLL_SELECTION=0,C_RX_REFCLK_SEL=1,C_NIDRU_REFCLK_SEL=0,C_vid_phy_tx_axi4s_ch_TDATA_WIDTH=40,C_vid_phy_tx_axi4s_ch_INT_TDATA_WIDTH=40,C_vid_phy_tx_axi4s_ch_TUSER_WIDTH=1,C_vid_phy_rx_axi4s_ch_TDATA_WIDTH=40,C_vid_phy_rx_axi4s_ch_INT_TDATA_WIDTH=40,C_vid_phy_rx_axi4s_ch_TUSER_WIDTH=1,C_vid_phy_control_sb_tx_TDATA_WIDTH=1,C_vid_phy_status_sb_tx_TDATA_WIDTH=8,C_vid_phy_control_sb_rx_TDATA_WIDTH=1,C_vid_phy_status_sb_rx_TD\
+ATA_WIDTH=1,C_vid_phy_axi4lite_DATA_WIDTH=32,C_vid_phy_axi4lite_ADDR_WIDTH=10,C_NIDRU=0,Tx_Buffer_Bypass=1,C_Txrefclk_Rdy_Invert=0,C_INPUT_PIXELS_PER_CLOCK=4,C_Hdmi_Fast_Switch=1,C_Err_Irq_En=0,C_Use_GT_CH4_HDMI=1,C_INT_WIDTH=0,C_TX_TDATA_WIDTH=40,C_RX_TDATA_WIDTH=40}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module vid_phy_controller_0 (
   tx_refclk_rdy,
   tx_tmds_clk,
   tx_video_clk,
-  tx_tmds_clk_p,
-  tx_tmds_clk_n,
   mgtrefclk0_pad_p_in,
   mgtrefclk0_pad_n_in,
   phy_txn_out,
@@ -120,14 +118,6 @@ output wire tx_tmds_clk;
 (* X_INTERFACE_MODE = "master" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME tx_video_clk, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
 output wire tx_video_clk;
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 tx_tmds_clk_p CLK" *)
-(* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME tx_tmds_clk_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
-output wire tx_tmds_clk_p;
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 tx_tmds_clk_n CLK" *)
-(* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME tx_tmds_clk_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
-output wire tx_tmds_clk_n;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 mgtrefclk0_pad_p_in CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mgtrefclk0_pad_p_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
@@ -136,8 +126,8 @@ input wire mgtrefclk0_pad_p_in;
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mgtrefclk0_pad_n_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
 input wire mgtrefclk0_pad_n_in;
-output wire [2 : 0] phy_txn_out;
-output wire [2 : 0] phy_txp_out;
+output wire [3 : 0] phy_txn_out;
+output wire [3 : 0] phy_txp_out;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 txoutclk CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME txoutclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
@@ -267,8 +257,8 @@ input wire drpclk;
     .C_Tx_Dp_Protocol(0),  // Tx DP Protocol
     .C_Rx_Protocol(3),  // Rx Protocol
     .C_Rx_Dp_Protocol(0),  // Rx DP Protocol
-    .C_Tx_No_Of_Channels(3),  // No Of Tx Channels
-    .C_Rx_No_Of_Channels(3),  // No Of Rx Channels
+    .C_Tx_No_Of_Channels(4),  // No Of Tx Channels
+    .C_Rx_No_Of_Channels(4),  // No Of Rx Channels
     .C_TX_PLL_SELECTION(6),  // Tx PLL Selection
     .C_TX_REFCLK_SEL(0),  // Tx Ref Clk Selection
     .C_RX_PLL_SELECTION(0),  // Rx PLL Selection
@@ -292,7 +282,7 @@ input wire drpclk;
     .C_INPUT_PIXELS_PER_CLOCK(4),  // Number of pixels per clock
     .C_Hdmi_Fast_Switch(1),  // HDMI Fast Switching
     .C_Err_Irq_En(0),  // Enable Error irq port
-    .C_Use_GT_CH4_HDMI(0),  // Enable GT Channel for TMDS Clock
+    .C_Use_GT_CH4_HDMI(1),  // Enable GT Channel for TMDS Clock
     .C_INT_WIDTH(0),  // INT Width
     .C_TX_TDATA_WIDTH(40),  // TX TDATA Width
     .C_RX_TDATA_WIDTH(40)  // RX TDATA Width
@@ -300,8 +290,8 @@ input wire drpclk;
     .tx_refclk_rdy(tx_refclk_rdy),
     .tx_tmds_clk(tx_tmds_clk),
     .tx_video_clk(tx_video_clk),
-    .tx_tmds_clk_p(tx_tmds_clk_p),
-    .tx_tmds_clk_n(tx_tmds_clk_n),
+    .tx_tmds_clk_p(),
+    .tx_tmds_clk_n(),
     .rx_tmds_clk(),
     .rx_video_clk(),
     .rx_tmds_clk_p(),
@@ -336,8 +326,8 @@ input wire drpclk;
     .gtwestrefclk1_in(1'B0),
     .txrefclk_ceb(),
     .rxrefclk_ceb(),
-    .phy_rxn_in(3'B1),
-    .phy_rxp_in(3'B0),
+    .phy_rxn_in(4'B1),
+    .phy_rxp_in(4'B0),
     .phy_txn_out(phy_txn_out),
     .phy_txp_out(phy_txp_out),
     .rxoutclk(),
@@ -419,11 +409,11 @@ input wire drpclk;
     .vid_phy_axi4lite_aclk(vid_phy_axi4lite_aclk),
     .vid_phy_axi4lite_aresetn(vid_phy_axi4lite_aresetn),
     .drpclk(drpclk),
-    .gttxpippmen_in(3'B0),
-    .gttxpippmovrden_in(3'B0),
-    .gttxpippmpd_in(3'B0),
-    .gttxpippmsel_in(3'B0),
-    .gttxpippmstepsize_in(15'B0),
+    .gttxpippmen_in(4'B0),
+    .gttxpippmovrden_in(4'B0),
+    .gttxpippmpd_in(4'B0),
+    .gttxpippmsel_in(4'B0),
+    .gttxpippmstepsize_in(20'B0),
     .err_irq()
   );
 endmodule

@@ -63,7 +63,7 @@
 //----------------------------------------------------------------------------
 // primary         100.000            0.010
 
-`include "vid_phy_controller_v2_2_22_defs.v"
+`include "vid_phy_controller_v2_2_20_defs.v"
 `timescale 1ps/1ps
 module vid_phy_controller_0_CLOCK_MODULE_8series #
 (

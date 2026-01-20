@@ -403,7 +403,7 @@ module vid_phy_controller_0_gtwrapper_gthe4_channel_wrapper #(
 
 
 
-gtwizard_ultrascale_v1_7_22_gthe4_channel #(
+gtwizard_ultrascale_v1_7_20_gthe4_channel #(
   .GTHE4_CHANNEL_ACJTAG_DEBUG_MODE              (1'b0),
   .GTHE4_CHANNEL_ACJTAG_MODE                    (1'b0),
   .GTHE4_CHANNEL_ACJTAG_RESET                   (1'b0),

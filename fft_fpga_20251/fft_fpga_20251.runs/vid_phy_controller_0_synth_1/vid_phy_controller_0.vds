@@ -1,25 +1,25 @@
 #-----------------------------------------------------------
-# Vivado v2025.2 (64-bit)
-# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
-# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
-# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Tue Jan 20 17:41:39 2026
-# Process ID         : 147557
-# Current directory  : /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Tue Jan 20 17:57:37 2026
+# Process ID         : 44111
+# Current directory  : /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1
 # Command line       : vivado -log vid_phy_controller_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vid_phy_controller_0.tcl
-# Log file           : /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/vid_phy_controller_0.vds
-# Journal file       : /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/vivado.jou
-# Running On         : dan-alencar
+# Log file           : /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/vid_phy_controller_0.vds
+# Journal file       : /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/vivado.jou
+# Running On         : daniloalencar.lesc.ufc.br
 # Platform           : Linuxmint
-# Operating System   : Linux Mint 22.2
-# Processor Detail   : Intel(R) Core(TM) 5 210H
-# CPU Frequency      : 3642.212 MHz
-# CPU Physical cores : 8
-# CPU Logical cores  : 12
-# Host memory        : 24783 MB
+# Operating System   : Linux Mint 22.1
+# Processor Detail   : Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+# CPU Frequency      : 3999.510 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 33603 MB
 # Swap memory        : 2147 MB
-# Total Virtual      : 26931 MB
-# Available Virtual  : 18022 MB
+# Total Virtual      : 35751 MB
+# Available Virtual  : 28372 MB
 #-----------------------------------------------------------
 source vid_phy_controller_0.tcl -notrace
 Command: synth_design -top vid_phy_controller_0 -part xcau15p-ffvb676-2-e -incremental_mode off -mode out_of_context
@@ -29,381 +29,373 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p
 INFO: [Device 21-403] Loading part xcau15p-ffvb676-2-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 147619
+INFO: [Synth 8-7075] Helper process launched with PID 44179
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2448.617 ; gain = 451.688 ; free physical = 7787 ; free virtual = 15767
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2347.652 ; gain = 423.773 ; free physical = 15459 ; free virtual = 25897
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-11241] undeclared symbol 'MMCM_DRP_SCLK', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source.v:367]
-INFO: [Synth 8-11241] undeclared symbol 'vid_phy_axi4lite_aclk', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_8series.v:99]
-INFO: [Synth 8-11241] undeclared symbol 'clkin1', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE.v:103]
-INFO: [Synth 8-11241] undeclared symbol 'clkout0', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE.v:161]
-INFO: [Synth 8-11241] undeclared symbol 'clkin1', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE_8series.v:105]
-WARNING: [Synth 8-11065] parameter 'PLL0_FBDIV_IN' becomes localparam in 'vid_phy_controller_v2_2_22_gtp_common' with formal parameter declaration list [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:104]
-WARNING: [Synth 8-11065] parameter 'PLL1_FBDIV_IN' becomes localparam in 'vid_phy_controller_v2_2_22_gtp_common' with formal parameter declaration list [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:105]
-WARNING: [Synth 8-11065] parameter 'PLL0_FBDIV_45_IN' becomes localparam in 'vid_phy_controller_v2_2_22_gtp_common' with formal parameter declaration list [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:106]
-WARNING: [Synth 8-11065] parameter 'PLL1_FBDIV_45_IN' becomes localparam in 'vid_phy_controller_v2_2_22_gtp_common' with formal parameter declaration list [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:107]
-WARNING: [Synth 8-11065] parameter 'PLL0_REFCLK_DIV_IN' becomes localparam in 'vid_phy_controller_v2_2_22_gtp_common' with formal parameter declaration list [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:108]
-WARNING: [Synth 8-11065] parameter 'PLL1_REFCLK_DIV_IN' becomes localparam in 'vid_phy_controller_v2_2_22_gtp_common' with formal parameter declaration list [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:109]
-INFO: [Synth 8-11241] undeclared symbol 'gtwiz_buffbypass_tx_reset_in', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:779]
-INFO: [Synth 8-11241] undeclared symbol 'gtwiz_buffbypass_tx_start_user_in', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:780]
-INFO: [Synth 8-11241] undeclared symbol 'gtgrefclk0_in', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1064]
-INFO: [Synth 8-11241] undeclared symbol 'gtgrefclk1_in', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1072]
-INFO: [Synth 8-11241] undeclared symbol 'b0_MMCM_DRP_LOCKED', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1551]
-INFO: [Synth 8-11241] undeclared symbol 'b0_MMCM_DRP_LOCKED_sync', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1553]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_top' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:46]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single' (0#1) [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gtwrapper' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.v:53]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gtwrapper_gtwizard_top' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_gtwizard_top.v:173]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gtwrapper_gtwizard_gthe4' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_gtwizard_gthe4.v:141]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gtwrapper_gthe4_channel_wrapper' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_gthe4_channel_wrapper.v:56]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_channel' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/gtwizard_ultrascale_v1_7_gthe4_channel.v:53]
-INFO: [Synth 8-6157] synthesizing module 'GTHE4_CHANNEL' [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:53844]
-INFO: [Synth 8-6155] done synthesizing module 'GTHE4_CHANNEL' (0#1) [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:53844]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_channel' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/gtwizard_ultrascale_v1_7_gthe4_channel.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gtwrapper_gthe4_channel_wrapper' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_gthe4_channel_wrapper.v:56]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal.v:53]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_reset_synchronizer' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_sync.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_reset_synchronizer' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_sync.v:53]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_bit_synchronizer' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_bit_sync.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_bit_synchronizer' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_bit_sync.v:53]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:53]
-INFO: [Synth 8-6157] synthesizing module 'BUFG_GT' [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2855]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG_GT' (0#1) [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2855]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_freq_counter' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_freq_counter' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:53]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v:53]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gte4_drp_arb' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gte4_drp_arb.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gte4_drp_arb' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gte4_drp_arb.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal.v:53]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_delay_powergood' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:53]
-INFO: [Synth 8-226] default block is never used [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:136]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_delay_powergood' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:53]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_buffbypass_tx' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_buffbypass_tx.v:53]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_reset_inv_synchronizer' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_reset_inv_synchronizer' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_buffbypass_tx' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_buffbypass_tx.v:53]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:53]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:162]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:53]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_userdata_tx' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_tx.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_userdata_tx' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_tx.v:53]
-INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_userdata_rx' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_rx.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_userdata_rx' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_rx.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gtwrapper_gtwizard_gthe4' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_gtwizard_gthe4.v:141]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gtwrapper_gtwizard_top' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_gtwizard_top.v:173]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gtwrapper' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.v:53]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gt_usrclk_source_8series' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source_8series.v:68]
-INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE4' [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:83082]
-INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE4' (0#1) [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:83082]
-INFO: [Synth 8-6157] synthesizing module 'BUFG_GT_SYNC' [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2877]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG_GT_SYNC' (0#1) [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2877]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_22_drp_control_hdmi' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:52]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized0' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized0' (0#1) [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized0' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized0' (0#1) [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized1' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized1' (0#1) [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_22_drp_control_hdmi' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:52]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_CLOCK_MODULE_8series' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE_8series.v:68]
-INFO: [Synth 8-6157] synthesizing module 'MMCME3_ADV' [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:96035]
-INFO: [Synth 8-6155] done synthesizing module 'MMCME3_ADV' (0#1) [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:96035]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
-INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2688]
-INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (0#1) [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2688]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_CLOCK_MODULE_8series' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE_8series.v:68]
-INFO: [Synth 8-6157] synthesizing module 'OSERDESE3' [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:117917]
-INFO: [Synth 8-6155] done synthesizing module 'OSERDESE3' (0#1) [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:117917]
-INFO: [Synth 8-6157] synthesizing module 'OBUFTDS' [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:113969]
-INFO: [Synth 8-6155] done synthesizing module 'OBUFTDS' (0#1) [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:113969]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gt_usrclk_source_8series' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source_8series.v:68]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gtwrapper_gthe4_common_wrapper.v:57]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gthe4_common' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gthe4_common.v:55]
-INFO: [Synth 8-6157] synthesizing module 'GTHE4_COMMON' [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:55036]
-INFO: [Synth 8-6155] done synthesizing module 'GTHE4_COMMON' (0#1) [/home/dan-alencar/2025.2/Vivado/scripts/rt/data/unisim_comp.v:55036]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gthe4_common' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gthe4_common.v:55]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gtwrapper_gthe4_common_wrapper.v:57]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_PCIERATEQPLL0' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_PCIERATEQPLL1' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_QPLL0FBDIV' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_QPLL1FBDIV' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM0DATA' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM0RESET' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM0TOGGLE' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM0WIDTH' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM1DATA' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM1RESET' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM1TOGGLE' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM1WIDTH' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_TCONGPI' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_TCONPOWERUP' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_TCONRESET' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_TCONRSVDIN1' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM0FINALOUT' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM0TESTDATA' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM1FINALOUT' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM1TESTDATA' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_TCONGPO' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7071] port 'GTHE4_COMMON_TCONRSVDOUT0' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-7023] instance 'gt_common_inst' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' has 87 connections declared, but only 65 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1041]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_22_axi4lite' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_axi4lite.v:51]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_22_interrupts' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_interrupts.v:52]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_22_interrupts' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_interrupts.v:52]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_22_axi4lite' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_axi4lite.v:51]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_22_drp_control_hdmi__parameterized0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:52]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_22_drp_control_hdmi__parameterized0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:52]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_clkdet' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_clkdet.sv:18]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized2' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized2' (0#1) [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_22_lib_edge_v1_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_lib.sv:150]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_22_lib_edge_v1_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_lib.sv:150]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst__parameterized0' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst__parameterized0' (0#1) [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_clkdet' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_clkdet.sv:18]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized3' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized3' (0#1) [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized4' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized4' (0#1) [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized5' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized5' (0#1) [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized6' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized6' (0#1) [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst__parameterized1' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst__parameterized1' (0#1) [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_top' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:46]
-INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0.v:53]
-WARNING: [Synth 8-7137] Register freq_cnt_o_reg in module gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_freq_counter has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v:188]
-WARNING: [Synth 8-6014] Unused sequential element mask_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:1077]
-WARNING: [Synth 8-6014] Unused sequential element gen_cal_rx_en.mask_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v:1000]
-WARNING: [Synth 8-6014] Unused sequential element DRP_Rsp_Rd_Toggle_q_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:203]
-WARNING: [Synth 8-6014] Unused sequential element DRP_Rsp_Rd_Toggle_pulse_cnt_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:215]
-WARNING: [Synth 8-3848] Net MMCM_RX_DRPBUSY in module/entity vid_phy_controller_0_gt_usrclk_source_8series does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source_8series.v:111]
-WARNING: [Synth 8-3848] Net MMCM_RX_DRPRDY in module/entity vid_phy_controller_0_gt_usrclk_source_8series does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source_8series.v:112]
-WARNING: [Synth 8-3848] Net MMCM_RX_DRPDO in module/entity vid_phy_controller_0_gt_usrclk_source_8series does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source_8series.v:113]
-INFO: [Synth 8-6014] Unused sequential element slv_reg_0x340_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_axi4lite.v:454]
-WARNING: [Synth 8-6014] Unused sequential element DRP_Rsp_Rd_Toggle_q_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:203]
-WARNING: [Synth 8-6014] Unused sequential element DRP_Rsp_Rd_Toggle_pulse_cnt_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:215]
-INFO: [Synth 8-3848] Net vid_phy_tx_axi4s_ch3_tready in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:187]
-INFO: [Synth 8-3848] Net vid_phy_rx_axi4s_ch3_tvalid in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:214]
-INFO: [Synth 8-3848] Net vid_phy_rx_axi4s_ch3_tdata in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:215]
-INFO: [Synth 8-3848] Net vid_phy_rx_axi4s_ch3_tuser in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:216]
-INFO: [Synth 8-3848] Net vid_phy_control_sb_rx_tready in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:233]
-INFO: [Synth 8-3848] Net vid_phy_status_sb_rx_tvalid in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:238]
-INFO: [Synth 8-3848] Net vid_phy_status_sb_rx_tdata in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:239]
-INFO: [Synth 8-3848] Net tx_lnk_clk in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:271]
-INFO: [Synth 8-3848] Net tx_enc_clk in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:272]
-INFO: [Synth 8-3848] Net rx_lnk_clk in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:276]
-INFO: [Synth 8-3848] Net rx_dec_clk in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:277]
-INFO: [Synth 8-3848] Net gtgrefclk0_in in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1064]
-INFO: [Synth 8-3848] Net gtgrefclk1_in in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1072]
-INFO: [Synth 8-3848] Net b0_MMCM_DRP_LOCKED in module/entity vid_phy_controller_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1551]
-INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_single__parameterized0 is either unconnected or has no load
-INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized5 is either unconnected or has no load
-INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized6 is either unconnected or has no load
-INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized4 is either unconnected or has no load
-INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized3 is either unconnected or has no load
-INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port clkdet_freq_cntr_timeout[10] in module vid_phy_controller_0_clkdet is either unconnected or has no load
-INFO: [Synth 8-7129] Port clkdet_freq_cntr_timeout[9] in module vid_phy_controller_0_clkdet is either unconnected or has no load
-INFO: [Synth 8-7129] Port clkdet_freq_cntr_timeout[8] in module vid_phy_controller_0_clkdet is either unconnected or has no load
-INFO: [Synth 8-7129] Port clkdet_freq_cntr_timeout[7] in module vid_phy_controller_0_clkdet is either unconnected or has no load
-INFO: [Synth 8-7129] Port clkdet_freq_cntr_timeout[6] in module vid_phy_controller_0_clkdet is either unconnected or has no load
-INFO: [Synth 8-7129] Port clkdet_freq_cntr_timeout[5] in module vid_phy_controller_0_clkdet is either unconnected or has no load
-INFO: [Synth 8-7129] Port clkdet_freq_cntr_timeout[4] in module vid_phy_controller_0_clkdet is either unconnected or has no load
-INFO: [Synth 8-7129] Port clkdet_freq_cntr_timeout[3] in module vid_phy_controller_0_clkdet is either unconnected or has no load
-INFO: [Synth 8-7129] Port clkdet_freq_cntr_timeout[2] in module vid_phy_controller_0_clkdet is either unconnected or has no load
-INFO: [Synth 8-7129] Port clkdet_freq_cntr_timeout[1] in module vid_phy_controller_0_clkdet is either unconnected or has no load
-INFO: [Synth 8-7129] Port clkdet_freq_cntr_timeout[0] in module vid_phy_controller_0_clkdet is either unconnected or has no load
-INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized1 is either unconnected or has no load
-INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized0 is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[29] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[28] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[27] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[26] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[25] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[24] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[23] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[22] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[21] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[20] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[19] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[18] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[17] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[16] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[15] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[14] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[13] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[12] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[11] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port isr_write[8] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[29] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[28] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[27] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[26] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[25] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[24] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[23] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[22] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[21] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[20] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[19] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[18] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[17] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[16] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[15] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[14] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[13] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[12] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[11] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port ier[8] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[29] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[28] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[27] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[26] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[25] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[24] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[23] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[22] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[21] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[20] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[19] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[18] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[17] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[16] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[15] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[14] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[13] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[12] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[11] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port idr[8] in module vid_phy_controller_v2_2_22_interrupts is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[939] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[938] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[937] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[936] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[935] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[934] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[933] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[932] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[931] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[930] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[929] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[928] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[927] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[926] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[925] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[924] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[923] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[922] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[921] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[920] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
-INFO: [Synth 8-7129] Port cfg_phy_mem_map_control[919] in module vid_phy_controller_v2_2_22_axi4lite is either unconnected or has no load
+INFO: [Synth 8-11241] undeclared symbol 'MMCM_DRP_SCLK', assumed default net type 'wire' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source.v:367]
+INFO: [Synth 8-11241] undeclared symbol 'vid_phy_axi4lite_aclk', assumed default net type 'wire' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_8series.v:99]
+INFO: [Synth 8-11241] undeclared symbol 'clkin1', assumed default net type 'wire' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE.v:103]
+INFO: [Synth 8-11241] undeclared symbol 'clkout0', assumed default net type 'wire' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE.v:161]
+INFO: [Synth 8-11241] undeclared symbol 'clkin1', assumed default net type 'wire' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE_8series.v:105]
+WARNING: [Synth 8-11065] parameter 'PLL0_FBDIV_IN' becomes localparam in 'vid_phy_controller_v2_2_20_gtp_common' with formal parameter declaration list [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:104]
+WARNING: [Synth 8-11065] parameter 'PLL1_FBDIV_IN' becomes localparam in 'vid_phy_controller_v2_2_20_gtp_common' with formal parameter declaration list [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:105]
+WARNING: [Synth 8-11065] parameter 'PLL0_FBDIV_45_IN' becomes localparam in 'vid_phy_controller_v2_2_20_gtp_common' with formal parameter declaration list [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:106]
+WARNING: [Synth 8-11065] parameter 'PLL1_FBDIV_45_IN' becomes localparam in 'vid_phy_controller_v2_2_20_gtp_common' with formal parameter declaration list [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:107]
+WARNING: [Synth 8-11065] parameter 'PLL0_REFCLK_DIV_IN' becomes localparam in 'vid_phy_controller_v2_2_20_gtp_common' with formal parameter declaration list [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:108]
+WARNING: [Synth 8-11065] parameter 'PLL1_REFCLK_DIV_IN' becomes localparam in 'vid_phy_controller_v2_2_20_gtp_common' with formal parameter declaration list [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:109]
+INFO: [Synth 8-11241] undeclared symbol 'gtwiz_buffbypass_tx_reset_in', assumed default net type 'wire' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:865]
+INFO: [Synth 8-11241] undeclared symbol 'gtwiz_buffbypass_tx_start_user_in', assumed default net type 'wire' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:866]
+INFO: [Synth 8-11241] undeclared symbol 'gtgrefclk0_in', assumed default net type 'wire' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1167]
+INFO: [Synth 8-11241] undeclared symbol 'gtgrefclk1_in', assumed default net type 'wire' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1175]
+INFO: [Synth 8-11241] undeclared symbol 'b0_MMCM_DRP_LOCKED', assumed default net type 'wire' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1707]
+INFO: [Synth 8-11241] undeclared symbol 'b0_MMCM_DRP_LOCKED_sync', assumed default net type 'wire' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1709]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_top' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:46]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gtwrapper' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.v:53]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gtwrapper_gtwizard_top' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_gtwizard_top.v:173]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gtwrapper_gtwizard_gthe4' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_gtwizard_gthe4.v:141]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gtwrapper_gthe4_channel_wrapper' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_gthe4_channel_wrapper.v:56]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_gthe4_channel' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/gtwizard_ultrascale_v1_7_gthe4_channel.v:53]
+INFO: [Synth 8-6157] synthesizing module 'GTHE4_CHANNEL' [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:48679]
+INFO: [Synth 8-6155] done synthesizing module 'GTHE4_CHANNEL' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:48679]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_gthe4_channel' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/gtwizard_ultrascale_v1_7_gthe4_channel.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gtwrapper_gthe4_channel_wrapper' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_gthe4_channel_wrapper.v:56]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_reset_synchronizer' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_sync.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_reset_synchronizer' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_sync.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_bit_synchronizer' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_bit_sync.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_bit_synchronizer' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_bit_sync.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'BUFG_GT' [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2855]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG_GT' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2855]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_freq_counter' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_freq_counter' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_gte4_drp_arb' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gte4_drp_arb.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_gte4_drp_arb' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gte4_drp_arb.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_gthe4_delay_powergood' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:53]
+INFO: [Synth 8-226] default block is never used [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:136]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_gthe4_delay_powergood' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_gtwiz_buffbypass_tx' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_buffbypass_tx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_reset_inv_synchronizer' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_reset_inv_synchronizer' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_gtwiz_buffbypass_tx' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_buffbypass_tx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_gtwiz_reset' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:53]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:162]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_gtwiz_reset' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_gtwiz_userdata_tx' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_tx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_gtwiz_userdata_tx' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_tx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_20_gtwiz_userdata_rx' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_rx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_20_gtwiz_userdata_rx' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_rx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gtwrapper_gtwizard_gthe4' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_gtwizard_gthe4.v:141]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gtwrapper_gtwizard_top' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_gtwizard_top.v:173]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gtwrapper' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.v:53]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gt_usrclk_source_8series' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source_8series.v:68]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE4' [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:77060]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE4' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:77060]
+INFO: [Synth 8-6157] synthesizing module 'BUFG_GT_SYNC' [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2877]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG_GT_SYNC' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2877]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_20_drp_control_hdmi' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:52]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized0' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized0' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized0' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized0' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized1' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized1' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_20_drp_control_hdmi' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:52]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_CLOCK_MODULE_8series' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE_8series.v:68]
+INFO: [Synth 8-6157] synthesizing module 'MMCME3_ADV' [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:89612]
+INFO: [Synth 8-6155] done synthesizing module 'MMCME3_ADV' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:89612]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2688]
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2688]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_CLOCK_MODULE_8series' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE_8series.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gt_usrclk_source_8series' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source_8series.v:68]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_20_gt_tx_tmdsclk_patgen' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gt_tx_tmdsclk_patgen.sv:62]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized2' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized2' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_20_gt_tx_tmdsclk_patgen' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_gt_tx_tmdsclk_patgen.sv:62]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gtwrapper_gthe4_common_wrapper.v:57]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_gthe4_common' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gthe4_common.v:55]
+INFO: [Synth 8-6157] synthesizing module 'GTHE4_COMMON' [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:49871]
+INFO: [Synth 8-6155] done synthesizing module 'GTHE4_COMMON' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/scripts/rt/data/unisim_comp.v:49871]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gthe4_common' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gthe4_common.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gtwrapper_gthe4_common_wrapper.v:57]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_PCIERATEQPLL0' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_PCIERATEQPLL1' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_QPLL0FBDIV' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_QPLL1FBDIV' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_SDM0DATA' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_SDM0RESET' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_SDM0TOGGLE' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_SDM0WIDTH' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_SDM1DATA' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_SDM1RESET' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_SDM1TOGGLE' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_SDM1WIDTH' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_TCONGPI' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_TCONPOWERUP' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_TCONRESET' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_TCONRSVDIN1' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_SDM0FINALOUT' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_SDM0TESTDATA' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_SDM1FINALOUT' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_SDM1TESTDATA' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_TCONGPO' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7071] port 'GTHE4_COMMON_TCONRSVDOUT0' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+WARNING: [Synth 8-7023] instance 'gt_common_inst' of module 'vid_phy_controller_0_gtwrapper_gthe4_common_wrapper' has 87 connections declared, but only 65 given [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1144]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_20_axi4lite' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_axi4lite.v:51]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_20_interrupts' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_interrupts.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_20_interrupts' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_interrupts.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_20_axi4lite' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_axi4lite.v:51]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_20_drp_control_hdmi__parameterized0' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_20_drp_control_hdmi__parameterized0' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:52]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_0_clkdet' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_clkdet.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized3' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized3' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_20_lib_edge_v1_0' [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_lib.sv:150]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_20_lib_edge_v1_0' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_lib.sv:150]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst__parameterized0' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst__parameterized0' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_clkdet' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_clkdet.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized4' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized4' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized5' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized5' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized6' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized6' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst__parameterized1' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst__parameterized1' (0#1) [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0_top' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_0' (0#1) [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0.v:53]
+WARNING: [Synth 8-7137] Register freq_cnt_o_reg in module gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_freq_counter has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v:188]
+WARNING: [Synth 8-6014] Unused sequential element mask_reg was removed.  [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:1077]
+WARNING: [Synth 8-6014] Unused sequential element gen_cal_rx_en.mask_reg was removed.  [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v:1000]
+WARNING: [Synth 8-6014] Unused sequential element DRP_Rsp_Rd_Toggle_q_reg was removed.  [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:203]
+WARNING: [Synth 8-6014] Unused sequential element DRP_Rsp_Rd_Toggle_pulse_cnt_reg was removed.  [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:215]
+WARNING: [Synth 8-3848] Net MMCM_RX_DRPBUSY in module/entity vid_phy_controller_0_gt_usrclk_source_8series does not have driver. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source_8series.v:111]
+WARNING: [Synth 8-3848] Net MMCM_RX_DRPRDY in module/entity vid_phy_controller_0_gt_usrclk_source_8series does not have driver. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source_8series.v:112]
+WARNING: [Synth 8-3848] Net MMCM_RX_DRPDO in module/entity vid_phy_controller_0_gt_usrclk_source_8series does not have driver. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source_8series.v:113]
+WARNING: [Synth 8-6014] Unused sequential element DRP_Rsp_Rd_Toggle_q_reg was removed.  [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:203]
+WARNING: [Synth 8-6014] Unused sequential element DRP_Rsp_Rd_Toggle_pulse_cnt_reg was removed.  [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:215]
+WARNING: [Synth 8-3848] Net vid_phy_control_sb_rx_tready in module/entity vid_phy_controller_0_top does not have driver. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:233]
+WARNING: [Synth 8-3848] Net vid_phy_status_sb_rx_tvalid in module/entity vid_phy_controller_0_top does not have driver. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:238]
+WARNING: [Synth 8-3848] Net vid_phy_status_sb_rx_tdata in module/entity vid_phy_controller_0_top does not have driver. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:239]
+WARNING: [Synth 8-3848] Net tx_lnk_clk in module/entity vid_phy_controller_0_top does not have driver. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:271]
+WARNING: [Synth 8-3848] Net tx_enc_clk in module/entity vid_phy_controller_0_top does not have driver. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:272]
+WARNING: [Synth 8-3848] Net rx_lnk_clk in module/entity vid_phy_controller_0_top does not have driver. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:276]
+WARNING: [Synth 8-3848] Net rx_dec_clk in module/entity vid_phy_controller_0_top does not have driver. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:277]
+WARNING: [Synth 8-3848] Net gtgrefclk0_in in module/entity vid_phy_controller_0_top does not have driver. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1167]
+WARNING: [Synth 8-3848] Net gtgrefclk1_in in module/entity vid_phy_controller_0_top does not have driver. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1175]
+WARNING: [Synth 8-3848] Net b0_MMCM_DRP_LOCKED in module/entity vid_phy_controller_0_top does not have driver. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v:1707]
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_single__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkdet_freq_cntr_timeout[10] in module vid_phy_controller_0_clkdet is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkdet_freq_cntr_timeout[9] in module vid_phy_controller_0_clkdet is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkdet_freq_cntr_timeout[8] in module vid_phy_controller_0_clkdet is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkdet_freq_cntr_timeout[7] in module vid_phy_controller_0_clkdet is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkdet_freq_cntr_timeout[6] in module vid_phy_controller_0_clkdet is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkdet_freq_cntr_timeout[5] in module vid_phy_controller_0_clkdet is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkdet_freq_cntr_timeout[4] in module vid_phy_controller_0_clkdet is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkdet_freq_cntr_timeout[3] in module vid_phy_controller_0_clkdet is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkdet_freq_cntr_timeout[2] in module vid_phy_controller_0_clkdet is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkdet_freq_cntr_timeout[1] in module vid_phy_controller_0_clkdet is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkdet_freq_cntr_timeout[0] in module vid_phy_controller_0_clkdet is either unconnected or has no load
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[29] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[28] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[27] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[26] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[25] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[24] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[23] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[22] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[21] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[20] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[19] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[18] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[17] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[16] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[15] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[14] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[13] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[12] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[11] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port isr_write[8] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[29] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[28] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[27] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[26] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[25] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[24] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[23] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[22] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[21] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[20] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[19] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[18] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[17] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[16] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[15] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[14] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[13] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[12] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[11] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ier[8] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[29] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[28] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[27] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[26] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[25] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[24] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[23] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[22] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[21] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[20] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[19] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[18] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[17] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[16] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[15] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[14] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[13] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[12] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[11] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port idr[8] in module vid_phy_controller_v2_2_20_interrupts is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[939] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[938] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[937] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[936] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[935] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[934] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[933] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[932] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[931] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[930] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[929] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[928] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[927] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[926] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[925] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[924] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[923] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[922] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[921] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[920] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cfg_phy_mem_map_control[919] in module vid_phy_controller_v2_2_20_axi4lite is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2638.586 ; gain = 641.656 ; free physical = 7581 ; free virtual = 15544
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2526.590 ; gain = 602.711 ; free physical = 15254 ; free virtual = 25697
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2638.586 ; gain = 641.656 ; free physical = 7580 ; free virtual = 15543
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2526.590 ; gain = 602.711 ; free physical = 15247 ; free virtual = 25690
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2638.586 ; gain = 641.656 ; free physical = 7580 ; free virtual = 15543
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2526.590 ; gain = 602.711 ; free physical = 15247 ; free virtual = 25690
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2638.586 ; gain = 0.000 ; free physical = 7587 ; free virtual = 15567
-INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2526.590 ; gain = 0.000 ; free physical = 15275 ; free virtual = 25718
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_ooc_fixed.xdc] for cell 'inst'
-create_clock: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2745.051 ; gain = 0.000 ; free physical = 7474 ; free virtual = 15454
-Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_ooc_fixed.xdc] for cell 'inst'
-Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.xdc] for cell 'inst/gt_wrapper_inst/inst'
-Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.xdc] for cell 'inst/gt_wrapper_inst/inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vid_phy_controller_0_propImpl.xdc].
+Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_ooc_fixed.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2642.508 ; gain = 24.930 ; free physical = 15252 ; free virtual = 25694
+Finished Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_ooc_fixed.xdc] for cell 'inst'
+Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.xdc] for cell 'inst/gt_wrapper_inst/inst'
+Finished Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.xdc] for cell 'inst/gt_wrapper_inst/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vid_phy_controller_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/vid_phy_controller_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_xdc.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_xdc.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vid_phy_controller_0_propImpl.xdc].
+Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_xdc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_xdc.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vid_phy_controller_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/vid_phy_controller_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 WARNING: [Timing 38-277] The instance 'inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
 WARNING: [Timing 38-277] The instance 'inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
 WARNING: [Timing 38-252] The BUFG_GT instance 'inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
 INFO: [Timing 38-2] Deriving generated clocks
-Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vid_phy_controller_0_propImpl.xdc].
+Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vid_phy_controller_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/vid_phy_controller_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_clocks.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_clocks.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vid_phy_controller_0_propImpl.xdc].
+Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_clocks.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_clocks.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vid_phy_controller_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/vid_phy_controller_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_handshake_DRP_Config_inst' of design 'preSynthElab_1' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_handshake_DRP_Config_inst' of design 'preSynthElab_1' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
 WARNING: [XPM_CDC_ARRAY_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_handshake_DRP_Config_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
-INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_handshake_DRP_Status_inst' of design 'preSynthElab_1' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+ [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_handshake_DRP_Status_inst' of design 'preSynthElab_1' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
 WARNING: [XPM_CDC_ARRAY_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_handshake_DRP_Status_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vid_phy_controller_0_propImpl.xdc].
+ [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vid_phy_controller_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/vid_phy_controller_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_single_DRP_Rsp_Rd_Toggle_inst' of design 'preSynthElab_1' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_single_DRP_Rsp_Rd_Toggle_inst' of design 'preSynthElab_1' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_single_DRP_Rsp_Rd_Toggle_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
-INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/xpm_array_single_qpll0lock_b0_inst' of design 'preSynthElab_1' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/xpm_array_single_qpll0lock_b0_inst' of design 'preSynthElab_1' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: inst/xpm_array_single_qpll0lock_b0_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
-INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/xpm_array_single_qpll1lock_b0_inst' of design 'preSynthElab_1' [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/xpm_array_single_qpll1lock_b0_inst' of design 'preSynthElab_1' [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: inst/xpm_array_single_qpll1lock_b0_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dan-alencar/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vid_phy_controller_0_propImpl.xdc].
+ [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/danilo-alencar/AMD/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vid_phy_controller_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/vid_phy_controller_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Project 1-1714] 95 XPM XDC files have been applied to the design.
+INFO: [Project 1-1714] 117 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2745.051 ; gain = 0.000 ; free physical = 7472 ; free virtual = 15452
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2642.508 ; gain = 0.000 ; free physical = 15269 ; free virtual = 25712
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 4 instances were transformed.
+  A total of 3 instances were transformed.
   BUFG => BUFGCE: 2 instances
   MMCME3_ADV => MMCME4_ADV: 1 instance 
-  OBUFTDS => OBUFTDS_DUAL_BUF (INV, OBUFT(x2)): 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2745.086 ; gain = 0.000 ; free physical = 7471 ; free virtual = 15452
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2642.543 ; gain = 0.000 ; free physical = 15268 ; free virtual = 25712
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 2745.086 ; gain = 748.156 ; free physical = 7499 ; free virtual = 15462
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2642.543 ; gain = 718.664 ; free physical = 15177 ; free virtual = 25621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -411,31 +403,32 @@ Start Loading Part and Timing Information
 Loading part: xcau15p-ffvb676-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 2753.055 ; gain = 756.125 ; free physical = 7499 ; free virtual = 15462
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2650.512 ; gain = 726.633 ; free physical = 15177 ; free virtual = 25621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2753.055 ; gain = 756.125 ; free physical = 7499 ; free virtual = 15462
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2650.512 ; gain = 726.633 ; free physical = 15180 ; free virtual = 25625
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3936] Found unconnected internal register 'progclk_sel_store_reg' and it is trimmed from '16' to '15' bits. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:705]
-WARNING: [Synth 8-3936] Found unconnected internal register 'x0e1_store_reg' and it is trimmed from '16' to '15' bits. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:778]
-INFO: [Synth 8-802] inferred FSM for state register 'arb_state_reg' in module 'gtwizard_ultrascale_v1_7_22_gte4_drp_arb'
-INFO: [Synth 8-802] inferred FSM for state register 'gen_gtwiz_buffbypass_tx_main.gen_auto_mode.sm_buffbypass_tx_reg' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_buffbypass_tx'
-INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_all_reg' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset'
-INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_tx_reg' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset'
-INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_rx_reg' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset'
+WARNING: [Synth 8-3936] Found unconnected internal register 'progclk_sel_store_reg' and it is trimmed from '16' to '15' bits. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:705]
+WARNING: [Synth 8-3936] Found unconnected internal register 'x0e1_store_reg' and it is trimmed from '16' to '15' bits. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:778]
+INFO: [Synth 8-802] inferred FSM for state register 'arb_state_reg' in module 'gtwizard_ultrascale_v1_7_20_gte4_drp_arb'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_gtwiz_buffbypass_tx_main.gen_auto_mode.sm_buffbypass_tx_reg' in module 'gtwizard_ultrascale_v1_7_20_gtwiz_buffbypass_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_all_reg' in module 'gtwizard_ultrascale_v1_7_20_gtwiz_reset'
+INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_tx_reg' in module 'gtwizard_ultrascale_v1_7_20_gtwiz_reset'
+INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_rx_reg' in module 'gtwizard_ultrascale_v1_7_20_gtwiz_reset'
 INFO: [Synth 8-802] inferred FSM for state register 'clk_sm_cur_reg' in module 'vid_phy_controller_0_clkdet'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
+*
                ARB_START |                             0001 |                             0001
                 ARB_WAIT |                             0010 |                             0010
               ARB_REPORT |                             0100 |                             0100
                  ARB_INC |                             1000 |                             1000
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'arb_state_reg' using encoding 'one-hot' in module 'gtwizard_ultrascale_v1_7_22_gte4_drp_arb'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'arb_state_reg' in module 'gtwizard_ultrascale_v1_7_20_gte4_drp_arb'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -445,7 +438,7 @@ ST_BUFFBYPASS_TX_DEASSERT_TXDLYSRESET |                             0010 |      
 ST_BUFFBYPASS_TX_WAIT_TXSYNCDONE |                             0100 |                               10
    ST_BUFFBYPASS_TX_DONE |                             1000 |                               11
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'gen_gtwiz_buffbypass_tx_main.gen_auto_mode.sm_buffbypass_tx_reg' using encoding 'one-hot' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_buffbypass_tx'
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_gtwiz_buffbypass_tx_main.gen_auto_mode.sm_buffbypass_tx_reg' using encoding 'one-hot' in module 'gtwizard_ultrascale_v1_7_20_gtwiz_buffbypass_tx'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -457,7 +450,7 @@ ST_RESET_TX_WAIT_USERRDY |                              100 |                   
 ST_RESET_TX_WAIT_RESETDONE |                              101 |                              101
         ST_RESET_TX_IDLE |                              110 |                              110
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_tx_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset'
+INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_tx_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_20_gtwiz_reset'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -470,7 +463,7 @@ ST_RESET_RX_WAIT_USERRDY |                              101 |                   
 ST_RESET_RX_WAIT_RESETDONE |                              110 |                              110
         ST_RESET_RX_IDLE |                              111 |                              111
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_rx_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset'
+INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_rx_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_20_gtwiz_reset'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -483,7 +476,7 @@ ST_RESET_ALL_TX_PLL_WAIT |                              011 |                   
     ST_RESET_ALL_RX_WAIT |                              110 |                              110
                   iSTATE |                              111 |                              111
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_all_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset'
+INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_all_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_20_gtwiz_reset'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -495,7 +488,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_all_reg' using en
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'clk_sm_cur_reg' using encoding 'sequential' in module 'vid_phy_controller_0_clkdet'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2753.055 ; gain = 756.125 ; free physical = 7495 ; free virtual = 15469
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2650.512 ; gain = 726.633 ; free physical = 15314 ; free virtual = 25786
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -503,105 +496,111 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   32 Bit       Adders := 2     
-	   2 Input   25 Bit       Adders := 6     
+	   2 Input   25 Bit       Adders := 8     
 	   2 Input   24 Bit       Adders := 4     
-	   2 Input   18 Bit       Adders := 7     
-	   3 Input   18 Bit       Adders := 7     
-	   2 Input   16 Bit       Adders := 6     
+	   2 Input   18 Bit       Adders := 9     
+	   3 Input   18 Bit       Adders := 9     
+	   2 Input   16 Bit       Adders := 8     
 	   2 Input   10 Bit       Adders := 2     
-	   2 Input    8 Bit       Adders := 4     
-	   2 Input    6 Bit       Adders := 6     
-	   2 Input    4 Bit       Adders := 6     
+	   2 Input    8 Bit       Adders := 5     
+	   2 Input    6 Bit       Adders := 8     
+	   2 Input    4 Bit       Adders := 9     
 	   2 Input    3 Bit       Adders := 3     
-	   2 Input    2 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 4     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
-	               48 Bit    Registers := 6     
-	               33 Bit    Registers := 15    
-	               32 Bit    Registers := 80    
-	               30 Bit    Registers := 3     
-	               25 Bit    Registers := 6     
+	               48 Bit    Registers := 8     
+	               40 Bit    Registers := 6     
+	               33 Bit    Registers := 18    
+	               32 Bit    Registers := 88    
+	               30 Bit    Registers := 4     
+	               25 Bit    Registers := 8     
 	               24 Bit    Registers := 4     
-	               18 Bit    Registers := 25    
-	               16 Bit    Registers := 38    
-	               15 Bit    Registers := 6     
-	               10 Bit    Registers := 14    
-	                9 Bit    Registers := 6     
-	                8 Bit    Registers := 7     
-	                7 Bit    Registers := 11    
-	                6 Bit    Registers := 6     
-	                5 Bit    Registers := 18    
-	                4 Bit    Registers := 31    
-	                3 Bit    Registers := 95    
-	                2 Bit    Registers := 23    
-	                1 Bit    Registers := 654   
+	               18 Bit    Registers := 27    
+	               16 Bit    Registers := 50    
+	               15 Bit    Registers := 8     
+	               10 Bit    Registers := 17    
+	                9 Bit    Registers := 8     
+	                8 Bit    Registers := 9     
+	                7 Bit    Registers := 14    
+	                6 Bit    Registers := 8     
+	                5 Bit    Registers := 24    
+	                4 Bit    Registers := 42    
+	                3 Bit    Registers := 120   
+	                2 Bit    Registers := 30    
+	                1 Bit    Registers := 792   
 +---Muxes : 
-	   4 Input   48 Bit        Muxes := 3     
-	   2 Input   48 Bit        Muxes := 6     
-	  33 Input   32 Bit        Muxes := 3     
-	   3 Input   32 Bit        Muxes := 4     
-	  29 Input   32 Bit        Muxes := 3     
-	   2 Input   32 Bit        Muxes := 24    
-	   2 Input   30 Bit        Muxes := 9     
-	   2 Input   28 Bit        Muxes := 3     
-	   3 Input   28 Bit        Muxes := 3     
-	   2 Input   27 Bit        Muxes := 3     
-	   2 Input   26 Bit        Muxes := 6     
-	  33 Input   25 Bit        Muxes := 3     
-	   2 Input   25 Bit        Muxes := 6     
-	  29 Input   25 Bit        Muxes := 3     
-	   2 Input   24 Bit        Muxes := 14    
-	   2 Input   23 Bit        Muxes := 6     
-	   4 Input   22 Bit        Muxes := 3     
-	   2 Input   22 Bit        Muxes := 3     
-	   2 Input   21 Bit        Muxes := 4     
-	   4 Input   21 Bit        Muxes := 3     
+	   5 Input   48 Bit        Muxes := 4     
+	   2 Input   48 Bit        Muxes := 8     
+	   6 Input   40 Bit        Muxes := 5     
+	   2 Input   40 Bit        Muxes := 1     
+	  33 Input   32 Bit        Muxes := 4     
+	   3 Input   32 Bit        Muxes := 5     
+	  29 Input   32 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 27    
+	   2 Input   30 Bit        Muxes := 12    
+	   2 Input   28 Bit        Muxes := 4     
+	   3 Input   28 Bit        Muxes := 4     
+	   2 Input   27 Bit        Muxes := 4     
+	   2 Input   26 Bit        Muxes := 8     
+	  33 Input   25 Bit        Muxes := 4     
+	   2 Input   25 Bit        Muxes := 8     
+	  29 Input   25 Bit        Muxes := 4     
+	   2 Input   24 Bit        Muxes := 16    
+	   2 Input   23 Bit        Muxes := 8     
+	   4 Input   22 Bit        Muxes := 4     
+	   2 Input   22 Bit        Muxes := 4     
+	   2 Input   21 Bit        Muxes := 5     
+	   4 Input   21 Bit        Muxes := 4     
 	   5 Input   21 Bit        Muxes := 1     
-	   2 Input   20 Bit        Muxes := 6     
-	   2 Input   19 Bit        Muxes := 6     
-	   2 Input   18 Bit        Muxes := 11    
-	   2 Input   17 Bit        Muxes := 11    
-	   4 Input   17 Bit        Muxes := 5     
-	   2 Input   16 Bit        Muxes := 23    
-	  33 Input   16 Bit        Muxes := 6     
-	  29 Input   16 Bit        Muxes := 6     
-	   4 Input   16 Bit        Muxes := 8     
-	   2 Input   15 Bit        Muxes := 6     
-	   2 Input   14 Bit        Muxes := 3     
-	   2 Input   13 Bit        Muxes := 6     
-	   2 Input   12 Bit        Muxes := 6     
-	   2 Input   11 Bit        Muxes := 6     
-	   2 Input   10 Bit        Muxes := 22    
-	   4 Input   10 Bit        Muxes := 7     
-	   2 Input    9 Bit        Muxes := 6     
-	   3 Input    9 Bit        Muxes := 3     
-	   5 Input    8 Bit        Muxes := 3     
-	   8 Input    7 Bit        Muxes := 6     
-	   2 Input    7 Bit        Muxes := 20    
-	   3 Input    7 Bit        Muxes := 6     
+	   2 Input   20 Bit        Muxes := 8     
+	   2 Input   19 Bit        Muxes := 8     
+	   2 Input   18 Bit        Muxes := 14    
+	   2 Input   17 Bit        Muxes := 14    
+	   4 Input   17 Bit        Muxes := 6     
+	   2 Input   16 Bit        Muxes := 30    
+	  33 Input   16 Bit        Muxes := 8     
+	  29 Input   16 Bit        Muxes := 8     
+	   4 Input   16 Bit        Muxes := 10    
+	   2 Input   15 Bit        Muxes := 8     
+	   2 Input   14 Bit        Muxes := 4     
+	   2 Input   13 Bit        Muxes := 8     
+	   2 Input   12 Bit        Muxes := 8     
+	   2 Input   11 Bit        Muxes := 8     
+	   2 Input   10 Bit        Muxes := 29    
+	   4 Input   10 Bit        Muxes := 9     
+	   2 Input    9 Bit        Muxes := 8     
+	   3 Input    9 Bit        Muxes := 4     
+	   5 Input    8 Bit        Muxes := 4     
+	   8 Input    7 Bit        Muxes := 8     
+	   2 Input    7 Bit        Muxes := 26    
+	   3 Input    7 Bit        Muxes := 8     
 	   4 Input    7 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 12    
-	   6 Input    5 Bit        Muxes := 6     
-	   3 Input    5 Bit        Muxes := 9     
-	   2 Input    5 Bit        Muxes := 6     
+	   2 Input    6 Bit        Muxes := 16    
+	   6 Input    5 Bit        Muxes := 8     
+	   3 Input    5 Bit        Muxes := 12    
+	   2 Input    5 Bit        Muxes := 8     
 	   2 Input    4 Bit        Muxes := 14    
-	  33 Input    4 Bit        Muxes := 3     
-	  29 Input    4 Bit        Muxes := 3     
-	   4 Input    4 Bit        Muxes := 4     
-	   2 Input    3 Bit        Muxes := 48    
-	   4 Input    3 Bit        Muxes := 9     
+	  33 Input    4 Bit        Muxes := 4     
+	  29 Input    4 Bit        Muxes := 4     
+	   5 Input    4 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 64    
+	   5 Input    3 Bit        Muxes := 9     
 	   7 Input    3 Bit        Muxes := 2     
 	   8 Input    3 Bit        Muxes := 1     
-	   3 Input    3 Bit        Muxes := 5     
-	   5 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 21    
-	  33 Input    1 Bit        Muxes := 54    
-	   2 Input    1 Bit        Muxes := 108   
-	   5 Input    1 Bit        Muxes := 9     
-	   8 Input    1 Bit        Muxes := 44    
-	  29 Input    1 Bit        Muxes := 54    
-	   4 Input    1 Bit        Muxes := 31    
+	   3 Input    3 Bit        Muxes := 6     
+	   4 Input    3 Bit        Muxes := 6     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 28    
+	  33 Input    1 Bit        Muxes := 72    
+	   2 Input    1 Bit        Muxes := 125   
+	   5 Input    1 Bit        Muxes := 30    
+	   8 Input    1 Bit        Muxes := 50    
+	  29 Input    1 Bit        Muxes := 72    
+	   4 Input    1 Bit        Muxes := 22    
 	   7 Input    1 Bit        Muxes := 13    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -618,12 +617,13 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3332] Sequential element (gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_tx_buffer_bypass_internal.gen_single_instance.gtwiz_buffbypass_tx_inst/FSM_onehot_gen_gtwiz_buffbypass_tx_main.gen_auto_mode.sm_buffbypass_tx_reg[0]) is unused and will be removed from module vid_phy_controller_0_gtwrapper_gtwizard_top.
 WARNING: [Synth 8-3332] Sequential element (gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/FSM_sequential_sm_reset_all_reg[2]) is unused and will be removed from module vid_phy_controller_0_gtwrapper_gtwizard_top.
 WARNING: [Synth 8-3332] Sequential element (gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/FSM_sequential_sm_reset_all_reg[1]) is unused and will be removed from module vid_phy_controller_0_gtwrapper_gtwizard_top.
 WARNING: [Synth 8-3332] Sequential element (gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/FSM_sequential_sm_reset_all_reg[0]) is unused and will be removed from module vid_phy_controller_0_gtwrapper_gtwizard_top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2753.055 ; gain = 756.125 ; free physical = 7499 ; free virtual = 15471
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 2650.512 ; gain = 726.633 ; free physical = 15341 ; free virtual = 25792
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -633,19 +633,19 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'inst/clock_detector_inst/
 INFO: [Synth 8-5578] Moved timing constraint from pin 'inst/clock_detector_inst/TXCLK_RST_INST/src_arst' to pin 'inst/clock_detector_inst/clk_tx_freq_rst_reg/Q'
 INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 2996.855 ; gain = 999.926 ; free physical = 7337 ; free virtual = 15311
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 2887.410 ; gain = 963.531 ; free physical = 15250 ; free virtual = 25702
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 3101.895 ; gain = 1104.965 ; free physical = 7229 ; free virtual = 15203
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:16 . Memory (MB): peak = 3021.504 ; gain = 1097.625 ; free physical = 15142 ; free virtual = 25594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 3101.895 ; gain = 1104.965 ; free physical = 7228 ; free virtual = 15202
+Finished Technology Mapping : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 3021.504 ; gain = 1097.625 ; free physical = 15108 ; free virtual = 25561
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -662,38 +662,39 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin xpm_single_tx_mmcm_drp_locked_b0_inst:src_in to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 3222.707 ; gain = 1225.777 ; free physical = 7139 ; free virtual = 15110
+Finished IO Insertion : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 3120.316 ; gain = 1196.438 ; free physical = 15044 ; free virtual = 25496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 3222.707 ; gain = 1225.777 ; free physical = 7139 ; free virtual = 15110
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 3120.316 ; gain = 1196.438 ; free physical = 15044 ; free virtual = 25496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 3222.707 ; gain = 1225.777 ; free physical = 7138 ; free virtual = 15109
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 3120.316 ; gain = 1196.438 ; free physical = 15039 ; free virtual = 25490
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 3222.707 ; gain = 1225.777 ; free physical = 7138 ; free virtual = 15109
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 3120.316 ; gain = 1196.438 ; free physical = 15035 ; free virtual = 25486
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 3222.707 ; gain = 1225.777 ; free physical = 7138 ; free virtual = 15109
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 3120.316 ; gain = 1196.438 ; free physical = 15056 ; free virtual = 25507
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 3222.707 ; gain = 1225.777 ; free physical = 7138 ; free virtual = 15109
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 3120.316 ; gain = 1196.438 ; free physical = 15054 ; free virtual = 25506
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -711,65 +712,65 @@ Report Cell Usage:
 +------+--------------+------+
 |1     |BUFG          |     2|
 |2     |BUFGCE        |     2|
-|3     |BUFG_GT       |     8|
+|3     |BUFG_GT       |    10|
 |4     |BUFG_GT_SYNC  |     1|
-|5     |CARRY8        |   153|
-|6     |GTHE4_CHANNEL |     3|
+|5     |CARRY8        |   189|
+|6     |GTHE4_CHANNEL |     4|
 |7     |GTHE4_COMMON  |     1|
 |8     |IBUFDS_GTE4   |     1|
-|9     |LUT1          |   254|
-|10    |LUT2          |   544|
-|11    |LUT3          |   255|
-|12    |LUT4          |   814|
-|13    |LUT5          |   517|
+|9     |LUT1          |   289|
+|10    |LUT2          |   704|
+|11    |LUT3          |   328|
+|12    |LUT4          |  1015|
+|13    |LUT5          |   684|
 |14    |LUT6          |  1083|
 |15    |MMCME3_ADV    |     1|
-|16    |MUXF7         |    21|
-|17    |OSERDESE3     |     1|
-|18    |FDCE          |   363|
-|19    |FDPE          |   137|
-|20    |FDRE          |  5656|
-|21    |FDSE          |    81|
-|22    |OBUFTDS       |     1|
+|16    |MUXF7         |   110|
+|17    |MUXF8         |    13|
+|18    |FDCE          |   439|
+|19    |FDPE          |   164|
+|20    |FDRE          |  6743|
+|21    |FDSE          |    95|
 +------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 3222.707 ; gain = 1225.777 ; free physical = 7138 ; free virtual = 15109
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 3120.316 ; gain = 1196.438 ; free physical = 15053 ; free virtual = 25505
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 3222.707 ; gain = 1119.277 ; free physical = 7137 ; free virtual = 15108
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 3222.707 ; gain = 1225.777 ; free physical = 7137 ; free virtual = 15108
+Synthesis finished with 0 errors, 0 critical warnings and 1837 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:01:14 . Memory (MB): peak = 3120.316 ; gain = 1080.484 ; free physical = 15060 ; free virtual = 25512
+Synthesis Optimization Complete : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 3120.316 ; gain = 1196.438 ; free physical = 15099 ; free virtual = 25506
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3222.707 ; gain = 0.000 ; free physical = 7284 ; free virtual = 15256
-INFO: [Netlist 29-17] Analyzing 178 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3120.316 ; gain = 0.000 ; free physical = 15272 ; free virtual = 25672
+INFO: [Netlist 29-17] Analyzing 315 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC for BUFG_GT inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst
-INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_1 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst
-INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_2 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst
-INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_3 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst
-INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_4 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst
-INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_5 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_1 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_2 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_3 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_4 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_5 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_6 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[3].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_7 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[3].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst
 INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance inst/gt_usrclk_source_inst/tx_mmcm.txoutclk_mmcm0_i/mmcm_adv_inst with COMPENSATION=INTERNAL is optimized away to aid design routability
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3222.707 ; gain = 0.000 ; free physical = 7270 ; free virtual = 15241
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3120.316 ; gain = 0.000 ; free physical = 15270 ; free virtual = 25670
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 4 instances were transformed.
+  A total of 3 instances were transformed.
   BUFG => BUFGCE: 2 instances
   MMCME3_ADV => MMCME4_ADV: 1 instance 
-  OBUFTDS => OBUFTDS_DUAL_BUF (INV, OBUFT(x2)): 1 instance 
 
-Synth Design complete | Checksum: 93110daf
+Synth Design complete | Checksum: 172bf971
 INFO: [Common 17-83] Releasing license: Synthesis
-312 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
+175 Infos, 164 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:50 . Memory (MB): peak = 3222.707 ; gain = 1598.082 ; free physical = 7270 ; free virtual = 15242
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2426.965; main = 2293.129; forked = 282.062
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4097.141; main = 3187.188; forked = 995.242
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3222.707 ; gain = 0.000 ; free physical = 7272 ; free virtual = 15245
-INFO: [Common 17-1381] The checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/vid_phy_controller_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP vid_phy_controller_0, cache-ID = 81c335b38742879b
-INFO: [Coretcl 2-1174] Renamed 201 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3222.707 ; gain = 0.000 ; free physical = 7198 ; free virtual = 15234
-INFO: [Common 17-1381] The checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/vid_phy_controller_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:31 ; elapsed = 00:01:30 . Memory (MB): peak = 3120.316 ; gain = 1563.695 ; free physical = 15272 ; free virtual = 25672
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2409.052; main = 2245.111; forked = 284.993
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3985.395; main = 3097.605; forked = 963.887
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3121.613 ; gain = 0.000 ; free physical = 15272 ; free virtual = 25675
+INFO: [Common 17-1381] The checkpoint '/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/vid_phy_controller_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP vid_phy_controller_0, cache-ID = b4988e9eceb9b1ae
+INFO: [Coretcl 2-1174] Renamed 248 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3121.613 ; gain = 0.000 ; free physical = 15207 ; free virtual = 25635
+INFO: [Common 17-1381] The checkpoint '/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/vid_phy_controller_0_synth_1/vid_phy_controller_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file vid_phy_controller_0_utilization_synth.rpt -pb vid_phy_controller_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 20 17:42:35 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 20 17:59:16 2026...
