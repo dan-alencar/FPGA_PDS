@@ -50,7 +50,7 @@
 
 `timescale 1ps/1ps
 
-module gtwizard_ultrascale_v1_7_20_gtye4_delay_powergood # (
+module gtwizard_ultrascale_v1_7_22_gtye4_delay_powergood # (
   parameter C_USER_GTPOWERGOOD_DELAY_EN = 0,
   parameter C_PCIE_ENABLE = "FALSE"
 )(

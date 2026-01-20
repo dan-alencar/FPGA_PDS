@@ -7,19 +7,27 @@
 //   - 1080p60
 //   - 8 bits per color
 //   - TMDS generated in RTL
+//   
+//   Modified for AUBoard 15P:
+//   - TMDS data channels (0-2) use GTH transceivers in QUAD 226
+//   - TMDS clock uses separate I/O pins (HDMI_TX_CLK_P/N) in Bank 65
 //////////////////////////////////////////////////////////////////////////////////
 
 module hdmi_phy_wrapper (
-    // Differential reference clock (300 MHz from board)
+    // Differential reference clock (from 8T49N241 clock generator)
     input  logic clk_ref_p,
     input  logic clk_ref_n,
 
-    // External reset (active high)
+    // External reset (active high - directly directly connected to push button PB1)
     input  logic rst,
 
-    // HDMI differential outputs
-    output logic [3:0] hdmi_tx_p,
-    output logic [3:0] hdmi_tx_n
+    // HDMI TX data outputs (GTH transceivers - 3 channels)
+    output logic [2:0] hdmi_tx_p,
+    output logic [2:0] hdmi_tx_n,
+    
+    // HDMI TX clock output (regular I/O pins, directly directly not GTH)
+    output logic hdmi_tx_clk_p,
+    output logic hdmi_tx_clk_n
 );
 
     // -------------------------------------------------
@@ -125,11 +133,13 @@ module hdmi_phy_wrapper (
         .vid_phy_tx_axi4s_ch2_tuser  (de_4px),
         .vid_phy_tx_axi4s_ch2_tready (),
 
-        // HDMI outputs
-        .phy_txp_out    (hdmi_tx_p[2:0]),
-        .phy_txn_out    (hdmi_tx_n[2:0]),
-        .tx_tmds_clk_p  (hdmi_tx_p[3]),
-        .tx_tmds_clk_n  (hdmi_tx_n[3]),
+        // HDMI data outputs (GTH transceivers)
+        .phy_txp_out    (hdmi_tx_p),      // [2:0] - Goes to GTH TX pins
+        .phy_txn_out    (hdmi_tx_n),      // [2:0] - Goes to GTH TX pins
+        
+        // HDMI clock output (regular I/O pins via OBUFDS inside PHY or external)
+        .tx_tmds_clk_p  (hdmi_tx_clk_p),  // Goes to Bank 65 I/O pin T25
+        .tx_tmds_clk_n  (hdmi_tx_clk_n),  // Goes to Bank 65 I/O pin U25
 
         // Sideband / DRP
         .vid_phy_sb_aclk    (clk_pixel),

@@ -227,7 +227,7 @@ module vid_phy_controller_0_plle2_drp
    // Include the MMCM reconfiguration functions.  This contains the constant
    // functions that are used in the calculations below.  This file is 
    // required.
-   `include "vid_phy_controller_v2_2_20_plle2_drp_func.v"
+   `include "vid_phy_controller_v2_2_22_plle2_drp_func.v"
    
    //**************************************************************************
    // State 1 Calculations

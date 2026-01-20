@@ -7391,11 +7391,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 19 20:12:46 UTC 2026</spirit:value>
+            <spirit:value>Tue Jan 20 20:41:35 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b29031f5</spirit:value>
+            <spirit:value>9:804ae8e7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -7410,11 +7410,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 19 20:12:46 UTC 2026</spirit:value>
+            <spirit:value>Tue Jan 20 20:41:35 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1da383dc</spirit:value>
+            <spirit:value>9:2e8d9ea4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -7425,7 +7425,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1da383dc</spirit:value>
+            <spirit:value>9:2e8d9ea4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -7439,11 +7439,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 19 20:12:43 UTC 2026</spirit:value>
+            <spirit:value>Tue Jan 20 20:14:49 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cf68d303</spirit:value>
+            <spirit:value>9:1f183fc6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -7457,11 +7457,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 19 22:15:38 UTC 2026</spirit:value>
+            <spirit:value>Tue Jan 20 20:42:35 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1da383dc</spirit:value>
+            <spirit:value>9:2e8d9ea4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -7475,11 +7475,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 19 20:12:46 UTC 2026</spirit:value>
+            <spirit:value>Tue Jan 20 20:41:35 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1da383dc</spirit:value>
+            <spirit:value>9:2e8d9ea4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -7494,11 +7494,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 19 20:12:43 UTC 2026</spirit:value>
+            <spirit:value>Tue Jan 20 20:41:35 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1da383dc</spirit:value>
+            <spirit:value>9:2e8d9ea4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -7514,11 +7514,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 19 20:12:46 UTC 2026</spirit:value>
+            <spirit:value>Tue Jan 20 20:41:35 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b29031f5</spirit:value>
+            <spirit:value>9:804ae8e7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -7534,11 +7534,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 19 20:12:46 UTC 2026</spirit:value>
+            <spirit:value>Tue Jan 20 20:41:35 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1da383dc</spirit:value>
+            <spirit:value>9:2e8d9ea4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -7552,11 +7552,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 19 20:12:46 UTC 2026</spirit:value>
+            <spirit:value>Tue Jan 20 20:41:35 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1da383dc</spirit:value>
+            <spirit:value>9:2e8d9ea4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -10550,37 +10550,37 @@
         <spirit:name>hdl/src/vhd/nidru_20_v_7.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/vhd/bs_flex_v_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/vhd/nidru_20_wrapper.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_lib.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_sync_block.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_sync_pulse.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_gtxe2_hdmi_txaln.v</spirit:name>
@@ -10594,19 +10594,19 @@
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_cpll_railing.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_datawidth_conv.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_gt_tx_tmdsclk_patgen.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_clkdet.sv</spirit:name>
@@ -10616,20 +10616,20 @@
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_dru.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_axi4lite.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_20_defs.v</spirit:name>
+        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_22_defs.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_128_to_64_conv.v</spirit:name>
@@ -10651,25 +10651,25 @@
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_drp_control.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_drp_control_8series.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_interrupts.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE.v</spirit:name>
@@ -10684,39 +10684,39 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_20_plle2_drp_func.v</spirit:name>
+        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_22_plle2_drp_func.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_mmcme2_drp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_20_mmcme2_drp_func.v</spirit:name>
+        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_22_mmcme2_drp_func.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_mmcme3_drp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_20_mmcme3_drp_func.v</spirit:name>
+        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_22_mmcme3_drp_func.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_gthe4_common.v</spirit:name>
@@ -10727,7 +10727,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>synth/vid_phy_controller_v2_2_20_defs.v</spirit:name>
+        <spirit:name>synth/vid_phy_controller_v2_2_22_defs.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -10768,32 +10768,32 @@
       <spirit:file>
         <spirit:name>hdl/src/vhd/nidru_20_v_7.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/vhd/bs_flex_v_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/vhd/nidru_20_wrapper.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_lib.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_sync_block.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_sync_pulse.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_gtxe2_hdmi_txaln.v</spirit:name>
@@ -10806,17 +10806,17 @@
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_cpll_railing.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_datawidth_conv.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_gt_tx_tmdsclk_patgen.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_clkdet.sv</spirit:name>
@@ -10825,18 +10825,18 @@
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_dru.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_axi4lite.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_20_defs.v</spirit:name>
+        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_22_defs.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_128_to_64_conv.v</spirit:name>
@@ -10857,22 +10857,22 @@
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_drp_control.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_drp_control_8series.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_interrupts.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE.v</spirit:name>
@@ -10887,35 +10887,35 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_20_plle2_drp_func.v</spirit:name>
+        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_22_plle2_drp_func.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_mmcme2_drp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_20_mmcme2_drp_func.v</spirit:name>
+        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_22_mmcme2_drp_func.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_mmcme3_drp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_20_mmcme3_drp_func.v</spirit:name>
+        <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_22_mmcme3_drp_func.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/src/verilog/vid_phy_controller_0_gthe4_common.v</spirit:name>
@@ -10926,7 +10926,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>synth/vid_phy_controller_v2_2_20_defs.v</spirit:name>
+        <spirit:name>synth/vid_phy_controller_v2_2_22_defs.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -11025,6 +11025,15 @@
         <spirit:name>vid_phy_controller_0.veo</spirit:name>
         <spirit:userFileType>verilogTemplate</spirit:userFileType>
       </spirit:file>
+      <spirit:file>
+        <spirit:name>vid_phy_controller_0_sv.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+        <spirit:userFileType>INTERNAL_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>vid_phy_controller_0_sv.sveo</spirit:name>
+        <spirit:userFileType>systemVerilogTemplate</spirit:userFileType>
+      </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
@@ -11047,7 +11056,7 @@
       <spirit:file>
         <spirit:name>doc/vid_phy_controller_v2_2_changelog.txt</spirit:name>
         <spirit:userFileType>text</spirit:userFileType>
-        <spirit:logicalName>vid_phy_controller_v2_2_20</spirit:logicalName>
+        <spirit:logicalName>vid_phy_controller_v2_2_22</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
@@ -11061,7 +11070,7 @@
       <spirit:name>CHANNEL_ENABLE</spirit:name>
       <spirit:displayName>Enable channel</spirit:displayName>
       <spirit:description>Indicate whether this transceiver channel is instantiated and enabled for use</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CHANNEL_ENABLE" spirit:order="3">X0Y0 X0Y1 X0Y2</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CHANNEL_ENABLE" spirit:order="3">X0Y8 X0Y9 X0Y10</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DRPCLK_FREQ</spirit:name>
@@ -11098,7 +11107,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CHANNEL_SITE</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CHANNEL_SITE" spirit:choiceRef="choice_list_f54ff2b6" spirit:order="7">X0Y0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CHANNEL_SITE" spirit:choiceRef="choice_list_f54ff2b6" spirit:order="7">X0Y8</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -11390,7 +11399,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_user_loss">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_user_loss">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -11706,7 +11715,7 @@
       <xilinx:xpmLibraries>
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>20</xilinx:coreRevision>
+      <xilinx:coreRevision>22</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_PHY_AXI4LITE.ADDR_WIDTH" xilinx:valueSource="auto"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_PHY_AXI4LITE.ARUSER_WIDTH" xilinx:valueSource="constant"/>
@@ -11817,20 +11826,32 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_PHY_TX_AXI4S_CH3.TDEST_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_PHY_TX_AXI4S_CH3.TID_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Adv_Clk_Mode" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CHANNEL_ENABLE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CHANNEL_SITE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_RX_REFCLK_SEL" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_Rx_Protocol" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_TX_PLL_SELECTION" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_TX_REFCLK_SEL" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_Tx_Protocol" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_Use_GT_CH4_HDMI" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_Use_Oddr_for_Tmds_Clkout" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_vid_phy_rx_axi4s_ch_TDATA_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_vid_phy_rx_axi4s_ch_TUSER_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_vid_phy_tx_axi4s_ch_TDATA_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_vid_phy_tx_axi4s_ch_TUSER_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Rx_GT_Line_Rate" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Rx_GT_Ref_Clock_Freq" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Tx_GT_Line_Rate" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Tx_GT_Ref_Clock_Freq" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2025.1</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2025.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="244d54b7"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="803cbf02"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4fa922e5"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="13585803"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="70deb24a"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="a00b87a4"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="b0a394bd"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

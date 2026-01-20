@@ -59,9 +59,9 @@
 */
 
 `default_nettype none
-`include "vid_phy_controller_v2_2_20_defs.v"
+`include "vid_phy_controller_v2_2_22_defs.v"
 
-module vid_phy_controller_v2_2_20_datawidth_conv
+module vid_phy_controller_v2_2_22_datawidth_conv
 (
     // SYSTEM CLOCK
 	input wire          CLK_IN,         // Clock
@@ -171,7 +171,7 @@ xpm_cdc_single
     end
 
 // Dual clock fifo
-vid_phy_controller_v2_2_20_lib_fifo_dc_v1_0
+vid_phy_controller_v2_2_22_lib_fifo_dc_v1_0
     #(
         .ADR_WIDTH_A        (FIFO_ADR),
         .DAT_WIDTH_A        (FIFO_DAT),

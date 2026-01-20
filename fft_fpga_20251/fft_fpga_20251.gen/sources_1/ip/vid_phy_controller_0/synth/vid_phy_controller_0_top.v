@@ -38,7 +38,7 @@
 // THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
 // PART OF THIS FILE AT ALL TIMES.
 
-`include "vid_phy_controller_v2_2_20_defs.v"
+`include "vid_phy_controller_v2_2_22_defs.v"
 `timescale 1ns / 1ps
 `define DLY #1
 
@@ -1130,7 +1130,7 @@ endgenerate
     // Instantiation of Axi Bus Interface vid_phy_axi4lite
     //------------------------------------------------------------------------
 
-    vid_phy_controller_v2_2_20_axi4lite # ( 
+    vid_phy_controller_v2_2_22_axi4lite # ( 
         .C_S_AXI_DATA_WIDTH(C_vid_phy_axi4lite_DATA_WIDTH),
         .C_S_AXI_ADDR_WIDTH(C_vid_phy_axi4lite_ADDR_WIDTH),
         .C_Tx_No_Of_Channels(C_Tx_No_Of_Channels),
@@ -1139,7 +1139,7 @@ endgenerate
         .C_RX_PLL_SELECTION(C_RX_PLL_SELECTION),
         .C_Err_Irq_En(0),
         .C_Use_GT_CH4_HDMI(0)
-    ) vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst (
+    ) vid_phy_controller_v2_2_22_vid_phy_axi4lite_inst (
         .S_AXI_ACLK(vid_phy_axi4lite_aclk),
         .S_AXI_ARESETN(vid_phy_axi4lite_aresetn),
         .S_AXI_AWADDR(vid_phy_axi4lite_awaddr),
@@ -1187,7 +1187,7 @@ endgenerate
   assign DRP_Config_b0gt0[13]   = cfg_phy_mem_map_control_b0[`CH1_DRPWE];
   assign DRP_Config_b0gt0[31:16]= cfg_phy_mem_map_control_b0[`CH1_DRPDI];
 
-   vid_phy_controller_v2_2_20_drp_control_hdmi #  
+   vid_phy_controller_v2_2_22_drp_control_hdmi #  
    (
     .DRP_ADDR_WIDTH (10)
    )
@@ -1236,7 +1236,7 @@ endgenerate
   assign DRP_Config_b0gt1[13]   = cfg_phy_mem_map_control_b0[`CH2_DRPWE];
   assign DRP_Config_b0gt1[31:16]= cfg_phy_mem_map_control_b0[`CH2_DRPDI];
 
-   vid_phy_controller_v2_2_20_drp_control_hdmi #  
+   vid_phy_controller_v2_2_22_drp_control_hdmi #  
    (
     .DRP_ADDR_WIDTH (10)
    )
@@ -1285,7 +1285,7 @@ endgenerate
   assign DRP_Config_b0gt2[13]   = cfg_phy_mem_map_control_b0[`CH3_DRPWE];
   assign DRP_Config_b0gt2[31:16]= cfg_phy_mem_map_control_b0[`CH3_DRPDI];
 
-   vid_phy_controller_v2_2_20_drp_control_hdmi #  
+   vid_phy_controller_v2_2_22_drp_control_hdmi #  
    (
     .DRP_ADDR_WIDTH (10)
    )
@@ -1335,7 +1335,7 @@ endgenerate
   assign DRP_Config_common[31:16]= cfg_phy_mem_map_control[`COMMON_DRPDI];
  
   wire [10-1 : 0] drpaddr_common_int;
-   vid_phy_controller_v2_2_20_drp_control_hdmi #  
+   vid_phy_controller_v2_2_22_drp_control_hdmi #  
    (
     .DRP_ADDR_WIDTH (10)
    )

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xcau15p-ffvb676-2-e" LaunchTime="1768939516">
+<GenRun Id="impl_1" LaunchPart="xcau15p-ffvb676-2-e" LaunchTime="1768941799">
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="hdmi_phy_wrapper_postroute_physopted.rqs"/>
@@ -49,6 +49,8 @@
   <File Type="BITSTR-MSK" Name="hdmi_phy_wrapper.msk"/>
   <File Type="BG-BIN" Name="hdmi_phy_wrapper.bin"/>
   <File Type="BG-BIT" Name="hdmi_phy_wrapper.bit"/>
+  <File Type="NOC_SOLUTION_FILE" Name="hdmi_phy_wrapper.ncr"/>
+  <File Type="NOC_TRAFFIC_SPEC_FILE" Name="hdmi_phy_wrapper.nts"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="hdmi_phy_wrapper_bus_skew_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="hdmi_phy_wrapper_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="hdmi_phy_wrapper_bus_skew_postroute_physopted.rpt"/>

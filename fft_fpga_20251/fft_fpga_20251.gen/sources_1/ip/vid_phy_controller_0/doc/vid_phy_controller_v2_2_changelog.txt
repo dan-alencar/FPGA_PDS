@@ -1,3 +1,12 @@
+2025.2:
+ * Version 2.2 (Rev. 22)
+ * General: Added note in GUI for DP1.4
+ * Revision change in one or more subcores
+
+2025.1.1:
+ * Version 2.2 (Rev. 21)
+ * Revision change in one or more subcores
+
 2025.1:
  * Version 2.2 (Rev. 20)
  * General: Updated IP Catalog taxonomy structure. This change has no impact to the IP.

@@ -1,7 +1,7 @@
 -------------------------------------
-| Tool Version : Vivado v.2025.1
-| Date         : Tue Jan 20 17:06:57 2026
-| Host         : daniloalencar.lesc.ufc.br
+| Tool Version : Vivado v.2025.2
+| Date         : Tue Jan 20 17:44:19 2026
+| Host         : dan-alencar
 | Design       : design_1
 | Device       : xcau15p-ffvb676-2-E-
 -------------------------------------
@@ -27,18 +27,18 @@ Number of global clocks: 11
 		No sub-optimality found
 		No sub-optimality found
 		No sub-optimality found
-		WARNING: suboptimal BUFG_GT clock net phy_inst/inst/gt_usrclk_source_inst/CLK_IN, source in region X1Y2 has locked load in region (0, 0)
+		WARNING: suboptimal BUFG_GT clock net phy_inst/inst/gt_usrclk_source_inst/CLK_IN, source in region X1Y2 has locked load in region (0, 1)
 	Running suboptimal placement checker for 10 clocks (and their loads) which do not have the CLOCK_LOW_FANOUT property but have a fanout less than 2000...
 Pre-CRP Checker took 0 secs
 
-********************************
-Clock Net Route Info (CRP Input)
-********************************
+**************************************
+Clock Nets/Source Overview (CRP Input)
+**************************************
 Clock 1: phy_inst/inst/gt_usrclk_source_inst/tx_mmcm.txoutclk_mmcm0_i/tx_video_clk
 	Clock source type: BUFGCE
-	Clock source region: X0Y0
+	Clock source region: X0Y1
 	Clock regions with locked loads: X1Y2 
-	initial rect ((0, 0), (1, 2))
+	initial rect ((0, 1), (1, 2))
 
 Clock 2: phy_inst/inst/gt_usrclk_source_inst/txoutclk
 	Clock source type: BUFG_GT
@@ -46,58 +46,58 @@ Clock 2: phy_inst/inst/gt_usrclk_source_inst/txoutclk
 	Clock regions with locked loads: X1Y2 
 	initial rect ((1, 2), (1, 2))
 
-Clock 3: phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon
-	Clock source type: BUFG_GT
-	Clock source region: X1Y2
-	initial rect ((1, 2), (1, 2))
-
-Clock 4: phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx_i/txoutclkmon
-	Clock source type: BUFG_GT
-	Clock source region: X1Y2
-	initial rect ((1, 2), (1, 2))
-
-Clock 5: phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon
-	Clock source type: BUFG_GT
-	Clock source region: X1Y2
-	initial rect ((1, 2), (1, 2))
-
-Clock 6: phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx_i/txoutclkmon
+Clock 3: phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon
 	Clock source type: BUFG_GT
 	Clock source region: X1Y2
 	initial rect ((0, 2), (1, 2))
 
-Clock 7: phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon
+Clock 4: phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/txoutclkmon
 	Clock source type: BUFG_GT
 	Clock source region: X1Y2
 	initial rect ((1, 2), (1, 2))
 
-Clock 8: phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx_i/txoutclkmon
+Clock 5: phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon
+	Clock source type: BUFG_GT
+	Clock source region: X1Y2
+	initial rect ((1, 2), (1, 2))
+
+Clock 6: phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/txoutclkmon
 	Clock source type: BUFG_GT
 	Clock source region: X1Y2
 	initial rect ((0, 2), (1, 2))
+
+Clock 7: phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon
+	Clock source type: BUFG_GT
+	Clock source region: X1Y2
+	initial rect ((1, 2), (1, 2))
+
+Clock 8: phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT
+	Clock source region: X1Y2
+	initial rect ((1, 2), (1, 2))
 
 Clock 9: phy_inst/inst/gt_usrclk_source_inst/tx_mmcm.txoutclk_mmcm0_i/tx_mmcm_clkout2_bufg_i
 	Clock source type: BUFGCE
-	Clock source region: X0Y0
-	initial rect ((0, 0), (0, 2))
+	Clock source region: X0Y1
+	initial rect ((0, 1), (0, 2))
 
 Clock 10: phy_inst/inst/gt_usrclk_source_inst/tx_mmcm.txoutclk_mmcm0_i/tx_tmds_clk
 	Clock source type: BUFGCE
-	Clock source region: X0Y0
-	Clock regions with locked loads: X0Y0 
-	initial rect ((0, 0), (0, 0))
+	Clock source region: X0Y1
+	Clock regions with locked loads: X0Y1 
+	initial rect ((0, 1), (0, 1))
 
 Clock 11: phy_inst/inst/gt_usrclk_source_inst/CLK_IN
 	Clock source type: BUFG_GT
 	Clock source region: X1Y2
-	Clock regions with locked loads: X0Y0 
-	initial rect ((0, 0), (1, 2))
+	Clock regions with locked loads: X0Y1 
+	initial rect ((0, 1), (1, 2))
 
 
 
-*****************
-User Constraints:
-*****************
-No user constraints found
+*****************************
+Clocks With User Constraints:
+*****************************
+No clocks with user constraints found
 
 

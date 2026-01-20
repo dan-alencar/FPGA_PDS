@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: xilinx.com:ip:vid_phy_controller:2.2
-// IP Revision: 20
+// IP Revision: 22
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections

@@ -131,7 +131,7 @@ module vid_phy_controller_0_gtxe2_hdmi_txaln
   for (j = 0;j <= NUMBER_OF_LANES-1;j = j+1)
  begin : cdc
 
-vid_phy_controller_v2_2_20_sync_block
+vid_phy_controller_v2_2_22_sync_block
  sync_TXPHALIGNDONE
         (
            .clk             (STABLE_CLOCK),
@@ -139,7 +139,7 @@ vid_phy_controller_v2_2_20_sync_block
            .data_out        (txphaligndone_sync[j])
         );
 
-vid_phy_controller_v2_2_20_sync_block
+vid_phy_controller_v2_2_22_sync_block
  sync_TXDLYSRESETDONE
         (
            .clk             (STABLE_CLOCK),
@@ -147,7 +147,7 @@ vid_phy_controller_v2_2_20_sync_block
            .data_out        (txdlysresetdone_sync[j])
         );
 
-vid_phy_controller_v2_2_20_sync_pulse
+vid_phy_controller_v2_2_22_sync_pulse
  sync_TXPHINITDONE
        (
            .CLK             (STABLE_CLOCK),

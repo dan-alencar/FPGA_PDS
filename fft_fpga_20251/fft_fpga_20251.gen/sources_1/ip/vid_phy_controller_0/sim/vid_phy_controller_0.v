@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:vid_phy_controller:2.2
-// IP Revision: 20
+// IP Revision: 22
 
 `timescale 1ns/1ps
 

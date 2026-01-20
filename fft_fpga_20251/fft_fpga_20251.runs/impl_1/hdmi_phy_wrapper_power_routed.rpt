@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date             : Tue Jan 20 17:07:35 2026
-| Host             : daniloalencar.lesc.ufc.br running 64-bit Linux Mint 22.1
+| Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date             : Tue Jan 20 17:44:49 2026
+| Host             : dan-alencar running 64-bit Linux Mint 22.2
 | Command          : report_power -file hdmi_phy_wrapper_power_routed.rpt -pb hdmi_phy_wrapper_power_summary_routed.pb -rpx hdmi_phy_wrapper_power_routed.rpx
 | Design           : hdmi_phy_wrapper
 | Device           : xcau15p-ffvb676-2-e
@@ -30,9 +30,9 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.427        |
+| Total On-Chip Power (W)  | 0.426        |
 | Design Power Budget (W)  | 45.000       |
-| Power Budget Margin (W)  | 44.573 (MET) |
+| Power Budget Margin (W)  | 44.574 (MET) |
 | Dynamic (W)              | 0.166        |
 | Device Static (W)        | 0.261        |
 | Effective TJA (C/W)      | 0.8          |
@@ -52,19 +52,19 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.004 |        8 |       --- |             --- |
-| CLB Logic      |     0.002 |     5769 |       --- |             --- |
-|   LUT as Logic |     0.002 |     1535 |     77760 |            1.97 |
+| CLB Logic      |     0.002 |     5763 |       --- |             --- |
+|   LUT as Logic |     0.002 |     1519 |     77760 |            1.95 |
 |   Register     |    <0.001 |     3291 |    155520 |            2.12 |
 |   CARRY8       |    <0.001 |      115 |      9720 |            1.18 |
 |   BUFG         |    <0.001 |        5 |        24 |           20.83 |
 |   Others       |     0.000 |      353 |       --- |             --- |
 |   F7/F8 Muxes  |     0.000 |        1 |     77760 |           <0.01 |
-| Signals        |     0.002 |     4445 |       --- |             --- |
+| Signals        |     0.002 |     4436 |       --- |             --- |
 | MMCM           |     0.039 |        0 |       --- |             --- |
 | I/O            |     0.006 |        3 |       228 |            1.32 |
 | GTH            |     0.113 |        3 |        12 |           25.00 |
 | Static Power   |     0.261 |          |           |                 |
-| Total          |     0.427 |          |           |                 |
+| Total          |     0.426 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+-------------+
 | Source           | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A)  |
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+-------------+
-| Vccint           |       0.850 |     0.059 |       0.011 |      0.048 |       NA    |       3.000 | 2.941 (MET) |
+| Vccint           |       0.850 |     0.059 |       0.010 |      0.048 |       NA    |       3.000 | 2.941 (MET) |
 | Vccint_io        |       0.850 |     0.027 |       0.001 |      0.026 |       NA    | Unspecified | NA          |
 | Vccbram          |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA          |
 | Vccaux           |       1.800 |     0.086 |       0.022 |      0.065 |       NA    | Unspecified | NA          |
@@ -133,12 +133,12 @@ Table of Contents
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 | Clock                                                                                                                                                                                                                                                                                                                              | Domain                                                                                                                                                                                                                                                                                                              | Constraint (ns) |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
-| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst/O | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon |             6.7 |
-| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O               | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx_i/txoutclkmon               |             6.7 |
-| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst/O | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon |             6.7 |
-| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O               | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx_i/txoutclkmon               |             6.7 |
-| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst/O | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon |             6.7 |
-| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O               | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_20_gthe4_cpll_cal_tx_i/txoutclkmon               |             6.7 |
+| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst/O | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon |             6.7 |
+| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O               | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/txoutclkmon               |             6.7 |
+| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst/O | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon |             6.7 |
+| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O               | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/txoutclkmon               |             6.7 |
+| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst/O | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon |             6.7 |
+| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O               | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/txoutclkmon               |             6.7 |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
@@ -152,10 +152,10 @@ Table of Contents
 | Name                        | Power (W) |
 +-----------------------------+-----------+
 | hdmi_phy_wrapper            |     0.166 |
-|   phy_inst                  |     0.166 |
-|     inst                    |     0.166 |
+|   phy_inst                  |     0.165 |
+|     inst                    |     0.165 |
 |       gt_usrclk_source_inst |     0.045 |
-|       gt_wrapper_inst       |     0.121 |
+|       gt_wrapper_inst       |     0.120 |
 +-----------------------------+-----------+
 
 

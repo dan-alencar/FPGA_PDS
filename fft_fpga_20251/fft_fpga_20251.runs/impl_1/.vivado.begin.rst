@@ -1,15 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="danilo-alencar" Host="daniloalencar.lesc.ufc.br" Pid="9554" HostCore="8" HostMemory="32816380">
+    <Process Command="vivado" Owner="dan-alencar" Host="dan-alencar" Pid="80400" HostCore="12" HostMemory="24202848">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="danilo-alencar" Host="daniloalencar.lesc.ufc.br" Pid="20399" HostCore="8" HostMemory="32816380">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="danilo-alencar" Host="daniloalencar.lesc.ufc.br" Pid="26049" HostCore="8" HostMemory="32816380">
+    <Process Command="vivado" Owner="dan-alencar" Host="dan-alencar" Pid="148607" HostCore="12" HostMemory="24202848">
     </Process>
 </ProcessHandle>

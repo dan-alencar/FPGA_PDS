@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Mon Jan 19 17:14:11 2026
--- Host        : daniloalencar.lesc.ufc.br running 64-bit Linux Mint 22.1
--- Command     : write_vhdl -force -mode synth_stub -rename_top vid_phy_controller_0 -prefix
---               vid_phy_controller_0_ vid_phy_controller_0_stub.vhdl
+-- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+-- Date        : Tue Jan 20 17:42:34 2026
+-- Host        : dan-alencar running 64-bit Linux Mint 22.2
+-- Command     : write_vhdl -force -mode synth_stub
+--               /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_stub.vhdl
 -- Design      : vid_phy_controller_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcau15p-ffvb676-2-e
@@ -72,7 +72,7 @@ entity vid_phy_controller_0 is
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of vid_phy_controller_0 : entity is "vid_phy_controller_0,vid_phy_controller_0_top,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of vid_phy_controller_0 : entity is "vid_phy_controller_0,vid_phy_controller_0_top,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=vid_phy_controller,x_ipVersion=2.2,x_ipCoreRevision=20,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_COMPONENT_NAME=vid_phy_controller_0,C_FAMILY=kintexuplus,C_DEVICE=xcau15p,C_SILICON_REVISION=0,C_SPEEDGRADE=-2,C_SupportLevel=1,C_TransceiverControl=false,c_sub_core_name=vid_phy_controller_0_gtwrapper,C_Tx_Protocol=1,C_Tx_Dp_Protocol=0,C_Rx_Protocol=3,C_Rx_Dp_Protocol=0,C_Tx_No_Of_Channels=3,C_Rx_No_Of_Channels=3,C_TX_PLL_SELECTION=6,C_TX_REFCLK_SEL=0,C_RX_PLL_SELECTION=0,C_RX_REFCLK_SEL=1,C_NIDRU_REFCLK_SEL=0,C_vid_phy_tx_axi4s_ch_TDATA_WIDTH=40,C_vid_phy_tx_axi4s_ch_INT_TDATA_WIDTH=40,C_vid_phy_tx_axi4s_ch_TUSER_WIDTH=1,C_vid_phy_rx_axi4s_ch_TDATA_WIDTH=40,C_vid_phy_rx_axi4s_ch_INT_TDATA_WIDTH=40,C_vid_phy_rx_axi4s_ch_TUSER_WIDTH=1,C_vid_phy_control_sb_tx_TDATA_WIDTH=1,C_vid_phy_status_sb_tx_TDATA_WIDTH=8,C_vid_phy_control_sb_rx_TDATA_WIDTH=1,C_vid_phy_status_sb_rx_TDATA_WIDTH=1,C_vid_phy_axi4lite_DATA_WIDTH=32,C_vid_phy_axi4lite_ADDR_WIDTH=10,C_NIDRU=0,Tx_Buffer_Bypass=1,C_Txrefclk_Rdy_Invert=0,C_INPUT_PIXELS_PER_CLOCK=4,C_Hdmi_Fast_Switch=1,C_Err_Irq_En=0,C_Use_GT_CH4_HDMI=0,C_INT_WIDTH=0,C_TX_TDATA_WIDTH=40,C_RX_TDATA_WIDTH=40}";
+  attribute CORE_GENERATION_INFO of vid_phy_controller_0 : entity is "vid_phy_controller_0,vid_phy_controller_0_top,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=vid_phy_controller,x_ipVersion=2.2,x_ipCoreRevision=22,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_COMPONENT_NAME=vid_phy_controller_0,C_FAMILY=kintexuplus,C_DEVICE=xcau15p,C_SILICON_REVISION=0,C_SPEEDGRADE=-2,C_SupportLevel=1,C_TransceiverControl=false,c_sub_core_name=vid_phy_controller_0_gtwrapper,C_Tx_Protocol=1,C_Tx_Dp_Protocol=0,C_Rx_Protocol=3,C_Rx_Dp_Protocol=0,C_Tx_No_Of_Channels=3,C_Rx_No_Of_Channels=3,C_TX_PLL_SELECTION=6,C_TX_REFCLK_SEL=0,C_RX_PLL_SELECTION=0,C_RX_REFCLK_SEL=1,C_NIDRU_REFCLK_SEL=0,C_vid_phy_tx_axi4s_ch_TDATA_WIDTH=40,C_vid_phy_tx_axi4s_ch_INT_TDATA_WIDTH=40,C_vid_phy_tx_axi4s_ch_TUSER_WIDTH=1,C_vid_phy_rx_axi4s_ch_TDATA_WIDTH=40,C_vid_phy_rx_axi4s_ch_INT_TDATA_WIDTH=40,C_vid_phy_rx_axi4s_ch_TUSER_WIDTH=1,C_vid_phy_control_sb_tx_TDATA_WIDTH=1,C_vid_phy_status_sb_tx_TDATA_WIDTH=8,C_vid_phy_control_sb_rx_TDATA_WIDTH=1,C_vid_phy_status_sb_rx_TDATA_WIDTH=1,C_vid_phy_axi4lite_DATA_WIDTH=32,C_vid_phy_axi4lite_ADDR_WIDTH=10,C_NIDRU=0,Tx_Buffer_Bypass=1,C_Txrefclk_Rdy_Invert=0,C_INPUT_PIXELS_PER_CLOCK=4,C_Hdmi_Fast_Switch=1,C_Err_Irq_En=0,C_Use_GT_CH4_HDMI=0,C_INT_WIDTH=0,C_TX_TDATA_WIDTH=40,C_RX_TDATA_WIDTH=40}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of vid_phy_controller_0 : entity is "yes";
 end vid_phy_controller_0;
@@ -175,6 +175,6 @@ architecture stub of vid_phy_controller_0 is
   attribute X_INTERFACE_MODE of drpclk : signal is "slave";
   attribute X_INTERFACE_PARAMETER of drpclk : signal is "XIL_INTERFACENAME drpclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of stub : architecture is "vid_phy_controller_0_top,Vivado 2025.1";
+  attribute X_CORE_INFO of stub : architecture is "vid_phy_controller_0_top,Vivado 2025.2";
 begin
 end;

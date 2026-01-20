@@ -50,29 +50,29 @@
 # UltraScale FPGAs Transceivers Wizard IP core-level XDC file
 # ----------------------------------------------------------------------------------------------------------------------
 
-# Commands for enabled transceiver GTHE4_CHANNEL_X0Y0
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y8
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Set case analysis constraint, used in this configuration to limit timing analysis to the known runtime TXOUTCLK source
 # selection since the CPLL calibration block controls the TXOUTCLKSEL port dynamically
-set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[2]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
-set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[1]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
-set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[0]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[2]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[1]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[0]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
 # Set case analysis constraint, used in this configuration to limit timing analysis to the known runtime RXOUTCLK source
 # selection since the CPLL calibration block controls the RXOUTCLKSEL port dynamically
-set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[2]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
-set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[1]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
-set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[0]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[2]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[1]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[0]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
 
 # Channel primitive location constraint
-set_property LOC GTHE4_CHANNEL_X0Y0 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y8 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin AF1 [get_ports gthrxn_in[0]]
-#set_property package_pin AF2 [get_ports gthrxp_in[0]]
-#set_property package_pin AF6 [get_ports gthtxn_out[0]]
-#set_property package_pin AF7 [get_ports gthtxp_out[0]]
+#set_property package_pin M1 [get_ports gthrxn_in[0]]
+#set_property package_pin M2 [get_ports gthrxp_in[0]]
+#set_property package_pin N4 [get_ports gthtxn_out[0]]
+#set_property package_pin N5 [get_ports gthtxp_out[0]]
 # CPLL calibration block constraints
 create_clock -period 6.734 [get_pins -filter {REF_PIN_NAME=~*O} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[0].*bufg_gt_txoutclkmon_inst}]]
 set_false_path -from [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[0].*U_TXOUTCLK_FREQ_COUNTER/testclk_cnt_reg*}] -to [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[0].*U_TXOUTCLK_FREQ_COUNTER/freq_cnt_o_reg*}] -quiet
@@ -87,29 +87,29 @@ set_false_path -from [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_ins
 ##set_false_path -through [get_pins -filter {REF_PIN_NAME=~*Q} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_pwrgood_delay_inst[0].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm*}]] -quiet
 set_case_analysis 1     [get_pins -filter {REF_PIN_NAME=~*Q} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_pwrgood_delay_inst[0].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm*}]] -quiet
 
-# Commands for enabled transceiver GTHE4_CHANNEL_X0Y1
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y9
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Set case analysis constraint, used in this configuration to limit timing analysis to the known runtime TXOUTCLK source
 # selection since the CPLL calibration block controls the TXOUTCLKSEL port dynamically
-set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[2]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
-set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[1]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
-set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[0]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[2]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[1]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[0]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
 # Set case analysis constraint, used in this configuration to limit timing analysis to the known runtime RXOUTCLK source
 # selection since the CPLL calibration block controls the RXOUTCLKSEL port dynamically
-set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[2]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
-set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[1]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
-set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[0]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[2]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[1]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[0]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
 
 # Channel primitive location constraint
-set_property LOC GTHE4_CHANNEL_X0Y1 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y9 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin AE3 [get_ports gthrxn_in[1]]
-#set_property package_pin AE4 [get_ports gthrxp_in[1]]
-#set_property package_pin AE8 [get_ports gthtxn_out[1]]
-#set_property package_pin AE9 [get_ports gthtxp_out[1]]
+#set_property package_pin K1 [get_ports gthrxn_in[1]]
+#set_property package_pin K2 [get_ports gthrxp_in[1]]
+#set_property package_pin L4 [get_ports gthtxn_out[1]]
+#set_property package_pin L5 [get_ports gthtxp_out[1]]
 # CPLL calibration block constraints
 create_clock -period 6.734 [get_pins -filter {REF_PIN_NAME=~*O} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[1].*bufg_gt_txoutclkmon_inst}]]
 set_false_path -from [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[1].*U_TXOUTCLK_FREQ_COUNTER/testclk_cnt_reg*}] -to [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[1].*U_TXOUTCLK_FREQ_COUNTER/freq_cnt_o_reg*}] -quiet
@@ -124,29 +124,29 @@ set_false_path -from [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_ins
 ##set_false_path -through [get_pins -filter {REF_PIN_NAME=~*Q} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_pwrgood_delay_inst[1].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm*}]] -quiet
 set_case_analysis 1     [get_pins -filter {REF_PIN_NAME=~*Q} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_pwrgood_delay_inst[1].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm*}]] -quiet
 
-# Commands for enabled transceiver GTHE4_CHANNEL_X0Y2
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y10
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Set case analysis constraint, used in this configuration to limit timing analysis to the known runtime TXOUTCLK source
 # selection since the CPLL calibration block controls the TXOUTCLKSEL port dynamically
-set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[2]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
-set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[1]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
-set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[0]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[2]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[1]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKSEL[0]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
 # Set case analysis constraint, used in this configuration to limit timing analysis to the known runtime RXOUTCLK source
 # selection since the CPLL calibration block controls the RXOUTCLKSEL port dynamically
-set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[2]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
-set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[1]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
-set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[0]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[2]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 1 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[1]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
+set_case_analysis 0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKSEL[0]} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
 
 # Channel primitive location constraint
-set_property LOC GTHE4_CHANNEL_X0Y2 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[0].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y10 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[2].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin AD1 [get_ports gthrxn_in[2]]
-#set_property package_pin AD2 [get_ports gthrxp_in[2]]
-#set_property package_pin AD6 [get_ports gthtxn_out[2]]
-#set_property package_pin AD7 [get_ports gthtxp_out[2]]
+#set_property package_pin H1 [get_ports gthrxn_in[2]]
+#set_property package_pin H2 [get_ports gthrxp_in[2]]
+#set_property package_pin J4 [get_ports gthtxn_out[2]]
+#set_property package_pin J5 [get_ports gthtxp_out[2]]
 # CPLL calibration block constraints
 create_clock -period 6.734 [get_pins -filter {REF_PIN_NAME=~*O} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[2].*bufg_gt_txoutclkmon_inst}]]
 set_false_path -from [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[2].*U_TXOUTCLK_FREQ_COUNTER/testclk_cnt_reg*}] -to [get_cells -hierarchical -filter {NAME =~ *gen_cpll_cal_inst[2].*U_TXOUTCLK_FREQ_COUNTER/freq_cnt_o_reg*}] -quiet
@@ -191,9 +191,6 @@ set_false_path -to [get_pins -filter {REF_PIN_NAME=~*CLR} -of_objects [get_cells
 
 
 
-
-
-
 create_waiver -internal -type CDC -id {CDC-12} -user gtwizard_ultrascale -tags "1165536" -description "CDC-12 waiver for CPLL Calibration logic" \
                         -scope -from [get_pins -quiet -filter {REF_PIN_NAME=~*C} -of_objects [get_cells -hierarchical -filter {NAME =~*cpll_cal_rx_i/gen_cal_rx_en.USER_CPLLLOCK_OUT_reg}]] \
 						       -to [get_pins -quiet -filter {REF_PIN_NAME=~*D} -of_objects [get_cells -hierarchical -filter {NAME =~*bit_synchronizer_plllock_rx_inst/i_in_meta_reg}]] 
@@ -201,9 +198,6 @@ create_waiver -internal -type CDC -id {CDC-12} -user gtwizard_ultrascale -tags "
 
 
 
-create_waiver -internal -type CDC -id {CDC-10} -user gtwizard_ultrascale -tags "1165536" -description "CDC-10 waiver for CPLL Calibration logic" \
-                        -scope -from [get_pins -quiet -filter {REF_PIN_NAME=~*C} -of_objects [get_cells -hierarchical -filter {NAME =~*gtwiz_reset_inst/pllreset_rx_out_reg}]] \
-						       -to [get_pins -quiet -filter {REF_PIN_NAME=~*PRE} -of_objects [get_cells -hierarchical -filter {NAME =~*rst_in_meta_reg}]] 
 
 create_waiver -internal -type CDC -id {CDC-10} -user gtwizard_ultrascale -tags "1165536" -description "CDC-10 waiver for CPLL Calibration logic" \
                         -scope -from [get_pins -quiet -filter {REF_PIN_NAME=~*C} -of_objects [get_cells -hierarchical -filter {NAME =~*gtwiz_reset_inst/pllreset_tx_out_reg}]] \

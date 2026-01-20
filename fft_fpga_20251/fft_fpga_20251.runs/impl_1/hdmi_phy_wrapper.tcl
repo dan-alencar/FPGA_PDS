@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/impl_1/hdmi_phy_wrapper.tcl"
+  variable script "/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/impl_1/hdmi_phy_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -104,9 +104,9 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 2
+  set_param chipscope.maxJobs 3
   set_param general.usePosixSpawnForFork 1
-  set_param runs.launchOptions { -jobs 8  }
+  set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xcau15p-ffvb676-2-e
   set_property board_part avnet-tria:auboard_15p:part0:1.1 [current_project]
@@ -114,17 +114,17 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.cache/wt [current_project]
-  set_property parent.project_path /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.xpr [current_project]
-  set_property ip_output_repo /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.cache/wt [current_project]
+  set_property parent.project_path /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.xpr [current_project]
+  set_property ip_output_repo /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/synth_1/hdmi_phy_wrapper.dcp
-  read_ip -quiet /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0.xci
+  add_files -quiet /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/synth_1/hdmi_phy_wrapper.dcp
+  read_ip -quiet /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc
+  read_xdc /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

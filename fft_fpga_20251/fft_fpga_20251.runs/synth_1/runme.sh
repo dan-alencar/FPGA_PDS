@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # 
 # Vivado(TM)
@@ -8,9 +8,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/danilo-alencar/AMD/2025.1/Vitis/bin:/home/danilo-alencar/AMD/2025.1/Vivado/ids_lite/ISE/bin/lin64:/home/danilo-alencar/AMD/2025.1/Vivado/bin
+  PATH=/home/dan-alencar/2025.2/Vitis/bin:/home/dan-alencar/2025.2/Vivado/ids_lite/ISE/bin/lin64:/home/dan-alencar/2025.2/Vivado/bin
 else
-  PATH=/home/danilo-alencar/AMD/2025.1/Vitis/bin:/home/danilo-alencar/AMD/2025.1/Vivado/ids_lite/ISE/bin/lin64:/home/danilo-alencar/AMD/2025.1/Vivado/bin:$PATH
+  PATH=/home/dan-alencar/2025.2/Vitis/bin:/home/dan-alencar/2025.2/Vivado/ids_lite/ISE/bin/lin64:/home/dan-alencar/2025.2/Vivado/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/synth_1'
+HD_PWD='/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
