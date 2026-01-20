@@ -32,6 +32,7 @@ module hdmi_phy_wrapper (
     logic clk_tmds;
     logic phy_rst_n;
     logic tx_refclk_rdy;
+    assign tx_refclk_rdy = 1'b1;
 
     // PHY reset only released when reference clock is ready
     assign phy_rst_n = tx_refclk_rdy & ~rst;
@@ -48,7 +49,7 @@ module hdmi_phy_wrapper (
 
     video_pipeline_top video_pipe (
         .clk_video (clk_pixel),
-        .rst       (~phy_rst_n),
+        .rst       (rst),
         .tmds_r    (tmds_r),
         .tmds_g    (tmds_g),
         .tmds_b    (tmds_b),
@@ -105,9 +106,8 @@ module hdmi_phy_wrapper (
         .mgtrefclk0_pad_n_in (clk_ref_n),
 
         // Generated clocks
-        .tx_video_clk        (clk_pixel), // 148.5 MHz
-        .tx_tmds_clk         (clk_tmds),  // 742.5 MHz
-        .txoutclk            (),
+        .tx_video_clk        (clk_pixel),
+        .tx_tmds_clk         (),
 
         // AXI4-Stream TX clock & reset
         .vid_phy_tx_axi4s_aclk    (clk_pixel),
@@ -142,9 +142,44 @@ module hdmi_phy_wrapper (
         .drpclk             (clk_pixel)
     );
 
-    assign led_debug[0] = tx_refclk_rdy;
-    assign led_debug[1] = tvalid_4px;
-    assign led_debug[2] = de_4px;
-    assign led_debug[3] = phy_rst_n;
+    // =========================================================
+    // PHY AXI-Lite Initializer
+    // =========================================================
+    logic phy_init_done;
+    logic [3:0] phy_init_state;
+    
+    phy_axilite_init phy_init (
+        .clk    (clk_pixel),
+        .rst    (~phy_rst_n),
+    
+        // AXI-Lite master -> PHY
+        .m_axi_awaddr  (phy_inst.vid_phy_axi4lite_awaddr),
+        .m_axi_awvalid (phy_inst.vid_phy_axi4lite_awvalid),
+        .m_axi_awready (phy_inst.vid_phy_axi4lite_awready),
+    
+        .m_axi_wdata   (phy_inst.vid_phy_axi4lite_wdata),
+        .m_axi_wstrb   (phy_inst.vid_phy_axi4lite_wstrb),
+        .m_axi_wvalid  (phy_inst.vid_phy_axi4lite_wvalid),
+        .m_axi_wready  (phy_inst.vid_phy_axi4lite_wready),
+    
+        .m_axi_bvalid  (phy_inst.vid_phy_axi4lite_bvalid),
+        .m_axi_bready  (phy_inst.vid_phy_axi4lite_bready),
+    
+        .m_axi_araddr  (phy_inst.vid_phy_axi4lite_araddr),
+        .m_axi_arvalid (phy_inst.vid_phy_axi4lite_arvalid),
+        .m_axi_arready (phy_inst.vid_phy_axi4lite_arready),
+    
+        .m_axi_rdata   (phy_inst.vid_phy_axi4lite_rdata),
+        .m_axi_rvalid  (phy_inst.vid_phy_axi4lite_rvalid),
+        .m_axi_rready  (phy_inst.vid_phy_axi4lite_rready),
+    
+        .init_done     (phy_init_done),
+        .debug_state   (phy_init_state)
+    );
+    
+    assign led_debug[0] = phy_rst_n;        // PHY fora do reset
+    assign led_debug[1] = phy_init_done;    // PHY configurado
+    assign led_debug[2] = tvalid_4px;       // TMDS ativo
+    assign led_debug[3] = de_4px;           // Vídeo ativo
     
 endmodule
