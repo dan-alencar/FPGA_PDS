@@ -2,7 +2,7 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Mon Jan 19 15:40:51 2026
+// Date        : Mon Jan 19 19:15:16 2026
 // Host        : daniloalencar.lesc.ufc.br running 64-bit Linux Mint 22.1
 // Command     : write_verilog -force -mode funcsim
 //               /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v
@@ -15,12 +15,14 @@
 
 (* NotValidForBitStream *)
 module clk_wiz_0
-   (clk_out1,
+   (clk_video,
+    clk_out2,
     resetn,
     locked,
     clk_in1_p,
     clk_in1_n);
-  output clk_out1;
+  output clk_video;
+  output clk_out2;
   input resetn;
   output locked;
   input clk_in1_p;
@@ -28,25 +30,29 @@ module clk_wiz_0
 
   (* IBUF_LOW_PWR *) wire clk_in1_n;
   (* IBUF_LOW_PWR *) wire clk_in1_p;
-  wire clk_out1;
+  wire clk_out2;
+  wire clk_video;
   wire locked;
   wire resetn;
 
   clk_wiz_0_clk_wiz inst
        (.clk_in1_n(clk_in1_n),
         .clk_in1_p(clk_in1_p),
-        .clk_out1(clk_out1),
+        .clk_out2(clk_out2),
+        .clk_video(clk_video),
         .locked(locked),
         .resetn(resetn));
 endmodule
 
 module clk_wiz_0_clk_wiz
-   (clk_out1,
+   (clk_video,
+    clk_out2,
     resetn,
     locked,
     clk_in1_p,
     clk_in1_n);
-  output clk_out1;
+  output clk_video;
+  output clk_out2;
   input resetn;
   output locked;
   input clk_in1_p;
@@ -55,8 +61,10 @@ module clk_wiz_0_clk_wiz
   wire clk_in1_clk_wiz_0;
   wire clk_in1_n;
   wire clk_in1_p;
-  wire clk_out1;
-  wire clk_out1_clk_wiz_0;
+  wire clk_out2;
+  wire clk_out2_clk_wiz_0;
+  wire clk_video;
+  wire clk_video_clk_wiz_0;
   wire locked;
   wire reset_high;
   wire resetn;
@@ -67,7 +75,6 @@ module clk_wiz_0_clk_wiz
   wire NLW_mmcme4_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT0B_UNCONNECTED;
-  wire NLW_mmcme4_adv_inst_CLKOUT1_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT1B_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT2B_UNCONNECTED;
@@ -99,22 +106,32 @@ module clk_wiz_0_clk_wiz
     .SIM_DEVICE("ULTRASCALE_PLUS")) 
     clkout1_buf
        (.CE(1'b1),
-        .I(clk_out1_clk_wiz_0),
-        .O(clk_out1));
+        .I(clk_video_clk_wiz_0),
+        .O(clk_video));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  (* XILINX_LEGACY_PRIM = "BUFG" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
+  BUFGCE #(
+    .CE_TYPE("ASYNC"),
+    .SIM_DEVICE("ULTRASCALE_PLUS")) 
+    clkout2_buf
+       (.CE(1'b1),
+        .I(clk_out2_clk_wiz_0),
+        .O(clk_out2));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* OPT_MODIFIED = "MLO" *) 
   MMCME4_ADV #(
-    .BANDWIDTH("HIGH"),
-    .CLKFBOUT_MULT_F(15.875000),
+    .BANDWIDTH("OPTIMIZED"),
+    .CLKFBOUT_MULT_F(111.375000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(10.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(15.875000),
+    .CLKOUT0_DIVIDE_F(7.500000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(1),
+    .CLKOUT1_DIVIDE(15),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
@@ -140,7 +157,7 @@ module clk_wiz_0_clk_wiz
     .CLKOUT6_PHASE(0.000000),
     .CLKOUT6_USE_FINE_PS("FALSE"),
     .COMPENSATION("INTERNAL"),
-    .DIVCLK_DIVIDE(1),
+    .DIVCLK_DIVIDE(10),
     .IS_CLKFBIN_INVERTED(1'b0),
     .IS_CLKIN1_INVERTED(1'b0),
     .IS_CLKIN2_INVERTED(1'b0),
@@ -166,9 +183,9 @@ module clk_wiz_0_clk_wiz
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
         .CLKINSTOPPED(NLW_mmcme4_adv_inst_CLKINSTOPPED_UNCONNECTED),
-        .CLKOUT0(clk_out1_clk_wiz_0),
+        .CLKOUT0(clk_video_clk_wiz_0),
         .CLKOUT0B(NLW_mmcme4_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(NLW_mmcme4_adv_inst_CLKOUT1_UNCONNECTED),
+        .CLKOUT1(clk_out2_clk_wiz_0),
         .CLKOUT1B(NLW_mmcme4_adv_inst_CLKOUT1B_UNCONNECTED),
         .CLKOUT2(NLW_mmcme4_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT2B(NLW_mmcme4_adv_inst_CLKOUT2B_UNCONNECTED),

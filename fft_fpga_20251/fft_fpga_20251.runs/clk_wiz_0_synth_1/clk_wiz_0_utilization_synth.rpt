@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Mon Jan 19 15:40:51 2026
+| Date         : Mon Jan 19 19:15:16 2026
 | Host         : daniloalencar.lesc.ufc.br running 64-bit Linux Mint 22.1
 | Command      : report_utilization -file clk_wiz_0_utilization_synth.rpt -pb clk_wiz_0_utilization_synth.pb
 | Design       : clk_wiz_0
@@ -118,7 +118,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCE     |    1 |     0 |          0 |        84 |  1.19 |
+| BUFGCE     |    2 |     0 |          0 |        84 |  2.38 |
 | BUFGCE_DIV |    0 |     0 |          0 |        12 |  0.00 |
 | BUFG_GT    |    0 |     0 |          0 |        72 |  0.00 |
 | BUFGCTRL*  |    0 |     0 |          0 |        24 |  0.00 |
@@ -165,11 +165,11 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
+| BUFGCE     |    2 |               Clock |
 | MMCME4_ADV |    1 |               Clock |
 | LUT1       |    1 |                 CLB |
 | IBUFCTRL   |    1 |              Others |
 | DIFFINBUF  |    1 |                 I/O |
-| BUFGCE     |    1 |               Clock |
 +------------+------+---------------------+
 
 

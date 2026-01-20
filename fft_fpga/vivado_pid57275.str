@@ -1,0 +1,240 @@
+/*
+
+AMD Vivado v2025.1 (64-bit) [Major: 2025, Minor: 1]
+SW Build: 6140274 on Wed May 21 22:58:25 MDT 2025
+IP Build: 6138677 on Thu May 22 03:10:11 MDT 2025
+IP Build: 6138677 on Thu May 22 03:10:11 MDT 2025
+
+Process ID (PID): 57275
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Jan 19 18:27:32 BRT 2026
+Time zone: 	Brasilia Standard Time (America/Fortaleza)
+
+OS: NAME="Linux Mint"
+OS Version: 6.14.0-37-generic
+OS Architecture: amd64
+Available processors (cores): 8
+LSB Release Description: NAME=Linux Mint
+
+Display: 0
+Screen size: 1920x1080
+Local screen bounds: x = 0, y = 0, width = 1920, height = 1040
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+
+Java home: 	/home/danilo-alencar/AMD/2025.1/tps/lnx64/jre21.0.1_12
+Java executable: 	/home/danilo-alencar/AMD/2025.1/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:ParallelGCThreads=4, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms812m, -Xmx6144m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	812 MB
+Java maximum memory (-Xmx):	 6 GB
+
+User name: 	danilo-alencar
+User home directory: /home/danilo-alencar
+User working directory: /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/danilo-alencar/AMD/2025.1
+HDI_APPROOT: /home/danilo-alencar/AMD/2025.1/Vivado
+RDI_DATADIR: /home/danilo-alencar/AMD/2025.1/data
+RDI_BINDIR: /home/danilo-alencar/AMD/2025.1/Vivado/bin
+
+Vivado preferences file: /home/danilo-alencar/.Xilinx/Vivado/2025.1/vivado.xml
+Vivado preferences directory: /home/danilo-alencar/.Xilinx/Vivado/2025.1/
+Vivado layouts directory: /home/danilo-alencar/.Xilinx/Vivado/2025.1/data/layouts
+PlanAhead jar file: 	/home/danilo-alencar/AMD/2025.1/Vivado/lib/classes/planAhead.jar
+Vivado log file: 	/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga/vivado.log
+Vivado journal file: 	/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-57275-daniloalencar.lesc.ufc.br
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /home/danilo-alencar/AMD/2025.1/Vivado
+RDI_BASEROOT: /home/danilo-alencar/AMD/2025.1
+RDI_BINROOT: /home/danilo-alencar/AMD/2025.1/Vivado/bin
+RDI_BUILD: yes
+RDI_DATADIR: /home/danilo-alencar/AMD/2025.1/Vivado/data
+RDI_INSTALLROOT: /home/danilo-alencar/AMD
+RDI_INSTALLVER: Vivado
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /home/danilo-alencar/AMD/2025.1/Vivado/lib/lnx64.o/Default:/home/danilo-alencar/AMD/2025.1/Vivado/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/danilo-alencar/AMD/2025.1/Vitis/bin:/home/danilo-alencar/AMD/2025.1/Vivado/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/danilo-alencar/AMD/2025.1/Vivado/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga:daniloalencar.lesc.ufc.br_1768858034_57186
+RDI_SHARED_DATA: /home/danilo-alencar/AMD/SharedData/Vivado/data
+RDI_TPS_ROOT: /home/danilo-alencar/AMD/2025.1/Vivado/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /home/danilo-alencar/AMD/2025.1/Vivado/ids_lite/ISE
+XILINX_DSP: /home/danilo-alencar/AMD/2025.1/Vivado/ids_lite/ISE
+XILINX_HLS: /home/danilo-alencar/AMD/2025.1/Vitis
+XILINX_PLANAHEAD: /home/danilo-alencar/AMD/2025.1/Vivado
+XILINX_SDK: /home/danilo-alencar/AMD/2025.1/Vitis
+XILINX_VITIS: /home/danilo-alencar/AMD/2025.1/Vitis
+XILINX_VIVADO: /home/danilo-alencar/AMD/2025.1/Vivado
+
+
+GUI allocated memory:	812 MB
+GUI max memory:		6,144 MB
+Engine allocated memory: 2,073 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.xpr", 0); // b.c (PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS)
+// Opening Vivado Project: /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.xpr. Version: Vivado v2025.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 107 MB (+109504kb) [00:00:11]
+// [Engine Memory]: 1,936 MB (+1878149kb) [00:00:11]
+// [GUI Memory]: 123 MB (+11486kb) [00:00:12]
+// [Engine Memory]: 2,065 MB (+34537kb) [00:00:12]
+// [GUI Memory]: 150 MB (+21453kb) [00:00:12]
+// WARNING: HEventQueue.dispatchEvent() is taking  2040 ms.
+// Tcl Message: open_project /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/danilo-alencar/AMD/2025.1/Vivado/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,096 MB. GUI used memory: 76 MB. Current time: 1/19/26, 6:27:32 PM BRT
+// Project name: fft_fpga_20251; location: /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251; part: xcau15p-ffvb676-2-e
+dismissDialog("Open Project"); // bk (Open Project Progress)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // ab
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // ab
+// TclEventType: DG_GRAPH_GENERATED
+selectTab((HResource) null, (HResource) null, "Messages", 1); // ab
+selectButton(PAResourceItoN.MsgView_CLEAR_MESSAGES_RESULTING_FROM_USER_EXECUTED, "Messages_cleanUpMessages"); // C (PAResourceItoN.MsgView_CLEAR_MESSAGES_RESULTING_FROM_USER_EXECUTED, Messages_cleanUpMessages)
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // ab
+// Tcl (Dont Echo) Command: 'rdi::info_commands {re*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {rese*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {reset*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {reset_*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {reset_sy*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {reset_syn*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {reset_*}'
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_runs", true); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+// Tcl Command: 'reset_runs'
+// Tcl Message: reset_runs 
+// Tcl Message: ERROR: [Common 17-163] Missing value for option 'runs', please type 'reset_runs -help' for usage info. 
+// Tcl (Dont Echo) Command: 'rdi::info_commands {re*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {rese*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {reset*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {reset_*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {reset_run*}'
+// Tcl (Dont Echo) Command: 'rdi::match_options {reset_runs} {}'
+// Tcl (Dont Echo) Command: 'rdi::match_options {reset_runs} {help}'
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_runs -help", true); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+// Tcl Command: 'reset_runs -help'
+// Tcl Message: reset_runs -help 
+// Elapsed time: 24 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_runs synth1", true); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+// Tcl Command: 'reset_runs synth1'
+// Tcl Message: reset_runs synth1 
+// Tcl Message: ERROR: [Common 17-162] Invalid option value specified for '-runs'. 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_runs synth_1", true); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+// Tcl Command: 'reset_runs synth_1'
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: reset_runs synth_1 
+// Tcl (Dont Echo) Command: 'rdi::info_commands {reset_ru*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {reset_sim*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {reset_simu*}'
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation", true); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+// Tcl Command: 'reset_simulation'
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RESET_SIM
+// TclEventType: LAUNCH_SIM
+// Tcl Message: reset_simulation 
+// Tcl Message: INFO: [Vivado 12-2266] Removing simulation data... INFO: [Vivado 12-2267] Reset complete 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // ab
+selectButton(PAResourceItoN.MsgView_CLEAR_MESSAGES_RESULTING_FROM_USER_EXECUTED, "Messages_cleanUpMessages"); // C (PAResourceItoN.MsgView_CLEAR_MESSAGES_RESULTING_FROM_USER_EXECUTED, Messages_cleanUpMessages)
+selectButton(PAResourceItoN.MsgView_CLEAR_MESSAGES_RESULTING_FROM_USER_EXECUTED, "Messages_cleanUpMessages"); // C (PAResourceItoN.MsgView_CLEAR_MESSAGES_RESULTING_FROM_USER_EXECUTED, Messages_cleanUpMessages)
+// Elapsed time: 19 seconds
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // ab
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ap (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: xvlog --incr --relax -L uvm -L vid_phy_controller_v2_2_20 -prj tb_video_pipeline_vlog.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.sim/sim_1/behav/xsim' 
+// Tcl Message: xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_video_pipeline_behav xil_defaultlib.tb_video_pipeline xil_defaultlib.glbl -log elaborate.log 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 10096.508 ; gain = 0.000 ; free physical = 10681 ; free virtual = 23816 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 8 seconds
+selectButton("OptionPane.button", "OK", "Run Simulation"); // JButton (OptionPane.button)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog0)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 832, 127); // cE (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+// Elapsed time: 10 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 563, 120); // cE (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+typeControlKey(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, "RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR", 'c'); // cE (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)

@@ -36,7 +36,7 @@
         "C_Rx_Clk_Primitive": [ { "value": "0", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "C_Tx_SB_Ports": [ { "value": "true", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "C_Rx_SB_Ports": [ { "value": "true", "resolve_type": "user", "format": "bool", "usage": "all" } ],
-        "Adv_Clk_Mode": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "Adv_Clk_Mode": [ { "value": "false", "value_src": "user", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "C_NIDRU": [ { "value": "false", "resolve_type": "user", "format": "bool", "enabled": false, "usage": "all" } ],
         "Tx_Buffer_Bypass": [ { "value": "true", "resolve_type": "user", "format": "bool", "enabled": false, "usage": "all" } ],
         "C_AXI4Lite_Enable": [ { "value": "true", "resolve_type": "user", "format": "bool", "usage": "all" } ],
