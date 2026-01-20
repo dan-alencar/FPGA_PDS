@@ -1,0 +1,882 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Tue Jan 20 17:06:16 2026
+# Process ID         : 26141
+# Current directory  : /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/impl_1
+# Command line       : vivado -log hdmi_phy_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hdmi_phy_wrapper.tcl -notrace
+# Log file           : /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/impl_1/hdmi_phy_wrapper.vdi
+# Journal file       : /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/impl_1/vivado.jou
+# Running On         : daniloalencar.lesc.ufc.br
+# Platform           : Linuxmint
+# Operating System   : Linux Mint 22.1
+# Processor Detail   : Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+# CPU Frequency      : 3999.792 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 33603 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 35751 MB
+# Available Virtual  : 29376 MB
+#-----------------------------------------------------------
+source hdmi_phy_wrapper.tcl -notrace
+Command: link_design -top hdmi_phy_wrapper -part xcau15p-ffvb676-2-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xcau15p-ffvb676-2-e
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint '/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0.dcp' for cell 'phy_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1940.793 ; gain = 0.000 ; free physical = 17255 ; free virtual = 27159
+INFO: [Netlist 29-17] Analyzing 180 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.xdc] for cell 'phy_inst/inst/gt_wrapper_inst/inst'
+set_case_analysis: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2130.430 ; gain = 32.688 ; free physical = 17127 ; free virtual = 27031
+Finished Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.xdc] for cell 'phy_inst/inst/gt_wrapper_inst/inst'
+Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_xdc.xdc] for cell 'phy_inst/inst'
+Finished Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_xdc.xdc] for cell 'phy_inst/inst'
+Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, First 5 unplaced cells are listed below. To see all unplaced cells, use the -verbose option:
+LOC/BEL: RPM_X0Y0/OBUFT on cell:
+phy_inst/inst/gt_usrclk_source_inst/tx_mmcm.GT0_TX_MMCM_CLKOUT1_OBUFTDS_INST/P
+LOC/BEL: RPM_X0Y0/INV on cell:
+phy_inst/inst/gt_usrclk_source_inst/tx_mmcm.GT0_TX_MMCM_CLKOUT1_OBUFTDS_INST/INV
+LOC/BEL: RPM_X0Y0 on cell:
+hdmi_tx_p[3]
+LOC/BEL: RPM_X0Y1/OBUFT on cell:
+phy_inst/inst/gt_usrclk_source_inst/tx_mmcm.GT0_TX_MMCM_CLKOUT1_OBUFTDS_INST/N
+LOC/BEL: RPM_X0Y1 on cell:
+hdmi_tx_n[3]
+5 out of 6 failed cells are reported. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc:26]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, First 5 unplaced cells are listed below. To see all unplaced cells, use the -verbose option:
+LOC/BEL: RPM_X0Y0/OBUFT on cell:
+phy_inst/inst/gt_usrclk_source_inst/tx_mmcm.GT0_TX_MMCM_CLKOUT1_OBUFTDS_INST/P
+LOC/BEL: RPM_X0Y0/INV on cell:
+phy_inst/inst/gt_usrclk_source_inst/tx_mmcm.GT0_TX_MMCM_CLKOUT1_OBUFTDS_INST/INV
+LOC/BEL: RPM_X0Y0 on cell:
+hdmi_tx_p[3]
+LOC/BEL: RPM_X0Y1/OBUFT on cell:
+phy_inst/inst/gt_usrclk_source_inst/tx_mmcm.GT0_TX_MMCM_CLKOUT1_OBUFTDS_INST/N
+LOC/BEL: RPM_X0Y1 on cell:
+hdmi_tx_n[3]
+5 out of 6 failed cells are reported. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc:27]
+WARNING: [Vivado 12-4174] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc:35]
+CRITICAL WARNING: [Common 17-54] The object 'port' does not have a property 'DIFF_TERM_ADV'. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc:35]
+CRITICAL WARNING: [Common 17-69] Command failed: 'H17' is not a valid site or package pin name. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc:41]
+Finished Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc]
+Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_clocks.xdc] for cell 'phy_inst/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_clocks.xdc:92]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-10' -from list should not be empty. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_clocks.xdc:97]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-10' -from list should not be empty. [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_clocks.xdc:99]
+Finished Parsing XDC File [/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_clocks.xdc] for cell 'phy_inst/inst'
+INFO: [Project 1-1714] 95 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-1687] 6 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2569.891 ; gain = 0.000 ; free physical = 16914 ; free virtual = 26818
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  OBUFTDS => OBUFTDS_DUAL_BUF (INV, OBUFT(x2)): 1 instance 
+
+11 Infos, 4 Warnings, 4 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2569.926 ; gain = 1017.883 ; free physical = 16914 ; free virtual = 26818
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.66 . Memory (MB): peak = 2647.031 ; gain = 77.105 ; free physical = 16788 ; free virtual = 26693
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 2fbc61454
+
+Time (s): cpu = 00:00:00.4 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2647.031 ; gain = 0.000 ; free physical = 16787 ; free virtual = 26691
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 2fbc61454
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2915.844 ; gain = 0.000 ; free physical = 16483 ; free virtual = 26387
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 2fbc61454
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2915.844 ; gain = 0.000 ; free physical = 16483 ; free virtual = 26387
+Phase 1 Initialization | Checksum: 2fbc61454
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2915.844 ; gain = 0.000 ; free physical = 16483 ; free virtual = 26387
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 2fbc61454
+
+Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2915.844 ; gain = 0.000 ; free physical = 16483 ; free virtual = 26387
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 2fbc61454
+
+Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2915.844 ; gain = 0.000 ; free physical = 16483 ; free virtual = 26387
+Phase 2 Timer Update And Timing Data Collection | Checksum: 2fbc61454
+
+Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2915.844 ; gain = 0.000 ; free physical = 16483 ; free virtual = 26387
+
+Phase 3 Retarget
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/xpm_cdc_async_rst_QPLL_axi4lite_to_drp_resetn_inst/src_arst is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/xpm_cdc_async_rst_QPLL_axi4lite_to_drp_resetn_inst/arststages_ff[3]_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_controller_interrupts_inst/vid_phy_axi4lite_aresetn is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_controller_interrupts_inst/axi_awready_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_rready is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/DRP_Rsp_Rd_Toggle_i_5
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_arvalid is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/axi_arready_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wvalid is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/axi_awaddr[9]_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_awvalid is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/axi_awaddr[9]_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_arvalid is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/axi_rdata[31]_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wdata[0] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/i_reg_clkdet_run_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wdata[2] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/i_reg_clkdet_rx_tmr_clr_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wdata[1] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/i_reg_clkdet_tx_tmr_clr_i_2
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_awvalid is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/axi_awready_i_2
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wvalid is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/axi_awready_i_2
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_arvalid is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/axi_rvalid_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_rready is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/axi_rvalid_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wvalid is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/axi_wready_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_awvalid is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/axi_wready_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wvalid is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/slv_reg_0xC[31]_i_2
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_awvalid is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/slv_reg_0xC[31]_i_2
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/vid_phy_axi4lite_aresetn is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/DRP_Status_Rdy_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/drp_control_b0gt0_inst/vid_phy_axi4lite_aresetn is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/drp_control_b0gt0_inst/DRP_Status_Rdy_i_1__0
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/drp_control_b0gt1_inst/vid_phy_axi4lite_aresetn is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/drp_control_b0gt1_inst/DRP_Status_Rdy_i_1__1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/drp_control_b0gt2_inst/vid_phy_axi4lite_aresetn is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/drp_control_b0gt2_inst/DRP_Status_Rdy_i_1__2
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/drp_control_b0gtcommon_inst/vid_phy_axi4lite_aresetn is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/drp_control_b0gtcommon_inst/DRP_Status_Rdy_i_1__3
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wdata[4] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/i_reg_clkdet_rx_freq_rst_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wdata[3] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/i_reg_clkdet_tx_freq_rst_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_aresetn is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/i_reg_clkdet_tx_tmr_clr_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_awvalid is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/i_reg_clkdet_tx_tmr_clr_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wvalid is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/i_reg_clkdet_tx_tmr_clr_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_bready is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/aw_en_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wvalid is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/aw_en_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_awvalid is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/aw_en_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wvalid is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/axi_bvalid_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_awvalid is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/axi_bvalid_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_bready is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/axi_bvalid_i_1
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wvalid is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/i_reg_clkdet_tx_freq_rst_i_2
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_awvalid is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/i_reg_clkdet_tx_freq_rst_i_2
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_awvalid is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/slv_reg_0x10[31]_i_2
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wvalid is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/slv_reg_0x10[31]_i_2
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_awvalid is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/slv_reg_0x14[31]_i_2
+WARNING: [Opt 31-155] Driverless net phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/vid_phy_axi4lite_wvalid is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: phy_inst/inst/vid_phy_controller_v2_2_20_vid_phy_axi4lite_inst/slv_reg_0x14[31]_i_2
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 4 inverters resulting in an inversion of 10 pins
+INFO: [Opt 31-138] Pushed 21 inverter(s) to 1644 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 303cbe9ff
+
+Time (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.45 . Memory (MB): peak = 2915.844 ; gain = 0.000 ; free physical = 16495 ; free virtual = 26399
+Retarget | Checksum: 303cbe9ff
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 34 cells
+INFO: [Opt 31-1021] In phase Retarget, 113 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 2b8dd4af5
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2915.844 ; gain = 0.000 ; free physical = 16494 ; free virtual = 26399
+Constant propagation | Checksum: 2b8dd4af5
+INFO: [Opt 31-389] Phase Constant propagation created 40 cells and removed 3371 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 3 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2915.844 ; gain = 0.000 ; free physical = 16494 ; free virtual = 26399
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2915.844 ; gain = 0.000 ; free physical = 16494 ; free virtual = 26399
+INFO: [Opt 31-120] Instance phy_inst/inst/clock_detector_inst (vid_phy_controller_0_clkdet) has been optimized to an empty box cell during sweep but it has constraints that prevent its removal. Empty box cells do not impact the implementation flow but they have no functional relevance.
+Resolution: If this is not expected, please check for DONT_TOUCH properties or timing constraint set on the empty box cell or on nets connected to the cell. If found, remove the relevant DONT_TOUCH property or timing constraint and re-run opt_design.
+Phase 5 Sweep | Checksum: 38e6b3054
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2915.844 ; gain = 0.000 ; free physical = 16494 ; free virtual = 26399
+Sweep | Checksum: 38e6b3054
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1375 cells
+INFO: [Opt 31-1021] In phase Sweep, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+INFO: [Opt 31-274] Optimized connectivity to 1 cascaded buffer cells
+Phase 6 BUFG optimization | Checksum: 38f0aa91f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2947.859 ; gain = 32.016 ; free physical = 16494 ; free virtual = 26398
+BUFG optimization | Checksum: 38f0aa91f
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 1 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 38f0aa91f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2947.859 ; gain = 32.016 ; free physical = 16494 ; free virtual = 26398
+Shift Register Optimization | Checksum: 38f0aa91f
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 2d3d48a7f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2947.859 ; gain = 32.016 ; free physical = 16494 ; free virtual = 26398
+Post Processing Netlist | Checksum: 2d3d48a7f
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 36933469f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2947.859 ; gain = 32.016 ; free physical = 16494 ; free virtual = 26398
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2947.859 ; gain = 0.000 ; free physical = 16494 ; free virtual = 26398
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 36933469f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2947.859 ; gain = 32.016 ; free physical = 16494 ; free virtual = 26398
+Phase 9 Finalization | Checksum: 36933469f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2947.859 ; gain = 32.016 ; free physical = 16494 ; free virtual = 26398
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |              34  |                                            113  |
+|  Constant propagation         |              40  |            3371  |                                              3  |
+|  Sweep                        |               0  |            1375  |                                              1  |
+|  BUFG optimization            |               0  |               1  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              1  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 36933469f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2947.859 ; gain = 32.016 ; free physical = 16494 ; free virtual = 26398
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 36933469f
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2947.859 ; gain = 0.000 ; free physical = 16494 ; free virtual = 26398
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 36933469f
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2947.859 ; gain = 0.000 ; free physical = 16494 ; free virtual = 26398
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2947.859 ; gain = 0.000 ; free physical = 16494 ; free virtual = 26398
+Ending Netlist Obfuscation Task | Checksum: 36933469f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2947.859 ; gain = 0.000 ; free physical = 16494 ; free virtual = 26398
+INFO: [Common 17-83] Releasing license: Implementation
+40 Infos, 44 Warnings, 4 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+INFO: [Vivado 12-24828] Executing command : report_drc -file hdmi_phy_wrapper_drc_opted.rpt -pb hdmi_phy_wrapper_drc_opted.pb -rpx hdmi_phy_wrapper_drc_opted.rpx
+Command: report_drc -file hdmi_phy_wrapper_drc_opted.rpt -pb hdmi_phy_wrapper_drc_opted.pb -rpx hdmi_phy_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/impl_1/hdmi_phy_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3071.375 ; gain = 0.000 ; free physical = 16386 ; free virtual = 26291
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3071.375 ; gain = 0.000 ; free physical = 16385 ; free virtual = 26291
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3071.375 ; gain = 0.000 ; free physical = 16384 ; free virtual = 26291
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3071.375 ; gain = 0.000 ; free physical = 16382 ; free virtual = 26291
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3071.375 ; gain = 0.000 ; free physical = 16382 ; free virtual = 26291
+Wrote Device Cache: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3071.375 ; gain = 0.000 ; free physical = 16381 ; free virtual = 26292
+Write Physdb Complete: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3071.375 ; gain = 0.000 ; free physical = 16381 ; free virtual = 26292
+INFO: [Common 17-1381] The checkpoint '/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/impl_1/hdmi_phy_wrapper_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3143.930 ; gain = 0.000 ; free physical = 16308 ; free virtual = 26216
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 289df25e6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3143.930 ; gain = 0.000 ; free physical = 16308 ; free virtual = 26216
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3143.930 ; gain = 0.000 ; free physical = 16308 ; free virtual = 26216
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 226e05759
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 3806.867 ; gain = 662.938 ; free physical = 15562 ; free virtual = 25470
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 2ca1ca348
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 3845.910 ; gain = 701.980 ; free physical = 15560 ; free virtual = 25467
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 2ca1ca348
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 3845.910 ; gain = 701.980 ; free physical = 15560 ; free virtual = 25467
+Phase 1 Placer Initialization | Checksum: 2ca1ca348
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 3845.910 ; gain = 701.980 ; free physical = 15559 ; free virtual = 25467
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+
+Phase 2.1.1 Partition Driven Placement
+
+Phase 2.1.1.1 PBP: Partition Driven Placement
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 2ab5f09c2
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 3845.910 ; gain = 701.980 ; free physical = 15597 ; free virtual = 25505
+
+Phase 2.1.1.2 PBP: Clock Region Placement
+INFO: [Place 30-3162] Check ILP status : ILP-based clock placer completed successfully.
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 208c1682e
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 3845.910 ; gain = 701.980 ; free physical = 15584 ; free virtual = 25492
+
+Phase 2.1.1.3 PBP: Compute Congestion
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 208c1682e
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 3949.895 ; gain = 805.965 ; free physical = 15431 ; free virtual = 25338
+
+Phase 2.1.1.4 PBP: UpdateTiming
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 1f2df9a2d
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 3981.910 ; gain = 837.980 ; free physical = 15431 ; free virtual = 25338
+
+Phase 2.1.1.5 PBP: Add part constraints
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: 1f2df9a2d
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 3981.910 ; gain = 837.980 ; free physical = 15431 ; free virtual = 25338
+Phase 2.1.1 Partition Driven Placement | Checksum: 1f2df9a2d
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 3981.910 ; gain = 837.980 ; free physical = 15431 ; free virtual = 25338
+Phase 2.1 Floorplanning | Checksum: 19e8ed54c
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 3981.910 ; gain = 837.980 ; free physical = 15431 ; free virtual = 25338
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 19e8ed54c
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 3981.910 ; gain = 837.980 ; free physical = 15431 ; free virtual = 25338
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 19e8ed54c
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 3981.910 ; gain = 837.980 ; free physical = 15431 ; free virtual = 25338
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 22fda1701
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:21 . Memory (MB): peak = 3997.906 ; gain = 853.977 ; free physical = 15414 ; free virtual = 25322
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 22fda1701
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:21 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15412 ; free virtual = 25320
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 66 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 24 nets or LUTs. Breaked 0 LUT, combined 24 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-670] No setup violation found.  Equivalent Driver Rewiring was not performed.
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4005.910 ; gain = 0.000 ; free physical = 15412 ; free virtual = 25319
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |             24  |                    24  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Equivalent Driver Rewiring                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |             24  |                    24  |           0  |           4  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 1a9bc4137
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:21 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15412 ; free virtual = 25319
+Phase 2.5 Global Place Phase2 | Checksum: 2506b1b2a
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:24 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15397 ; free virtual = 25305
+Phase 2 Global Placement | Checksum: 2506b1b2a
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:24 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15397 ; free virtual = 25305
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1e5416607
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:27 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15391 ; free virtual = 25299
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1d2800908
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:27 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15390 ; free virtual = 25298
+
+Phase 3.3 Small Shape DP
+
+Phase 3.3.1 Small Shape Clustering
+Phase 3.3.1 Small Shape Clustering | Checksum: 21cc77fc0
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:29 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15378 ; free virtual = 25286
+
+Phase 3.3.2 Slice Area Swap
+
+Phase 3.3.2.1 Slice Area Swap Initial
+Phase 3.3.2.1 Slice Area Swap Initial | Checksum: 206bcb3f6
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:30 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15378 ; free virtual = 25286
+Phase 3.3.2 Slice Area Swap | Checksum: 206bcb3f6
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:30 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15378 ; free virtual = 25286
+Phase 3.3 Small Shape DP | Checksum: 2c7a3bf4d
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:30 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15377 ; free virtual = 25285
+
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: 27349098d
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:30 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15376 ; free virtual = 25284
+
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: 244fb24d7
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:30 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15376 ; free virtual = 25284
+Phase 3 Detail Placement | Checksum: 244fb24d7
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:30 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15376 ; free virtual = 25284
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 2cd47858e
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=5.259 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 2130a8dda
+
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4005.910 ; gain = 0.000 ; free physical = 15370 ; free virtual = 25278
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 2ef520123
+
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.07 . Memory (MB): peak = 4005.910 ; gain = 0.000 ; free physical = 15370 ; free virtual = 25278
+Phase 4.1.1.1 BUFG Insertion | Checksum: 2cd47858e
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:00:34 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15370 ; free virtual = 25278
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=5.259. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 248b30ac5
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:00:34 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15369 ; free virtual = 25277
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:00:34 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15369 ; free virtual = 25277
+Phase 4.1 Post Commit Optimization | Checksum: 248b30ac5
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:00:34 . Memory (MB): peak = 4005.910 ; gain = 861.980 ; free physical = 15369 ; free virtual = 25277
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15307 ; free virtual = 25215
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 17e562342
+
+Time (s): cpu = 00:01:42 ; elapsed = 00:00:38 . Memory (MB): peak = 4021.895 ; gain = 877.965 ; free physical = 15307 ; free virtual = 25215
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+| Direction | Region Size       | Region Size       | Region Size       |
+|___________|___________________|___________________|___________________|
+|      North|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+|      South|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+|       East|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+|       West|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 17e562342
+
+Time (s): cpu = 00:01:42 ; elapsed = 00:00:38 . Memory (MB): peak = 4021.895 ; gain = 877.965 ; free physical = 15307 ; free virtual = 25215
+Phase 4.3 Placer Reporting | Checksum: 17e562342
+
+Time (s): cpu = 00:01:42 ; elapsed = 00:00:38 . Memory (MB): peak = 4021.895 ; gain = 877.965 ; free physical = 15307 ; free virtual = 25215
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15307 ; free virtual = 25215
+
+Time (s): cpu = 00:01:42 ; elapsed = 00:00:38 . Memory (MB): peak = 4021.895 ; gain = 877.965 ; free physical = 15307 ; free virtual = 25215
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1bb0e6ff4
+
+Time (s): cpu = 00:01:42 ; elapsed = 00:00:38 . Memory (MB): peak = 4021.895 ; gain = 877.965 ; free physical = 15307 ; free virtual = 25214
+Ending Placer Task | Checksum: 182594599
+
+Time (s): cpu = 00:01:42 ; elapsed = 00:00:38 . Memory (MB): peak = 4021.895 ; gain = 877.965 ; free physical = 15307 ; free virtual = 25214
+77 Infos, 44 Warnings, 4 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:48 ; elapsed = 00:00:39 . Memory (MB): peak = 4021.895 ; gain = 950.520 ; free physical = 15307 ; free virtual = 25214
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file hdmi_phy_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.14 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15286 ; free virtual = 25194
+INFO: [Vivado 12-24828] Executing command : report_utilization -file hdmi_phy_wrapper_utilization_placed.rpt -pb hdmi_phy_wrapper_utilization_placed.pb
+INFO: [Vivado 12-24828] Executing command : report_io -file hdmi_phy_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.34 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15286 ; free virtual = 25195
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15285 ; free virtual = 25197
+Wrote PlaceDB: Time (s): cpu = 00:00:00.58 ; elapsed = 00:00:00.19 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15278 ; free virtual = 25198
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15278 ; free virtual = 25198
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15277 ; free virtual = 25198
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15277 ; free virtual = 25198
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15274 ; free virtual = 25198
+Write Physdb Complete: Time (s): cpu = 00:00:00.6 ; elapsed = 00:00:00.23 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15274 ; free virtual = 25198
+INFO: [Common 17-1381] The checkpoint '/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/impl_1/hdmi_phy_wrapper_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.47 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15274 ; free virtual = 25186
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 5.261 | TNS= 0.000 | 
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+88 Infos, 44 Warnings, 4 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15271 ; free virtual = 25187
+Wrote PlaceDB: Time (s): cpu = 00:00:00.56 ; elapsed = 00:00:00.18 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15270 ; free virtual = 25193
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15270 ; free virtual = 25193
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15270 ; free virtual = 25194
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15270 ; free virtual = 25195
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15268 ; free virtual = 25195
+Write Physdb Complete: Time (s): cpu = 00:00:00.59 ; elapsed = 00:00:00.22 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15268 ; free virtual = 25195
+INFO: [Common 17-1381] The checkpoint '/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/impl_1/hdmi_phy_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 9de0f816 ConstDB: 0 ShapeSum: b32514af RouteDB: 315338d4
+Nodegraph reading from file.  Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.37 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15256 ; free virtual = 25172
+Post Restoration Checksum: NetGraph: 9ec3ad1 | NumContArr: df4aabb9 | Constraints: fcbd9a1a | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 2a89d7b41
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15283 ; free virtual = 25198
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 2a89d7b41
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15283 ; free virtual = 25198
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 2a89d7b41
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15283 ; free virtual = 25198
+
+Phase 2.3 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.3 Global Clock Net Routing | Checksum: 29e28f289
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15286 ; free virtual = 25202
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1a98d692f
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15284 ; free virtual = 25200
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.333  | TNS=0.000  | WHS=-0.430 | THS=-10.985|
+
+
+Phase 2.5 Soft Constraint Pins - Fast Budgeting
+Phase 2.5 Soft Constraint Pins - Fast Budgeting | Checksum: 2398a049c
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15284 ; free virtual = 25200
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00378781 %
+  Global Horizontal Routing Utilization  = 0.00601251 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 4430
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 4042
+  Number of Partially Routed Nets     = 388
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 26a1d185f
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15280 ; free virtual = 25196
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 26a1d185f
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15280 ; free virtual = 25196
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 2794e3707
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15279 ; free virtual = 25195
+Phase 4 Initial Routing | Checksum: 279e1d266
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15279 ; free virtual = 25195
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 543
+ Number of Nodes with overlaps = 32
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.111  | TNS=0.000  | WHS=0.050  | THS=0.000  |
+
+Phase 5.1 Global Iteration 0 | Checksum: 24b2c1d68
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15281 ; free virtual = 25197
+
+Phase 5.2 Additional Iteration for Hold
+Phase 5.2 Additional Iteration for Hold | Checksum: 281542271
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15281 ; free virtual = 25197
+Phase 5 Rip-up And Reroute | Checksum: 281542271
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15281 ; free virtual = 25197
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+Phase 6.1 Delay CleanUp | Checksum: 2b19b7821
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15281 ; free virtual = 25197
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 2b19b7821
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15281 ; free virtual = 25197
+Phase 6 Delay and Skew Optimization | Checksum: 2b19b7821
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15281 ; free virtual = 25197
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.111  | TNS=0.000  | WHS=0.050  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 2b19b7821
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15338 ; free virtual = 25254
+Phase 7 Post Hold Fix | Checksum: 2b19b7821
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15338 ; free virtual = 25254
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.43141 %
+  Global Horizontal Routing Utilization  = 0.603505 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 2b19b7821
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15323 ; free virtual = 25239
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 2b19b7821
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15322 ; free virtual = 25238
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 2b19b7821
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15358 ; free virtual = 25274
+
+Phase 11 Resolve XTalk
+Phase 11 Resolve XTalk | Checksum: 2b19b7821
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15358 ; free virtual = 25274
+
+Phase 12 Post Process Routing
+Phase 12 Post Process Routing | Checksum: 2b19b7821
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15362 ; free virtual = 25278
+
+Phase 13 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=5.111  | TNS=0.000  | WHS=0.050  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 13 Post Router Timing | Checksum: 2b19b7821
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15362 ; free virtual = 25278
+Total Elapsed time in route_design: 5.89 secs
+
+Phase 14 Post-Route Event Processing
+Phase 14 Post-Route Event Processing | Checksum: 10aa2ca4a
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15362 ; free virtual = 25278
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 10aa2ca4a
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15362 ; free virtual = 25278
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+99 Infos, 44 Warnings, 4 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 4021.895 ; gain = 0.000 ; free physical = 15362 ; free virtual = 25278
+INFO: [Vivado 12-24828] Executing command : report_drc -file hdmi_phy_wrapper_drc_routed.rpt -pb hdmi_phy_wrapper_drc_routed.pb -rpx hdmi_phy_wrapper_drc_routed.rpx
+Command: report_drc -file hdmi_phy_wrapper_drc_routed.rpt -pb hdmi_phy_wrapper_drc_routed.pb -rpx hdmi_phy_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/impl_1/hdmi_phy_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [Vivado 12-24828] Executing command : report_methodology -file hdmi_phy_wrapper_methodology_drc_routed.rpt -pb hdmi_phy_wrapper_methodology_drc_routed.pb -rpx hdmi_phy_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file hdmi_phy_wrapper_methodology_drc_routed.rpt -pb hdmi_phy_wrapper_methodology_drc_routed.pb -rpx hdmi_phy_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/impl_1/hdmi_phy_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file hdmi_phy_wrapper_timing_summary_routed.rpt -pb hdmi_phy_wrapper_timing_summary_routed.pb -rpx hdmi_phy_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Vivado 12-24838] Running report commands "report_bus_skew, report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file hdmi_phy_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_route_status -file hdmi_phy_wrapper_route_status.rpt -pb hdmi_phy_wrapper_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file hdmi_phy_wrapper_bus_skew_routed.rpt -pb hdmi_phy_wrapper_bus_skew_routed.pb -rpx hdmi_phy_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Vivado 12-24828] Executing command : report_power -file hdmi_phy_wrapper_power_routed.rpt -pb hdmi_phy_wrapper_power_summary_routed.pb -rpx hdmi_phy_wrapper_power_routed.rpx
+Command: report_power -file hdmi_phy_wrapper_power_routed.rpt -pb hdmi_phy_wrapper_power_summary_routed.pb -rpx hdmi_phy_wrapper_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+119 Infos, 44 Warnings, 4 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file hdmi_phy_wrapper_clock_utilization_routed.rpt
+generate_parallel_reports: Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 4069.918 ; gain = 48.023 ; free physical = 15300 ; free virtual = 25271
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4069.918 ; gain = 0.000 ; free physical = 15291 ; free virtual = 25274
+Wrote PlaceDB: Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:00.4 . Memory (MB): peak = 4069.918 ; gain = 0.000 ; free physical = 15219 ; free virtual = 25252
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4069.918 ; gain = 0.000 ; free physical = 15219 ; free virtual = 25252
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.08 . Memory (MB): peak = 4069.918 ; gain = 0.000 ; free physical = 15218 ; free virtual = 25252
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4069.918 ; gain = 0.000 ; free physical = 15218 ; free virtual = 25253
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4069.918 ; gain = 0.000 ; free physical = 15216 ; free virtual = 25253
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.49 . Memory (MB): peak = 4069.918 ; gain = 0.000 ; free physical = 15216 ; free virtual = 25253
+INFO: [Common 17-1381] The checkpoint '/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/impl_1/hdmi_phy_wrapper_routed.dcp' has been generated.
+Command: write_bitstream -force hdmi_phy_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC NSTD-1] Unspecified I/O Standard: 2 out of 5 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: hdmi_tx_n[3], and hdmi_tx_p[3].
+ERROR: [DRC UCIO-1] Unconstrained Logical Port: 3 out of 5 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: hdmi_tx_n[3], hdmi_tx_p[3], and rst.
+INFO: [Vivado 12-3199] DRC finished with 2 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado 12-1345] Error(s) found during DRC. Bitgen not run.
+INFO: [Common 17-83] Releasing license: Implementation
+128 Infos, 44 Warnings, 4 Critical Warnings and 3 Errors encountered.
+write_bitstream failed
+write_bitstream: Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 4069.918 ; gain = 0.000 ; free physical = 15059 ; free virtual = 25254
+ERROR: [Common 17-39] 'write_bitstream' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 20 17:07:59 2026...
