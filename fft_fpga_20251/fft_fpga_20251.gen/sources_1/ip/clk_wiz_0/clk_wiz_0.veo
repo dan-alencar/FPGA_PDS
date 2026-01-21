@@ -52,13 +52,12 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_video__148.50000______0.000______50.0______228.536____394.762
-// clk_out2__74.25000______0.000______50.0______250.227____394.762
+// clk_out1__100.00000______0.000______50.0______101.475_____77.836
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
 //----------------------------------------------------------------------------
-// __primary_________100.000____________0.010
+// __primary_________300.000____________0.010
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -69,8 +68,7 @@
   clk_wiz_0 instance_name
    (
     // Clock out ports
-    .clk_video(clk_video),     // output clk_video
-    .clk_out2(clk_out2),     // output clk_out2
+    .clk_out1(clk_out1),     // output clk_out1
     // Status and control signals
     .resetn(resetn), // input resetn
     .locked(locked),       // output locked

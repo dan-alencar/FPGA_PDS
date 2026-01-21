@@ -52,4 +52,4 @@ create_clock -name vid_phy_controller_0_vid_phy_sb_aclk -period 10 [get_ports vi
 create_clock -name vid_phy_controller_0_drpclk -period 10 [get_ports drpclk]
 
 
-create_clock -name vid_phy_controller_0_mgtrefclk1_pad_p_in -period 3.367 [get_ports mgtrefclk1_pad_p_in]
+create_clock -name vid_phy_controller_0_mgtrefclk0_pad_p_in -period 3.367 [get_ports mgtrefclk0_pad_p_in]

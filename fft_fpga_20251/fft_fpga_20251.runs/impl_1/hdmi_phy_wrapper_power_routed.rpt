@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date             : Tue Jan 20 20:29:58 2026
+| Date             : Wed Jan 21 10:36:33 2026
 | Host             : dan-alencar running 64-bit Linux Mint 22.2
 | Command          : report_power -file hdmi_phy_wrapper_power_routed.rpt -pb hdmi_phy_wrapper_power_summary_routed.pb -rpx hdmi_phy_wrapper_power_routed.rpx
 | Design           : hdmi_phy_wrapper
@@ -30,15 +30,15 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.118        |
+| Total On-Chip Power (W)  | 0.665        |
 | Design Power Budget (W)  | 45.000       |
-| Power Budget Margin (W)  | 43.882 (MET) |
-| Dynamic (W)              | 0.863        |
-| Device Static (W)        | 0.255        |
+| Power Budget Margin (W)  | 44.335 (MET) |
+| Dynamic (W)              | 0.387        |
+| Device Static (W)        | 0.278        |
 | Effective TJA (C/W)      | 0.8          |
-| Max Ambient (C)          | 99.2         |
-| Junction Temperature (C) | 25.8         |
-| Confidence Level         | Low          |
+| Max Ambient (C)          | 99.5         |
+| Junction Temperature (C) | 25.5         |
+| Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
 | Design Nets Matched      | NA           |
@@ -51,13 +51,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| CLB Logic      |    <0.001 |        3 |       --- |             --- |
-|   LUT as Logic |    <0.001 |        1 |     77760 |           <0.01 |
-|   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.002 |        2 |       --- |             --- |
-| I/O            |     0.860 |        5 |       228 |            2.19 |
-| Static Power   |     0.255 |          |           |                 |
-| Total          |     1.118 |          |           |                 |
+| Clocks         |     0.025 |       25 |       --- |             --- |
+| CLB Logic      |     0.002 |     5765 |       --- |             --- |
+|   LUT as Logic |     0.002 |     1489 |     77760 |            1.91 |
+|   Register     |    <0.001 |     3349 |    155520 |            2.15 |
+|   CARRY8       |    <0.001 |      118 |      9720 |            1.21 |
+|   Others       |     0.000 |      349 |       --- |             --- |
+|   F7/F8 Muxes  |     0.000 |        1 |     77760 |           <0.01 |
+| Signals        |     0.002 |     4451 |       --- |             --- |
+| MMCM           |     0.097 |        0 |       --- |             --- |
+| I/O            |     0.025 |       11 |       228 |            4.82 |
+| GTH            |     0.236 |        3 |        12 |           25.00 |
+| Static Power   |     0.278 |          |           |                 |
+| Total          |     0.665 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -67,21 +73,21 @@ Table of Contents
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+-------------+
 | Source           | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A)  |
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+-------------+
-| Vccint           |       0.850 |     0.055 |       0.006 |      0.049 |       NA    |       3.000 | 2.945 (MET) |
-| Vccint_io        |       0.850 |     0.031 |       0.004 |      0.027 |       NA    | Unspecified | NA          |
+| Vccint           |       0.850 |     0.114 |       0.065 |      0.049 |       NA    |       3.000 | 2.886 (MET) |
+| Vccint_io        |       0.850 |     0.028 |       0.002 |      0.026 |       NA    | Unspecified | NA          |
 | Vccbram          |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA          |
-| Vccaux           |       1.800 |     0.065 |       0.000 |      0.065 |       NA    | Unspecified | NA          |
-| Vccaux_io        |       1.800 |     0.113 |       0.090 |      0.023 |       NA    | Unspecified | NA          |
-| Vcco33           |       3.300 |     0.215 |       0.210 |      0.005 |       NA    | Unspecified | NA          |
+| Vccaux           |       1.800 |     0.118 |       0.054 |      0.065 |       NA    | Unspecified | NA          |
+| Vccaux_io        |       1.800 |     0.032 |       0.009 |      0.023 |       NA    | Unspecified | NA          |
+| Vcco33           |       3.300 |     0.006 |       0.001 |      0.005 |       NA    | Unspecified | NA          |
 | Vcco25           |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
 | Vcco18           |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
 | Vcco15           |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
 | Vcco135          |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
-| Vcco12           |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
+| Vcco12           |       1.200 |     0.004 |       0.004 |      0.000 |       NA    | Unspecified | NA          |
 | Vcco10           |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
 | Vccadc           |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA          |
-| VMGTAVCC (GTH)   |       0.900 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
-| VMGTAVTT (GTH)   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
+| VMGTAVCC (GTH)   |       0.900 |     0.080 |       0.072 |      0.008 |       NA    | Unspecified | NA          |
+| VMGTAVTT (GTH)   |       1.200 |     0.135 |       0.121 |      0.014 |       NA    | Unspecified | NA          |
 | VMGTVCCAUX (GTH) |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+-------------+
 
@@ -89,17 +95,17 @@ Table of Contents
 1.3 Confidence Level
 --------------------
 
-+-----------------------------+------------+--------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
-| User Input Data             | Confidence | Details                                                | Action                                                                                                   |
-+-----------------------------+------------+--------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
-| Design implementation state | High       | Design is routed                                       |                                                                                                          |
-| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                          |
-| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view |
-| Internal nodes activity     | High       | User specified more than 25% of internal nodes         |                                                                                                          |
-| Device models               | High       | Device models are Production                           |                                                                                                          |
-|                             |            |                                                        |                                                                                                          |
-| Overall confidence level    | Low        |                                                        |                                                                                                          |
-+-----------------------------+------------+--------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 
 
 2. Settings
@@ -123,9 +129,33 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-------+--------+-----------------+
-| Clock | Domain | Constraint (ns) |
-+-------+--------+-----------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                                                                                                                                                                                                                              | Domain                                                                                                                                                                                                                                                                                                              | Constraint (ns) |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| GTHE4_CHANNEL_RXOUTCLKPCS[0]                                                                                                                                                                                                                                                                                                       | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_RXOUTCLKPCS[0]                                                                   |             6.7 |
+| GTHE4_CHANNEL_RXOUTCLKPCS[1]                                                                                                                                                                                                                                                                                                       | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_RXOUTCLKPCS[1]                                                                   |             6.7 |
+| GTHE4_CHANNEL_RXOUTCLKPCS[2]                                                                                                                                                                                                                                                                                                       | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_RXOUTCLKPCS[2]                                                                   |             6.7 |
+| GTHE4_CHANNEL_RXOUTCLK[0]                                                                                                                                                                                                                                                                                                          | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_RXOUTCLK[0]                                                                      |             6.7 |
+| GTHE4_CHANNEL_RXOUTCLK[1]                                                                                                                                                                                                                                                                                                          | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_RXOUTCLK[1]                                                                      |             6.7 |
+| GTHE4_CHANNEL_RXOUTCLK[2]                                                                                                                                                                                                                                                                                                          | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_RXOUTCLK[2]                                                                      |             6.7 |
+| GTHE4_CHANNEL_TXOUTCLK[0]                                                                                                                                                                                                                                                                                                          | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_TXOUTCLK[0]                                                                      |             6.7 |
+| GTHE4_CHANNEL_TXOUTCLK[1]                                                                                                                                                                                                                                                                                                          | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_TXOUTCLK[1]                                                                      |             6.7 |
+| GTHE4_CHANNEL_TXOUTCLK[2]                                                                                                                                                                                                                                                                                                          | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_TXOUTCLK[2]                                                                      |             6.7 |
+| cfg_clk                                                                                                                                                                                                                                                                                                                            | cfg_clk                                                                                                                                                                                                                                                                                                             |            15.4 |
+| clkout1                                                                                                                                                                                                                                                                                                                            | phy_inst/inst/gt_usrclk_source_inst/tx_mmcm.txoutclk_mmcm0_i/clkout1                                                                                                                                                                                                                                                |             3.4 |
+| clkout2                                                                                                                                                                                                                                                                                                                            | phy_inst/inst/gt_usrclk_source_inst/tx_mmcm.txoutclk_mmcm0_i/clkout2                                                                                                                                                                                                                                                |             6.7 |
+| gt_refclk                                                                                                                                                                                                                                                                                                                          | mgtrefclk_p                                                                                                                                                                                                                                                                                                         |             3.4 |
+| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst/O | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon |             6.7 |
+| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O               | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/txoutclkmon               |             6.7 |
+| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst/O | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon |             6.7 |
+| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O               | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/txoutclkmon               |             6.7 |
+| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst/O | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon |             6.7 |
+| phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O               | phy_inst/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/txoutclkmon               |             6.7 |
+| qpll0clk_in[0]                                                                                                                                                                                                                                                                                                                     | phy_inst/inst/gt_common_inst/common_inst/qpll0clk_in[0]                                                                                                                                                                                                                                                             |             0.2 |
+| qpll0refclk_in[0]                                                                                                                                                                                                                                                                                                                  | phy_inst/inst/gt_common_inst/common_inst/qpll0refclk_in[0]                                                                                                                                                                                                                                                          |             3.4 |
+| qpll1clk_in[0]                                                                                                                                                                                                                                                                                                                     | phy_inst/inst/gt_common_inst/common_inst/qpll1clk_in[0]                                                                                                                                                                                                                                                             |             0.2 |
+| qpll1refclk_in[0]                                                                                                                                                                                                                                                                                                                  | phy_inst/inst/gt_common_inst/common_inst/qpll1refclk_in[0]                                                                                                                                                                                                                                                          |             3.4 |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -134,11 +164,15 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------------+-----------+
-| Name             | Power (W) |
-+------------------+-----------+
-| hdmi_phy_wrapper |     0.863 |
-|   rst_IBUF_inst  |     0.005 |
-+------------------+-----------+
++-----------------------------+-----------+
+| Name                        | Power (W) |
++-----------------------------+-----------+
+| hdmi_phy_wrapper            |     0.387 |
+|   obufds_tmds_clk           |     0.016 |
+|   phy_inst                  |     0.367 |
+|     inst                    |     0.367 |
+|       gt_usrclk_source_inst |     0.106 |
+|       gt_wrapper_inst       |     0.256 |
++-----------------------------+-----------+
 
 

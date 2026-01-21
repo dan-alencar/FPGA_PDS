@@ -69,4 +69,4 @@ set_case_analysis 0 [get_pins -of [get_cells -hierarchical -filter {name=~*vid_p
 # GTX, GTP
 
 # GTHE3/4
-#create_clock -name vid_phy_controller_0_mgtrefclk1_pad_p_in -period 3.367 [get_ports mgtrefclk1_pad_p_in]
+#create_clock -name vid_phy_controller_0_mgtrefclk0_pad_p_in -period 3.367 [get_ports mgtrefclk0_pad_p_in]

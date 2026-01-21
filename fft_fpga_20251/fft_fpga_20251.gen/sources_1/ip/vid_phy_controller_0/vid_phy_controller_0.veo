@@ -58,10 +58,12 @@ vid_phy_controller_0 your_instance_name (
   .tx_refclk_rdy(tx_refclk_rdy),                              // input wire tx_refclk_rdy
   .tx_tmds_clk(tx_tmds_clk),                                  // output wire tx_tmds_clk
   .tx_video_clk(tx_video_clk),                                // output wire tx_video_clk
-  .mgtrefclk1_pad_p_in(mgtrefclk1_pad_p_in),                  // input wire mgtrefclk1_pad_p_in
-  .mgtrefclk1_pad_n_in(mgtrefclk1_pad_n_in),                  // input wire mgtrefclk1_pad_n_in
-  .phy_txn_out(phy_txn_out),                                  // output wire [3 : 0] phy_txn_out
-  .phy_txp_out(phy_txp_out),                                  // output wire [3 : 0] phy_txp_out
+  .tx_tmds_clk_p(tx_tmds_clk_p),                              // output wire tx_tmds_clk_p
+  .tx_tmds_clk_n(tx_tmds_clk_n),                              // output wire tx_tmds_clk_n
+  .mgtrefclk0_pad_p_in(mgtrefclk0_pad_p_in),                  // input wire mgtrefclk0_pad_p_in
+  .mgtrefclk0_pad_n_in(mgtrefclk0_pad_n_in),                  // input wire mgtrefclk0_pad_n_in
+  .phy_txn_out(phy_txn_out),                                  // output wire [2 : 0] phy_txn_out
+  .phy_txp_out(phy_txp_out),                                  // output wire [2 : 0] phy_txp_out
   .txoutclk(txoutclk),                                        // output wire txoutclk
   .vid_phy_tx_axi4s_aclk(vid_phy_tx_axi4s_aclk),              // input wire vid_phy_tx_axi4s_aclk
   .vid_phy_tx_axi4s_aresetn(vid_phy_tx_axi4s_aresetn),        // input wire vid_phy_tx_axi4s_aresetn

@@ -80,13 +80,17 @@ module vid_phy_controller_0_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire tx_video_clk,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire mgtrefclk1_pad_p_in,
+  output wire tx_tmds_clk_p,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire mgtrefclk1_pad_n_in,
+  output wire tx_tmds_clk_n,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [3:0] phy_txn_out,
+  input wire mgtrefclk0_pad_p_in,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [3:0] phy_txp_out,
+  input wire mgtrefclk0_pad_n_in,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [2:0] phy_txn_out,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [2:0] phy_txp_out,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire txoutclk,
   (* X_INTERFACE_IGNORE = "true" *)
@@ -119,8 +123,10 @@ module vid_phy_controller_0_sv (
     .tx_refclk_rdy(tx_refclk_rdy),
     .tx_tmds_clk(tx_tmds_clk),
     .tx_video_clk(tx_video_clk),
-    .mgtrefclk1_pad_p_in(mgtrefclk1_pad_p_in),
-    .mgtrefclk1_pad_n_in(mgtrefclk1_pad_n_in),
+    .tx_tmds_clk_p(tx_tmds_clk_p),
+    .tx_tmds_clk_n(tx_tmds_clk_n),
+    .mgtrefclk0_pad_p_in(mgtrefclk0_pad_p_in),
+    .mgtrefclk0_pad_n_in(mgtrefclk0_pad_n_in),
     .phy_txn_out(phy_txn_out),
     .phy_txp_out(phy_txp_out),
     .txoutclk(txoutclk),

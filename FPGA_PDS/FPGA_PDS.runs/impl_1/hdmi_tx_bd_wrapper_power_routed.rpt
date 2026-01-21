@@ -1,0 +1,197 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date             : Wed Jan 21 15:34:08 2026
+| Host             : dan-alencar running 64-bit Linux Mint 22.2
+| Command          : report_power -file hdmi_tx_bd_wrapper_power_routed.rpt -pb hdmi_tx_bd_wrapper_power_summary_routed.pb -rpx hdmi_tx_bd_wrapper_power_routed.rpx
+| Design           : hdmi_tx_bd_wrapper
+| Device           : xcau15p-ffvb676-2-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.973        |
+| Design Power Budget (W)  | 45.000       |
+| Power Budget Margin (W)  | 44.027 (MET) |
+| Dynamic (W)              | 0.695        |
+| Device Static (W)        | 0.278        |
+| Effective TJA (C/W)      | 0.8          |
+| Max Ambient (C)          | 99.3         |
+| Junction Temperature (C) | 25.7         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.078 |       30 |       --- |             --- |
+| CLB Logic                |     0.036 |    37985 |       --- |             --- |
+|   LUT as Logic           |     0.025 |    12796 |     77760 |           16.46 |
+|   LUT as Distributed RAM |     0.003 |      325 |     40320 |            0.81 |
+|   LUT as Shift Register  |     0.003 |      275 |     40320 |            0.68 |
+|   Register               |     0.003 |    18597 |    155520 |           11.96 |
+|   CARRY8                 |     0.001 |      396 |      9720 |            4.07 |
+|   BUFG                   |    <0.001 |        1 |        24 |            4.17 |
+|   Others                 |     0.000 |     2059 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |      210 |     77760 |            0.27 |
+| Signals                  |     0.026 |    29327 |       --- |             --- |
+| Block RAM                |     0.077 |       30 |       144 |           20.83 |
+| MMCM                     |     0.195 |        0 |       --- |             --- |
+| DSPs                     |     0.036 |       53 |       576 |            9.20 |
+| I/O                      |     0.010 |       11 |       228 |            4.82 |
+| GTH                      |     0.236 |        3 |        12 |           25.00 |
+| Static Power             |     0.278 |          |           |                 |
+| Total                    |     0.973 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++------------------+-------------+-----------+-------------+------------+-------------+-------------+-------------+
+| Source           | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A)  |
++------------------+-------------+-----------+-------------+------------+-------------+-------------+-------------+
+| Vccint           |       0.850 |     0.372 |       0.323 |      0.049 |       NA    |       3.000 | 2.628 (MET) |
+| Vccint_io        |       0.850 |     0.028 |       0.002 |      0.027 |       NA    | Unspecified | NA          |
+| Vccbram          |       0.850 |     0.006 |       0.006 |      0.001 |       NA    | Unspecified | NA          |
+| Vccaux           |       1.800 |     0.173 |       0.108 |      0.065 |       NA    | Unspecified | NA          |
+| Vccaux_io        |       1.800 |     0.028 |       0.005 |      0.023 |       NA    | Unspecified | NA          |
+| Vcco33           |       3.300 |     0.005 |       0.000 |      0.005 |       NA    | Unspecified | NA          |
+| Vcco25           |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
+| Vcco18           |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
+| Vcco15           |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
+| Vcco135          |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
+| Vcco12           |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
+| Vcco10           |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
+| Vccadc           |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA          |
+| VMGTAVCC (GTH)   |       0.900 |     0.080 |       0.072 |      0.008 |       NA    | Unspecified | NA          |
+| VMGTAVTT (GTH)   |       1.200 |     0.135 |       0.121 |      0.014 |       NA    | Unspecified | NA          |
+| VMGTVCCAUX (GTH) |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA          |
++------------------+-------------+-----------+-------------+------------+-------------+-------------+-------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 0.8                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 2.8                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                                                                                                                                                                                                                                                                    | Domain                                                                                                                                                                                                                                                                                                                                                    | Constraint (ns) |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| GTHE4_CHANNEL_RXOUTCLKPCS[0]                                                                                                                                                                                                                                                                                                                                             | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_RXOUTCLKPCS[0]                                                                   |             6.7 |
+| GTHE4_CHANNEL_RXOUTCLKPCS[1]                                                                                                                                                                                                                                                                                                                                             | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_RXOUTCLKPCS[1]                                                                   |             6.7 |
+| GTHE4_CHANNEL_RXOUTCLKPCS[2]                                                                                                                                                                                                                                                                                                                                             | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_RXOUTCLKPCS[2]                                                                   |             6.7 |
+| GTHE4_CHANNEL_RXOUTCLK[0]                                                                                                                                                                                                                                                                                                                                                | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_RXOUTCLK[0]                                                                      |             6.7 |
+| GTHE4_CHANNEL_RXOUTCLK[1]                                                                                                                                                                                                                                                                                                                                                | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_RXOUTCLK[1]                                                                      |             6.7 |
+| GTHE4_CHANNEL_RXOUTCLK[2]                                                                                                                                                                                                                                                                                                                                                | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_RXOUTCLK[2]                                                                      |             6.7 |
+| GTHE4_CHANNEL_TXOUTCLK[0]                                                                                                                                                                                                                                                                                                                                                | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_TXOUTCLK[0]                                                                      |             6.7 |
+| GTHE4_CHANNEL_TXOUTCLK[1]                                                                                                                                                                                                                                                                                                                                                | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_TXOUTCLK[1]                                                                      |             6.7 |
+| GTHE4_CHANNEL_TXOUTCLK[2]                                                                                                                                                                                                                                                                                                                                                | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_TXOUTCLK[2]                                                                      |             6.7 |
+| SYS_CLK_P                                                                                                                                                                                                                                                                                                                                                                | SYS_CLK_P                                                                                                                                                                                                                                                                                                                                                 |             3.3 |
+| clk_out1_hdmi_tx_bd_microblaze_0_clk_wiz_1_0                                                                                                                                                                                                                                                                                                                             | hdmi_tx_bd_i/microblaze_0_clk_wiz_1/inst/clk_out1_hdmi_tx_bd_microblaze_0_clk_wiz_1_0                                                                                                                                                                                                                                                                     |            10.0 |
+| clk_ref_p                                                                                                                                                                                                                                                                                                                                                                | HDMI_CLK_8T49N241_P                                                                                                                                                                                                                                                                                                                                       |             3.4 |
+| clkout1                                                                                                                                                                                                                                                                                                                                                                  | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.txoutclk_mmcm0_i/clkout1                                                                                                                                                                                                                                                             |             3.4 |
+| clkout2                                                                                                                                                                                                                                                                                                                                                                  | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.txoutclk_mmcm0_i/clkout2                                                                                                                                                                                                                                                             |             6.7 |
+| hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK                                                                                                                                                                                                                                                                                                               | hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                                                                                                                                                                                                                                                                                                                 |            33.3 |
+| hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE                                                                                                                                                                                                                                                                                                             | hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0                                                                                                                                                                                                                                                                                                         |            66.7 |
+| hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst/O | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon |             6.7 |
+| hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O               | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/txoutclkmon               |             6.7 |
+| hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst/O | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon |             6.7 |
+| hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O               | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/txoutclkmon               |             6.7 |
+| hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst/O | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.rxoutclkmon |             6.7 |
+| hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O               | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/txoutclkmon               |             6.7 |
+| qpll0clk_in[0]                                                                                                                                                                                                                                                                                                                                                           | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/qpll0clk_in[0]                                                                                                                                                                                                                                                                          |             0.2 |
+| qpll0refclk_in[0]                                                                                                                                                                                                                                                                                                                                                        | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/qpll0refclk_in[0]                                                                                                                                                                                                                                                                       |             3.4 |
+| qpll1clk_in[0]                                                                                                                                                                                                                                                                                                                                                           | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/qpll1clk_in[0]                                                                                                                                                                                                                                                                          |             0.2 |
+| qpll1refclk_in[0]                                                                                                                                                                                                                                                                                                                                                        | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/qpll1refclk_in[0]                                                                                                                                                                                                                                                                       |             3.4 |
+| txoutclk                                                                                                                                                                                                                                                                                                                                                                 | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/txoutclk                                                                                                                                                                                                                                                                                     |             6.7 |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------------+-----------+
+| Name                        | Power (W) |
++-----------------------------+-----------+
+| hdmi_tx_bd_wrapper          |     0.695 |
+|   hdmi_tx_bd_i              |     0.694 |
+|     axi_iic_0               |     0.002 |
+|       U0                    |     0.002 |
+|     microblaze_0            |     0.010 |
+|       U0                    |     0.010 |
+|     microblaze_0_axi_periph |     0.006 |
+|       inst                  |     0.006 |
+|     microblaze_0_clk_wiz_1  |     0.102 |
+|       inst                  |     0.102 |
+|     v_hdmi_tx_ss_0          |     0.032 |
+|       inst                  |     0.032 |
+|     v_tpg_0                 |     0.163 |
+|       inst                  |     0.163 |
+|     vid_phy_controller_0    |     0.376 |
+|       inst                  |     0.376 |
++-----------------------------+-----------+
+
+

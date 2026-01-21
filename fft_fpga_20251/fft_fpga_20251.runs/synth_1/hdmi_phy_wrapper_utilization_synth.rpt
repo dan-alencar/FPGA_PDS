@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Tue Jan 20 20:29:12 2026
+| Date         : Wed Jan 21 10:35:27 2026
 | Host         : dan-alencar running 64-bit Linux Mint 22.2
 | Command      : report_utilization -file hdmi_phy_wrapper_utilization_synth.rpt -pb hdmi_phy_wrapper_utilization_synth.pb
 | Design       : hdmi_phy_wrapper
@@ -32,17 +32,17 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |    1 |     0 |          0 |     77760 | <0.01 |
-|   LUT as Logic          |    1 |     0 |          0 |     77760 | <0.01 |
+| CLB LUTs*               |   16 |     0 |          0 |     77760 |  0.02 |
+|   LUT as Logic          |   16 |     0 |          0 |     77760 |  0.02 |
 |   LUT as Memory         |    0 |     0 |          0 |     40320 |  0.00 |
-| CLB Registers           |    0 |     0 |          0 |    155520 |  0.00 |
-|   Register as Flip Flop |    0 |     0 |          0 |    155520 |  0.00 |
+| CLB Registers           |   48 |     0 |          0 |    155520 |  0.03 |
+|   Register as Flip Flop |   48 |     0 |          0 |    155520 |  0.03 |
 |   Register as Latch     |    0 |     0 |          0 |    155520 |  0.00 |
-| CARRY8                  |    0 |     0 |          0 |      9720 |  0.00 |
+| CARRY8                  |    6 |     0 |          0 |      9720 |  0.06 |
 | F7 Muxes                |    0 |     0 |          0 |     38880 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |     19440 |  0.00 |
 | F9 Muxes                |    0 |     0 |          0 |      9720 |  0.00 |
-| Unique Control Sets     |    0 |       |          0 |     19440 |  0.00 |
+| Unique Control Sets     |    3 |       |          0 |     19440 |  0.02 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
@@ -63,9 +63,9 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
+| 25    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 0     |          Yes |       Reset |            - |
+| 23    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -98,7 +98,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------------+------+-------+------------+-----------+-------+
 |     Site Type    | Used | Fixed | Prohibited | Available | Util% |
 +------------------+------+-------+------------+-----------+-------+
-| Bonded IOB       |    5 |     0 |          0 |       228 |  2.19 |
+| Bonded IOB       |   11 |     0 |          0 |       228 |  4.82 |
 |   HPIOB_M        |    0 |     0 |          0 |        72 |  0.00 |
 |   HPIOB_S        |    0 |     0 |          0 |        72 |  0.00 |
 |   HDIOB_M        |    0 |     0 |          0 |        36 |  0.00 |
@@ -120,7 +120,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCE     |    0 |     0 |          0 |        84 |  0.00 |
+| BUFGCE     |    1 |     0 |          0 |        84 |  1.19 |
 | BUFGCE_DIV |    0 |     0 |          0 |        12 |  0.00 |
 | BUFG_GT    |    0 |     0 |          0 |        72 |  0.00 |
 | BUFGCTRL*  |    0 |     0 |          0 |        24 |  0.00 |
@@ -148,39 +148,51 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 7. CONFIGURATION
 ----------------
 
-+-------------+------+-------+------------+-----------+-------+
-|  Site Type  | Used | Fixed | Prohibited | Available | Util% |
-+-------------+------+-------+------------+-----------+-------+
-| BSCANE2     |    0 |     0 |          0 |         4 |  0.00 |
-| DNA_PORTE2  |    0 |     0 |          0 |         1 |  0.00 |
-| EFUSE_USR   |    0 |     0 |          0 |         1 |  0.00 |
-| FRAME_ECCE4 |    0 |     0 |          0 |         1 |  0.00 |
-| ICAPE3      |    0 |     0 |          0 |         2 |  0.00 |
-| MASTER_JTAG |    0 |     0 |          0 |         1 |  0.00 |
-| STARTUPE3   |    0 |     0 |          0 |         1 |  0.00 |
-+-------------+------+-------+------------+-----------+-------+
++-------------+------+-------+------------+-----------+--------+
+|  Site Type  | Used | Fixed | Prohibited | Available |  Util% |
++-------------+------+-------+------------+-----------+--------+
+| BSCANE2     |    0 |     0 |          0 |         4 |   0.00 |
+| DNA_PORTE2  |    0 |     0 |          0 |         1 |   0.00 |
+| EFUSE_USR   |    0 |     0 |          0 |         1 |   0.00 |
+| FRAME_ECCE4 |    0 |     0 |          0 |         1 |   0.00 |
+| ICAPE3      |    0 |     0 |          0 |         2 |   0.00 |
+| MASTER_JTAG |    0 |     0 |          0 |         1 |   0.00 |
+| STARTUPE3   |    1 |     0 |          0 |         1 | 100.00 |
++-------------+------+-------+------------+-----------+--------+
 
 
 8. Primitives
 -------------
 
-+----------+------+---------------------+
-| Ref Name | Used | Functional Category |
-+----------+------+---------------------+
-| OBUFT    |    3 |                 I/O |
-| OBUF     |    1 |                 I/O |
-| LUT1     |    1 |                 CLB |
-| INBUF    |    1 |                 I/O |
-| IBUFCTRL |    1 |              Others |
-+----------+------+---------------------+
++-----------+------+---------------------+
+|  Ref Name | Used | Functional Category |
++-----------+------+---------------------+
+| FDCE      |   25 |            Register |
+| FDRE      |   23 |            Register |
+| OBUF      |    7 |                 I/O |
+| LUT6      |    7 |                 CLB |
+| CARRY8    |    6 |                 CLB |
+| LUT2      |    3 |                 CLB |
+| LUT1      |    3 |                 CLB |
+| INBUF     |    3 |                 I/O |
+| IBUFCTRL  |    3 |              Others |
+| LUT5      |    2 |                 CLB |
+| LUT4      |    2 |                 CLB |
+| STARTUPE3 |    1 |       Configuration |
+| OBUFT     |    1 |                 I/O |
+| INV       |    1 |                 CLB |
+| BUFGCE    |    1 |               Clock |
++-----------+------+---------------------+
 
 
 9. Black Boxes
 --------------
 
-+----------+------+
-| Ref Name | Used |
-+----------+------+
++----------------------+------+
+|       Ref Name       | Used |
++----------------------+------+
+| vid_phy_controller_0 |    1 |
++----------------------+------+
 
 
 10. Instantiated Netlists

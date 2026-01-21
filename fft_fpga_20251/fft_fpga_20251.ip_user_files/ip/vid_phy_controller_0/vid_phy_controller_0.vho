@@ -56,10 +56,12 @@ COMPONENT vid_phy_controller_0
     tx_refclk_rdy : IN STD_LOGIC;
     tx_tmds_clk : OUT STD_LOGIC;
     tx_video_clk : OUT STD_LOGIC;
-    mgtrefclk1_pad_p_in : IN STD_LOGIC;
-    mgtrefclk1_pad_n_in : IN STD_LOGIC;
-    phy_txn_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    phy_txp_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    tx_tmds_clk_p : OUT STD_LOGIC;
+    tx_tmds_clk_n : OUT STD_LOGIC;
+    mgtrefclk0_pad_p_in : IN STD_LOGIC;
+    mgtrefclk0_pad_n_in : IN STD_LOGIC;
+    phy_txn_out : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+    phy_txp_out : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
     txoutclk : OUT STD_LOGIC;
     vid_phy_tx_axi4s_aclk : IN STD_LOGIC;
     vid_phy_tx_axi4s_aresetn : IN STD_LOGIC;
@@ -116,8 +118,10 @@ your_instance_name : vid_phy_controller_0
     tx_refclk_rdy => tx_refclk_rdy,
     tx_tmds_clk => tx_tmds_clk,
     tx_video_clk => tx_video_clk,
-    mgtrefclk1_pad_p_in => mgtrefclk1_pad_p_in,
-    mgtrefclk1_pad_n_in => mgtrefclk1_pad_n_in,
+    tx_tmds_clk_p => tx_tmds_clk_p,
+    tx_tmds_clk_n => tx_tmds_clk_n,
+    mgtrefclk0_pad_p_in => mgtrefclk0_pad_p_in,
+    mgtrefclk0_pad_n_in => mgtrefclk0_pad_n_in,
     phy_txn_out => phy_txn_out,
     phy_txp_out => phy_txp_out,
     txoutclk => txoutclk,

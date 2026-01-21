@@ -1,4 +1,4 @@
-verilog xil_defaultlib -i "../../../../../../../../AMD/2025.1/data/rsb/busdef" --include "../../../ipstatic" \
+verilog xil_defaultlib -i "../../../../../../../../2025.2/data/rsb/busdef" --include "../../../ipstatic" \
 "../../../../fft_fpga_20251.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
 "../../../../fft_fpga_20251.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
 
