@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/synth_1/hdmi_phy_wrapper.tcl"
+  variable script "/home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.runs/synth_1/hdmi_phy_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,14 +56,8 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
-set_param power.BramSDPPropagationFix 1
-set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 2
 set_param general.usePosixSpawnForFork 1
-set_param physdb.placeDBImplUsesPlaceStorage 0
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.enableLutRouteBelPower 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xcau15p-ffvb676-2-e
 
@@ -71,33 +65,33 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.cache/wt [current_project]
-set_property parent.project_path /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.xpr [current_project]
+set_property webtalk.parent_dir /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.cache/wt [current_project]
+set_property parent.project_path /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part avnet-tria:auboard_15p:part0:1.1 [current_project]
-set_property ip_output_repo /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.cache/ip [current_project]
+set_property ip_output_repo /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/video_pattern_gen.sv
-  /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/video_timing_gen.sv
-  /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/video_pipeline_top.sv
-  /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/tmds_encoder_top.sv
-  /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/tmds_encoder.sv
-  /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv
-  /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/tmds_packer_4px.sv
-  /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/phy_axilite_init.sv
+  /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/video_pattern_gen.sv
+  /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/video_timing_gen.sv
+  /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/video_pipeline_top.sv
+  /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/tmds_encoder_top.sv
+  /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/tmds_encoder.sv
+  /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv
+  /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/tmds_packer_4px.sv
+  /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/phy_axilite_init.sv
 }
-read_ip -quiet /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0.xci
-set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.xdc]
-set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_xdc.xdc]
-set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_ooc_fixed.xdc]
-set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_ooc.xdc]
+read_ip -quiet /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0.xci
+set_property used_in_implementation false [get_files -all /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper.xdc]
+set_property used_in_implementation false [get_files -all /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_xdc.xdc]
+set_property used_in_implementation false [get_files -all /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_ooc_fixed.xdc]
+set_property used_in_implementation false [get_files -all /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -108,32 +102,6 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc
-set_property used_in_implementation false [get_files /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc]
+read_xdc /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc
+set_property used_in_implementation false [get_files /home/danilo-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
-set_param ips.enableIPCacheLiteLoad 1
-
-read_checkpoint -auto_incremental -incremental /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/utils_1/imports/synth_1/hdmi_phy_wrapper.dcp
-close [open __synthesis_is_running__ w]
-
-OPTRACE "synth_design" START { }
-synth_design -top hdmi_phy_wrapper -part xcau15p-ffvb676-2-e
-OPTRACE "synth_design" END { }
-if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
- send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
-}
-
-
-OPTRACE "write_checkpoint" START { CHECKPOINT }
-# disable binary constraint mode for synth run checkpoints
-set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef hdmi_phy_wrapper.dcp
-OPTRACE "write_checkpoint" END { }
-OPTRACE "synth reports" START { REPORT }
-generate_parallel_reports -reports { "report_utilization -file hdmi_phy_wrapper_utilization_synth.rpt -pb hdmi_phy_wrapper_utilization_synth.pb"  } 
-OPTRACE "synth reports" END { }
-file delete __synthesis_is_running__
-close [open __synthesis_is_complete__ w]
-OPTRACE "synth_1" END { }

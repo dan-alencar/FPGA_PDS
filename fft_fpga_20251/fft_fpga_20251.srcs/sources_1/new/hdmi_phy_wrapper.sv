@@ -28,6 +28,22 @@ module hdmi_phy_wrapper (
     // =========================================================
     // PHY clocks & reset
     // =========================================================
+    logic clk_sys;
+    
+    IBUFDS #(
+      .DIFF_TERM("TRUE"),
+      .IBUF_LOW_PWR("FALSE")
+    ) ibufds_refclk (
+      .I (clk_ref_p),
+      .IB(clk_ref_n),
+      .O (clk_ref_raw)
+    );
+    
+    BUFG bufg_sys (
+      .I(clk_ref_raw),
+      .O(clk_sys)
+    );
+        
     logic clk_pixel;
     // CORREÇÃO: Adicione o atributo keep para evitar otimização
     (* keep = "true" *) logic clk_tmds;
@@ -36,7 +52,7 @@ module hdmi_phy_wrapper (
     assign tx_refclk_rdy = 1'b1;
 
     // PHY reset only released when reference clock is ready
-    assign phy_rst_n = tx_refclk_rdy & ~rst;
+    assign phy_rst_n = ~rst;
 
     // =========================================================
     // Video pipeline (1 pixel per clock)
@@ -138,10 +154,10 @@ module hdmi_phy_wrapper (
         .phy_txn_out (hdmi_tx_n),
 
         // Sideband / status
-        .vid_phy_sb_aclk    (clk_pixel),
+        .vid_phy_sb_aclk    (clk_sys),
         .vid_phy_sb_aresetn (phy_rst_n),
         .tx_refclk_rdy      (tx_refclk_rdy),
-        .drpclk             (clk_pixel)
+        .drpclk             (clk_sys)
     );
 
     // =========================================================
@@ -151,9 +167,9 @@ module hdmi_phy_wrapper (
     logic [3:0] phy_init_state;
     
     phy_axilite_init phy_init (
-        .clk    (clk_pixel),
-        .rst    (~phy_rst_n),
-    
+        .clk (clk_sys),
+        .rst (~rst),
+        
         // AXI-Lite master -> PHY
         .m_axi_awaddr  (phy_inst.vid_phy_axi4lite_awaddr),
         .m_axi_awvalid (phy_inst.vid_phy_axi4lite_awvalid),
