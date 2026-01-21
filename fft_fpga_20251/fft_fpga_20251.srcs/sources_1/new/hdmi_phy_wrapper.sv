@@ -29,7 +29,8 @@ module hdmi_phy_wrapper (
     // PHY clocks & reset
     // =========================================================
     logic clk_pixel;
-    logic clk_tmds;
+    // CORREÇÃO: Adicione o atributo keep para evitar otimização
+    (* keep = "true" *) logic clk_tmds;
     logic phy_rst_n;
     logic tx_refclk_rdy;
     assign tx_refclk_rdy = 1'b1;
@@ -100,14 +101,15 @@ module hdmi_phy_wrapper (
     // =========================================================
     // Video PHY Controller
     // =========================================================
-    vid_phy_controller_0 phy_inst (
+        (* dont_touch = "true" *)
+        vid_phy_controller_0 phy_inst (
         // Reference clock
-        .mgtrefclk0_pad_p_in (clk_ref_p),
-        .mgtrefclk0_pad_n_in (clk_ref_n),
+        .mgtrefclk1_pad_p_in (clk_ref_p),
+        .mgtrefclk1_pad_n_in (clk_ref_n),
 
         // Generated clocks
         .tx_video_clk        (clk_pixel),
-        .tx_tmds_clk         (),
+        .tx_tmds_clk         (clk_tmds),
 
         // AXI4-Stream TX clock & reset
         .vid_phy_tx_axi4s_aclk    (clk_pixel),
@@ -178,8 +180,8 @@ module hdmi_phy_wrapper (
     );
     
     assign led_debug[0] = phy_rst_n;        // PHY fora do reset
-    assign led_debug[1] = phy_init_done;    // PHY configurado
-    assign led_debug[2] = tvalid_4px;       // TMDS ativo
-    assign led_debug[3] = de_4px;           // Vídeo ativo
+    assign led_debug[1] = phy_inst.vid_phy_axi4lite_awready;    // PHY configurado
+    assign led_debug[2] = phy_inst.vid_phy_axi4lite_wready;       // TMDS ativo
+    assign led_debug[3] = phy_inst.vid_phy_axi4lite_arready;           // Vídeo ativo
     
 endmodule

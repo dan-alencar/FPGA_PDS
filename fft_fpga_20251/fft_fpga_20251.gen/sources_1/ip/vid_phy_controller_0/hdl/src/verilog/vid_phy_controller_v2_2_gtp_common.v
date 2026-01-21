@@ -50,7 +50,7 @@
 `timescale 1ns / 1ps
 `define DLY #1
 //***************************** Entity Declaration ****************************
-module vid_phy_controller_v2_2_20_gtp_common #
+module vid_phy_controller_v2_2_22_gtp_common #
 (
     // Simulation attributes
     parameter   WRAPPER_SIM_GTRESET_SPEEDUP    =   "TRUE",     // Set to "true" to speed up sim reset

@@ -1,0 +1,31 @@
+verilog xil_defaultlib -i "../../../../../../../../2025.2/data/rsb/busdef" --include "../../../ipstatic/hdl/src/verilog" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/ip_0/sim/gtwizard_ultrascale_v1_7_gthe4_channel.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/ip_0/sim/vid_phy_controller_0_gtwrapper_gthe4_channel_wrapper.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/ip_0/sim/vid_phy_controller_0_gtwrapper_gtwizard_gthe4.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/ip_0/sim/vid_phy_controller_0_gtwrapper_gtwizard_top.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/ip_0/sim/vid_phy_controller_0_gtwrapper.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gtxe2_hdmi_txaln.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gtxe2_hdmi_xcvr.v" \
+
+sv xil_defaultlib -i "../../../../../../../../2025.2/data/rsb/busdef" --include "../../../ipstatic/hdl/src/verilog" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_clkdet.sv" \
+
+verilog xil_defaultlib -i "../../../../../../../../2025.2/data/rsb/busdef" --include "../../../ipstatic/hdl/src/verilog" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_128_to_64_conv.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_64_to_128_conv.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gt_usrclk_source_8series.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_CLOCK_MODULE_8series.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_plle2_drp.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_mmcme2_drp.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_mmcme3_drp.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gthe4_common.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/hdl/src/verilog/vid_phy_controller_0_gtwrapper_gthe4_common_wrapper.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/synth/vid_phy_controller_0_top.v" \
+"../../../../fft_fpga.gen/sources_1/ip/vid_phy_controller_0/sim/vid_phy_controller_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

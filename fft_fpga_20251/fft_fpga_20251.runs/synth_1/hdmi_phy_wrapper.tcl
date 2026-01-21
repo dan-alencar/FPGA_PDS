@@ -57,7 +57,13 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
+set_param power.BramSDPPropagationFix 1
+set_param xicom.use_bs_reader 1
 set_param general.usePosixSpawnForFork 1
+set_param physdb.placeDBImplUsesPlaceStorage 0
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableLutRouteBelPower 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xcau15p-ffvb676-2-e
 
@@ -83,6 +89,7 @@ read_verilog -library xil_defaultlib -sv {
   /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/tmds_encoder.sv
   /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/hdmi_phy_wrapper.sv
   /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/tmds_packer_4px.sv
+  /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/new/phy_axilite_init.sv
 }
 read_ip -quiet /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/sources_1/ip/vid_phy_controller_0/vid_phy_controller_0.xci
 set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.gen/sources_1/ip/vid_phy_controller_0/ip_0/synth/vid_phy_controller_0_gtwrapper_ooc.xdc]
@@ -104,6 +111,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc
 set_property used_in_implementation false [get_files /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/constrs_1/new/constraints.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental /home/dan-alencar/Documents/GitHub/FPGA_PDS/fft_fpga_20251/fft_fpga_20251.srcs/utils_1/imports/synth_1/hdmi_phy_wrapper.dcp

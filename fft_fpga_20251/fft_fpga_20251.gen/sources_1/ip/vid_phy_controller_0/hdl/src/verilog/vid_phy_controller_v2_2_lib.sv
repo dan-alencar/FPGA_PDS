@@ -55,13 +55,13 @@
 	v1.0 - initial release
 */
 `timescale 1 ns / 1 ps
-`include "vid_phy_controller_v2_2_20_defs.v"
+`include "vid_phy_controller_v2_2_22_defs.v"
 `default_nettype none
 
 /*
 	Reset synchronizer
 */
-module vid_phy_controller_v2_2_20_lib_rst_v1_0
+module vid_phy_controller_v2_2_22_lib_rst_v1_0
 (
 	input wire	RST_IN,
 	input wire	CLK_IN,
@@ -90,7 +90,7 @@ endmodule
 	This module synchronizes a single signal in the target clock domain.
 	This is used for hand-shake signals
 */
-module vid_phy_controller_v2_2_20_lib_sync_v1_0
+module vid_phy_controller_v2_2_22_lib_sync_v1_0
 #(
 	parameter	LEN = 5
 )
@@ -118,7 +118,7 @@ endmodule
 	Data capture
 	This module captures a logic vector in the target clock domain with two capture registers.
 */
-module vid_phy_controller_v2_2_20_lib_cap_v1_0
+module vid_phy_controller_v2_2_22_lib_cap_v1_0
 #(
 	parameter 	WIDTH = 8
 )
@@ -147,7 +147,7 @@ endmodule
 /*
 	Edge Detector
 */
-module vid_phy_controller_v2_2_20_lib_edge_v1_0
+module vid_phy_controller_v2_2_22_lib_edge_v1_0
 (
 	input wire	CLK_IN,				// Clock
 	input wire	CKE_IN,				// Clock enable
@@ -198,7 +198,7 @@ endmodule
 /*
 	Clock domain adapter with gray code
 */
-module vid_phy_controller_v2_2_20_lib_cda_gray_v1_0
+module vid_phy_controller_v2_2_22_lib_cda_gray_v1_0
 #(
 	parameter WIDTH		= 8
 )
@@ -250,7 +250,7 @@ xpm_cdc_array_single
 		.dest_out        (gray_from_cap)
 );
 
-/*vid_phy_controller_v2_2_20_1_lib_cap_v1_0
+/*vid_phy_controller_v2_2_22_1_lib_cap_v1_0
 	#(
 		.WIDTH ($bits(aclk_gray))
 	)
@@ -292,7 +292,7 @@ endmodule
 	Single Clock FIFO
 	Mixed width is not supported yet!
 */
-module vid_phy_controller_v2_2_20_lib_fifo_sc_v1_0
+module vid_phy_controller_v2_2_22_lib_fifo_sc_v1_0
 #(
 	parameter			ADR_WIDTH_A	= 5,
 	parameter			ADR_WIDTH_B	= 5,
@@ -599,7 +599,7 @@ endmodule
 	Dual Clock FIFO
 	Mixed mode not supported yet!
 */
-module vid_phy_controller_v2_2_20_lib_fifo_dc_v1_0
+module vid_phy_controller_v2_2_22_lib_fifo_dc_v1_0
 #(
 	parameter			ADR_WIDTH_A	= 5,
 	parameter			DAT_WIDTH_A	= 32,
@@ -722,7 +722,7 @@ logic	[DAT_WIDTH_B-1:0]	bclk_dout_reg;
 
 // Clock Domain Adapter
 // This adapter crosses the (original size) read pointer to the write pointer domain.
-vid_phy_controller_v2_2_20_lib_cda_gray_v1_0
+vid_phy_controller_v2_2_22_lib_cda_gray_v1_0
 	#(
 		.WIDTH		(ADR_WIDTH_B)
 	)
@@ -834,7 +834,7 @@ endgenerate
 
 // Clock Domain Adapter
 // This adapter crosses the (original size) write pointer to the read pointer domain.
-vid_phy_controller_v2_2_20_lib_cda_gray_v1_0
+vid_phy_controller_v2_2_22_lib_cda_gray_v1_0
 	#(
 		.WIDTH		(ADR_WIDTH_A)
 	)
@@ -1022,7 +1022,7 @@ endmodule
 	Divider
 	This is a non-restoring division
 */
-module vid_phy_controller_v2_2_20_lib_div_v1_0
+module vid_phy_controller_v2_2_22_lib_div_v1_0
 #(
 	parameter					N_WIDTH = 32,		// Dividend width
 	parameter					D_WIDTH = 16		// Divisor width

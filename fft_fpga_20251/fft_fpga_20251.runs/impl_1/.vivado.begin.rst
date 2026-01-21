@@ -8,3 +8,23 @@
     <Process Command="vivado" Owner="dan-alencar" Host="dan-alencar" Pid="148607" HostCore="12" HostMemory="24202848">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="dan-alencar" Host="dan-alencar" Pid="439330" HostCore="12" HostMemory="24202848">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="dan-alencar" Host="dan-alencar" Pid="442121" HostCore="12" HostMemory="24202848">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="dan-alencar" Host="dan-alencar" Pid="445616" HostCore="12" HostMemory="24202848">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="dan-alencar" Host="dan-alencar" Pid="448027" HostCore="12" HostMemory="24202848">
+    </Process>
+</ProcessHandle>

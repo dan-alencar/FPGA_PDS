@@ -3,7 +3,7 @@
 # HDMI 1.4 / TMDS
 # TMDS clock transmitted on 4th GTH lane
 ####################################################################################################
-
+create_clock -period 3.367 -name clk_ref_p [get_ports clk_ref_p]
 ###################################
 # USER RESET
 ###################################
@@ -33,8 +33,8 @@ set_property PACKAGE_PIN J5 [get_ports {hdmi_tx_p[2]}]
 set_property PACKAGE_PIN J4 [get_ports {hdmi_tx_n[2]}]
 
 # Lane 3 - TMDS Clock  ❗ NÃO É REFCLK ❗
-set_property PACKAGE_PIN H5 [get_ports {hdmi_tx_p[3]}]
-set_property PACKAGE_PIN H4 [get_ports {hdmi_tx_n[3]}]
+set_property PACKAGE_PIN M7 [get_ports {hdmi_tx_p[3]}]
+set_property PACKAGE_PIN M6 [get_ports {hdmi_tx_n[3]}]
 
 ###################################
 # LEDs
