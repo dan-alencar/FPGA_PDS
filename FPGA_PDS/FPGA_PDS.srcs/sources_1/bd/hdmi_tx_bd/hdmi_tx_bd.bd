@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x448CF36D6D612A2E",
+      "boundary_crc": "0x448CF36D8239E4D1",
       "device": "xcau15p-ffvb676-2-e",
       "gen_directory": "../../../../FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd",
       "name": "hdmi_tx_bd",
@@ -681,7 +681,7 @@
             "value": "2"
           },
           "NUM_MI": {
-            "value": "5"
+            "value": "6"
           },
           "NUM_SI": {
             "value": "1"
@@ -705,11 +705,12 @@
               "M01_AXI",
               "M02_AXI",
               "M03_AXI",
-              "M04_AXI"
+              "M04_AXI",
+              "M05_AXI"
             ],
             "bd_attributes": {
               "BRIDGES": {
-                "value": "M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI",
+                "value": "M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI:M05_AXI",
                 "value_src": "auto"
               },
               "TYPE": {
@@ -872,6 +873,37 @@
                 "value_src": "default"
               }
             }
+          },
+          "M05_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            },
+            "bd_attributes": {
+              "TYPE": {
+                "value": "interior",
+                "value_src": "default"
+              }
+            }
           }
         }
       },
@@ -930,7 +962,18 @@
         "xci_name": "hdmi_tx_bd_mdm_1_0",
         "xci_path": "ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.xci",
         "inst_hier_path": "mdm_1",
-        "has_run_ip_tcl": "true"
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "C_ADDR_SIZE": {
+            "value": "32"
+          },
+          "C_M_AXI_ADDR_WIDTH": {
+            "value": "32"
+          },
+          "C_USE_UART": {
+            "value": "1"
+          }
+        }
       },
       "microblaze_0_clk_wiz_1": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
@@ -978,7 +1021,15 @@
         "xci_name": "hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0",
         "xci_path": "ip/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0.xci",
         "inst_hier_path": "rst_microblaze_0_clk_wiz_1_100M",
-        "has_run_ip_tcl": "true"
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "RESET_BOARD_INTERFACE": {
+            "value": "system_resetn"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
       },
       "system_resetn_inv_0": {
         "vlnv": "xilinx.com:inline_hdl:ilvector_logic:1.0",
@@ -1105,6 +1156,12 @@
           "vid_phy_controller_0/vid_phy_axi4lite"
         ]
       },
+      "microblaze_0_axi_periph_M05_AXI": {
+        "interface_ports": [
+          "microblaze_0_axi_periph/M05_AXI",
+          "mdm_1/S_AXI"
+        ]
+      },
       "microblaze_0_debug": {
         "interface_ports": [
           "mdm_1/MBDEBUG_0",
@@ -1170,7 +1227,9 @@
       "SYS_RST_N_1": {
         "ports": [
           "SYS_RST_N",
-          "system_resetn_inv_0/Op1"
+          "system_resetn_inv_0/Op1",
+          "rst_microblaze_0_clk_wiz_1_100M/ext_reset_in",
+          "rst_video_clk/ext_reset_in"
         ]
       },
       "axi_iic_0_gpo": {
@@ -1205,7 +1264,8 @@
           "vid_phy_controller_0/vid_phy_sb_aclk",
           "microblaze_0_local_memory/LMB_Clk",
           "microblaze_0_axi_periph/aclk",
-          "axi_iic_0/s_axi_aclk"
+          "axi_iic_0/s_axi_aclk",
+          "mdm_1/S_AXI_ACLK"
         ]
       },
       "microblaze_0_clk_wiz_1_locked": {
@@ -1241,7 +1301,8 @@
           "microblaze_0_axi_intc/s_axi_aresetn",
           "v_hdmi_tx_ss_0/s_axi_cpu_aresetn",
           "vid_phy_controller_0/vid_phy_axi4lite_aresetn",
-          "axi_iic_0/s_axi_aresetn"
+          "axi_iic_0/s_axi_aresetn",
+          "mdm_1/S_AXI_ARESETN"
         ]
       },
       "rst_video_clk_peripheral_aresetn": {
@@ -1253,9 +1314,7 @@
       "system_resetn_inv_0_Res": {
         "ports": [
           "system_resetn_inv_0/Res",
-          "microblaze_0_clk_wiz_1/reset",
-          "rst_video_clk/ext_reset_in",
-          "rst_microblaze_0_clk_wiz_1_100M/ext_reset_in"
+          "microblaze_0_clk_wiz_1/reset"
         ]
       },
       "v_hdmi_tx_ss_0_VIDEO_IN_tready": {
@@ -1366,6 +1425,11 @@
                 "offset": "0x00000000",
                 "range": "8K",
                 "offset_high_param": "C_HIGHADDR"
+              },
+              "SEG_mdm_1_Reg": {
+                "address_block": "/mdm_1/S_AXI/Reg",
+                "offset": "0x41400000",
+                "range": "4K"
               },
               "SEG_microblaze_0_axi_intc_Reg": {
                 "address_block": "/microblaze_0_axi_intc/S_AXI/Reg",

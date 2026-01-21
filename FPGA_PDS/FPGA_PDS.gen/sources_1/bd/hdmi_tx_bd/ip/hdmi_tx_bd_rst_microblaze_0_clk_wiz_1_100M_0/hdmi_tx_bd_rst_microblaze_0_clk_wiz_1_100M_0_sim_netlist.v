@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-// Date        : Wed Jan 21 12:35:32 2026
+// Date        : Wed Jan 21 20:36:47 2026
 // Host        : dan-alencar running 64-bit Linux Mint 22.2
-// Command     : write_verilog -force -mode funcsim -rename_top hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0 -prefix
-//               hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_ hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_sim_netlist.v
 // Design      : hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -40,7 +40,8 @@ module hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0
   wire aux_reset_in;
   wire [0:0]bus_struct_reset;
   wire dcm_locked;
-  wire ext_reset_in;
+  (* RTL_KEEP = "yes" *) (* x_interface_info = "xilinx.com:signal:reset:1.0 ext_reset RST" *) (* x_interface_mode = "slave ext_reset" *) 
+  (* x_interface_parameter = "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) wire ext_reset_in;
   wire [0:0]interconnect_aresetn;
   wire mb_debug_sys_rst;
   wire mb_reset;
@@ -70,6 +71,7 @@ module hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
+(* ORIG_REF_NAME = "lpf" *) 
 module hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_lpf
    (lpf_int,
     slowest_sync_clk,
@@ -260,6 +262,7 @@ endmodule
 (* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b0" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "kintexuplus" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
+(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_proc_sys_reset
    (slowest_sync_clk,
     ext_reset_in,
@@ -376,6 +379,7 @@ module hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_proc_sys_reset
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
+(* ORIG_REF_NAME = "sequence_psr" *) 
 module hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_sequence_psr
    (MB_out,
     Bsr_out,
@@ -616,6 +620,7 @@ module hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_sequence_psr
         .R(lpf_int));
 endmodule
 
+(* ORIG_REF_NAME = "upcnt_n" *) 
 module hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_upcnt_n
    (Q,
     seq_clr,
@@ -737,9 +742,9 @@ module hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_upcnt_n
         .R(clear));
 endmodule
 
-(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) 
-(* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) 
-(* keep_hierarchy = "soft" *) (* xpm_cdc = "SINGLE" *) 
+(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* xpm_cdc = "SINGLE" *) 
 module hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_xpm_cdc_single
    (src_clk,
     src_in,

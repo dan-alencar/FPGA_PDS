@@ -305,6 +305,24 @@
             },
             "V9": {
                 "VT": "AC",
+                "BA": "0x41400000",
+                "HA": "0x41400FFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data",
+                "MX": "/microblaze_0",
+                "MI": "M_AXI_DP",
+                "MS": "SEG_mdm_1_Reg",
+                "MV": "xilinx.com:ip:microblaze:11.0",
+                "SX": "/mdm_1",
+                "SI": "S_AXI",
+                "SS": "Reg",
+                "SV": "xilinx.com:ip:mdm:3.2",
+                "TM": "data",
+                "TU": "register"
+            },
+            "V10": {
+                "VT": "AC",
                 "BA": "0x44A00000",
                 "HA": "0x44A1FFFF",
                 "BP": "C_BASEADDR",
@@ -321,7 +339,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V10": {
+            "V11": {
                 "VT": "AC",
                 "BA": "0x44A20000",
                 "HA": "0x44A2FFFF",
@@ -339,7 +357,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V11": {
+            "V12": {
                 "VT": "AC",
                 "BA": "0x44A30000",
                 "HA": "0x44A3FFFF",
@@ -409,6 +427,11 @@
             },
             {
                 "src": "V11",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V12",
                 "trg": "V2",
                 "EH": "2"
             }

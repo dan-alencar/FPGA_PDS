@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Wed Jan 21 15:33:48 2026
+| Date         : Wed Jan 21 20:40:59 2026
 | Host         : dan-alencar running 64-bit Linux Mint 22.2
 | Command      : report_drc -file hdmi_tx_bd_wrapper_drc_routed.rpt -pb hdmi_tx_bd_wrapper_drc_routed.pb -rpx hdmi_tx_bd_wrapper_drc_routed.rpx
 | Design       : hdmi_tx_bd_wrapper
@@ -275,7 +275,7 @@ Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-123 net(s) have no routable loads. The problem bus(es) and/or net(s) are hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/doutb[0],
+128 net(s) have no routable loads. The problem bus(es) and/or net(s) are hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/doutb[0],
 hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/doutb[16],
 hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/doutb[17],
 hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/doutb[18],
@@ -290,7 +290,7 @@ hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_asyn
 hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/doutb[5],
 hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/doutb[6],
 hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/doutb[7]
- (the first 15 of 113 listed nets/buses).
+ (the first 15 of 118 listed nets/buses).
 Related violations: <none>
 
 
