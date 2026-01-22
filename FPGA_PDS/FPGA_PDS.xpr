@@ -52,7 +52,7 @@
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
-    <Option Name="EnableResourceEstimation" Val="FALSE"/>
+    <Option Name="EnableResourceEstimation" Val="TRUE"/>
     <Option Name="SimCompileState" Val="TRUE"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
@@ -96,20 +96,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_tx_bd.bd" FileRelPathName="ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.xci">
-          <Proxy FileSetName="hdmi_tx_bd_mdm_1_0"/>
+        <CompFileExtendedInfo CompFileName="hdmi_tx_bd.bd" FileRelPathName="ip/hdmi_tx_bd_dlmb_bram_if_cntlr_1/hdmi_tx_bd_dlmb_bram_if_cntlr_1.xci">
+          <Proxy FileSetName="hdmi_tx_bd_dlmb_bram_if_cntlr_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="hdmi_tx_bd.bd" FileRelPathName="ip/hdmi_tx_bd_ilmb_bram_if_cntlr_1/hdmi_tx_bd_ilmb_bram_if_cntlr_1.xci">
+          <Proxy FileSetName="hdmi_tx_bd_ilmb_bram_if_cntlr_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="hdmi_tx_bd.bd" FileRelPathName="ip/hdmi_tx_bd_lmb_bram_1/hdmi_tx_bd_lmb_bram_1.xci">
+          <Proxy FileSetName="hdmi_tx_bd_lmb_bram_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="hdmi_tx_bd.bd" FileRelPathName="ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xci">
+          <Proxy FileSetName="hdmi_tx_bd_microblaze_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="hdmi_tx_bd.bd" FileRelPathName="ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0.xci">
           <Proxy FileSetName="hdmi_tx_bd_microblaze_0_axi_intc_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_tx_bd.bd" FileRelPathName="ip/hdmi_tx_bd_microblaze_0_axi_periph_0/hdmi_tx_bd_microblaze_0_axi_periph_0.xci">
-          <Proxy FileSetName="hdmi_tx_bd_microblaze_0_axi_periph_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="hdmi_tx_bd.bd" FileRelPathName="ip/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0.xci">
           <Proxy FileSetName="hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_tx_bd.bd" FileRelPathName="ip/ip_4/bd_2339_axi_smartconnect_0.xci">
-          <Proxy FileSetName="bd_2339_axi_smartconnect_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/hdmi_tx_bd/hdl/hdmi_tx_bd_wrapper.v">
@@ -195,27 +198,33 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="hdmi_tx_bd_microblaze_0_axi_periph_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hdmi_tx_bd_microblaze_0_axi_periph_0" RelGenDir="$PGENDIR/hdmi_tx_bd_microblaze_0_axi_periph_0">
-      <Config>
-        <Option Name="TopModule" Val="hdmi_tx_bd_microblaze_0_axi_periph_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="hdmi_tx_bd_mdm_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hdmi_tx_bd_mdm_1_0" RelGenDir="$PGENDIR/hdmi_tx_bd_mdm_1_0">
-      <Config>
-        <Option Name="TopModule" Val="hdmi_tx_bd_mdm_1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0" RelGenDir="$PGENDIR/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0">
       <Config>
         <Option Name="TopModule" Val="hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="bd_2339_axi_smartconnect_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bd_2339_axi_smartconnect_0" RelGenDir="$PGENDIR/bd_2339_axi_smartconnect_0">
+    <FileSet Name="hdmi_tx_bd_microblaze_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hdmi_tx_bd_microblaze_0_1" RelGenDir="$PGENDIR/hdmi_tx_bd_microblaze_0_1">
       <Config>
-        <Option Name="TopModule" Val="bd_2339_axi_smartconnect_0"/>
+        <Option Name="TopModule" Val="hdmi_tx_bd_microblaze_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="hdmi_tx_bd_ilmb_bram_if_cntlr_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hdmi_tx_bd_ilmb_bram_if_cntlr_1" RelGenDir="$PGENDIR/hdmi_tx_bd_ilmb_bram_if_cntlr_1">
+      <Config>
+        <Option Name="TopModule" Val="hdmi_tx_bd_ilmb_bram_if_cntlr_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="hdmi_tx_bd_lmb_bram_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hdmi_tx_bd_lmb_bram_1" RelGenDir="$PGENDIR/hdmi_tx_bd_lmb_bram_1">
+      <Config>
+        <Option Name="TopModule" Val="hdmi_tx_bd_lmb_bram_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="hdmi_tx_bd_dlmb_bram_if_cntlr_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hdmi_tx_bd_dlmb_bram_if_cntlr_1" RelGenDir="$PGENDIR/hdmi_tx_bd_dlmb_bram_if_cntlr_1">
+      <Config>
+        <Option Name="TopModule" Val="hdmi_tx_bd_dlmb_bram_if_cntlr_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -244,7 +253,9 @@
   <Runs Version="1" Minor="22">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xcau15p-ffvb676-2-e" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/hdmi_tx_bd_wrapper.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -262,35 +273,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="hdmi_tx_bd_microblaze_0_axi_periph_0_synth_1" Type="Ft3:Synth" SrcSet="hdmi_tx_bd_microblaze_0_axi_periph_0" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_microblaze_0_axi_periph_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hdmi_tx_bd_microblaze_0_axi_periph_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_microblaze_0_axi_periph_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_microblaze_0_axi_periph_0_synth_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="hdmi_tx_bd_mdm_1_0_synth_1" Type="Ft3:Synth" SrcSet="hdmi_tx_bd_mdm_1_0" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_mdm_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hdmi_tx_bd_mdm_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_mdm_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_mdm_1_0_synth_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_synth_1" Type="Ft3:Synth" SrcSet="hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -298,7 +283,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="bd_2339_axi_smartconnect_0_synth_1" Type="Ft3:Synth" SrcSet="bd_2339_axi_smartconnect_0" Part="xcau15p-ffvb676-2-e" ConstrsSet="bd_2339_axi_smartconnect_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/bd_2339_axi_smartconnect_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/bd_2339_axi_smartconnect_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/bd_2339_axi_smartconnect_0_synth_1" ParallelReportGen="true">
+    <Run Id="hdmi_tx_bd_microblaze_0_1_synth_1" Type="Ft3:Synth" SrcSet="hdmi_tx_bd_microblaze_0_1" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_microblaze_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hdmi_tx_bd_microblaze_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_microblaze_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_microblaze_0_1_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -310,9 +295,47 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xcau15p-ffvb676-2-e" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 8 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1" ParallelReportGen="true">
+    <Run Id="hdmi_tx_bd_ilmb_bram_if_cntlr_1_synth_1" Type="Ft3:Synth" SrcSet="hdmi_tx_bd_ilmb_bram_if_cntlr_1" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_ilmb_bram_if_cntlr_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hdmi_tx_bd_ilmb_bram_if_cntlr_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_ilmb_bram_if_cntlr_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_ilmb_bram_if_cntlr_1_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="hdmi_tx_bd_lmb_bram_1_synth_1" Type="Ft3:Synth" SrcSet="hdmi_tx_bd_lmb_bram_1" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_lmb_bram_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hdmi_tx_bd_lmb_bram_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_lmb_bram_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_lmb_bram_1_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="hdmi_tx_bd_dlmb_bram_if_cntlr_1_synth_1" Type="Ft3:Synth" SrcSet="hdmi_tx_bd_dlmb_bram_if_cntlr_1" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_dlmb_bram_if_cntlr_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hdmi_tx_bd_dlmb_bram_if_cntlr_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_dlmb_bram_if_cntlr_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_dlmb_bram_if_cntlr_1_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xcau15p-ffvb676-2-e" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 12 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -345,46 +368,25 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="hdmi_tx_bd_microblaze_0_axi_periph_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_microblaze_0_axi_periph_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hdmi_tx_bd_microblaze_0_axi_periph_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_microblaze_0_axi_periph_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_microblaze_0_axi_periph_0_impl_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="hdmi_tx_bd_mdm_1_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_mdm_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hdmi_tx_bd_mdm_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_mdm_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_mdm_1_0_impl_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="hdmi_tx_bd_microblaze_0_1_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_microblaze_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hdmi_tx_bd_microblaze_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_microblaze_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_microblaze_0_1_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
           <Desc>Default settings for Implementation.</Desc>
         </StratHandle>
@@ -402,7 +404,45 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="bd_2339_axi_smartconnect_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-ffvb676-2-e" ConstrsSet="bd_2339_axi_smartconnect_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="bd_2339_axi_smartconnect_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/bd_2339_axi_smartconnect_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/bd_2339_axi_smartconnect_0_impl_1" ParallelReportGen="true">
+    <Run Id="hdmi_tx_bd_ilmb_bram_if_cntlr_1_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_ilmb_bram_if_cntlr_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hdmi_tx_bd_ilmb_bram_if_cntlr_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_ilmb_bram_if_cntlr_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_ilmb_bram_if_cntlr_1_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="hdmi_tx_bd_lmb_bram_1_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_lmb_bram_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hdmi_tx_bd_lmb_bram_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_lmb_bram_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_lmb_bram_1_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="hdmi_tx_bd_dlmb_bram_if_cntlr_1_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-ffvb676-2-e" ConstrsSet="hdmi_tx_bd_dlmb_bram_if_cntlr_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hdmi_tx_bd_dlmb_bram_if_cntlr_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_dlmb_bram_if_cntlr_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/hdmi_tx_bd_dlmb_bram_if_cntlr_1_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
           <Desc>Default settings for Implementation.</Desc>

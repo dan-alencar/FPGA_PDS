@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date             : Wed Jan 21 20:41:20 2026
+| Date             : Wed Jan 21 21:58:48 2026
 | Host             : dan-alencar running 64-bit Linux Mint 22.2
 | Command          : report_power -file hdmi_tx_bd_wrapper_power_routed.rpt -pb hdmi_tx_bd_wrapper_power_summary_routed.pb -rpx hdmi_tx_bd_wrapper_power_routed.rpx
 | Design           : hdmi_tx_bd_wrapper
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.975        |
+| Total On-Chip Power (W)  | 0.979        |
 | Design Power Budget (W)  | 45.000       |
-| Power Budget Margin (W)  | 44.025 (MET) |
-| Dynamic (W)              | 0.697        |
-| Device Static (W)        | 0.278        |
+| Power Budget Margin (W)  | 44.021 (MET) |
+| Dynamic (W)              | 0.701        |
+| Device Static (W)        | 0.279        |
 | Effective TJA (C/W)      | 0.8          |
 | Max Ambient (C)          | 99.3         |
 | Junction Temperature (C) | 25.7         |
@@ -51,24 +51,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.079 |       30 |       --- |             --- |
-| CLB Logic                |     0.036 |    38335 |       --- |             --- |
-|   LUT as Logic           |     0.025 |    12931 |     77760 |           16.63 |
-|   LUT as Shift Register  |     0.003 |      291 |     40320 |            0.72 |
-|   LUT as Distributed RAM |     0.003 |      325 |     40320 |            0.81 |
-|   Register               |     0.003 |    18717 |    155520 |           12.04 |
-|   CARRY8                 |     0.002 |      398 |      9720 |            4.09 |
+| Clocks                   |     0.077 |       30 |       --- |             --- |
+| CLB Logic                |     0.034 |    38016 |       --- |             --- |
+|   LUT as Logic           |     0.025 |    12794 |     77760 |           16.45 |
+|   LUT as Shift Register  |     0.003 |      275 |     40320 |            0.68 |
+|   Register               |     0.003 |    18597 |    155520 |           11.96 |
+|   LUT as Distributed RAM |     0.002 |      325 |     40320 |            0.81 |
+|   CARRY8                 |     0.001 |      396 |      9720 |            4.07 |
 |   BUFG                   |    <0.001 |        1 |        24 |            4.17 |
-|   Others                 |     0.000 |     2100 |       --- |             --- |
+|   Others                 |     0.000 |     2089 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |      210 |     77760 |            0.27 |
-| Signals                  |     0.027 |    29573 |       --- |             --- |
-| Block RAM                |     0.077 |       30 |       144 |           20.83 |
+| Signals                  |     0.029 |    29323 |       --- |             --- |
+| Block RAM                |     0.083 |       60 |       144 |           41.67 |
 | MMCM                     |     0.195 |        0 |       --- |             --- |
 | DSPs                     |     0.036 |       53 |       576 |            9.20 |
 | I/O                      |     0.010 |       11 |       228 |            4.82 |
 | GTH                      |     0.236 |        3 |        12 |           25.00 |
-| Static Power             |     0.278 |          |           |                 |
-| Total                    |     0.975 |          |           |                 |
+| Static Power             |     0.279 |          |           |                 |
+| Total                    |     0.979 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+-------------+
 | Source           | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A)  |
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+-------------+
-| Vccint           |       0.850 |     0.375 |       0.326 |      0.049 |       NA    |       3.000 | 2.625 (MET) |
+| Vccint           |       0.850 |     0.380 |       0.331 |      0.050 |       NA    |       3.000 | 2.620 (MET) |
 | Vccint_io        |       0.850 |     0.028 |       0.002 |      0.027 |       NA    | Unspecified | NA          |
 | Vccbram          |       0.850 |     0.006 |       0.006 |      0.001 |       NA    | Unspecified | NA          |
 | Vccaux           |       1.800 |     0.173 |       0.108 |      0.065 |       NA    | Unspecified | NA          |
@@ -173,27 +173,27 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------------------------+-----------+
-| Name                        | Power (W) |
-+-----------------------------+-----------+
-| hdmi_tx_bd_wrapper          |     0.697 |
-|   hdmi_tx_bd_i              |     0.696 |
-|     axi_iic_0               |     0.002 |
-|       U0                    |     0.002 |
-|     microblaze_0            |     0.009 |
-|       U0                    |     0.009 |
-|     microblaze_0_axi_intc   |     0.001 |
-|       U0                    |     0.001 |
-|     microblaze_0_axi_periph |     0.007 |
-|       inst                  |     0.007 |
-|     microblaze_0_clk_wiz_1  |     0.102 |
-|       inst                  |     0.102 |
-|     v_hdmi_tx_ss_0          |     0.033 |
-|       inst                  |     0.033 |
-|     v_tpg_0                 |     0.163 |
-|       inst                  |     0.163 |
-|     vid_phy_controller_0    |     0.376 |
-|       inst                  |     0.376 |
-+-----------------------------+-----------+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| hdmi_tx_bd_wrapper            |     0.701 |
+|   hdmi_tx_bd_i                |     0.700 |
+|     axi_iic_0                 |     0.002 |
+|       U0                      |     0.002 |
+|     microblaze_0              |     0.010 |
+|       U0                      |     0.010 |
+|     microblaze_0_axi_periph   |     0.006 |
+|       inst                    |     0.006 |
+|     microblaze_0_clk_wiz_1    |     0.102 |
+|       inst                    |     0.102 |
+|     microblaze_0_local_memory |     0.010 |
+|       lmb_bram                |     0.010 |
+|     v_hdmi_tx_ss_0            |     0.029 |
+|       inst                    |     0.029 |
+|     v_tpg_0                   |     0.164 |
+|       inst                    |     0.164 |
+|     vid_phy_controller_0      |     0.375 |
+|       inst                    |     0.375 |
++-------------------------------+-----------+
 
 

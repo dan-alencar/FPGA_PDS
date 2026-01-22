@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Wed Jan 21 20:36:06 2026
+//Date        : Wed Jan 21 21:53:57 2026
 //Host        : dan-alencar running 64-bit Linux Mint 22.2
 //Command     : generate_target hdmi_tx_bd_wrapper.bd
 //Design      : hdmi_tx_bd_wrapper

@@ -3,8 +3,8 @@
    "Addressing View_Layers":"/microblaze_0_clk_wiz_1_clk_out1:false|/rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn:false|/rst_microblaze_0_clk_wiz_1_100M_bus_struct_reset:false|/rst_microblaze_0_clk_wiz_1_100M_mb_reset:false|/v_hdmi_tx_ss_0_irq:false|/v_tc_0_irq:false|/s_axi_aresetn_0_1:false|/axi_iic_0_iic2intc_irpt:false|/s_axi_aclk_0_1:false|/vid_phy_controller_0_tx_video_clk:false|/mdm_1_debug_sys_rst:false|",
    "Addressing View_ScaleFactor":"0.508985",
    "Addressing View_TopLeft":"-212,-330",
-   "Default View_ScaleFactor":"0.378849",
-   "Default View_TopLeft":"-214,-53",
+   "Default View_ScaleFactor":"0.381221",
+   "Default View_TopLeft":"-212,-71",
    "Display-PortTypeClock":"true",
    "Display-PortTypeInterrupt":"true",
    "Display-PortTypeOthers":"true",
@@ -15,86 +15,85 @@
    "Reduced Jogs_TopLeft":"-214,-414",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port iic_clkgen -pg 1 -lvl 8 -x 2770 -y 950 -defaultsOSRD
-preplace port HDMI_CTL_IIC -pg 1 -lvl 8 -x 2770 -y 20 -defaultsOSRD
-preplace port port-id_SYS_CLK_N -pg 1 -lvl 0 -x 0 -y 1160 -defaultsOSRD
-preplace port port-id_SYS_CLK_P -pg 1 -lvl 0 -x 0 -y 1190 -defaultsOSRD
-preplace port port-id_SYS_RST_N -pg 1 -lvl 0 -x 0 -y 1250 -defaultsOSRD
-preplace port port-id_HDMI_CLK_8T49N241_P -pg 1 -lvl 0 -x 0 -y 1350 -defaultsOSRD
-preplace port port-id_HDMI_CLK_8T49N241_N -pg 1 -lvl 0 -x 0 -y 1490 -defaultsOSRD
-preplace port port-id_HDMI_TX_HPD -pg 1 -lvl 0 -x 0 -y 710 -defaultsOSRD
-preplace port port-id_HDMI_TX_CLK_P -pg 1 -lvl 8 -x 2770 -y 1250 -defaultsOSRD
-preplace port port-id_HDMI_TX_CLK_N -pg 1 -lvl 8 -x 2770 -y 1280 -defaultsOSRD
-preplace portBus gpo_0 -pg 1 -lvl 8 -x 2770 -y 980 -defaultsOSRD
-preplace portBus hdmi_tx_p -pg 1 -lvl 8 -x 2770 -y 1340 -defaultsOSRD
-preplace portBus hdmi_tx_n -pg 1 -lvl 8 -x 2770 -y 1310 -defaultsOSRD
-preplace portBus HDMI_TX_EN -pg 1 -lvl 8 -x 2770 -y 850 -defaultsOSRD
-preplace portBus HDMI_8T49N241_RST_N -pg 1 -lvl 8 -x 2770 -y 880 -defaultsOSRD
-preplace inst v_hdmi_tx_ss_0 -pg 1 -lvl 7 -x 2500 -y 590 -defaultsOSRD
-preplace inst v_tpg_0 -pg 1 -lvl 7 -x 2500 -y 150 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 31 29 30 28 32} -defaultsOSRD
-preplace inst microblaze_0 -pg 1 -lvl 5 -x 1510 -y 1170 -swap {0 1 2 3 16 5 6 7 8 9 10 11 12 13 14 15 25 17 18 19 20 21 22 23 24 4 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56} -defaultsOSRD
-preplace inst microblaze_0_local_memory -pg 1 -lvl 6 -x 1960 -y 1200 -defaultsOSRD
-preplace inst microblaze_0_axi_periph -pg 1 -lvl 6 -x 1960 -y 960 -defaultsOSRD
-preplace inst microblaze_0_axi_intc -pg 1 -lvl 4 -x 1120 -y 960 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 24 26 23 25} -defaultsOSRD
-preplace inst microblaze_0_xlconcat -pg 1 -lvl 3 -x 750 -y 900 -defaultsOSRD
-preplace inst mdm_1 -pg 1 -lvl 4 -x 1120 -y 1160 -defaultsOSRD
-preplace inst microblaze_0_clk_wiz_1 -pg 1 -lvl 2 -x 430 -y 1180 -swap {0 1 2 3 5 4} -defaultsOSRD
-preplace inst rst_microblaze_0_clk_wiz_1_100M -pg 1 -lvl 3 -x 750 -y 1230 -swap {0 1 2 3 4 7 9 5 6 8} -defaultsOSRD
-preplace inst system_resetn_inv_0 -pg 1 -lvl 1 -x 170 -y 1250 -defaultsOSRD
-preplace inst axi_iic_0 -pg 1 -lvl 7 -x 2500 -y 970 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 28 27} -defaultsOSRD
-preplace inst vid_phy_controller_0 -pg 1 -lvl 7 -x 2500 -y 1270 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 45 49 46 47 48 44 50 51 52 53 54 56 55} -defaultsOSRD
-preplace inst rst_video_clk -pg 1 -lvl 6 -x 1960 -y 1390 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 6 -x 1960 -y 770 -defaultsOSRD
-preplace netloc HDMI_CLK_8T49N241_N_1 1 0 7 NJ 1490 NJ 1490 NJ 1490 NJ 1490 NJ 1490 1740J 1280 NJ
-preplace netloc HDMI_CLK_8T49N241_P_1 1 0 7 NJ 1350 NJ 1350 NJ 1350 NJ 1350 NJ 1350 1750J 1490 2210J
-preplace netloc HDMI_TX_HPD_1 1 0 7 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 2210J
-preplace netloc SYS_CLK_N_1 1 0 2 NJ 1160 320J
-preplace netloc SYS_CLK_P_1 1 0 2 NJ 1190 NJ
-preplace netloc SYS_RST_N_1 1 0 6 20 1310 NJ 1310 560 1370 NJ 1370 NJ 1370 NJ
-preplace netloc axi_iic_0_gpo 1 7 1 2750J 970n
-preplace netloc axi_iic_0_iic2intc_irpt 1 2 6 560 820 NJ 820 NJ 820 1740J 840 2190J 890 2730
-preplace netloc mdm_1_debug_sys_rst 1 2 3 570 1330 NJ 1330 1260
-preplace netloc microblaze_0_clk_wiz_1_clk_out1 1 2 5 560 1130 940 1250 1270 1260 1760 1090 2220
-preplace netloc microblaze_0_clk_wiz_1_locked 1 2 4 550 1430 NJ 1430 NJ 1430 N
+preplace port iic_clkgen -pg 1 -lvl 8 -x 2740 -y 950 -defaultsOSRD
+preplace port HDMI_CTL_IIC -pg 1 -lvl 8 -x 2740 -y 20 -defaultsOSRD
+preplace port port-id_SYS_CLK_N -pg 1 -lvl 0 -x -10 -y 1130 -defaultsOSRD
+preplace port port-id_SYS_CLK_P -pg 1 -lvl 0 -x -10 -y 1160 -defaultsOSRD
+preplace port port-id_SYS_RST_N -pg 1 -lvl 0 -x -10 -y 1210 -defaultsOSRD
+preplace port port-id_HDMI_CLK_8T49N241_P -pg 1 -lvl 0 -x -10 -y 1310 -defaultsOSRD
+preplace port port-id_HDMI_CLK_8T49N241_N -pg 1 -lvl 0 -x -10 -y 1440 -defaultsOSRD
+preplace port port-id_HDMI_TX_HPD -pg 1 -lvl 0 -x -10 -y 710 -defaultsOSRD
+preplace port port-id_HDMI_TX_CLK_P -pg 1 -lvl 8 -x 2740 -y 1250 -defaultsOSRD
+preplace port port-id_HDMI_TX_CLK_N -pg 1 -lvl 8 -x 2740 -y 1280 -defaultsOSRD
+preplace portBus gpo_0 -pg 1 -lvl 8 -x 2740 -y 980 -defaultsOSRD
+preplace portBus hdmi_tx_p -pg 1 -lvl 8 -x 2740 -y 1340 -defaultsOSRD
+preplace portBus hdmi_tx_n -pg 1 -lvl 8 -x 2740 -y 1310 -defaultsOSRD
+preplace portBus HDMI_TX_EN -pg 1 -lvl 8 -x 2740 -y 850 -defaultsOSRD
+preplace portBus HDMI_8T49N241_RST_N -pg 1 -lvl 8 -x 2740 -y 880 -defaultsOSRD
+preplace inst v_hdmi_tx_ss_0 -pg 1 -lvl 7 -x 2470 -y 590 -defaultsOSRD
+preplace inst v_tpg_0 -pg 1 -lvl 7 -x 2470 -y 150 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 31 29 30 28 32} -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 6 -x 1920 -y 950 -defaultsOSRD
+preplace inst microblaze_0_axi_intc -pg 1 -lvl 4 -x 1090 -y 960 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 24 26 23 25} -defaultsOSRD
+preplace inst microblaze_0_xlconcat -pg 1 -lvl 3 -x 760 -y 900 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 4 -x 1090 -y 1140 -defaultsOSRD
+preplace inst microblaze_0_clk_wiz_1 -pg 1 -lvl 2 -x 440 -y 1140 -swap {0 1 2 3 5 4} -defaultsOSRD
+preplace inst rst_microblaze_0_clk_wiz_1_100M -pg 1 -lvl 3 -x 760 -y 1190 -swap {0 1 2 3 4 7 9 5 6 8} -defaultsOSRD
+preplace inst system_resetn_inv_0 -pg 1 -lvl 1 -x 170 -y 1210 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 7 -x 2470 -y 970 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 28 27} -defaultsOSRD
+preplace inst vid_phy_controller_0 -pg 1 -lvl 7 -x 2470 -y 1270 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 45 49 46 47 48 44 50 51 52 53 54 56 55} -defaultsOSRD
+preplace inst rst_video_clk -pg 1 -lvl 6 -x 1920 -y 1340 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 6 -x 1920 -y 770 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 5 -x 1460 -y 1140 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 6 -x 1920 -y 1150 -defaultsOSRD
+preplace netloc HDMI_CLK_8T49N241_N_1 1 0 7 NJ 1440 NJ 1440 NJ 1440 NJ 1440 NJ 1440 NJ 1440 2220J
+preplace netloc HDMI_CLK_8T49N241_P_1 1 0 7 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 1690J 1450 2210J
+preplace netloc HDMI_TX_HPD_1 1 0 7 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 2180J
+preplace netloc SYS_CLK_N_1 1 0 2 NJ 1130 NJ
+preplace netloc SYS_CLK_P_1 1 0 2 10J 1140 330J
+preplace netloc SYS_RST_N_1 1 0 6 20 1150 320J 1230 550 1320 NJ 1320 NJ 1320 NJ
+preplace netloc axi_iic_0_gpo 1 7 1 2710J 970n
+preplace netloc axi_iic_0_iic2intc_irpt 1 2 6 570 830 NJ 830 NJ 830 NJ 830 2140J 890 2690
+preplace netloc mdm_1_debug_sys_rst 1 2 3 580 1290 NJ 1290 1210
+preplace netloc microblaze_0_Clk 1 2 5 570 1090 960 1220 1220 1230 1720 1060 2190
+preplace netloc microblaze_0_clk_wiz_1_locked 1 2 4 560 1380 NJ 1380 NJ 1380 N
 preplace netloc microblaze_0_intr 1 3 1 950 900n
-preplace netloc rst_microblaze_0_clk_wiz_1_100M_bus_struct_reset 1 3 3 NJ 1270 NJ 1270 1770
-preplace netloc rst_microblaze_0_clk_wiz_1_100M_mb_reset 1 3 2 960 1240 1280
-preplace netloc rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn 1 3 4 930 1080 NJ 1080 1770 1080 2230
-preplace netloc rst_video_clk_peripheral_aresetn 1 6 1 2170 160n
-preplace netloc system_resetn_inv_0_Res 1 1 1 320J 1210n
-preplace netloc v_hdmi_tx_ss_0_VIDEO_IN_tready 1 6 2 2230 10 2740
-preplace netloc v_hdmi_tx_ss_0_irq 1 2 6 570 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 2740
-preplace netloc v_tpg_0_m_axis_video_TDATA 1 6 2 2260 20 2730
-preplace netloc v_tpg_0_m_axis_video_TLAST 1 6 2 2250 280 2750
-preplace netloc v_tpg_0_m_axis_video_TUSER 1 6 2 2220 290 2740
-preplace netloc v_tpg_0_m_axis_video_TVALID 1 6 2 2240 300 2730
+preplace netloc rst_microblaze_0_clk_wiz_1_100M_mb_reset 1 3 2 970 1210 1230J
+preplace netloc rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn 1 3 4 940 850 NJ 850 1730 850 2200
+preplace netloc rst_video_clk_peripheral_aresetn 1 6 1 2120 160n
+preplace netloc system_resetn_inv_0_Res 1 1 1 330J 1170n
+preplace netloc v_hdmi_tx_ss_0_VIDEO_IN_tready 1 6 2 2200 10 2700
+preplace netloc v_hdmi_tx_ss_0_irq 1 2 6 580 1070 NJ 1070 1210J 1050 NJ 1050 NJ 1050 2700
+preplace netloc v_tpg_0_m_axis_video_TDATA 1 6 2 2220 20 2690
+preplace netloc v_tpg_0_m_axis_video_TLAST 1 6 2 2240 280 2710
+preplace netloc v_tpg_0_m_axis_video_TUSER 1 6 2 2190 290 2700
+preplace netloc v_tpg_0_m_axis_video_TVALID 1 6 2 2230 300 2690
 preplace netloc vid_phy_controller_0_phy_txn_out 1 7 1 NJ 1310
-preplace netloc vid_phy_controller_0_phy_txp_out 1 7 1 2750J 1330n
-preplace netloc vid_phy_controller_0_tx_tmds_clk_n 1 7 1 2750J 1280n
-preplace netloc vid_phy_controller_0_tx_tmds_clk_p 1 7 1 2750J 1250n
-preplace netloc vid_phy_controller_0_tx_video_clk 1 5 3 1780 1500 2200 1460 2730
-preplace netloc vid_phy_controller_0_vid_phy_status_sb_tx_tdata 1 6 2 2270 1050 2730
-preplace netloc vid_phy_controller_0_vid_phy_status_sb_tx_tvalid 1 6 2 2280 1080 2720
-preplace netloc xlconstant_0_dout 1 6 2 2210 880 2750J
+preplace netloc vid_phy_controller_0_phy_txp_out 1 7 1 2710J 1330n
+preplace netloc vid_phy_controller_0_tx_tmds_clk_n 1 7 1 2690J 1280n
+preplace netloc vid_phy_controller_0_tx_tmds_clk_p 1 7 1 2710J 1250n
+preplace netloc vid_phy_controller_0_tx_video_clk 1 5 3 1740 1230 2170 1080 2690
+preplace netloc vid_phy_controller_0_vid_phy_status_sb_tx_tdata 1 6 2 2210 1070 2700
+preplace netloc vid_phy_controller_0_vid_phy_status_sb_tx_tvalid 1 6 2 2250 1060 2710
+preplace netloc xlconstant_0_dout 1 6 2 2160 880 2720J
+preplace netloc rst_microblaze_0_clk_wiz_1_100M_bus_struct_reset 1 3 3 940J 1240 NJ 1240 1730
 preplace netloc axi_iic_0_IIC 1 7 1 NJ 950
-preplace netloc microblaze_0_axi_dp 1 5 1 1740 930n
-preplace netloc microblaze_0_axi_periph_M01_AXI 1 6 1 2180 360n
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 6 1 2130 360n
 preplace netloc microblaze_0_axi_periph_M02_AXI 1 6 1 N 950
-preplace netloc microblaze_0_axi_periph_M03_AXI 1 6 1 2160 120n
-preplace netloc microblaze_0_axi_periph_M04_AXI 1 6 1 2160 990n
-preplace netloc microblaze_0_debug 1 4 1 1260 1140n
-preplace netloc microblaze_0_dlmb_1 1 5 1 N 1170
-preplace netloc microblaze_0_ilmb_1 1 5 1 N 1190
-preplace netloc microblaze_0_intc_axi 1 3 4 980 850 NJ 850 NJ 850 2140
-preplace netloc microblaze_0_interrupt 1 4 1 1280 960n
-preplace netloc microblaze_0_axi_periph_M05_AXI 1 3 4 970 830 NJ 830 NJ 830 2150
-levelinfo -pg 1 0 170 430 750 1120 1510 1960 2500 2770
-pagesize -pg 1 -db -bbox -sgen -220 0 3020 1510
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 6 1 2110 120n
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 6 1 2140 990n
+preplace netloc microblaze_0_intc_axi 1 3 4 970 840 NJ 840 NJ 840 2100
+preplace netloc microblaze_0_dlmb_1 1 5 1 N 1120
+preplace netloc microblaze_0_ilmb_1 1 5 1 N 1140
+preplace netloc microblaze_0_axi_dp 1 5 1 1690 920n
+preplace netloc microblaze_0_interrupt 1 4 1 1230 960n
+preplace netloc microblaze_0_debug 1 4 1 N 1130
+levelinfo -pg 1 -10 170 440 760 1090 1460 1920 2470 2740
+pagesize -pg 1 -db -bbox -sgen -230 0 2990 1460
 "
 }
 {
    "da_axi4_cnt":"6",
    "da_board_cnt":"6",
    "da_clkrst_cnt":"11",
-   "da_mb_cnt":"2"
+   "da_mb_cnt":"5"
 }

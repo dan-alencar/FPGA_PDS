@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Wed Jan 21 20:38:58 2026
+| Date         : Wed Jan 21 21:56:27 2026
 | Host         : dan-alencar running 64-bit Linux Mint 22.2
 | Command      : report_drc -file hdmi_tx_bd_wrapper_drc_opted.rpt -pb hdmi_tx_bd_wrapper_drc_opted.pb -rpx hdmi_tx_bd_wrapper_drc_opted.rpx
 | Design       : hdmi_tx_bd_wrapper
@@ -24,15 +24,14 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 46
-+-----------+----------+--------------------------------------------+--------+
-| Rule      | Severity | Description                                | Checks |
-+-----------+----------+--------------------------------------------+--------+
-| DPIP-2    | Warning  | Input pipelining                           | 19     |
-| DPOP-3    | Warning  | PREG Output pipelining                     | 13     |
-| DPOP-4    | Warning  | MREG Output pipelining                     | 12     |
-| REQP-1774 | Warning  | RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32 | 2      |
-+-----------+----------+--------------------------------------------+--------+
+             Checks found: 44
++--------+----------+------------------------+--------+
+| Rule   | Severity | Description            | Checks |
++--------+----------+------------------------+--------+
+| DPIP-2 | Warning  | Input pipelining       | 19     |
+| DPOP-3 | Warning  | PREG Output pipelining | 13     |
+| DPOP-4 | Warning  | MREG Output pipelining | 12     |
++--------+----------+------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
@@ -254,16 +253,6 @@ Related violations: <none>
 DPOP-4#12 Warning
 MREG Output pipelining  
 DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_460/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_615/mul_11ns_13ns_23_1_1_U28/tmp_product multiplier stage hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_460/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_615/mul_11ns_13ns_23_1_1_U28/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-REQP-1774#1 Warning
-RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
-The RAMB36E2 cell hdmi_tx_bd_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
-Related violations: <none>
-
-REQP-1774#2 Warning
-RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
-The RAMB36E2 cell hdmi_tx_bd_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
 Related violations: <none>
 
 
