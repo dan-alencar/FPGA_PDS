@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/constrs_1/new/constraints.xdc rfile:../../../FPGA_PDS.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/constrs_1/new/constraints.xdc rfile:../../../FPGA_PDS.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN AD21 [get_ports SYS_CLK_P]
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]

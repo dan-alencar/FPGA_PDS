@@ -409,7 +409,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 21 18:11:19 UTC 2026</spirit:value>
+            <spirit:value>Thu Jan 22 22:02:54 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -427,7 +427,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 21 18:11:14 UTC 2026</spirit:value>
+            <spirit:value>Thu Jan 22 22:00:17 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -445,7 +445,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 21 18:11:14 UTC 2026</spirit:value>
+            <spirit:value>Thu Jan 22 22:00:17 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -465,7 +465,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 21 18:11:07 UTC 2026</spirit:value>
+            <spirit:value>Thu Jan 22 21:33:35 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -485,7 +485,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 21 18:11:14 UTC 2026</spirit:value>
+            <spirit:value>Thu Jan 22 22:00:17 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -505,7 +505,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 21 18:11:07 UTC 2026</spirit:value>
+            <spirit:value>Thu Jan 22 21:33:35 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -525,7 +525,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 21 18:11:14 UTC 2026</spirit:value>
+            <spirit:value>Thu Jan 22 22:00:17 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -755,15 +755,26 @@
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
-      <spirit:name>choice_pairs_a3b867eb</spirit:name>
-      <spirit:enumeration spirit:text="Custom">Custom</spirit:enumeration>
-      <spirit:enumeration spirit:text="phy reset out">phy_reset_out</spirit:enumeration>
-      <spirit:enumeration spirit:text="system resetn">system_resetn</spirit:enumeration>
+      <spirit:name>choice_list_ac75ef1e</spirit:name>
+      <spirit:enumeration>Custom</spirit:enumeration>
     </spirit:choice>
   </spirit:choices>
   <spirit:fileSets>
     <spirit:fileSet>
       <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>hdmi_tx_bd_proc_sys_reset_0_0.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdmi_tx_bd_proc_sys_reset_0_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
       <spirit:file>
         <spirit:name>hdmi_tx_bd_proc_sys_reset_0_0_stub.vhdl</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
@@ -778,23 +789,10 @@
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdmi_tx_bd_proc_sys_reset_0_0.dcp</spirit:name>
-        <spirit:userFileType>dcp</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdmi_tx_bd_proc_sys_reset_0_0_sim_netlist.vhdl</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
         <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdmi_tx_bd_proc_sys_reset_0_0_stub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
@@ -905,7 +903,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RESET_BOARD_INTERFACE</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RESET_BOARD_INTERFACE" spirit:choiceRef="choice_pairs_a3b867eb" spirit:order="3">Custom</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RESET_BOARD_INTERFACE" spirit:choiceRef="choice_list_ac75ef1e" spirit:order="3">Custom</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>

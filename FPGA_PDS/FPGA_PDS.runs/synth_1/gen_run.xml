@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xcau15p-ffvb676-2-e" LaunchTime="1769038573" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/hdmi_tx_bd_wrapper.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="hdmi_tx_bd_wrapper_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="hdmi_tx_bd_wrapper.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="hdmi_tx_bd_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="hdmi_tx_bd_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="hdmi_tx_bd_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="hdmi_tx_bd_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="hdmi_tx_bd_wrapper_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="hdmi_tx_bd_wrapper_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xcau15p-ffvb676-2-e" LaunchTime="1769119569" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/hdmi_tx_bd_wrapper.dcp">
   <File Type="PA-TCL" Name="hdmi_tx_bd_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="hdmi_tx_bd_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="hdmi_tx_bd_wrapper.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="hdmi_tx_bd_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="hdmi_tx_bd_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="hdmi_tx_bd_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="hdmi_tx_bd_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="hdmi_tx_bd_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="hdmi_tx_bd_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/hdmi_tx_bd/hdmi_tx_bd.bd">
@@ -70,9 +70,13 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_v_hdmi_tx_ss_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="bd_2339_axi_smartconnect_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_microblaze_0_axi_intc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_microblaze_0_axi_periph_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_mdm_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_microblaze_0_axi_intc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_microblaze_0_axi_periph_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_axi_iic_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_microblaze_0_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_lmb_bram_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_1"/>
 </GenRun>

@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper.tcl"
+  variable script "C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -104,33 +104,31 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 3
-  set_param xicom.use_bs_reader 1
   set_param general.usePosixSpawnForFork 1
+  set_param chipscope.maxJobs 3
   set_param physdb.placeDBImplUsesPlaceStorage 0
-  set_param bd.open.in_stealth_mode 2
-  set_param runs.launchOptions { -jobs 8  }
+  set_param bd.open.in_stealth_mode 1
+  set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xcau15p-ffvb676-2-e
-  set_property board_part avnet-tria:auboard_15p:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.cache/wt [current_project]
-  set_property parent.project_path /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.xpr [current_project]
-  set_property ip_output_repo /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.cache/wt [current_project]
+  set_property parent.project_path C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.xpr [current_project]
+  set_property ip_output_repo C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/hdmi_tx_bd_wrapper.dcp
+  add_files -quiet C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/hdmi_tx_bd_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/sources_1/bd/hdmi_tx_bd/hdmi_tx_bd.bd
+  add_files C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/sources_1/bd/hdmi_tx_bd/hdmi_tx_bd.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/constrs_1/new/constraints.xdc
+  read_xdc C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/constrs_1/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

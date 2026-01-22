@@ -809,7 +809,7 @@
         "vlnv": "xilinx.com:ip:v_hdmi_tx:3.0",
         "ip_revision": "6",
         "xci_name": "bd_2339_v_hdmi_tx_0",
-        "xci_path": "ip/ip_0/bd_2339_v_hdmi_tx_0.xci",
+        "xci_path": "ip\\ip_0\\bd_2339_v_hdmi_tx_0.xci",
         "inst_hier_path": "v_hdmi_tx",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -846,7 +846,7 @@
         "vlnv": "xilinx.com:ip:v_tc:6.2",
         "ip_revision": "11",
         "xci_name": "bd_2339_v_tc_0",
-        "xci_path": "ip/ip_1/bd_2339_v_tc_0.xci",
+        "xci_path": "ip\\ip_1\\bd_2339_v_tc_0.xci",
         "inst_hier_path": "v_tc",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -871,7 +871,7 @@
         "vlnv": "xilinx.com:ip:v_axi4s_vid_out:4.0",
         "ip_revision": "20",
         "xci_name": "bd_2339_v_axi4s_vid_out_0",
-        "xci_path": "ip/ip_2/bd_2339_v_axi4s_vid_out_0.xci",
+        "xci_path": "ip\\ip_2\\bd_2339_v_axi4s_vid_out_0.xci",
         "inst_hier_path": "v_axi4s_vid_out",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -919,7 +919,7 @@
         "vlnv": "xilinx.com:ip:smartconnect:1.0",
         "ip_revision": "28",
         "xci_name": "bd_2339_axi_smartconnect_0",
-        "xci_path": "ip/ip_4/bd_2339_axi_smartconnect_0.xci",
+        "xci_path": "ip\\ip_4\\bd_2339_axi_smartconnect_0.xci",
         "inst_hier_path": "axi_smartconnect",
         "has_run_ip_tcl": "true",
         "parameters": {

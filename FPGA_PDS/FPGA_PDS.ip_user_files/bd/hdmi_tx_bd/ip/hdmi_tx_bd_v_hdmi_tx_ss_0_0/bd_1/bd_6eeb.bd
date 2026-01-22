@@ -596,7 +596,7 @@
             "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
             "ip_revision": "17",
             "xci_name": "bd_6eeb_psr_aclk_0",
-            "xci_path": "ip/ip_1/bd_6eeb_psr_aclk_0.xci",
+            "xci_path": "ip\\ip_1\\bd_6eeb_psr_aclk_0.xci",
             "inst_hier_path": "clk_map/psr_aclk",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -834,7 +834,7 @@
             "vlnv": "xilinx.com:ip:sc_switchboard:1.0",
             "ip_revision": "9",
             "xci_name": "bd_6eeb_arinsw_0",
-            "xci_path": "ip/ip_2/bd_6eeb_arinsw_0.xci",
+            "xci_path": "ip\\ip_2\\bd_6eeb_arinsw_0.xci",
             "inst_hier_path": "switchboards/ar_la_in_swbd",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -880,7 +880,7 @@
             "vlnv": "xilinx.com:ip:sc_switchboard:1.0",
             "ip_revision": "9",
             "xci_name": "bd_6eeb_rinsw_0",
-            "xci_path": "ip/ip_3/bd_6eeb_rinsw_0.xci",
+            "xci_path": "ip\\ip_3\\bd_6eeb_rinsw_0.xci",
             "inst_hier_path": "switchboards/r_la_in_swbd",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -926,7 +926,7 @@
             "vlnv": "xilinx.com:ip:sc_switchboard:1.0",
             "ip_revision": "9",
             "xci_name": "bd_6eeb_awinsw_0",
-            "xci_path": "ip/ip_4/bd_6eeb_awinsw_0.xci",
+            "xci_path": "ip\\ip_4\\bd_6eeb_awinsw_0.xci",
             "inst_hier_path": "switchboards/aw_la_in_swbd",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -972,7 +972,7 @@
             "vlnv": "xilinx.com:ip:sc_switchboard:1.0",
             "ip_revision": "9",
             "xci_name": "bd_6eeb_winsw_0",
-            "xci_path": "ip/ip_5/bd_6eeb_winsw_0.xci",
+            "xci_path": "ip\\ip_5\\bd_6eeb_winsw_0.xci",
             "inst_hier_path": "switchboards/w_la_in_swbd",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -1018,7 +1018,7 @@
             "vlnv": "xilinx.com:ip:sc_switchboard:1.0",
             "ip_revision": "9",
             "xci_name": "bd_6eeb_binsw_0",
-            "xci_path": "ip/ip_6/bd_6eeb_binsw_0.xci",
+            "xci_path": "ip\\ip_6\\bd_6eeb_binsw_0.xci",
             "inst_hier_path": "switchboards/b_la_in_swbd",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -1064,7 +1064,7 @@
             "vlnv": "xilinx.com:ip:sc_switchboard:1.0",
             "ip_revision": "9",
             "xci_name": "bd_6eeb_aroutsw_0",
-            "xci_path": "ip/ip_7/bd_6eeb_aroutsw_0.xci",
+            "xci_path": "ip\\ip_7\\bd_6eeb_aroutsw_0.xci",
             "inst_hier_path": "switchboards/ar_la_out_swbd",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -1119,7 +1119,7 @@
             "vlnv": "xilinx.com:ip:sc_switchboard:1.0",
             "ip_revision": "9",
             "xci_name": "bd_6eeb_routsw_0",
-            "xci_path": "ip/ip_8/bd_6eeb_routsw_0.xci",
+            "xci_path": "ip\\ip_8\\bd_6eeb_routsw_0.xci",
             "inst_hier_path": "switchboards/r_la_out_swbd",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -1182,7 +1182,7 @@
             "vlnv": "xilinx.com:ip:sc_switchboard:1.0",
             "ip_revision": "9",
             "xci_name": "bd_6eeb_awoutsw_0",
-            "xci_path": "ip/ip_9/bd_6eeb_awoutsw_0.xci",
+            "xci_path": "ip\\ip_9\\bd_6eeb_awoutsw_0.xci",
             "inst_hier_path": "switchboards/aw_la_out_swbd",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -1237,7 +1237,7 @@
             "vlnv": "xilinx.com:ip:sc_switchboard:1.0",
             "ip_revision": "9",
             "xci_name": "bd_6eeb_woutsw_0",
-            "xci_path": "ip/ip_10/bd_6eeb_woutsw_0.xci",
+            "xci_path": "ip\\ip_10\\bd_6eeb_woutsw_0.xci",
             "inst_hier_path": "switchboards/w_la_out_swbd",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -1292,7 +1292,7 @@
             "vlnv": "xilinx.com:ip:sc_switchboard:1.0",
             "ip_revision": "9",
             "xci_name": "bd_6eeb_boutsw_0",
-            "xci_path": "ip/ip_11/bd_6eeb_boutsw_0.xci",
+            "xci_path": "ip\\ip_11\\bd_6eeb_boutsw_0.xci",
             "inst_hier_path": "switchboards/b_la_out_swbd",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -1487,7 +1487,7 @@
                 "vlnv": "xilinx.com:ip:sc_node:1.0",
                 "ip_revision": "19",
                 "xci_name": "bd_6eeb_arni_0",
-                "xci_path": "ip/ip_12/bd_6eeb_arni_0.xci",
+                "xci_path": "ip\\ip_12\\bd_6eeb_arni_0.xci",
                 "inst_hier_path": "switchboards/i_nodes/i_ar_node",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -1665,7 +1665,7 @@
                 "vlnv": "xilinx.com:ip:sc_node:1.0",
                 "ip_revision": "19",
                 "xci_name": "bd_6eeb_rni_0",
-                "xci_path": "ip/ip_13/bd_6eeb_rni_0.xci",
+                "xci_path": "ip\\ip_13\\bd_6eeb_rni_0.xci",
                 "inst_hier_path": "switchboards/i_nodes/i_r_node",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -1843,7 +1843,7 @@
                 "vlnv": "xilinx.com:ip:sc_node:1.0",
                 "ip_revision": "19",
                 "xci_name": "bd_6eeb_awni_0",
-                "xci_path": "ip/ip_14/bd_6eeb_awni_0.xci",
+                "xci_path": "ip\\ip_14\\bd_6eeb_awni_0.xci",
                 "inst_hier_path": "switchboards/i_nodes/i_aw_node",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -2021,7 +2021,7 @@
                 "vlnv": "xilinx.com:ip:sc_node:1.0",
                 "ip_revision": "19",
                 "xci_name": "bd_6eeb_wni_0",
-                "xci_path": "ip/ip_15/bd_6eeb_wni_0.xci",
+                "xci_path": "ip\\ip_15\\bd_6eeb_wni_0.xci",
                 "inst_hier_path": "switchboards/i_nodes/i_w_node",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -2199,7 +2199,7 @@
                 "vlnv": "xilinx.com:ip:sc_node:1.0",
                 "ip_revision": "19",
                 "xci_name": "bd_6eeb_bni_0",
-                "xci_path": "ip/ip_16/bd_6eeb_bni_0.xci",
+                "xci_path": "ip\\ip_16\\bd_6eeb_bni_0.xci",
                 "inst_hier_path": "switchboards/i_nodes/i_b_node",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -2709,7 +2709,7 @@
             "vlnv": "xilinx.com:ip:sc_mmu:1.0",
             "ip_revision": "16",
             "xci_name": "bd_6eeb_s00mmu_0",
-            "xci_path": "ip/ip_17/bd_6eeb_s00mmu_0.xci",
+            "xci_path": "ip\\ip_17\\bd_6eeb_s00mmu_0.xci",
             "inst_hier_path": "s00_entry_pipeline/s00_mmu",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -2836,7 +2836,7 @@
             "vlnv": "xilinx.com:ip:sc_transaction_regulator:1.0",
             "ip_revision": "12",
             "xci_name": "bd_6eeb_s00tr_0",
-            "xci_path": "ip/ip_18/bd_6eeb_s00tr_0.xci",
+            "xci_path": "ip\\ip_18\\bd_6eeb_s00tr_0.xci",
             "inst_hier_path": "s00_entry_pipeline/s00_transaction_regulator",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -2921,7 +2921,7 @@
             "vlnv": "xilinx.com:ip:sc_si_converter:1.0",
             "ip_revision": "16",
             "xci_name": "bd_6eeb_s00sic_0",
-            "xci_path": "ip/ip_19/bd_6eeb_s00sic_0.xci",
+            "xci_path": "ip\\ip_19\\bd_6eeb_s00sic_0.xci",
             "inst_hier_path": "s00_entry_pipeline/s00_si_converter",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -3109,7 +3109,7 @@
         "vlnv": "xilinx.com:ip:sc_axi2sc:1.0",
         "ip_revision": "11",
         "xci_name": "bd_6eeb_s00a2s_0",
-        "xci_path": "ip/ip_20/bd_6eeb_s00a2s_0.xci",
+        "xci_path": "ip\\ip_20\\bd_6eeb_s00a2s_0.xci",
         "inst_hier_path": "s00_axi2sc",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -3359,7 +3359,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_sarn_0",
-            "xci_path": "ip/ip_21/bd_6eeb_sarn_0.xci",
+            "xci_path": "ip\\ip_21\\bd_6eeb_sarn_0.xci",
             "inst_hier_path": "s00_nodes/s00_ar_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -3531,7 +3531,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_srn_0",
-            "xci_path": "ip/ip_22/bd_6eeb_srn_0.xci",
+            "xci_path": "ip\\ip_22\\bd_6eeb_srn_0.xci",
             "inst_hier_path": "s00_nodes/s00_r_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -3706,7 +3706,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_sawn_0",
-            "xci_path": "ip/ip_23/bd_6eeb_sawn_0.xci",
+            "xci_path": "ip\\ip_23\\bd_6eeb_sawn_0.xci",
             "inst_hier_path": "s00_nodes/s00_aw_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -3878,7 +3878,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_swn_0",
-            "xci_path": "ip/ip_24/bd_6eeb_swn_0.xci",
+            "xci_path": "ip\\ip_24\\bd_6eeb_swn_0.xci",
             "inst_hier_path": "s00_nodes/s00_w_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -4050,7 +4050,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_sbn_0",
-            "xci_path": "ip/ip_25/bd_6eeb_sbn_0.xci",
+            "xci_path": "ip\\ip_25\\bd_6eeb_sbn_0.xci",
             "inst_hier_path": "s00_nodes/s00_b_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -4331,7 +4331,7 @@
         "vlnv": "xilinx.com:ip:sc_sc2axi:1.0",
         "ip_revision": "11",
         "xci_name": "bd_6eeb_m00s2a_0",
-        "xci_path": "ip/ip_26/bd_6eeb_m00s2a_0.xci",
+        "xci_path": "ip\\ip_26\\bd_6eeb_m00s2a_0.xci",
         "inst_hier_path": "m00_sc2axi",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -4580,7 +4580,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_m00arn_0",
-            "xci_path": "ip/ip_27/bd_6eeb_m00arn_0.xci",
+            "xci_path": "ip\\ip_27\\bd_6eeb_m00arn_0.xci",
             "inst_hier_path": "m00_nodes/m00_ar_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -4752,7 +4752,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_m00rn_0",
-            "xci_path": "ip/ip_28/bd_6eeb_m00rn_0.xci",
+            "xci_path": "ip\\ip_28\\bd_6eeb_m00rn_0.xci",
             "inst_hier_path": "m00_nodes/m00_r_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -4924,7 +4924,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_m00awn_0",
-            "xci_path": "ip/ip_29/bd_6eeb_m00awn_0.xci",
+            "xci_path": "ip\\ip_29\\bd_6eeb_m00awn_0.xci",
             "inst_hier_path": "m00_nodes/m00_aw_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -5096,7 +5096,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_m00wn_0",
-            "xci_path": "ip/ip_30/bd_6eeb_m00wn_0.xci",
+            "xci_path": "ip\\ip_30\\bd_6eeb_m00wn_0.xci",
             "inst_hier_path": "m00_nodes/m00_w_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -5271,7 +5271,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_m00bn_0",
-            "xci_path": "ip/ip_31/bd_6eeb_m00bn_0.xci",
+            "xci_path": "ip\\ip_31\\bd_6eeb_m00bn_0.xci",
             "inst_hier_path": "m00_nodes/m00_b_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -5582,7 +5582,7 @@
             "vlnv": "xilinx.com:ip:sc_exit:1.0",
             "ip_revision": "18",
             "xci_name": "bd_6eeb_m00e_0",
-            "xci_path": "ip/ip_32/bd_6eeb_m00e_0.xci",
+            "xci_path": "ip\\ip_32\\bd_6eeb_m00e_0.xci",
             "inst_hier_path": "m00_exit_pipeline/m00_exit",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -5703,7 +5703,7 @@
         "vlnv": "xilinx.com:ip:sc_sc2axi:1.0",
         "ip_revision": "11",
         "xci_name": "bd_6eeb_m01s2a_0",
-        "xci_path": "ip/ip_33/bd_6eeb_m01s2a_0.xci",
+        "xci_path": "ip\\ip_33\\bd_6eeb_m01s2a_0.xci",
         "inst_hier_path": "m01_sc2axi",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -5952,7 +5952,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_m01arn_0",
-            "xci_path": "ip/ip_34/bd_6eeb_m01arn_0.xci",
+            "xci_path": "ip\\ip_34\\bd_6eeb_m01arn_0.xci",
             "inst_hier_path": "m01_nodes/m01_ar_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -6124,7 +6124,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_m01rn_0",
-            "xci_path": "ip/ip_35/bd_6eeb_m01rn_0.xci",
+            "xci_path": "ip\\ip_35\\bd_6eeb_m01rn_0.xci",
             "inst_hier_path": "m01_nodes/m01_r_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -6296,7 +6296,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_m01awn_0",
-            "xci_path": "ip/ip_36/bd_6eeb_m01awn_0.xci",
+            "xci_path": "ip\\ip_36\\bd_6eeb_m01awn_0.xci",
             "inst_hier_path": "m01_nodes/m01_aw_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -6468,7 +6468,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_m01wn_0",
-            "xci_path": "ip/ip_37/bd_6eeb_m01wn_0.xci",
+            "xci_path": "ip\\ip_37\\bd_6eeb_m01wn_0.xci",
             "inst_hier_path": "m01_nodes/m01_w_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -6643,7 +6643,7 @@
             "vlnv": "xilinx.com:ip:sc_node:1.0",
             "ip_revision": "19",
             "xci_name": "bd_6eeb_m01bn_0",
-            "xci_path": "ip/ip_38/bd_6eeb_m01bn_0.xci",
+            "xci_path": "ip\\ip_38\\bd_6eeb_m01bn_0.xci",
             "inst_hier_path": "m01_nodes/m01_b_node",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -6954,7 +6954,7 @@
             "vlnv": "xilinx.com:ip:sc_exit:1.0",
             "ip_revision": "18",
             "xci_name": "bd_6eeb_m01e_0",
-            "xci_path": "ip/ip_39/bd_6eeb_m01e_0.xci",
+            "xci_path": "ip\\ip_39\\bd_6eeb_m01e_0.xci",
             "inst_hier_path": "m01_exit_pipeline/m01_exit",
             "has_run_ip_tcl": "true",
             "parameters": {

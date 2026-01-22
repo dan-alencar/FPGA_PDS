@@ -1,0 +1,40 @@
+/dts-v1/;
+#include "pl.dtsi"
+/ {
+	device_id = "xcau15p";
+	#address-cells = <1>;
+	variant = "kintexuplus";
+	model = "Microblaze";
+	#size-cells = <1>;
+	slrcount = <1>;
+	family = "microblaze";
+	speed_grade = "2";
+	microblaze_0_local_memory_dlmb_bram_if_cntlr_memory: memory@0 {
+		compatible = "xlnx,lmb-bram-if-cntlr-4.0";
+		xlnx,ip-name = "lmb_bram_if_cntlr";
+		device_type = "memory";
+		memory_type = "memory";
+		reg = <0x0 0x2000>;
+	};
+	chosen {
+		stdout-path = "serial0:115200n8";
+	};
+	aliases {
+		serial0 = &mdm_1;
+		i2c0 = &axi_iic_0;
+	};
+	cpus_microblaze_0: cpus_microblaze@0 {
+		address-map = <0x00000000 &microblaze_0_local_memory_dlmb_bram_if_cntlr_memory 0x00000000 0x2000>, 
+			      <0x00000000 &microblaze_0_local_memory_dlmb_bram_if_cntlr 0x00000000 0x2000>, 
+			      <0x40800000 &axi_iic_0 0x40800000 0x10000>, 
+			      <0x41200000 &microblaze_0_axi_intc 0x41200000 0x10000>, 
+			      <0x41400000 &mdm_1 0x41400000 0x1000>, 
+			      <0x44a00000 &v_hdmi_tx_ss_0 0x44a00000 0x20000>, 
+			      <0x44a20000 &v_tpg_0 0x44a20000 0x10000>, 
+			      <0x44a30000 &vid_phy_controller_0 0x44a30000 0x10000>, 
+			      <0x00000000 &v_hdmi_tx_ss_0_v_hdmi_tx 0x00000000 0x10000>, 
+			      <0x00010000 &v_hdmi_tx_ss_0_v_tc 0x00010000 0x10000>;
+		#ranges-address-cells = <0x1>;
+		#ranges-size-cells = <0x1>;
+	};
+};
