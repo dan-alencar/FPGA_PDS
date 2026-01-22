@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Wed Jan 21 12:35:32 2026
--- Host        : dan-alencar running 64-bit Linux Mint 22.2
--- Command     : write_vhdl -force -mode funcsim -rename_top hdmi_tx_bd_microblaze_0_clk_wiz_1_0 -prefix
---               hdmi_tx_bd_microblaze_0_clk_wiz_1_0_ hdmi_tx_bd_microblaze_0_clk_wiz_1_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+-- Date        : Thu Jan 22 13:51:48 2026
+-- Host        : DESKTOP-6GRI2EI running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_sim_netlist.vhdl
 -- Design      : hdmi_tx_bd_microblaze_0_clk_wiz_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,7 +15,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz is
+entity hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
     reset : in STD_LOGIC;
@@ -23,9 +23,9 @@ entity hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_c
     clk_in1_p : in STD_LOGIC;
     clk_in1_n : in STD_LOGIC
   );
-end hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz;
+end hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz;
 
-architecture STRUCTURE of hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz is
+architecture STRUCTURE of hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz is
   signal clk_in1_hdmi_tx_bd_microblaze_0_clk_wiz_1_0 : STD_LOGIC;
   signal clk_in1_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_buf : STD_LOGIC;
   signal clk_out1_hdmi_tx_bd_microblaze_0_clk_wiz_1_0 : STD_LOGIC;
@@ -101,10 +101,10 @@ clkout1_buf: unisim.vcomponents.BUFGCE
 mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT_F => 4.000000,
+      CLKFBOUT_MULT_F => 12.000000,
       CLKFBOUT_PHASE => 0.000000,
       CLKFBOUT_USE_FINE_PS => "FALSE",
-      CLKIN1_PERIOD => 3.333000,
+      CLKIN1_PERIOD => 10.000000,
       CLKIN2_PERIOD => 0.000000,
       CLKOUT0_DIVIDE_F => 12.000000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
@@ -208,7 +208,7 @@ end hdmi_tx_bd_microblaze_0_clk_wiz_1_0;
 
 architecture STRUCTURE of hdmi_tx_bd_microblaze_0_clk_wiz_1_0 is
 begin
-inst: entity work.hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz
+inst: entity work.hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz
      port map (
       clk_in1_n => clk_in1_n,
       clk_in1_p => clk_in1_p,

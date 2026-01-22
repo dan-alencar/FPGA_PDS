@@ -177,7 +177,7 @@
         "vlnv": "xilinx.com:ip:v_hdmi_tx_ss:3.2",
         "ip_revision": "16",
         "xci_name": "hdmi_tx_bd_v_hdmi_tx_ss_0_0",
-        "xci_path": "ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/hdmi_tx_bd_v_hdmi_tx_ss_0_0.xci",
+        "xci_path": "ip\\hdmi_tx_bd_v_hdmi_tx_ss_0_0\\hdmi_tx_bd_v_hdmi_tx_ss_0_0.xci",
         "inst_hier_path": "v_hdmi_tx_ss_0",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -278,7 +278,7 @@
         "vlnv": "xilinx.com:ip:v_tpg:8.2",
         "ip_revision": "8",
         "xci_name": "hdmi_tx_bd_v_tpg_0_0",
-        "xci_path": "ip/hdmi_tx_bd_v_tpg_0_0/hdmi_tx_bd_v_tpg_0_0.xci",
+        "xci_path": "ip\\hdmi_tx_bd_v_tpg_0_0\\hdmi_tx_bd_v_tpg_0_0.xci",
         "inst_hier_path": "v_tpg_0",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -323,7 +323,7 @@
         "vlnv": "xilinx.com:ip:smartconnect:1.0",
         "ip_revision": "28",
         "xci_name": "hdmi_tx_bd_microblaze_0_axi_periph_0",
-        "xci_path": "ip/hdmi_tx_bd_microblaze_0_axi_periph_0/hdmi_tx_bd_microblaze_0_axi_periph_0.xci",
+        "xci_path": "ip\\hdmi_tx_bd_microblaze_0_axi_periph_0\\hdmi_tx_bd_microblaze_0_axi_periph_0.xci",
         "inst_hier_path": "microblaze_0_axi_periph",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -358,6 +358,10 @@
               "M04_AXI"
             ],
             "bd_attributes": {
+              "BRIDGES": {
+                "value": "M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI",
+                "value_src": "auto"
+              },
               "TYPE": {
                 "value": "interior",
                 "value_src": "default"
@@ -525,7 +529,7 @@
         "vlnv": "xilinx.com:ip:axi_intc:4.1",
         "ip_revision": "22",
         "xci_name": "hdmi_tx_bd_microblaze_0_axi_intc_0",
-        "xci_path": "ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0.xci",
+        "xci_path": "ip\\hdmi_tx_bd_microblaze_0_axi_intc_0\\hdmi_tx_bd_microblaze_0_axi_intc_0.xci",
         "inst_hier_path": "microblaze_0_axi_intc",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -574,7 +578,7 @@
         "vlnv": "xilinx.com:ip:mdm:3.2",
         "ip_revision": "29",
         "xci_name": "hdmi_tx_bd_mdm_1_0",
-        "xci_path": "ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.xci",
+        "xci_path": "ip\\hdmi_tx_bd_mdm_1_0\\hdmi_tx_bd_mdm_1_0.xci",
         "inst_hier_path": "mdm_1",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -593,39 +597,12 @@
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "ip_revision": "17",
         "xci_name": "hdmi_tx_bd_microblaze_0_clk_wiz_1_0",
-        "xci_path": "ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0.xci",
+        "xci_path": "ip\\hdmi_tx_bd_microblaze_0_clk_wiz_1_0\\hdmi_tx_bd_microblaze_0_clk_wiz_1_0.xci",
         "inst_hier_path": "microblaze_0_clk_wiz_1",
         "has_run_ip_tcl": "true",
         "parameters": {
-          "CLKIN1_JITTER_PS": {
-            "value": "33.330000000000005"
-          },
-          "CLKOUT1_JITTER": {
-            "value": "101.475"
-          },
-          "CLKOUT1_PHASE_ERROR": {
-            "value": "77.836"
-          },
-          "MMCM_CLKFBOUT_MULT_F": {
-            "value": "4.000"
-          },
-          "MMCM_CLKIN1_PERIOD": {
-            "value": "3.333"
-          },
-          "MMCM_CLKIN2_PERIOD": {
-            "value": "10.0"
-          },
-          "PRIM_IN_FREQ": {
-            "value": "300.000"
-          },
           "PRIM_SOURCE": {
             "value": "Differential_clock_capable_pin"
-          },
-          "RESET_BOARD_INTERFACE": {
-            "value": "system_resetn"
-          },
-          "USE_BOARD_FLOW": {
-            "value": "true"
           }
         }
       },
@@ -633,17 +610,9 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "ip_revision": "17",
         "xci_name": "hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0",
-        "xci_path": "ip/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0.xci",
+        "xci_path": "ip\\hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0\\hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0.xci",
         "inst_hier_path": "rst_microblaze_0_clk_wiz_1_100M",
-        "has_run_ip_tcl": "true",
-        "parameters": {
-          "RESET_BOARD_INTERFACE": {
-            "value": "system_resetn"
-          },
-          "USE_BOARD_FLOW": {
-            "value": "true"
-          }
-        }
+        "has_run_ip_tcl": "true"
       },
       "system_resetn_inv_0": {
         "vlnv": "xilinx.com:inline_hdl:ilvector_logic:1.0",
@@ -660,7 +629,7 @@
         "vlnv": "xilinx.com:ip:axi_iic:2.1",
         "ip_revision": "11",
         "xci_name": "hdmi_tx_bd_axi_iic_0_0",
-        "xci_path": "ip/hdmi_tx_bd_axi_iic_0_0/hdmi_tx_bd_axi_iic_0_0.xci",
+        "xci_path": "ip\\hdmi_tx_bd_axi_iic_0_0\\hdmi_tx_bd_axi_iic_0_0.xci",
         "inst_hier_path": "axi_iic_0",
         "has_run_ip_tcl": "true"
       },
@@ -668,7 +637,7 @@
         "vlnv": "xilinx.com:ip:vid_phy_controller:2.2",
         "ip_revision": "22",
         "xci_name": "hdmi_tx_bd_vid_phy_controller_0_0",
-        "xci_path": "ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0.xci",
+        "xci_path": "ip\\hdmi_tx_bd_vid_phy_controller_0_0\\hdmi_tx_bd_vid_phy_controller_0_0.xci",
         "inst_hier_path": "vid_phy_controller_0",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -720,7 +689,7 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "ip_revision": "17",
         "xci_name": "hdmi_tx_bd_proc_sys_reset_0_0",
-        "xci_path": "ip/hdmi_tx_bd_proc_sys_reset_0_0/hdmi_tx_bd_proc_sys_reset_0_0.xci",
+        "xci_path": "ip\\hdmi_tx_bd_proc_sys_reset_0_0\\hdmi_tx_bd_proc_sys_reset_0_0.xci",
         "inst_hier_path": "rst_video_clk",
         "has_run_ip_tcl": "true"
       },
@@ -728,7 +697,7 @@
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "ip_revision": "10",
         "xci_name": "hdmi_tx_bd_xlconstant_0_0",
-        "xci_path": "ip/hdmi_tx_bd_xlconstant_0_0/hdmi_tx_bd_xlconstant_0_0.xci",
+        "xci_path": "ip\\hdmi_tx_bd_xlconstant_0_0\\hdmi_tx_bd_xlconstant_0_0.xci",
         "inst_hier_path": "xlconstant_0",
         "has_run_ip_tcl": "true"
       },
@@ -736,7 +705,7 @@
         "vlnv": "xilinx.com:ip:microblaze:11.0",
         "ip_revision": "16",
         "xci_name": "hdmi_tx_bd_microblaze_0_1",
-        "xci_path": "ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xci",
+        "xci_path": "ip\\hdmi_tx_bd_microblaze_0_1\\hdmi_tx_bd_microblaze_0_1.xci",
         "inst_hier_path": "microblaze_0",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -884,7 +853,7 @@
             "vlnv": "xilinx.com:ip:lmb_v10:3.0",
             "ip_revision": "16",
             "xci_name": "hdmi_tx_bd_dlmb_v10_1",
-            "xci_path": "ip/hdmi_tx_bd_dlmb_v10_1/hdmi_tx_bd_dlmb_v10_1.xci",
+            "xci_path": "ip\\hdmi_tx_bd_dlmb_v10_1\\hdmi_tx_bd_dlmb_v10_1.xci",
             "inst_hier_path": "microblaze_0_local_memory/dlmb_v10",
             "has_run_ip_tcl": "true",
             "interface_ports": {
@@ -919,7 +888,7 @@
             "vlnv": "xilinx.com:ip:lmb_v10:3.0",
             "ip_revision": "16",
             "xci_name": "hdmi_tx_bd_ilmb_v10_1",
-            "xci_path": "ip/hdmi_tx_bd_ilmb_v10_1/hdmi_tx_bd_ilmb_v10_1.xci",
+            "xci_path": "ip\\hdmi_tx_bd_ilmb_v10_1\\hdmi_tx_bd_ilmb_v10_1.xci",
             "inst_hier_path": "microblaze_0_local_memory/ilmb_v10",
             "has_run_ip_tcl": "true",
             "interface_ports": {
@@ -954,7 +923,7 @@
             "vlnv": "xilinx.com:ip:lmb_bram_if_cntlr:4.0",
             "ip_revision": "27",
             "xci_name": "hdmi_tx_bd_dlmb_bram_if_cntlr_1",
-            "xci_path": "ip/hdmi_tx_bd_dlmb_bram_if_cntlr_1/hdmi_tx_bd_dlmb_bram_if_cntlr_1.xci",
+            "xci_path": "ip\\hdmi_tx_bd_dlmb_bram_if_cntlr_1\\hdmi_tx_bd_dlmb_bram_if_cntlr_1.xci",
             "inst_hier_path": "microblaze_0_local_memory/dlmb_bram_if_cntlr",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -987,7 +956,7 @@
             "vlnv": "xilinx.com:ip:lmb_bram_if_cntlr:4.0",
             "ip_revision": "27",
             "xci_name": "hdmi_tx_bd_ilmb_bram_if_cntlr_1",
-            "xci_path": "ip/hdmi_tx_bd_ilmb_bram_if_cntlr_1/hdmi_tx_bd_ilmb_bram_if_cntlr_1.xci",
+            "xci_path": "ip\\hdmi_tx_bd_ilmb_bram_if_cntlr_1\\hdmi_tx_bd_ilmb_bram_if_cntlr_1.xci",
             "inst_hier_path": "microblaze_0_local_memory/ilmb_bram_if_cntlr",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -1010,7 +979,7 @@
             "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
             "ip_revision": "12",
             "xci_name": "hdmi_tx_bd_lmb_bram_1",
-            "xci_path": "ip/hdmi_tx_bd_lmb_bram_1/hdmi_tx_bd_lmb_bram_1.xci",
+            "xci_path": "ip\\hdmi_tx_bd_lmb_bram_1\\hdmi_tx_bd_lmb_bram_1.xci",
             "inst_hier_path": "microblaze_0_local_memory/lmb_bram",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -1186,8 +1155,8 @@
         "ports": [
           "SYS_RST_N",
           "system_resetn_inv_0/Op1",
-          "rst_microblaze_0_clk_wiz_1_100M/ext_reset_in",
-          "rst_video_clk/ext_reset_in"
+          "rst_video_clk/ext_reset_in",
+          "rst_microblaze_0_clk_wiz_1_100M/ext_reset_in"
         ]
       },
       "axi_iic_0_gpo": {
@@ -1211,25 +1180,25 @@
       "microblaze_0_Clk": {
         "ports": [
           "microblaze_0_clk_wiz_1/clk_out1",
-          "v_hdmi_tx_ss_0/s_axis_audio_aclk",
-          "v_hdmi_tx_ss_0/s_axi_cpu_aclk",
-          "rst_microblaze_0_clk_wiz_1_100M/slowest_sync_clk",
           "vid_phy_controller_0/drpclk",
           "vid_phy_controller_0/vid_phy_axi4lite_aclk",
           "vid_phy_controller_0/vid_phy_sb_aclk",
-          "axi_iic_0/s_axi_aclk",
           "microblaze_0/Clk",
           "microblaze_0_axi_periph/aclk",
           "microblaze_0_axi_intc/s_axi_aclk",
           "microblaze_0_axi_intc/processor_clk",
-          "microblaze_0_local_memory/LMB_Clk"
+          "microblaze_0_local_memory/LMB_Clk",
+          "axi_iic_0/s_axi_aclk",
+          "rst_microblaze_0_clk_wiz_1_100M/slowest_sync_clk",
+          "v_hdmi_tx_ss_0/s_axi_cpu_aclk",
+          "v_hdmi_tx_ss_0/s_axis_audio_aclk"
         ]
       },
       "microblaze_0_clk_wiz_1_locked": {
         "ports": [
           "microblaze_0_clk_wiz_1/locked",
-          "rst_microblaze_0_clk_wiz_1_100M/dcm_locked",
-          "rst_video_clk/dcm_locked"
+          "rst_video_clk/dcm_locked",
+          "rst_microblaze_0_clk_wiz_1_100M/dcm_locked"
         ]
       },
       "microblaze_0_intr": {
@@ -1256,9 +1225,9 @@
           "rst_microblaze_0_clk_wiz_1_100M/peripheral_aresetn",
           "microblaze_0_axi_periph/aresetn",
           "microblaze_0_axi_intc/s_axi_aresetn",
-          "v_hdmi_tx_ss_0/s_axi_cpu_aresetn",
           "vid_phy_controller_0/vid_phy_axi4lite_aresetn",
-          "axi_iic_0/s_axi_aresetn"
+          "axi_iic_0/s_axi_aresetn",
+          "v_hdmi_tx_ss_0/s_axi_cpu_aresetn"
         ]
       },
       "rst_video_clk_peripheral_aresetn": {
@@ -1337,12 +1306,12 @@
         "ports": [
           "vid_phy_controller_0/tx_video_clk",
           "v_tpg_0/ap_clk",
-          "v_hdmi_tx_ss_0/video_clk",
-          "v_hdmi_tx_ss_0/link_clk",
-          "v_hdmi_tx_ss_0/s_axis_video_aclk",
           "vid_phy_controller_0/vid_phy_tx_axi4s_aclk",
+          "microblaze_0_axi_periph/aclk1",
           "rst_video_clk/slowest_sync_clk",
-          "microblaze_0_axi_periph/aclk1"
+          "v_hdmi_tx_ss_0/link_clk",
+          "v_hdmi_tx_ss_0/video_clk",
+          "v_hdmi_tx_ss_0/s_axis_video_aclk"
         ]
       },
       "vid_phy_controller_0_vid_phy_status_sb_tx_tdata": {
@@ -1361,8 +1330,8 @@
         "ports": [
           "xlconstant_0/dout",
           "HDMI_TX_EN",
-          "v_hdmi_tx_ss_0/s_axis_video_aresetn",
-          "HDMI_8T49N241_RST_N"
+          "HDMI_8T49N241_RST_N",
+          "v_hdmi_tx_ss_0/s_axis_video_aresetn"
         ]
       }
     },

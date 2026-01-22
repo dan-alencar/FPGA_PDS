@@ -50,7 +50,7 @@
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "kintexuplus", "resolve_type": "generated", "usage": "all" } ],
-        "BASE_BOARD_PART": [ { "value": "avnet-tria:auboard_15p:part0:1.1", "resolve_type": "generated", "usage": "all" } ],
+        "BASE_BOARD_PART": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
         "BOARD_CONNECTIONS": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
         "DEVICE": [ { "value": "xcau15p", "resolve_type": "generated", "usage": "all" } ],
         "PACKAGE": [ { "value": "ffvb676", "resolve_type": "generated", "usage": "all" } ],
@@ -299,5 +299,5 @@
       }
     }
   },
-  "checksum": "53d3054a"
+  "checksum": "e79f2a30"
 }

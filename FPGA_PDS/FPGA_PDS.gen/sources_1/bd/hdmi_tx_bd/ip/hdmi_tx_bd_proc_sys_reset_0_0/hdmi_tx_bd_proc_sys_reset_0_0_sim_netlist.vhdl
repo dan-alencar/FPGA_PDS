@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Wed Jan 21 12:36:21 2026
--- Host        : dan-alencar running 64-bit Linux Mint 22.2
--- Command     : write_vhdl -force -mode funcsim -rename_top hdmi_tx_bd_proc_sys_reset_0_0 -prefix
---               hdmi_tx_bd_proc_sys_reset_0_0_ hdmi_tx_bd_proc_sys_reset_0_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+-- Date        : Thu Jan 22 13:51:48 2026
+-- Host        : DESKTOP-6GRI2EI running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_proc_sys_reset_0_0/hdmi_tx_bd_proc_sys_reset_0_0_sim_netlist.vhdl
 -- Design      : hdmi_tx_bd_proc_sys_reset_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,6 +22,8 @@ entity hdmi_tx_bd_proc_sys_reset_0_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of hdmi_tx_bd_proc_sys_reset_0_0_upcnt_n : entity is "upcnt_n";
 end hdmi_tx_bd_proc_sys_reset_0_0_upcnt_n;
 
 architecture STRUCTURE of hdmi_tx_bd_proc_sys_reset_0_0_upcnt_n is
@@ -188,6 +190,8 @@ entity hdmi_tx_bd_proc_sys_reset_0_0_xpm_cdc_single is
   attribute DEST_SYNC_FF of hdmi_tx_bd_proc_sys_reset_0_0_xpm_cdc_single : entity is 4;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of hdmi_tx_bd_proc_sys_reset_0_0_xpm_cdc_single : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of hdmi_tx_bd_proc_sys_reset_0_0_xpm_cdc_single : entity is "xpm_cdc_single";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of hdmi_tx_bd_proc_sys_reset_0_0_xpm_cdc_single : entity is 0;
   attribute SRC_INPUT_REG : integer;
@@ -358,6 +362,8 @@ entity hdmi_tx_bd_proc_sys_reset_0_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of hdmi_tx_bd_proc_sys_reset_0_0_lpf : entity is "lpf";
 end hdmi_tx_bd_proc_sys_reset_0_0_lpf;
 
 architecture STRUCTURE of hdmi_tx_bd_proc_sys_reset_0_0_lpf is
@@ -601,6 +607,8 @@ entity hdmi_tx_bd_proc_sys_reset_0_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of hdmi_tx_bd_proc_sys_reset_0_0_sequence_psr : entity is "sequence_psr";
 end hdmi_tx_bd_proc_sys_reset_0_0_sequence_psr;
 
 architecture STRUCTURE of hdmi_tx_bd_proc_sys_reset_0_0_sequence_psr is
@@ -939,6 +947,8 @@ entity hdmi_tx_bd_proc_sys_reset_0_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of hdmi_tx_bd_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of hdmi_tx_bd_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of hdmi_tx_bd_proc_sys_reset_0_0_proc_sys_reset : entity is "proc_sys_reset";
 end hdmi_tx_bd_proc_sys_reset_0_0_proc_sys_reset;
 
 architecture STRUCTURE of hdmi_tx_bd_proc_sys_reset_0_0_proc_sys_reset is

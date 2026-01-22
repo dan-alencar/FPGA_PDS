@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/app_component1/build",
+  "command": "C:\\AMDDesignTools\\2025.2\\Vitis\\gnu\\microblaze\\nt\\bin\\mb-gcc.exe -IC:/AMDDesignTools/FPGA_PDS/FPGA_PDS/app_component1/src -isystem C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/platform1/export/platform1/sw/standalone_microblaze_0/include -isystem C:/AMDDesignTools/2025.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/AMDDesignTools/2025.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/AMDDesignTools/2025.2/Vitis/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include   -mxl-barrel-shift -mlittle-endian -mxl-pattern-compare -mno-xl-reorder -mno-xl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/platform1/export/platform1/sw/standalone_microblaze_0/Xilinx.spec -IC:/AMDDesignTools/FPGA_PDS/FPGA_PDS/platform1/export/platform1/sw/standalone_microblaze_0/include -Wall -Wextra      -O0  -g3     -U__clang__ -o CMakeFiles\\app_component1.elf.dir\\main.c.obj -c C:\\AMDDesignTools\\FPGA_PDS\\FPGA_PDS\\app_component1\\src\\main.c",
+  "file": "C:\\AMDDesignTools\\FPGA_PDS\\FPGA_PDS\\app_component1\\src\\main.c"
+}
+]

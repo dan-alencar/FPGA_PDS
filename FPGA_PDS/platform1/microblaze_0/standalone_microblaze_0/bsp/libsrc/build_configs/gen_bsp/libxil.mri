@@ -1,0 +1,13 @@
+create libxil.a
+addlib C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/platform1/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/vtc/src/libvtc.a
+addlib C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/platform1/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/vphy/src/libvphy.a
+addlib C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/platform1/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/video_common/src/libvideo_common.a
+addlib C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/platform1/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/v_tpg/src/libv_tpg.a
+addlib C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/platform1/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/v_hdmitxss/src/libv_hdmitxss.a
+addlib C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/platform1/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/v_hdmitx/src/libv_hdmitx.a
+addlib C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/platform1/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/v_hdmi_common/src/libv_hdmi_common.a
+addlib C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/platform1/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/intc/src/libintc.a
+addlib C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/platform1/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/iic/src/libiic.a
+addlib C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/platform1/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/bram/src/libbram.a
+save
+end

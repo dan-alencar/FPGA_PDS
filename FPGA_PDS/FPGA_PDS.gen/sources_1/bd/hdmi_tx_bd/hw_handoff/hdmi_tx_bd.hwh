@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 21 21:54:02 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan 22 13:49:59 2026" VIVADOVERSION="2025.2">
 
-  <SYSTEMINFO ARCH="kintexuplus" BOARD="avnet-tria:auboard_15p:part0:1.1" DEVICE="xcau15p" NAME="hdmi_tx_bd" PACKAGE="ffvb676" SPEEDGRADE="-2"/>
+  <SYSTEMINFO ARCH="kintexuplus" DEVICE="xcau15p" NAME="hdmi_tx_bd" PACKAGE="ffvb676" SPEEDGRADE="-2"/>
 
   <EXTERNALPORTS>
     <PORT DIR="O" LEFT="0" NAME="HDMI_8T49N241_RST_N" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
@@ -52,8 +52,8 @@
     <PORT DIR="I" NAME="SYS_RST_N" SIGIS="undef" SIGNAME="External_Ports_SYS_RST_N">
       <CONNECTIONS>
         <CONNECTION INSTANCE="system_resetn_inv_0" PORT="Op1"/>
-        <CONNECTION INSTANCE="rst_microblaze_0_clk_wiz_1_100M" PORT="ext_reset_in"/>
         <CONNECTION INSTANCE="rst_video_clk" PORT="ext_reset_in"/>
+        <CONNECTION INSTANCE="rst_microblaze_0_clk_wiz_1_100M" PORT="ext_reset_in"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="gpo_0" RIGHT="0" SIGIS="undef" SIGNAME="axi_iic_0_gpo">
@@ -4476,7 +4476,7 @@
         <PARAMETER NAME="C_CLKFB_OUT_PORT" VALUE="clkfb_out"/>
         <PARAMETER NAME="C_CLKFB_OUT_P_PORT" VALUE="clkfb_out_p"/>
         <PARAMETER NAME="C_CLKFB_STOPPED_PORT" VALUE="clkfb_stopped"/>
-        <PARAMETER NAME="C_CLKIN1_JITTER_PS" VALUE="33.330000000000005"/>
+        <PARAMETER NAME="C_CLKIN1_JITTER_PS" VALUE="100.0"/>
         <PARAMETER NAME="C_CLKIN2_JITTER_PS" VALUE="100.0"/>
         <PARAMETER NAME="C_CLKOUT0_1" VALUE="0000"/>
         <PARAMETER NAME="C_CLKOUT0_2" VALUE="0000"/>
@@ -4609,7 +4609,7 @@
         <PARAMETER NAME="C_FILTER_2" VALUE="0000"/>
         <PARAMETER NAME="C_HAS_CDDC" VALUE="0"/>
         <PARAMETER NAME="C_INCLK_SUM_ROW0" VALUE="Input Clock   Freq (MHz)    Input Jitter (UI)"/>
-        <PARAMETER NAME="C_INCLK_SUM_ROW1" VALUE="__primary_________300.000____________0.010"/>
+        <PARAMETER NAME="C_INCLK_SUM_ROW1" VALUE="__primary_________100.000____________0.010"/>
         <PARAMETER NAME="C_INCLK_SUM_ROW2" VALUE="no_secondary_input_clock"/>
         <PARAMETER NAME="C_INPUT_CLK_STOPPED_PORT" VALUE="input_clk_stopped"/>
         <PARAMETER NAME="C_INTERFACE_SELECTION" VALUE="0"/>
@@ -4628,11 +4628,11 @@
         <PARAMETER NAME="C_MMCMBUFGCEDIV6" VALUE="false"/>
         <PARAMETER NAME="C_MMCMBUFGCEDIV7" VALUE="false"/>
         <PARAMETER NAME="C_MMCM_BANDWIDTH" VALUE="OPTIMIZED"/>
-        <PARAMETER NAME="C_MMCM_CLKFBOUT_MULT_F" VALUE="4.000"/>
+        <PARAMETER NAME="C_MMCM_CLKFBOUT_MULT_F" VALUE="12.000"/>
         <PARAMETER NAME="C_MMCM_CLKFBOUT_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="C_MMCM_CLKFBOUT_USE_FINE_PS" VALUE="FALSE"/>
-        <PARAMETER NAME="C_MMCM_CLKIN1_PERIOD" VALUE="3.333"/>
-        <PARAMETER NAME="C_MMCM_CLKIN2_PERIOD" VALUE="10.0"/>
+        <PARAMETER NAME="C_MMCM_CLKIN1_PERIOD" VALUE="10.000"/>
+        <PARAMETER NAME="C_MMCM_CLKIN2_PERIOD" VALUE="10.000"/>
         <PARAMETER NAME="C_MMCM_CLKOUT0_DIVIDE_F" VALUE="12.000"/>
         <PARAMETER NAME="C_MMCM_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="C_MMCM_CLKOUT0_PHASE" VALUE="0.000"/>
@@ -4675,7 +4675,7 @@
         <PARAMETER NAME="C_OPTIMIZE_CLOCKING_STRUCTURE_EN" VALUE="0"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0A" VALUE="Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0B" VALUE="Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)"/>
-        <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="clk_out1__100.00000______0.000______50.0______101.475_____77.836"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="clk_out1__100.00000______0.000______50.0______115.831_____87.180"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="no_CLK_OUT2_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW3" VALUE="no_CLK_OUT3_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW4" VALUE="no_CLK_OUT4_output"/>
@@ -4726,7 +4726,7 @@
         <PARAMETER NAME="C_PRIMARY_PORT" VALUE="clk_in1"/>
         <PARAMETER NAME="C_PRIMITIVE" VALUE="MMCM"/>
         <PARAMETER NAME="C_PRIMTYPE_SEL" VALUE="AUTO"/>
-        <PARAMETER NAME="C_PRIM_IN_FREQ" VALUE="300.000"/>
+        <PARAMETER NAME="C_PRIM_IN_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_PRIM_IN_JITTER" VALUE="0.010"/>
         <PARAMETER NAME="C_PRIM_IN_TIMEPERIOD" VALUE="10.000"/>
         <PARAMETER NAME="C_PRIM_SOURCE" VALUE="Differential_clock_capable_pin"/>
@@ -4792,14 +4792,14 @@
         <PARAMETER NAME="CLKFB_OUT_PORT" VALUE="clkfb_out"/>
         <PARAMETER NAME="CLKFB_OUT_P_PORT" VALUE="clkfb_out_p"/>
         <PARAMETER NAME="CLKFB_STOPPED_PORT" VALUE="clkfb_stopped"/>
-        <PARAMETER NAME="CLKIN1_JITTER_PS" VALUE="33.330000000000005"/>
+        <PARAMETER NAME="CLKIN1_JITTER_PS" VALUE="100.0"/>
         <PARAMETER NAME="CLKIN1_UI_JITTER" VALUE="0.010"/>
         <PARAMETER NAME="CLKIN2_JITTER_PS" VALUE="100.0"/>
         <PARAMETER NAME="CLKIN2_UI_JITTER" VALUE="0.010"/>
         <PARAMETER NAME="CLKOUT1_DRIVES" VALUE="Buffer"/>
-        <PARAMETER NAME="CLKOUT1_JITTER" VALUE="101.475"/>
+        <PARAMETER NAME="CLKOUT1_JITTER" VALUE="115.831"/>
         <PARAMETER NAME="CLKOUT1_MATCHED_ROUTING" VALUE="false"/>
-        <PARAMETER NAME="CLKOUT1_PHASE_ERROR" VALUE="77.836"/>
+        <PARAMETER NAME="CLKOUT1_PHASE_ERROR" VALUE="87.180"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
@@ -4908,11 +4908,11 @@
         <PARAMETER NAME="JITTER_SEL" VALUE="No_Jitter"/>
         <PARAMETER NAME="LOCKED_PORT" VALUE="locked"/>
         <PARAMETER NAME="MMCM_BANDWIDTH" VALUE="OPTIMIZED"/>
-        <PARAMETER NAME="MMCM_CLKFBOUT_MULT_F" VALUE="4.000"/>
+        <PARAMETER NAME="MMCM_CLKFBOUT_MULT_F" VALUE="12.000"/>
         <PARAMETER NAME="MMCM_CLKFBOUT_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKFBOUT_USE_FINE_PS" VALUE="false"/>
-        <PARAMETER NAME="MMCM_CLKIN1_PERIOD" VALUE="3.333"/>
-        <PARAMETER NAME="MMCM_CLKIN2_PERIOD" VALUE="10.0"/>
+        <PARAMETER NAME="MMCM_CLKIN1_PERIOD" VALUE="10.000"/>
+        <PARAMETER NAME="MMCM_CLKIN2_PERIOD" VALUE="10.000"/>
         <PARAMETER NAME="MMCM_CLKOUT0_DIVIDE_F" VALUE="12.000"/>
         <PARAMETER NAME="MMCM_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="MMCM_CLKOUT0_PHASE" VALUE="0.000"/>
@@ -4988,7 +4988,7 @@
         <PARAMETER NAME="PRIMARY_PORT" VALUE="clk_in1"/>
         <PARAMETER NAME="PRIMITIVE" VALUE="MMCM"/>
         <PARAMETER NAME="PRIMTYPE_SEL" VALUE="mmcm_adv"/>
-        <PARAMETER NAME="PRIM_IN_FREQ" VALUE="300.000"/>
+        <PARAMETER NAME="PRIM_IN_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="PRIM_IN_JITTER" VALUE="0.010"/>
         <PARAMETER NAME="PRIM_IN_TIMEPERIOD" VALUE="10.000"/>
         <PARAMETER NAME="PRIM_SOURCE" VALUE="Differential_clock_capable_pin"/>
@@ -4998,7 +4998,7 @@
         <PARAMETER NAME="PSINCDEC_PORT" VALUE="psincdec"/>
         <PARAMETER NAME="REF_CLK_FREQ" VALUE="100.0"/>
         <PARAMETER NAME="RELATIVE_INCLK" VALUE="REL_PRIMARY"/>
-        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="system_resetn"/>
+        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
         <PARAMETER NAME="RESET_PORT" VALUE="reset"/>
         <PARAMETER NAME="RESET_TYPE" VALUE="ACTIVE_HIGH"/>
         <PARAMETER NAME="SECONDARY_IN_FREQ" VALUE="100.000"/>
@@ -5015,7 +5015,7 @@
         <PARAMETER NAME="USER_CLK_FREQ1" VALUE="100.0"/>
         <PARAMETER NAME="USER_CLK_FREQ2" VALUE="100.0"/>
         <PARAMETER NAME="USER_CLK_FREQ3" VALUE="100.0"/>
-        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="true"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
         <PARAMETER NAME="USE_CLKFB_STOPPED" VALUE="false"/>
         <PARAMETER NAME="USE_CLK_VALID" VALUE="false"/>
         <PARAMETER NAME="USE_CLOCK_SEQUENCING" VALUE="false"/>
@@ -5050,13 +5050,9 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="microblaze_0_clk_wiz_1_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="s_axis_audio_aclk"/>
-            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="s_axi_cpu_aclk"/>
-            <CONNECTION INSTANCE="rst_microblaze_0_clk_wiz_1_100M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="vid_phy_controller_0" PORT="drpclk"/>
             <CONNECTION INSTANCE="vid_phy_controller_0" PORT="vid_phy_axi4lite_aclk"/>
             <CONNECTION INSTANCE="vid_phy_controller_0" PORT="vid_phy_sb_aclk"/>
-            <CONNECTION INSTANCE="axi_iic_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="microblaze_0" PORT="Clk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="aclk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_intc" PORT="s_axi_aclk"/>
@@ -5065,12 +5061,16 @@
             <CONNECTION INSTANCE="microblaze_0_local_memory_dlmb_bram_if_cntlr" PORT="LMB_Clk"/>
             <CONNECTION INSTANCE="microblaze_0_local_memory_ilmb_v10" PORT="LMB_Clk"/>
             <CONNECTION INSTANCE="microblaze_0_local_memory_ilmb_bram_if_cntlr" PORT="LMB_Clk"/>
+            <CONNECTION INSTANCE="axi_iic_0" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="rst_microblaze_0_clk_wiz_1_100M" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="s_axi_cpu_aclk"/>
+            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="s_axis_audio_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="microblaze_0_clk_wiz_1_locked">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_microblaze_0_clk_wiz_1_100M" PORT="dcm_locked"/>
             <CONNECTION INSTANCE="rst_video_clk" PORT="dcm_locked"/>
+            <CONNECTION INSTANCE="rst_microblaze_0_clk_wiz_1_100M" PORT="dcm_locked"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="system_resetn_inv_0_Res">
@@ -5082,7 +5082,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="__NOC__" NAME="CLK_IN1_D" TYPE="TARGET" VLNV="xilinx.com:interface:diff_clock:1.0">
           <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="300000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="CLK_N" PHYSICAL="clk_in1_n"/>
             <PORTMAP LOGICAL="CLK_P" PHYSICAL="clk_in1_p"/>
@@ -6254,8 +6254,8 @@
         <PARAMETER NAME="C_NUM_PERP_ARESETN" VALUE="1"/>
         <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
         <PARAMETER NAME="Component_Name" VALUE="hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0"/>
-        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="system_resetn"/>
-        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="true"/>
+        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -6294,9 +6294,9 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="aresetn"/>
             <CONNECTION INSTANCE="microblaze_0_axi_intc" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="s_axi_cpu_aresetn"/>
             <CONNECTION INSTANCE="vid_phy_controller_0" PORT="vid_phy_axi4lite_aresetn"/>
             <CONNECTION INSTANCE="axi_iic_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="s_axi_cpu_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
@@ -7182,12 +7182,12 @@
         <PORT CLKFREQUENCY="297000000" DIR="O" NAME="tx_video_clk" SIGIS="clk" SIGNAME="vid_phy_controller_0_tx_video_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tpg_0" PORT="ap_clk"/>
-            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="video_clk"/>
-            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="link_clk"/>
-            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="s_axis_video_aclk"/>
             <CONNECTION INSTANCE="vid_phy_controller_0" PORT="vid_phy_tx_axi4s_aclk"/>
-            <CONNECTION INSTANCE="rst_video_clk" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="aclk1"/>
+            <CONNECTION INSTANCE="rst_video_clk" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="link_clk"/>
+            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="video_clk"/>
+            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="s_axis_video_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="148500000" DIR="O" NAME="txoutclk" SIGIS="clk"/>
@@ -7484,8 +7484,8 @@
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="HDMI_TX_EN"/>
-            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="s_axis_video_aresetn"/>
             <CONNECTION INSTANCE="External_Ports" PORT="HDMI_8T49N241_RST_N"/>
+            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="s_axis_video_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

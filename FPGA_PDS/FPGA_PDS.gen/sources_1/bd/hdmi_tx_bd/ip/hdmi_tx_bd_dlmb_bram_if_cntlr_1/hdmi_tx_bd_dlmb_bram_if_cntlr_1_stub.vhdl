@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
 -- Date        : Wed Jan 21 21:54:40 2026
 -- Host        : dan-alencar running 64-bit Linux Mint 22.2
--- Command     : write_vhdl -force -mode synth_stub
---               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_dlmb_bram_if_cntlr_1/hdmi_tx_bd_dlmb_bram_if_cntlr_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top hdmi_tx_bd_dlmb_bram_if_cntlr_1 -prefix
+--               hdmi_tx_bd_dlmb_bram_if_cntlr_1_ hdmi_tx_bd_dlmb_bram_if_cntlr_1_stub.vhdl
 -- Design      : hdmi_tx_bd_dlmb_bram_if_cntlr_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcau15p-ffvb676-2-e

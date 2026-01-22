@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 21 21:53:58 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan 22 13:49:44 2026" VIVADOVERSION="2025.2">
 
-  <SYSTEMINFO ARCH="kintexuplus" BOARD="avnet-tria:auboard_15p:part0:1.1" DEVICE="xcau15p" NAME="bd_6eeb" PACKAGE="ffvb676" SPEEDGRADE="-2"/>
+  <SYSTEMINFO ARCH="kintexuplus" DEVICE="xcau15p" NAME="bd_6eeb" PACKAGE="ffvb676" SPEEDGRADE="-2"/>
 
   <EXTERNALPORTS>
     <PORT DIR="O" LEFT="8" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_araddr">

@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-// Date        : Wed Jan 21 15:11:50 2026
+// Date        : Wed Jan 21 15:11:49 2026
 // Host        : dan-alencar running 64-bit Linux Mint 22.2
-// Command     : write_verilog -force -mode synth_stub
-//               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top hdmi_tx_bd_microblaze_0_axi_intc_0 -prefix
+//               hdmi_tx_bd_microblaze_0_axi_intc_0_ hdmi_tx_bd_microblaze_0_axi_intc_0_stub.v
 // Design      : hdmi_tx_bd_microblaze_0_axi_intc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcau15p-ffvb676-2-e

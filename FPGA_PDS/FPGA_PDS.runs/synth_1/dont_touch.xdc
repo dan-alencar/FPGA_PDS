@@ -57,4 +57,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_
 # IP: bd/hdmi_tx_bd/ip/hdmi_tx_bd_lmb_bram_1/hdmi_tx_bd_lmb_bram_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_lmb_bram_1 || ORIG_REF_NAME==hdmi_tx_bd_lmb_bram_1} -quiet] -quiet
 
-# XDC: /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/hdmi_tx_bd_ooc.xdc
+# XDC: c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/hdmi_tx_bd_ooc.xdc

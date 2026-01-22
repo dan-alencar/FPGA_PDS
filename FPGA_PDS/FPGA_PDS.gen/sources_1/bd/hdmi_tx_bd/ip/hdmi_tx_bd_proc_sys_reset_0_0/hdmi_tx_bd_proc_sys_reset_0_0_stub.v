@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-// Date        : Wed Jan 21 12:36:20 2026
-// Host        : dan-alencar running 64-bit Linux Mint 22.2
-// Command     : write_verilog -force -mode synth_stub -rename_top hdmi_tx_bd_proc_sys_reset_0_0 -prefix
-//               hdmi_tx_bd_proc_sys_reset_0_0_ hdmi_tx_bd_proc_sys_reset_0_0_stub.v
+// Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+// Date        : Thu Jan 22 13:51:48 2026
+// Host        : DESKTOP-6GRI2EI running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub
+//               c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_proc_sys_reset_0_0/hdmi_tx_bd_proc_sys_reset_0_0_stub.v
 // Design      : hdmi_tx_bd_proc_sys_reset_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcau15p-ffvb676-2-e

@@ -1,9 +1,9 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Wed Jan 21 21:53:57 2026
-//Host        : dan-alencar running 64-bit Linux Mint 22.2
+//Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+//Date        : Thu Jan 22 13:49:38 2026
+//Host        : DESKTOP-6GRI2EI running 64-bit major release  (build 9200)
 //Command     : generate_target hdmi_tx_bd.bd
 //Design      : hdmi_tx_bd
 //Purpose     : IP block netlist

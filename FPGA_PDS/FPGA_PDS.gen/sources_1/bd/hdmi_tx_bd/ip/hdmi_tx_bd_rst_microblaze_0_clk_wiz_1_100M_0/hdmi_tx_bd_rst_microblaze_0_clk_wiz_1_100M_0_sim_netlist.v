@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-// Date        : Wed Jan 21 20:36:47 2026
-// Host        : dan-alencar running 64-bit Linux Mint 22.2
+// Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+// Date        : Thu Jan 22 13:51:48 2026
+// Host        : DESKTOP-6GRI2EI running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_sim_netlist.v
+//               c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_sim_netlist.v
 // Design      : hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -40,8 +40,7 @@ module hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0
   wire aux_reset_in;
   wire [0:0]bus_struct_reset;
   wire dcm_locked;
-  (* RTL_KEEP = "yes" *) (* x_interface_info = "xilinx.com:signal:reset:1.0 ext_reset RST" *) (* x_interface_mode = "slave ext_reset" *) 
-  (* x_interface_parameter = "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) wire ext_reset_in;
+  wire ext_reset_in;
   wire [0:0]interconnect_aresetn;
   wire mb_debug_sys_rst;
   wire mb_reset;
