@@ -355,7 +355,7 @@
           },
           "MAX_BURST_LENGTH": {
             "value": "1",
-            "value_src": "default_prop"
+            "value_src": "default"
           },
           "NUM_READ_OUTSTANDING": {
             "value": "1"
@@ -487,7 +487,7 @@
           },
           "MAX_BURST_LENGTH": {
             "value": "1",
-            "value_src": "default_prop"
+            "value_src": "default"
           },
           "NUM_READ_OUTSTANDING": {
             "value": "1"
@@ -619,7 +619,7 @@
           },
           "MAX_BURST_LENGTH": {
             "value": "1",
-            "value_src": "default_prop"
+            "value_src": "default"
           },
           "NUM_READ_OUTSTANDING": {
             "value": "1"
@@ -751,7 +751,7 @@
           },
           "MAX_BURST_LENGTH": {
             "value": "1",
-            "value_src": "default_prop"
+            "value_src": "default"
           },
           "NUM_READ_OUTSTANDING": {
             "value": "1"
@@ -883,7 +883,7 @@
           },
           "MAX_BURST_LENGTH": {
             "value": "1",
-            "value_src": "default_prop"
+            "value_src": "default"
           },
           "NUM_READ_OUTSTANDING": {
             "value": "1"
@@ -1015,7 +1015,7 @@
           },
           "MAX_BURST_LENGTH": {
             "value": "1",
-            "value_src": "default_prop"
+            "value_src": "default"
           },
           "NUM_READ_OUTSTANDING": {
             "value": "1"
@@ -1147,7 +1147,7 @@
           },
           "MAX_BURST_LENGTH": {
             "value": "1",
-            "value_src": "default_prop"
+            "value_src": "default"
           },
           "NUM_READ_OUTSTANDING": {
             "value": "1"

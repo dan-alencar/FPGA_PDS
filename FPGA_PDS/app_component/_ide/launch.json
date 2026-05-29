@@ -20,7 +20,7 @@
       "pathMap": [],
       "targetSetup": {
         "resetSystem": true,
-        "programDevice": true,
+        "programDevice": false,
         "partialBitstream": false,
         "skipRevisionCheck": false,
         "device": {

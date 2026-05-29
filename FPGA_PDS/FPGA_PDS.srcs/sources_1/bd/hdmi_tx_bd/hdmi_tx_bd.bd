@@ -182,6 +182,9 @@
         "inst_hier_path": "v_hdmi_tx_ss_0",
         "has_run_ip_tcl": "true",
         "parameters": {
+          "C_EXDES_TOPOLOGY": {
+            "value": "1"
+          },
           "C_INPUT_PIXELS_PER_CLOCK": {
             "value": "4"
           }
@@ -635,7 +638,7 @@
             "value_mode": "auto"
           },
           "NUM_PORTS": {
-            "value": "2"
+            "value": "3"
           }
         }
       },
@@ -727,6 +730,9 @@
         "inst_hier_path": "vid_phy_controller_0",
         "has_run_ip_tcl": "true",
         "parameters": {
+          "Adv_Clk_Mode": {
+            "value": "false"
+          },
           "CHANNEL_SITE": {
             "value": "X0Y8"
           },
@@ -1405,6 +1411,12 @@
           "v_hdmi_tx_ss_0/VIDEO_IN_tvalid"
         ]
       },
+      "vid_phy_controller_0_irq": {
+        "ports": [
+          "vid_phy_controller_0/irq",
+          "microblaze_0_xlconcat/In2"
+        ]
+      },
       "vid_phy_controller_0_phy_txn_out": {
         "ports": [
           "vid_phy_controller_0/phy_txn_out",
@@ -1457,7 +1469,8 @@
         "ports": [
           "xlconstant_0/dout",
           "HDMI_TX_EN",
-          "v_hdmi_tx_ss_0/s_axis_video_aresetn"
+          "v_hdmi_tx_ss_0/s_axis_video_aresetn",
+          "vid_phy_controller_0/tx_refclk_rdy"
         ]
       }
     },
@@ -1479,7 +1492,7 @@
               "SEG_dlmb_bram_if_cntlr_Mem": {
                 "address_block": "/microblaze_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem",
                 "offset": "0x00000000",
-                "range": "128K",
+                "range": "256K",
                 "offset_high_param": "C_HIGHADDR"
               },
               "SEG_mdm_1_Reg": {
@@ -1516,7 +1529,7 @@
               "SEG_ilmb_bram_if_cntlr_Mem": {
                 "address_block": "/microblaze_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem",
                 "offset": "0x00000000",
-                "range": "128K",
+                "range": "256K",
                 "offset_high_param": "C_HIGHADDR"
               }
             }

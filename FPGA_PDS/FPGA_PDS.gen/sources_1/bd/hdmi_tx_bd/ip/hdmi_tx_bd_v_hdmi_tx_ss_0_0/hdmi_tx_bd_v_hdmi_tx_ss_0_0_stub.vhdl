@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
--- Date        : Thu Jan 22 13:51:48 2026
--- Host        : DESKTOP-6GRI2EI running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/hdmi_tx_bd_v_hdmi_tx_ss_0_0_stub.vhdl
+-- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+-- Date        : Fri May 29 19:24:47 2026
+-- Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
+-- Command     : write_vhdl -force -mode synth_stub -rename_top hdmi_tx_bd_v_hdmi_tx_ss_0_0 -prefix
+--               hdmi_tx_bd_v_hdmi_tx_ss_0_0_ hdmi_tx_bd_v_hdmi_tx_ss_0_0_stub.vhdl
 -- Design      : hdmi_tx_bd_v_hdmi_tx_ss_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcau15p-ffvb676-2-e
@@ -77,7 +77,7 @@ entity hdmi_tx_bd_v_hdmi_tx_ss_0_0 is
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of hdmi_tx_bd_v_hdmi_tx_ss_0_0 : entity is "hdmi_tx_bd_v_hdmi_tx_ss_0_0,bd_2339,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of hdmi_tx_bd_v_hdmi_tx_ss_0_0 : entity is "hdmi_tx_bd_v_hdmi_tx_ss_0_0,bd_2339,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=v_hdmi_tx_ss,x_ipVersion=3.2,x_ipCoreRevision=16,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,Component_Name=hdmi_tx_bd_v_hdmi_tx_ss_0_0,C_INCLUDE_HDCP_1_4=false,C_INCLUDE_HDCP_2_2=false,C_MAX_BITS_PER_COMPONENT=8,C_INPUT_PIXELS_PER_CLOCK=4,C_HYSTERESIS_LEVEL=12,C_ADDR_WIDTH=10,C_INCLUDE_LOW_RESO_VID=true,C_VID_INTERFACE=0,C_INCLUDE_YUV420_SUP=true,C_VALIDATION_ENABLE=false,C_HDMI_FAST_SWITCH=false,C_SMARTCONNECT_ENABLE=false,C_HPD_INVERT=false,C_EXDES_TOPOLOGY=0,C_EXDES_TX_PLL_SELECTION=6,C_EXDES_RX_PLL_SELECTION=0,C_EXDES_NIDRU=true,C_HDMI_VERSION=3,C_DDC2_EN=0,C_CH_WIDTH=8,C_VIDEO_MASK_ENABLE=1,C_ADD_MARK_DBG=0,C_EXDES_AXILITE_FREQ=100,C_MAX_RES=0,x_ipLicense=v_hdmi@2017.10(hardware_evaluation)}";
+  attribute CORE_GENERATION_INFO of hdmi_tx_bd_v_hdmi_tx_ss_0_0 : entity is "hdmi_tx_bd_v_hdmi_tx_ss_0_0,bd_2339,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=v_hdmi_tx_ss,x_ipVersion=3.2,x_ipCoreRevision=16,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,Component_Name=hdmi_tx_bd_v_hdmi_tx_ss_0_0,C_INCLUDE_HDCP_1_4=false,C_INCLUDE_HDCP_2_2=false,C_MAX_BITS_PER_COMPONENT=8,C_INPUT_PIXELS_PER_CLOCK=4,C_HYSTERESIS_LEVEL=12,C_ADDR_WIDTH=10,C_INCLUDE_LOW_RESO_VID=true,C_VID_INTERFACE=0,C_INCLUDE_YUV420_SUP=true,C_VALIDATION_ENABLE=false,C_HDMI_FAST_SWITCH=false,C_SMARTCONNECT_ENABLE=false,C_HPD_INVERT=false,C_EXDES_TOPOLOGY=1,C_EXDES_TX_PLL_SELECTION=6,C_EXDES_RX_PLL_SELECTION=0,C_EXDES_NIDRU=false,C_HDMI_VERSION=3,C_DDC2_EN=0,C_CH_WIDTH=8,C_VIDEO_MASK_ENABLE=1,C_ADD_MARK_DBG=0,C_EXDES_AXILITE_FREQ=100,C_MAX_RES=0,x_ipLicense=v_hdmi@2017.10(hardware_evaluation)}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of hdmi_tx_bd_v_hdmi_tx_ss_0_0 : entity is "yes";
 end hdmi_tx_bd_v_hdmi_tx_ss_0_0;

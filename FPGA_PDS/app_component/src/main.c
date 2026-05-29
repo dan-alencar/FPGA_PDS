@@ -1,20 +1,22 @@
 /*
- * MicroBlaze bring-up for hdmi_tx_bd / microblaze_0.
+ * MicroBlaze HDMI TX colorbar bring-up for hdmi_tx_bd / microblaze_0.
  *
- * Stage 2 (final): reach + configure the 8T49N241 clock generator, using the
- * sequence proven by the AUBoard HDMI Pass-Thru reference design:
+ * Minimal, interrupt-driven HDMI TX colorbar, adapted from the AUBoard HDMI
+ * Pass-Thru reference (TxOnly example) to THIS platform:
+ *   - SDT base-address APIs (no DEVICE_ID macros).
+ *   - axi_intc inputs: HDMI_TX_SS=0, IIC=1, VID_PHY=2.
+ *   - GT TX uses MGTREFCLK0 (C_TX_REFCLK_SEL=0), fed by the 8T49N241 @ 0x7C.
  *
- *   1. The clock chip sits BEHIND an I2C mux at 0x74 (PCA/TCA switch). It is
- *      NOT visible until the mux is told to open its channel. Default-channel
- *      traffic only sees the EEPROM at 0x50 (which is why earlier scans only
- *      ever found 0x50).
- *   2. On this board the clock chip answers at 0x7C (the reference's active
- *      I2C_CLK_ADDR; 0x6C is commented out). Note 0x7C is ABOVE the 0x77 our
- *      earlier scan stopped at -- a second reason we never saw it.
- *   3. The reference drives NO reset to the chip; the board releases it.
+ * Flow (all the real work happens in interrupt callbacks):
+ *   HPD connect -> TxConnectCallback enables TX refclk buffer + flags colorbar
+ *   main loop   -> EnableColorBar: SetStream(1080p60) + SetHdmiTxParam +
+ *                  reprogram 8T49N241 to the mode's TMDS clock
+ *   GT reconfig -> VphyHdmiTxInit/Ready callbacks (GT TX comes up)
+ *   stream up   -> TxStreamUpCallback: configure TPG colorbar + start TX
  *
- * We still own HDMI_8T49N241_RST_N via AXI_GPIO_0, so we simply hold it
- * released (active-low => drive high).
+ * Simplifications vs. reference: no EDID gating (we push 1080p60 on HPD; a
+ * 1080p60-capable sink will display it), no HDCP/audio, no TPG-reset GPIO
+ * (this design resets the TPG via proc_sys_reset, not a dedicated GPIO).
  *
  * stdout is the MDM JTAG-UART -> view in the Vitis "JTAG UART" terminal.
  */
@@ -22,121 +24,255 @@
 #include "xparameters.h"
 #include "xil_printf.h"
 #include "xstatus.h"
+#include "xil_exception.h"
 #include "sleep.h"
+#include "xintc.h"
 #include "xgpio.h"
 #include "xiic_l.h"
+#include "xvphy.h"
+#include "xv_hdmitxss.h"
+#include "xv_tpg.h"
+#include "xvidc.h"
 #include "idt_8t49n24x.h"
 
-#define IIC_BASE            XPAR_XIIC_0_BASEADDR    /* AXI_IIC_0 -> iic_clkgen */
-#define RST_GPIO_BASE       XPAR_XGPIO_0_BASEADDR   /* AXI_GPIO_0 -> RST_N     */
-#define RST_GPIO_CH         1
+#define IIC_BASE        XPAR_XIIC_0_BASEADDR
+#define RST_GPIO_BASE   XPAR_XGPIO_0_BASEADDR
+#define RST_GPIO_CH     1
+#define IDT_ADDR        0x7C
 
-#define I2C_MUX_ADDR        0x74    /* I2C switch (reference: I2C_MUX_ADDR)    */
-#define I2C_MUX_CH_CLK      0x80    /* channel byte that exposes the clock gen
-                                       (reference I2cMux() MicroBlaze path)    */
-#define IDT_ADDR            0x7C    /* clock chip (reference I2C_CLK_ADDR)     */
-#define IDT_ADDR_ALT        0x6C    /* legacy default, kept as fallback        */
+#define INTC_BASE       XPAR_XINTC_0_BASEADDR
+#define HDMITX_BASE     XPAR_XV_HDMITXSS_0_BASEADDR
+#define VPHY_BASE       XPAR_XVPHY_0_BASEADDR
+#define TPG_BASE        XPAR_V_TPG_0_BASEADDR
 
-#define GT_REFCLK_HZ        297000000   /* clk_ref_p 3.367 ns => ~297 MHz */
+#define INTR_HDMITX     XPAR_FABRIC_XV_HDMITXSS_0_INTR   /* = 0 */
+#define INTR_VPHY       XPAR_FABRIC_XVPHY_0_INTR         /* = 2 */
 
-static XGpio rst_gpio;
+static XIntc       Intc;
+static XVphy       Vphy;
+static XV_HdmiTxSs HdmiTxSs;
+static XV_tpg      Tpg;
+static XGpio       RstGpio;
 
-/* Hold the clock chip out of reset (active low -> drive high). */
+static volatile u8 TxRestartColorbar = FALSE;
+static volatile u8 TxBusy            = TRUE;
+static XTpg_PatternId Pattern = XTPG_BKGND_COLOR_BARS;
+
+/* diagnostics: did the VPHY/HDMI interrupt callbacks ever fire? */
+static volatile u32 g_txinit = 0, g_txready = 0, g_streamup = 0, g_streamdown = 0;
+
+/* ---- clock chip reset: clean low->high pulse so its PLL restarts ---- */
 static void idt_release_reset(void)
 {
-    if (XGpio_Initialize(&rst_gpio, RST_GPIO_BASE) != XST_SUCCESS) {
-        xil_printf("WARN: XGpio init failed; reset line not driven.\r\n");
+    if (XGpio_Initialize(&RstGpio, RST_GPIO_BASE) == XST_SUCCESS) {
+        XGpio_SetDataDirection(&RstGpio, RST_GPIO_CH, 0x0);
+        XGpio_DiscreteWrite(&RstGpio, RST_GPIO_CH, 0x0);   /* assert  */
+        usleep(20000);
+        XGpio_DiscreteWrite(&RstGpio, RST_GPIO_CH, 0x1);   /* release */
+        usleep(100000);
+    }
+}
+
+/* ---- TPG colorbar config for the current TX stream ---- */
+static void ConfigTpgColorbar(void)
+{
+    XVidC_VideoStream *s = XV_HdmiTxSs_GetVideoStream(&HdmiTxSs);
+
+    XV_tpg_DisableAutoRestart(&Tpg);
+    XV_tpg_Set_height(&Tpg, s->Timing.VActive);
+    XV_tpg_Set_width(&Tpg,  s->Timing.HActive);
+    XV_tpg_Set_colorFormat(&Tpg, s->ColorFormatId);
+    XV_tpg_Set_bckgndId(&Tpg, Pattern);
+    XV_tpg_Set_ovrlayId(&Tpg, 0);
+    XV_tpg_Set_enableInput(&Tpg, FALSE);   /* not pass-through */
+    XV_tpg_EnableAutoRestart(&Tpg);
+    XV_tpg_Start(&Tpg);
+}
+
+/* ---- HDMI TX SS callbacks ---- */
+static void TxConnectCallback(void *ref)
+{
+    XV_HdmiTxSs *p = (XV_HdmiTxSs *)ref;
+    if (p->IsStreamConnected == FALSE) {
+        xil_printf("TX: cable disconnected\r\n");
+        TxRestartColorbar = FALSE;
+        TxBusy = TRUE;
+        XVphy_IBufDsEnable(&Vphy, 0, XVPHY_DIR_TX, FALSE);
+    } else {
+        xil_printf("TX: cable connected (HPD)\r\n");
+        XVphy_IBufDsEnable(&Vphy, 0, XVPHY_DIR_TX, TRUE);
+        TxRestartColorbar = TRUE;
+        TxBusy = FALSE;
+    }
+}
+
+static void TxStreamUpCallback(void *ref)
+{
+    XV_HdmiTxSs *p = (XV_HdmiTxSs *)ref;
+    g_streamup++;
+    xil_printf("TX: stream UP -> GT TX locked, starting colorbar\r\n");
+    XV_HdmiTxSS_SetHdmiMode(p);
+    XV_HdmiTxSs_AudioMute(p, TRUE);
+    ConfigTpgColorbar();
+    XV_HdmiTxSs_StreamStart(p);
+    TxBusy = FALSE;
+}
+
+static void TxStreamDownCallback(void *ref)
+{
+    (void)ref;
+    g_streamdown++;
+}
+
+/* ---- VPHY callbacks ---- */
+static void VphyHdmiTxInitCallback(void *ref)
+{
+    (void)ref;
+    g_txinit++;
+    XV_HdmiTxSs_RefClockChangeInit(&HdmiTxSs);
+}
+static void VphyHdmiTxReadyCallback(void *ref) { (void)ref; g_txready++; }
+
+/* ---- start colorbar at a given mode (reprograms the clock chip) ---- */
+static void EnableColorBar(XVidC_VideoMode mode)
+{
+    u32 TmdsClock;
+
+    TxBusy = TRUE;
+    XVphy_Clkout1OBufTdsEnable(&Vphy, XVPHY_DIR_TX, FALSE);
+
+    TmdsClock = XV_HdmiTxSs_SetStream(&HdmiTxSs, mode,
+                                      XVIDC_CSF_RGB, XVIDC_BPC_8, NULL);
+
+    XVidC_VideoStream *s = XV_HdmiTxSs_GetVideoStream(&HdmiTxSs);
+    Vphy.HdmiTxRefClkHz = TmdsClock;
+
+    if (XVphy_SetHdmiTxParam(&Vphy, 0, XVPHY_CHANNEL_ID_CHA,
+                             s->PixPerClk, s->ColorDepth,
+                             s->ColorFormatId) == XST_FAILURE) {
+        xil_printf("TX: SetHdmiTxParam failed for this mode\r\n");
+        TxBusy = FALSE;
         return;
     }
-    XGpio_SetDataDirection(&rst_gpio, RST_GPIO_CH, 0x0);   /* output */
-    XGpio_DiscreteWrite(&rst_gpio, RST_GPIO_CH, 0x1);      /* released */
-    usleep(50000);
-}
 
-static void iic_reset(void)
-{
-    XIic_WriteReg(IIC_BASE, XIIC_RESETR_OFFSET, XIIC_RESET_MASK);
-    usleep(2000);
-}
+    /* Reprogram the 8T49N241 to the video mode's TMDS clock (free-run).
+     * FIn must be the 40 MHz crystal for the divider math. */
+    xil_printf("TX: programming 8T49N241 to %lu Hz (TMDS clk)\r\n",
+               (unsigned long)TmdsClock);
+    IDT_8T49N24x_SetClock(IIC_BASE, IDT_ADDR,
+                          IDT_8T49N24X_XTAL_FREQ, (int)TmdsClock, TRUE);
 
-/* Open the mux channel that exposes the clock generator. */
-static int mux_select(u8 channel_byte)
-{
-    iic_reset();
-    int n = XIic_Send(IIC_BASE, I2C_MUX_ADDR, &channel_byte, 1, XIIC_STOP);
-    xil_printf("I2C mux 0x%02x <= 0x%02x : %s\r\n", I2C_MUX_ADDR, channel_byte,
-               (n == 1) ? "ACK" : "no ACK");
-    return (n == 1);
-}
-
-/* Try Init at the given address; prints the device ID. Returns success. */
-static int idt_try(u8 addr)
-{
-    xil_printf("8T49N241: Init at 0x%02x ...\r\n", addr);
-    return (IDT_8T49N24x_Init(IIC_BASE, addr) == XST_SUCCESS);
-}
-
-/* Fallback: sweep every mux channel and full-range scan behind each, so we
- * can see exactly where the chip is if the assumed values are wrong. */
-static void mux_discovery_scan(void)
-{
-    xil_printf("--- mux discovery: sweeping channels, scanning 0x08-0x7F ---\r\n");
-    for (int ch = 0; ch < 8; ch++) {
-        u8 chbyte = (u8)(1u << ch);
-        iic_reset();
-        if (XIic_Send(IIC_BASE, I2C_MUX_ADDR, &chbyte, 1, XIIC_STOP) != 1)
-            continue;
-        for (u8 a = 0x08; a <= 0x7F; a++) {
-            u8 z = 0x00;
-            iic_reset();
-            if (XIic_Send(IIC_BASE, a, &z, 1, XIIC_STOP) == 1)
-                xil_printf("  ch 0x%02x : write-ACK at 0x%02x\r\n", chbyte, a);
-        }
+    /* One-shot: give the PLL time to lock, then dump the chip's registers so
+     * we can see whether it's actually configured/locked and outputting. */
+    static int dumped = 0;
+    if (!dumped) {
+        dumped = 1;
+        usleep(200000);
+        xil_printf("--- 8T49N241 register dump ---\r\n");
+        IDT_8T49N24x_RegisterDump(IIC_BASE, IDT_ADDR);
+        xil_printf("--- end dump ---\r\n");
     }
-    xil_printf("--- end discovery ---\r\n");
+}
+
+static int SetupInterrupts(void)
+{
+    int Status = XIntc_Initialize(&Intc, INTC_BASE);
+    if (Status != XST_SUCCESS) { xil_printf("intc init failed\r\n"); return XST_FAILURE; }
+
+    XIntc_Connect(&Intc, INTR_HDMITX,
+                  (XInterruptHandler)XV_HdmiTxSS_HdmiTxIntrHandler, &HdmiTxSs);
+    XIntc_Connect(&Intc, INTR_VPHY,
+                  (XInterruptHandler)XVphy_InterruptHandler, &Vphy);
+
+    XIntc_Start(&Intc, XIN_REAL_MODE);
+    XIntc_Enable(&Intc, INTR_HDMITX);
+    XIntc_Enable(&Intc, INTR_VPHY);
+
+    Xil_ExceptionInit();
+    Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+                                 (Xil_ExceptionHandler)XIntc_InterruptHandler, &Intc);
+    return XST_SUCCESS;
 }
 
 int main(void)
 {
-    unsigned int count = 0;
-    int ok = 0;
-    u8 used_addr = 0;
+    unsigned hb = 0;
 
-    xil_printf("\r\n=== microblaze_0 alive: out of reset, 100 MHz clock locked ===\r\n");
+    /* Print a few times up front so a late-attached JTAG-UART terminal still
+     * catches signs of life (this firmware is otherwise event-driven). */
+    for (int i = 0; i < 3; i++) {
+        xil_printf("\r\n=== HDMI TX colorbar bring-up (boot) ===\r\n");
+        usleep(300000);
+    }
 
+    /* 1) Clock chip out of reset + load base config. */
+    xil_printf("step1: releasing 8T49N241 reset...\r\n");
     idt_release_reset();
+    usleep(200000);
+    xil_printf("step1: IDT init...\r\n");
+    if (IDT_8T49N24x_Init(IIC_BASE, IDT_ADDR) != XST_SUCCESS)
+        xil_printf("WARN: 8T49N241 Init failed at 0x7C\r\n");
 
-    /* Proven path: open mux channel, then talk to the clock chip at 0x7C. */
-    mux_select(I2C_MUX_CH_CLK);
+    /* 2) Interrupt controller. */
+    xil_printf("step2: interrupts...\r\n");
+    if (SetupInterrupts() != XST_SUCCESS) return XST_FAILURE;
 
-    if (idt_try(IDT_ADDR)) {
-        ok = 1; used_addr = IDT_ADDR;
-    } else if (idt_try(IDT_ADDR_ALT)) {
-        ok = 1; used_addr = IDT_ADDR_ALT;
+    /* 3) HDMI TX subsystem. */
+    xil_printf("step3: HDMI TX SS...\r\n");
+    XV_HdmiTxSs_Config *txcfg = XV_HdmiTxSs_LookupConfig(HDMITX_BASE);
+    if (!txcfg || XV_HdmiTxSs_CfgInitialize(&HdmiTxSs, txcfg, txcfg->BaseAddress)
+                  != XST_SUCCESS) {
+        xil_printf("HDMI TX SS init failed\r\n"); return XST_FAILURE;
+    }
+    XV_HdmiTxSs_SetCallback(&HdmiTxSs, XV_HDMITXSS_HANDLER_CONNECT,
+                            (void *)TxConnectCallback, &HdmiTxSs);
+    XV_HdmiTxSs_SetCallback(&HdmiTxSs, XV_HDMITXSS_HANDLER_STREAM_UP,
+                            (void *)TxStreamUpCallback, &HdmiTxSs);
+    XV_HdmiTxSs_SetCallback(&HdmiTxSs, XV_HDMITXSS_HANDLER_STREAM_DOWN,
+                            (void *)TxStreamDownCallback, &HdmiTxSs);
+
+    /* 4) Video PHY. */
+    xil_printf("step4: VPHY...\r\n");
+    XVphy_Config *vcfg = XVphy_LookupConfig(VPHY_BASE);
+    if (!vcfg || XVphy_Hdmi_CfgInitialize(&Vphy, 0, vcfg) != XST_SUCCESS) {
+        xil_printf("VPHY init failed\r\n"); return XST_FAILURE;
+    }
+    XVphy_SetHdmiCallback(&Vphy, XVPHY_HDMI_HANDLER_TXINIT,
+                          (void *)VphyHdmiTxInitCallback, &Vphy);
+    XVphy_SetHdmiCallback(&Vphy, XVPHY_HDMI_HANDLER_TXREADY,
+                          (void *)VphyHdmiTxReadyCallback, &Vphy);
+
+    /* 5) TPG. */
+    xil_printf("step5: TPG...\r\n");
+    XV_tpg_Config *tcfg = XV_tpg_LookupConfig(TPG_BASE);
+    if (!tcfg || XV_tpg_CfgInitialize(&Tpg, tcfg, tcfg->BaseAddress)
+                 != XST_SUCCESS) {
+        xil_printf("TPG init failed\r\n"); return XST_FAILURE;
     }
 
-    if (!ok) {
-        xil_printf("8T49N241: not found at 0x7C/0x6C on mux channel 0x%02x.\r\n",
-                   I2C_MUX_CH_CLK);
-        mux_discovery_scan();   /* tell us the real channel/address */
-    } else {
-        xil_printf("8T49N241: Init OK at 0x%02x. Setting free-run %d Hz ...\r\n",
-                   used_addr, GT_REFCLK_HZ);
-        int rc = IDT_8T49N24x_SetClock(IIC_BASE, used_addr,
-                                       0 /*FIn*/, GT_REFCLK_HZ /*FOut*/,
-                                       TRUE /*FreeRun*/);
-        if (rc == XST_SUCCESS)
-            xil_printf("8T49N241: clock configured. GT refclk should be live.\r\n");
-        else
-            xil_printf("8T49N241: SetClock failed (rc=%d).\r\n", rc);
-    }
+    /* 6) Go. */
+    Xil_ExceptionEnable();
+    XV_HdmiTxSs_SetStream(&HdmiTxSs, XVIDC_VM_1920x1080_60_P,
+                          XVIDC_CSF_RGB, XVIDC_BPC_8, NULL);
+    xil_printf("Init done. Connect an HDMI monitor (waiting for HPD)...\r\n");
 
     while (1) {
-        xil_printf("MB alive #%u\r\n", count++);
-        for (volatile int i = 0; i < 5000000; i++) {
-            ;
+        if (TxRestartColorbar) {
+            TxRestartColorbar = FALSE;
+            EnableColorBar(XVIDC_VM_1920x1080_60_P);
         }
-    }
 
+        /* Heartbeat + live state so the terminal is never silent.
+         * txRefHz = VPHY clock-detector reading; txinit/ready = VPHY ISR
+         * callbacks fired; up = HDMI stream-up. All-zero callbacks => the
+         * VPHY interrupt isn't being delivered. */
+        u32 txRefHz = XVphy_ClkDetGetRefClkFreqHz(&Vphy, XVPHY_DIR_TX);
+        xil_printf("hb #%u: conn=%d busy=%d txRefHz=%lu | txinit=%lu ready=%lu up=%lu down=%lu\r\n",
+                   hb++, (int)HdmiTxSs.IsStreamConnected, (int)TxBusy,
+                   (unsigned long)txRefHz, (unsigned long)g_txinit,
+                   (unsigned long)g_txready, (unsigned long)g_streamup,
+                   (unsigned long)g_streamdown);
+        for (volatile int i = 0; i < 8000000; i++) { ; }
+    }
     return 0;
 }

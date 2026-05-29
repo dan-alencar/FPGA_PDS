@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Fri May 29 18:27:08 2026
+//Date        : Fri May 29 20:29:06 2026
 //Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
 //Command     : generate_target hdmi_tx_bd.bd
 //Design      : hdmi_tx_bd
@@ -247,7 +247,7 @@ module hdmi_tx_bd
   wire [0:1]microblaze_0_interrupt_ACK;
   wire [31:0]microblaze_0_interrupt_ADDRESS;
   wire microblaze_0_interrupt_INTERRUPT;
-  wire [1:0]microblaze_0_intr;
+  wire [2:0]microblaze_0_intr;
   wire [0:0]rst_microblaze_0_clk_wiz_1_100M_bus_struct_reset;
   wire rst_microblaze_0_clk_wiz_1_100M_mb_reset;
   wire [0:0]rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn;
@@ -259,6 +259,7 @@ module hdmi_tx_bd
   wire [0:0]v_tpg_0_m_axis_video_TLAST;
   wire [0:0]v_tpg_0_m_axis_video_TUSER;
   wire v_tpg_0_m_axis_video_TVALID;
+  wire vid_phy_controller_0_irq;
   wire vid_phy_controller_0_tx_video_clk;
   wire [7:0]vid_phy_controller_0_vid_phy_status_sb_tx_tdata;
   wire vid_phy_controller_0_vid_phy_status_sb_tx_tvalid;
@@ -597,7 +598,7 @@ module hdmi_tx_bd
         .ILMB_wait(microblaze_0_ilmb_1_WAIT),
         .LMB_Clk(microblaze_0_Clk),
         .SYS_Rst(rst_microblaze_0_clk_wiz_1_100M_bus_struct_reset));
-  assign microblaze_0_intr = {axi_iic_0_iic2intc_irpt, v_hdmi_tx_ss_0_irq};
+  assign microblaze_0_intr = {vid_phy_controller_0_irq, axi_iic_0_iic2intc_irpt, v_hdmi_tx_ss_0_irq};
   hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0 rst_microblaze_0_clk_wiz_1_100M
        (.aux_reset_in(1'b1),
         .bus_struct_reset(rst_microblaze_0_clk_wiz_1_100M_bus_struct_reset),
@@ -689,11 +690,12 @@ module hdmi_tx_bd
         .s_axi_CTRL_WVALID(microblaze_0_axi_periph_M03_AXI_WVALID));
   hdmi_tx_bd_vid_phy_controller_0_0 vid_phy_controller_0
        (.drpclk(microblaze_0_Clk),
+        .irq(vid_phy_controller_0_irq),
         .mgtrefclk0_pad_n_in(HDMI_CLK_8T49N241_N),
         .mgtrefclk0_pad_p_in(HDMI_CLK_8T49N241_P),
         .phy_txn_out(hdmi_tx_n),
         .phy_txp_out(hdmi_tx_p),
-        .tx_refclk_rdy(1'b0),
+        .tx_refclk_rdy(HDMI_TX_EN),
         .tx_tmds_clk_n(HDMI_TX_CLK_N),
         .tx_tmds_clk_p(HDMI_TX_CLK_P),
         .tx_video_clk(vid_phy_controller_0_tx_video_clk),

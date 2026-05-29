@@ -2,8 +2,8 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Wed Jan 21 15:11:49 2026
--- Host        : dan-alencar running 64-bit Linux Mint 22.2
+-- Date        : Fri May 29 19:24:47 2026
+-- Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
 -- Command     : write_vhdl -force -mode synth_stub -rename_top hdmi_tx_bd_microblaze_0_axi_intc_0 -prefix
 --               hdmi_tx_bd_microblaze_0_axi_intc_0_ hdmi_tx_bd_microblaze_0_axi_intc_0_stub.vhdl
 -- Design      : hdmi_tx_bd_microblaze_0_axi_intc_0
@@ -34,7 +34,7 @@ entity hdmi_tx_bd_microblaze_0_axi_intc_0 is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    intr : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    intr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     processor_clk : in STD_LOGIC;
     processor_rst : in STD_LOGIC;
     irq : out STD_LOGIC;
@@ -45,7 +45,7 @@ entity hdmi_tx_bd_microblaze_0_axi_intc_0 is
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of hdmi_tx_bd_microblaze_0_axi_intc_0 : entity is "hdmi_tx_bd_microblaze_0_axi_intc_0,axi_intc,{}";
   attribute core_generation_info : string;
-  attribute core_generation_info of hdmi_tx_bd_microblaze_0_axi_intc_0 : entity is "hdmi_tx_bd_microblaze_0_axi_intc_0,axi_intc,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_intc,x_ipVersion=4.1,x_ipCoreRevision=22,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=kintexuplus,C_INSTANCE=hdmi_tx_bd_microblaze_0_axi_intc_0,C_S_AXI_ADDR_WIDTH=9,C_S_AXI_DATA_WIDTH=32,C_NUM_INTR_INPUTS=2,C_NUM_SW_INTR=3,C_KIND_OF_INTR=0xfffffff8,C_KIND_OF_EDGE=0xffffffff,C_KIND_OF_LVL=0xffffffff,C_ASYNC_INTR=0xFFFFFFFD,C_NUM_SYNC_FF=2,C_ADDR_WIDTH=32,C_IVAR_RESET_VALUE=0x0000000000000010,C_ENABLE_ASYNC=0,C_HAS_IPR=1,C_HAS_SIE=1,C_HAS_CIE=1,C_HAS_IVR=1,C_HAS_ILR=0,C_IRQ_IS_LEVEL=1,C_IRQ_ACTIVE=0x1,C_DISABLE_SYNCHRONIZERS=1,C_MB_CLK_NOT_CONNECTED=1,C_HAS_FAST=1,C_EN_CASCADE_MODE=0,C_CASCADE_MASTER=0}";
+  attribute core_generation_info of hdmi_tx_bd_microblaze_0_axi_intc_0 : entity is "hdmi_tx_bd_microblaze_0_axi_intc_0,axi_intc,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_intc,x_ipVersion=4.1,x_ipCoreRevision=22,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=kintexuplus,C_INSTANCE=hdmi_tx_bd_microblaze_0_axi_intc_0,C_S_AXI_ADDR_WIDTH=9,C_S_AXI_DATA_WIDTH=32,C_NUM_INTR_INPUTS=3,C_NUM_SW_INTR=3,C_KIND_OF_INTR=0xfffffff8,C_KIND_OF_EDGE=0xffffffff,C_KIND_OF_LVL=0xffffffff,C_ASYNC_INTR=0xFFFFFFFD,C_NUM_SYNC_FF=2,C_ADDR_WIDTH=32,C_IVAR_RESET_VALUE=0x0000000000000010,C_ENABLE_ASYNC=0,C_HAS_IPR=1,C_HAS_SIE=1,C_HAS_CIE=1,C_HAS_IVR=1,C_HAS_ILR=0,C_IRQ_IS_LEVEL=1,C_IRQ_ACTIVE=0x1,C_DISABLE_SYNCHRONIZERS=1,C_MB_CLK_NOT_CONNECTED=1,C_HAS_FAST=1,C_EN_CASCADE_MODE=0,C_CASCADE_MASTER=0}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of hdmi_tx_bd_microblaze_0_axi_intc_0 : entity is "yes";
 end hdmi_tx_bd_microblaze_0_axi_intc_0;
@@ -54,7 +54,7 @@ architecture stub of hdmi_tx_bd_microblaze_0_axi_intc_0 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "s_axi_aclk,s_axi_aresetn,s_axi_awaddr[8:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[8:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,intr[1:0],processor_clk,processor_rst,irq,processor_ack[1:0],interrupt_address[31:0]";
+  attribute black_box_pad_pin of stub : architecture is "s_axi_aclk,s_axi_aresetn,s_axi_awaddr[8:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[8:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,intr[2:0],processor_clk,processor_rst,irq,processor_ack[1:0],interrupt_address[31:0]";
   attribute x_interface_info : string;
   attribute x_interface_info of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 s_axi_aclk CLK";
   attribute x_interface_mode : string;
@@ -85,7 +85,7 @@ architecture stub of hdmi_tx_bd_microblaze_0_axi_intc_0 is
   attribute x_interface_info of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 s_axi RREADY";
   attribute x_interface_info of intr : signal is "xilinx.com:signal:interrupt:1.0 interrupt_input INTERRUPT";
   attribute x_interface_mode of intr : signal is "slave interrupt_input";
-  attribute x_interface_parameter of intr : signal is "XIL_INTERFACENAME interrupt_input, SENSITIVITY LEVEL_HIGH:LEVEL_HIGH, PortWidth 2";
+  attribute x_interface_parameter of intr : signal is "XIL_INTERFACENAME interrupt_input, SENSITIVITY LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH, PortWidth 3";
   attribute x_interface_info of processor_clk : signal is "xilinx.com:signal:clock:1.0 proc_clock CLK";
   attribute x_interface_mode of processor_clk : signal is "slave proc_clock";
   attribute x_interface_parameter of processor_clk : signal is "XIL_INTERFACENAME proc_clock, ASSOCIATED_BUSIF interrupt, ASSOCIATED_RESET processor_rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, INSERT_VIP 0";

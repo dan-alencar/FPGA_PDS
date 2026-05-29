@@ -215,7 +215,7 @@
             "V4": {
                 "VT": "AC",
                 "BA": "0x00000000",
-                "HA": "0x0001FFFF",
+                "HA": "0x0003FFFF",
                 "BP": "C_BASEADDR",
                 "HP": "C_HIGHADDR",
                 "MA": "Data",
@@ -233,7 +233,7 @@
             "V5": {
                 "VT": "AC",
                 "BA": "0x00000000",
-                "HA": "0x0001FFFF",
+                "HA": "0x0003FFFF",
                 "BP": "C_BASEADDR",
                 "HP": "C_HIGHADDR",
                 "MA": "Instruction",

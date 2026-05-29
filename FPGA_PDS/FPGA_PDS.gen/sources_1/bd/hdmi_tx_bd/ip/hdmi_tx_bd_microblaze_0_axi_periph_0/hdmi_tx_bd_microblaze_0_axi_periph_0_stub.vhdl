@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Fri May 29 18:28:18 2026
+-- Date        : Fri May 29 18:28:16 2026
 -- Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/hdmi_tx_bd_microblaze_0_axi_periph_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top hdmi_tx_bd_microblaze_0_axi_periph_0 -prefix
+--               hdmi_tx_bd_microblaze_0_axi_periph_0_ hdmi_tx_bd_microblaze_0_axi_periph_0_stub.vhdl
 -- Design      : hdmi_tx_bd_microblaze_0_axi_periph_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcau15p-ffvb676-2-e

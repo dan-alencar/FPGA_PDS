@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-// Date        : Thu Jan 22 13:51:48 2026
+// Date        : Thu Jan 22 13:51:47 2026
 // Host        : DESKTOP-6GRI2EI running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_proc_sys_reset_0_0/hdmi_tx_bd_proc_sys_reset_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top hdmi_tx_bd_proc_sys_reset_0_0 -prefix
+//               hdmi_tx_bd_proc_sys_reset_0_0_ hdmi_tx_bd_proc_sys_reset_0_0_sim_netlist.v
 // Design      : hdmi_tx_bd_proc_sys_reset_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -70,7 +70,6 @@ module hdmi_tx_bd_proc_sys_reset_0_0
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "lpf" *) 
 module hdmi_tx_bd_proc_sys_reset_0_0_lpf
    (lpf_int,
     slowest_sync_clk,
@@ -261,7 +260,6 @@ endmodule
 (* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b0" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "kintexuplus" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
-(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module hdmi_tx_bd_proc_sys_reset_0_0_proc_sys_reset
    (slowest_sync_clk,
     ext_reset_in,
@@ -378,7 +376,6 @@ module hdmi_tx_bd_proc_sys_reset_0_0_proc_sys_reset
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "sequence_psr" *) 
 module hdmi_tx_bd_proc_sys_reset_0_0_sequence_psr
    (MB_out,
     Bsr_out,
@@ -619,7 +616,6 @@ module hdmi_tx_bd_proc_sys_reset_0_0_sequence_psr
         .R(lpf_int));
 endmodule
 
-(* ORIG_REF_NAME = "upcnt_n" *) 
 module hdmi_tx_bd_proc_sys_reset_0_0_upcnt_n
    (Q,
     seq_clr,
@@ -741,9 +737,9 @@ module hdmi_tx_bd_proc_sys_reset_0_0_upcnt_n
         .R(clear));
 endmodule
 
-(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
-(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* xpm_cdc = "SINGLE" *) 
+(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) 
+(* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) 
+(* keep_hierarchy = "soft" *) (* xpm_cdc = "SINGLE" *) 
 module hdmi_tx_bd_proc_sys_reset_0_0_xpm_cdc_single
    (src_clk,
     src_in,

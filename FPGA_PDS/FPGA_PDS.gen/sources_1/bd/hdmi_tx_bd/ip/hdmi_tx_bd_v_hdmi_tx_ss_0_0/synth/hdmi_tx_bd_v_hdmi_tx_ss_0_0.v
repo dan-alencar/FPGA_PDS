@@ -53,7 +53,7 @@
 (* X_CORE_INFO = "bd_2339,Vivado 2025.2" *)
 (* CHECK_LICENSE_TYPE = "hdmi_tx_bd_v_hdmi_tx_ss_0_0,bd_2339,{}" *)
 (* CORE_GENERATION_INFO = "hdmi_tx_bd_v_hdmi_tx_ss_0_0,bd_2339,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=v_hdmi_tx_ss,x_ipVersion=3.2,x_ipCoreRevision=16,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,Component_Name=hdmi_tx_bd_v_hdmi_tx_ss_0_0,C_INCLUDE_HDCP_1_4=false,C_INCLUDE_HDCP_2_2=false,C_MAX_BITS_PER_COMPONENT=8,C_INPUT_PIXELS_PER_CLOCK=4,C_HYSTERESIS_LEVEL=12,C_ADDR_WIDTH=10,C_INCLUDE_LOW_RESO_VID=true,C_VID_INTERFACE=0,C_INCLUDE_YUV420_SUP=true,C_VALIDATION_ENABLE=false,C_HDMI_FAST_SWIT\
-CH=false,C_SMARTCONNECT_ENABLE=false,C_HPD_INVERT=false,C_EXDES_TOPOLOGY=0,C_EXDES_TX_PLL_SELECTION=6,C_EXDES_RX_PLL_SELECTION=0,C_EXDES_NIDRU=true,C_HDMI_VERSION=3,C_DDC2_EN=0,C_CH_WIDTH=8,C_VIDEO_MASK_ENABLE=1,C_ADD_MARK_DBG=0,C_EXDES_AXILITE_FREQ=100,C_MAX_RES=0,x_ipLicense=v_hdmi@2017.10(hardware_evaluation)}" *)
+CH=false,C_SMARTCONNECT_ENABLE=false,C_HPD_INVERT=false,C_EXDES_TOPOLOGY=1,C_EXDES_TX_PLL_SELECTION=6,C_EXDES_RX_PLL_SELECTION=0,C_EXDES_NIDRU=false,C_HDMI_VERSION=3,C_DDC2_EN=0,C_CH_WIDTH=8,C_VIDEO_MASK_ENABLE=1,C_ADD_MARK_DBG=0,C_EXDES_AXILITE_FREQ=100,C_MAX_RES=0,x_ipLicense=v_hdmi@2017.10(hardware_evaluation)}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module hdmi_tx_bd_v_hdmi_tx_ss_0_0 (
   s_axi_cpu_aclk,

@@ -22,10 +22,10 @@
         "C_HDMI_FAST_SWITCH": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "C_SMARTCONNECT_ENABLE": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "C_HPD_INVERT": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
-        "C_EXDES_TOPOLOGY": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EXDES_TOPOLOGY": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_EXDES_TX_PLL_SELECTION": [ { "value": "6", "resolve_type": "user", "usage": "all" } ],
         "C_EXDES_RX_PLL_SELECTION": [ { "value": "0", "resolve_type": "user", "usage": "all" } ],
-        "C_EXDES_NIDRU": [ { "value": "true", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "C_EXDES_NIDRU": [ { "value": "false", "resolve_type": "user", "format": "bool", "enabled": false, "usage": "all" } ],
         "C_HDMI_VERSION": [ { "value": "3", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_DDC2_EN": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_CH_WIDTH": [ { "value": "8", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -495,5 +495,5 @@
       }
     }
   },
-  "checksum": "508beda8"
+  "checksum": "7da63a45"
 }

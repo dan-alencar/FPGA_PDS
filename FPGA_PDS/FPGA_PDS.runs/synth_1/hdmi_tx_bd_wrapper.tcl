@@ -59,7 +59,6 @@ OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
 set_param general.usePosixSpawnForFork 1
-set_param bd.open.in_stealth_mode 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xcau15p-ffvb676-2-e
 

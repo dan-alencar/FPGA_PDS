@@ -197,7 +197,7 @@
 			xlnx,s-axi-aclk-freq-mhz = <100>;
 			xlnx,num-sw-intr = <3>;
 			xlnx,irq-connection = <0>;
-			xlnx,num-intr-inputs = <0x2>;
+			xlnx,num-intr-inputs = <0x3>;
 			xlnx,has-sie = <1>;
 			xlnx,enable-async = <0>;
 			xlnx,has-cie = <1>;
@@ -323,7 +323,7 @@
 			xlnx,arbitration = <0>;
 			xlnx,num-lmb = <1>;
 			xlnx,mask4 = <0x800000>;
-			reg = <0x00000000 0x20000>;
+			reg = <0x00000000 0x40000>;
 			xlnx,s-axi-ctrl-addr-width = <32>;
 			xlnx,mask5 = <0x800000>;
 			xlnx,ecc-status-registers = <0>;
@@ -369,7 +369,7 @@
 			xlnx,arbitration = <0>;
 			xlnx,num-lmb = <1>;
 			xlnx,mask4 = <0x800000>;
-			reg = <0x00000000 0x20000>;
+			reg = <0x00000000 0x40000>;
 			xlnx,s-axi-ctrl-addr-width = <32>;
 			xlnx,mask5 = <0x800000>;
 			xlnx,ecc-status-registers = <0>;
@@ -402,7 +402,7 @@
 			interrupts = < 0 2 >;
 			compatible = "xlnx,v-hdmi-tx-ss-3.2" , "xlnx,v-hdmi-tx-ss-3.1";
 			xlnx,highaddr = <0x44a1ffff>;
-			xlnx,exdes-topology = <0>;
+			xlnx,exdes-topology = <1>;
 			hdcp14-present = <0>;
 			xlnx,video-mask-enable = <1>;
 			xlnx,hdmi-version = <3>;
@@ -414,7 +414,6 @@
 			reg = <0x44a00000 0x20000>;
 			xlnx,addr-width = <10>;
 			xlnx,ch-width = <8>;
-			xlnx,exdes-nidru;
 			xlnx,exdes-rx-pll-selection = <0>;
 			xlnx,vid-interface = <0>;
 			xlnx,max-bits-per-component = <8>;
@@ -506,6 +505,7 @@
 			xlnx,check-pll-selection = <0>;
 			xlnx,sub-core-name = "hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper";
 			xlnx,vid-phy-axi4lite-addr-width = <10>;
+			interrupt-names = "irq";
 			xlnx,rx-outclk-buffer = "none";
 			xlnx,vid-phy-control-sb-tx-tdata-width = <1>;
 			compatible = "xlnx,vid-phy-controller-2.2" , "xlnx,vid-phy-controller-2.1";
@@ -515,6 +515,7 @@
 			xlnx,hdmi-fast-switch = <1>;
 			xlnx,rx-video-clk-buffer = "bufg";
 			xlnx,channel-enable = "X0Y8 , X0Y9 , X0Y10";
+			interrupt-parent = <&microblaze_0_axi_intc>;
 			xlnx,transceiver = "GTHE4";
 			xlnx,nidru-refclk-sel = <0>;
 			xlnx,rx-gt-line-rate = <0x5aa320>;
@@ -531,6 +532,7 @@
 			xlnx,axi-aclk-freq-mhz = <0x5f5e100>;
 			xlnx,name = "vid_phy_controller_0";
 			xlnx,dru-gain-g1-p = <16>;
+			interrupts = < 2 2 >;
 			xlnx,rx-tdata-width = <40>;
 			xlnx,tx-pll-selection = <6>;
 			xlnx,vid-phy-tx-axi4s-ch-tdata-width = <40>;

@@ -28,8 +28,8 @@ XVphy_Config XVphy_ConfigTable[] __attribute__ ((section (".drvcfg_sec"))) = {
 		0x0, /* xlnx,rx-dp-protocol */
 		0x0, /* xlnx,tx-clk-primitive */
 		0x0, /* xlnx,rx-clk-primitive */
-		0xffff, /* interrupts */
-		0xffff /* interrupt-parent */
+		0x2002, /* interrupts */
+		0x41200001 /* interrupt-parent */
 	},
 	 {
 		 NULL
