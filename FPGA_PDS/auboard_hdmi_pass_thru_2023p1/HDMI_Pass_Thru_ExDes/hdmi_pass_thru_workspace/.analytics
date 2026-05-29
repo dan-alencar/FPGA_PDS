@@ -1,0 +1,725 @@
+timestamp=[2024-01-05 10:58:52], mode=WORKBENCH_START, duration=0:00:26.279, duration_ms=26279, data={}
+timestamp=[2024-01-05 10:58:52], mode=WORKBENCH_UI_INIT, duration=0:00:00.007, duration_ms=7, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2024-01-05 10:58:54], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.651, duration_ms=1651, data={}
+timestamp=[2024-01-05 10:59:50], mode=PLATFORM_CREATION, duration=0:00:06.152, duration_ms=6152, data={platform_source=dsa, os=standalone, processor=microblaze, platform=null}
+timestamp=[2024-01-05 11:00:21], mode=PLATFORM_GENERATION, duration=0:00:08.342, duration_ms=8342, data={name=hdmi_pass_thru_exdes}
+timestamp=[2024-01-05 11:01:54], mode=APP_CREATION, duration=0:00:02.949, duration_ms=2949, data={name=Passthrough_Microblaze_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=hdmi_pass_thru_exdes, application_type=application}
+timestamp=[2024-01-05 11:02:59], mode=BUILD, duration=0:00:01.845, duration_ms=1845, data={name=Passthrough_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-01-05 11:03:00], mode=BUILD, duration=0:00:00.183, duration_ms=183, data={name=Passthrough_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-01-06 01:15:42], mode=WORKBENCH_START, duration=0:00:07.056, duration_ms=7056, data={}
+timestamp=[2024-01-06 01:15:42], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.448, duration_ms=448, data={}
+timestamp=[2024-01-06 01:15:42], mode=WORKBENCH_UI_INIT, duration=0:00:00.311, duration_ms=311, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=0, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,RemoteSystemsTempFiles,hdmi_pass_thru_exdes}
+timestamp=[2024-01-06 01:16:44], mode=PLATFORM_CREATION, duration=0:00:01.755, duration_ms=1755, data={platform_source=dsa, os=standalone, processor=microblaze, platform=null}
+timestamp=[2024-01-06 01:16:57], mode=PLATFORM_GENERATION, duration=0:00:08.120, duration_ms=8120, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-01-06 01:17:14], mode=APP_CREATION, duration=0:00:02.441, duration_ms=2441, data={name=Passthrough_Microblaze_2, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi_pass_thru, application_type=application}
+timestamp=[2024-01-06 01:17:47], mode=BUILD, duration=0:00:01.747, duration_ms=1747, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-01-06 01:17:48], mode=BUILD, duration=0:00:00.186, duration_ms=186, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-01-08 12:44:53], mode=WORKBENCH_START, duration=0:00:09.609, duration_ms=9609, data={}
+timestamp=[2024-01-08 12:44:53], mode=WORKBENCH_UI_INIT, duration=0:00:00.102, duration_ms=102, data={editors_count=0, platform_editors_count=0, projects_count=7, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,aup_hdmi_pass_thru,hdmi_pass_thru_exdes}
+timestamp=[2024-01-08 12:44:54], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.512, duration_ms=512, data={}
+timestamp=[2024-01-08 12:45:32], mode=PLATFORM_GENERATION, duration=0:00:08.660, duration_ms=8660, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-01-08 12:47:10], mode=APP_CREATION, duration=0:00:02.072, duration_ms=2072, data={name=Passthrough_Microblaze_2, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi_pass_thru, application_type=application}
+timestamp=[2024-01-08 12:47:11], mode=APP_CREATION, duration=0:00:00.785, duration_ms=785, data={name=TxOnly_Microblaze_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi_pass_thru, application_type=application}
+timestamp=[2024-01-08 12:47:12], mode=APP_CREATION, duration=0:00:01.085, duration_ms=1085, data={name=hdcp_key_utility_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi_pass_thru, application_type=application}
+timestamp=[2024-01-08 12:47:56], mode=PLATFORM_GENERATION, duration=0:00:05.222, duration_ms=5222, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-01-08 12:47:58], mode=BUILD, duration=0:00:01.230, duration_ms=1230, data={name=hdcp_key_utility_1, configuration=Debug, clean_build=false}
+timestamp=[2024-01-08 12:47:59], mode=BUILD, duration=0:00:00.181, duration_ms=181, data={name=hdcp_key_utility_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-01-08 12:48:06], mode=BUILD, duration=0:00:01.598, duration_ms=1598, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-01-08 12:48:07], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-01-08 12:48:15], mode=BUILD, duration=0:00:01.535, duration_ms=1535, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-01-08 12:48:15], mode=BUILD, duration=0:00:00.185, duration_ms=185, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-12 19:24:53], mode=WORKBENCH_START, duration=0:00:23.862, duration_ms=23862, data={}
+timestamp=[2024-03-12 19:24:53], mode=WORKBENCH_UI_INIT, duration=0:00:00.074, duration_ms=74, data={editors_count=0, platform_editors_count=0, projects_count=11, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi_pass_thru,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes}
+timestamp=[2024-03-12 19:24:57], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:03.141, duration_ms=3141, data={}
+timestamp=[2024-03-12 19:27:38], mode=PLATFORM_GENERATION, duration=0:00:05.836, duration_ms=5836, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 19:27:57], mode=PLATFORM_GENERATION, duration=0:00:13.310, duration_ms=13310, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 19:28:51], mode=PLATFORM_GENERATION, duration=0:00:05.226, duration_ms=5226, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 19:28:52], mode=BUILD, duration=0:00:00.237, duration_ms=237, data={name=hdcp_key_utility_1, configuration=Debug, clean_build=true}
+timestamp=[2024-03-12 19:28:52], mode=BUILD, duration=0:00:00.190, duration_ms=190, data={name=hdcp_key_utility_1_system, configuration=Debug, clean_build=true}
+timestamp=[2024-03-12 19:29:05], mode=PLATFORM_GENERATION, duration=0:00:07.830, duration_ms=7830, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 19:29:07], mode=BUILD, duration=0:00:01.283, duration_ms=1283, data={name=hdcp_key_utility_1, configuration=Debug, clean_build=false}
+timestamp=[2024-03-12 19:29:08], mode=BUILD, duration=0:00:00.199, duration_ms=199, data={name=hdcp_key_utility_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-12 19:29:19], mode=PLATFORM_GENERATION, duration=0:00:05.265, duration_ms=5265, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 19:29:19], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=true}
+timestamp=[2024-03-12 19:29:20], mode=BUILD, duration=0:00:00.181, duration_ms=181, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=true}
+timestamp=[2024-03-12 19:29:33], mode=PLATFORM_GENERATION, duration=0:00:07.832, duration_ms=7832, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 19:29:35], mode=BUILD, duration=0:00:01.679, duration_ms=1679, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-03-12 19:29:36], mode=BUILD, duration=0:00:00.175, duration_ms=175, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-12 19:29:45], mode=PLATFORM_GENERATION, duration=0:00:05.268, duration_ms=5268, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 19:29:45], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=true}
+timestamp=[2024-03-12 19:29:45], mode=BUILD, duration=0:00:00.186, duration_ms=186, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=true}
+timestamp=[2024-03-12 19:29:57], mode=PLATFORM_GENERATION, duration=0:00:07.776, duration_ms=7776, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 19:30:00], mode=BUILD, duration=0:00:01.647, duration_ms=1647, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-03-12 19:30:00], mode=BUILD, duration=0:00:00.175, duration_ms=175, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-12 19:54:38], mode=WORKBENCH_START, duration=0:00:29.011, duration_ms=29011, data={}
+timestamp=[2024-03-12 19:54:38], mode=WORKBENCH_UI_INIT, duration=0:00:00.111, duration_ms=111, data={editors_count=0, platform_editors_count=0, projects_count=11, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi_pass_thru,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes}
+timestamp=[2024-03-12 19:54:39], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.493, duration_ms=493, data={}
+timestamp=[2024-03-12 20:12:53], mode=PLATFORM_GENERATION, duration=0:00:05.317, duration_ms=5317, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 20:14:45], mode=PLATFORM_GENERATION, duration=0:00:08.487, duration_ms=8487, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 20:15:53], mode=PLATFORM_GENERATION, duration=0:00:05.307, duration_ms=5307, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 20:15:53], mode=BUILD, duration=0:00:00.193, duration_ms=193, data={name=hdcp_key_utility_1, configuration=Debug, clean_build=true}
+timestamp=[2024-03-12 20:15:53], mode=BUILD, duration=0:00:00.184, duration_ms=184, data={name=hdcp_key_utility_1_system, configuration=Debug, clean_build=true}
+timestamp=[2024-03-12 20:15:58], mode=PLATFORM_GENERATION, duration=0:00:04.916, duration_ms=4916, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 20:15:59], mode=BUILD, duration=0:00:00.174, duration_ms=174, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=true}
+timestamp=[2024-03-12 20:15:59], mode=BUILD, duration=0:00:00.179, duration_ms=179, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=true}
+timestamp=[2024-03-12 20:16:04], mode=PLATFORM_GENERATION, duration=0:00:04.798, duration_ms=4798, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 20:16:04], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=true}
+timestamp=[2024-03-12 20:16:04], mode=BUILD, duration=0:00:00.181, duration_ms=181, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=true}
+timestamp=[2024-03-12 20:18:50], mode=PLATFORM_GENERATION, duration=0:00:07.875, duration_ms=7875, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-12 20:18:52], mode=BUILD, duration=0:00:01.643, duration_ms=1643, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-03-12 20:18:53], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-12 20:18:55], mode=BUILD, duration=0:00:01.479, duration_ms=1479, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-03-12 20:18:55], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-12 20:18:57], mode=BUILD, duration=0:00:01.028, duration_ms=1028, data={name=hdcp_key_utility_1, configuration=Debug, clean_build=false}
+timestamp=[2024-03-12 20:18:57], mode=BUILD, duration=0:00:00.170, duration_ms=170, data={name=hdcp_key_utility_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-13 10:19:41], mode=WORKBENCH_START, duration=0:02:14.872, duration_ms=134872, data={}
+timestamp=[2024-03-13 10:19:41], mode=WORKBENCH_UI_INIT, duration=0:00:00.121, duration_ms=121, data={editors_count=0, platform_editors_count=0, projects_count=11, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi_pass_thru,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes}
+timestamp=[2024-03-13 10:19:41], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.443, duration_ms=443, data={}
+timestamp=[2024-03-13 10:20:27], mode=APP_CREATION, duration=0:00:01.291, duration_ms=1291, data={name=hello, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi_pass_thru, application_type=application}
+timestamp=[2024-03-13 10:24:44], mode=BUILD, duration=0:00:00.455, duration_ms=455, data={name=hello, configuration=Debug, clean_build=false}
+timestamp=[2024-03-13 10:24:44], mode=BUILD, duration=0:00:00.183, duration_ms=183, data={name=hello_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-13 14:58:10], mode=PLATFORM_GENERATION, duration=0:00:05.403, duration_ms=5403, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-13 15:00:03], mode=PLATFORM_GENERATION, duration=0:00:08.367, duration_ms=8367, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-13 15:00:29], mode=PLATFORM_GENERATION, duration=0:00:05.332, duration_ms=5332, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-13 15:00:29], mode=BUILD, duration=0:00:00.179, duration_ms=179, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=true}
+timestamp=[2024-03-13 15:00:29], mode=BUILD, duration=0:00:00.177, duration_ms=177, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=true}
+timestamp=[2024-03-13 15:00:40], mode=PLATFORM_GENERATION, duration=0:00:08.032, duration_ms=8032, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-13 15:00:42], mode=BUILD, duration=0:00:01.690, duration_ms=1690, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-03-13 15:00:43], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-13 15:46:08], mode=PLATFORM_GENERATION, duration=0:00:05.276, duration_ms=5276, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-13 15:46:33], mode=PLATFORM_GENERATION, duration=0:00:08.507, duration_ms=8507, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-13 15:46:51], mode=PLATFORM_GENERATION, duration=0:00:05.382, duration_ms=5382, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-13 15:46:51], mode=BUILD, duration=0:00:00.189, duration_ms=189, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=true}
+timestamp=[2024-03-13 15:46:51], mode=BUILD, duration=0:00:00.183, duration_ms=183, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=true}
+timestamp=[2024-03-13 15:46:59], mode=PLATFORM_GENERATION, duration=0:00:08.147, duration_ms=8147, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-13 15:47:02], mode=BUILD, duration=0:00:01.585, duration_ms=1585, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-03-13 15:47:03], mode=BUILD, duration=0:00:00.183, duration_ms=183, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-13 16:57:38], mode=PLATFORM_GENERATION, duration=0:00:05.373, duration_ms=5373, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-13 16:59:03], mode=PLATFORM_GENERATION, duration=0:00:08.737, duration_ms=8737, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-13 16:59:09], mode=PLATFORM_GENERATION, duration=0:00:05.374, duration_ms=5374, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-13 16:59:09], mode=BUILD, duration=0:00:00.183, duration_ms=183, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=true}
+timestamp=[2024-03-13 16:59:09], mode=BUILD, duration=0:00:00.191, duration_ms=191, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=true}
+timestamp=[2024-03-13 16:59:20], mode=PLATFORM_GENERATION, duration=0:00:08.050, duration_ms=8050, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-03-13 16:59:22], mode=BUILD, duration=0:00:01.595, duration_ms=1595, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-03-13 16:59:23], mode=BUILD, duration=0:00:00.185, duration_ms=185, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-13 17:02:04], mode=BUILD, duration=0:00:00.198, duration_ms=198, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-03-13 17:02:05], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-13 17:26:00], mode=BUILD, duration=0:00:00.451, duration_ms=451, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-03-13 17:26:01], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 10:26:45], mode=WORKBENCH_START, duration=0:00:10.377, duration_ms=10377, data={}
+timestamp=[2024-05-06 10:26:45], mode=WORKBENCH_UI_INIT, duration=0:00:00.126, duration_ms=126, data={editors_count=0, platform_editors_count=0, projects_count=11, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi_pass_thru,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes}
+timestamp=[2024-05-06 10:26:46], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.499, duration_ms=499, data={}
+timestamp=[2024-05-06 10:27:53], mode=PLATFORM_GENERATION, duration=0:00:09.342, duration_ms=9342, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-05-06 11:21:23], mode=BUILD, duration=0:00:01.808, duration_ms=1808, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 11:21:23], mode=BUILD, duration=0:00:00.183, duration_ms=183, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 11:25:50], mode=BUILD, duration=0:00:01.634, duration_ms=1634, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 11:25:51], mode=BUILD, duration=0:00:00.184, duration_ms=184, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 11:38:36], mode=BUILD, duration=0:00:01.186, duration_ms=1186, data={name=hdcp_key_utility_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 11:38:36], mode=BUILD, duration=0:00:00.184, duration_ms=184, data={name=hdcp_key_utility_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 11:38:40], mode=BUILD, duration=0:00:00.189, duration_ms=189, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=true}
+timestamp=[2024-05-06 11:38:42], mode=BUILD, duration=0:00:01.683, duration_ms=1683, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 11:38:43], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 11:38:46], mode=BUILD, duration=0:00:00.179, duration_ms=179, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 11:38:47], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:19:00], mode=APP_CREATION, duration=0:00:00.960, duration_ms=960, data={name=Passthrough_Microblaze_2, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi_pass_thru, application_type=application}
+timestamp=[2024-05-06 12:19:01], mode=APP_CREATION, duration=0:00:00.803, duration_ms=803, data={name=TxOnly_Microblaze_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi_pass_thru, application_type=application}
+timestamp=[2024-05-06 12:19:02], mode=APP_CREATION, duration=0:00:00.717, duration_ms=717, data={name=hdcp_key_utility_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi_pass_thru, application_type=application}
+timestamp=[2024-05-06 12:19:41], mode=APP_CREATION, duration=0:00:00.777, duration_ms=777, data={name=Passthrough_Microblaze_3, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi_pass_thru, application_type=application}
+timestamp=[2024-05-06 12:19:42], mode=APP_CREATION, duration=0:00:00.695, duration_ms=695, data={name=RxOnly_Microblaze_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi_pass_thru, application_type=application}
+timestamp=[2024-05-06 12:19:43], mode=APP_CREATION, duration=0:00:00.666, duration_ms=666, data={name=hdcp_key_utility_2, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi_pass_thru, application_type=application}
+timestamp=[2024-05-06 12:20:40], mode=APP_CREATION, duration=0:00:00.756, duration_ms=756, data={name=hello, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi_pass_thru, application_type=application}
+timestamp=[2024-05-06 12:20:52], mode=PLATFORM_GENERATION, duration=0:00:05.124, duration_ms=5124, data={name=aup_hdmi_pass_thru}
+timestamp=[2024-05-06 12:20:55], mode=BUILD, duration=0:00:01.699, duration_ms=1699, data={name=Passthrough_Microblaze_3, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:20:55], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=Passthrough_Microblaze_3_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:20:57], mode=BUILD, duration=0:00:01.631, duration_ms=1631, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:20:58], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:21:00], mode=BUILD, duration=0:00:01.731, duration_ms=1731, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:21:00], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:21:02], mode=BUILD, duration=0:00:01.636, duration_ms=1636, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:21:03], mode=BUILD, duration=0:00:00.184, duration_ms=184, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:21:04], mode=BUILD, duration=0:00:01.182, duration_ms=1182, data={name=hdcp_key_utility_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:21:04], mode=BUILD, duration=0:00:00.186, duration_ms=186, data={name=hdcp_key_utility_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:21:06], mode=BUILD, duration=0:00:01.135, duration_ms=1135, data={name=hdcp_key_utility_2, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:21:06], mode=BUILD, duration=0:00:00.190, duration_ms=190, data={name=hdcp_key_utility_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:21:07], mode=BUILD, duration=0:00:00.487, duration_ms=487, data={name=hello, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:21:08], mode=BUILD, duration=0:00:00.184, duration_ms=184, data={name=hello_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:24:11], mode=PLATFORM_CREATION, duration=0:00:01.479, duration_ms=1479, data={platform_source=dsa, os=standalone, processor=microblaze, platform=null}
+timestamp=[2024-05-06 12:24:25], mode=PLATFORM_GENERATION, duration=0:00:08.037, duration_ms=8037, data={name=aup_hdmi}
+timestamp=[2024-05-06 12:24:38], mode=APP_CREATION, duration=0:00:01.685, duration_ms=1685, data={name=Passthrough_Microblaze_2, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-05-06 12:24:39], mode=APP_CREATION, duration=0:00:00.746, duration_ms=746, data={name=TxOnly_Microblaze_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-05-06 12:24:40], mode=APP_CREATION, duration=0:00:00.773, duration_ms=773, data={name=hdcp_key_utility_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-05-06 12:25:16], mode=APP_CREATION, duration=0:00:00.782, duration_ms=782, data={name=RxOnly_Microblaze_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-05-06 12:25:38], mode=BUILD, duration=0:00:01.807, duration_ms=1807, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:25:39], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:25:40], mode=BUILD, duration=0:00:01.645, duration_ms=1645, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:25:41], mode=BUILD, duration=0:00:00.186, duration_ms=186, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:25:43], mode=BUILD, duration=0:00:01.737, duration_ms=1737, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:25:43], mode=BUILD, duration=0:00:00.184, duration_ms=184, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:25:45], mode=BUILD, duration=0:00:01.131, duration_ms=1131, data={name=hdcp_key_utility_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:25:45], mode=BUILD, duration=0:00:00.186, duration_ms=186, data={name=hdcp_key_utility_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:25:56], mode=APP_CREATION, duration=0:00:00.796, duration_ms=796, data={name=hello, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-05-06 12:26:03], mode=BUILD, duration=0:00:00.449, duration_ms=449, data={name=hello, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 12:26:04], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=hello_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 13:24:51], mode=PLATFORM_GENERATION, duration=0:00:08.439, duration_ms=8439, data={name=aup_hdmi}
+timestamp=[2024-05-06 13:25:35], mode=BUILD, duration=0:00:01.049, duration_ms=1049, data={name=hdcp_key_utility_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 13:25:36], mode=BUILD, duration=0:00:00.186, duration_ms=186, data={name=hdcp_key_utility_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 13:25:36], mode=BUILD, duration=0:00:00.495, duration_ms=495, data={name=hello, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 13:25:37], mode=BUILD, duration=0:00:00.197, duration_ms=197, data={name=hello_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 13:49:15], mode=BUILD, duration=0:00:01.644, duration_ms=1644, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 13:49:16], mode=BUILD, duration=0:00:00.181, duration_ms=181, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 13:52:20], mode=BUILD, duration=0:00:00.785, duration_ms=785, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 13:52:20], mode=BUILD, duration=0:00:00.184, duration_ms=184, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 14:04:12], mode=BUILD, duration=0:00:00.342, duration_ms=342, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 14:05:41], mode=BUILD, duration=0:00:00.303, duration_ms=303, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 14:05:55], mode=BUILD, duration=0:00:00.300, duration_ms=300, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 14:06:15], mode=BUILD, duration=0:00:00.507, duration_ms=507, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 14:06:16], mode=BUILD, duration=0:00:00.184, duration_ms=184, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 16:22:56], mode=WORKBENCH_START, duration=0:00:07.503, duration_ms=7503, data={}
+timestamp=[2024-05-06 16:22:56], mode=WORKBENCH_UI_INIT, duration=0:00:00.182, duration_ms=182, data={editors_count=0, platform_editors_count=0, projects_count=15, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes,hello,hello_system}
+timestamp=[2024-05-06 16:22:57], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.429, duration_ms=429, data={}
+timestamp=[2024-05-06 16:23:29], mode=PLATFORM_GENERATION, duration=0:00:08.552, duration_ms=8552, data={name=aup_hdmi}
+timestamp=[2024-05-06 16:23:37], mode=BUILD, duration=0:00:01.390, duration_ms=1390, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-06 16:23:38], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-07 10:13:23], mode=WORKBENCH_START, duration=0:00:08.428, duration_ms=8428, data={}
+timestamp=[2024-05-07 10:13:23], mode=WORKBENCH_UI_INIT, duration=0:00:00.140, duration_ms=140, data={editors_count=0, platform_editors_count=0, projects_count=15, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes,hello,hello_system}
+timestamp=[2024-05-07 10:13:24], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.482, duration_ms=482, data={}
+timestamp=[2024-05-07 10:28:08], mode=BUILD, duration=0:00:01.585, duration_ms=1585, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-05-07 10:28:09], mode=BUILD, duration=0:00:00.181, duration_ms=181, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-07 17:15:13], mode=WORKBENCH_START, duration=0:00:16.021, duration_ms=16021, data={}
+timestamp=[2024-05-07 17:15:13], mode=WORKBENCH_UI_INIT, duration=0:00:00.109, duration_ms=109, data={editors_count=0, platform_editors_count=0, projects_count=15, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes,hello,hello_system}
+timestamp=[2024-05-07 17:15:13], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.493, duration_ms=493, data={}
+timestamp=[2024-05-07 17:15:40], mode=PLATFORM_GENERATION, duration=0:00:08.480, duration_ms=8480, data={name=aup_hdmi}
+timestamp=[2024-05-07 17:15:48], mode=BUILD, duration=0:00:01.343, duration_ms=1343, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-07 17:15:49], mode=BUILD, duration=0:00:00.177, duration_ms=177, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-07 17:15:57], mode=BUILD, duration=0:00:01.527, duration_ms=1527, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-05-07 17:15:58], mode=BUILD, duration=0:00:00.179, duration_ms=179, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 08:31:36], mode=BUILD, duration=0:00:01.495, duration_ms=1495, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 08:31:37], mode=BUILD, duration=0:00:00.171, duration_ms=171, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 10:58:12], mode=PLATFORM_GENERATION, duration=0:00:08.391, duration_ms=8391, data={name=aup_hdmi}
+timestamp=[2024-05-08 10:58:21], mode=BUILD, duration=0:00:01.581, duration_ms=1581, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 10:58:21], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 11:37:03], mode=PLATFORM_GENERATION, duration=0:00:08.336, duration_ms=8336, data={name=aup_hdmi}
+timestamp=[2024-05-08 11:37:26], mode=BUILD, duration=0:00:01.580, duration_ms=1580, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 11:37:27], mode=BUILD, duration=0:00:00.183, duration_ms=183, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 11:39:32], mode=BUILD, duration=0:00:01.432, duration_ms=1432, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 11:39:32], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 11:49:56], mode=BUILD, duration=0:00:00.179, duration_ms=179, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 11:49:57], mode=BUILD, duration=0:00:00.177, duration_ms=177, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 11:50:23], mode=BUILD, duration=0:00:01.582, duration_ms=1582, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 11:50:23], mode=BUILD, duration=0:00:00.188, duration_ms=188, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 19:36:59], mode=WORKBENCH_START, duration=0:00:15.371, duration_ms=15371, data={}
+timestamp=[2024-05-08 19:37:00], mode=WORKBENCH_UI_INIT, duration=0:00:00.242, duration_ms=242, data={editors_count=2, platform_editors_count=0, projects_count=15, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes,hello,hello_system}
+timestamp=[2024-05-08 19:37:02], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.591, duration_ms=2591, data={}
+timestamp=[2024-05-08 19:40:17], mode=PLATFORM_GENERATION, duration=0:00:13.645, duration_ms=13645, data={name=aup_hdmi}
+timestamp=[2024-05-08 19:40:19], mode=BUILD, duration=0:00:01.745, duration_ms=1745, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 19:40:20], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 19:40:22], mode=BUILD, duration=0:00:01.629, duration_ms=1629, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 19:40:23], mode=BUILD, duration=0:00:00.202, duration_ms=202, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 19:40:25], mode=BUILD, duration=0:00:00.985, duration_ms=985, data={name=hdcp_key_utility_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 19:40:25], mode=BUILD, duration=0:00:00.184, duration_ms=184, data={name=hdcp_key_utility_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 19:40:27], mode=BUILD, duration=0:00:01.580, duration_ms=1580, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 19:40:28], mode=BUILD, duration=0:00:00.192, duration_ms=192, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 19:40:29], mode=BUILD, duration=0:00:00.466, duration_ms=466, data={name=hello, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 19:40:30], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=hello_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 19:59:43], mode=BUILD, duration=0:00:00.438, duration_ms=438, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-08 19:59:43], mode=BUILD, duration=0:00:00.174, duration_ms=174, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-10 16:17:31], mode=WORKBENCH_UI_INIT, duration=0:00:00.003, duration_ms=3, data={editors_count=0, platform_editors_count=0, projects_count=15, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes,hello,hello_system}
+timestamp=[2024-05-10 16:17:31], mode=WORKBENCH_START, duration=0:00:14.840, duration_ms=14840, data={}
+timestamp=[2024-05-10 16:17:34], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.741, duration_ms=2741, data={}
+timestamp=[2024-05-10 16:18:11], mode=PLATFORM_GENERATION, duration=0:00:13.245, duration_ms=13245, data={name=aup_hdmi}
+timestamp=[2024-05-10 16:18:24], mode=BUILD, duration=0:00:01.852, duration_ms=1852, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-05-10 16:18:25], mode=BUILD, duration=0:00:00.191, duration_ms=191, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-10 16:18:27], mode=BUILD, duration=0:00:01.532, duration_ms=1532, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-10 16:18:27], mode=BUILD, duration=0:00:00.188, duration_ms=188, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-10 16:18:29], mode=BUILD, duration=0:00:01.625, duration_ms=1625, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-10 16:18:30], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-10 16:18:31], mode=BUILD, duration=0:00:01.085, duration_ms=1085, data={name=hdcp_key_utility_1, configuration=Debug, clean_build=false}
+timestamp=[2024-05-10 16:18:32], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=hdcp_key_utility_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-10 16:18:32], mode=BUILD, duration=0:00:00.480, duration_ms=480, data={name=hello, configuration=Debug, clean_build=false}
+timestamp=[2024-05-10 16:18:33], mode=BUILD, duration=0:00:00.174, duration_ms=174, data={name=hello_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 11:44:33], mode=WORKBENCH_START, duration=0:00:16.090, duration_ms=16090, data={}
+timestamp=[2024-08-01 11:44:33], mode=WORKBENCH_UI_INIT, duration=0:00:00.100, duration_ms=100, data={editors_count=0, platform_editors_count=0, projects_count=15, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes,hello,hello_system}
+timestamp=[2024-08-01 11:44:36], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.572, duration_ms=2572, data={}
+timestamp=[2024-08-01 11:46:59], mode=PLATFORM_GENERATION, duration=0:00:13.247, duration_ms=13247, data={name=aup_hdmi}
+timestamp=[2024-08-01 11:47:12], mode=PLATFORM_GENERATION, duration=0:00:05.419, duration_ms=5419, data={name=aup_hdmi}
+timestamp=[2024-08-01 11:47:13], mode=BUILD, duration=0:00:00.227, duration_ms=227, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=true}
+timestamp=[2024-08-01 11:47:13], mode=BUILD, duration=0:00:00.190, duration_ms=190, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=true}
+timestamp=[2024-08-01 11:53:25], mode=WORKBENCH_START, duration=0:00:06.933, duration_ms=6933, data={}
+timestamp=[2024-08-01 11:53:26], mode=WORKBENCH_UI_INIT, duration=0:00:00.350, duration_ms=350, data={editors_count=1, platform_editors_count=1, projects_count=15, platform_projects_count=1, active_platform_editor=true, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes,hello,hello_system}
+timestamp=[2024-08-01 11:53:26], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.489, duration_ms=489, data={}
+timestamp=[2024-08-01 11:57:42], mode=PLATFORM_GENERATION, duration=0:00:08.161, duration_ms=8161, data={name=aup_hdmi}
+timestamp=[2024-08-01 11:57:43], mode=BUILD, duration=0:00:00.796, duration_ms=796, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 12:10:30], mode=BUILD, duration=0:00:00.185, duration_ms=185, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=true}
+timestamp=[2024-08-01 12:10:31], mode=BUILD, duration=0:00:00.785, duration_ms=785, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 12:12:25], mode=APP_CREATION, duration=0:00:01.858, duration_ms=1858, data={name=TxOnly_A53_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-08-01 12:13:02], mode=BUILD, duration=0:00:01.387, duration_ms=1387, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 12:13:03], mode=BUILD, duration=0:00:00.239, duration_ms=239, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 12:35:49], mode=BUILD, duration=0:00:00.500, duration_ms=500, data={name=hello, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 12:35:50], mode=BUILD, duration=0:00:00.237, duration_ms=237, data={name=hello_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:07:13], mode=PLATFORM_GENERATION, duration=0:00:08.150, duration_ms=8150, data={name=aup_hdmi}
+timestamp=[2024-08-01 14:07:23], mode=BUILD, duration=0:00:00.241, duration_ms=241, data={name=hello, configuration=Debug, clean_build=true}
+timestamp=[2024-08-01 14:07:24], mode=BUILD, duration=0:00:00.485, duration_ms=485, data={name=hello, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:07:25], mode=BUILD, duration=0:00:00.240, duration_ms=240, data={name=hello_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:22:22], mode=PLATFORM_GENERATION, duration=0:00:08.451, duration_ms=8451, data={name=aup_hdmi}
+timestamp=[2024-08-01 14:22:36], mode=PLATFORM_GENERATION, duration=0:00:05.534, duration_ms=5534, data={name=aup_hdmi}
+timestamp=[2024-08-01 14:22:36], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=hello, configuration=Debug, clean_build=true}
+timestamp=[2024-08-01 14:22:37], mode=BUILD, duration=0:00:00.241, duration_ms=241, data={name=hello_system, configuration=Debug, clean_build=true}
+timestamp=[2024-08-01 14:22:42], mode=PLATFORM_GENERATION, duration=0:00:05.055, duration_ms=5055, data={name=aup_hdmi}
+timestamp=[2024-08-01 14:22:42], mode=BUILD, duration=0:00:00.195, duration_ms=195, data={name=hello, configuration=Debug, clean_build=true}
+timestamp=[2024-08-01 14:22:42], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=hello_system, configuration=Debug, clean_build=true}
+timestamp=[2024-08-01 14:22:54], mode=PLATFORM_GENERATION, duration=0:00:08.066, duration_ms=8066, data={name=aup_hdmi}
+timestamp=[2024-08-01 14:22:55], mode=BUILD, duration=0:00:00.484, duration_ms=484, data={name=hello, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:22:55], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=hello_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:23:58], mode=PLATFORM_GENERATION, duration=0:00:05.590, duration_ms=5590, data={name=aup_hdmi}
+timestamp=[2024-08-01 14:23:59], mode=BUILD, duration=0:00:00.239, duration_ms=239, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=true}
+timestamp=[2024-08-01 14:23:59], mode=BUILD, duration=0:00:00.244, duration_ms=244, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=true}
+timestamp=[2024-08-01 14:24:13], mode=PLATFORM_GENERATION, duration=0:00:07.985, duration_ms=7985, data={name=aup_hdmi}
+timestamp=[2024-08-01 14:24:15], mode=BUILD, duration=0:00:01.896, duration_ms=1896, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:24:16], mode=BUILD, duration=0:00:00.230, duration_ms=230, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:35:54], mode=BUILD, duration=0:00:00.694, duration_ms=694, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:35:54], mode=BUILD, duration=0:00:00.184, duration_ms=184, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:45:53], mode=BUILD, duration=0:00:00.485, duration_ms=485, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:45:54], mode=BUILD, duration=0:00:00.246, duration_ms=246, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:49:50], mode=BUILD, duration=0:00:00.533, duration_ms=533, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:49:51], mode=BUILD, duration=0:00:00.241, duration_ms=241, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:51:20], mode=BUILD, duration=0:00:00.837, duration_ms=837, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:51:21], mode=BUILD, duration=0:00:00.239, duration_ms=239, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:51:27], mode=BUILD, duration=0:00:00.242, duration_ms=242, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:51:28], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:53:23], mode=BUILD, duration=0:00:00.751, duration_ms=751, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:53:24], mode=BUILD, duration=0:00:00.243, duration_ms=243, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:56:20], mode=BUILD, duration=0:00:00.743, duration_ms=743, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 14:56:21], mode=BUILD, duration=0:00:00.239, duration_ms=239, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 15:45:06], mode=PLATFORM_GENERATION, duration=0:00:08.523, duration_ms=8523, data={name=aup_hdmi}
+timestamp=[2024-08-01 15:45:12], mode=BUILD, duration=0:00:00.191, duration_ms=191, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 15:45:13], mode=BUILD, duration=0:00:00.241, duration_ms=241, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 15:56:12], mode=BUILD, duration=0:00:00.487, duration_ms=487, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 15:56:13], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:07:25], mode=BUILD, duration=0:00:01.641, duration_ms=1641, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:07:26], mode=BUILD, duration=0:00:00.194, duration_ms=194, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:08:03], mode=PLATFORM_GENERATION, duration=0:00:05.481, duration_ms=5481, data={name=aup_hdmi}
+timestamp=[2024-08-01 16:08:03], mode=BUILD, duration=0:00:00.249, duration_ms=249, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=true}
+timestamp=[2024-08-01 16:08:04], mode=BUILD, duration=0:00:00.246, duration_ms=246, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=true}
+timestamp=[2024-08-01 16:08:14], mode=PLATFORM_GENERATION, duration=0:00:07.788, duration_ms=7788, data={name=aup_hdmi}
+timestamp=[2024-08-01 16:08:16], mode=BUILD, duration=0:00:01.896, duration_ms=1896, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:08:42], mode=BUILD, duration=0:00:00.344, duration_ms=344, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:09:35], mode=BUILD, duration=0:00:00.344, duration_ms=344, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:12:36], mode=BUILD, duration=0:00:00.488, duration_ms=488, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:17:12], mode=BUILD, duration=0:00:00.538, duration_ms=538, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:17:13], mode=BUILD, duration=0:00:00.239, duration_ms=239, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:17:57], mode=BUILD, duration=0:00:00.548, duration_ms=548, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:17:58], mode=BUILD, duration=0:00:00.239, duration_ms=239, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:27:58], mode=BUILD, duration=0:00:00.543, duration_ms=543, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:27:59], mode=BUILD, duration=0:00:00.241, duration_ms=241, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:29:12], mode=BUILD, duration=0:00:00.503, duration_ms=503, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-01 16:29:13], mode=BUILD, duration=0:00:00.245, duration_ms=245, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 11:42:50], mode=WORKBENCH_START, duration=0:00:55.123, duration_ms=55123, data={}
+timestamp=[2024-08-05 11:42:50], mode=WORKBENCH_UI_INIT, duration=0:00:00.082, duration_ms=82, data={editors_count=0, platform_editors_count=0, projects_count=17, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_A53_1,TxOnly_A53_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes,hello,hello_system}
+timestamp=[2024-08-05 11:42:53], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.731, duration_ms=2731, data={}
+timestamp=[2024-08-05 11:43:32], mode=PLATFORM_GENERATION, duration=0:00:13.129, duration_ms=13129, data={name=aup_hdmi}
+timestamp=[2024-08-05 11:44:14], mode=BUILD, duration=0:00:00.245, duration_ms=245, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 11:44:15], mode=BUILD, duration=0:00:00.188, duration_ms=188, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 11:52:51], mode=BUILD, duration=0:00:00.929, duration_ms=929, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 11:52:51], mode=BUILD, duration=0:00:00.175, duration_ms=175, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 11:54:09], mode=BUILD, duration=0:00:00.423, duration_ms=423, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 11:54:09], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:08:27], mode=BUILD, duration=0:00:00.427, duration_ms=427, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:08:27], mode=BUILD, duration=0:00:00.175, duration_ms=175, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:09:18], mode=BUILD, duration=0:00:00.473, duration_ms=473, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:09:18], mode=BUILD, duration=0:00:00.174, duration_ms=174, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:10:17], mode=BUILD, duration=0:00:00.425, duration_ms=425, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:10:18], mode=BUILD, duration=0:00:00.177, duration_ms=177, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:15:46], mode=BUILD, duration=0:00:00.438, duration_ms=438, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:15:47], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:16:20], mode=BUILD, duration=0:00:00.439, duration_ms=439, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:16:21], mode=BUILD, duration=0:00:00.243, duration_ms=243, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:17:52], mode=BUILD, duration=0:00:00.434, duration_ms=434, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:17:52], mode=BUILD, duration=0:00:00.177, duration_ms=177, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:21:17], mode=BUILD, duration=0:00:00.480, duration_ms=480, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:21:18], mode=BUILD, duration=0:00:00.194, duration_ms=194, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:22:23], mode=BUILD, duration=0:00:00.431, duration_ms=431, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:22:24], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:22:54], mode=BUILD, duration=0:00:00.439, duration_ms=439, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:22:54], mode=BUILD, duration=0:00:00.185, duration_ms=185, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:27:38], mode=BUILD, duration=0:00:00.438, duration_ms=438, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:28:58], mode=BUILD, duration=0:00:00.285, duration_ms=285, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:29:24], mode=BUILD, duration=0:00:00.227, duration_ms=227, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:30:17], mode=BUILD, duration=0:00:00.277, duration_ms=277, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:30:49], mode=BUILD, duration=0:00:00.286, duration_ms=286, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:31:45], mode=BUILD, duration=0:00:00.892, duration_ms=892, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:32:15], mode=BUILD, duration=0:00:00.831, duration_ms=831, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:35:48], mode=BUILD, duration=0:00:00.837, duration_ms=837, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:36:19], mode=BUILD, duration=0:00:00.281, duration_ms=281, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:36:41], mode=BUILD, duration=0:00:00.899, duration_ms=899, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 12:36:41], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 13:40:27], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.338, duration_ms=338, data={}
+timestamp=[2024-08-05 13:40:37], mode=WORKBENCH_START, duration=0:00:16.963, duration_ms=16963, data={}
+timestamp=[2024-08-05 13:40:37], mode=WORKBENCH_UI_INIT, duration=0:00:00.216, duration_ms=216, data={editors_count=3, platform_editors_count=0, projects_count=17, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_A53_1,TxOnly_A53_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes,hello,hello_system}
+timestamp=[2024-08-05 13:52:01], mode=BUILD, duration=0:00:00.788, duration_ms=788, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 13:52:02], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 14:09:22], mode=BUILD, duration=0:00:00.483, duration_ms=483, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 14:09:23], mode=BUILD, duration=0:00:00.185, duration_ms=185, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 14:11:43], mode=BUILD, duration=0:00:00.477, duration_ms=477, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 14:11:44], mode=BUILD, duration=0:00:00.190, duration_ms=190, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 14:20:03], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.349, duration_ms=349, data={}
+timestamp=[2024-08-05 14:20:04], mode=WORKBENCH_START, duration=0:00:08.861, duration_ms=8861, data={}
+timestamp=[2024-08-05 14:20:05], mode=WORKBENCH_UI_INIT, duration=0:00:00.289, duration_ms=289, data={editors_count=2, platform_editors_count=1, projects_count=17, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_A53_1,TxOnly_A53_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes,hello,hello_system}
+timestamp=[2024-08-05 14:20:37], mode=APP_CREATION, duration=0:00:02.091, duration_ms=2091, data={name=xiic_eeprom_example_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-08-05 14:25:28], mode=PLATFORM_GENERATION, duration=0:00:05.296, duration_ms=5296, data={name=aup_hdmi}
+timestamp=[2024-08-05 14:25:29], mode=BUILD, duration=0:00:00.303, duration_ms=303, data={name=xiic_eeprom_example_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 15:26:53], mode=PLATFORM_GENERATION, duration=0:00:08.411, duration_ms=8411, data={name=aup_hdmi}
+timestamp=[2024-08-05 15:27:02], mode=BUILD, duration=0:00:00.335, duration_ms=335, data={name=xiic_eeprom_example_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 15:27:03], mode=BUILD, duration=0:00:00.245, duration_ms=245, data={name=xiic_eeprom_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 15:34:03], mode=APP_CREATION, duration=0:00:00.791, duration_ms=791, data={name=xiic_low_level_eeprom_example_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-08-05 15:34:03], mode=APP_CREATION, duration=0:00:00.816, duration_ms=816, data={name=xiic_slave_example_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-08-05 15:43:51], mode=PLATFORM_GENERATION, duration=0:00:05.371, duration_ms=5371, data={name=aup_hdmi}
+timestamp=[2024-08-05 15:43:52], mode=BUILD, duration=0:00:00.293, duration_ms=293, data={name=xiic_low_level_eeprom_example_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 15:46:07], mode=BUILD, duration=0:00:00.294, duration_ms=294, data={name=xiic_low_level_eeprom_example_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 15:47:05], mode=BUILD, duration=0:00:00.293, duration_ms=293, data={name=xiic_low_level_eeprom_example_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 15:47:36], mode=BUILD, duration=0:00:00.381, duration_ms=381, data={name=xiic_low_level_eeprom_example_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 15:47:36], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=xiic_low_level_eeprom_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 15:49:05], mode=BUILD, duration=0:00:00.243, duration_ms=243, data={name=xiic_low_level_eeprom_example_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 15:51:46], mode=APP_CREATION, duration=0:00:00.830, duration_ms=830, data={name=xiic_selftest_example_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-08-05 15:52:50], mode=APP_CREATION, duration=0:00:00.784, duration_ms=784, data={name=xiic_eeprom_example_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-08-05 15:55:50], mode=BUILD, duration=0:00:00.388, duration_ms=388, data={name=xiic_eeprom_example_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 15:55:51], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=xiic_eeprom_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 15:56:33], mode=BUILD, duration=0:00:00.237, duration_ms=237, data={name=xiic_eeprom_example_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 15:56:34], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=xiic_eeprom_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:20:50], mode=WORKBENCH_START, duration=0:00:06.907, duration_ms=6907, data={}
+timestamp=[2024-08-05 16:20:50], mode=WORKBENCH_UI_INIT, duration=0:00:00.310, duration_ms=310, data={editors_count=1, platform_editors_count=1, projects_count=17, platform_projects_count=1, active_platform_editor=true, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_A53_1,TxOnly_A53_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes,hello,hello_system}
+timestamp=[2024-08-05 16:20:51], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.522, duration_ms=522, data={}
+timestamp=[2024-08-05 16:22:01], mode=PLATFORM_GENERATION, duration=0:00:05.296, duration_ms=5296, data={name=aup_hdmi}
+timestamp=[2024-08-05 16:22:02], mode=BUILD, duration=0:00:00.248, duration_ms=248, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:23:05], mode=BUILD, duration=0:00:00.431, duration_ms=431, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:23:06], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:23:53], mode=BUILD, duration=0:00:00.479, duration_ms=479, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:23:54], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:24:10], mode=BUILD, duration=0:00:00.427, duration_ms=427, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:24:11], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:24:40], mode=BUILD, duration=0:00:00.474, duration_ms=474, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:24:40], mode=BUILD, duration=0:00:00.233, duration_ms=233, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:26:22], mode=BUILD, duration=0:00:00.282, duration_ms=282, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:26:33], mode=BUILD, duration=0:00:00.530, duration_ms=530, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:26:33], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:27:16], mode=BUILD, duration=0:00:00.476, duration_ms=476, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:27:16], mode=BUILD, duration=0:00:00.175, duration_ms=175, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:29:34], mode=BUILD, duration=0:00:00.528, duration_ms=528, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:29:35], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:32:12], mode=BUILD, duration=0:00:00.482, duration_ms=482, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:32:13], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:36:35], mode=BUILD, duration=0:00:00.480, duration_ms=480, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:36:35], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:43:08], mode=BUILD, duration=0:00:00.485, duration_ms=485, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:43:08], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:44:17], mode=BUILD, duration=0:00:00.443, duration_ms=443, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 16:44:17], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:04:40], mode=PLATFORM_GENERATION, duration=0:00:08.446, duration_ms=8446, data={name=aup_hdmi}
+timestamp=[2024-08-05 17:05:57], mode=BUILD, duration=0:00:00.292, duration_ms=292, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:06:30], mode=BUILD, duration=0:00:00.280, duration_ms=280, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:08:55], mode=BUILD, duration=0:00:00.283, duration_ms=283, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:09:18], mode=PLATFORM_GENERATION, duration=0:00:05.574, duration_ms=5574, data={name=aup_hdmi}
+timestamp=[2024-08-05 17:09:30], mode=PLATFORM_GENERATION, duration=0:00:07.912, duration_ms=7912, data={name=aup_hdmi}
+timestamp=[2024-08-05 17:09:54], mode=BUILD, duration=0:00:00.336, duration_ms=336, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:11:53], mode=BUILD, duration=0:00:00.494, duration_ms=494, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:11:53], mode=BUILD, duration=0:00:00.177, duration_ms=177, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:18:30], mode=BUILD, duration=0:00:00.287, duration_ms=287, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:21:14], mode=BUILD, duration=0:00:00.286, duration_ms=286, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:23:52], mode=BUILD, duration=0:00:00.542, duration_ms=542, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:23:53], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:24:33], mode=BUILD, duration=0:00:00.486, duration_ms=486, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:24:33], mode=BUILD, duration=0:00:00.232, duration_ms=232, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:25:10], mode=BUILD, duration=0:00:00.479, duration_ms=479, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:25:11], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:30:42], mode=BUILD, duration=0:00:00.436, duration_ms=436, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:30:42], mode=BUILD, duration=0:00:00.177, duration_ms=177, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:31:28], mode=BUILD, duration=0:00:00.279, duration_ms=279, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:36:36], mode=BUILD, duration=0:00:00.531, duration_ms=531, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:36:36], mode=BUILD, duration=0:00:00.175, duration_ms=175, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 17:39:38], mode=BUILD, duration=0:00:00.333, duration_ms=333, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 18:02:43], mode=PLATFORM_GENERATION, duration=0:00:08.258, duration_ms=8258, data={name=aup_hdmi}
+timestamp=[2024-08-05 18:03:55], mode=BUILD, duration=0:00:00.535, duration_ms=535, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 18:03:56], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 18:09:44], mode=BUILD, duration=0:00:00.283, duration_ms=283, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 19:36:28], mode=BUILD, duration=0:00:00.534, duration_ms=534, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 19:36:29], mode=BUILD, duration=0:00:00.190, duration_ms=190, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 19:36:41], mode=PLATFORM_GENERATION, duration=0:00:05.486, duration_ms=5486, data={name=aup_hdmi}
+timestamp=[2024-08-05 19:36:46], mode=PLATFORM_GENERATION, duration=0:00:05.064, duration_ms=5064, data={name=aup_hdmi}
+timestamp=[2024-08-05 19:36:47], mode=BUILD, duration=0:00:00.239, duration_ms=239, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=true}
+timestamp=[2024-08-05 19:36:47], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=true}
+timestamp=[2024-08-05 19:37:00], mode=PLATFORM_GENERATION, duration=0:00:07.797, duration_ms=7797, data={name=aup_hdmi}
+timestamp=[2024-08-05 19:37:09], mode=BUILD, duration=0:00:01.998, duration_ms=1998, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-05 19:37:10], mode=BUILD, duration=0:00:00.188, duration_ms=188, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 13:22:53], mode=WORKBENCH_START, duration=0:00:07.089, duration_ms=7089, data={}
+timestamp=[2024-08-06 13:22:54], mode=WORKBENCH_UI_INIT, duration=0:00:00.503, duration_ms=503, data={editors_count=1, platform_editors_count=0, projects_count=17, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_A53_1,TxOnly_A53_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdcp_key_utility_1,hdcp_key_utility_1_system,hdmi_pass_thru_exdes,hello,hello_system}
+timestamp=[2024-08-06 13:22:54], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.516, duration_ms=516, data={}
+timestamp=[2024-08-06 13:23:24], mode=PLATFORM_GENERATION, duration=0:00:08.387, duration_ms=8387, data={name=aup_hdmi}
+timestamp=[2024-08-06 13:24:33], mode=APP_CREATION, duration=0:00:02.154, duration_ms=2154, data={name=TxOnly_A53_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-08-06 13:24:34], mode=APP_CREATION, duration=0:00:00.806, duration_ms=806, data={name=TxOnly_Microblaze_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-08-06 13:24:45], mode=PLATFORM_GENERATION, duration=0:00:05.308, duration_ms=5308, data={name=aup_hdmi}
+timestamp=[2024-08-06 13:24:47], mode=BUILD, duration=0:00:01.545, duration_ms=1545, data={name=TxOnly_A53_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 13:24:48], mode=BUILD, duration=0:00:00.177, duration_ms=177, data={name=TxOnly_A53_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 13:25:01], mode=BUILD, duration=0:00:01.533, duration_ms=1533, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 13:25:01], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 13:56:03], mode=BUILD, duration=0:00:00.794, duration_ms=794, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 13:56:04], mode=BUILD, duration=0:00:00.185, duration_ms=185, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 13:57:27], mode=BUILD, duration=0:00:00.680, duration_ms=680, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 13:57:28], mode=BUILD, duration=0:00:00.174, duration_ms=174, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 14:11:54], mode=APP_CREATION, duration=0:00:00.771, duration_ms=771, data={name=Passthrough_Microblaze_2, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-08-06 14:18:33], mode=BUILD, duration=0:00:00.868, duration_ms=868, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 14:19:51], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 14:19:52], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 14:19:53], mode=BUILD, duration=0:00:00.177, duration_ms=177, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 14:21:28], mode=BUILD, duration=0:00:00.290, duration_ms=290, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 14:22:20], mode=BUILD, duration=0:00:01.243, duration_ms=1243, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 14:22:58], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 14:22:58], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 16:02:49], mode=PLATFORM_GENERATION, duration=0:00:08.194, duration_ms=8194, data={name=aup_hdmi}
+timestamp=[2024-08-06 16:02:56], mode=BUILD, duration=0:00:01.800, duration_ms=1800, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 16:02:56], mode=BUILD, duration=0:00:00.191, duration_ms=191, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 16:21:13], mode=PLATFORM_GENERATION, duration=0:00:08.608, duration_ms=8608, data={name=aup_hdmi}
+timestamp=[2024-08-06 16:21:26], mode=BUILD, duration=0:00:01.790, duration_ms=1790, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 16:21:27], mode=BUILD, duration=0:00:00.181, duration_ms=181, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 16:21:32], mode=BUILD, duration=0:00:01.743, duration_ms=1743, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 16:21:33], mode=BUILD, duration=0:00:00.188, duration_ms=188, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 20:08:50], mode=WORKBENCH_START, duration=0:00:55.046, duration_ms=55046, data={}
+timestamp=[2024-08-06 20:08:51], mode=WORKBENCH_UI_INIT, duration=0:00:00.110, duration_ms=110, data={editors_count=2, platform_editors_count=1, projects_count=9, platform_projects_count=1, active_platform_editor=true, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdmi_pass_thru_exdes}
+timestamp=[2024-08-06 20:08:51], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.454, duration_ms=454, data={}
+timestamp=[2024-08-06 20:09:17], mode=PLATFORM_GENERATION, duration=0:00:08.598, duration_ms=8598, data={name=aup_hdmi}
+timestamp=[2024-08-06 20:09:25], mode=BUILD, duration=0:00:01.545, duration_ms=1545, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 20:09:26], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 20:09:31], mode=BUILD, duration=0:00:01.534, duration_ms=1534, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-06 20:09:31], mode=BUILD, duration=0:00:00.226, duration_ms=226, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 00:13:51], mode=APP_CREATION, duration=0:00:01.041, duration_ms=1041, data={name=RxOnly_Microblaze_1, project_type=sdk, os=standalone, processor=mb_ss_0_mblaze, runtime=C/C++, platform=aup_hdmi, application_type=application}
+timestamp=[2024-08-07 00:20:20], mode=BUILD, duration=0:00:01.802, duration_ms=1802, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 00:20:20], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 09:53:04], mode=BUILD, duration=0:00:00.440, duration_ms=440, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 09:55:44], mode=BUILD, duration=0:00:00.799, duration_ms=799, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 09:57:00], mode=BUILD, duration=0:00:00.800, duration_ms=800, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 09:57:01], mode=BUILD, duration=0:00:00.237, duration_ms=237, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 09:59:00], mode=BUILD, duration=0:00:00.494, duration_ms=494, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 09:59:01], mode=BUILD, duration=0:00:00.237, duration_ms=237, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:00:26], mode=BUILD, duration=0:00:00.488, duration_ms=488, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:00:27], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:01:45], mode=BUILD, duration=0:00:00.491, duration_ms=491, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:01:46], mode=BUILD, duration=0:00:00.231, duration_ms=231, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:03:55], mode=BUILD, duration=0:00:00.491, duration_ms=491, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:03:56], mode=BUILD, duration=0:00:00.234, duration_ms=234, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:04:25], mode=BUILD, duration=0:00:00.485, duration_ms=485, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:04:25], mode=BUILD, duration=0:00:00.237, duration_ms=237, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:05:09], mode=BUILD, duration=0:00:00.489, duration_ms=489, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:05:10], mode=BUILD, duration=0:00:00.231, duration_ms=231, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:05:39], mode=BUILD, duration=0:00:00.490, duration_ms=490, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:05:40], mode=BUILD, duration=0:00:00.231, duration_ms=231, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:05:53], mode=BUILD, duration=0:00:00.241, duration_ms=241, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:05:54], mode=BUILD, duration=0:00:00.231, duration_ms=231, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:06:19], mode=BUILD, duration=0:00:00.485, duration_ms=485, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:06:20], mode=BUILD, duration=0:00:00.183, duration_ms=183, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:10:29], mode=BUILD, duration=0:00:00.792, duration_ms=792, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 10:10:30], mode=BUILD, duration=0:00:00.234, duration_ms=234, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-07 19:04:40], mode=WORKBENCH_START, duration=0:00:20.629, duration_ms=20629, data={}
+timestamp=[2024-08-07 19:04:40], mode=WORKBENCH_UI_INIT, duration=0:00:00.069, duration_ms=69, data={editors_count=1, platform_editors_count=1, projects_count=11, platform_projects_count=1, active_platform_editor=true, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdmi_pass_thru_exdes}
+timestamp=[2024-08-07 19:04:44], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:03.639, duration_ms=3639, data={}
+timestamp=[2024-08-11 18:23:36], mode=WORKBENCH_START, duration=0:00:15.029, duration_ms=15029, data={}
+timestamp=[2024-08-11 18:23:36], mode=WORKBENCH_UI_INIT, duration=0:00:00.112, duration_ms=112, data={editors_count=1, platform_editors_count=1, projects_count=11, platform_projects_count=1, active_platform_editor=true, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdmi_pass_thru_exdes}
+timestamp=[2024-08-11 18:23:40], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:03.414, duration_ms=3414, data={}
+timestamp=[2024-08-11 18:26:32], mode=PLATFORM_GENERATION, duration=0:00:06.483, duration_ms=6483, data={name=aup_hdmi}
+timestamp=[2024-08-11 18:26:36], mode=BUILD, duration=0:00:03.208, duration_ms=3208, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-11 18:26:37], mode=BUILD, duration=0:00:00.197, duration_ms=197, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 09:10:45], mode=BUILD, duration=0:00:00.435, duration_ms=435, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 09:10:45], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 09:37:00], mode=BUILD, duration=0:00:00.450, duration_ms=450, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 09:37:01], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 09:38:20], mode=BUILD, duration=0:00:00.847, duration_ms=847, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 09:38:20], mode=BUILD, duration=0:00:00.188, duration_ms=188, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 09:58:37], mode=BUILD, duration=0:00:00.393, duration_ms=393, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 09:58:38], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 10:15:34], mode=BUILD, duration=0:00:01.647, duration_ms=1647, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 10:15:35], mode=BUILD, duration=0:00:00.242, duration_ms=242, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 10:17:47], mode=BUILD, duration=0:00:00.495, duration_ms=495, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 10:17:48], mode=BUILD, duration=0:00:00.237, duration_ms=237, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 10:20:33], mode=BUILD, duration=0:00:00.435, duration_ms=435, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 10:20:34], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 10:26:33], mode=BUILD, duration=0:00:00.887, duration_ms=887, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 10:26:33], mode=BUILD, duration=0:00:00.237, duration_ms=237, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 11:17:56], mode=BUILD, duration=0:00:00.292, duration_ms=292, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 11:18:36], mode=BUILD, duration=0:00:00.796, duration_ms=796, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 11:18:37], mode=BUILD, duration=0:00:00.183, duration_ms=183, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 11:19:36], mode=BUILD, duration=0:00:00.494, duration_ms=494, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 11:19:36], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 11:27:03], mode=BUILD, duration=0:00:00.500, duration_ms=500, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 11:30:34], mode=BUILD, duration=0:00:00.442, duration_ms=442, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 11:31:28], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 13:32:04], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.345, duration_ms=345, data={}
+timestamp=[2024-08-12 13:32:04], mode=WORKBENCH_START, duration=0:00:07.129, duration_ms=7129, data={}
+timestamp=[2024-08-12 13:32:04], mode=WORKBENCH_UI_INIT, duration=0:00:00.200, duration_ms=200, data={editors_count=3, platform_editors_count=1, projects_count=11, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdmi_pass_thru_exdes}
+timestamp=[2024-08-12 13:32:45], mode=PLATFORM_GENERATION, duration=0:00:11.781, duration_ms=11781, data={name=aup_hdmi}
+timestamp=[2024-08-12 13:33:26], mode=BUILD, duration=0:00:01.445, duration_ms=1445, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 13:33:27], mode=BUILD, duration=0:00:00.175, duration_ms=175, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 13:40:06], mode=BUILD, duration=0:00:01.683, duration_ms=1683, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 13:40:07], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 13:47:13], mode=PLATFORM_GENERATION, duration=0:00:05.300, duration_ms=5300, data={name=aup_hdmi}
+timestamp=[2024-08-12 13:47:16], mode=BUILD, duration=0:00:01.488, duration_ms=1488, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 13:47:17], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:00:26], mode=PLATFORM_GENERATION, duration=0:00:08.578, duration_ms=8578, data={name=aup_hdmi}
+timestamp=[2024-08-12 14:00:51], mode=BUILD, duration=0:00:01.678, duration_ms=1678, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:00:52], mode=BUILD, duration=0:00:00.170, duration_ms=170, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:02:06], mode=BUILD, duration=0:00:01.685, duration_ms=1685, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:02:07], mode=BUILD, duration=0:00:00.171, duration_ms=171, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:05:56], mode=BUILD, duration=0:00:00.741, duration_ms=741, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:07:32], mode=BUILD, duration=0:00:01.123, duration_ms=1123, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:07:32], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:09:36], mode=BUILD, duration=0:00:00.529, duration_ms=529, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:09:37], mode=BUILD, duration=0:00:00.233, duration_ms=233, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:13:25], mode=BUILD, duration=0:00:00.738, duration_ms=738, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:13:25], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:16:50], mode=BUILD, duration=0:00:00.485, duration_ms=485, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:16:51], mode=BUILD, duration=0:00:00.177, duration_ms=177, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:18:07], mode=BUILD, duration=0:00:00.533, duration_ms=533, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:18:08], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:19:04], mode=BUILD, duration=0:00:00.230, duration_ms=230, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:19:05], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:31:25], mode=BUILD, duration=0:00:00.478, duration_ms=478, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:31:26], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:36:20], mode=BUILD, duration=0:00:00.883, duration_ms=883, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:36:21], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 14:59:39], mode=PLATFORM_GENERATION, duration=0:00:05.472, duration_ms=5472, data={name=aup_hdmi}
+timestamp=[2024-08-12 14:59:40], mode=BUILD, duration=0:00:00.226, duration_ms=226, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=true}
+timestamp=[2024-08-12 14:59:40], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=true}
+timestamp=[2024-08-12 15:00:42], mode=PLATFORM_GENERATION, duration=0:00:08.252, duration_ms=8252, data={name=aup_hdmi}
+timestamp=[2024-08-12 15:00:44], mode=BUILD, duration=0:00:01.735, duration_ms=1735, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 15:00:45], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 15:03:26], mode=PLATFORM_GENERATION, duration=0:00:05.415, duration_ms=5415, data={name=aup_hdmi}
+timestamp=[2024-08-12 15:03:26], mode=BUILD, duration=0:00:00.237, duration_ms=237, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=true}
+timestamp=[2024-08-12 15:03:27], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=true}
+timestamp=[2024-08-12 15:04:39], mode=PLATFORM_GENERATION, duration=0:00:07.925, duration_ms=7925, data={name=aup_hdmi}
+timestamp=[2024-08-12 15:04:42], mode=BUILD, duration=0:00:01.698, duration_ms=1698, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 15:04:42], mode=BUILD, duration=0:00:00.233, duration_ms=233, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 15:15:45], mode=BUILD, duration=0:00:00.188, duration_ms=188, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=true}
+timestamp=[2024-08-12 15:15:47], mode=BUILD, duration=0:00:01.789, duration_ms=1789, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 15:15:48], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 15:34:30], mode=BUILD, duration=0:00:00.630, duration_ms=630, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 15:34:31], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 15:38:29], mode=BUILD, duration=0:00:00.281, duration_ms=281, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 15:38:41], mode=BUILD, duration=0:00:00.277, duration_ms=277, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 15:39:11], mode=BUILD, duration=0:00:00.477, duration_ms=477, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 15:39:12], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 15:47:11], mode=BUILD, duration=0:00:00.496, duration_ms=496, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 15:47:12], mode=BUILD, duration=0:00:00.183, duration_ms=183, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 17:09:51], mode=BUILD, duration=0:00:00.493, duration_ms=493, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 17:09:52], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 17:10:50], mode=BUILD, duration=0:00:00.186, duration_ms=186, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 17:10:51], mode=BUILD, duration=0:00:00.179, duration_ms=179, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 17:13:10], mode=PLATFORM_GENERATION, duration=0:00:05.410, duration_ms=5410, data={name=aup_hdmi}
+timestamp=[2024-08-12 17:13:10], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=true}
+timestamp=[2024-08-12 17:13:10], mode=BUILD, duration=0:00:00.186, duration_ms=186, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=true}
+timestamp=[2024-08-12 17:13:21], mode=PLATFORM_GENERATION, duration=0:00:07.661, duration_ms=7661, data={name=aup_hdmi}
+timestamp=[2024-08-12 17:13:23], mode=BUILD, duration=0:00:01.833, duration_ms=1833, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 17:13:24], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 17:47:04], mode=PLATFORM_GENERATION, duration=0:00:08.239, duration_ms=8239, data={name=aup_hdmi}
+timestamp=[2024-08-12 17:47:15], mode=BUILD, duration=0:00:01.636, duration_ms=1636, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 17:47:16], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 17:49:04], mode=BUILD, duration=0:00:00.479, duration_ms=479, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 17:49:05], mode=BUILD, duration=0:00:00.232, duration_ms=232, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 17:50:00], mode=BUILD, duration=0:00:01.741, duration_ms=1741, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 17:50:01], mode=BUILD, duration=0:00:00.185, duration_ms=185, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:03:49], mode=BUILD, duration=0:00:00.444, duration_ms=444, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:03:50], mode=BUILD, duration=0:00:00.184, duration_ms=184, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:05:10], mode=BUILD, duration=0:00:00.431, duration_ms=431, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:05:11], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:06:26], mode=BUILD, duration=0:00:00.240, duration_ms=240, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:06:26], mode=BUILD, duration=0:00:00.189, duration_ms=189, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:06:41], mode=BUILD, duration=0:00:00.431, duration_ms=431, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:06:42], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:08:05], mode=BUILD, duration=0:00:00.436, duration_ms=436, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:08:06], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:09:21], mode=BUILD, duration=0:00:00.438, duration_ms=438, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:09:22], mode=BUILD, duration=0:00:00.232, duration_ms=232, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:10:36], mode=BUILD, duration=0:00:00.436, duration_ms=436, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:10:36], mode=BUILD, duration=0:00:00.183, duration_ms=183, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:15:04], mode=BUILD, duration=0:00:00.439, duration_ms=439, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:15:05], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:16:40], mode=BUILD, duration=0:00:00.434, duration_ms=434, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-12 19:16:41], mode=BUILD, duration=0:00:00.234, duration_ms=234, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 09:26:24], mode=WORKBENCH_START, duration=0:00:06.722, duration_ms=6722, data={}
+timestamp=[2024-08-13 09:26:24], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.556, duration_ms=556, data={}
+timestamp=[2024-08-13 09:26:24], mode=WORKBENCH_UI_INIT, duration=0:00:00.287, duration_ms=287, data={editors_count=2, platform_editors_count=1, projects_count=11, platform_projects_count=1, active_platform_editor=false, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdmi_pass_thru_exdes}
+timestamp=[2024-08-13 09:27:52], mode=PLATFORM_GENERATION, duration=0:00:06.247, duration_ms=6247, data={name=aup_hdmi}
+timestamp=[2024-08-13 09:27:55], mode=BUILD, duration=0:00:01.797, duration_ms=1797, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 09:27:56], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 09:29:10], mode=BUILD, duration=0:00:00.193, duration_ms=193, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 09:29:11], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 09:48:36], mode=PLATFORM_GENERATION, duration=0:00:05.276, duration_ms=5276, data={name=aup_hdmi}
+timestamp=[2024-08-13 09:48:38], mode=BUILD, duration=0:00:01.639, duration_ms=1639, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 09:48:39], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 09:50:30], mode=BUILD, duration=0:00:00.483, duration_ms=483, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 09:50:31], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:03:24], mode=BUILD, duration=0:00:00.431, duration_ms=431, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:03:24], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:04:22], mode=BUILD, duration=0:00:00.431, duration_ms=431, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:04:23], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:08:54], mode=BUILD, duration=0:00:00.330, duration_ms=330, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:09:19], mode=BUILD, duration=0:00:00.495, duration_ms=495, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:09:20], mode=BUILD, duration=0:00:00.179, duration_ms=179, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:10:54], mode=BUILD, duration=0:00:00.437, duration_ms=437, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:10:55], mode=BUILD, duration=0:00:00.171, duration_ms=171, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:11:42], mode=BUILD, duration=0:00:00.430, duration_ms=430, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:11:43], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:12:31], mode=BUILD, duration=0:00:00.480, duration_ms=480, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:12:31], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:12:59], mode=BUILD, duration=0:00:00.436, duration_ms=436, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:13:00], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:16:34], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=true}
+timestamp=[2024-08-13 10:16:36], mode=BUILD, duration=0:00:01.138, duration_ms=1138, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:17:00], mode=BUILD, duration=0:00:01.137, duration_ms=1137, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-13 10:17:01], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-14 12:53:13], mode=WORKBENCH_START, duration=0:00:08.771, duration_ms=8771, data={}
+timestamp=[2024-08-14 12:53:13], mode=WORKBENCH_UI_INIT, duration=0:00:00.191, duration_ms=191, data={editors_count=1, platform_editors_count=1, projects_count=11, platform_projects_count=1, active_platform_editor=true, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdmi_pass_thru_exdes}
+timestamp=[2024-08-14 12:53:14], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.438, duration_ms=438, data={}
+timestamp=[2024-08-14 12:56:59], mode=PLATFORM_GENERATION, duration=0:00:05.694, duration_ms=5694, data={name=aup_hdmi}
+timestamp=[2024-08-14 12:57:02], mode=BUILD, duration=0:00:01.701, duration_ms=1701, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-14 12:57:03], mode=BUILD, duration=0:00:00.189, duration_ms=189, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-14 12:57:09], mode=BUILD, duration=0:00:01.885, duration_ms=1885, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-14 12:57:10], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-14 12:57:12], mode=BUILD, duration=0:00:02.335, duration_ms=2335, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-14 12:57:13], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-14 13:05:23], mode=BUILD, duration=0:00:00.532, duration_ms=532, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-14 13:05:23], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-14 13:11:00], mode=BUILD, duration=0:00:00.490, duration_ms=490, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-14 13:11:01], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-15 13:11:05], mode=BUILD, duration=0:00:00.844, duration_ms=844, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-15 13:11:06], mode=BUILD, duration=0:00:00.234, duration_ms=234, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-15 13:11:22], mode=BUILD, duration=0:00:00.797, duration_ms=797, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-15 13:11:23], mode=BUILD, duration=0:00:00.181, duration_ms=181, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-15 13:13:00], mode=BUILD, duration=0:00:00.541, duration_ms=541, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-15 13:13:01], mode=BUILD, duration=0:00:00.191, duration_ms=191, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-15 13:17:26], mode=BUILD, duration=0:00:00.542, duration_ms=542, data={name=RxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-15 13:17:27], mode=BUILD, duration=0:00:00.240, duration_ms=240, data={name=RxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-15 13:31:57], mode=BUILD, duration=0:00:00.693, duration_ms=693, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-15 13:31:58], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-15 13:39:28], mode=BUILD, duration=0:00:00.344, duration_ms=344, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-15 13:39:44], mode=BUILD, duration=0:00:00.543, duration_ms=543, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-15 13:39:45], mode=BUILD, duration=0:00:00.192, duration_ms=192, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-17 10:10:20], mode=WORKBENCH_START, duration=0:00:15.989, duration_ms=15989, data={}
+timestamp=[2024-08-17 10:10:21], mode=WORKBENCH_UI_INIT, duration=0:00:00.277, duration_ms=277, data={editors_count=1, platform_editors_count=1, projects_count=11, platform_projects_count=1, active_platform_editor=true, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdmi_pass_thru_exdes}
+timestamp=[2024-08-17 10:10:24], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:03.525, duration_ms=3525, data={}
+timestamp=[2024-08-17 10:14:08], mode=PLATFORM_GENERATION, duration=0:00:06.108, duration_ms=6108, data={name=aup_hdmi}
+timestamp=[2024-08-17 10:14:13], mode=BUILD, duration=0:00:03.845, duration_ms=3845, data={name=Passthrough_Microblaze_2, configuration=Debug, clean_build=false}
+timestamp=[2024-08-17 10:14:14], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=Passthrough_Microblaze_2_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-17 16:34:35], mode=WORKBENCH_START, duration=0:00:07.924, duration_ms=7924, data={}
+timestamp=[2024-08-17 16:34:35], mode=WORKBENCH_UI_INIT, duration=0:00:00.121, duration_ms=121, data={editors_count=1, platform_editors_count=1, projects_count=11, platform_projects_count=1, active_platform_editor=true, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdmi_pass_thru_exdes}
+timestamp=[2024-08-17 16:34:35], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.491, duration_ms=491, data={}
+timestamp=[2024-08-17 16:34:46], mode=PLATFORM_GENERATION, duration=0:00:05.348, duration_ms=5348, data={name=aup_hdmi}
+timestamp=[2024-08-17 16:34:48], mode=BUILD, duration=0:00:01.854, duration_ms=1854, data={name=TxOnly_Microblaze_1, configuration=Debug, clean_build=false}
+timestamp=[2024-08-17 16:34:49], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=TxOnly_Microblaze_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-08-17 19:51:11], mode=WORKBENCH_START, duration=0:00:27.731, duration_ms=27731, data={}
+timestamp=[2024-08-17 19:51:11], mode=WORKBENCH_UI_INIT, duration=0:00:00.083, duration_ms=83, data={editors_count=1, platform_editors_count=1, projects_count=11, platform_projects_count=1, active_platform_editor=true, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdmi_pass_thru_exdes}
+timestamp=[2024-08-17 19:51:16], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:04.456, duration_ms=4456, data={}
+timestamp=[2024-08-18 15:33:09], mode=WORKBENCH_START, duration=0:00:32.587, duration_ms=32587, data={}
+timestamp=[2024-08-18 15:33:11], mode=WORKBENCH_UI_INIT, duration=0:00:01.916, duration_ms=1916, data={editors_count=1, platform_editors_count=1, projects_count=11, platform_projects_count=1, active_platform_editor=true, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdmi_pass_thru_exdes}
+timestamp=[2024-08-18 15:33:13], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:03.576, duration_ms=3576, data={}
+timestamp=[2025-01-09 09:35:05], mode=WORKBENCH_START, duration=0:00:14.782, duration_ms=14782, data={}
+timestamp=[2025-01-09 09:35:05], mode=WORKBENCH_UI_INIT, duration=0:00:00.003, duration_ms=3, data={editors_count=1, platform_editors_count=1, projects_count=11, platform_projects_count=1, active_platform_editor=true, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,RxOnly_Microblaze_1,RxOnly_Microblaze_1_system,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdmi_pass_thru_exdes}
+timestamp=[2025-01-09 09:35:09], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.947, duration_ms=2947, data={}
+timestamp=[2025-01-09 10:09:07], mode=WORKBENCH_START, duration=0:00:14.942, duration_ms=14942, data={}
+timestamp=[2025-01-09 10:09:08], mode=WORKBENCH_UI_INIT, duration=0:00:00.159, duration_ms=159, data={editors_count=1, platform_editors_count=1, projects_count=9, platform_projects_count=1, active_platform_editor=true, projects=Passthrough_Microblaze_1,Passthrough_Microblaze_1_system,Passthrough_Microblaze_2,Passthrough_Microblaze_2_system,RemoteSystemsTempFiles,TxOnly_Microblaze_1,TxOnly_Microblaze_1_system,aup_hdmi,hdmi_pass_thru_exdes}
+timestamp=[2025-01-09 10:09:08], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.455, duration_ms=455, data={}

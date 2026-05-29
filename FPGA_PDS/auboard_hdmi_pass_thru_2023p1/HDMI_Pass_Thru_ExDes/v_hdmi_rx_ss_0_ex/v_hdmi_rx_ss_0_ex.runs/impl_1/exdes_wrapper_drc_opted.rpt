@@ -1,0 +1,57 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Thu Jan  9 09:30:44 2025
+| Host         : HP-Z4-G4-027564 running 64-bit Ubuntu 20.04.6 LTS
+| Command      : report_drc -file exdes_wrapper_drc_opted.rpt -pb exdes_wrapper_drc_opted.pb -rpx exdes_wrapper_drc_opted.rpx
+| Design       : exdes_wrapper
+| Device       : xcau15p-ffvb676-2-e
+| Speed File   : -2
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 1
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT exdes_i/vid_phy_controller/inst/i_0 is driving clock pin of 24 cells. This could lead to large hold time violations. Involved cells are:
+exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[0],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[1],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[2],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RUN_SYNC_INST/syncstages_ff_reg[0],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RUN_SYNC_INST/syncstages_ff_reg[1],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RUN_SYNC_INST/syncstages_ff_reg[2],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[0],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[10],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[11],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[12],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[13],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[14],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[15],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[16],
+exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[17]
+ (the first 15 of 24 listed)
+Related violations: <none>
+
+

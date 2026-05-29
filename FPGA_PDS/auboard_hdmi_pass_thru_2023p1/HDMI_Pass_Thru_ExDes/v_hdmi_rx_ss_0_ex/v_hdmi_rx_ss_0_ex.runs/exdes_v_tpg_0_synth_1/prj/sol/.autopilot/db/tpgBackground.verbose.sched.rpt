@@ -1,0 +1,232 @@
+
+
+================================================================
+== Vitis HLS Report for 'tpgBackground'
+================================================================
+* Date:           Thu Jan  9 09:27:54 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: artixuplus
+* Target device:  xcau15p-ffvb676-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.707 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |    Trip   |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |   Count   | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+        |- VITIS_LOOP_518_1  |        ?|        ?|         ?|          -|          -|  0 ~ 65535|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.77>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_0_0_0_0_0243374_lcssa387 = alloca i32 1"   --->   Operation 5 'alloca' 'p_0_0_0_0_0243374_lcssa387' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_0_1_0_0_0245376_lcssa390 = alloca i32 1"   --->   Operation 6 'alloca' 'p_0_1_0_0_0245376_lcssa390' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_0_2_0_0_0247378_lcssa393 = alloca i32 1"   --->   Operation 7 'alloca' 'p_0_2_0_0_0247378_lcssa393' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_0_3_0_0_0249380_lcssa396 = alloca i32 1"   --->   Operation 8 'alloca' 'p_0_3_0_0_0249380_lcssa396' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_0_4_0_0_0251382_lcssa399 = alloca i32 1"   --->   Operation 9 'alloca' 'p_0_4_0_0_0251382_lcssa399' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_0_5_0_0_0253384_lcssa402 = alloca i32 1"   --->   Operation 10 'alloca' 'p_0_5_0_0_0253384_lcssa402' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%outpix = alloca i32 1"   --->   Operation 11 'alloca' 'outpix' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%outpix_1 = alloca i32 1"   --->   Operation 12 'alloca' 'outpix_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%outpix_2 = alloca i32 1"   --->   Operation 13 'alloca' 'outpix_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%outpix_3 = alloca i32 1"   --->   Operation 14 'alloca' 'outpix_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%outpix_4 = alloca i32 1"   --->   Operation 15 'alloca' 'outpix_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%outpix_5 = alloca i32 1"   --->   Operation 16 'alloca' 'outpix_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%y = alloca i32 1"   --->   Operation 17 'alloca' 'y' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_7 = alloca i32 1"   --->   Operation 18 'alloca' 'tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_6 = alloca i32 1"   --->   Operation 19 'alloca' 'tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%vBarSel_1_loc_0 = alloca i32 1"   --->   Operation 20 'alloca' 'vBarSel_1_loc_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_7 = alloca i32 1"   --->   Operation 21 'alloca' 'tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_6 = alloca i32 1"   --->   Operation 22 'alloca' 'tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%vBarSel_loc_0 = alloca i32 1"   --->   Operation 23 'alloca' 'vBarSel_loc_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7_2 = alloca i32 1"   --->   Operation 24 'alloca' 'tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_l_1 = alloca i32 1"   --->   Operation 25 'alloca' 'tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_l_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %colorFormat, void "   --->   Operation 26 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %motionSpeed, void "   --->   Operation 27 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %bckgndId, void "   --->   Operation 28 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %enableInput, void "   --->   Operation 29 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %passthruEndY, void "   --->   Operation 30 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %passthruEndX, void "   --->   Operation 31 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %passthruStartY, void "   --->   Operation 32 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %passthruStartX, void "   --->   Operation 33 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %height, void "   --->   Operation 34 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %width, void "   --->   Operation 35 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %ovrlayYUV, void @empty_40, i32 0, i32 0, void @empty_29, i32 0, i32 0, void @empty_29, void @empty_29, void @empty_29, i32 0, i32 0, i32 0, i32 0, void @empty_29, void @empty_29, i32 4294967295, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %srcYUV, void @empty_40, i32 0, i32 0, void @empty_29, i32 0, i32 0, void @empty_29, void @empty_29, void @empty_29, i32 0, i32 0, i32 0, i32 0, void @empty_29, void @empty_29, i32 4294967295, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%loopHeight = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %height" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:505]   --->   Operation 38 'read' 'loopHeight' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%loopWidth = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %width" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:506]   --->   Operation 39 'read' 'loopWidth' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%colorFormatLocal = read i8 @_ssdm_op_Read.ap_auto.i8P0A, i8 %colorFormat" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:514]   --->   Operation 40 'read' 'colorFormatLocal' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%enableInput_read = read i8 @_ssdm_op_Read.ap_auto.i8P0A, i8 %enableInput"   --->   Operation 41 'read' 'enableInput_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.76ns)   --->   "%cmp8 = icmp_ne  i8 %enableInput_read, i8 0"   --->   Operation 42 'icmp' 'cmp8' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%bckgndId_read = read i8 @_ssdm_op_Read.ap_auto.i8P0A, i8 %bckgndId"   --->   Operation 43 'read' 'bckgndId_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%passthruStartX_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %passthruStartX"   --->   Operation 44 'read' 'passthruStartX_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%passthruStartY_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %passthruStartY"   --->   Operation 45 'read' 'passthruStartY_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%passthruEndX_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %passthruEndX"   --->   Operation 46 'read' 'passthruEndX_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%passthruEndY_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %passthruEndY"   --->   Operation 47 'read' 'passthruEndY_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%tmp = partselect i7 @_ssdm_op_PartSelect.i7.i8.i32.i32, i8 %colorFormatLocal, i32 1, i32 7" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:514]   --->   Operation 48 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.77ns)   --->   "%icmp = icmp_eq  i7 %tmp, i7 0" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:514]   --->   Operation 49 'icmp' 'icmp' <Predicate = true> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%trunc_ln1196 = trunc i16 %loopHeight" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1196->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:604]   --->   Operation 50 'trunc' 'trunc_ln1196' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%trunc_ln1212 = trunc i16 %loopWidth" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1212->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:604]   --->   Operation 51 'trunc' 'trunc_ln1212' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_l = load i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1212->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:604]   --->   Operation 52 'load' 'tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_l' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7_3 = load i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1212->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:604]   --->   Operation 53 'load' 'tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%vBarSel_load = load i3 %vBarSel" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1348->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:620]   --->   Operation 54 'load' 'vBarSel_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln1367 = zext i3 %vBarSel_load" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1367->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:620]   --->   Operation 55 'zext' 'zext_ln1367' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_10 = load i3 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_3" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1367->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:620]   --->   Operation 56 'load' 'tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%zext_ln1367_1 = zext i3 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_10" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1367->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:620]   --->   Operation 57 'zext' 'zext_ln1367_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_11 = load i3 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_2" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1367->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:620]   --->   Operation 58 'load' 'tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%zext_ln1530 = zext i3 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_11" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1530->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:652]   --->   Operation 59 'zext' 'zext_ln1530' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%vBarSel_1_load = load i8 %vBarSel_1" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1530->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:652]   --->   Operation 60 'load' 'vBarSel_1_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_10 = load i3 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_3" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1548->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:652]   --->   Operation 61 'load' 'tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln1548 = zext i3 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_10" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1548->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:652]   --->   Operation 62 'zext' 'zext_ln1548' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_11 = load i3 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_2" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1548->/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:652]   --->   Operation 63 'load' 'tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%zext_ln518 = zext i3 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_11" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 64 'zext' 'zext_ln518' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.76ns)   --->   "%empty = icmp_eq  i8 %colorFormatLocal, i8 0" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:514]   --->   Operation 65 'icmp' 'empty' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 66 [1/1] (0.76ns)   --->   "%empty_67 = icmp_eq  i8 %colorFormatLocal, i8 1" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:514]   --->   Operation 66 'icmp' 'empty_67' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%store_ln518 = store i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_l, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_l_1" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 67 'store' 'store_ln518' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%store_ln518 = store i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7_3, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7_2" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 68 'store' 'store_ln518' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%store_ln518 = store i8 %zext_ln1367, i8 %vBarSel_loc_0" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 69 'store' 'store_ln518' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%store_ln518 = store i8 %zext_ln1367_1, i8 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_6" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 70 'store' 'store_ln518' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%store_ln518 = store i8 %zext_ln1530, i8 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_7" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 71 'store' 'store_ln518' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%store_ln518 = store i8 %vBarSel_1_load, i8 %vBarSel_1_loc_0" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 72 'store' 'store_ln518' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%store_ln518 = store i8 %zext_ln1548, i8 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_6" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 73 'store' 'store_ln518' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%store_ln518 = store i8 %zext_ln518, i8 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_7" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 74 'store' 'store_ln518' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.42ns)   --->   "%store_ln518 = store i16 0, i16 %y" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 75 'store' 'store_ln518' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%br_ln518 = br void %VITIS_LOOP_520_2" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 76 'br' 'br_ln518' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.28>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%y_1 = load i16 %y"   --->   Operation 77 'load' 'y_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.85ns)   --->   "%icmp_ln518 = icmp_eq  i16 %y_1, i16 %loopHeight" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 78 'icmp' 'icmp_ln518' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 79 [1/1] (0.85ns)   --->   "%add_ln518 = add i16 %y_1, i16 1" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 79 'add' 'add_ln518' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln518 = br i1 %icmp_ln518, void %VITIS_LOOP_520_2.split, void %for.end105.loopexit" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 80 'br' 'br_ln518' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%outpix_load = load i8 %outpix"   --->   Operation 81 'load' 'outpix_load' <Predicate = (!icmp_ln518)> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%outpix_1_load = load i8 %outpix_1"   --->   Operation 82 'load' 'outpix_1_load' <Predicate = (!icmp_ln518)> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%outpix_2_load = load i8 %outpix_2"   --->   Operation 83 'load' 'outpix_2_load' <Predicate = (!icmp_ln518)> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%outpix_3_load = load i8 %outpix_3"   --->   Operation 84 'load' 'outpix_3_load' <Predicate = (!icmp_ln518)> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%outpix_4_load = load i8 %outpix_4"   --->   Operation 85 'load' 'outpix_4_load' <Predicate = (!icmp_ln518)> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%outpix_5_load = load i8 %outpix_5"   --->   Operation 86 'load' 'outpix_5_load' <Predicate = (!icmp_ln518)> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.85ns)   --->   "%cmp59_not = icmp_ult  i16 %y_1, i16 %passthruStartY_read"   --->   Operation 87 'icmp' 'cmp59_not' <Predicate = (!icmp_ln518)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 88 [1/1] (0.85ns)   --->   "%ult = icmp_ult  i16 %y_1, i16 %passthruEndY_read"   --->   Operation 88 'icmp' 'ult' <Predicate = (!icmp_ln518)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 89 [1/1] (0.28ns)   --->   "%rev340 = xor i1 %ult, i1 1"   --->   Operation 89 'xor' 'rev340' <Predicate = (!icmp_ln518)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%empty_68 = wait i32 @_ssdm_op_Wait"   --->   Operation 90 'wait' 'empty_68' <Predicate = (!icmp_ln518)> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.42ns)   --->   "%store_ln518 = store i16 %add_ln518, i16 %y" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 91 'store' 'store_ln518' <Predicate = (!icmp_ln518)> <Delay = 0.42>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%rampStart_load = load i8 %rampStart" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:705]   --->   Operation 92 'load' 'rampStart_load' <Predicate = (icmp_ln518)> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "%motionSpeed_read = read i8 @_ssdm_op_Read.ap_auto.i8P0A, i8 %motionSpeed" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:705]   --->   Operation 93 'read' 'motionSpeed_read' <Predicate = (icmp_ln518)> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (0.76ns)   --->   "%add_ln705 = add i8 %motionSpeed_read, i8 %rampStart_load" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:705]   --->   Operation 94 'add' 'add_ln705' <Predicate = (icmp_ln518)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%store_ln705 = store i8 %add_ln705, i8 %rampStart" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:705]   --->   Operation 95 'store' 'store_ln705' <Predicate = (icmp_ln518)> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%ret_ln706 = ret" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:706]   --->   Operation 96 'ret' 'ret_ln706' <Predicate = (icmp_ln518)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.42>
+ST_3 : Operation 97 [2/2] (2.42ns)   --->   "%call_ln506 = call void @tpgBackground_Pipeline_VITIS_LOOP_520_2, i8 %outpix_5_load, i8 %outpix_4_load, i8 %outpix_3_load, i8 %outpix_2_load, i8 %outpix_1_load, i8 %outpix_load, i16 %loopWidth, i48 %ovrlayYUV, i1 %cmp8, i8 %bckgndId_read, i48 %srcYUV, i1 %empty, i1 %empty_67, i14 %trunc_ln1212, i14 %trunc_ln1196, i16 %y_1, i16 %loopWidth, i16 %loopHeight, i16 %y_1, i1 %icmp, i16 %passthruStartX_read, i16 %passthruEndX_read, i1 %cmp59_not, i1 %rev340, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_l_1, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7_2, i8 %vBarSel_loc_0, i8 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_6, i8 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_7, i8 %vBarSel_1_loc_0, i8 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_6, i8 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_7, i8 %outpix_5, i8 %outpix_4, i8 %outpix_3, i8 %outpix_2, i8 %outpix_1, i8 %outpix, i8 %p_0_5_0_0_0253384_lcssa402, i8 %p_0_4_0_0_0251382_lcssa399, i8 %p_0_3_0_0_0249380_lcssa396, i8 %p_0_2_0_0_0247378_lcssa393, i8 %p_0_1_0_0_0245376_lcssa390, i8 %p_0_0_0_0_0243374_lcssa387, i8 %blkYuv, i8 %tpgBarSelYuv_y, i8 %tpgBarSelYuv_u, i8 %tpgBarSelYuv_v, i11 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_xBar_6, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7, i2 %tpgBarSelRgb_r, i2 %tpgBarSelRgb_g, i2 %tpgBarSelRgb_b, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel, i11 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_xBar, i32 %s, i3 %tpgTartanBarArray, i10 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign, i3 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_2, i3 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_3, i10 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_1, i10 %yCount, i3 %vBarSel, i10 %tpgPatternCrossHatch_unsigned_short_unsigned_short_unsigned_short_unsigned_sh, i10 %tpgPatternCrossHatch_unsigned_short_unsigned_short_unsigned_short_unsigned_sh_1, i1 %vHatch, i10 %yCount_1, i8 %blkYuv_1, i8 %whiYuv, i2 %tpgCheckerBoardArray, i10 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_s, i3 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_2, i3 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_3, i10 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_1, i10 %yCount_2, i8 %vBarSel_1, i28 %rSerie, i28 %gSerie, i28 %bSerie" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:506]   --->   Operation 97 'call' 'call_ln506' <Predicate = true> <Delay = 2.42> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 98 [1/1] (0.00ns)   --->   "%speclooptripcount_ln507 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 65535, i64 32767" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:507]   --->   Operation 98 'speclooptripcount' 'speclooptripcount_ln507' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 99 [1/1] (0.00ns)   --->   "%specloopname_ln518 = specloopname void @_ssdm_op_SpecLoopName, void @empty_37" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 99 'specloopname' 'specloopname_ln518' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 100 [1/2] (0.00ns)   --->   "%call_ln506 = call void @tpgBackground_Pipeline_VITIS_LOOP_520_2, i8 %outpix_5_load, i8 %outpix_4_load, i8 %outpix_3_load, i8 %outpix_2_load, i8 %outpix_1_load, i8 %outpix_load, i16 %loopWidth, i48 %ovrlayYUV, i1 %cmp8, i8 %bckgndId_read, i48 %srcYUV, i1 %empty, i1 %empty_67, i14 %trunc_ln1212, i14 %trunc_ln1196, i16 %y_1, i16 %loopWidth, i16 %loopHeight, i16 %y_1, i1 %icmp, i16 %passthruStartX_read, i16 %passthruEndX_read, i1 %cmp59_not, i1 %rev340, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_l_1, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7_2, i8 %vBarSel_loc_0, i8 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_6, i8 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_7, i8 %vBarSel_1_loc_0, i8 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_6, i8 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_7, i8 %outpix_5, i8 %outpix_4, i8 %outpix_3, i8 %outpix_2, i8 %outpix_1, i8 %outpix, i8 %p_0_5_0_0_0253384_lcssa402, i8 %p_0_4_0_0_0251382_lcssa399, i8 %p_0_3_0_0_0249380_lcssa396, i8 %p_0_2_0_0_0247378_lcssa393, i8 %p_0_1_0_0_0245376_lcssa390, i8 %p_0_0_0_0_0243374_lcssa387, i8 %blkYuv, i8 %tpgBarSelYuv_y, i8 %tpgBarSelYuv_u, i8 %tpgBarSelYuv_v, i11 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_xBar_6, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7, i2 %tpgBarSelRgb_r, i2 %tpgBarSelRgb_g, i2 %tpgBarSelRgb_b, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel, i11 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_xBar, i32 %s, i3 %tpgTartanBarArray, i10 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign, i3 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_2, i3 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_3, i10 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_1, i10 %yCount, i3 %vBarSel, i10 %tpgPatternCrossHatch_unsigned_short_unsigned_short_unsigned_short_unsigned_sh, i10 %tpgPatternCrossHatch_unsigned_short_unsigned_short_unsigned_short_unsigned_sh_1, i1 %vHatch, i10 %yCount_1, i8 %blkYuv_1, i8 %whiYuv, i2 %tpgCheckerBoardArray, i10 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_s, i3 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_2, i3 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_3, i10 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_1, i10 %yCount_2, i8 %vBarSel_1, i28 %rSerie, i28 %gSerie, i28 %bSerie" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:506]   --->   Operation 100 'call' 'call_ln506' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 101 [1/1] (0.00ns)   --->   "%br_ln518 = br void %VITIS_LOOP_520_2" [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518]   --->   Operation 101 'br' 'br_ln518' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.333ns, clock uncertainty: 0.900ns.
+
+ <State 1>: 0.773ns
+The critical path consists of the following:
+	wire read operation ('colorFormatLocal', /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:514) on port 'colorFormat' (/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:514) [84]  (0.000 ns)
+	'icmp' operation ('icmp', /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:514) [93]  (0.773 ns)
+
+ <State 2>: 1.280ns
+The critical path consists of the following:
+	'load' operation ('y') on local variable 'y' [122]  (0.000 ns)
+	'add' operation ('add_ln518', /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518) [124]  (0.853 ns)
+	'store' operation ('store_ln518', /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518) of variable 'add_ln518', /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518 on local variable 'y' [140]  (0.427 ns)
+
+ <State 3>: 2.425ns
+The critical path consists of the following:
+	'call' operation ('call_ln506', /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:506) to 'tpgBackground_Pipeline_VITIS_LOOP_520_2' [139]  (2.425 ns)
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

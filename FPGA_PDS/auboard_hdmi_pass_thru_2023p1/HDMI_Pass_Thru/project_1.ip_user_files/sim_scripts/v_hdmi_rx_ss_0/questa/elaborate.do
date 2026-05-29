@@ -1,0 +1,1 @@
+vopt -64 +acc=npr -l elaborate.log +acc=npr -suppress 10016  -L xil_defaultlib -L xilinx_vip -L xpm -L v_hdmi_rx_v3_0_2 -L v_vid_in_axi4s_v5_0_2 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.v_hdmi_rx_ss_0 xil_defaultlib.glbl -o v_hdmi_rx_ss_0_opt

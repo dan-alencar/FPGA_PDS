@@ -1,0 +1,64 @@
+<design_size title="Design Size Report">
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="6" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Performance/Pipeline" col5="Optimizations"/>
+            <rows>
+                <row id="0" col0="v_tpg" col1="v_tpg.cpp:364" col2="9651" col3="3447" col4="1561" col5="1653">
+                    <row id="5" col0="reg&lt;unsigned short&gt;" col1="x_hls_utils.h:248" col2="1" col3="1" col4="1" col5="4"/>
+                    <row id="3" col0="v_tpgHlsDataFlow" col1="v_tpg.cpp:259" col2="9565" col3="3365" col4="1480" col5="1497">
+                        <row id="4" col0="AXIvideo2MultiPixStream" col1="v_tpg.cpp:776" col2="893" col3="376" col4="193" col5="235">
+                            <row id="13" col0="Scalar" col1="hls_video_core.h:182" col2="21" col3="" col4="" col5=""/>
+                            <row id="5" col0="reg&lt;unsigned short&gt;" col1="x_hls_utils.h:248" col2="2" col2_disp="    2 (2 calls)" col3="2" col3_disp="    2 (2 calls)" col4="2" col4_disp="    2 (2 calls)" col5="8" col5_disp="    8 (2 calls)"/>
+                            <row id="14" col0="AXIGetBitFields&lt;48, ap_uint&lt;8&gt; &gt;" col1="hls_axi_io.h:69" col2="243" col2_disp="  243 (3 calls)" col3="" col4="" col5="">
+                                <row id="15" col0="AXIGetBitFields&lt;48, ap_uint&lt;8&gt; &gt;" col1="hls_axi_io.h:46" col2="225" col2_disp="  225 (3 calls)" col3="" col4="" col5=""/>
+                            </row>
+                        </row>
+                        <row id="1" col0="tpgBackground" col1="v_tpg.cpp:491" col2="7384" col3="2718" col4="1089" col5="1062">
+                            <row id="13" col0="Scalar" col1="hls_video_core.h:182" col2="42" col2_disp="   42 (2 calls)" col3="" col4="" col5=""/>
+                            <row id="11" col0="tpgPatternSolidBlack" col1="v_tpg.cpp:1148" col2="2156" col2_disp="2,156 (14 calls)" col3="728" col3_disp="  728 (14 calls)" col4="" col5="">
+                                <row id="13" col0="Scalar" col1="hls_video_core.h:182" col2="294" col2_disp="  294 (14 calls)" col3="" col4="" col5=""/>
+                            </row>
+                            <row id="8" col0="tpgPatternColorBars" col1="v_tpg.cpp:1190" col2="790" col3="201" col4="" col5="">
+                                <row id="13" col0="Scalar" col1="hls_video_core.h:182" col2="21" col3="" col4="" col5=""/>
+                            </row>
+                            <row id="10" col0="tpgPatternTartanColorBars" col1="v_tpg.cpp:1324" col2="703" col3="275" col4="" col5="">
+                                <row id="13" col0="Scalar" col1="hls_video_core.h:182" col2="42" col2_disp="   42 (2 calls)" col3="" col4="" col5=""/>
+                            </row>
+                            <row id="9" col0="tpgPatternCrossHatch" col1="v_tpg.cpp:1392" col2="830" col3="249" col4="" col5="">
+                                <row id="13" col0="Scalar" col1="hls_video_core.h:182" col2="21" col3="" col4="" col5=""/>
+                                <row id="2" col0="reg&lt;ap_uint&lt;10&gt; &gt;" col1="x_hls_utils.h:248" col2="3" col3="3" col4="" col5=""/>
+                            </row>
+                            <row id="12" col0="tpgPatternCheckerBoard" col1="v_tpg.cpp:1506" col2="684" col3="273" col4="" col5="">
+                                <row id="13" col0="Scalar" col1="hls_video_core.h:182" col2="21" col3="" col4="" col5=""/>
+                            </row>
+                            <row id="7" col0="tpgPRBS" col1="v_tpg.cpp:1778" col2="1855" col3="206" col4="" col5="">
+                                <row id="13" col0="Scalar" col1="hls_video_core.h:182" col2="21" col3="" col4="" col5=""/>
+                            </row>
+                            <row id="2" col0="reg&lt;ap_uint&lt;10&gt; &gt;" col1="x_hls_utils.h:248" col2="" col3="" col4="2" col5="5"/>
+                        </row>
+                        <row id="6" col0="MultiPixStream2AXIvideo" col1="v_tpg.cpp:874" col2="1162" col3="241" col4="188" col5="186">
+                            <row id="13" col0="Scalar" col1="hls_video_core.h:182" col2="21" col3="" col4="" col5=""/>
+                        </row>
+                    </row>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Description of Compilation Phases">
+        <table>
+            <keys size="2">Compilation Phase, Description</keys>
+            <column name="Compile/Link">All functions are compiled and linked into a single design</column>
+            <column name="Unroll/Inline">After user unroll and inline pragmas are applied</column>
+            <column name="Performance/Pipeline">After performance and pipeline pragmas are applied</column>
+            <column name="Optimizations">After high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

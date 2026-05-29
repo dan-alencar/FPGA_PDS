@@ -1,0 +1,673 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Jan  9 09:28:25 2025
+# Process ID: 2069597
+# Current directory: /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1
+# Command line: vivado -log exdes_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source exdes_wrapper.tcl
+# Log file: /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/exdes_wrapper.vds
+# Journal file: /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/vivado.jou
+# Running On: HP-Z4-G4-027564, OS: Linux, CPU Frequency: 3600.000 MHz, CPU Physical cores: 4, Host memory: 67133 MB
+#-----------------------------------------------------------
+Sourcing tcl script '/tools/Xilinx/Vivado/2023.1/scripts/Vivado_init.tcl'
+241 Beta devices matching pattern found, 56 enabled.
+enable_beta_device: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1466.758 ; gain = 8.027 ; free physical = 1949 ; free virtual = 59629
+source exdes_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/au15p_hdl_rc310xxa/hdl'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/utils_1/imports/synth_1/exdes_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/utils_1/imports/synth_1/exdes_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top exdes_wrapper -part xcau15p-ffvb676-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Device 21-403] Loading part xcau15p-ffvb676-2-e
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2069670
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2473.016 ; gain = 381.770 ; free physical = 652 ; free virtual = 58375
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'exdes_wrapper' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/hdl/exdes_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/tools/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:76334]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [/tools/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:76334]
+INFO: [Synth 8-6157] synthesizing module 'exdes' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:391]
+INFO: [Synth 8-6157] synthesizing module 'audio_ss_0_imp_L2LLI5' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:13]
+INFO: [Synth 8-6157] synthesizing module 'exdes_aud_pat_gen_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_aud_pat_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_aud_pat_gen_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_aud_pat_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_axi_interconnect_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1221]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_5QVHE' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:3401]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_5QVHE' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:3401]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1FFZTVU' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:3839]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1FFZTVU' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:3839]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1AMYN3N' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4117]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1AMYN3N' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4117]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O40D8P' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6557]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O40D8P' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6557]
+INFO: [Synth 8-6157] synthesizing module 'exdes_xbar_4' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_xbar_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_xbar_4' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_xbar_4_stub.v:6]
+WARNING: [Synth 8-689] width (3) of port connection 'm_axi_arprot' does not match port width (9) of module 'exdes_xbar_4' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1776]
+WARNING: [Synth 8-689] width (3) of port connection 'm_axi_awprot' does not match port width (9) of module 'exdes_xbar_4' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1780]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_axi_interconnect_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1221]
+INFO: [Synth 8-6157] synthesizing module 'exdes_clk_wiz_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_clk_wiz_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_hdmi_acr_ctrl_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_hdmi_acr_ctrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_hdmi_acr_ctrl_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_hdmi_acr_ctrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'audio_ss_0_imp_L2LLI5' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:13]
+INFO: [Synth 8-6157] synthesizing module 'mb_ss_0_imp_F1JHLQ' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:5335]
+INFO: [Synth 8-6157] synthesizing module 'exdes_fmch_axi_iic_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_fmch_axi_iic_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_fmch_axi_iic_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_fmch_axi_iic_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'exdes_fmch_axi_iic_0' is unconnected for instance 'axi_iic_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6033]
+WARNING: [Synth 8-7071] port 'gpo' of module 'exdes_fmch_axi_iic_0' is unconnected for instance 'axi_iic_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6033]
+WARNING: [Synth 8-7023] instance 'axi_iic_0' of module 'exdes_fmch_axi_iic_0' has 27 connections declared, but only 25 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6033]
+INFO: [Synth 8-6157] synthesizing module 'exdes_fmch_axi_iic_1' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_fmch_axi_iic_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_fmch_axi_iic_1' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_fmch_axi_iic_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'exdes_fmch_axi_iic_1' is unconnected for instance 'axi_iic_1' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6059]
+WARNING: [Synth 8-7071] port 'gpo' of module 'exdes_fmch_axi_iic_1' is unconnected for instance 'axi_iic_1' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6059]
+WARNING: [Synth 8-7023] instance 'axi_iic_1' of module 'exdes_fmch_axi_iic_1' has 27 connections declared, but only 25 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6059]
+INFO: [Synth 8-6157] synthesizing module 'exdes_axi_intc_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_axi_intc_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_axi_interconnect_1' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1815]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_FLAFIE' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:3547]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_FLAFIE' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:3547]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_100GMI6' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:3693]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_100GMI6' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:3693]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_145JDEF' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:3971]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_145JDEF' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:3971]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_BGIKJJ' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4249]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_BGIKJJ' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4249]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1DH0DWL' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4381]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1DH0DWL' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4381]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_38ZVYL' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4513]
+INFO: [Synth 8-6157] synthesizing module 'exdes_auto_cc_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_auto_cc_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_auto_cc_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'exdes_auto_cc_0' is unconnected for instance 'auto_cc' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4676]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'exdes_auto_cc_0' is unconnected for instance 'auto_cc' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4676]
+WARNING: [Synth 8-7023] instance 'auto_cc' of module 'exdes_auto_cc_0' has 42 connections declared, but only 40 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4676]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_38ZVYL' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4513]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_7FNVN8' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4719]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_7FNVN8' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4719]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_19A1ICC' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4865]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_19A1ICC' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4865]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1WQFHXD' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4997]
+INFO: [Synth 8-6157] synthesizing module 'exdes_auto_cc_1' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_auto_cc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_auto_cc_1' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_auto_cc_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'exdes_auto_cc_1' is unconnected for instance 'auto_cc' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:5160]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'exdes_auto_cc_1' is unconnected for instance 'auto_cc' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:5160]
+WARNING: [Synth 8-7023] instance 'auto_cc' of module 'exdes_auto_cc_1' has 42 connections declared, but only 40 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:5160]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1WQFHXD' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:4997]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_LPQO2X' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:5203]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_LPQO2X' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:5203]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_ULFDNX' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6703]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_ULFDNX' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6703]
+INFO: [Synth 8-6157] synthesizing module 'exdes_xbar_5' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_xbar_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_xbar_5' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_xbar_5_stub.v:6]
+WARNING: [Synth 8-689] width (27) of port connection 'm_axi_arprot' does not match port width (30) of module 'exdes_xbar_5' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:3362]
+WARNING: [Synth 8-689] width (27) of port connection 'm_axi_awprot' does not match port width (30) of module 'exdes_xbar_5' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:3366]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_axi_interconnect_1' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1815]
+INFO: [Synth 8-6157] synthesizing module 'exdes_axi_uartlite_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_axi_uartlite_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_axi_uartlite_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_axi_uartlite_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'exdes_axi_uartlite_0' is unconnected for instance 'axi_uartlite' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6329]
+WARNING: [Synth 8-7023] instance 'axi_uartlite' of module 'exdes_axi_uartlite_0' has 22 connections declared, but only 21 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6329]
+INFO: [Synth 8-6157] synthesizing module 'exdes_clk_wiz_1' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_clk_wiz_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_clk_wiz_1' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_clk_wiz_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_dlmb_bram_if_cntlr_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_dlmb_bram_if_cntlr_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_dlmb_v10_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_dlmb_v10_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'exdes_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6381]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'exdes_dlmb_v10_0' has 25 connections declared, but only 24 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6381]
+INFO: [Synth 8-6157] synthesizing module 'exdes_ilmb_bram_if_cntlr_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_ilmb_bram_if_cntlr_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_ilmb_v10_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_ilmb_v10_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'exdes_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6427]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'exdes_ilmb_v10_0' has 25 connections declared, but only 24 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6427]
+INFO: [Synth 8-6157] synthesizing module 'exdes_lmb_bram_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_lmb_bram_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'exdes_lmb_bram_0' is unconnected for instance 'lmb_bram' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6452]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'exdes_lmb_bram_0' is unconnected for instance 'lmb_bram' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6452]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'exdes_lmb_bram_0' has 16 connections declared, but only 14 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6452]
+INFO: [Synth 8-6157] synthesizing module 'exdes_mblaze_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_mblaze_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_mblaze_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_mblaze_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'Interrupt_Ack' of module 'exdes_mblaze_0' is unconnected for instance 'mblaze' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6469]
+WARNING: [Synth 8-7023] instance 'mblaze' of module 'exdes_mblaze_0' has 52 connections declared, but only 51 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6469]
+INFO: [Synth 8-6157] synthesizing module 'exdes_mdm_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_mdm_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_mdm_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_mdm_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_rst_processor_1_100M_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_rst_processor_1_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_rst_processor_1_100M_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_rst_processor_1_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'exdes_rst_processor_1_100M_0' is unconnected for instance 'rst_processor_1_100M' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6532]
+WARNING: [Synth 8-7023] instance 'rst_processor_1_100M' of module 'exdes_rst_processor_1_100M_0' has 10 connections declared, but only 9 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6532]
+INFO: [Synth 8-6157] synthesizing module 'exdes_rst_processor_1_300M_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_rst_processor_1_300M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_rst_processor_1_300M_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_rst_processor_1_300M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'exdes_rst_processor_1_300M_0' is unconnected for instance 'rst_processor_1_300M' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6542]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'exdes_rst_processor_1_300M_0' is unconnected for instance 'rst_processor_1_300M' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6542]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'exdes_rst_processor_1_300M_0' is unconnected for instance 'rst_processor_1_300M' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6542]
+WARNING: [Synth 8-7023] instance 'rst_processor_1_300M' of module 'exdes_rst_processor_1_300M_0' has 10 connections declared, but only 7 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6542]
+INFO: [Synth 8-6157] synthesizing module 'exdes_xlconcat_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_xlconcat_0/synth/exdes_xlconcat_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_xlconcat_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_xlconcat_0/synth/exdes_xlconcat_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ss_0_imp_F1JHLQ' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:5335]
+INFO: [Synth 8-6157] synthesizing module 'exdes_rx_video_axis_reg_slice_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_rx_video_axis_reg_slice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_rx_video_axis_reg_slice_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_rx_video_axis_reg_slice_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_tx_video_axis_reg_slice_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_tx_video_axis_reg_slice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_tx_video_axis_reg_slice_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_tx_video_axis_reg_slice_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tstrb' of module 'exdes_tx_video_axis_reg_slice_0' is unconnected for instance 'tx_video_axis_reg_slice' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:961]
+WARNING: [Synth 8-7071] port 'm_axis_tkeep' of module 'exdes_tx_video_axis_reg_slice_0' is unconnected for instance 'tx_video_axis_reg_slice' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:961]
+WARNING: [Synth 8-7071] port 'm_axis_tid' of module 'exdes_tx_video_axis_reg_slice_0' is unconnected for instance 'tx_video_axis_reg_slice' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:961]
+WARNING: [Synth 8-7071] port 'm_axis_tdest' of module 'exdes_tx_video_axis_reg_slice_0' is unconnected for instance 'tx_video_axis_reg_slice' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:961]
+WARNING: [Synth 8-7023] instance 'tx_video_axis_reg_slice' of module 'exdes_tx_video_axis_reg_slice_0' has 20 connections declared, but only 16 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:961]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_hdmi_rx_ss_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_v_hdmi_rx_ss_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_hdmi_rx_ss_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_v_hdmi_rx_ss_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_hdmi_tx_ss_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_v_hdmi_tx_ss_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_hdmi_tx_ss_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_v_hdmi_tx_ss_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'v_tpg_ss_0_imp_5QXXBT' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6849]
+INFO: [Synth 8-6157] synthesizing module 'exdes_axi_gpio_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_axi_gpio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_axi_gpio_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_axi_gpio_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_v_tpg_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_v_tpg_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'fid' of module 'exdes_v_tpg_0' is unconnected for instance 'v_tpg' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:7074]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'exdes_v_tpg_0' is unconnected for instance 'v_tpg' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:7074]
+WARNING: [Synth 8-7023] instance 'v_tpg' of module 'exdes_v_tpg_0' has 40 connections declared, but only 38 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:7074]
+INFO: [Synth 8-6155] done synthesizing module 'v_tpg_ss_0_imp_5QXXBT' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:6849]
+INFO: [Synth 8-6157] synthesizing module 'exdes_vcc_const_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vcc_const_0/synth/exdes_vcc_const_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_vcc_const_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vcc_const_0/synth/exdes_vcc_const_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'exdes_vid_phy_controller_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_vid_phy_controller_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_vid_phy_controller_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-2069597-HP-Z4-G4-027564/realtime/exdes_vid_phy_controller_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rx_tmds_clk' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1147]
+WARNING: [Synth 8-7071] port 'vid_phy_tx_axi4s_ch0_tready' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1147]
+WARNING: [Synth 8-7071] port 'vid_phy_tx_axi4s_ch1_tready' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1147]
+WARNING: [Synth 8-7071] port 'vid_phy_tx_axi4s_ch2_tready' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1147]
+WARNING: [Synth 8-7071] port 'vid_phy_rx_axi4s_ch0_tuser' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1147]
+WARNING: [Synth 8-7071] port 'vid_phy_rx_axi4s_ch1_tuser' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1147]
+WARNING: [Synth 8-7071] port 'vid_phy_rx_axi4s_ch2_tuser' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1147]
+WARNING: [Synth 8-7023] instance 'vid_phy_controller' of module 'exdes_vid_phy_controller_0' has 78 connections declared, but only 71 given [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:1147]
+INFO: [Synth 8-6155] done synthesizing module 'exdes' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/synth/exdes.v:391]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_wrapper' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/hdl/exdes_wrapper.v:13]
+WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2555.922 ; gain = 464.676 ; free physical = 549 ; free virtual = 58276
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2567.797 ; gain = 476.551 ; free physical = 546 ; free virtual = 58273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2567.797 ; gain = 476.551 ; free physical = 546 ; free virtual = 58273
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2570.766 ; gain = 0.000 ; free physical = 543 ; free virtual = 58270
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_gpio_0/exdes_axi_gpio_0/exdes_axi_gpio_0_in_context.xdc] for cell 'exdes_i/v_tpg_ss_0/axi_gpio'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_gpio_0/exdes_axi_gpio_0/exdes_axi_gpio_0_in_context.xdc] for cell 'exdes_i/v_tpg_ss_0/axi_gpio'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_tpg_0/exdes_v_tpg_0/exdes_v_tpg_0_in_context.xdc] for cell 'exdes_i/v_tpg_ss_0/v_tpg'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_tpg_0/exdes_v_tpg_0/exdes_v_tpg_0_in_context.xdc] for cell 'exdes_i/v_tpg_ss_0/v_tpg'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_aud_pat_gen_0/exdes_aud_pat_gen_0/exdes_aud_pat_gen_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/aud_pat_gen'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_aud_pat_gen_0/exdes_aud_pat_gen_0/exdes_aud_pat_gen_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/aud_pat_gen'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_xbar_4/exdes_xbar_4/exdes_xbar_4_in_context.xdc] for cell 'exdes_i/audio_ss_0/axi_interconnect/xbar'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_xbar_4/exdes_xbar_4/exdes_xbar_4_in_context.xdc] for cell 'exdes_i/audio_ss_0/axi_interconnect/xbar'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_0/exdes_clk_wiz_0/exdes_clk_wiz_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/clk_wiz'
+create_generated_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2680.578 ; gain = 22.812 ; free physical = 523 ; free virtual = 58256
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_0/exdes_clk_wiz_0/exdes_clk_wiz_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/clk_wiz'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes_hdmi_acr_ctrl_0/exdes_hdmi_acr_ctrl_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/hdmi_acr_ctrl'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes_hdmi_acr_ctrl_0/exdes_hdmi_acr_ctrl_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/hdmi_acr_ctrl'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_intc_0/exdes_axi_intc_0/exdes_axi_intc_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_intc'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_intc_0/exdes_axi_intc_0/exdes_axi_intc_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_intc'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_xbar_5/exdes_xbar_5/exdes_xbar_5_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_interconnect/xbar'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_xbar_5/exdes_xbar_5/exdes_xbar_5_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_interconnect/xbar'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_0/exdes_auto_cc_0/exdes_auto_cc_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_interconnect/m05_couplers/auto_cc'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_0/exdes_auto_cc_0/exdes_auto_cc_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_interconnect/m05_couplers/auto_cc'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_1/exdes_auto_cc_1/exdes_auto_cc_1_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_interconnect/m08_couplers/auto_cc'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_1/exdes_auto_cc_1/exdes_auto_cc_1_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_interconnect/m08_couplers/auto_cc'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_uartlite_0/exdes_axi_uartlite_0/exdes_axi_uartlite_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_uartlite'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_uartlite_0/exdes_axi_uartlite_0/exdes_axi_uartlite_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_uartlite'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_1/exdes_clk_wiz_1/exdes_clk_wiz_1_in_context.xdc] for cell 'exdes_i/mb_ss_0/clk_wiz'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_1/exdes_clk_wiz_1/exdes_clk_wiz_1_in_context.xdc] for cell 'exdes_i/mb_ss_0/clk_wiz'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_dlmb_bram_if_cntlr_0/exdes_dlmb_bram_if_cntlr_0/exdes_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_dlmb_bram_if_cntlr_0/exdes_dlmb_bram_if_cntlr_0/exdes_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/dlmb_bram_if_cntlr'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_dlmb_v10_0/exdes_dlmb_v10_0/exdes_dlmb_v10_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/dlmb_v10'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_dlmb_v10_0/exdes_dlmb_v10_0/exdes_dlmb_v10_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/dlmb_v10'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_fmch_axi_iic_0/exdes_fmch_axi_iic_0/exdes_fmch_axi_iic_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_iic_0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_fmch_axi_iic_0/exdes_fmch_axi_iic_0/exdes_fmch_axi_iic_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_iic_0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_ilmb_bram_if_cntlr_0/exdes_ilmb_bram_if_cntlr_0/exdes_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_ilmb_bram_if_cntlr_0/exdes_ilmb_bram_if_cntlr_0/exdes_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/ilmb_bram_if_cntlr'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_ilmb_v10_0/exdes_ilmb_v10_0/exdes_dlmb_v10_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/ilmb_v10'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_ilmb_v10_0/exdes_ilmb_v10_0/exdes_dlmb_v10_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/ilmb_v10'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_lmb_bram_0/exdes_lmb_bram_0/exdes_lmb_bram_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/lmb_bram'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_lmb_bram_0/exdes_lmb_bram_0/exdes_lmb_bram_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/lmb_bram'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mblaze_0/exdes_mblaze_0/exdes_mblaze_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/mblaze'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mblaze_0/exdes_mblaze_0/exdes_mblaze_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/mblaze'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mdm_0/exdes_mdm_0/exdes_mdm_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/mdm'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mdm_0/exdes_mdm_0/exdes_mdm_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/mdm'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_100M_0/exdes_rst_processor_1_100M_0/exdes_rst_processor_1_100M_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/rst_processor_1_100M'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_100M_0/exdes_rst_processor_1_100M_0/exdes_rst_processor_1_100M_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/rst_processor_1_100M'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_300M_0/exdes_rst_processor_1_300M_0/exdes_rst_processor_1_300M_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/rst_processor_1_300M'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_300M_0/exdes_rst_processor_1_300M_0/exdes_rst_processor_1_300M_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/rst_processor_1_300M'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_fmch_axi_iic_1/exdes_fmch_axi_iic_1/exdes_fmch_axi_iic_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_iic_1'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_fmch_axi_iic_1/exdes_fmch_axi_iic_1/exdes_fmch_axi_iic_0_in_context.xdc] for cell 'exdes_i/mb_ss_0/axi_iic_1'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rx_video_axis_reg_slice_0/exdes_rx_video_axis_reg_slice_0/exdes_rx_video_axis_reg_slice_0_in_context.xdc] for cell 'exdes_i/rx_video_axis_reg_slice'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rx_video_axis_reg_slice_0/exdes_rx_video_axis_reg_slice_0/exdes_rx_video_axis_reg_slice_0_in_context.xdc] for cell 'exdes_i/rx_video_axis_reg_slice'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_tx_video_axis_reg_slice_0/exdes_tx_video_axis_reg_slice_0/exdes_tx_video_axis_reg_slice_0_in_context.xdc] for cell 'exdes_i/tx_video_axis_reg_slice'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_tx_video_axis_reg_slice_0/exdes_tx_video_axis_reg_slice_0/exdes_tx_video_axis_reg_slice_0_in_context.xdc] for cell 'exdes_i/tx_video_axis_reg_slice'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_rx_ss_0/exdes_v_hdmi_rx_ss_0/exdes_v_hdmi_rx_ss_0_in_context.xdc] for cell 'exdes_i/v_hdmi_rx_ss'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_rx_ss_0/exdes_v_hdmi_rx_ss_0/exdes_v_hdmi_rx_ss_0_in_context.xdc] for cell 'exdes_i/v_hdmi_rx_ss'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/exdes_v_hdmi_tx_ss_0/exdes_v_hdmi_tx_ss_0_in_context.xdc] for cell 'exdes_i/v_hdmi_tx_ss'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/exdes_v_hdmi_tx_ss_0/exdes_v_hdmi_tx_ss_0_in_context.xdc] for cell 'exdes_i/v_hdmi_tx_ss'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc] for cell 'exdes_i/vid_phy_controller'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc] for cell 'exdes_i/vid_phy_controller'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2680.578 ; gain = 0.000 ; free physical = 523 ; free virtual = 58257
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 8 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2680.578 ; gain = 0.000 ; free physical = 523 ; free virtual = 58257
+WARNING: [Timing 38-316] Clock period '6.734' specified during out-of-context synthesis of instance 'exdes_i/v_hdmi_rx_ss' at clock pin 'link_clk' is different from the actual clock period '3.367', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.734' specified during out-of-context synthesis of instance 'exdes_i/v_hdmi_tx_ss' at clock pin 'link_clk' is different from the actual clock period '3.285', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.734' specified during out-of-context synthesis of instance 'exdes_i/vid_phy_controller' at clock pin 'vid_phy_rx_axi4s_aclk' is different from the actual clock period '3.367', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'exdes_i/mb_ss_0/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'exdes_i/v_tpg_ss_0/axi_gpio' at clock pin 's_axi_aclk' is different from the actual clock period '3.333', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2680.578 ; gain = 589.332 ; free physical = 520 ; free virtual = 58254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcau15p-ffvb676-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2680.578 ; gain = 589.332 ; free physical = 520 ; free virtual = 58254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_diff_clock_clk_n. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_1/exdes_clk_wiz_1/exdes_clk_wiz_1_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_diff_clock_clk_n. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_1/exdes_clk_wiz_1/exdes_clk_wiz_1_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_diff_clock_clk_p. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_1/exdes_clk_wiz_1/exdes_clk_wiz_1_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_diff_clock_clk_p. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_1/exdes_clk_wiz_1/exdes_clk_wiz_1_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for TX_REFCLK_N_IN. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TX_REFCLK_N_IN. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for TX_REFCLK_P_IN. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TX_REFCLK_P_IN. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_CLK_N_IN. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_CLK_N_IN. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_CLK_P_IN. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_CLK_P_IN. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_DAT_N_IN[0]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_DAT_N_IN[0]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_DAT_N_IN[1]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_DAT_N_IN[1]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_DAT_N_IN[2]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_DAT_N_IN[2]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_DAT_P_IN[0]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_DAT_P_IN[0]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_DAT_P_IN[1]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_DAT_P_IN[1]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_DAT_P_IN[2]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_DAT_P_IN[2]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_DAT_N_OUT[0]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_DAT_N_OUT[0]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_DAT_N_OUT[1]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_DAT_N_OUT[1]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_DAT_N_OUT[2]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_DAT_N_OUT[2]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_DAT_P_OUT[0]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 33).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_DAT_P_OUT[0]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_DAT_P_OUT[1]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 35).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_DAT_P_OUT[1]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_DAT_P_OUT[2]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 37).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_DAT_P_OUT[2]. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 38).
+Applied set_property IO_BUFFER_TYPE = NONE for RX_REFCLK_N_OUT. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 39).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for RX_REFCLK_N_OUT. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 40).
+Applied set_property IO_BUFFER_TYPE = NONE for RX_REFCLK_P_OUT. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 41).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for RX_REFCLK_P_OUT. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 42).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_CLK_N_OUT. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 43).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_CLK_N_OUT. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 44).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_CLK_P_OUT. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 45).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_CLK_P_OUT. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 46).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/v_tpg_ss_0/axi_gpio. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/v_tpg_ss_0/v_tpg. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/audio_ss_0/aud_pat_gen. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/audio_ss_0/axi_interconnect/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/audio_ss_0/axi_interconnect. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/audio_ss_0/clk_wiz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/audio_ss_0/hdmi_acr_ctrl. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/axi_intc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/axi_interconnect/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/axi_interconnect/m05_couplers/auto_cc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/axi_interconnect/m08_couplers/auto_cc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/axi_interconnect. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/axi_uartlite. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/clk_wiz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/dlmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/dlmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/axi_iic_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/ilmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/ilmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/lmb_bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/mblaze. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/mdm. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/rst_processor_1_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/rst_processor_1_300M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/xlconcat. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/mb_ss_0/axi_iic_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/rx_video_axis_reg_slice. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/tx_video_axis_reg_slice. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/v_hdmi_rx_ss. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/v_hdmi_tx_ss. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/vcc_const. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for exdes_i/vid_phy_controller. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2680.578 ; gain = 589.332 ; free physical = 520 ; free virtual = 58254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2680.578 ; gain = 589.332 ; free physical = 519 ; free virtual = 58254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 576 (col length:72)
+BRAMs: 288 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2680.578 ; gain = 589.332 ; free physical = 514 ; free virtual = 58255
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2734.320 ; gain = 643.074 ; free physical = 499 ; free virtual = 58211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2735.320 ; gain = 644.074 ; free physical = 498 ; free virtual = 58210
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2746.328 ; gain = 655.082 ; free physical = 499 ; free virtual = 58200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2761.203 ; gain = 669.957 ; free physical = 497 ; free virtual = 58199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2761.203 ; gain = 669.957 ; free physical = 497 ; free virtual = 58199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2761.203 ; gain = 669.957 ; free physical = 497 ; free virtual = 58199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2761.203 ; gain = 669.957 ; free physical = 497 ; free virtual = 58199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2761.203 ; gain = 669.957 ; free physical = 497 ; free virtual = 58199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2761.203 ; gain = 669.957 ; free physical = 497 ; free virtual = 58199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------+----------+
+|      |BlackBox name                   |Instances |
++------+--------------------------------+----------+
+|1     |exdes_rx_video_axis_reg_slice_0 |         1|
+|2     |exdes_tx_video_axis_reg_slice_0 |         1|
+|3     |exdes_v_hdmi_rx_ss_0            |         1|
+|4     |exdes_v_hdmi_tx_ss_0            |         1|
+|5     |exdes_vid_phy_controller_0      |         1|
+|6     |exdes_xbar_4                    |         1|
+|7     |exdes_aud_pat_gen_0             |         1|
+|8     |exdes_clk_wiz_0                 |         1|
+|9     |exdes_hdmi_acr_ctrl_0           |         1|
+|10    |exdes_xbar_5                    |         1|
+|11    |exdes_auto_cc_0                 |         1|
+|12    |exdes_auto_cc_1                 |         1|
+|13    |exdes_fmch_axi_iic_0            |         1|
+|14    |exdes_fmch_axi_iic_1            |         1|
+|15    |exdes_axi_intc_0                |         1|
+|16    |exdes_axi_uartlite_0            |         1|
+|17    |exdes_clk_wiz_1                 |         1|
+|18    |exdes_dlmb_bram_if_cntlr_0      |         1|
+|19    |exdes_dlmb_v10_0                |         1|
+|20    |exdes_ilmb_bram_if_cntlr_0      |         1|
+|21    |exdes_ilmb_v10_0                |         1|
+|22    |exdes_lmb_bram_0                |         1|
+|23    |exdes_mblaze_0                  |         1|
+|24    |exdes_mdm_0                     |         1|
+|25    |exdes_rst_processor_1_100M_0    |         1|
+|26    |exdes_rst_processor_1_300M_0    |         1|
+|27    |exdes_axi_gpio_0                |         1|
+|28    |exdes_v_tpg_0                   |         1|
++------+--------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------+------+
+|      |Cell                          |Count |
++------+------------------------------+------+
+|1     |exdes_aud_pat_gen             |     1|
+|2     |exdes_auto_cc                 |     2|
+|4     |exdes_axi_gpio                |     1|
+|5     |exdes_axi_intc                |     1|
+|6     |exdes_axi_uartlite            |     1|
+|7     |exdes_clk_wiz                 |     2|
+|9     |exdes_dlmb_bram_if_cntlr      |     1|
+|10    |exdes_dlmb_v10                |     1|
+|11    |exdes_fmch_axi_iic            |     2|
+|13    |exdes_hdmi_acr_ctrl           |     1|
+|14    |exdes_ilmb_bram_if_cntlr      |     1|
+|15    |exdes_ilmb_v10                |     1|
+|16    |exdes_lmb_bram                |     1|
+|17    |exdes_mblaze                  |     1|
+|18    |exdes_mdm                     |     1|
+|19    |exdes_rst_processor_1_100M    |     1|
+|20    |exdes_rst_processor_1_300M    |     1|
+|21    |exdes_rx_video_axis_reg_slice |     1|
+|22    |exdes_tx_video_axis_reg_slice |     1|
+|23    |exdes_v_hdmi_rx_ss            |     1|
+|24    |exdes_v_hdmi_tx_ss            |     1|
+|25    |exdes_v_tpg                   |     1|
+|26    |exdes_vid_phy_controller      |     1|
+|27    |exdes_xbar                    |     2|
+|29    |IBUF                          |     5|
+|30    |IOBUF                         |     8|
+|31    |OBUF                          |     8|
++------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2761.203 ; gain = 669.957 ; free physical = 497 ; free virtual = 58199
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2761.203 ; gain = 557.176 ; free physical = 497 ; free virtual = 58198
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2761.211 ; gain = 669.957 ; free physical = 497 ; free virtual = 58198
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2767.141 ; gain = 0.000 ; free physical = 770 ; free virtual = 58471
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2791.891 ; gain = 0.000 ; free physical = 744 ; free virtual = 58447
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 13 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 5 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 8 instances
+
+Synth Design complete | Checksum: 9f05e3ba
+INFO: [Common 17-83] Releasing license: Synthesis
+137 Infos, 155 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2791.891 ; gain = 1254.410 ; free physical = 744 ; free virtual = 58447
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2241.129; main = 2013.627; forked = 379.922
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3655.418; main = 2791.895; forked = 974.836
+INFO: [Common 17-1381] The checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/exdes_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file exdes_wrapper_utilization_synth.rpt -pb exdes_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan  9 09:29:11 2025...

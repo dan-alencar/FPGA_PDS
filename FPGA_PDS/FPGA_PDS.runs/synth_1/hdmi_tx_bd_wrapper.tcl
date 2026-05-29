@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
 set_param general.usePosixSpawnForFork 1
 set_param bd.open.in_stealth_mode 2
@@ -183,6 +184,12 @@ set_property used_in_implementation false [get_files -all /home/dan-alencar/Docu
 set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_66/bd_5bc6_m05awn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_67/bd_5bc6_m05wn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_68/bd_5bc6_m05bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_70/bd_5bc6_m06s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_71/bd_5bc6_m06arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_72/bd_5bc6_m06rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_73/bd_5bc6_m06awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_74/bd_5bc6_m06wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_75/bd_5bc6_m06bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0.xdc]
@@ -214,6 +221,8 @@ set_property used_in_implementation false [get_files -all /home/dan-alencar/Docu
 set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_dlmb_bram_if_cntlr_1/hdmi_tx_bd_dlmb_bram_if_cntlr_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_ilmb_bram_if_cntlr_1/hdmi_tx_bd_ilmb_bram_if_cntlr_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_lmb_bram_1/hdmi_tx_bd_lmb_bram_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axi_gpio_0_0/hdmi_tx_bd_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axi_gpio_0_0/hdmi_tx_bd_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/hdmi_tx_bd_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/data/mb_bootloop_le.elf]
 

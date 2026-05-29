@@ -318,6 +318,15 @@ common_IS_TOP_LEVEL:STATIC=OFF
 common_SOURCE_DIR:STATIC=/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/common/src
 
 //Value Computed by CMake
+gpio_BINARY_DIR:STATIC=/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/gpio/src
+
+//Value Computed by CMake
+gpio_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+gpio_SOURCE_DIR:STATIC=/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/gpio/src
+
+//Value Computed by CMake
 iic_BINARY_DIR:STATIC=/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/iic/src
 
 //Value Computed by CMake
@@ -595,7 +604,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=22
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

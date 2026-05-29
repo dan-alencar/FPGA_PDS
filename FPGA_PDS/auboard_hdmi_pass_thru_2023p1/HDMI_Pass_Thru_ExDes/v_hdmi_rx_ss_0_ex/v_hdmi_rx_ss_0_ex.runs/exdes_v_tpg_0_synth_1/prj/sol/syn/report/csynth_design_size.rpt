@@ -1,0 +1,54 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Instructions per Function for each Compilation Phase
++---------------------------------------+----------------------+------------------+------------------+----------------------+-----------------+
+| Function                              | Location             | Compile/Link     | Unroll/Inline    | Performance/Pipeline | Optimizations   |
++---------------------------------------+----------------------+------------------+------------------+----------------------+-----------------+
+| + v_tpg                               | v_tpg.cpp:364        | 9,651            | 3,447            | 1,561                | 1,653           |
+|    reg<unsigned short>                | x_hls_utils.h:248    |     1            |     1            |     1                |     4           |
+|  + v_tpgHlsDataFlow                   | v_tpg.cpp:259        | 9,565            | 3,365            | 1,480                | 1,497           |
+|   + AXIvideo2MultiPixStream           | v_tpg.cpp:776        |   893            |   376            |   193                |   235           |
+|      Scalar                           | hls_video_core.h:182 |    21            |                  |                      |                 |
+|      reg<unsigned short>              | x_hls_utils.h:248    |     2 (2 calls)  |     2 (2 calls)  |     2 (2 calls)      |     8 (2 calls) |
+|    + AXIGetBitFields<48, ap_uint<...  | hls_axi_io.h:69      |   243 (3 calls)  |                  |                      |                 |
+|       AXIGetBitFields<48, ap_uint<... | hls_axi_io.h:46      |   225 (3 calls)  |                  |                      |                 |
+|   + tpgBackground                     | v_tpg.cpp:491        | 7,384            | 2,718            | 1,089                | 1,062           |
+|      Scalar                           | hls_video_core.h:182 |    42 (2 calls)  |                  |                      |                 |
+|    + tpgPatternSolidBlack             | v_tpg.cpp:1148       | 2,156 (14 calls) |   728 (14 calls) |                      |                 |
+|       Scalar                          | hls_video_core.h:182 |   294 (14 calls) |                  |                      |                 |
+|    + tpgPatternColorBars              | v_tpg.cpp:1190       |   790            |   201            |                      |                 |
+|       Scalar                          | hls_video_core.h:182 |    21            |                  |                      |                 |
+|    + tpgPatternTartanColorBars        | v_tpg.cpp:1324       |   703            |   275            |                      |                 |
+|       Scalar                          | hls_video_core.h:182 |    42 (2 calls)  |                  |                      |                 |
+|    + tpgPatternCrossHatch             | v_tpg.cpp:1392       |   830            |   249            |                      |                 |
+|       Scalar                          | hls_video_core.h:182 |    21            |                  |                      |                 |
+|       reg<ap_uint<10> >               | x_hls_utils.h:248    |     3            |     3            |                      |                 |
+|    + tpgPatternCheckerBoard           | v_tpg.cpp:1506       |   684            |   273            |                      |                 |
+|       Scalar                          | hls_video_core.h:182 |    21            |                  |                      |                 |
+|    + tpgPRBS                          | v_tpg.cpp:1778       | 1,855            |   206            |                      |                 |
+|       Scalar                          | hls_video_core.h:182 |    21            |                  |                      |                 |
+|      reg<ap_uint<10> >                | x_hls_utils.h:248    |                  |                  |     2                |     5           |
+|   + MultiPixStream2AXIvideo           | v_tpg.cpp:874        | 1,162            |   241            |   188                |   186           |
+|      Scalar                           | hls_video_core.h:182 |    21            |                  |                      |                 |
++---------------------------------------+----------------------+------------------+------------------+----------------------+-----------------+
+
+* Description of Compilation Phases
++----------------------+------------------------------------------------------------+
+| Compilation Phase    | Description                                                |
++----------------------+------------------------------------------------------------+
+| Compile/Link         | All functions are compiled and linked into a single design |
+| Unroll/Inline        | After user unroll and inline pragmas are applied           |
+| Performance/Pipeline | After performance and pipeline pragmas are applied         |
+| Optimizations        | After high level synthesis optimizations                   |
++----------------------+------------------------------------------------------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

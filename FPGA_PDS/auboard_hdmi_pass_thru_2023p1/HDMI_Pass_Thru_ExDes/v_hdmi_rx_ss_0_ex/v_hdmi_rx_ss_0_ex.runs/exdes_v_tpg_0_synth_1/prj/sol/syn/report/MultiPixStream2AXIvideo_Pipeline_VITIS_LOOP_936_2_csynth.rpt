@@ -1,0 +1,189 @@
+
+
+================================================================
+== Vitis HLS Report for 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2'
+================================================================
+* Date:           Thu Jan  9 09:27:57 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: artixuplus
+* Target device:  xcau15p-ffvb676-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.604 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
+    |   min   |   max   |    min    |    max   | min |  max |   Type  |
+    +---------+---------+-----------+----------+-----+------+---------+
+    |        4|     2051|  13.332 ns|  6.836 us|    4|  2051|       no|
+    +---------+---------+-----------+----------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- VITIS_LOOP_936_2  |        1|     2048|         2|          1|          1|  1 ~ 2048|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    204|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    103|    -|
+|Register         |        -|    -|      35|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      35|    307|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      288|  576|  155520|  77760|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln960_fu_255_p2               |         +|   0|  0|  23|          16|           1|
+    |j_2_fu_240_p2                     |         +|   0|  0|  19|          12|           1|
+    |ap_block_pp0_stage0_01001         |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001         |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_io                |       and|   0|  0|   2|           1|           1|
+    |axi_last_fu_246_p2                |      icmp|   0|  0|  20|          13|          13|
+    |icmp_ln936_fu_235_p2              |      icmp|   0|  0|  19|          12|          12|
+    |icmp_ln975_1_fu_361_p2            |      icmp|   0|  0|  15|           8|           1|
+    |icmp_ln975_fu_356_p2              |      icmp|   0|  0|  15|           8|           1|
+    |ap_block_state3_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |axi_data_2_fu_366_p3              |    select|   0|  0|   9|           1|           9|
+    |select_ln975_1_fu_386_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln975_2_fu_394_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln975_3_fu_402_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln975_4_fu_410_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln975_5_fu_418_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln975_6_fu_426_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln975_7_fu_434_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln975_8_fu_442_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln975_fu_378_p3            |    select|   0|  0|   8|           1|           8|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1           |       xor|   0|  0|   2|           2|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 204|          86|         117|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------+----+-----------+-----+-----------+
+    |              Name              | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                       |  26|          5|    1|          5|
+    |ap_enable_reg_pp0_iter1         |  14|          3|    1|          3|
+    |ap_phi_mux_sof_2_phi_fu_198_p4  |   9|          2|    1|          2|
+    |counter_loc_1_out_o             |   9|          2|   16|         32|
+    |j_fu_124                        |   9|          2|   12|         24|
+    |m_axis_video_TDATA_blk_n        |   9|          2|    1|          2|
+    |ovrlayYUV_blk_n                 |   9|          2|    1|          2|
+    |phi_ln991_reg_206               |   9|          2|    1|          2|
+    |sof_2_reg_194                   |   9|          2|    1|          2|
+    +--------------------------------+----+-----------+-----+-----------+
+    |Total                           | 103|         22|   35|         74|
+    +--------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   4|   0|    4|          0|
+    |ap_enable_reg_pp0_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |axi_last_reg_509         |   1|   0|    1|          0|
+    |icmp_ln936_reg_505       |   1|   0|    1|          0|
+    |j_fu_124                 |  12|   0|   12|          0|
+    |phi_ln991_reg_206        |   1|   0|    1|          0|
+    |sof_2_reg_194            |   1|   0|    1|          0|
+    |sub_cast_cast_reg_500    |  13|   0|   13|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  35|   0|   35|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+---------------------------------------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |                   Source Object                   |    C Type    |
++----------------------------+-----+-----+------------+---------------------------------------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2|  return value|
+|sof                         |   in|    1|     ap_none|                                                sof|        scalar|
+|div228_cast                 |   in|   12|   ap_stable|                                        div228_cast|        scalar|
+|ovrlayYUV_dout              |   in|   48|     ap_fifo|                                          ovrlayYUV|       pointer|
+|ovrlayYUV_num_data_valid    |   in|    5|     ap_fifo|                                          ovrlayYUV|       pointer|
+|ovrlayYUV_fifo_cap          |   in|    5|     ap_fifo|                                          ovrlayYUV|       pointer|
+|ovrlayYUV_empty_n           |   in|    1|     ap_fifo|                                          ovrlayYUV|       pointer|
+|ovrlayYUV_read              |  out|    1|     ap_fifo|                                          ovrlayYUV|       pointer|
+|colorFormat_load            |   in|    8|   ap_stable|                                   colorFormat_load|        scalar|
+|m_axis_video_TDATA          |  out|   48|        axis|                              m_axis_video_V_data_V|       pointer|
+|m_axis_video_TREADY         |   in|    1|        axis|                              m_axis_video_V_data_V|       pointer|
+|m_axis_video_TVALID         |  out|    1|        axis|                              m_axis_video_V_dest_V|       pointer|
+|m_axis_video_TDEST          |  out|    1|        axis|                              m_axis_video_V_dest_V|       pointer|
+|m_axis_video_TKEEP          |  out|    6|        axis|                              m_axis_video_V_keep_V|       pointer|
+|m_axis_video_TSTRB          |  out|    6|        axis|                              m_axis_video_V_strb_V|       pointer|
+|m_axis_video_TUSER          |  out|    1|        axis|                              m_axis_video_V_user_V|       pointer|
+|m_axis_video_TLAST          |  out|    1|        axis|                              m_axis_video_V_last_V|       pointer|
+|m_axis_video_TID            |  out|    1|        axis|                                m_axis_video_V_id_V|       pointer|
+|sub_cast                    |   in|   12|   ap_stable|                                           sub_cast|        scalar|
+|counter_loc_1_out_i         |   in|   16|     ap_ovld|                                  counter_loc_1_out|       pointer|
+|counter_loc_1_out_o         |  out|   16|     ap_ovld|                                  counter_loc_1_out|       pointer|
+|counter_loc_1_out_o_ap_vld  |  out|    1|     ap_ovld|                                  counter_loc_1_out|       pointer|
+|phi_ln991_out               |  out|    1|      ap_vld|                                      phi_ln991_out|       pointer|
+|phi_ln991_out_ap_vld        |  out|    1|      ap_vld|                                      phi_ln991_out|       pointer|
+|counter                     |  out|   16|      ap_vld|                                            counter|       pointer|
+|counter_ap_vld              |  out|    1|      ap_vld|                                            counter|       pointer|
++----------------------------+-----+-----+------------+---------------------------------------------------+--------------+
+

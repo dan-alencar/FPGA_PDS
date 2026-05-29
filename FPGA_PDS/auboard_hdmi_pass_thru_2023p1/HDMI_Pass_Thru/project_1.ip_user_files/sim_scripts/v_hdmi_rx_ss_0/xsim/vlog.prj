@@ -1,0 +1,12 @@
+sv xil_defaultlib  \
+"../../../../project_1.gen/sources_1/ip/v_hdmi_rx_ss_0/bd_0/ip/ip_0/sim/bd_2422_0_v_hdmi_rx_0.sv" \
+
+verilog xil_defaultlib  \
+"../../../../project_1.gen/sources_1/ip/v_hdmi_rx_ss_0/bd_0/ip/ip_1/sim/bd_2422_0_v_vid_in_axi4s_0.v" \
+"../../../../project_1.gen/sources_1/ip/v_hdmi_rx_ss_0/bd_0/sim/bd_2422_0.v" \
+"../../../../project_1.gen/sources_1/ip/v_hdmi_rx_ss_0/sim/v_hdmi_rx_ss_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Passthrough_Microblaze_2" location="/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/hdmi_pass_thru_workspace/Passthrough_Microblaze_2" platform="/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/hdmi_pass_thru_workspace/aup_hdmi/export/aup_hdmi/aup_hdmi.xpfm" platformUID="xilinx:vcu118::0.0(custom)" systemProject="Passthrough_Microblaze_2_system" sysConfig="aup_hdmi" runtime="C/C++" cpu="standalone_domain" cpuInstance="mb_ss_0_mblaze" os="standalone" mssSignature="df9dd75de0013b66a46d72d1baf1e207">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.1060873671">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.1520612737" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

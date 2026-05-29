@@ -1,0 +1,234 @@
+
+
+================================================================
+== Vitis HLS Report for 'tpgBackground'
+================================================================
+* Date:           Thu Jan  9 09:27:57 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: artixuplus
+* Target device:  xcau15p-ffvb676-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.707 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------+-----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                    |                                         |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                      Instance                      |                  Module                 |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +----------------------------------------------------+-----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_292  |tpgBackground_Pipeline_VITIS_LOOP_520_2  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +----------------------------------------------------+-----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |    Trip   |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |   Count   | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+        |- VITIS_LOOP_518_1  |        ?|        ?|         ?|          -|          -|  0 ~ 65535|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    170|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    -|    1118|   3167|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    143|    -|
+|Register         |        -|    -|     328|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|    1446|   3480|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      288|  576|  155520|  77760|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|      4|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------+-----------------------------------------+---------+----+------+------+-----+
+    |                      Instance                      |                  Module                 | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------------------------------------+-----------------------------------------+---------+----+------+------+-----+
+    |grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_292  |tpgBackground_Pipeline_VITIS_LOOP_520_2  |        0|   0|  1118|  3167|    0|
+    +----------------------------------------------------+-----------------------------------------+---------+----+------+------+-----+
+    |Total                                               |                                         |        0|   0|  1118|  3167|    0|
+    +----------------------------------------------------+-----------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln518_fu_559_p2   |         +|   0|  0|  23|          16|           1|
+    |add_ln705_fu_608_p2   |         +|   0|  0|  15|           8|           8|
+    |cmp59_not_fu_583_p2   |      icmp|   0|  0|  23|          16|          16|
+    |cmp8_fu_412_p2        |      icmp|   0|  0|  15|           8|           1|
+    |empty_67_fu_500_p2    |      icmp|   0|  0|  15|           8|           1|
+    |empty_fu_494_p2       |      icmp|   0|  0|  15|           8|           1|
+    |icmp_fu_428_p2        |      icmp|   0|  0|  14|           7|           1|
+    |icmp_ln518_fu_554_p2  |      icmp|   0|  0|  23|          16|          16|
+    |ult_fu_588_p2         |      icmp|   0|  0|  23|          16|          16|
+    |ap_block_state1       |        or|   0|  0|   2|           1|           1|
+    |rev340_fu_593_p2      |       xor|   0|  0|   2|           1|           2|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0| 170|         105|          64|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |                                          Name                                          | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                                                               |  26|          5|    1|          5|
+    |ap_done                                                                                 |   9|          2|    1|          2|
+    |ovrlayYUV_write                                                                         |   9|          2|    1|          2|
+    |real_start                                                                              |   9|          2|    1|          2|
+    |srcYUV_read                                                                             |   9|          2|    1|          2|
+    |tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_6_fu_204   |   9|          2|    8|         16|
+    |tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_7_fu_200   |   9|          2|    8|         16|
+    |tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7_2_fu_224  |   9|          2|    8|         16|
+    |tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_l_1_fu_228  |   9|          2|    8|         16|
+    |tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_6_fu_216  |   9|          2|    8|         16|
+    |tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_7_fu_212  |   9|          2|    8|         16|
+    |vBarSel_1_loc_0_fu_208                                                                  |   9|          2|    8|         16|
+    |vBarSel_loc_0_fu_220                                                                    |   9|          2|    8|         16|
+    |y_fu_196                                                                                |   9|          2|   16|         32|
+    +----------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                                                   | 143|         31|   85|        173|
+    +----------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                          Name                                          | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                               |   4|   0|    4|          0|
+    |ap_done_reg                                                                             |   1|   0|    1|          0|
+    |cmp59_not_reg_847                                                                       |   1|   0|    1|          0|
+    |cmp8_reg_753                                                                            |   1|   0|    1|          0|
+    |empty_67_reg_803                                                                        |   1|   0|    1|          0|
+    |empty_reg_798                                                                           |   1|   0|    1|          0|
+    |grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_292_ap_start_reg                         |   1|   0|    1|          0|
+    |icmp_reg_783                                                                            |   1|   0|    1|          0|
+    |outpix_1_fu_176                                                                         |   8|   0|    8|          0|
+    |outpix_1_load_reg_822                                                                   |   8|   0|    8|          0|
+    |outpix_2_fu_180                                                                         |   8|   0|    8|          0|
+    |outpix_2_load_reg_827                                                                   |   8|   0|    8|          0|
+    |outpix_3_fu_184                                                                         |   8|   0|    8|          0|
+    |outpix_3_load_reg_832                                                                   |   8|   0|    8|          0|
+    |outpix_4_fu_188                                                                         |   8|   0|    8|          0|
+    |outpix_4_load_reg_837                                                                   |   8|   0|    8|          0|
+    |outpix_5_fu_192                                                                         |   8|   0|    8|          0|
+    |outpix_5_load_reg_842                                                                   |   8|   0|    8|          0|
+    |outpix_fu_172                                                                           |   8|   0|    8|          0|
+    |outpix_load_reg_817                                                                     |   8|   0|    8|          0|
+    |p_0_0_0_0_0243374_lcssa387_fu_148                                                       |   8|   0|    8|          0|
+    |p_0_1_0_0_0245376_lcssa390_fu_152                                                       |   8|   0|    8|          0|
+    |p_0_2_0_0_0247378_lcssa393_fu_156                                                       |   8|   0|    8|          0|
+    |p_0_3_0_0_0249380_lcssa396_fu_160                                                       |   8|   0|    8|          0|
+    |p_0_4_0_0_0251382_lcssa399_fu_164                                                       |   8|   0|    8|          0|
+    |p_0_5_0_0_0253384_lcssa402_fu_168                                                       |   8|   0|    8|          0|
+    |rampStart                                                                               |   8|   0|    8|          0|
+    |rev340_reg_852                                                                          |   1|   0|    1|          0|
+    |start_once_reg                                                                          |   1|   0|    1|          0|
+    |tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_2          |   3|   0|    3|          0|
+    |tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_3          |   3|   0|    3|          0|
+    |tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_6_fu_204   |   8|   0|    8|          0|
+    |tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_7_fu_200   |   8|   0|    8|          0|
+    |tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel             |   8|   0|    8|          0|
+    |tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7           |   8|   0|    8|          0|
+    |tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_7_2_fu_224  |   8|   0|    8|          0|
+    |tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_l_1_fu_228  |   8|   0|    8|          0|
+    |tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_2         |   3|   0|    3|          0|
+    |tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_3         |   3|   0|    3|          0|
+    |tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_6_fu_216  |   8|   0|    8|          0|
+    |tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_7_fu_212  |   8|   0|    8|          0|
+    |trunc_ln1196_reg_788                                                                    |  14|   0|   14|          0|
+    |trunc_ln1212_reg_793                                                                    |  14|   0|   14|          0|
+    |vBarSel                                                                                 |   3|   0|    3|          0|
+    |vBarSel_1                                                                               |   8|   0|    8|          0|
+    |vBarSel_1_loc_0_fu_208                                                                  |   8|   0|    8|          0|
+    |vBarSel_loc_0_fu_220                                                                    |   8|   0|    8|          0|
+    |y_1_reg_808                                                                             |  16|   0|   16|          0|
+    |y_fu_196                                                                                |  16|   0|   16|          0|
+    +----------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                   | 328|   0|  328|          0|
+    +----------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+----------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++--------------------------+-----+-----+------------+----------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|   tpgBackground|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|   tpgBackground|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|   tpgBackground|  return value|
+|start_full_n              |   in|    1|  ap_ctrl_hs|   tpgBackground|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|   tpgBackground|  return value|
+|ap_continue               |   in|    1|  ap_ctrl_hs|   tpgBackground|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|   tpgBackground|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|   tpgBackground|  return value|
+|start_out                 |  out|    1|  ap_ctrl_hs|   tpgBackground|  return value|
+|start_write               |  out|    1|  ap_ctrl_hs|   tpgBackground|  return value|
+|srcYUV_dout               |   in|   48|     ap_fifo|          srcYUV|       pointer|
+|srcYUV_num_data_valid     |   in|    5|     ap_fifo|          srcYUV|       pointer|
+|srcYUV_fifo_cap           |   in|    5|     ap_fifo|          srcYUV|       pointer|
+|srcYUV_empty_n            |   in|    1|     ap_fifo|          srcYUV|       pointer|
+|srcYUV_read               |  out|    1|     ap_fifo|          srcYUV|       pointer|
+|height                    |   in|   16|   ap_stable|          height|       pointer|
+|width                     |   in|   16|   ap_stable|           width|       pointer|
+|passthruStartX            |   in|   16|   ap_stable|  passthruStartX|       pointer|
+|passthruStartY            |   in|   16|   ap_stable|  passthruStartY|       pointer|
+|passthruEndX              |   in|   16|   ap_stable|    passthruEndX|       pointer|
+|passthruEndY              |   in|   16|   ap_stable|    passthruEndY|       pointer|
+|enableInput               |   in|    8|   ap_stable|     enableInput|       pointer|
+|bckgndId                  |   in|    8|   ap_stable|        bckgndId|       pointer|
+|motionSpeed               |   in|    8|   ap_stable|     motionSpeed|       pointer|
+|colorFormat               |   in|    8|   ap_stable|     colorFormat|       pointer|
+|ovrlayYUV_din             |  out|   48|     ap_fifo|       ovrlayYUV|       pointer|
+|ovrlayYUV_num_data_valid  |   in|    5|     ap_fifo|       ovrlayYUV|       pointer|
+|ovrlayYUV_fifo_cap        |   in|    5|     ap_fifo|       ovrlayYUV|       pointer|
+|ovrlayYUV_full_n          |   in|    1|     ap_fifo|       ovrlayYUV|       pointer|
+|ovrlayYUV_write           |  out|    1|     ap_fifo|       ovrlayYUV|       pointer|
+|s                         |   in|   32|     ap_none|               s|       pointer|
++--------------------------+-----+-----+------------+----------------+--------------+
+

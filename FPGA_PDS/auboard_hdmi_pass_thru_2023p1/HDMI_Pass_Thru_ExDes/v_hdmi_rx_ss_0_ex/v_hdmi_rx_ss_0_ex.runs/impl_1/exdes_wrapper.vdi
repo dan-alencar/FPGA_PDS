@@ -1,0 +1,1394 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Jan  9 09:29:16 2025
+# Process ID: 2069825
+# Current directory: /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/impl_1
+# Command line: vivado -log exdes_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source exdes_wrapper.tcl -notrace
+# Log file: /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/impl_1/exdes_wrapper.vdi
+# Journal file: /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/impl_1/vivado.jou
+# Running On: HP-Z4-G4-027564, OS: Linux, CPU Frequency: 3600.000 MHz, CPU Physical cores: 4, Host memory: 67133 MB
+#-----------------------------------------------------------
+Sourcing tcl script '/tools/Xilinx/Vivado/2023.1/scripts/Vivado_init.tcl'
+241 Beta devices matching pattern found, 56 enabled.
+enable_beta_device: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1466.086 ; gain = 8.027 ; free physical = 1915 ; free virtual = 59611
+source exdes_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/au15p_hdl_rc310xxa/hdl'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
+Command: link_design -top exdes_wrapper -part xcau15p-ffvb676-2-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xcau15p-ffvb676-2-e
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rx_video_axis_reg_slice_0/exdes_rx_video_axis_reg_slice_0.dcp' for cell 'exdes_i/rx_video_axis_reg_slice'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_tx_video_axis_reg_slice_0/exdes_tx_video_axis_reg_slice_0.dcp' for cell 'exdes_i/tx_video_axis_reg_slice'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_rx_ss_0/exdes_v_hdmi_rx_ss_0.dcp' for cell 'exdes_i/v_hdmi_rx_ss'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/exdes_v_hdmi_tx_ss_0.dcp' for cell 'exdes_i/v_hdmi_tx_ss'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0.dcp' for cell 'exdes_i/vid_phy_controller'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_aud_pat_gen_0/exdes_aud_pat_gen_0.dcp' for cell 'exdes_i/audio_ss_0/aud_pat_gen'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_0/exdes_clk_wiz_0.dcp' for cell 'exdes_i/audio_ss_0/clk_wiz'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes_hdmi_acr_ctrl_0.dcp' for cell 'exdes_i/audio_ss_0/hdmi_acr_ctrl'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_xbar_4/exdes_xbar_4.dcp' for cell 'exdes_i/audio_ss_0/axi_interconnect/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_fmch_axi_iic_0/exdes_fmch_axi_iic_0.dcp' for cell 'exdes_i/mb_ss_0/axi_iic_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_fmch_axi_iic_1/exdes_fmch_axi_iic_1.dcp' for cell 'exdes_i/mb_ss_0/axi_iic_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_intc_0/exdes_axi_intc_0.dcp' for cell 'exdes_i/mb_ss_0/axi_intc'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_uartlite_0/exdes_axi_uartlite_0.dcp' for cell 'exdes_i/mb_ss_0/axi_uartlite'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_1/exdes_clk_wiz_1.dcp' for cell 'exdes_i/mb_ss_0/clk_wiz'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_dlmb_bram_if_cntlr_0/exdes_dlmb_bram_if_cntlr_0.dcp' for cell 'exdes_i/mb_ss_0/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_dlmb_v10_0/exdes_dlmb_v10_0.dcp' for cell 'exdes_i/mb_ss_0/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_ilmb_bram_if_cntlr_0/exdes_ilmb_bram_if_cntlr_0.dcp' for cell 'exdes_i/mb_ss_0/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_ilmb_v10_0/exdes_ilmb_v10_0.dcp' for cell 'exdes_i/mb_ss_0/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_lmb_bram_0/exdes_lmb_bram_0.dcp' for cell 'exdes_i/mb_ss_0/lmb_bram'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mblaze_0/exdes_mblaze_0.dcp' for cell 'exdes_i/mb_ss_0/mblaze'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mdm_0/exdes_mdm_0.dcp' for cell 'exdes_i/mb_ss_0/mdm'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_100M_0/exdes_rst_processor_1_100M_0.dcp' for cell 'exdes_i/mb_ss_0/rst_processor_1_100M'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_300M_0/exdes_rst_processor_1_300M_0.dcp' for cell 'exdes_i/mb_ss_0/rst_processor_1_300M'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_xbar_5/exdes_xbar_5.dcp' for cell 'exdes_i/mb_ss_0/axi_interconnect/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_0/exdes_auto_cc_0.dcp' for cell 'exdes_i/mb_ss_0/axi_interconnect/m05_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_1/exdes_auto_cc_1.dcp' for cell 'exdes_i/mb_ss_0/axi_interconnect/m08_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_gpio_0/exdes_axi_gpio_0.dcp' for cell 'exdes_i/v_tpg_ss_0/axi_gpio'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_tpg_0/exdes_v_tpg_0.dcp' for cell 'exdes_i/v_tpg_ss_0/v_tpg'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_rx_ss_0/bd_0/ip/ip_2/bd_3ec1_inverter_1_0.dcp' for cell 'exdes_i/v_hdmi_rx_ss/inst/inverter_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_rx_ss_0/bd_0/ip/ip_0/bd_3ec1_v_hdmi_rx_0.dcp' for cell 'exdes_i/v_hdmi_rx_ss/inst/v_hdmi_rx'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_rx_ss_0/bd_0/ip/ip_1/bd_3ec1_v_vid_in_axi4s_0.dcp' for cell 'exdes_i/v_hdmi_rx_ss/inst/v_vid_in_axi4s'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_4/bd_3ea7_axi_crossbar_0.dcp' for cell 'exdes_i/v_hdmi_tx_ss/inst/axi_crossbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_3/bd_3ea7_util_vector_logic_0_0.dcp' for cell 'exdes_i/v_hdmi_tx_ss/inst/util_vector_logic_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_2/bd_3ea7_v_axi4s_vid_out_0.dcp' for cell 'exdes_i/v_hdmi_tx_ss/inst/v_axi4s_vid_out'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_0/bd_3ea7_v_hdmi_tx_0.dcp' for cell 'exdes_i/v_hdmi_tx_ss/inst/v_hdmi_tx'
+INFO: [Project 1-454] Reading design checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_1/bd_3ea7_v_tc_0.dcp' for cell 'exdes_i/v_hdmi_tx_ss/inst/v_tc'
+Netlist sorting complete. Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.43 . Memory (MB): peak = 2269.285 ; gain = 0.000 ; free physical = 1152 ; free virtual = 58849
+INFO: [Netlist 29-17] Analyzing 1540 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_1/exdes_clk_wiz_1.xdc] for cell 'exdes_i/mb_ss_0/clk_wiz/inst'
+create_clock: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2510.617 ; gain = 28.719 ; free physical = 942 ; free virtual = 58651
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_1/exdes_clk_wiz_1.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_1/exdes_clk_wiz_1.xdc:57]
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_1/exdes_clk_wiz_1.xdc] for cell 'exdes_i/mb_ss_0/clk_wiz/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/vid_phy_controller_xdc.xdc] for cell 'exdes_i/vid_phy_controller/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/vid_phy_controller_xdc.xdc] for cell 'exdes_i/vid_phy_controller/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/ip_0/synth/exdes_vid_phy_controller_0_gtwrapper.xdc] for cell 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/ip_0/synth/exdes_vid_phy_controller_0_gtwrapper.xdc] for cell 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_fmch_axi_iic_1/exdes_fmch_axi_iic_1_board.xdc] for cell 'exdes_i/mb_ss_0/axi_iic_1/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_fmch_axi_iic_1/exdes_fmch_axi_iic_1_board.xdc] for cell 'exdes_i/mb_ss_0/axi_iic_1/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_300M_0/exdes_rst_processor_1_300M_0.xdc] for cell 'exdes_i/mb_ss_0/rst_processor_1_300M/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_300M_0/exdes_rst_processor_1_300M_0.xdc] for cell 'exdes_i/mb_ss_0/rst_processor_1_300M/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_300M_0/exdes_rst_processor_1_300M_0_board.xdc] for cell 'exdes_i/mb_ss_0/rst_processor_1_300M/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_300M_0/exdes_rst_processor_1_300M_0_board.xdc] for cell 'exdes_i/mb_ss_0/rst_processor_1_300M/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_100M_0/exdes_rst_processor_1_100M_0.xdc] for cell 'exdes_i/mb_ss_0/rst_processor_1_100M/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_100M_0/exdes_rst_processor_1_100M_0.xdc] for cell 'exdes_i/mb_ss_0/rst_processor_1_100M/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_100M_0/exdes_rst_processor_1_100M_0_board.xdc] for cell 'exdes_i/mb_ss_0/rst_processor_1_100M/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rst_processor_1_100M_0/exdes_rst_processor_1_100M_0_board.xdc] for cell 'exdes_i/mb_ss_0/rst_processor_1_100M/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mblaze_0/exdes_mblaze_0.xdc] for cell 'exdes_i/mb_ss_0/mblaze/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mblaze_0/exdes_mblaze_0.xdc] for cell 'exdes_i/mb_ss_0/mblaze/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_fmch_axi_iic_0/exdes_fmch_axi_iic_0_board.xdc] for cell 'exdes_i/mb_ss_0/axi_iic_0/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_fmch_axi_iic_0/exdes_fmch_axi_iic_0_board.xdc] for cell 'exdes_i/mb_ss_0/axi_iic_0/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_gpio_0/exdes_axi_gpio_0_board.xdc] for cell 'exdes_i/v_tpg_ss_0/axi_gpio/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_gpio_0/exdes_axi_gpio_0_board.xdc] for cell 'exdes_i/v_tpg_ss_0/axi_gpio/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_1/exdes_clk_wiz_1_board.xdc] for cell 'exdes_i/mb_ss_0/clk_wiz/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_1/exdes_clk_wiz_1_board.xdc] for cell 'exdes_i/mb_ss_0/clk_wiz/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_uartlite_0/exdes_axi_uartlite_0.xdc] for cell 'exdes_i/mb_ss_0/axi_uartlite/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_uartlite_0/exdes_axi_uartlite_0.xdc] for cell 'exdes_i/mb_ss_0/axi_uartlite/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_uartlite_0/exdes_axi_uartlite_0_board.xdc] for cell 'exdes_i/mb_ss_0/axi_uartlite/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_uartlite_0/exdes_axi_uartlite_0_board.xdc] for cell 'exdes_i/mb_ss_0/axi_uartlite/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_intc_0/exdes_axi_intc_0.xdc] for cell 'exdes_i/mb_ss_0/axi_intc/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_intc_0/exdes_axi_intc_0.xdc] for cell 'exdes_i/mb_ss_0/axi_intc/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl/hdmi_acr_ctrl.xdc] for cell 'exdes_i/audio_ss_0/hdmi_acr_ctrl/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl/hdmi_acr_ctrl.xdc] for cell 'exdes_i/audio_ss_0/hdmi_acr_ctrl/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_0/exdes_clk_wiz_0.xdc] for cell 'exdes_i/audio_ss_0/clk_wiz/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_0/exdes_clk_wiz_0.xdc] for cell 'exdes_i/audio_ss_0/clk_wiz/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_0/exdes_clk_wiz_0_board.xdc] for cell 'exdes_i/audio_ss_0/clk_wiz/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_0/exdes_clk_wiz_0_board.xdc] for cell 'exdes_i/audio_ss_0/clk_wiz/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_aud_pat_gen_0/exdes/rtl/aud_pat_gen/AudioGen.xdc] for cell 'exdes_i/audio_ss_0/aud_pat_gen/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_aud_pat_gen_0/exdes/rtl/aud_pat_gen/AudioGen.xdc] for cell 'exdes_i/audio_ss_0/aud_pat_gen/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_gpio_0/exdes_axi_gpio_0.xdc] for cell 'exdes_i/v_tpg_ss_0/axi_gpio/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_gpio_0/exdes_axi_gpio_0.xdc] for cell 'exdes_i/v_tpg_ss_0/axi_gpio/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/constrs_1/imports/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/imports/hdmi_example_aup.xdc]
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/constrs_1/imports/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/imports/hdmi_example_aup.xdc]
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_tpg_0/exdes_v_tpg_0.xdc] for cell 'exdes_i/v_tpg_ss_0/v_tpg/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_tpg_0/exdes_v_tpg_0.xdc] for cell 'exdes_i/v_tpg_ss_0/v_tpg/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_0/exdes_clk_wiz_0_late.xdc] for cell 'exdes_i/audio_ss_0/clk_wiz/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_clk_wiz_0/exdes_clk_wiz_0_late.xdc] for cell 'exdes_i/audio_ss_0/clk_wiz/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_intc_0/exdes_axi_intc_0_clocks.xdc] for cell 'exdes_i/mb_ss_0/axi_intc/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_axi_intc_0/exdes_axi_intc_0_clocks.xdc] for cell 'exdes_i/mb_ss_0/axi_intc/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_0/exdes_auto_cc_0_clocks.xdc] for cell 'exdes_i/mb_ss_0/axi_interconnect/m05_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_0/exdes_auto_cc_0_clocks.xdc:8]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_0/exdes_auto_cc_0_clocks.xdc:11]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-15' -to list should not be empty. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_0/exdes_auto_cc_0_clocks.xdc:14]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_0/exdes_auto_cc_0_clocks.xdc:18]
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_0/exdes_auto_cc_0_clocks.xdc] for cell 'exdes_i/mb_ss_0/axi_interconnect/m05_couplers/auto_cc/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_1/exdes_auto_cc_1_clocks.xdc] for cell 'exdes_i/mb_ss_0/axi_interconnect/m08_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_1/exdes_auto_cc_1_clocks.xdc:8]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_1/exdes_auto_cc_1_clocks.xdc:11]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-15' -to list should not be empty. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_1/exdes_auto_cc_1_clocks.xdc:14]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_1/exdes_auto_cc_1_clocks.xdc:18]
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_auto_cc_1/exdes_auto_cc_1_clocks.xdc] for cell 'exdes_i/mb_ss_0/axi_interconnect/m08_couplers/auto_cc/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mdm_0/exdes_mdm_0.xdc] for cell 'exdes_i/mb_ss_0/mdm/U0'
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mdm_0/exdes_mdm_0.xdc:51]
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mdm_0/exdes_mdm_0.xdc:51]
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mdm_0/exdes_mdm_0.xdc:51]
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mdm_0/exdes_mdm_0.xdc:51]
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mdm_0/exdes_mdm_0.xdc:51]
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/rx_mmcm.bufg_gt_rx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mdm_0/exdes_mdm_0.xdc:51]
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mdm_0/exdes_mdm_0.xdc:51]
+INFO: [Timing 38-2] Deriving generated clocks [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mdm_0/exdes_mdm_0.xdc:51]
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mdm_0/exdes_mdm_0.xdc] for cell 'exdes_i/mb_ss_0/mdm/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rx_video_axis_reg_slice_0/exdes_rx_video_axis_reg_slice_0_clocks.xdc] for cell 'exdes_i/rx_video_axis_reg_slice/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_rx_video_axis_reg_slice_0/exdes_rx_video_axis_reg_slice_0_clocks.xdc] for cell 'exdes_i/rx_video_axis_reg_slice/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_tx_video_axis_reg_slice_0/exdes_tx_video_axis_reg_slice_0_clocks.xdc] for cell 'exdes_i/tx_video_axis_reg_slice/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_tx_video_axis_reg_slice_0/exdes_tx_video_axis_reg_slice_0_clocks.xdc] for cell 'exdes_i/tx_video_axis_reg_slice/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_rx_ss_0/bd_0/ip/ip_0/bd_3ec1_v_hdmi_rx_0_core.xdc] for cell 'exdes_i/v_hdmi_rx_ss/inst/v_hdmi_rx/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_rx_ss_0/bd_0/ip/ip_0/bd_3ec1_v_hdmi_rx_0_core.xdc] for cell 'exdes_i/v_hdmi_rx_ss/inst/v_hdmi_rx/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_rx_ss_0/bd_0/ip/ip_1/bd_3ec1_v_vid_in_axi4s_0_clocks.xdc] for cell 'exdes_i/v_hdmi_rx_ss/inst/v_vid_in_axi4s/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_rx_ss_0/bd_0/ip/ip_1/bd_3ec1_v_vid_in_axi4s_0_clocks.xdc] for cell 'exdes_i/v_hdmi_rx_ss/inst/v_vid_in_axi4s/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_0/bd_3ea7_v_hdmi_tx_0_core.xdc] for cell 'exdes_i/v_hdmi_tx_ss/inst/v_hdmi_tx/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_0/bd_3ea7_v_hdmi_tx_0_core.xdc] for cell 'exdes_i/v_hdmi_tx_ss/inst/v_hdmi_tx/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_1/bd_3ea7_v_tc_0_clocks.xdc] for cell 'exdes_i/v_hdmi_tx_ss/inst/v_tc/U0'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_1/bd_3ea7_v_tc_0_clocks.xdc] for cell 'exdes_i/v_hdmi_tx_ss/inst/v_tc/U0'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_2/bd_3ea7_v_axi4s_vid_out_0_clocks.xdc] for cell 'exdes_i/v_hdmi_tx_ss/inst/v_axi4s_vid_out/inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_2/bd_3ea7_v_axi4s_vid_out_0_clocks.xdc] for cell 'exdes_i/v_hdmi_tx_ss/inst/v_axi4s_vid_out/inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_clocks.xdc] for cell 'exdes_i/vid_phy_controller/inst'
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-10' -from list should not be empty. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_clocks.xdc:91]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-10' -from list should not be empty. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_clocks.xdc:93]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-10' -from list should not be empty. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_clocks.xdc:95]
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_clocks.xdc] for cell 'exdes_i/vid_phy_controller/inst'
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/audio_ss_0/aud_pat_gen/inst/aud_pat_gen_v1_0_0_top_inst/aud_pat_gen_v1_0_0_dport_inst/PULSE_SYNC_INST/REQ_SYNC_INST/gen_single.genblk1[0].XPM_INST 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/audio_ss_0/aud_pat_gen/inst/aud_pat_gen_v1_0_0_top_inst/aud_pat_gen_v1_0_0_dport_inst/AUD_CONFIG_UPDATE_SYNC_INST/REQ_SYNC_INST/gen_single.genblk1[0].XPM_INST 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/vid_phy_controller/inst/xpm_array_single_rxpllclksel_in_drp5_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/vid_phy_controller/inst/xpm_array_single_txpllclksel_in_drp0_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/vid_phy_controller/inst/xpm_array_single_rxpllclksel_in_drp0_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/vid_phy_controller/inst/xpm_array_single_txpllclksel_in_drp1_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/vid_phy_controller/inst/xpm_array_single_rxpllclksel_in_drp1_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/vid_phy_controller/inst/xpm_array_single_txpllclksel_in_drp2_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/vid_phy_controller/inst/xpm_array_single_rxpllclksel_in_drp2_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/vid_phy_controller/inst/xpm_array_single_txpllclksel_in_drp3_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/vid_phy_controller/inst/xpm_array_single_rxpllclksel_in_drp3_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/vid_phy_controller/inst/xpm_array_single_txpllclksel_in_drp4_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/vid_phy_controller/inst/xpm_array_single_rxpllclksel_in_drp4_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: exdes_i/vid_phy_controller/inst/xpm_array_single_txpllclksel_in_drp5_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Project 1-1714] 411 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[23].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[23].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[24].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[24].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell exdes_i/mb_ss_0/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36_TDP.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+Generating merged BMM file for the design top 'exdes_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_mblaze_0/data/mb_bootloop_le.elf 
+INFO: [Project 1-1687] 10 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3314.191 ; gain = 0.000 ; free physical = 610 ; free virtual = 58322
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 371 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 5 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 8 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 80 instances
+  OBUFTDS => OBUFTDS_DUAL_BUF (INV, OBUFT(x2)): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 23 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 69 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 12 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 125 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 44 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 2 instances
+
+116 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:36 . Memory (MB): peak = 3314.191 ; gain = 1761.781 ; free physical = 610 ; free virtual = 58322
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3314.191 ; gain = 0.000 ; free physical = 610 ; free virtual = 58323
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/rx_mmcm.bufg_gt_rx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+Ending Cache Timing Information Task | Checksum: a483e926
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 3314.191 ; gain = 0.000 ; free physical = 582 ; free virtual = 58296
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-1566] Pulled 26 inverters resulting in an inversion of 214 pins
+INFO: [Opt 31-138] Pushed 60 inverter(s) to 6292 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 16be2e054
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 3314.191 ; gain = 0.000 ; free physical = 481 ; free virtual = 58018
+INFO: [Opt 31-389] Phase Retarget created 465 cells and removed 716 cells
+INFO: [Opt 31-1021] In phase Retarget, 450 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
+Phase 2 Constant propagation | Checksum: c8d87027
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 3314.191 ; gain = 0.000 ; free physical = 481 ; free virtual = 58018
+INFO: [Opt 31-389] Phase Constant propagation created 256 cells and removed 2465 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 395 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: ca209f25
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 3314.191 ; gain = 0.000 ; free physical = 481 ; free virtual = 58017
+INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 3562 cells
+INFO: [Opt 31-1021] In phase Sweep, 35 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG exdes_i/mb_ss_0/mdm/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG_inst to drive 40 load(s) on clock net exdes_i/mb_ss_0/mdm/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFGCE
+INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+INFO: [Opt 31-274] Optimized connectivity to 2 cascaded buffer cells
+Phase 4 BUFG optimization | Checksum: 110100233
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3314.191 ; gain = 0.000 ; free physical = 481 ; free virtual = 58017
+INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 2 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 14ba117a3
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 3314.191 ; gain = 0.000 ; free physical = 481 ; free virtual = 58017
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: d0395409
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 3314.191 ; gain = 0.000 ; free physical = 481 ; free virtual = 58017
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 4 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             465  |             716  |                                            450  |
+|  Constant propagation         |             256  |            2465  |                                            395  |
+|  Sweep                        |               1  |            3562  |                                             35  |
+|  BUFG optimization            |               1  |               2  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              4  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.1 . Memory (MB): peak = 3314.191 ; gain = 0.000 ; free physical = 481 ; free virtual = 58017
+Ending Logic Optimization Task | Checksum: 101c0d3ad
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 3314.191 ; gain = 0.000 ; free physical = 481 ; free virtual = 58017
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[0]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[1]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[2]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[0]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[10]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[11]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[12]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[13]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[14]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[15]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[16]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[17]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[1]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[2]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[3]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[4]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[5]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[6]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[7]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[8]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+WARNING: [Pwropt 34-71] Flop 'exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[9]' has constant clock net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/rx_mmcm.bufg_gt_rx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 1 BRAM(s) out of a total of 74 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 9 WE to EN ports
+Number of BRAM Ports augmented: 2 newly gated: 9 Total Ports: 148
+Ending PowerOpt Patch Enables Task | Checksum: fe32e448
+
+Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.6 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 463 ; free virtual = 56936
+Ending Power Optimization Task | Checksum: fe32e448
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:25 . Memory (MB): peak = 4582.883 ; gain = 1268.691 ; free physical = 463 ; free virtual = 56936
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: fe32e448
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 463 ; free virtual = 56936
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 463 ; free virtual = 56936
+Ending Netlist Obfuscation Task | Checksum: e29eedeb
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 463 ; free virtual = 56936
+INFO: [Common 17-83] Releasing license: Implementation
+147 Infos, 67 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:08 ; elapsed = 00:00:37 . Memory (MB): peak = 4582.883 ; gain = 1268.691 ; free physical = 463 ; free virtual = 56936
+INFO: [runtcl-4] Executing : report_drc -file exdes_wrapper_drc_opted.rpt -pb exdes_wrapper_drc_opted.pb -rpx exdes_wrapper_drc_opted.rpx
+Command: report_drc -file exdes_wrapper_drc_opted.rpt -pb exdes_wrapper_drc_opted.pb -rpx exdes_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/impl_1/exdes_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/rx_mmcm.bufg_gt_rx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.59 ; elapsed = 00:00:00.14 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 457 ; free virtual = 56920
+INFO: [Common 17-1381] The checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/impl_1/exdes_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 488 ; free virtual = 56906
+Command: place_design -directive ExtraTimingOpt
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'ExtraTimingOpt' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 487 ; free virtual = 56906
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 646cff82
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.1 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 487 ; free virtual = 56906
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 487 ; free virtual = 56906
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Place 30-568] A LUT 'exdes_i/vid_phy_controller/inst/i_0' is driving clock pin of 24 registers. This could lead to large hold time violations. First few involved registers are:
+	exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[6] {FDCE}
+	exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[5] {FDCE}
+	exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[1] {FDPE}
+	exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[0] {FDPE}
+	exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RUN_SYNC_INST/syncstages_ff_reg[1] {FDRE}
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: f322b1d4
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 486 ; free virtual = 56911
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 11705b22c
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:13 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 476 ; free virtual = 56902
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 11705b22c
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:13 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 476 ; free virtual = 56902
+Phase 1 Placer Initialization | Checksum: 11705b22c
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:13 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 476 ; free virtual = 56902
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+
+Phase 2.1.1 Partition Driven Placement
+
+Phase 2.1.1.1 PBP: Partition Driven Placement
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: facae9a2
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:28 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 474 ; free virtual = 56901
+
+Phase 2.1.1.2 PBP: Clock Region Placement
+INFO: [Place 30-3162] Check ILP status : ILP-based clock placer completed successfully.
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: b0d964be
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:29 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 474 ; free virtual = 56902
+
+Phase 2.1.1.3 PBP: Discrete Incremental
+Phase 2.1.1.3 PBP: Discrete Incremental | Checksum: 1095ead08
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:29 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 474 ; free virtual = 56902
+
+Phase 2.1.1.4 PBP: Compute Congestion
+Phase 2.1.1.4 PBP: Compute Congestion | Checksum: 1095ead08
+
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:34 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 461 ; free virtual = 56858
+
+Phase 2.1.1.5 PBP: Macro Placement
+Phase 2.1.1.5 PBP: Macro Placement | Checksum: 1855458e8
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:35 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 460 ; free virtual = 56857
+
+Phase 2.1.1.6 PBP: UpdateTiming
+Phase 2.1.1.6 PBP: UpdateTiming | Checksum: 155b596f1
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:37 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 460 ; free virtual = 56857
+
+Phase 2.1.1.7 PBP: Add part constraints
+Phase 2.1.1.7 PBP: Add part constraints | Checksum: 155b596f1
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:37 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 460 ; free virtual = 56857
+Phase 2.1.1 Partition Driven Placement | Checksum: 155b596f1
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:37 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 460 ; free virtual = 56857
+Phase 2.1 Floorplanning | Checksum: 1257d3eae
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:37 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 460 ; free virtual = 56857
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1257d3eae
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:37 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 460 ; free virtual = 56857
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1257d3eae
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:37 . Memory (MB): peak = 4582.883 ; gain = 0.000 ; free physical = 460 ; free virtual = 56857
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 160e6c369
+
+Time (s): cpu = 00:03:21 ; elapsed = 00:01:17 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 461 ; free virtual = 56773
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 3 LUTNM shape to break, 1151 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 3, two critical 0, total 3, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 466 nets or LUTs. Breaked 3 LUTs, combined 463 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1030] Pass 1. Identified 14 candidate driver sets for equivalent driver rewiring.
+INFO: [Physopt 32-661] Optimized 6 nets.  Re-placed 23 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 6 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 23 existing cells
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4584.891 ; gain = 0.000 ; free physical = 461 ; free virtual = 56774
+INFO: [Physopt 32-76] Pass 1. Identified 1 candidate net for fanout optimization.
+INFO: [Physopt 32-81] Processed net exdes_i/v_hdmi_tx_ss/inst/v_tc/U0/U_VIDEO_CTRL/resetn_out. Replicated 8 times.
+INFO: [Physopt 32-232] Optimized 1 net. Created 8 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 8 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4584.891 ; gain = 0.000 ; free physical = 461 ; free virtual = 56773
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-527] Pass 1: Identified 3 candidate cells for BRAM register optimization
+INFO: [Physopt 32-665] Processed cell exdes_i/v_hdmi_rx_ss/inst/v_vid_in_axi4s/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_1. 15 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell exdes_i/v_hdmi_rx_ss/inst/v_vid_in_axi4s/inst/generate_remap_module.REMAP_420_INST/FIFO_LUMA_INST/XPM_FIFO_SYNC_INST/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_1. 17 registers were pushed out.
+INFO: [Physopt 32-666] Processed cell exdes_i/v_hdmi_tx_ss/inst/v_axi4s_vid_out/inst/generate_remap_module.REMAP_420_INST/FIFO_INST/XPM_FIFO_SYNC_INST/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_0. No change.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 2 nets or cells. Created 32 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4584.891 ; gain = 0.000 ; free physical = 461 ; free virtual = 56774
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4584.891 ; gain = 0.000 ; free physical = 461 ; free virtual = 56774
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            3  |            463  |                   466  |           0  |           1  |  00:00:01  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Equivalent Driver Rewiring                       |            0  |              0  |                     6  |           2  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            8  |              0  |                     1  |           0  |           1  |  00:00:01  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |           32  |              0  |                     2  |           0  |           1  |  00:00:01  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           43  |            463  |                   475  |           2  |          10  |  00:00:03  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: d062e31b
+
+Time (s): cpu = 00:03:30 ; elapsed = 00:01:23 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 460 ; free virtual = 56773
+Phase 2.4 Global Placement Core | Checksum: df3e2d2a
+
+Time (s): cpu = 00:03:46 ; elapsed = 00:01:28 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 460 ; free virtual = 56773
+Phase 2 Global Placement | Checksum: df3e2d2a
+
+Time (s): cpu = 00:03:46 ; elapsed = 00:01:28 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 460 ; free virtual = 56773
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 56bbc7d6
+
+Time (s): cpu = 00:04:03 ; elapsed = 00:01:33 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 459 ; free virtual = 56772
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 181beb531
+
+Time (s): cpu = 00:04:10 ; elapsed = 00:01:35 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 459 ; free virtual = 56772
+
+Phase 3.3 Small Shape DP
+
+Phase 3.3.1 Small Shape Clustering
+Phase 3.3.1 Small Shape Clustering | Checksum: 1c33a7d5b
+
+Time (s): cpu = 00:04:38 ; elapsed = 00:01:43 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 454 ; free virtual = 56768
+
+Phase 3.3.2 Flow Legalize Slice Clusters
+Phase 3.3.2 Flow Legalize Slice Clusters | Checksum: 13fa60514
+
+Time (s): cpu = 00:04:38 ; elapsed = 00:01:43 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 454 ; free virtual = 56768
+
+Phase 3.3.3 Slice Area Swap
+
+Phase 3.3.3.1 Slice Area Swap Initial
+Phase 3.3.3.1 Slice Area Swap Initial | Checksum: 1a3724efe
+
+Time (s): cpu = 00:04:44 ; elapsed = 00:01:48 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 454 ; free virtual = 56768
+Phase 3.3.3 Slice Area Swap | Checksum: 1a3724efe
+
+Time (s): cpu = 00:04:44 ; elapsed = 00:01:48 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 454 ; free virtual = 56768
+Phase 3.3 Small Shape DP | Checksum: f359ff90
+
+Time (s): cpu = 00:04:57 ; elapsed = 00:01:52 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 454 ; free virtual = 56768
+
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: 9f5e1cfa
+
+Time (s): cpu = 00:04:59 ; elapsed = 00:01:54 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 454 ; free virtual = 56768
+
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: 1b873b23c
+
+Time (s): cpu = 00:04:59 ; elapsed = 00:01:55 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 454 ; free virtual = 56768
+Phase 3 Detail Placement | Checksum: 1b873b23c
+
+Time (s): cpu = 00:05:00 ; elapsed = 00:01:55 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 454 ; free virtual = 56768
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/rx_mmcm.bufg_gt_rx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1ca7d5c28
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.095 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1e5447fd2
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 4584.891 ; gain = 0.000 ; free physical = 454 ; free virtual = 56768
+INFO: [Place 46-35] Processed net exdes_i/v_hdmi_rx_ss/inst/v_hdmi_rx/inst/SYS_INST/LRST_INST/XPM_RST_INST/syncstages_ff[3], inserted BUFG to drive 2827 loads.
+INFO: [Place 46-35] Processed net exdes_i/mb_ss_0/rst_processor_1_100M/U0/peripheral_aresetn[0], inserted BUFG to drive 1971 loads.
+INFO: [Place 46-45] Replicated bufg driver exdes_i/mb_ss_0/rst_processor_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica
+INFO: [Place 46-35] Processed net exdes_i/audio_ss_0/clk_wiz/inst/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_reg_0[0], inserted BUFG to drive 1086 loads.
+INFO: [Place 46-56] BUFG insertion identified 3 candidate nets. Inserted BUFG: 3, Replicated BUFG Driver: 1, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 18039890b
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 4584.891 ; gain = 0.000 ; free physical = 454 ; free virtual = 56768
+Phase 4.1.1.1 BUFG Insertion | Checksum: e0341be7
+
+Time (s): cpu = 00:05:54 ; elapsed = 00:02:10 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 454 ; free virtual = 56768
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.501. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 12f91601f
+
+Time (s): cpu = 00:05:58 ; elapsed = 00:02:13 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 454 ; free virtual = 56768
+
+Time (s): cpu = 00:05:58 ; elapsed = 00:02:13 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 454 ; free virtual = 56768
+Phase 4.1 Post Commit Optimization | Checksum: 12f91601f
+
+Time (s): cpu = 00:05:58 ; elapsed = 00:02:14 . Memory (MB): peak = 4584.891 ; gain = 2.008 ; free physical = 454 ; free virtual = 56768
+Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 4615.875 ; gain = 0.000 ; free physical = 472 ; free virtual = 56709
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1b2287255
+
+Time (s): cpu = 00:06:13 ; elapsed = 00:02:19 . Memory (MB): peak = 4615.875 ; gain = 32.992 ; free physical = 472 ; free virtual = 56709
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+| Direction | Region Size       | Region Size       | Region Size       |
+|___________|___________________|___________________|___________________|
+|      North|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|      South|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|       East|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|       West|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1b2287255
+
+Time (s): cpu = 00:06:13 ; elapsed = 00:02:20 . Memory (MB): peak = 4615.875 ; gain = 32.992 ; free physical = 472 ; free virtual = 56709
+Phase 4.3 Placer Reporting | Checksum: 1b2287255
+
+Time (s): cpu = 00:06:13 ; elapsed = 00:02:20 . Memory (MB): peak = 4615.875 ; gain = 32.992 ; free physical = 472 ; free virtual = 56709
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4615.875 ; gain = 0.000 ; free physical = 472 ; free virtual = 56709
+
+Time (s): cpu = 00:06:13 ; elapsed = 00:02:20 . Memory (MB): peak = 4615.875 ; gain = 32.992 ; free physical = 472 ; free virtual = 56709
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2025eae4a
+
+Time (s): cpu = 00:06:14 ; elapsed = 00:02:20 . Memory (MB): peak = 4615.875 ; gain = 32.992 ; free physical = 472 ; free virtual = 56709
+Ending Placer Task | Checksum: 166bce377
+
+Time (s): cpu = 00:06:14 ; elapsed = 00:02:21 . Memory (MB): peak = 4615.875 ; gain = 32.992 ; free physical = 472 ; free virtual = 56709
+INFO: [Common 17-83] Releasing license: Implementation
+202 Infos, 82 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:06:20 ; elapsed = 00:02:22 . Memory (MB): peak = 4615.875 ; gain = 32.992 ; free physical = 472 ; free virtual = 56709
+INFO: [runtcl-4] Executing : report_io -file exdes_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.33 . Memory (MB): peak = 4615.875 ; gain = 0.000 ; free physical = 456 ; free virtual = 56693
+INFO: [runtcl-4] Executing : report_utilization -file exdes_wrapper_utilization_placed.rpt -pb exdes_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file exdes_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.42 . Memory (MB): peak = 4615.875 ; gain = 0.000 ; free physical = 440 ; free virtual = 56679
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4631.883 ; gain = 8.004 ; free physical = 450 ; free virtual = 56695
+INFO: [Common 17-1381] The checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/impl_1/exdes_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 4639.887 ; gain = 24.012 ; free physical = 498 ; free virtual = 56677
+Command: phys_opt_design -directive AggressiveFanoutOpt
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveFanoutOpt
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:06 . Memory (MB): peak = 4639.887 ; gain = 0.000 ; free physical = 498 ; free virtual = 56677
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+212 Infos, 82 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:07 . Memory (MB): peak = 4639.887 ; gain = 0.000 ; free physical = 498 ; free virtual = 56677
+source /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/imports/phys_opt_design.tcl
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4639.887 ; gain = 0.000 ; free physical = 498 ; free virtual = 56677
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 0.31s |  WALL: 0.30s
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4639.887 ; gain = 0.000 ; free physical = 498 ; free virtual = 56677
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.501 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 93b08d42
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.86 . Memory (MB): peak = 4639.887 ; gain = 0.000 ; free physical = 498 ; free virtual = 56677
+
+Phase 2 Hold Fix Optimization
+INFO: [Physopt 32-668] Estimated Timing Summary | WNS=0.501 | TNS=0.000 | WHS=-1.369 | THS=-152.761 |
+INFO: [Physopt 32-45] Identified 71 candidate nets for hold slack optimization.
+INFO: [Physopt 32-234] Optimized 62 nets. Inserted 0 new ZHOLD_DELAYs. Calibrated 0 existing ZHOLD_DELAYs. Inserted 62 buffers.
+
+INFO: [Physopt 32-668] Estimated Timing Summary | WNS=0.501 | TNS=0.000 | WHS=-0.249 | THS=-123.735 |
+Phase 2 Hold Fix Optimization | Checksum: 93b08d42
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4639.887 ; gain = 0.000 ; free physical = 498 ; free virtual = 56677
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4639.887 ; gain = 0.000 ; free physical = 498 ; free virtual = 56677
+INFO: [Physopt 32-669] Post Physical Optimization Timing Summary | WNS=0.501 | TNS=0.000 | WHS=-0.249 | THS=-123.735 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization            |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Fanout                  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Single Cell Placement   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Multi Cell Placement    |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Rewire                  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Critical Cell           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  SLR Crossing            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  DSP Register            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Critical Pin            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Very High Fanout        |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Total                   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Summary of Hold Fix Optimizations
+=================================
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization               |  WHS Gain (ns)  |  THS Gain (ns)  |  Added LUTs  |  Added FFs  |  Optimized Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT1 and ZHOLD Insertion   |          1.120  |         29.026  |          62  |          0  |              62  |           1  |           1  |  00:00:02  |
+|  Total                      |          1.120  |         29.026  |          62  |          0  |              62  |           1  |           1  |  00:00:02  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4639.887 ; gain = 0.000 ; free physical = 498 ; free virtual = 56677
+Ending Physical Synthesis Task | Checksum: 2478d3e17
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 4639.887 ; gain = 0.000 ; free physical = 498 ; free virtual = 56677
+INFO: [Common 17-83] Releasing license: Implementation
+224 Infos, 82 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4639.887 ; gain = 0.000 ; free physical = 451 ; free virtual = 56696
+INFO: [Common 17-1381] The checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/impl_1/exdes_wrapper_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 4639.887 ; gain = 0.000 ; free physical = 541 ; free virtual = 56688
+Command: route_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'Explore'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: f83fc25d ConstDB: 0 ShapeSum: 20844189 RouteDB: 82971236
+Nodegraph reading from file.  Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.43 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 540 ; free virtual = 56688
+Post Restoration Checksum: NetGraph: d89e84ab | NumContArr: 5923b115 | Constraints: 883cf5ed | Timing: 0
+Phase 1 Build RT Design | Checksum: 1b9ff2bad
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:08 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 539 ; free virtual = 56689
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 1b9ff2bad
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:08 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 539 ; free virtual = 56689
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 1b9ff2bad
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:09 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 539 ; free virtual = 56689
+
+Phase 2.3 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.3 Global Clock Net Routing | Checksum: 1493ddafe
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:12 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 539 ; free virtual = 56690
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 16b53f8e2
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:21 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 439 ; free virtual = 56626
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.732  | TNS=0.000  | WHS=-0.284 | THS=-127.590|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 190afc7d7
+
+Time (s): cpu = 00:01:55 ; elapsed = 00:00:33 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 430 ; free virtual = 56578
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.732  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 1a6df2b38
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:00:33 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 430 ; free virtual = 56578
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00677436 %
+  Global Horizontal Routing Utilization  = 0.00744048 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 50359
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 41442
+  Number of Partially Routed Nets     = 8917
+  Number of Node Overlaps             = 1
+
+Phase 2 Router Initialization | Checksum: 1e1736ba0
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:00:34 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 429 ; free virtual = 56576
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 1e1736ba0
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:00:34 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 429 ; free virtual = 56576
+Phase 3 Initial Routing | Checksum: 24efb58a4
+
+Time (s): cpu = 00:02:23 ; elapsed = 00:00:41 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 429 ; free virtual = 56576
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 9647
+ Number of Nodes with overlaps = 726
+ Number of Nodes with overlaps = 61
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.435  | TNS=0.000  | WHS=-0.037 | THS=-0.070 |
+
+Phase 4.1 Global Iteration 0 | Checksum: 2d009c2a4
+
+Time (s): cpu = 00:04:42 ; elapsed = 00:01:30 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 444 ; free virtual = 56117
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.435  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 16477f220
+
+Time (s): cpu = 00:04:55 ; elapsed = 00:01:36 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 464 ; free virtual = 56107
+Phase 4 Rip-up And Reroute | Checksum: 16477f220
+
+Time (s): cpu = 00:04:55 ; elapsed = 00:01:36 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 464 ; free virtual = 56107
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1b8ae2b8e
+
+Time (s): cpu = 00:05:13 ; elapsed = 00:01:40 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 461 ; free virtual = 56104
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.435  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+
+Phase 5.1.2 Update Timing
+Phase 5.1.2 Update Timing | Checksum: 219d3b2d6
+
+Time (s): cpu = 00:05:27 ; elapsed = 00:01:44 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 461 ; free virtual = 56104
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.435  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 5.1 Delay CleanUp | Checksum: 1b47013c4
+
+Time (s): cpu = 00:05:28 ; elapsed = 00:01:44 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 461 ; free virtual = 56104
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1b47013c4
+
+Time (s): cpu = 00:05:28 ; elapsed = 00:01:44 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 461 ; free virtual = 56104
+Phase 5 Delay and Skew Optimization | Checksum: 1b47013c4
+
+Time (s): cpu = 00:05:28 ; elapsed = 00:01:45 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 461 ; free virtual = 56104
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 13cd6c5e9
+
+Time (s): cpu = 00:05:42 ; elapsed = 00:01:48 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 461 ; free virtual = 56104
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.435  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1fd822c81
+
+Time (s): cpu = 00:05:42 ; elapsed = 00:01:49 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 459 ; free virtual = 56103
+Phase 6 Post Hold Fix | Checksum: 1fd822c81
+
+Time (s): cpu = 00:05:43 ; elapsed = 00:01:49 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 457 ; free virtual = 56102
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 6.53019 %
+  Global Horizontal Routing Utilization  = 8.47538 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 1da64de6f
+
+Time (s): cpu = 00:05:44 ; elapsed = 00:01:49 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 452 ; free virtual = 56098
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1da64de6f
+
+Time (s): cpu = 00:05:44 ; elapsed = 00:01:49 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 444 ; free virtual = 56090
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1da64de6f
+
+Time (s): cpu = 00:05:49 ; elapsed = 00:01:53 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 451 ; free virtual = 56038
+
+Phase 10 Resolve XTalk
+Phase 10 Resolve XTalk | Checksum: 1da64de6f
+
+Time (s): cpu = 00:05:50 ; elapsed = 00:01:53 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 451 ; free virtual = 56037
+
+Phase 11 Route finalize
+Phase 11 Route finalize | Checksum: 1da64de6f
+
+Time (s): cpu = 00:05:50 ; elapsed = 00:01:54 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 450 ; free virtual = 56037
+
+Phase 12 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.435  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 12 Post Router Timing | Checksum: 1d32afee0
+
+Time (s): cpu = 00:06:33 ; elapsed = 00:02:03 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 446 ; free virtual = 56003
+INFO: [Route 35-61] The design met the timing requirement.
+INFO: [Route 35-16] Router Completed Successfully
+
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 1182935a9
+
+Time (s): cpu = 00:06:34 ; elapsed = 00:02:04 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 446 ; free virtual = 56003
+
+Time (s): cpu = 00:06:34 ; elapsed = 00:02:04 . Memory (MB): peak = 4647.891 ; gain = 0.000 ; free physical = 446 ; free virtual = 56003
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+246 Infos, 82 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:06:44 ; elapsed = 00:02:09 . Memory (MB): peak = 4647.891 ; gain = 8.004 ; free physical = 446 ; free virtual = 56003
+INFO: [runtcl-4] Executing : report_drc -file exdes_wrapper_drc_routed.rpt -pb exdes_wrapper_drc_routed.pb -rpx exdes_wrapper_drc_routed.rpx
+Command: report_drc -file exdes_wrapper_drc_routed.rpt -pb exdes_wrapper_drc_routed.pb -rpx exdes_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/impl_1/exdes_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file exdes_wrapper_methodology_drc_routed.rpt -pb exdes_wrapper_methodology_drc_routed.pb -rpx exdes_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file exdes_wrapper_methodology_drc_routed.rpt -pb exdes_wrapper_methodology_drc_routed.pb -rpx exdes_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/rx_mmcm.bufg_gt_rx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/impl_1/exdes_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:49 ; elapsed = 00:00:11 . Memory (MB): peak = 4650.902 ; gain = 0.000 ; free physical = 438 ; free virtual = 55928
+INFO: [runtcl-4] Executing : report_power -file exdes_wrapper_power_routed.rpt -pb exdes_wrapper_power_summary_routed.pb -rpx exdes_wrapper_power_routed.rpx
+Command: report_power -file exdes_wrapper_power_routed.rpt -pb exdes_wrapper_power_summary_routed.pb -rpx exdes_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/rx_mmcm.bufg_gt_rx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+WARNING: [Timing 38-252] The BUFG_GT instance 'exdes_i/vid_phy_controller/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'exdes_i/vid_phy_controller/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.exdes_vid_phy_controller_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+256 Infos, 97 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:41 ; elapsed = 00:00:21 . Memory (MB): peak = 4674.914 ; gain = 24.012 ; free physical = 448 ; free virtual = 55923
+INFO: [runtcl-4] Executing : report_route_status -file exdes_wrapper_route_status.rpt -pb exdes_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file exdes_wrapper_timing_summary_routed.rpt -pb exdes_wrapper_timing_summary_routed.pb -rpx exdes_wrapper_timing_summary_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file exdes_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file exdes_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file exdes_wrapper_bus_skew_routed.rpt -pb exdes_wrapper_bus_skew_routed.pb -rpx exdes_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+source /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/imports/route_design.tcl
+Command: route_design -tns_cleanup
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: f7a4f420 ConstDB: 0 ShapeSum: 20844189 RouteDB: 45d49ae2
+Nodegraph reading from file.  Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.4 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 419 ; free virtual = 55892
+Post Restoration Checksum: NetGraph: 20d8b87a | NumContArr: 8b5a681c | Constraints: 190a55ad | Timing: 0
+Phase 1 Build RT Design | Checksum: c53d7643
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:11 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 458 ; free virtual = 55900
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: c53d7643
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:12 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 458 ; free virtual = 55900
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: c53d7643
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:12 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 455 ; free virtual = 55897
+Phase 2 Router Initialization | Checksum: c53d7643
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:13 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 455 ; free virtual = 55897
+INFO: [Route 35-558] -tns_cleanup is called on fully routed design. This will optimize the tns and all other options are ignored.
+
+Phase 3 TNS Cleanup
+
+Phase 3.1 Timing Verification
+
+Phase 3.1.1 Update Timing
+Phase 3.1.1 Update Timing | Checksum: 16f91c44f
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:19 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 443 ; free virtual = 55885
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.435  | TNS=0.000  | WHS=-0.043 | THS=-0.146 |
+
+Phase 3.1 Timing Verification | Checksum: 16f91c44f
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:19 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 441 ; free virtual = 55883
+INFO: [Route 35-552] Design met the setup timing requirement.
+Phase 3 TNS Cleanup | Checksum: 16f91c44f
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:20 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 441 ; free virtual = 55883
+
+Phase 4 Resolve XTalk
+Phase 4 Resolve XTalk | Checksum: 16f91c44f
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:20 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 441 ; free virtual = 55882
+
+Phase 5 Post Router Timing
+
+Phase 5.1 Update Timing
+Phase 5.1 Update Timing | Checksum: 1b17a874c
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:25 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 436 ; free virtual = 55878
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.435  | TNS=0.000  | WHS=-0.043 | THS=-0.146 |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 5 Post Router Timing | Checksum: 1b17a874c
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:25 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 436 ; free virtual = 55878
+INFO: [Route 35-16] Router Completed Successfully
+
+Phase 6 Post-Route Event Processing
+Phase 6 Post-Route Event Processing | Checksum: 1182935a9
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:26 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 436 ; free virtual = 55878
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:26 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 436 ; free virtual = 55878
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+17 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:35 ; elapsed = 00:00:31 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 436 ; free virtual = 55878
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 437 ; free virtual = 55892
+INFO: [Common 17-1381] The checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/impl_1/exdes_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:21 ; elapsed = 00:00:10 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 494 ; free virtual = 55865
+Command: phys_opt_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode 
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: Explore
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:06 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 493 ; free virtual = 55865
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+25 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:08 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 493 ; free virtual = 55865
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -warn_on_violation -file exdes_wrapper_timing_summary_postroute_physopted.rpt -pb exdes_wrapper_timing_summary_postroute_physopted.pb -rpx exdes_wrapper_timing_summary_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file exdes_wrapper_bus_skew_postroute_physopted.rpt -pb exdes_wrapper_bus_skew_postroute_physopted.pb -rpx exdes_wrapper_bus_skew_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+source /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/imports/postroute_phys_opt_design.tcl
+Command: phys_opt_design -critical_cell_opt
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode 
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:03 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 448 ; free virtual = 55847
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+36 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 455 ; free virtual = 55893
+INFO: [Common 17-1381] The checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1_working/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/impl_1/exdes_wrapper_postroute_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 562 ; free virtual = 55917
+INFO: [Memdata 28-208] The XPM instance: <exdes_i/v_hdmi_tx_ss/inst/v_axi4s_vid_out/inst/generate_remap_module.REMAP_420_INST/FIFO_INST/XPM_FIFO_SYNC_INST/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <exdes_i/v_hdmi_tx_ss/inst/v_axi4s_vid_out>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <exdes_i/v_hdmi_tx_ss/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <exdes_i/v_hdmi_tx_ss/inst/v_axi4s_vid_out>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <exdes_i/v_hdmi_rx_ss/inst/v_vid_in_axi4s/inst/generate_remap_module.REMAP_420_INST/FIFO_ODD_CHROMA_INST/XPM_FIFO_SYNC_INST/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <exdes_i/v_hdmi_rx_ss/inst/v_vid_in_axi4s>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <exdes_i/v_hdmi_rx_ss/inst/v_vid_in_axi4s/inst/generate_remap_module.REMAP_420_INST/FIFO_LUMA_INST/XPM_FIFO_SYNC_INST/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <exdes_i/v_hdmi_rx_ss/inst/v_vid_in_axi4s>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <exdes_i/v_hdmi_rx_ss/inst/v_vid_in_axi4s/inst/generate_remap_module.REMAP_420_INST/FIFO_EVEN_CHROMA_INST/XPM_FIFO_SYNC_INST/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <exdes_i/v_hdmi_rx_ss/inst/v_vid_in_axi4s>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <exdes_i/v_hdmi_rx_ss/inst/v_vid_in_axi4s/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <exdes_i/v_hdmi_rx_ss/inst/v_vid_in_axi4s>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+Command: write_bitstream -force exdes_wrapper.bit -bin_file
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+CRITICAL WARNING: [Vivado 12-1790] Evaluation License Warning: This design contains one or more evaluation cores that will cease to function after a certain period of time. This design should NOT be used in production systems.
+
+Evaluation cores found in this design:
+    IP core 'exdes_v_hdmi_rx_ss_0' (bd_3ec1) was generated using a hardware_evaluation license.
+    IP core 'exdes_v_hdmi_tx_ss_0' (bd_3ea7) was generated using a hardware_evaluation license.
+    IP core 'bd_3ea7_v_hdmi_tx_0' (v_hdmi_tx_v3_0_2) was generated using a hardware_evaluation license.
+    IP core 'bd_3ec1_v_hdmi_rx_0' (v_hdmi_rx_v3_0_2) was generated using a hardware_evaluation license.
+
+Resolution: If a new IP Core license was added, in order for the new license to be picked up, the current netlist needs to be updated by resetting and re-generating the IP output products before bitstream generation.
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC PDRC-153] Gated clock check: Net exdes_i/vid_phy_controller/inst/b0_clkdet_dru_refclk is a gated clock net sourced by a combinational pin exdes_i/vid_phy_controller/inst/i_0/O, cell exdes_i/vid_phy_controller/inst/i_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT exdes_i/vid_phy_controller/inst/i_0 is driving clock pin of 24 cells. This could lead to large hold time violations. Involved cells are:
+exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[0], exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[1], exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[2], exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RUN_SYNC_INST/syncstages_ff_reg[0], exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RUN_SYNC_INST/syncstages_ff_reg[1], exdes_i/vid_phy_controller/inst/clock_detector_inst/DRUCLK_RUN_SYNC_INST/syncstages_ff_reg[2], exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[0], exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[10], exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[11], exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[12], exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[13], exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[14], exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[15], exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[16], exdes_i/vid_phy_controller/inst/clock_detector_inst/druclk_freq_cnt_reg[17]... and (the first 15 of 24 listed)
+WARNING: [DRC RTSTAT-10] No routable loads: 2 net(s) have no routable loads. The problem bus(es) and/or net(s) are exdes_i/v_hdmi_rx_ss/inst/v_hdmi_rx/inst/SYS_INST/lclk_cke[3], and exdes_i/v_hdmi_tx_ss/inst/v_hdmi_tx/inst/SYS_INST/lclk_cke[4].
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 3 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 9211904 bits.
+Writing bitstream ./exdes_wrapper.bit...
+Writing bitstream ./exdes_wrapper.bin...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+52 Infos, 5 Warnings, 1 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:01:18 ; elapsed = 00:00:56 . Memory (MB): peak = 4674.914 ; gain = 0.000 ; free physical = 537 ; free virtual = 55902
+INFO: [Common 17-206] Exiting Vivado at Thu Jan  9 09:38:37 2025...

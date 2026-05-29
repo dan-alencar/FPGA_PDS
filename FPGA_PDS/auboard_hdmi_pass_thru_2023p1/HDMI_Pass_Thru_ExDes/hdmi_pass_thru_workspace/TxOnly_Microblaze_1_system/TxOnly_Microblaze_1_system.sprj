@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<systemproject:SystemProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" xmlns:systemproject="http://www.xilinx.com/systemproject" name="TxOnly_Microblaze_1_system" platform="/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/hdmi_pass_thru_workspace/aup_hdmi/export/aup_hdmi/aup_hdmi.xpfm" platformUID="xilinx:vcu118::0.0(custom)" sysConfig="aup_hdmi" runtime="C/C++">
+  <configuration name="Debug" id="com.xilinx.sdx.system.managedbuilder.debugConfiguration.1706374412">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="TxOnly_Microblaze_1" domainName="standalone_domain" domainPrettyName="standalone on mb_ss_0_mblaze" appBuildConfig="Debug"/>
+      <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="TxOnly_Microblaze_1" domainName="standalone_domain" domainPrettyName="standalone on mb_ss_0_mblaze" appBuildConfig="Debug"/>
+      <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Release" id="com.xilinx.sdx.system.managedbuilder.releaseConfiguration.1553282979">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="TxOnly_Microblaze_1" domainName="standalone_domain" domainPrettyName="standalone on mb_ss_0_mblaze" appBuildConfig="Release"/>
+      <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
+    </configBuildOptions>
+  </configuration>
+</systemproject:SystemProject>

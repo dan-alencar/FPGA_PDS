@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="TxOnly_Microblaze_1_system-imgFile" value="/home/training/AUPBoard/HDMI_Pass_Thru_ExDes/hdmi_pass_thru_workspace/TxOnly_Microblaze_1/_ide/bitstream/exdes_wrapper.bit"/>
+	<item key="TxOnly_Microblaze_1_system-offSet" value=""/>
+	<item key="TxOnly_Microblaze_1_system-initFile" value=""/>
+	<item key="TxOnly_Microblaze_1_system-verifyFlash" value="false"/>
+	<item key="TxOnly_Microblaze_1_system-blankCheck" value="false"/>
+	<item key="TxOnly_Microblaze_1_system-device" value="Auto Detect"/>
+	<item key="TxOnly_Microblaze_1_system-target" value="Local"/>
+	<item key="programflash.hwplatform" value="TxOnly_Microblaze_1_system"/>
+</section>

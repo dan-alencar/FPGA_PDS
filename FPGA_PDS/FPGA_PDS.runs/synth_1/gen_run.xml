@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xcau15p-ffvb676-2-e" LaunchTime="1780086651" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/hdmi_tx_bd_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xcau15p-ffvb676-2-e" LaunchTime="1780090035" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/hdmi_tx_bd_wrapper.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="hdmi_tx_bd_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="hdmi_tx_bd_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="hdmi_tx_bd_wrapper_utilization_synth.pb"/>
@@ -70,5 +70,7 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_microblaze_0_axi_periph_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_bd_microblaze_0_clk_wiz_1_0"/>
 </GenRun>

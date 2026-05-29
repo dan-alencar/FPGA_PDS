@@ -1,0 +1,394 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Aug  1 13:01:34 2024
+# Process ID: 53935
+# Current directory: /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_hdmi_acr_ctrl_0_synth_1
+# Command line: vivado -log exdes_hdmi_acr_ctrl_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source exdes_hdmi_acr_ctrl_0.tcl
+# Log file: /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_hdmi_acr_ctrl_0_synth_1/exdes_hdmi_acr_ctrl_0.vds
+# Journal file: /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_hdmi_acr_ctrl_0_synth_1/vivado.jou
+# Running On: HP-Z4-G4-027564, OS: Linux, CPU Frequency: 3600.000 MHz, CPU Physical cores: 4, Host memory: 67133 MB
+#-----------------------------------------------------------
+Sourcing tcl script '/tools/Xilinx/Vivado/2023.1/scripts/Vivado_init.tcl'
+131 Beta devices matching pattern found, 56 enabled.
+enable_beta_device: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1468.695 ; gain = 8.027 ; free physical = 50853 ; free virtual = 57828
+source exdes_hdmi_acr_ctrl_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/au15p_hdl_rc310xxa/hdl'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: exdes_hdmi_acr_ctrl_0
+Command: synth_design -top exdes_hdmi_acr_ctrl_0 -part xcau15p-ffvb676-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Device 21-403] Loading part xcau15p-ffvb676-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 53984
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2414.496 ; gain = 381.738 ; free physical = 49660 ; free virtual = 56635
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'exdes_hdmi_acr_ctrl_0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/synth/exdes_hdmi_acr_ctrl_0.sv:53]
+INFO: [Synth 8-638] synthesizing module 'hdmi_acr_ctrl_v1_0_1_14' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_14.vhd:60]
+INFO: [Synth 8-3491] module 'hdmi_acr_ctrl_v1_0_1_14_top' declared at '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_14_top.sv:35' bound to instance 'hdmi_acr_ctrl_top_inst' of component 'hdmi_acr_ctrl_v1_0_1_14_top' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_14.vhd:149]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_acr_ctrl_v1_0_1_14_top' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_14_top.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_acr_ctrl_v1_0_1_14_axi' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_14_axi.sv:36]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_acr_ctrl_v1_0_1_14_axi' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_14_axi.sv:36]
+WARNING: [Synth 8-689] width (32) of port connection 'S_AXI_AWADDR' does not match port width (8) of module 'hdmi_acr_ctrl_v1_0_1_14_axi' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_14_top.sv:131]
+WARNING: [Synth 8-689] width (32) of port connection 'S_AXI_ARADDR' does not match port width (8) of module 'hdmi_acr_ctrl_v1_0_1_14_axi' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_14_top.sv:144]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_acr_ctrl_v1_0_1_lib_pulse_clkcross' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_lib.sv:288]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_acr_ctrl_v1_0_1_lib_pulse_clkcross' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_lib.sv:288]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_acr_ctrl_v1_0_1_lib_data_clkcross' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_lib.sv:320]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_acr_ctrl_v1_0_1_lib_data_clkcross' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_lib.sv:320]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_acr_ctrl_v1_0_1_lib_data_clkcross__parameterized0' [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_lib.sv:320]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_acr_ctrl_v1_0_1_lib_data_clkcross__parameterized0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_lib.sv:320]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_acr_ctrl_v1_0_1_14_top' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_14_top.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'hdmi_acr_ctrl_v1_0_1_14' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_14.vhd:60]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_hdmi_acr_ctrl_0' (0#1) [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/synth/exdes_hdmi_acr_ctrl_0.sv:53]
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[3] in module hdmi_acr_ctrl_v1_0_1_14_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[2] in module hdmi_acr_ctrl_v1_0_1_14_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[1] in module hdmi_acr_ctrl_v1_0_1_14_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[0] in module hdmi_acr_ctrl_v1_0_1_14_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[31] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[30] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[29] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[28] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[27] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[26] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[25] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[24] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[23] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[22] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[21] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[20] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[19] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[18] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[17] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[16] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[15] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[14] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[13] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[12] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[11] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[10] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[9] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[8] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[31] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[30] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[29] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[28] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[27] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[26] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[25] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[24] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[23] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[22] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[21] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[20] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[19] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[18] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[17] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[16] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[15] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[14] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[13] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[12] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[11] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[10] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[9] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_araddr[8] in module hdmi_acr_ctrl_v1_0_1_14_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aud_resetn in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tvalid in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[63] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[62] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[61] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[60] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[59] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[58] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[57] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[56] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[55] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[54] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[53] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[52] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[51] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[50] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[49] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[48] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[47] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[46] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[45] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[44] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[43] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[42] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[41] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[40] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[39] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[38] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[37] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[36] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[35] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[34] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[33] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[32] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[31] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[30] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[29] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[28] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[27] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[26] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[25] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[24] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[23] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[22] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[21] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[20] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[19] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dividend_tdata[18] in module hdmi_acr_ctrl_v1_0_1_wrapper is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2486.434 ; gain = 453.676 ; free physical = 49567 ; free virtual = 56543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2501.277 ; gain = 468.520 ; free physical = 49565 ; free virtual = 56541
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2501.277 ; gain = 468.520 ; free physical = 49565 ; free virtual = 56541
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2501.277 ; gain = 0.000 ; free physical = 49565 ; free virtual = 56541
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes_hdmi_acr_ctrl_0_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2647.027 ; gain = 0.000 ; free physical = 49534 ; free virtual = 56515
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes_hdmi_acr_ctrl_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl/hdmi_acr_ctrl.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl/hdmi_acr_ctrl.xdc] for cell 'inst'
+Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_hdmi_acr_ctrl_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_hdmi_acr_ctrl_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2647.027 ; gain = 0.000 ; free physical = 49534 ; free virtual = 56515
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2647.027 ; gain = 0.000 ; free physical = 49534 ; free virtual = 56515
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2647.027 ; gain = 614.270 ; free physical = 49526 ; free virtual = 56507
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcau15p-ffvb676-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2647.027 ; gain = 614.270 ; free physical = 49526 ; free virtual = 56507
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_hdmi_acr_ctrl_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2647.027 ; gain = 614.270 ; free physical = 49526 ; free virtual = 56507
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'stmWrite_reg' in module 'hdmi_acr_ctrl_v1_0_1_14_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'stmRead_reg' in module 'hdmi_acr_ctrl_v1_0_1_14_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             sWriteReset |                               00 | 00000000000000000000000000000000
+              sWriteAddr |                               01 | 00000000000000000000000000000001
+              sWriteData |                               10 | 00000000000000000000000000000010
+              sWriteResp |                               11 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'stmWrite_reg' using encoding 'sequential' in module 'hdmi_acr_ctrl_v1_0_1_14_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              sReadReset |                             0001 | 00000000000000000000000000000000
+               sReadAddr |                             0010 | 00000000000000000000000000000001
+             sDecodeAddr |                             0100 | 00000000000000000000000000000010
+               sReadData |                             1000 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'stmRead_reg' using encoding 'one-hot' in module 'hdmi_acr_ctrl_v1_0_1_14_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2647.027 ; gain = 614.270 ; free physical = 49519 ; free virtual = 56501
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 11    
+	               20 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 13    
+	                1 Bit    Registers := 24    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 3     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 2     
+	   5 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 15    
+	   2 Input    1 Bit        Muxes := 6     
+	   5 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 576 (col length:72)
+BRAMs: 288 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'HDMI_14_20.hdmi_acr_ctrl_v1_0_1_14_20/hdmi_acr_ctrl_top_inst/CTS_CLKCROSS_AUD_INST/rOut_Data_reg' and it is trimmed from '32' to '20' bits. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_lib.sv:360]
+WARNING: [Synth 8-3936] Found unconnected internal register 'HDMI_14_20.hdmi_acr_ctrl_v1_0_1_14_20/hdmi_acr_ctrl_top_inst/CTS_CLKCROSS_AUD_INST/rIn_Data_reg' and it is trimmed from '32' to '20' bits. [/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.gen/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes/rtl/hdmi_acr_ctrl_v1_0_1/hdmi_acr_ctrl_v1_0_1_lib.sv:345]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2647.027 ; gain = 614.270 ; free physical = 49494 ; free virtual = 56476
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2693.770 ; gain = 661.012 ; free physical = 49460 ; free virtual = 56436
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2721.801 ; gain = 689.043 ; free physical = 49430 ; free virtual = 56406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2729.809 ; gain = 697.051 ; free physical = 49420 ; free virtual = 56397
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2729.809 ; gain = 697.051 ; free physical = 49420 ; free virtual = 56397
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2729.809 ; gain = 697.051 ; free physical = 49420 ; free virtual = 56397
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2729.809 ; gain = 697.051 ; free physical = 49420 ; free virtual = 56397
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2729.809 ; gain = 697.051 ; free physical = 49420 ; free virtual = 56397
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2729.809 ; gain = 697.051 ; free physical = 49420 ; free virtual = 56397
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2729.809 ; gain = 697.051 ; free physical = 49420 ; free virtual = 56397
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |    14|
+|2     |LUT1   |    41|
+|3     |LUT2   |    58|
+|4     |LUT3   |    26|
+|5     |LUT4   |    42|
+|6     |LUT5   |    28|
+|7     |LUT6   |    45|
+|8     |FDCE   |   182|
+|9     |FDPE   |    31|
+|10    |FDRE   |   314|
+|11    |FDSE   |     1|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2729.809 ; gain = 697.051 ; free physical = 49420 ; free virtual = 56397
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 226 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2729.809 ; gain = 551.301 ; free physical = 49420 ; free virtual = 56397
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2729.816 ; gain = 697.051 ; free physical = 49420 ; free virtual = 56397
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2729.816 ; gain = 0.000 ; free physical = 49700 ; free virtual = 56677
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2777.668 ; gain = 0.000 ; free physical = 49698 ; free virtual = 56674
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 6ab72f10
+INFO: [Common 17-83] Releasing license: Synthesis
+40 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 2777.668 ; gain = 1254.676 ; free physical = 49698 ; free virtual = 56674
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2135.403; main = 1908.731; forked = 353.454
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3621.863; main = 2777.672; forked = 974.832
+INFO: [Common 17-1381] The checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_hdmi_acr_ctrl_0_synth_1/exdes_hdmi_acr_ctrl_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP exdes_hdmi_acr_ctrl_0, cache-ID = e330ffe3329c0913
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/training/AUPBoard/aup_hdmi_pass_thru_2023p1/HDMI_Pass_Thru_ExDes/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_hdmi_acr_ctrl_0_synth_1/exdes_hdmi_acr_ctrl_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file exdes_hdmi_acr_ctrl_0_utilization_synth.rpt -pb exdes_hdmi_acr_ctrl_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Aug  1 13:02:17 2024...

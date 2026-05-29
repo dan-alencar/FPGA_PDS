@@ -1,0 +1,93 @@
+{
+  "0": {
+    "basicblocks": 8,
+    "calls": "5 3",
+    "file": "v_tpg.cpp",
+    "fileloc": 364,
+    "instructions": 80,
+    "loads": {
+      "G": 2,
+      "T": 1
+    },
+    "name": "v_tpg",
+    "stores": {
+      "G": 4
+    },
+    "total_instructions": 1561
+  },
+  "1": {
+    "basicblocks": 172,
+    "calls": "2",
+    "file": "v_tpg.cpp",
+    "fileloc": 491,
+    "instructions": 1009,
+    "loads": {
+      "G": 92,
+      "L": 11
+    },
+    "name": "tpgBackground",
+    "stores": {
+      "G": 60
+    },
+    "total_instructions": 1089
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 248,
+    "instructions": 2,
+    "name": "reg<ap_uint<10> >",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 2
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "4 1 6",
+    "file": "v_tpg.cpp",
+    "fileloc": 259,
+    "instructions": 10,
+    "name": "v_tpgHlsDataFlow",
+    "total_instructions": 1480
+  },
+  "4": {
+    "basicblocks": 26,
+    "calls": "5 5",
+    "file": "v_tpg.cpp",
+    "fileloc": 776,
+    "instructions": 149,
+    "loads": {
+      "L": 11
+    },
+    "name": "AXIvideo2MultiPixStream",
+    "total_instructions": 193
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 248,
+    "instructions": 1,
+    "name": "reg<unsigned short>",
+    "total_instructions": 1
+  },
+  "6": {
+    "basicblocks": 34,
+    "calls": "",
+    "file": "v_tpg.cpp",
+    "fileloc": 874,
+    "instructions": 152,
+    "loads": {
+      "G": 3,
+      "L": 5
+    },
+    "name": "MultiPixStream2AXIvideo",
+    "stores": {
+      "G": 2,
+      "L": 9
+    },
+    "total_instructions": 188
+  }
+}
