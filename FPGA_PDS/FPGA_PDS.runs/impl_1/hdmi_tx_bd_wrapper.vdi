@@ -1,307 +1,308 @@
 #-----------------------------------------------------------
 # Vivado v2025.2 (64-bit)
-# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Thu Jan 22 13:55:50 2026
-# Process ID         : 4088
-# Current directory  : C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1
-# Command line       : vivado.exe -log hdmi_tx_bd_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hdmi_tx_bd_wrapper.tcl -notrace
-# Log file           : C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper.vdi
-# Journal file       : C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1\vivado.jou
-# Running On         : DESKTOP-6GRI2EI
-# Platform           : Windows Server 2016 or Windows 10
-# Operating System   : 26200
+# Start of session at: Fri May 29 17:31:27 2026
+# Process ID         : 119477
+# Current directory  : /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1
+# Command line       : vivado -log hdmi_tx_bd_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hdmi_tx_bd_wrapper.tcl -notrace
+# Log file           : /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper.vdi
+# Journal file       : /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/vivado.jou
+# Running On         : pop-os
+# Platform           : Pop
+# Operating System   : Pop!_OS 24.04 LTS
 # Processor Detail   : Intel(R) Core(TM) 5 210H
-# CPU Frequency      : 2688 MHz
+# CPU Frequency      : 494.754 MHz
 # CPU Physical cores : 8
 # CPU Logical cores  : 12
-# Host memory        : 25350 MB
-# Swap memory        : 7247 MB
-# Total Virtual      : 32598 MB
-# Available Virtual  : 14278 MB
+# Host memory        : 24780 MB
+# Swap memory        : 21474 MB
+# Total Virtual      : 46254 MB
+# Available Virtual  : 35838 MB
 #-----------------------------------------------------------
 source hdmi_tx_bd_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 541.395 ; gain = 219.953
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
-add_files: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 657.250 ; gain = 115.855
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/dan-alencar/AMD_Xilinx/2025.2/data/ip'.
 Command: link_design -top hdmi_tx_bd_wrapper -part xcau15p-ffvb676-2-e
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xcau15p-ffvb676-2-e
 INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axi_iic_0_0/hdmi_tx_bd_axi_iic_0_0.dcp' for cell 'hdmi_tx_bd_i/axi_iic_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.dcp' for cell 'hdmi_tx_bd_i/mdm_1'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.dcp' for cell 'hdmi_tx_bd_i/microblaze_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_axi_intc'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/hdmi_tx_bd_microblaze_0_axi_periph_0.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_clk_wiz_1'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0.dcp' for cell 'hdmi_tx_bd_i/rst_microblaze_0_clk_wiz_1_100M'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_proc_sys_reset_0_0/hdmi_tx_bd_proc_sys_reset_0_0.dcp' for cell 'hdmi_tx_bd_i/rst_video_clk'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/hdmi_tx_bd_v_hdmi_tx_ss_0_0.dcp' for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_tpg_0_0/hdmi_tx_bd_v_tpg_0_0.dcp' for cell 'hdmi_tx_bd_i/v_tpg_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0.dcp' for cell 'hdmi_tx_bd_i/vid_phy_controller_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_dlmb_bram_if_cntlr_1/hdmi_tx_bd_dlmb_bram_if_cntlr_1.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_dlmb_v10_1/hdmi_tx_bd_dlmb_v10_1.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_local_memory/dlmb_v10'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_ilmb_bram_if_cntlr_1/hdmi_tx_bd_ilmb_bram_if_cntlr_1.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_ilmb_v10_1/hdmi_tx_bd_ilmb_v10_1.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_local_memory/ilmb_v10'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_lmb_bram_1/hdmi_tx_bd_lmb_bram_1.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_local_memory/lmb_bram'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_4/bd_2339_axi_smartconnect_0.dcp' for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/axi_smartconnect'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_2/bd_2339_v_axi4s_vid_out_0.dcp' for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_0/bd_2339_v_hdmi_tx_0.dcp' for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx'
-INFO: [Project 1-454] Reading design checkpoint 'c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0.dcp' for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_tc'
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1262.699 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1122 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axi_iic_0_0/hdmi_tx_bd_axi_iic_0_0.dcp' for cell 'hdmi_tx_bd_i/axi_iic_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.dcp' for cell 'hdmi_tx_bd_i/mdm_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.dcp' for cell 'hdmi_tx_bd_i/microblaze_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_axi_intc'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/hdmi_tx_bd_microblaze_0_axi_periph_0.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_clk_wiz_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0.dcp' for cell 'hdmi_tx_bd_i/rst_microblaze_0_clk_wiz_1_100M'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_proc_sys_reset_0_0/hdmi_tx_bd_proc_sys_reset_0_0.dcp' for cell 'hdmi_tx_bd_i/rst_video_clk'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/hdmi_tx_bd_v_hdmi_tx_ss_0_0.dcp' for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_tpg_0_0/hdmi_tx_bd_v_tpg_0_0.dcp' for cell 'hdmi_tx_bd_i/v_tpg_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0.dcp' for cell 'hdmi_tx_bd_i/vid_phy_controller_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_dlmb_bram_if_cntlr_1/hdmi_tx_bd_dlmb_bram_if_cntlr_1.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_dlmb_v10_1/hdmi_tx_bd_dlmb_v10_1.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_local_memory/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_ilmb_bram_if_cntlr_1/hdmi_tx_bd_ilmb_bram_if_cntlr_1.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_ilmb_v10_1/hdmi_tx_bd_ilmb_v10_1.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_local_memory/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_lmb_bram_1/hdmi_tx_bd_lmb_bram_1.dcp' for cell 'hdmi_tx_bd_i/microblaze_0_local_memory/lmb_bram'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_4/bd_2339_axi_smartconnect_0.dcp' for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/axi_smartconnect'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_2/bd_2339_v_axi4s_vid_out_0.dcp' for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_0/bd_2339_v_hdmi_tx_0.dcp' for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx'
+INFO: [Project 1-454] Reading design checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0.dcp' for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_tc'
+Netlist sorting complete. Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.43 . Memory (MB): peak = 2223.430 ; gain = 0.000 ; free physical = 3372 ; free virtual = 33113
+INFO: [Netlist 29-17] Analyzing 1124 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2025.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_1/ip/ip_1/bd_6eeb_psr_aclk_0_board.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/axi_smartconnect/inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_1/ip/ip_1/bd_6eeb_psr_aclk_0_board.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/axi_smartconnect/inst/clk_map/psr_aclk/U0'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_4/smartconnect.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/axi_smartconnect/inst'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_4/smartconnect.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/axi_smartconnect/inst'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_1/bd_5bc6_psr0_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst/clk_map/psr0/U0'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_1/bd_5bc6_psr0_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst/clk_map/psr0/U0'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_2/bd_5bc6_psr_aclk_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_2/bd_5bc6_psr_aclk_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst/clk_map/psr_aclk/U0'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_3/bd_5bc6_psr_aclk1_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst/clk_map/psr_aclk1/U0'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_3/bd_5bc6_psr_aclk1_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst/clk_map/psr_aclk1/U0'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/smartconnect.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst'
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/smartconnect.xdc:3]
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/smartconnect.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_intc/U0'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_intc/U0'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_clk_wiz_1/inst'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_clk_wiz_1/inst'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_clk_wiz_1/inst'
-create_clock: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1477.512 ; gain = 44.727
-INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0.xdc:54]
-INFO: [Timing 38-2] Deriving generated clocks [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0.xdc:54]
-get_clocks: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1850.957 ; gain = 373.445
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_clk_wiz_1/inst'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_board.xdc] for cell 'hdmi_tx_bd_i/rst_microblaze_0_clk_wiz_1_100M/U0'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_board.xdc] for cell 'hdmi_tx_bd_i/rst_microblaze_0_clk_wiz_1_100M/U0'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axi_iic_0_0/hdmi_tx_bd_axi_iic_0_0_board.xdc] for cell 'hdmi_tx_bd_i/axi_iic_0/U0'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axi_iic_0_0/hdmi_tx_bd_axi_iic_0_0_board.xdc] for cell 'hdmi_tx_bd_i/axi_iic_0/U0'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper.xdc] for cell 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper.xdc] for cell 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/vid_phy_controller_xdc.xdc] for cell 'hdmi_tx_bd_i/vid_phy_controller_0/inst'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/vid_phy_controller_xdc.xdc] for cell 'hdmi_tx_bd_i/vid_phy_controller_0/inst'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_proc_sys_reset_0_0/hdmi_tx_bd_proc_sys_reset_0_0_board.xdc] for cell 'hdmi_tx_bd_i/rst_video_clk/U0'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_proc_sys_reset_0_0/hdmi_tx_bd_proc_sys_reset_0_0_board.xdc] for cell 'hdmi_tx_bd_i/rst_video_clk/U0'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc] for cell 'hdmi_tx_bd_i/microblaze_0/U0'
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:4]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:4]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:4]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:7]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:7]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:7]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:10]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:10]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:10]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:13]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:13]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:13]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:16]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:16]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:16]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:19]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:19]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:19]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:22]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:22]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:22]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:25]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:25]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:25]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:28]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:28]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:28]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:31]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:31]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:31]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:34]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:34]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:34]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:37]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:37]
-WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:37]
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc] for cell 'hdmi_tx_bd_i/microblaze_0/U0'
-Parsing XDC File [C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/constrs_1/new/constraints.xdc]
-Finished Parsing XDC File [C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/constrs_1/new/constraints.xdc]
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_0/bd_2339_v_hdmi_tx_0_core.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx/inst'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_0/bd_2339_v_hdmi_tx_0_core.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx/inst'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0_clocks.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_tc/U0'
-WARNING: [Timing 38-277] The instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0_clocks.xdc:2]
-WARNING: [Timing 38-277] The instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0_clocks.xdc:2]
-WARNING: [Timing 38-252] The BUFG_GT instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0_clocks.xdc:2]
-INFO: [Timing 38-2] Deriving generated clocks [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0_clocks.xdc:2]
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0_clocks.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_tc/U0'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_2/bd_2339_v_axi4s_vid_out_0_clocks.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_2/bd_2339_v_axi4s_vid_out_0_clocks.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_tpg_0_0/hdmi_tx_bd_v_tpg_0_0.xdc] for cell 'hdmi_tx_bd_i/v_tpg_0/inst'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_tpg_0_0/hdmi_tx_bd_v_tpg_0_0.xdc] for cell 'hdmi_tx_bd_i/v_tpg_0/inst'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0_clocks.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_intc/U0'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0_clocks.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_intc/U0'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.xdc] for cell 'hdmi_tx_bd_i/mdm_1/U0'
-WARNING: [Timing 38-252] The BUFG_GT instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1. [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.xdc:5]
-WARNING: [Timing 38-277] The instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.xdc:5]
-WARNING: [Timing 38-277] The instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.xdc:5]
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.xdc] for cell 'hdmi_tx_bd_i/mdm_1/U0'
-Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0_clocks.xdc] for cell 'hdmi_tx_bd_i/vid_phy_controller_0/inst'
-Finished Parsing XDC File [c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0_clocks.xdc] for cell 'hdmi_tx_bd_i/vid_phy_controller_0/inst'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_1/ip/ip_1/bd_6eeb_psr_aclk_0_board.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/axi_smartconnect/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_1/ip/ip_1/bd_6eeb_psr_aclk_0_board.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/axi_smartconnect/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_4/smartconnect.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/axi_smartconnect/inst'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_4/smartconnect.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/axi_smartconnect/inst'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_1/bd_5bc6_psr0_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_1/bd_5bc6_psr0_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst/clk_map/psr0/U0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_2/bd_5bc6_psr_aclk_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_2/bd_5bc6_psr_aclk_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_3/bd_5bc6_psr_aclk1_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/bd_0/ip/ip_3/bd_5bc6_psr_aclk1_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/smartconnect.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/smartconnect.xdc:3]
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_periph_0/smartconnect.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_periph/inst'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_intc/U0'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_intc/U0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_clk_wiz_1/inst'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_board.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_clk_wiz_1/inst'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_clk_wiz_1/inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2440.441 ; gain = 37.094 ; free physical = 3295 ; free virtual = 33036
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0.xdc:54]
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_clk_wiz_1/inst'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_board.xdc] for cell 'hdmi_tx_bd_i/rst_microblaze_0_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_board.xdc] for cell 'hdmi_tx_bd_i/rst_microblaze_0_clk_wiz_1_100M/U0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axi_iic_0_0/hdmi_tx_bd_axi_iic_0_0_board.xdc] for cell 'hdmi_tx_bd_i/axi_iic_0/U0'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axi_iic_0_0/hdmi_tx_bd_axi_iic_0_0_board.xdc] for cell 'hdmi_tx_bd_i/axi_iic_0/U0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper.xdc] for cell 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper.xdc] for cell 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/vid_phy_controller_xdc.xdc] for cell 'hdmi_tx_bd_i/vid_phy_controller_0/inst'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/vid_phy_controller_xdc.xdc] for cell 'hdmi_tx_bd_i/vid_phy_controller_0/inst'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_proc_sys_reset_0_0/hdmi_tx_bd_proc_sys_reset_0_0_board.xdc] for cell 'hdmi_tx_bd_i/rst_video_clk/U0'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_proc_sys_reset_0_0/hdmi_tx_bd_proc_sys_reset_0_0_board.xdc] for cell 'hdmi_tx_bd_i/rst_video_clk/U0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc] for cell 'hdmi_tx_bd_i/microblaze_0/U0'
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:4]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:4]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:4]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:7]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:7]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:7]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:10]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:10]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:10]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:13]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:13]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:13]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:16]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:16]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-1' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:16]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:19]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:19]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-2' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:19]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:22]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:22]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:22]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:25]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:25]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:25]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:28]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:28]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:28]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:31]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:31]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:31]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:34]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:34]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:34]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:37]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:37]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Data_Flow_I/mul_unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc:37]
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xdc] for cell 'hdmi_tx_bd_i/microblaze_0/U0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/constrs_1/new/constraints.xdc]
+CRITICAL WARNING: [Constraints 18-1055] Clock 'sys_clk_p' completely overrides clock 'SYS_CLK_P', which is referenced by one or more other constraints. Any constraints that refer to the overridden clock will be ignored.
+New: create_clock -period 3.333 -name sys_clk_p [get_ports SYS_CLK_P], [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/constrs_1/new/constraints.xdc:17]
+Previous: create_clock -period 3.333 [get_ports SYS_CLK_P], [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0.xdc:53]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/constrs_1/new/constraints.xdc]
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_0/bd_2339_v_hdmi_tx_0_core.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx/inst'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_0/bd_2339_v_hdmi_tx_0_core.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx/inst'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0_clocks.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_tc/U0'
+WARNING: [Timing 38-277] The instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0_clocks.xdc:2]
+WARNING: [Timing 38-277] The instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0_clocks.xdc:2]
+WARNING: [Timing 38-252] The BUFG_GT instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0_clocks.xdc:2]
+INFO: [Timing 38-2] Deriving generated clocks [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0_clocks.xdc:2]
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_1/bd_2339_v_tc_0_clocks.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_tc/U0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_2/bd_2339_v_axi4s_vid_out_0_clocks.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_2/bd_2339_v_axi4s_vid_out_0_clocks.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_tpg_0_0/hdmi_tx_bd_v_tpg_0_0.xdc] for cell 'hdmi_tx_bd_i/v_tpg_0/inst'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_tpg_0_0/hdmi_tx_bd_v_tpg_0_0.xdc] for cell 'hdmi_tx_bd_i/v_tpg_0/inst'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0_clocks.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_intc/U0'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0_clocks.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_intc/U0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.xdc] for cell 'hdmi_tx_bd_i/mdm_1/U0'
+WARNING: [Timing 38-252] The BUFG_GT instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.xdc:5]
+WARNING: [Timing 38-277] The instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.xdc:5]
+WARNING: [Timing 38-277] The instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.xdc:5]
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0.xdc] for cell 'hdmi_tx_bd_i/mdm_1/U0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0_clocks.xdc] for cell 'hdmi_tx_bd_i/vid_phy_controller_0/inst'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0_clocks.xdc] for cell 'hdmi_tx_bd_i/vid_phy_controller_0/inst'
 WARNING: [XPM_CDC_ARRAY_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/vid_phy_controller_0/inst/xpm_array_gtwiz_reset_sync_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
 WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
 WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
 WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
 WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
 WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx/inst/SYS_INST/CORE_INST/CH2_INST/VID_WO_ARB.VID_INST/FIFO_INST/WP_CDA_INST/XPM_GRAY_INST 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
 WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx/inst/SYS_INST/CORE_INST/CH2_INST/VID_WO_ARB.VID_INST/FIFO_INST/RP_CDA_INST/XPM_GRAY_INST 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
 WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx/inst/SYS_INST/CORE_INST/CH0_INST/VID_WO_ARB.VID_INST/FIFO_INST/WP_CDA_INST/XPM_GRAY_INST 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
 WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx/inst/SYS_INST/CORE_INST/CH0_INST/VID_WO_ARB.VID_INST/FIFO_INST/RP_CDA_INST/XPM_GRAY_INST 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
 WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx/inst/SYS_INST/CORE_INST/CH1_INST/VID_WO_ARB.VID_INST/FIFO_INST/WP_CDA_INST/XPM_GRAY_INST 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
 WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx/inst/SYS_INST/CORE_INST/CH1_INST/VID_WO_ARB.VID_INST/FIFO_INST/RP_CDA_INST/XPM_GRAY_INST 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
 WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx/inst/SYS_INST/AUD_INST/ACLK_CTRL_FMT_SYNC_INST/gen_handshake.XPM_INST 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_hdmi_tx/inst/SYS_INST/AUD_INST/ACLK_CTRL_RUN_SYNC_INST/gen_single.genblk1[0].XPM_INST 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/vid_phy_controller_0/inst/xpm_array_single_txpllclksel_in_drp0_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/vid_phy_controller_0/inst/xpm_array_single_rxpllclksel_in_drp4_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/vid_phy_controller_0/inst/xpm_array_single_txpllclksel_in_drp5_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/vid_phy_controller_0/inst/xpm_array_single_rxpllclksel_in_drp5_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/vid_phy_controller_0/inst/xpm_array_single_rxpllclksel_in_drp0_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/vid_phy_controller_0/inst/xpm_array_single_txpllclksel_in_drp1_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/vid_phy_controller_0/inst/xpm_array_single_rxpllclksel_in_drp1_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/vid_phy_controller_0/inst/xpm_array_single_txpllclksel_in_drp2_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/vid_phy_controller_0/inst/xpm_array_single_rxpllclksel_in_drp2_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/vid_phy_controller_0/inst/xpm_array_single_txpllclksel_in_drp3_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/vid_phy_controller_0/inst/xpm_array_single_rxpllclksel_in_drp3_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
 WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
      Instance: hdmi_tx_bd_i/vid_phy_controller_0/inst/xpm_array_single_txpllclksel_in_drp4_inst 
   This will add unnecessary latency to the design. Please check the design for the following: 
  1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
  2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
- [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
-INFO: [Project 1-1714] 354 XPM XDC files have been applied to the design.
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Project 1-1714] 365 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell hdmi_tx_bd_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell hdmi_tx_bd_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
@@ -339,9 +340,9 @@ INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell hdmi_tx_bd_i/v_h
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_1 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_2 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 Generating merged BMM file for the design top 'hdmi_tx_bd_wrapper'...
-INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/data/mb_bootloop_le.elf 
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/data/mb_bootloop_le.elf 
 INFO: [Project 1-1687] 1 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1861.402 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2974.555 ; gain = 0.000 ; free physical = 3001 ; free virtual = 32742
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 428 instances were transformed.
   DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
@@ -359,146 +360,146 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64M8 => RAM64M8 (RAMD64E(x8)): 61 instances
   RAM64X1S => RAM64X1S (RAMS64E): 1 instance 
 
-72 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
+72 Infos, 68 Warnings, 1 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:01:36 ; elapsed = 00:01:38 . Memory (MB): peak = 1861.402 ; gain = 1204.152
+link_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:22 . Memory (MB): peak = 2974.590 ; gain = 1297.996 ; free physical = 3001 ; free virtual = 32742
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
 Running DRC as a precondition to command opt_design
 
 Starting DRC Task
-INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1861.402 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.47 . Memory (MB): peak = 2974.590 ; gain = 0.000 ; free physical = 2883 ; free virtual = 32624
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Timing 38-252] The BUFG_GT instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
 WARNING: [Timing 38-277] The instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
 WARNING: [Timing 38-277] The instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
-Ending Cache Timing Information Task | Checksum: 27c40899b
+Ending Cache Timing Information Task | Checksum: 2bafe040c
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1861.402 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 2974.590 ; gain = 0.000 ; free physical = 2859 ; free virtual = 32600
 
 Starting Logic Optimization Task
 
 Phase 1 Initialization
 
 Phase 1.1 Core Generation And Design Setup
-Phase 1.1 Core Generation And Design Setup | Checksum: 27c40899b
+Phase 1.1 Core Generation And Design Setup | Checksum: 2bafe040c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 2312.949 ; gain = 0.000
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3323.211 ; gain = 0.000 ; free physical = 2520 ; free virtual = 32262
 
 Phase 1.2 Setup Constraints And Sort Netlist
-Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 27c40899b
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 2bafe040c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.210 . Memory (MB): peak = 2312.949 ; gain = 0.000
-Phase 1 Initialization | Checksum: 27c40899b
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3323.211 ; gain = 0.000 ; free physical = 2520 ; free virtual = 32262
+Phase 1 Initialization | Checksum: 2bafe040c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.220 . Memory (MB): peak = 2312.949 ; gain = 0.000
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3323.211 ; gain = 0.000 ; free physical = 2520 ; free virtual = 32262
 
 Phase 2 Timer Update And Timing Data Collection
 
 Phase 2.1 Detect if minReqCache needed
-Phase 2.1 Detect if minReqCache needed | Checksum: 27c40899b
+Phase 2.1 Detect if minReqCache needed | Checksum: 2bafe040c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.322 . Memory (MB): peak = 2315.156 ; gain = 2.207
+Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.1 . Memory (MB): peak = 3339.211 ; gain = 16.000 ; free physical = 2496 ; free virtual = 32238
 
 Phase 2.2 Timer Update
-Phase 2.2 Timer Update | Checksum: 27c40899b
+Phase 2.2 Timer Update | Checksum: 2bafe040c
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2315.156 ; gain = 2.207
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.73 . Memory (MB): peak = 3339.211 ; gain = 16.000 ; free physical = 2557 ; free virtual = 32299
 
 Phase 2.3 Timing Data Collection
-Phase 2.3 Timing Data Collection | Checksum: 27c40899b
+Phase 2.3 Timing Data Collection | Checksum: 2bafe040c
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2315.156 ; gain = 2.207
-Phase 2 Timer Update And Timing Data Collection | Checksum: 27c40899b
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.75 . Memory (MB): peak = 3339.211 ; gain = 16.000 ; free physical = 2549 ; free virtual = 32291
+Phase 2 Timer Update And Timing Data Collection | Checksum: 2bafe040c
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2315.156 ; gain = 2.207
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.76 . Memory (MB): peak = 3339.211 ; gain = 16.000 ; free physical = 2549 ; free virtual = 32291
 
 Phase 3 Retarget
 INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
 INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
-INFO: [Opt 31-1566] Pulled 15 inverters resulting in an inversion of 98 pins
-INFO: [Opt 31-138] Pushed 192 inverter(s) to 5289 load pin(s).
+INFO: [Opt 31-1566] Pulled 14 inverters resulting in an inversion of 91 pins
+INFO: [Opt 31-138] Pushed 205 inverter(s) to 5327 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 3 Retarget | Checksum: 28b3170c6
+Phase 3 Retarget | Checksum: 272d44c13
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2315.156 ; gain = 2.207
-Retarget | Checksum: 28b3170c6
-INFO: [Opt 31-389] Phase Retarget created 362 cells and removed 621 cells
-INFO: [Opt 31-1021] In phase Retarget, 651 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 3339.211 ; gain = 16.000 ; free physical = 2550 ; free virtual = 32291
+Retarget | Checksum: 272d44c13
+INFO: [Opt 31-389] Phase Retarget created 384 cells and removed 654 cells
+INFO: [Opt 31-1021] In phase Retarget, 671 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Constant propagation
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 4 load pin(s).
-Phase 4 Constant propagation | Checksum: 2256a9259
+Phase 4 Constant propagation | Checksum: 19c029205
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2315.156 ; gain = 2.207
-Constant propagation | Checksum: 2256a9259
-INFO: [Opt 31-389] Phase Constant propagation created 45 cells and removed 764 cells
-INFO: [Opt 31-1021] In phase Constant propagation, 914 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 3339.211 ; gain = 16.000 ; free physical = 2550 ; free virtual = 32292
+Constant propagation | Checksum: 19c029205
+INFO: [Opt 31-389] Phase Constant propagation created 47 cells and removed 768 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 937 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 5 Sweep
 INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
-Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 2315.156 ; gain = 0.000
+Done building netlist checker database: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3339.211 ; gain = 0.000 ; free physical = 2550 ; free virtual = 32292
 INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
-Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 2315.156 ; gain = 0.000
-Phase 5 Sweep | Checksum: 1fdb71490
+Done building netlist checker database: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3339.211 ; gain = 0.000 ; free physical = 2549 ; free virtual = 32290
+Phase 5 Sweep | Checksum: 27c03fcce
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2315.156 ; gain = 2.207
-Sweep | Checksum: 1fdb71490
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 12769 cells
-INFO: [Opt 31-1021] In phase Sweep, 303 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 3339.211 ; gain = 16.000 ; free physical = 2549 ; free virtual = 32290
+Sweep | Checksum: 27c03fcce
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 12806 cells
+INFO: [Opt 31-1021] In phase Sweep, 328 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 6 BUFG optimization
-INFO: [Opt 31-194] Inserted BUFG hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG_inst to drive 40 load(s) on clock net hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFGCE
+INFO: [Opt 31-194] Inserted BUFG hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG_inst to drive 42 load(s) on clock net hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFGCE
 INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
 INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
 INFO: [Opt 31-274] Optimized connectivity to 1 cascaded buffer cells
-Phase 6 BUFG optimization | Checksum: 257d2ff5f
+Phase 6 BUFG optimization | Checksum: 21c9c9ed3
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2315.156 ; gain = 2.207
-BUFG optimization | Checksum: 257d2ff5f
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 3371.227 ; gain = 48.016 ; free physical = 2549 ; free virtual = 32290
+BUFG optimization | Checksum: 21c9c9ed3
 INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 1 cells.
 
 Phase 7 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 7 Shift Register Optimization | Checksum: 257d2ff5f
+Phase 7 Shift Register Optimization | Checksum: 21c9c9ed3
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 2315.156 ; gain = 2.207
-Shift Register Optimization | Checksum: 257d2ff5f
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 3371.227 ; gain = 48.016 ; free physical = 2549 ; free virtual = 32290
+Shift Register Optimization | Checksum: 21c9c9ed3
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 8 Post Processing Netlist
-Phase 8 Post Processing Netlist | Checksum: 26cd04994
+Phase 8 Post Processing Netlist | Checksum: 25beae0a8
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 2315.156 ; gain = 2.207
-Post Processing Netlist | Checksum: 26cd04994
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 3371.227 ; gain = 48.016 ; free physical = 2549 ; free virtual = 32290
+Post Processing Netlist | Checksum: 25beae0a8
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
-INFO: [Opt 31-1021] In phase Post Processing Netlist, 263 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 288 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 9 Finalization
 
 Phase 9.1 Finalizing Design Cores and Updating Shapes
-Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 24feecf53
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 2a765381c
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 2315.156 ; gain = 2.207
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3371.227 ; gain = 48.016 ; free physical = 2549 ; free virtual = 32290
 
 Phase 9.2 Verifying Netlist Connectivity
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.107 . Memory (MB): peak = 2315.156 ; gain = 0.000
-Phase 9.2 Verifying Netlist Connectivity | Checksum: 24feecf53
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3371.227 ; gain = 0.000 ; free physical = 2549 ; free virtual = 32290
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 2a765381c
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2315.156 ; gain = 2.207
-Phase 9 Finalization | Checksum: 24feecf53
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3371.227 ; gain = 48.016 ; free physical = 2549 ; free virtual = 32290
+Phase 9 Finalization | Checksum: 2a765381c
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2315.156 ; gain = 2.207
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3371.227 ; gain = 48.016 ; free physical = 2549 ; free virtual = 32290
 Opt_design Change Summary
 =========================
 
@@ -506,21 +507,22 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |             362  |             621  |                                            651  |
-|  Constant propagation         |              45  |             764  |                                            914  |
-|  Sweep                        |               0  |           12769  |                                            303  |
+|  Retarget                     |             384  |             654  |                                            671  |
+|  Constant propagation         |              47  |             768  |                                            937  |
+|  Sweep                        |               0  |           12806  |                                            328  |
 |  BUFG optimization            |               1  |               1  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                            263  |
+|  Post Processing Netlist      |               0  |               0  |                                            288  |
 -------------------------------------------------------------------------------------------------------------------------
 
 
-Ending Logic Optimization Task | Checksum: 24feecf53
+Ending Logic Optimization Task | Checksum: 2a765381c
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2315.156 ; gain = 2.207
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3371.227 ; gain = 48.016 ; free physical = 2549 ; free virtual = 32290
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Pwropt 34-71] Flop 'hdmi_tx_bd_i/vid_phy_controller_0/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[0]' has constant clock net hdmi_tx_bd_i/vid_phy_controller_0/inst/b0_clkdet_dru_refclk
 WARNING: [Pwropt 34-71] Flop 'hdmi_tx_bd_i/vid_phy_controller_0/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[1]' has constant clock net hdmi_tx_bd_i/vid_phy_controller_0/inst/b0_clkdet_dru_refclk
 WARNING: [Pwropt 34-71] Flop 'hdmi_tx_bd_i/vid_phy_controller_0/inst/clock_detector_inst/DRUCLK_RST_INST/arststages_ff_reg[2]' has constant clock net hdmi_tx_bd_i/vid_phy_controller_0/inst/b0_clkdet_dru_refclk
@@ -546,7 +548,6 @@ WARNING: [Pwropt 34-71] Flop 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_s
 WARNING: [Pwropt 34-71] Flop 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/gtwiz_userclk_rx_active_sync_reg' has constant clock net hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/<const0>
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
-INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Timing 38-252] The BUFG_GT instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
 Running Vector-less Activity Propagation...
 
@@ -557,93 +558,90 @@ Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 82 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 4 WE to EN ports
 Number of BRAM Ports augmented: 24 newly gated: 4 Total Ports: 164
-Ending PowerOpt Patch Enables Task | Checksum: 24294b453
+Ending PowerOpt Patch Enables Task | Checksum: 2b89023dc
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.717 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 24294b453
+Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.29 . Memory (MB): peak = 4268.215 ; gain = 0.000 ; free physical = 1274 ; free virtual = 31245
+Ending Power Optimization Task | Checksum: 2b89023dc
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:42 . Memory (MB): peak = 3352.754 ; gain = 1037.598
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:14 . Memory (MB): peak = 4268.215 ; gain = 896.988 ; free physical = 1272 ; free virtual = 31243
 
 Starting Final Cleanup Task
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Timing 38-252] The BUFG_GT instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
-Ending Logic Optimization Task | Checksum: 1a8308243
+Ending Logic Optimization Task | Checksum: 1e77e2573
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Ending Final Cleanup Task | Checksum: 1a8308243
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:02 . Memory (MB): peak = 4268.215 ; gain = 0.000 ; free physical = 1296 ; free virtual = 31267
+Ending Final Cleanup Task | Checksum: 1e77e2573
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4268.215 ; gain = 0.000 ; free physical = 1296 ; free virtual = 31267
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4268.215 ; gain = 0.000 ; free physical = 1296 ; free virtual = 31267
 INFO: [Common 17-83] Releasing license: Implementation
-108 Infos, 96 Warnings, 0 Critical Warnings and 0 Errors encountered.
+108 Infos, 96 Warnings, 1 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:01:44 ; elapsed = 00:01:26 . Memory (MB): peak = 3352.754 ; gain = 1491.352
+opt_design: Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 4268.215 ; gain = 1293.625 ; free physical = 1296 ; free virtual = 31267
 INFO: [Vivado 12-24828] Executing command : report_drc -file hdmi_tx_bd_wrapper_drc_opted.rpt -pb hdmi_tx_bd_wrapper_drc_opted.pb -rpx hdmi_tx_bd_wrapper_drc_opted.rpx
 Command: report_drc -file hdmi_tx_bd_wrapper_drc_opted.rpt -pb hdmi_tx_bd_wrapper_drc_opted.pb -rpx hdmi_tx_bd_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_drc_opted.rpt.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_drc_opted.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 3352.754 ; gain = 0.000
-generate_parallel_reports: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 3352.754 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4268.215 ; gain = 0.000 ; free physical = 1244 ; free virtual = 31216
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4268.215 ; gain = 0.000 ; free physical = 1244 ; free virtual = 31216
 Writing XDEF routing.
 Writing XDEF routing logical nets.
-Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.083 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4268.215 ; gain = 0.000 ; free physical = 1242 ; free virtual = 31218
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.135 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.167 . Memory (MB): peak = 3352.754 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_opt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.09 . Memory (MB): peak = 4268.215 ; gain = 0.000 ; free physical = 1242 ; free virtual = 31219
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4268.215 ; gain = 0.000 ; free physical = 1242 ; free virtual = 31219
+Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 4268.215 ; gain = 0.000 ; free physical = 1242 ; free virtual = 31220
+Write Physdb Complete: Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.11 . Memory (MB): peak = 4268.215 ; gain = 0.000 ; free physical = 1242 ; free virtual = 31220
+INFO: [Common 17-1381] The checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_opt.dcp' has been generated.
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
 INFO: [Common 17-83] Releasing license: Implementation
-INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Timing 38-252] The BUFG_GT instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
 Running DRC as a precondition to command place_design
-INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
-INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
 
 Starting Placer Task
 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 195a9b93d
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1228 ; free virtual = 31217
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1d6886c8f
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1228 ; free virtual = 31217
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1228 ; free virtual = 31217
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1b8740e12
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1cc19bdc3
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1234 ; free virtual = 31213
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 2276c58b7
+Phase 1.3 Build Placer Netlist Model | Checksum: 27ac75f35
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1306 ; free virtual = 31281
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 2276c58b7
+Phase 1.4 Constrain Clocks/Macros | Checksum: 27ac75f35
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 2276c58b7
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1306 ; free virtual = 31281
+Phase 1 Placer Initialization | Checksum: 27ac75f35
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1306 ; free virtual = 31281
 
 Phase 2 Global Placement
 
@@ -652,63 +650,63 @@ Phase 2.1 Floorplanning
 Phase 2.1.1 Partition Driven Placement
 
 Phase 2.1.1.1 PBP: Partition Driven Placement
-Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 254a2c824
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 29925b02d
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:25 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:13 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1244 ; free virtual = 31220
 
 Phase 2.1.1.2 PBP: Clock Region Placement
 INFO: [Place 30-3162] Check ILP status : ILP-based clock placer completed successfully.
-Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 2d252f3f7
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 22095f407
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:26 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:13 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1244 ; free virtual = 31220
 
 Phase 2.1.1.3 PBP: Compute Congestion
-Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 2d252f3f7
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 22095f407
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:30 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:15 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1289 ; free virtual = 31264
 
 Phase 2.1.1.4 PBP: UpdateTiming
-Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 22cbee374
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 1b3b79b7a
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:31 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:16 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1288 ; free virtual = 31263
 
 Phase 2.1.1.5 PBP: Add part constraints
-Phase 2.1.1.5 PBP: Add part constraints | Checksum: 22cbee374
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: 1b3b79b7a
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:32 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 2.1.1 Partition Driven Placement | Checksum: 22cbee374
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:16 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1290 ; free virtual = 31265
+Phase 2.1.1 Partition Driven Placement | Checksum: 1b3b79b7a
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:32 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 2.1 Floorplanning | Checksum: 29d315479
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:16 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1290 ; free virtual = 31265
+Phase 2.1 Floorplanning | Checksum: 2533de85f
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:32 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:16 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1290 ; free virtual = 31265
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 29d315479
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 2533de85f
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:32 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:16 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1290 ; free virtual = 31265
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 29d315479
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 2533de85f
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:32 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:17 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1290 ; free virtual = 31265
 
 Phase 2.4 Global Place Phase1
-Phase 2.4 Global Place Phase1 | Checksum: 22d213392
+Phase 2.4 Global Place Phase1 | Checksum: 2bde6ccbb
 
-Time (s): cpu = 00:01:47 ; elapsed = 00:01:07 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:01:46 ; elapsed = 00:00:33 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1187 ; free virtual = 31162
 
 Phase 2.5 Global Place Phase2
 
 Phase 2.5.1 UpdateTiming Before Physical Synthesis
-Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 22d213392
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 1f31c9b5f
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:01:09 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:34 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1187 ; free virtual = 31163
 
 Phase 2.5.2 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 708 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 679 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 285 nets or LUTs. Breaked 0 LUT, combined 285 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 277 nets or LUTs. Breaked 0 LUT, combined 277 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-670] No setup violation found.  Equivalent Driver Rewiring was not performed.
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
@@ -720,7 +718,7 @@ INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was
 INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.018 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1187 ; free virtual = 31163
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -729,7 +727,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            285  |                   285  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |            277  |                   277  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Equivalent Driver Rewiring                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
@@ -739,64 +737,64 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |            285  |                   285  |           0  |           4  |  00:00:00  |
+|  Total                                            |            0  |            277  |                   277  |           0  |           4  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.5.2 Physical Synthesis In Placer | Checksum: 1b208bf18
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 29911f4bc
 
-Time (s): cpu = 00:01:54 ; elapsed = 00:01:12 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 2.5 Global Place Phase2 | Checksum: 21ff58331
+Time (s): cpu = 00:01:54 ; elapsed = 00:00:36 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1193 ; free virtual = 31169
+Phase 2.5 Global Place Phase2 | Checksum: 2c395097a
 
-Time (s): cpu = 00:02:05 ; elapsed = 00:01:19 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 21ff58331
+Time (s): cpu = 00:02:05 ; elapsed = 00:00:39 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1204 ; free virtual = 31180
+Phase 2 Global Placement | Checksum: 2c395097a
 
-Time (s): cpu = 00:02:05 ; elapsed = 00:01:19 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:05 ; elapsed = 00:00:39 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1204 ; free virtual = 31180
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 23119e01a
+Phase 3.1 Commit Multi Column Macros | Checksum: 2fb616152
 
-Time (s): cpu = 00:02:17 ; elapsed = 00:01:26 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:17 ; elapsed = 00:00:43 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1183 ; free virtual = 31159
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2d0e998df
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 35872cf99
 
-Time (s): cpu = 00:02:20 ; elapsed = 00:01:28 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:21 ; elapsed = 00:00:44 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1182 ; free virtual = 31158
 
 Phase 3.3 Small Shape DP
 
 Phase 3.3.1 Small Shape Clustering
-Phase 3.3.1 Small Shape Clustering | Checksum: 2b812076d
+Phase 3.3.1 Small Shape Clustering | Checksum: 2bf9479aa
 
-Time (s): cpu = 00:02:40 ; elapsed = 00:01:39 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:31 ; elapsed = 00:00:47 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1179 ; free virtual = 31155
 
 Phase 3.3.2 Slice Area Swap
 
 Phase 3.3.2.1 Slice Area Swap Initial
-Phase 3.3.2.1 Slice Area Swap Initial | Checksum: 271e251b2
+Phase 3.3.2.1 Slice Area Swap Initial | Checksum: 33acd4221
 
-Time (s): cpu = 00:02:53 ; elapsed = 00:01:50 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 3.3.2 Slice Area Swap | Checksum: 271e251b2
+Time (s): cpu = 00:02:32 ; elapsed = 00:00:48 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1182 ; free virtual = 31158
+Phase 3.3.2 Slice Area Swap | Checksum: 33acd4221
 
-Time (s): cpu = 00:02:53 ; elapsed = 00:01:50 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 3.3 Small Shape DP | Checksum: 297c4601f
+Time (s): cpu = 00:02:32 ; elapsed = 00:00:48 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1182 ; free virtual = 31158
+Phase 3.3 Small Shape DP | Checksum: 2405a46f2
 
-Time (s): cpu = 00:03:34 ; elapsed = 00:02:13 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:37 ; elapsed = 00:00:49 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1184 ; free virtual = 31160
 
 Phase 3.4 Re-assign LUT pins
-Phase 3.4 Re-assign LUT pins | Checksum: 2b515f3b7
+Phase 3.4 Re-assign LUT pins | Checksum: 1fec802cf
 
-Time (s): cpu = 00:03:37 ; elapsed = 00:02:16 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:39 ; elapsed = 00:00:50 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1416 ; free virtual = 31392
 
 Phase 3.5 Pipeline Register Optimization
-Phase 3.5 Pipeline Register Optimization | Checksum: 26a4e6539
+Phase 3.5 Pipeline Register Optimization | Checksum: 2af44cae8
 
-Time (s): cpu = 00:03:37 ; elapsed = 00:02:17 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 26a4e6539
+Time (s): cpu = 00:02:39 ; elapsed = 00:00:51 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1416 ; free virtual = 31393
+Phase 3 Detail Placement | Checksum: 2af44cae8
 
-Time (s): cpu = 00:03:38 ; elapsed = 00:02:17 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:39 ; elapsed = 00:00:51 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1417 ; free virtual = 31393
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -805,43 +803,43 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Timing 38-252] The BUFG_GT instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 27e8018cd
+Post Placement Optimization Initialization | Checksum: 283497c9c
 
 Phase 4.1.1.1 BUFG Insertion
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
-INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.656 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: a4737c1e
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.657 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: c73e7093
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.919 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.49 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1441 ; free virtual = 31417
 INFO: [Place 46-35] Processed net hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_460/bckgndYUV_U/CEA1, inserted BUFG to drive 1672 loads.
 INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 1, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
-Ending Physical Synthesis Task | Checksum: 24e970ca3
+Ending Physical Synthesis Task | Checksum: 2d80f1ad5
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1b1dd9813
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1443 ; free virtual = 31420
+Phase 4.1.1.1 BUFG Insertion | Checksum: 237fdf429
 
-Time (s): cpu = 00:04:05 ; elapsed = 00:02:35 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:03:11 ; elapsed = 00:00:58 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1443 ; free virtual = 31420
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=1.656. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 250e01782
+INFO: [Place 30-746] Post Placement Timing Summary WNS=1.657. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 2560909ab
 
-Time (s): cpu = 00:04:06 ; elapsed = 00:02:35 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:03:12 ; elapsed = 00:00:58 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1443 ; free virtual = 31420
 
-Time (s): cpu = 00:04:06 ; elapsed = 00:02:35 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 250e01782
+Time (s): cpu = 00:03:12 ; elapsed = 00:00:58 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1443 ; free virtual = 31420
+Phase 4.1 Post Commit Optimization | Checksum: 2560909ab
 
-Time (s): cpu = 00:04:06 ; elapsed = 00:02:35 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:03:12 ; elapsed = 00:00:58 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1443 ; free virtual = 31420
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1415 ; free virtual = 31392
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 192804ea1
+Phase 4.2 Post Placement Cleanup | Checksum: 20641496c
 
-Time (s): cpu = 00:04:16 ; elapsed = 00:02:41 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:03:23 ; elapsed = 00:01:03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1415 ; free virtual = 31392
 
 Phase 4.3 Placer Reporting
 
@@ -851,227 +849,228 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |           | Global Congestion | Long Congestion   | Short Congestion  |
 | Direction | Region Size       | Region Size       | Region Size       |
 |___________|___________________|___________________|___________________|
-|      North|                1x1|                1x1|                2x2|
+|      North|                1x1|                1x1|                4x4|
 |___________|___________________|___________________|___________________|
 |      South|                1x1|                1x1|                2x2|
 |___________|___________________|___________________|___________________|
-|       East|                1x1|                1x1|                4x4|
+|       East|                1x1|                1x1|                2x2|
 |___________|___________________|___________________|___________________|
-|       West|                1x1|                1x1|                8x8|
+|       West|                1x1|                1x1|                4x4|
 |___________|___________________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 192804ea1
+Phase 4.3.1 Print Estimated Congestion | Checksum: 20641496c
 
-Time (s): cpu = 00:04:16 ; elapsed = 00:02:41 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 192804ea1
+Time (s): cpu = 00:03:24 ; elapsed = 00:01:03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1415 ; free virtual = 31392
+Phase 4.3 Placer Reporting | Checksum: 20641496c
 
-Time (s): cpu = 00:04:17 ; elapsed = 00:02:41 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:03:24 ; elapsed = 00:01:03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1415 ; free virtual = 31392
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1415 ; free virtual = 31392
 
-Time (s): cpu = 00:04:17 ; elapsed = 00:02:41 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 157bd51b4
+Time (s): cpu = 00:03:24 ; elapsed = 00:01:03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1415 ; free virtual = 31392
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 25cce313d
 
-Time (s): cpu = 00:04:17 ; elapsed = 00:02:41 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Ending Placer Task | Checksum: 8e3a35c1
+Time (s): cpu = 00:03:24 ; elapsed = 00:01:03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1415 ; free virtual = 31392
+Ending Placer Task | Checksum: 2198ae171
 
-Time (s): cpu = 00:04:17 ; elapsed = 00:02:42 . Memory (MB): peak = 3352.754 ; gain = 0.000
-146 Infos, 98 Warnings, 0 Critical Warnings and 0 Errors encountered.
+Time (s): cpu = 00:03:24 ; elapsed = 00:01:03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1415 ; free virtual = 31392
+146 Infos, 98 Warnings, 1 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:04:32 ; elapsed = 00:02:53 . Memory (MB): peak = 3352.754 ; gain = 0.000
+place_design: Time (s): cpu = 00:03:36 ; elapsed = 00:01:06 . Memory (MB): peak = 4375.305 ; gain = 107.090 ; free physical = 1415 ; free virtual = 31392
 INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
-Running report generation with 2 threads.
-INFO: [Vivado 12-24828] Executing command : report_io -file hdmi_tx_bd_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Running report generation with 3 threads.
 INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file hdmi_tx_bd_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.122 . Memory (MB): peak = 3352.754 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.19 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1281 ; free virtual = 31258
+INFO: [Vivado 12-24828] Executing command : report_io -file hdmi_tx_bd_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.22 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1296 ; free virtual = 31274
 INFO: [Vivado 12-24828] Executing command : report_utilization -file hdmi_tx_bd_wrapper_utilization_placed.rpt -pb hdmi_tx_bd_wrapper_utilization_placed.pb
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.4 ; elapsed = 00:00:00.08 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1295 ; free virtual = 31281
+Wrote PlaceDB: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.88 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1243 ; free virtual = 31264
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1243 ; free virtual = 31264
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3352.754 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_placed.dcp' has been generated.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.08 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1239 ; free virtual = 31261
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1239 ; free virtual = 31265
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1239 ; free virtual = 31266
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1239 ; free virtual = 31266
+INFO: [Common 17-1381] The checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_placed.dcp' has been generated.
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 3352.754 ; gain = 0.000
-INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 1.951 | TNS= 0.000 | 
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1257 ; free virtual = 31258
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 1.952 | TNS= 0.000 | 
 INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
 INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
-157 Infos, 98 Warnings, 0 Critical Warnings and 0 Errors encountered.
+157 Infos, 98 Warnings, 1 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-phys_opt_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 3352.754 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1247 ; free virtual = 31255
+Wrote PlaceDB: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.99 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1211 ; free virtual = 31245
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1211 ; free virtual = 31245
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3352.754 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_physopt.dcp' has been generated.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.08 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1209 ; free virtual = 31245
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1202 ; free virtual = 31241
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1201 ; free virtual = 31242
+Write Physdb Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1201 ; free virtual = 31242
+INFO: [Common 17-1381] The checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
 
 
 Starting Routing Task
-INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: 444d31b5 ConstDB: 0 ShapeSum: c9cac96 RouteDB: 3d505776
-Nodegraph reading from file.  Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.357 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Post Restoration Checksum: NetGraph: 2d097a82 | NumContArr: f9fd046 | Constraints: d813e02b | Timing: c2a8fa9d
-Phase 1 Build RT Design | Checksum: 1d7662590
+Checksum: PlaceDB: 6f4e1125 ConstDB: 0 ShapeSum: fe547034 RouteDB: abe86018
+Nodegraph reading from file.  Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.26 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1207 ; free virtual = 31211
+Post Restoration Checksum: NetGraph: 2325b3c1 | NumContArr: 5fd1eb83 | Constraints: 231aef09 | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 168bb88ea
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1216 ; free virtual = 31220
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 1d7662590
+Phase 2.1 Fix Topology Constraints | Checksum: 168bb88ea
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1218 ; free virtual = 31223
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 1d7662590
+Phase 2.2 Pre Route Cleanup | Checksum: 168bb88ea
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1206 ; free virtual = 31221
 
 Phase 2.3 Global Clock Net Routing
  Number of Nodes with overlaps = 0
-Phase 2.3 Global Clock Net Routing | Checksum: 2e0e3c367
+Phase 2.3 Global Clock Net Routing | Checksum: 238d5cdb1
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:04 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1201 ; free virtual = 31216
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 1d72dd37b
+Phase 2.4 Update Timing | Checksum: 17e44881e
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 3352.754 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.931  | TNS=0.000  | WHS=-0.465 | THS=-31.935|
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:08 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1283 ; free virtual = 31288
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.932  | TNS=0.000  | WHS=-0.471 | THS=-32.301|
 
 
 Phase 2.5 Update Timing for Bus Skew
 
 Phase 2.5.1 Update Timing
-Phase 2.5.1 Update Timing | Checksum: 28dbe9e1b
+Phase 2.5.1 Update Timing | Checksum: 1754a2e18
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:31 . Memory (MB): peak = 3352.754 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.931  | TNS=0.000  | WHS=-0.884 | THS=-36.842|
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:12 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1310 ; free virtual = 31315
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.932  | TNS=0.000  | WHS=-0.961 | THS=-35.313|
 
-Phase 2.5 Update Timing for Bus Skew | Checksum: 1e38b39fc
+Phase 2.5 Update Timing for Bus Skew | Checksum: 16313e9a8
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:32 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:12 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1310 ; free virtual = 31314
 
 Phase 2.6 Soft Constraint Pins - Fast Budgeting
-Phase 2.6 Soft Constraint Pins - Fast Budgeting | Checksum: 1e38b39fc
+Phase 2.6 Soft Constraint Pins - Fast Budgeting | Checksum: 16313e9a8
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:32 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:12 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1310 ; free virtual = 31315
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.00411561 %
-  Global Horizontal Routing Utilization  = 0.00458454 %
+  Global Vertical Routing Utilization    = 0.00466192 %
+  Global Horizontal Routing Utilization  = 0.00465969 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 29338
+  Number of Failed Nets               = 29573
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 24453
-  Number of Partially Routed Nets     = 4885
+  Number of Unrouted Nets             = 24598
+  Number of Partially Routed Nets     = 4975
   Number of Node Overlaps             = 1
 
-Phase 2 Router Initialization | Checksum: 1882eae81
+Phase 2 Router Initialization | Checksum: 2cb8756d0
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:33 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:13 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1310 ; free virtual = 31315
 
 Phase 3 Global Routing
-Phase 3 Global Routing | Checksum: 1882eae81
+Phase 3 Global Routing | Checksum: 2cb8756d0
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:33 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:13 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1311 ; free virtual = 31315
 
 Phase 4 Initial Routing
 
 Phase 4.1 Initial Net Routing Pass
-Phase 4.1 Initial Net Routing Pass | Checksum: 17cc68f49
+Phase 4.1 Initial Net Routing Pass | Checksum: 1061d6de9
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:40 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 4 Initial Routing | Checksum: 257f21d5f
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:16 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1311 ; free virtual = 31316
+Phase 4 Initial Routing | Checksum: 186466728
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:41 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:16 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1311 ; free virtual = 31316
 
 Phase 5 Rip-up And Reroute
 
 Phase 5.1 Global Iteration 0
- Number of Nodes with overlaps = 4567
- Number of Nodes with overlaps = 338
+ Number of Nodes with overlaps = 4712
+ Number of Nodes with overlaps = 309
  Number of Nodes with overlaps = 15
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.969  | TNS=0.000  | WHS=-0.368 | THS=-1.602 |
-
-Phase 5.1 Global Iteration 0 | Checksum: 2217c0b01
-
-Time (s): cpu = 00:01:57 ; elapsed = 00:01:13 . Memory (MB): peak = 3352.754 ; gain = 0.000
-
-Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.969  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.970  | TNS=0.000  | WHS=-0.202 | THS=-0.812 |
 
-Phase 5.2 Global Iteration 1 | Checksum: 1c861998a
+Phase 5.1 Global Iteration 0 | Checksum: 28d71f27a
 
-Time (s): cpu = 00:02:03 ; elapsed = 00:01:17 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 5 Rip-up And Reroute | Checksum: 1c861998a
+Time (s): cpu = 00:01:59 ; elapsed = 00:00:36 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1316 ; free virtual = 31321
 
-Time (s): cpu = 00:02:03 ; elapsed = 00:01:17 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Phase 5.2 Additional Iteration for Hold
+Phase 5.2 Additional Iteration for Hold | Checksum: 24a974dae
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:00:36 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1319 ; free virtual = 31324
+Phase 5 Rip-up And Reroute | Checksum: 24a974dae
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:00:36 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1319 ; free virtual = 31324
 
 Phase 6 Delay and Skew Optimization
 
 Phase 6.1 Delay CleanUp
-Phase 6.1 Delay CleanUp | Checksum: 267d05b22
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.970  | TNS=0.000  | WHS=0.011  | THS=0.000  |
 
-Time (s): cpu = 00:02:04 ; elapsed = 00:01:17 . Memory (MB): peak = 3352.754 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.970  | TNS=0.000  | WHS=0.011  | THS=0.000  |
+
+Phase 6.1 Delay CleanUp | Checksum: 21164f9d9
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:00:37 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1318 ; free virtual = 31324
 
 Phase 6.2 Clock Skew Optimization
-Phase 6.2 Clock Skew Optimization | Checksum: 267d05b22
+Phase 6.2 Clock Skew Optimization | Checksum: 21164f9d9
 
-Time (s): cpu = 00:02:04 ; elapsed = 00:01:17 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 6 Delay and Skew Optimization | Checksum: 267d05b22
+Time (s): cpu = 00:02:08 ; elapsed = 00:00:37 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1318 ; free virtual = 31324
+Phase 6 Delay and Skew Optimization | Checksum: 21164f9d9
 
-Time (s): cpu = 00:02:04 ; elapsed = 00:01:17 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:08 ; elapsed = 00:00:37 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1318 ; free virtual = 31324
 
 Phase 7 Post Hold Fix
 
 Phase 7.1 Hold Fix Iter
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.969  | TNS=0.000  | WHS=0.011  | THS=0.000  |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.970  | TNS=0.000  | WHS=0.011  | THS=0.000  |
 
-Phase 7.1 Hold Fix Iter | Checksum: 1fcc8caf3
+Phase 7.1 Hold Fix Iter | Checksum: 1ede8c2ed
 
-Time (s): cpu = 00:02:16 ; elapsed = 00:01:24 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Phase 7 Post Hold Fix | Checksum: 1fcc8caf3
+Time (s): cpu = 00:02:15 ; elapsed = 00:00:39 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1318 ; free virtual = 31323
+Phase 7 Post Hold Fix | Checksum: 1ede8c2ed
 
-Time (s): cpu = 00:02:16 ; elapsed = 00:01:24 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:15 ; elapsed = 00:00:39 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1318 ; free virtual = 31323
 
 Phase 8 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 3.76975 %
-  Global Horizontal Routing Utilization  = 5.14438 %
+  Global Vertical Routing Utilization    = 3.89577 %
+  Global Horizontal Routing Utilization  = 5.34677 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1081,81 +1080,81 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 8 Route finalize | Checksum: 1fcc8caf3
+Phase 8 Route finalize | Checksum: 1ede8c2ed
 
-Time (s): cpu = 00:02:16 ; elapsed = 00:01:24 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:16 ; elapsed = 00:00:39 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1323 ; free virtual = 31328
 
 Phase 9 Verifying routed nets
 
  Verification completed successfully
-Phase 9 Verifying routed nets | Checksum: 1fcc8caf3
+Phase 9 Verifying routed nets | Checksum: 1ede8c2ed
 
-Time (s): cpu = 00:02:17 ; elapsed = 00:01:24 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:16 ; elapsed = 00:00:39 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1323 ; free virtual = 31328
 
 Phase 10 Depositing Routes
-Phase 10 Depositing Routes | Checksum: 1fcc8caf3
+Phase 10 Depositing Routes | Checksum: 1ede8c2ed
 
-Time (s): cpu = 00:02:21 ; elapsed = 00:01:28 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:18 ; elapsed = 00:00:40 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1323 ; free virtual = 31328
 
 Phase 11 Resolve XTalk
-Phase 11 Resolve XTalk | Checksum: 1fcc8caf3
+Phase 11 Resolve XTalk | Checksum: 1ede8c2ed
 
-Time (s): cpu = 00:02:22 ; elapsed = 00:01:28 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:18 ; elapsed = 00:00:40 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1323 ; free virtual = 31328
 
 Phase 12 Post Process Routing
-Phase 12 Post Process Routing | Checksum: 1fcc8caf3
+Phase 12 Post Process Routing | Checksum: 1ede8c2ed
 
-Time (s): cpu = 00:02:22 ; elapsed = 00:01:29 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:19 ; elapsed = 00:00:40 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1322 ; free virtual = 31328
 
 Phase 13 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=1.969  | TNS=0.000  | WHS=0.011  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.970  | TNS=0.000  | WHS=0.011  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 13 Post Router Timing | Checksum: 1fcc8caf3
+Phase 13 Post Router Timing | Checksum: 1ede8c2ed
 
-Time (s): cpu = 00:02:22 ; elapsed = 00:01:29 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Total Elapsed time in route_design: 88.924 secs
+Time (s): cpu = 00:02:19 ; elapsed = 00:00:40 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1322 ; free virtual = 31328
+Total Elapsed time in route_design: 40.18 secs
 
 Phase 14 Post-Route Event Processing
-Phase 14 Post-Route Event Processing | Checksum: 11801f257
+Phase 14 Post-Route Event Processing | Checksum: 17b11e006
 
-Time (s): cpu = 00:02:22 ; elapsed = 00:01:29 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:19 ; elapsed = 00:00:40 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1322 ; free virtual = 31328
 INFO: [Route 35-16] Router Completed Successfully
-Ending Routing Task | Checksum: 11801f257
+Ending Routing Task | Checksum: 17b11e006
 
-Time (s): cpu = 00:02:23 ; elapsed = 00:01:30 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Time (s): cpu = 00:02:20 ; elapsed = 00:00:40 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1325 ; free virtual = 31331
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-170 Infos, 98 Warnings, 0 Critical Warnings and 0 Errors encountered.
+171 Infos, 98 Warnings, 1 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:02:23 ; elapsed = 00:01:30 . Memory (MB): peak = 3352.754 ; gain = 0.000
+route_design: Time (s): cpu = 00:02:20 ; elapsed = 00:00:41 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1325 ; free virtual = 31331
 INFO: [Vivado 12-24828] Executing command : report_drc -file hdmi_tx_bd_wrapper_drc_routed.rpt -pb hdmi_tx_bd_wrapper_drc_routed.pb -rpx hdmi_tx_bd_wrapper_drc_routed.rpx
 Command: report_drc -file hdmi_tx_bd_wrapper_drc_routed.rpt -pb hdmi_tx_bd_wrapper_drc_routed.pb -rpx hdmi_tx_bd_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_drc_routed.rpt.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_drc_routed.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 3352.754 ; gain = 0.000
 INFO: [Vivado 12-24828] Executing command : report_methodology -file hdmi_tx_bd_wrapper_methodology_drc_routed.rpt -pb hdmi_tx_bd_wrapper_methodology_drc_routed.pb -rpx hdmi_tx_bd_wrapper_methodology_drc_routed.rpx
 Command: report_methodology -file hdmi_tx_bd_wrapper_methodology_drc_routed.rpt -pb hdmi_tx_bd_wrapper_methodology_drc_routed.pb -rpx hdmi_tx_bd_wrapper_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Timing 38-252] The BUFG_GT instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
-INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_methodology_drc_routed.rpt.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:40 ; elapsed = 00:00:22 . Memory (MB): peak = 3352.754 ; gain = 0.000
 INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file hdmi_tx_bd_wrapper_timing_summary_routed.rpt -pb hdmi_tx_bd_wrapper_timing_summary_routed.pb -rpx hdmi_tx_bd_wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Timing 38-252] The BUFG_GT instance 'hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
 WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
-report_timing_summary: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 3352.754 ; gain = 0.000
-INFO: [Vivado 12-24838] Running report commands "report_incremental_reuse, report_route_status" in parallel.
-Running report generation with 2 threads.
+INFO: [Vivado 12-24838] Running report commands "report_bus_skew, report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 3 threads.
 INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file hdmi_tx_bd_wrapper_incremental_reuse_routed.rpt
 INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file hdmi_tx_bd_wrapper_bus_skew_routed.rpt -pb hdmi_tx_bd_wrapper_bus_skew_routed.pb -rpx hdmi_tx_bd_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
 INFO: [Vivado 12-24828] Executing command : report_route_status -file hdmi_tx_bd_wrapper_route_status.rpt -pb hdmi_tx_bd_wrapper_route_status.pb
 INFO: [Vivado 12-24828] Executing command : report_power -file hdmi_tx_bd_wrapper_power_routed.rpt -pb hdmi_tx_bd_wrapper_power_summary_routed.pb -rpx hdmi_tx_bd_wrapper_power_routed.rpx
 Command: report_power -file hdmi_tx_bd_wrapper_power_routed.rpt -pb hdmi_tx_bd_wrapper_power_summary_routed.pb -rpx hdmi_tx_bd_wrapper_power_routed.rpx
@@ -1164,26 +1163,23 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-187 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+191 Infos, 102 Warnings, 1 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 3352.754 ; gain = 0.000
+report_power: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1192 ; free virtual = 31233
 INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file hdmi_tx_bd_wrapper_clock_utilization_routed.rpt
-INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file hdmi_tx_bd_wrapper_bus_skew_routed.rpt -pb hdmi_tx_bd_wrapper_bus_skew_routed.pb -rpx hdmi_tx_bd_wrapper_bus_skew_routed.rpx
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-generate_parallel_reports: Time (s): cpu = 00:01:39 ; elapsed = 00:01:09 . Memory (MB): peak = 3352.754 ; gain = 0.000
+generate_parallel_reports: Time (s): cpu = 00:01:09 ; elapsed = 00:00:24 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1177 ; free virtual = 31217
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3352.754 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.06 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1165 ; free virtual = 31212
+Wrote PlaceDB: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.89 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1105 ; free virtual = 31188
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1105 ; free virtual = 31188
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.264 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 3352.754 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 3352.754 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_routed.dcp' has been generated.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.62 ; elapsed = 00:00:00.24 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1105 ; free virtual = 31195
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1105 ; free virtual = 31198
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1104 ; free virtual = 31199
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1104 ; free virtual = 31199
+INFO: [Common 17-1381] The checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper_routed.dcp' has been generated.
 INFO: [Memdata 28-208] The XPM instance: <hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/generate_remap_module.REMAP_420_INST/FIFO_INST/XPM_FIFO_SYNC_INST/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
 INFO: [Memdata 28-208] The XPM instance: <hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <hdmi_tx_bd_i/v_hdmi_tx_ss_0/inst/v_axi4s_vid_out>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
 Command: write_bitstream -force hdmi_tx_bd_wrapper.bit
@@ -1198,11 +1194,11 @@ Evaluation cores found in this design:
 Resolution: If a new IP Core license was added, in order for the new license to be picked up, the current netlist needs to be updated by resetting and re-generating the IP output products before bitstream generation.
 Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Vivado 12-3199] DRC finished with 0 Errors
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 Integrating Hard IP ELF/MEM with the PDI.
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
 Loading data files...
 Loading site data...
 Loading route data...
@@ -1212,7 +1208,7 @@ Creating bitstream...
 Writing bitstream ./hdmi_tx_bd_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Common 17-83] Releasing license: Implementation
-203 Infos, 102 Warnings, 1 Critical Warnings and 0 Errors encountered.
+204 Infos, 102 Warnings, 2 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:39 ; elapsed = 00:00:28 . Memory (MB): peak = 3352.754 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Jan 22 14:06:03 2026...
+write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 4375.305 ; gain = 0.000 ; free physical = 1096 ; free virtual = 31157
+INFO: [Common 17-206] Exiting Vivado at Fri May 29 17:35:11 2026...

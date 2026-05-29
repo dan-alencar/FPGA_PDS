@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Thu Jan 22 14:04:56 2026
-| Host         : DESKTOP-6GRI2EI running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Fri May 29 17:34:27 2026
+| Host         : pop-os running 64-bit Pop!_OS 24.04 LTS
 | Command      : report_methodology -file hdmi_tx_bd_wrapper_methodology_drc_routed.rpt -pb hdmi_tx_bd_wrapper_methodology_drc_routed.pb -rpx hdmi_tx_bd_wrapper_methodology_drc_routed.rpx
 | Design       : hdmi_tx_bd_wrapper
 | Device       : xcau15p-ffvb676-2-e
@@ -23,15 +23,16 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 33
+             Checks found: 28
 +-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
 | Rule      | Severity | Description                                                                                           | Checks |
 +-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
-| LUTAR-1   | Warning  | LUT drives async reset alert                                                                          | 12     |
+| LUTAR-1   | Warning  | LUT drives async reset alert                                                                          | 13     |
 | TIMING-9  | Warning  | Unknown CDC Logic                                                                                     | 1      |
 | TIMING-10 | Warning  | Missing property on synchronizer                                                                      | 1      |
-| TIMING-18 | Warning  | Missing input or output delay                                                                         | 9      |
+| TIMING-18 | Warning  | Missing input or output delay                                                                         | 2      |
 | TIMING-47 | Warning  | False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks | 6      |
+| XDCC-7    | Warning  | Scoped Clock constraint overwritten on the same source                                                | 1      |
 | CLKC-11   | Advisory | MMCME4 divide could be done by BUFG_GT                                                                | 1      |
 | CLKC-40   | Advisory | Substitute PLLE4 for MMCME4 check                                                                     | 1      |
 | CLKC-56   | Advisory | MMCME4 with global clock driver has no LOC                                                            | 2      |
@@ -41,20 +42,25 @@ Table of Contents
 -----------------
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell hdmi_tx_bd_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell hdmi_tx_bd_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Use_UART.execute_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell hdmi_tx_bd_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/gt_wrapper_inst_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_txprogdivreset_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_txprogdivreset_inst/rst_in_out_reg/PRE,
@@ -63,7 +69,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_txprogdivreset_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#5 Warning
+LUTAR-1#6 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_i_1__5, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_out_reg/PRE,
@@ -72,7 +78,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#6 Warning
+LUTAR-1#7 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_out_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_out_reg/PRE,
@@ -81,7 +87,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#7 Warning
+LUTAR-1#8 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/rst_in_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_out_reg/PRE,
@@ -90,7 +96,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#8 Warning
+LUTAR-1#9 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/rst_in_meta_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_out_reg/PRE,
@@ -99,7 +105,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#9 Warning
+LUTAR-1#10 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/rst_in_meta_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_out_reg/PRE,
@@ -108,7 +114,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#10 Warning
+LUTAR-1#11 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/rst_in_meta_i_1__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_out_reg/PRE,
@@ -117,7 +123,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#11 Warning
+LUTAR-1#12 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/rst_in_meta_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_out_reg/PRE,
@@ -126,7 +132,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#12 Warning
+LUTAR-1#13 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/rst_in_meta_i_1__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_out_reg/PRE,
@@ -147,77 +153,49 @@ Related violations: <none>
 
 TIMING-18#1 Warning
 Missing input or output delay  
-An input delay is missing on HDMI_TX_HPD relative to the rising and/or falling clock edge(s) of SYS_CLK_P.
+An output delay is missing on HDMI_TX_CLK_N relative to the rising and/or falling clock edge(s) of clk_ref_p.
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An input delay is missing on SYS_RST_N relative to the rising and/or falling clock edge(s) of SYS_CLK_P.
-Related violations: <none>
-
-TIMING-18#3 Warning
-Missing input or output delay  
-An input delay is missing on iic_clkgen_scl_io relative to the rising and/or falling clock edge(s) of SYS_CLK_P.
-Related violations: <none>
-
-TIMING-18#4 Warning
-Missing input or output delay  
-An input delay is missing on iic_clkgen_sda_io relative to the rising and/or falling clock edge(s) of SYS_CLK_P.
-Related violations: <none>
-
-TIMING-18#5 Warning
-Missing input or output delay  
-An output delay is missing on HDMI_TX_CLK_N relative to the rising and/or falling clock edge(s) of SYS_CLK_P, clk_ref_p.
-Related violations: <none>
-
-TIMING-18#6 Warning
-Missing input or output delay  
-An output delay is missing on HDMI_TX_CLK_P relative to the rising and/or falling clock edge(s) of SYS_CLK_P, clk_ref_p.
-Related violations: <none>
-
-TIMING-18#7 Warning
-Missing input or output delay  
-An output delay is missing on gpo_0[0] relative to the rising and/or falling clock edge(s) of SYS_CLK_P.
-Related violations: <none>
-
-TIMING-18#8 Warning
-Missing input or output delay  
-An output delay is missing on iic_clkgen_scl_io relative to the rising and/or falling clock edge(s) of SYS_CLK_P.
-Related violations: <none>
-
-TIMING-18#9 Warning
-Missing input or output delay  
-An output delay is missing on iic_clkgen_sda_io relative to the rising and/or falling clock edge(s) of SYS_CLK_P.
+An output delay is missing on HDMI_TX_CLK_P relative to the rising and/or falling clock edge(s) of clk_ref_p.
 Related violations: <none>
 
 TIMING-47#1 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK (see constraint position 100 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK (see constraint position 101 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#2 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE (see constraint position 101 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE (see constraint position 102 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#3 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK (see constraint position 100 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK (see constraint position 101 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#4 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE (see constraint position 100 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE (see constraint position 101 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#5 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK (see constraint position 101 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK (see constraint position 102 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#6 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK (see constraint position 100 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK (see constraint position 101 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 3.333 -name sys_clk_p [get_ports SYS_CLK_P] (Source: /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/constrs_1/new/constraints.xdc (Line: 17))
+Previous: create_clock -period 3.333 [get_ports SYS_CLK_P] (Source: /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0.xdc (Line: 53))
 Related violations: <none>
 
 CLKC-11#1 Advisory

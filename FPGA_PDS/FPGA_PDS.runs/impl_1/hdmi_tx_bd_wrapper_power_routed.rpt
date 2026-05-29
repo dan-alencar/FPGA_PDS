@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date             : Thu Jan 22 14:05:26 2026
-| Host             : DESKTOP-6GRI2EI running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date             : Fri May 29 17:34:42 2026
+| Host             : pop-os running 64-bit Pop!_OS 24.04 LTS
 | Command          : report_power -file hdmi_tx_bd_wrapper_power_routed.rpt -pb hdmi_tx_bd_wrapper_power_summary_routed.pb -rpx hdmi_tx_bd_wrapper_power_routed.rpx
 | Design           : hdmi_tx_bd_wrapper
 | Device           : xcau15p-ffvb676-2-e
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.978        |
+| Total On-Chip Power (W)  | 0.987        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.698        |
+| Dynamic (W)              | 0.707        |
 | Device Static (W)        | 0.280        |
 | Effective TJA (C/W)      | 1.7          |
 | Max Ambient (C)          | 98.3         |
@@ -52,24 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.076 |       30 |       --- |             --- |
-| CLB Logic                |     0.034 |    38016 |       --- |             --- |
-|   LUT as Logic           |     0.025 |    12805 |     77760 |           16.47 |
-|   LUT as Shift Register  |     0.003 |      275 |     40320 |            0.68 |
-|   Register               |     0.003 |    18597 |    155520 |           11.96 |
+| Clocks                   |     0.079 |       30 |       --- |             --- |
+| CLB Logic                |     0.035 |    38365 |       --- |             --- |
+|   LUT as Logic           |     0.025 |    12945 |     77760 |           16.65 |
+|   LUT as Shift Register  |     0.003 |      291 |     40320 |            0.72 |
+|   Register               |     0.003 |    18717 |    155520 |           12.04 |
 |   LUT as Distributed RAM |     0.002 |      325 |     40320 |            0.81 |
-|   CARRY8                 |     0.001 |      396 |      9720 |            4.07 |
+|   CARRY8                 |     0.001 |      398 |      9720 |            4.09 |
 |   BUFG                   |    <0.001 |        1 |        24 |            4.17 |
-|   Others                 |     0.000 |     2089 |       --- |             --- |
+|   Others                 |     0.000 |     2130 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |      210 |     77760 |            0.27 |
-| Signals                  |     0.028 |    29330 |       --- |             --- |
-| Block RAM                |     0.083 |       60 |       144 |           41.67 |
+| Signals                  |     0.029 |    29565 |       --- |             --- |
+| Block RAM                |     0.086 |       60 |       144 |           41.67 |
 | MMCM                     |     0.195 |        0 |       --- |             --- |
 | DSPs                     |     0.036 |       53 |       576 |            9.20 |
 | I/O                      |     0.010 |       11 |       228 |            4.82 |
 | GTH                      |     0.236 |        3 |        12 |           25.00 |
 | Static Power             |     0.280 |          |           |                 |
-| Total                    |     0.978 |          |           |                 |
+| Total                    |     0.987 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +79,7 @@ Table of Contents
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source           | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint           |       0.850 |     0.380 |       0.329 |      0.051 |       NA    | Unspecified | NA         |
+| Vccint           |       0.850 |     0.389 |       0.338 |      0.051 |       NA    | Unspecified | NA         |
 | Vccint_io        |       0.850 |     0.028 |       0.002 |      0.027 |       NA    | Unspecified | NA         |
 | Vccbram          |       0.850 |     0.006 |       0.006 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux           |       1.800 |     0.172 |       0.108 |      0.064 |       NA    | Unspecified | NA         |
@@ -147,8 +147,7 @@ Table of Contents
 | GTHE4_CHANNEL_TXOUTCLK[0]                                                                                                                                                                                                                                                                                                                                                | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_TXOUTCLK[0]                                                                      |             6.7 |
 | GTHE4_CHANNEL_TXOUTCLK[1]                                                                                                                                                                                                                                                                                                                                                | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_TXOUTCLK[1]                                                                      |             6.7 |
 | GTHE4_CHANNEL_TXOUTCLK[2]                                                                                                                                                                                                                                                                                                                                                | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_TXOUTCLK[2]                                                                      |             6.7 |
-| SYS_CLK_P                                                                                                                                                                                                                                                                                                                                                                | SYS_CLK_P                                                                                                                                                                                                                                                                                                                                                 |            10.0 |
-| clk_out1_hdmi_tx_bd_microblaze_0_clk_wiz_1_0                                                                                                                                                                                                                                                                                                                             | hdmi_tx_bd_i/microblaze_0_clk_wiz_1/inst/clk_out1_hdmi_tx_bd_microblaze_0_clk_wiz_1_0                                                                                                                                                                                                                                                                     |            10.0 |
+| clk_out1_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_1                                                                                                                                                                                                                                                                                                                           | hdmi_tx_bd_i/microblaze_0_clk_wiz_1/inst/clk_out1_hdmi_tx_bd_microblaze_0_clk_wiz_1_0                                                                                                                                                                                                                                                                     |            10.0 |
 | clk_ref_p                                                                                                                                                                                                                                                                                                                                                                | HDMI_CLK_8T49N241_P                                                                                                                                                                                                                                                                                                                                       |             3.4 |
 | clkout1                                                                                                                                                                                                                                                                                                                                                                  | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.txoutclk_mmcm0_i/clkout1                                                                                                                                                                                                                                                             |             3.4 |
 | clkout2                                                                                                                                                                                                                                                                                                                                                                  | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.txoutclk_mmcm0_i/clkout2                                                                                                                                                                                                                                                             |             6.7 |
@@ -164,6 +163,7 @@ Table of Contents
 | qpll0refclk_in[0]                                                                                                                                                                                                                                                                                                                                                        | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/qpll0refclk_in[0]                                                                                                                                                                                                                                                                       |             3.4 |
 | qpll1clk_in[0]                                                                                                                                                                                                                                                                                                                                                           | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/qpll1clk_in[0]                                                                                                                                                                                                                                                                          |             0.2 |
 | qpll1refclk_in[0]                                                                                                                                                                                                                                                                                                                                                        | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/qpll1refclk_in[0]                                                                                                                                                                                                                                                                       |             3.4 |
+| sys_clk_p                                                                                                                                                                                                                                                                                                                                                                | SYS_CLK_P                                                                                                                                                                                                                                                                                                                                                 |             3.3 |
 | txoutclk                                                                                                                                                                                                                                                                                                                                                                 | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/txoutclk                                                                                                                                                                                                                                                                                     |             6.7 |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
@@ -177,24 +177,26 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| hdmi_tx_bd_wrapper            |     0.698 |
-|   hdmi_tx_bd_i                |     0.697 |
+| hdmi_tx_bd_wrapper            |     0.707 |
+|   hdmi_tx_bd_i                |     0.706 |
 |     axi_iic_0                 |     0.002 |
 |       U0                      |     0.002 |
 |     microblaze_0              |     0.010 |
 |       U0                      |     0.010 |
-|     microblaze_0_axi_periph   |     0.006 |
-|       inst                    |     0.006 |
-|     microblaze_0_clk_wiz_1    |     0.101 |
-|       inst                    |     0.101 |
+|     microblaze_0_axi_intc     |     0.001 |
+|       U0                      |     0.001 |
+|     microblaze_0_axi_periph   |     0.007 |
+|       inst                    |     0.007 |
+|     microblaze_0_clk_wiz_1    |     0.102 |
+|       inst                    |     0.102 |
 |     microblaze_0_local_memory |     0.010 |
 |       lmb_bram                |     0.010 |
-|     v_hdmi_tx_ss_0            |     0.030 |
-|       inst                    |     0.030 |
-|     v_tpg_0                   |     0.164 |
-|       inst                    |     0.164 |
-|     vid_phy_controller_0      |     0.374 |
-|       inst                    |     0.374 |
+|     v_hdmi_tx_ss_0            |     0.033 |
+|       inst                    |     0.033 |
+|     v_tpg_0                   |     0.165 |
+|       inst                    |     0.165 |
+|     vid_phy_controller_0      |     0.375 |
+|       inst                    |     0.375 |
 +-------------------------------+-----------+
 
 

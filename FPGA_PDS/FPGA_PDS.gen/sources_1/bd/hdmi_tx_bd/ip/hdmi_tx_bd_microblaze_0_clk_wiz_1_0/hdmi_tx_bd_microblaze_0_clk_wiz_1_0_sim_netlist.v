@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-// Date        : Thu Jan 22 13:51:48 2026
-// Host        : DESKTOP-6GRI2EI running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+// Date        : Fri May 29 17:13:29 2026
+// Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
 // Command     : write_verilog -force -mode funcsim
-//               c:/AMDDesignTools/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_sim_netlist.v
+//               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_sim_netlist.v
 // Design      : hdmi_tx_bd_microblaze_0_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -115,10 +115,10 @@ module hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz
   (* OPT_MODIFIED = "MLO" *) 
   MMCME4_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(12.000000),
+    .CLKFBOUT_MULT_F(4.000000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
-    .CLKIN1_PERIOD(10.000000),
+    .CLKIN1_PERIOD(3.333000),
     .CLKIN2_PERIOD(0.000000),
     .CLKOUT0_DIVIDE_F(12.000000),
     .CLKOUT0_DUTY_CYCLE(0.500000),

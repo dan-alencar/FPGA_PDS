@@ -14,7 +14,7 @@ set_property PACKAGE_PIN AE21 [get_ports SYS_CLK_N]
 set_property IOSTANDARD DIFF_SSTL12 [get_ports SYS_CLK_P]
 set_property IOSTANDARD DIFF_SSTL12 [get_ports SYS_CLK_N]
 
-#create_clock -period 3.333 -name sys_clk_p [get_ports SYS_CLK_P]
+create_clock -period 3.333 -name sys_clk_p [get_ports SYS_CLK_P]
 
 ################################################################################
 # RESET DO SISTEMA (SYS_RST_N - Botão SW3/PB3) - Bank 65

@@ -1,0 +1,4 @@
+domain_path: /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/export/platform/sw/standalone_microblaze_0
+app_src_dir: /home/dan-alencar/AMD_Xilinx/2025.2/Vitis/data/embeddedsw/lib/sw_apps/empty_application
+template: empty_application
+lang: c
