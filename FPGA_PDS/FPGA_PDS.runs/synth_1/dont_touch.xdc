@@ -36,9 +36,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_
 # IP: bd/hdmi_tx_bd/ip/hdmi_tx_bd_proc_sys_reset_0_0/hdmi_tx_bd_proc_sys_reset_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_proc_sys_reset_0_0 || ORIG_REF_NAME==hdmi_tx_bd_proc_sys_reset_0_0} -quiet] -quiet
 
-# IP: bd/hdmi_tx_bd/ip/hdmi_tx_bd_xlconstant_0_0/hdmi_tx_bd_xlconstant_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_xlconstant_0_0 || ORIG_REF_NAME==hdmi_tx_bd_xlconstant_0_0} -quiet] -quiet
-
 # IP: bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_1/hdmi_tx_bd_microblaze_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_microblaze_0_1 || ORIG_REF_NAME==hdmi_tx_bd_microblaze_0_1} -quiet] -quiet
 
@@ -59,5 +56,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_
 
 # IP: bd/hdmi_tx_bd/ip/hdmi_tx_bd_axi_gpio_0_0/hdmi_tx_bd_axi_gpio_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_axi_gpio_0_0 || ORIG_REF_NAME==hdmi_tx_bd_axi_gpio_0_0} -quiet] -quiet
+
+# IP: bd/hdmi_tx_bd/ip/hdmi_tx_bd_xlconstant_0_0/hdmi_tx_bd_xlconstant_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_xlconstant_0_0 || ORIG_REF_NAME==hdmi_tx_bd_xlconstant_0_0} -quiet] -quiet
 
 # XDC: /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/hdmi_tx_bd_ooc.xdc

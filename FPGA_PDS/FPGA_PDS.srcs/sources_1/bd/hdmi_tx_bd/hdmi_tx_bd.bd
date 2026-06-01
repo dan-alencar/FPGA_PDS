@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x448CF36D8239E4D1",
+      "boundary_crc": "0x5438C56CE9BBF87F",
       "device": "xcau15p-ffvb676-2-e",
       "gen_directory": "../../../../FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd",
       "name": "hdmi_tx_bd",
@@ -80,6 +80,43 @@
           "LOCKED": {
             "value": "FALSE",
             "value_src": "default"
+          }
+        }
+      },
+      "TX_DDC_OUT": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
+        "vlnv": "xilinx.com:interface:iic_rtl:1.0",
+        "hdl_attributes": {
+          "LOCKED": {
+            "value": "FALSE",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "SCL_I": {
+            "physical_name": "TX_DDC_OUT_scl_i",
+            "direction": "I"
+          },
+          "SCL_O": {
+            "physical_name": "TX_DDC_OUT_scl_o",
+            "direction": "O"
+          },
+          "SCL_T": {
+            "physical_name": "TX_DDC_OUT_scl_t",
+            "direction": "O"
+          },
+          "SDA_I": {
+            "physical_name": "TX_DDC_OUT_sda_i",
+            "direction": "I"
+          },
+          "SDA_O": {
+            "physical_name": "TX_DDC_OUT_sda_o",
+            "direction": "O"
+          },
+          "SDA_T": {
+            "physical_name": "TX_DDC_OUT_sda_t",
+            "direction": "O"
           }
         }
       }
@@ -171,6 +208,9 @@
         "direction": "O",
         "left": "0",
         "right": "0"
+      },
+      "HDMI_8T49N241_LOL": {
+        "direction": "I"
       }
     },
     "components": {
@@ -1146,10 +1186,19 @@
           "C_ALL_INPUTS": {
             "value": "0"
           },
+          "C_ALL_INPUTS_2": {
+            "value": "1"
+          },
           "C_ALL_OUTPUTS": {
             "value": "1"
           },
+          "C_GPIO2_WIDTH": {
+            "value": "1"
+          },
           "C_GPIO_WIDTH": {
+            "value": "1"
+          },
+          "C_IS_DUAL": {
             "value": "1"
           }
         }
@@ -1241,9 +1290,39 @@
           "microblaze_0_axi_intc/interrupt",
           "microblaze_0/INTERRUPT"
         ]
+      },
+      "v_hdmi_tx_ss_0_DDC_OUT": {
+        "interface_ports": [
+          "TX_DDC_OUT",
+          "v_hdmi_tx_ss_0/DDC_OUT"
+        ]
+      },
+      "v_hdmi_tx_ss_0_LINK_DATA0_OUT": {
+        "interface_ports": [
+          "v_hdmi_tx_ss_0/LINK_DATA0_OUT",
+          "vid_phy_controller_0/vid_phy_tx_axi4s_ch0"
+        ]
+      },
+      "v_hdmi_tx_ss_0_LINK_DATA1_OUT": {
+        "interface_ports": [
+          "v_hdmi_tx_ss_0/LINK_DATA1_OUT",
+          "vid_phy_controller_0/vid_phy_tx_axi4s_ch1"
+        ]
+      },
+      "v_hdmi_tx_ss_0_LINK_DATA2_OUT": {
+        "interface_ports": [
+          "v_hdmi_tx_ss_0/LINK_DATA2_OUT",
+          "vid_phy_controller_0/vid_phy_tx_axi4s_ch2"
+        ]
       }
     },
     "nets": {
+      "HDMI_8T49N241_LOL_1": {
+        "ports": [
+          "HDMI_8T49N241_LOL",
+          "axi_gpio_0/gpio2_io_i"
+        ]
+      },
       "HDMI_CLK_8T49N241_N_1": {
         "ports": [
           "HDMI_CLK_8T49N241_N",
@@ -1492,7 +1571,7 @@
               "SEG_dlmb_bram_if_cntlr_Mem": {
                 "address_block": "/microblaze_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem",
                 "offset": "0x00000000",
-                "range": "256K",
+                "range": "384K",
                 "offset_high_param": "C_HIGHADDR"
               },
               "SEG_mdm_1_Reg": {
@@ -1529,7 +1608,7 @@
               "SEG_ilmb_bram_if_cntlr_Mem": {
                 "address_block": "/microblaze_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem",
                 "offset": "0x00000000",
-                "range": "256K",
+                "range": "384K",
                 "offset_high_param": "C_HIGHADDR"
               }
             }

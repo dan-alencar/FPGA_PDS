@@ -325,6 +325,30 @@
 						"WVALID": { "actual": "S00_AXI_wvalid"}
 					}
 				},
+				"/v_hdmi_tx_ss_0/LINK_DATA0_OUT": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "link_clk"},
+						"TDATA": { "actual": "LINK_DATA0_OUT_tdata[39:0]"},
+						"TVALID": { "actual": "LINK_DATA0_OUT_tvalid"}
+					}
+				},
+				"/v_hdmi_tx_ss_0/LINK_DATA1_OUT": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "link_clk"},
+						"TDATA": { "actual": "LINK_DATA1_OUT_tdata[39:0]"},
+						"TVALID": { "actual": "LINK_DATA1_OUT_tvalid"}
+					}
+				},
+				"/v_hdmi_tx_ss_0/LINK_DATA2_OUT": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "link_clk"},
+						"TDATA": { "actual": "LINK_DATA2_OUT_tdata[39:0]"},
+						"TVALID": { "actual": "LINK_DATA2_OUT_tvalid"}
+					}
+				},
 				"/v_hdmi_tx_ss_0/S_AXI_CPU_IN": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
@@ -399,6 +423,39 @@
 						"WREADY": { "actual": "vid_phy_axi4lite_wready"},
 						"WSTRB": { "actual": "vid_phy_axi4lite_wstrb[3:0]"},
 						"WVALID": { "actual": "vid_phy_axi4lite_wvalid"}
+					}
+				},
+				"/vid_phy_controller_0/vid_phy_tx_axi4s_ch0": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "vid_phy_tx_axi4s_aclk"},
+						"ARESETN": { "actual": "vid_phy_tx_axi4s_aresetn"},
+						"TDATA": { "actual": "vid_phy_tx_axi4s_ch0_tdata[39:0]"},
+						"TREADY": { "actual": "vid_phy_tx_axi4s_ch0_tready"},
+						"TUSER": { "actual": "vid_phy_tx_axi4s_ch0_tuser[0:0]"},
+						"TVALID": { "actual": "vid_phy_tx_axi4s_ch0_tvalid"}
+					}
+				},
+				"/vid_phy_controller_0/vid_phy_tx_axi4s_ch1": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "vid_phy_tx_axi4s_aclk"},
+						"ARESETN": { "actual": "vid_phy_tx_axi4s_aresetn"},
+						"TDATA": { "actual": "vid_phy_tx_axi4s_ch1_tdata[39:0]"},
+						"TREADY": { "actual": "vid_phy_tx_axi4s_ch1_tready"},
+						"TUSER": { "actual": "vid_phy_tx_axi4s_ch1_tuser[0:0]"},
+						"TVALID": { "actual": "vid_phy_tx_axi4s_ch1_tvalid"}
+					}
+				},
+				"/vid_phy_controller_0/vid_phy_tx_axi4s_ch2": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "vid_phy_tx_axi4s_aclk"},
+						"ARESETN": { "actual": "vid_phy_tx_axi4s_aresetn"},
+						"TDATA": { "actual": "vid_phy_tx_axi4s_ch2_tdata[39:0]"},
+						"TREADY": { "actual": "vid_phy_tx_axi4s_ch2_tready"},
+						"TUSER": { "actual": "vid_phy_tx_axi4s_ch2_tuser[0:0]"},
+						"TVALID": { "actual": "vid_phy_tx_axi4s_ch2_tvalid"}
 					}
 				}
 			}

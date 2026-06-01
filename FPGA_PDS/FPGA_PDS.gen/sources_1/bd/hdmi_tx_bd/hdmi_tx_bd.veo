@@ -60,6 +60,12 @@ hdmi_tx_bd your_instance_name (
   .iic_clkgen_sda_i(iic_clkgen_sda_i), // input wire iic_clkgen_sda_i
   .iic_clkgen_sda_o(iic_clkgen_sda_o), // output wire iic_clkgen_sda_o
   .iic_clkgen_sda_t(iic_clkgen_sda_t), // output wire iic_clkgen_sda_t
+  .TX_DDC_OUT_scl_i(TX_DDC_OUT_scl_i), // input wire TX_DDC_OUT_scl_i
+  .TX_DDC_OUT_scl_o(TX_DDC_OUT_scl_o), // output wire TX_DDC_OUT_scl_o
+  .TX_DDC_OUT_scl_t(TX_DDC_OUT_scl_t), // output wire TX_DDC_OUT_scl_t
+  .TX_DDC_OUT_sda_i(TX_DDC_OUT_sda_i), // input wire TX_DDC_OUT_sda_i
+  .TX_DDC_OUT_sda_o(TX_DDC_OUT_sda_o), // output wire TX_DDC_OUT_sda_o
+  .TX_DDC_OUT_sda_t(TX_DDC_OUT_sda_t), // output wire TX_DDC_OUT_sda_t
   .SYS_CLK_N(SYS_CLK_N), // input wire SYS_CLK_N
   .SYS_CLK_P(SYS_CLK_P), // input wire SYS_CLK_P
   .SYS_RST_N(SYS_RST_N), // input wire SYS_RST_N
@@ -72,7 +78,8 @@ hdmi_tx_bd your_instance_name (
   .HDMI_TX_HPD(HDMI_TX_HPD), // input wire HDMI_TX_HPD
   .HDMI_TX_CLK_P(HDMI_TX_CLK_P), // output wire HDMI_TX_CLK_P
   .HDMI_TX_CLK_N(HDMI_TX_CLK_N), // output wire HDMI_TX_CLK_N
-  .HDMI_8T49N241_RST_N(HDMI_8T49N241_RST_N) // output wire [0:0] HDMI_8T49N241_RST_N
+  .HDMI_8T49N241_RST_N(HDMI_8T49N241_RST_N), // output wire [0:0] HDMI_8T49N241_RST_N
+  .HDMI_8T49N241_LOL(HDMI_8T49N241_LOL) // input wire HDMI_8T49N241_LOL
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

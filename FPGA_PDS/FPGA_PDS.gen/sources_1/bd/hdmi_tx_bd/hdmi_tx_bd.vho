@@ -59,6 +59,12 @@ COMPONENT hdmi_tx_bd
     iic_clkgen_sda_i : IN STD_LOGIC;
     iic_clkgen_sda_o : OUT STD_LOGIC;
     iic_clkgen_sda_t : OUT STD_LOGIC;
+    TX_DDC_OUT_scl_i : IN STD_LOGIC;
+    TX_DDC_OUT_scl_o : OUT STD_LOGIC;
+    TX_DDC_OUT_scl_t : OUT STD_LOGIC;
+    TX_DDC_OUT_sda_i : IN STD_LOGIC;
+    TX_DDC_OUT_sda_o : OUT STD_LOGIC;
+    TX_DDC_OUT_sda_t : OUT STD_LOGIC;
     SYS_CLK_N : IN STD_LOGIC;
     SYS_CLK_P : IN STD_LOGIC;
     SYS_RST_N : IN STD_LOGIC;
@@ -71,7 +77,8 @@ COMPONENT hdmi_tx_bd
     HDMI_TX_HPD : IN STD_LOGIC;
     HDMI_TX_CLK_P : OUT STD_LOGIC;
     HDMI_TX_CLK_N : OUT STD_LOGIC;
-    HDMI_8T49N241_RST_N : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
+    HDMI_8T49N241_RST_N : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    HDMI_8T49N241_LOL : IN STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -88,6 +95,12 @@ your_instance_name : hdmi_tx_bd
     iic_clkgen_sda_i => iic_clkgen_sda_i,
     iic_clkgen_sda_o => iic_clkgen_sda_o,
     iic_clkgen_sda_t => iic_clkgen_sda_t,
+    TX_DDC_OUT_scl_i => TX_DDC_OUT_scl_i,
+    TX_DDC_OUT_scl_o => TX_DDC_OUT_scl_o,
+    TX_DDC_OUT_scl_t => TX_DDC_OUT_scl_t,
+    TX_DDC_OUT_sda_i => TX_DDC_OUT_sda_i,
+    TX_DDC_OUT_sda_o => TX_DDC_OUT_sda_o,
+    TX_DDC_OUT_sda_t => TX_DDC_OUT_sda_t,
     SYS_CLK_N => SYS_CLK_N,
     SYS_CLK_P => SYS_CLK_P,
     SYS_RST_N => SYS_RST_N,
@@ -100,7 +113,8 @@ your_instance_name : hdmi_tx_bd
     HDMI_TX_HPD => HDMI_TX_HPD,
     HDMI_TX_CLK_P => HDMI_TX_CLK_P,
     HDMI_TX_CLK_N => HDMI_TX_CLK_N,
-    HDMI_8T49N241_RST_N => HDMI_8T49N241_RST_N
+    HDMI_8T49N241_RST_N => HDMI_8T49N241_RST_N,
+    HDMI_8T49N241_LOL => HDMI_8T49N241_LOL
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

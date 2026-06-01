@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Fri May 29 20:29:48 2026
+| Date         : Mon Jun  1 20:39:38 2026
 | Host         : pop-os running 64-bit Pop!_OS 24.04 LTS
 | Command      : report_utilization -file hdmi_tx_bd_wrapper_utilization_synth.rpt -pb hdmi_tx_bd_wrapper_utilization_synth.pb
 | Design       : hdmi_tx_bd_wrapper
@@ -98,7 +98,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------------+------+-------+------------+-----------+-------+
 |     Site Type    | Used | Fixed | Prohibited | Available | Util% |
 +------------------+------+-------+------------+-----------+-------+
-| Bonded IOB       |    7 |     0 |          0 |       228 |  3.07 |
+| Bonded IOB       |   10 |     0 |          0 |       228 |  4.39 |
 |   HPIOB_M        |    0 |     0 |          0 |        72 |  0.00 |
 |   HPIOB_S        |    0 |     0 |          0 |        72 |  0.00 |
 |   HDIOB_M        |    0 |     0 |          0 |        36 |  0.00 |
@@ -167,10 +167,10 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| INBUF    |    4 |                 I/O |
-| IBUFCTRL |    4 |              Others |
+| INBUF    |    7 |                 I/O |
+| IBUFCTRL |    7 |              Others |
+| OBUFT    |    4 |                 I/O |
 | OBUF     |    3 |                 I/O |
-| OBUFT    |    2 |                 I/O |
 | LUT1     |    1 |                 CLB |
 +----------+------+---------------------+
 

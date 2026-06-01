@@ -66,6 +66,18 @@ module hdmi_tx_bd_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire iic_clkgen_sda_t,
   (* X_INTERFACE_IGNORE = "true" *)
+  input wire TX_DDC_OUT_scl_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire TX_DDC_OUT_scl_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire TX_DDC_OUT_scl_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire TX_DDC_OUT_sda_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire TX_DDC_OUT_sda_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire TX_DDC_OUT_sda_t,
+  (* X_INTERFACE_IGNORE = "true" *)
   input wire SYS_CLK_N,
   (* X_INTERFACE_IGNORE = "true" *)
   input wire SYS_CLK_P,
@@ -90,7 +102,9 @@ module hdmi_tx_bd_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire HDMI_TX_CLK_N,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [0:0] HDMI_8T49N241_RST_N
+  output wire [0:0] HDMI_8T49N241_RST_N,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire HDMI_8T49N241_LOL
 );
 
   hdmi_tx_bd inst (
@@ -100,6 +114,12 @@ module hdmi_tx_bd_sv (
     .iic_clkgen_sda_i(iic_clkgen_sda_i),
     .iic_clkgen_sda_o(iic_clkgen_sda_o),
     .iic_clkgen_sda_t(iic_clkgen_sda_t),
+    .TX_DDC_OUT_scl_i(TX_DDC_OUT_scl_i),
+    .TX_DDC_OUT_scl_o(TX_DDC_OUT_scl_o),
+    .TX_DDC_OUT_scl_t(TX_DDC_OUT_scl_t),
+    .TX_DDC_OUT_sda_i(TX_DDC_OUT_sda_i),
+    .TX_DDC_OUT_sda_o(TX_DDC_OUT_sda_o),
+    .TX_DDC_OUT_sda_t(TX_DDC_OUT_sda_t),
     .SYS_CLK_N(SYS_CLK_N),
     .SYS_CLK_P(SYS_CLK_P),
     .SYS_RST_N(SYS_RST_N),
@@ -112,7 +132,8 @@ module hdmi_tx_bd_sv (
     .HDMI_TX_HPD(HDMI_TX_HPD),
     .HDMI_TX_CLK_P(HDMI_TX_CLK_P),
     .HDMI_TX_CLK_N(HDMI_TX_CLK_N),
-    .HDMI_8T49N241_RST_N(HDMI_8T49N241_RST_N)
+    .HDMI_8T49N241_RST_N(HDMI_8T49N241_RST_N),
+    .HDMI_8T49N241_LOL(HDMI_8T49N241_LOL)
   );
 
 endmodule

@@ -224,11 +224,11 @@
 			xlnx,gpio-width = <1>;
 			clock-frequency = <100000000>;
 			xlnx,dout-default = <0x0>;
-			xlnx,is-dual = <0>;
+			xlnx,is-dual = <1>;
 			xlnx,ip-name = "axi_gpio";
 			xlnx,tri-default-2 = <0xffffffff>;
 			reg = <0x40000000 0x10000>;
-			xlnx,all-inputs-2 = <0>;
+			xlnx,all-inputs-2 = <1>;
 			clocks = <&clk_bus_0>;
 			xlnx,all-outputs-2 = <0>;
 			gpio-controller;
@@ -237,7 +237,7 @@
 			xlnx,edk-iptype = "PERIPHERAL";
 			xlnx,dout-default-2 = <0x0>;
 			status = "okay";
-			xlnx,gpio2-width = <32>;
+			xlnx,gpio2-width = <1>;
 			clock-names = "s_axi_aclk";
 			xlnx,tri-default = <0xffffffff>;
 			xlnx,name = "axi_gpio_0";
@@ -323,7 +323,7 @@
 			xlnx,arbitration = <0>;
 			xlnx,num-lmb = <1>;
 			xlnx,mask4 = <0x800000>;
-			reg = <0x00000000 0x40000>;
+			reg = <0x00000000 0x60000>;
 			xlnx,s-axi-ctrl-addr-width = <32>;
 			xlnx,mask5 = <0x800000>;
 			xlnx,ecc-status-registers = <0>;
@@ -369,7 +369,7 @@
 			xlnx,arbitration = <0>;
 			xlnx,num-lmb = <1>;
 			xlnx,mask4 = <0x800000>;
-			reg = <0x00000000 0x40000>;
+			reg = <0x00000000 0x60000>;
 			xlnx,s-axi-ctrl-addr-width = <32>;
 			xlnx,mask5 = <0x800000>;
 			xlnx,ecc-status-registers = <0>;
@@ -420,10 +420,12 @@
 			xlnx,exdes-tx-pll-selection = <6>;
 			hdcp22-present = <0>;
 			xlnx,add-mark-dbg = <0>;
+			phy-names = "hdmi-phy0" , "hdmi-phy1" , "hdmi-phy2";
 			xlnx,edk-iptype = "PERIPHERAL";
 			vtc-present = <1>;
 			xlnx,max-res = <0>;
 			xlnx,ddc2-en = <0>;
+			phys = <&vid_phy_controller_0txphy_lane0 0 1 1 1>, <&vid_phy_controller_0txphy_lane1 0 1 1 1>, <&vid_phy_controller_0txphy_lane2 0 1 1 1>;
 			status = "okay";
 			xlnx,axi-lite-freq-hz = <0x5f5e100>;
 			vtc-connected = <&v_hdmi_tx_ss_0_v_tc>;
@@ -575,6 +577,15 @@
 			xlnx,device = "xcau15p";
 			xlnx,tx-no-of-channels = <3>;
 			xlnx,component-name = "hdmi_tx_bd_vid_phy_controller_0_0";
+			vid_phy_controller_0txphy_lane0: vid_phy_tx_axi4s_ch0v_hdmi_tx_ss_0 {
+				#phy-cells = <4>;
+			};
+			vid_phy_controller_0txphy_lane1: vid_phy_tx_axi4s_ch1v_hdmi_tx_ss_0 {
+				#phy-cells = <4>;
+			};
+			vid_phy_controller_0txphy_lane2: vid_phy_tx_axi4s_ch2v_hdmi_tx_ss_0 {
+				#phy-cells = <4>;
+			};
 		};
 		v_hdmi_tx_ss_0_v_hdmi_tx: v_hdmi_tx_ss_0_v_hdmi_tx@0 {
 			compatible = "xlnx,v-hdmi-tx-3.0";

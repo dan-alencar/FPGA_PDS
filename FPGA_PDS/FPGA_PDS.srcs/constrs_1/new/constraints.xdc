@@ -25,13 +25,15 @@ set_property PACKAGE_PIN V19 [get_ports SYS_RST_N]
 set_property IOSTANDARD LVCMOS12 [get_ports SYS_RST_N]
 
 ################################################################################
-# I2C CLOCK GENERATOR (U57/U58) - Configura 297MHz - Bank 85
+# HDMI CONTROL I2C (8T49N241 + HDMI devices) - Bank 65
 ################################################################################
-set_property PACKAGE_PIN B9 [get_ports iic_clkgen_scl_io]
-set_property IOSTANDARD LVCMOS33 [get_ports iic_clkgen_scl_io]
+set_property PACKAGE_PIN R22 [get_ports iic_clkgen_scl_io]
+set_property IOSTANDARD LVCMOS12 [get_ports iic_clkgen_scl_io]
+set_property DRIVE 8 [get_ports iic_clkgen_scl_io]
 
-set_property PACKAGE_PIN A9 [get_ports iic_clkgen_sda_io]
-set_property IOSTANDARD LVCMOS33 [get_ports iic_clkgen_sda_io]
+set_property PACKAGE_PIN R23 [get_ports iic_clkgen_sda_io]
+set_property IOSTANDARD LVCMOS12 [get_ports iic_clkgen_sda_io]
+set_property DRIVE 8 [get_ports iic_clkgen_sda_io]
 
 ################################################################################
 # CONTROLE DO CHIP DE CLOCK (8T49N241) - Bank 66
@@ -39,6 +41,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports iic_clkgen_sda_io]
 # Erro NSTD-1 corrigido: Reset do chip gerador de clock (Ativo Baixo)
 set_property PACKAGE_PIN G22 [get_ports {HDMI_8T49N241_RST_N}]
 set_property IOSTANDARD LVCMOS18 [get_ports {HDMI_8T49N241_RST_N}]
+
+set_property PACKAGE_PIN F22 [get_ports {HDMI_8T49N241_LOL}]
+set_property IOSTANDARD LVCMOS18 [get_ports {HDMI_8T49N241_LOL}]
 
 ################################################################################
 # SINAIS DE CONTROLE HDMI - Bank 65
@@ -50,6 +55,14 @@ set_property IOSTANDARD LVCMOS12 [get_ports {HDMI_TX_EN[0]}]
 # Erro NSTD-1 corrigido: Hot Plug Detect (Entrada)
 set_property PACKAGE_PIN W21 [get_ports HDMI_TX_HPD]
 set_property IOSTANDARD LVCMOS12 [get_ports HDMI_TX_HPD]
+
+set_property PACKAGE_PIN R25 [get_ports TX_DDC_OUT_scl_io]
+set_property IOSTANDARD LVCMOS12 [get_ports TX_DDC_OUT_scl_io]
+set_property DRIVE 8 [get_ports TX_DDC_OUT_scl_io]
+
+set_property PACKAGE_PIN R26 [get_ports TX_DDC_OUT_sda_io]
+set_property IOSTANDARD LVCMOS12 [get_ports TX_DDC_OUT_sda_io]
+set_property DRIVE 8 [get_ports TX_DDC_OUT_sda_io]
 
 ################################################################################
 # DEBUG GPIO (Mapeado para LED RGB Vermelho) - Bank 84
@@ -88,7 +101,10 @@ set_property PACKAGE_PIN J4 [get_ports {hdmi_tx_n[2]}]
 set_property PACKAGE_PIN T25 [get_ports HDMI_TX_CLK_P]
 set_property PACKAGE_PIN U25 [get_ports HDMI_TX_CLK_N]
 
-# O Banco 65 é de 1.2V. O padrão DIFF_SSTL12 é usado para comunicar 
-# com o chip retimer externo (SN65DP159 ou similar) que gera o sinal HDMI final.
-set_property IOSTANDARD DIFF_SSTL12 [get_ports HDMI_TX_CLK_P]
-set_property IOSTANDARD DIFF_SSTL12 [get_ports HDMI_TX_CLK_N]
+# O Banco 65 é de 1.2V. A referência da placa usa DIFF_HSUL_12
+# para o clock TMDS encaminhado ao retimer HDMI.
+set_property IOSTANDARD DIFF_HSUL_12 [get_ports HDMI_TX_CLK_P]
+set_property IOSTANDARD DIFF_HSUL_12 [get_ports HDMI_TX_CLK_N]
+set_property OUTPUT_IMPEDANCE RDRV_40_40 [get_ports HDMI_TX_CLK_P]
+set_property SLEW SLOW [get_ports HDMI_TX_CLK_P]
+set_property SLEW SLOW [get_ports HDMI_TX_CLK_N]

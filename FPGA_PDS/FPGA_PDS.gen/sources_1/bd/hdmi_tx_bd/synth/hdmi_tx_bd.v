@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Fri May 29 20:29:06 2026
+//Date        : Mon Jun  1 20:37:07 2026
 //Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
 //Command     : generate_target hdmi_tx_bd.bd
 //Design      : hdmi_tx_bd
@@ -12,7 +12,8 @@
 
 (* CORE_GENERATION_INFO = "hdmi_tx_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi_tx_bd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=21,numReposBlks=20,numNonXlnxBlks=0,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=10,da_clkrst_cnt=11,da_mb_cnt=5,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "hdmi_tx_bd.hwdef" *) 
 module hdmi_tx_bd
-   (HDMI_8T49N241_RST_N,
+   (HDMI_8T49N241_LOL,
+    HDMI_8T49N241_RST_N,
     HDMI_CLK_8T49N241_N,
     HDMI_CLK_8T49N241_P,
     HDMI_TX_CLK_N,
@@ -22,6 +23,12 @@ module hdmi_tx_bd
     SYS_CLK_N,
     SYS_CLK_P,
     SYS_RST_N,
+    TX_DDC_OUT_scl_i,
+    TX_DDC_OUT_scl_o,
+    TX_DDC_OUT_scl_t,
+    TX_DDC_OUT_sda_i,
+    TX_DDC_OUT_sda_o,
+    TX_DDC_OUT_sda_t,
     gpo_0,
     hdmi_tx_n,
     hdmi_tx_p,
@@ -31,6 +38,7 @@ module hdmi_tx_bd
     iic_clkgen_sda_i,
     iic_clkgen_sda_o,
     iic_clkgen_sda_t);
+  input HDMI_8T49N241_LOL;
   output [0:0]HDMI_8T49N241_RST_N;
   input HDMI_CLK_8T49N241_N;
   input HDMI_CLK_8T49N241_P;
@@ -41,6 +49,12 @@ module hdmi_tx_bd
   input SYS_CLK_N;
   input SYS_CLK_P;
   input SYS_RST_N;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 TX_DDC_OUT SCL_I" *) (* X_INTERFACE_MODE = "Master" *) input TX_DDC_OUT_scl_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 TX_DDC_OUT SCL_O" *) output TX_DDC_OUT_scl_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 TX_DDC_OUT SCL_T" *) output TX_DDC_OUT_scl_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 TX_DDC_OUT SDA_I" *) input TX_DDC_OUT_sda_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 TX_DDC_OUT SDA_O" *) output TX_DDC_OUT_sda_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 TX_DDC_OUT SDA_T" *) output TX_DDC_OUT_sda_t;
   output [0:0]gpo_0;
   output [2:0]hdmi_tx_n;
   output [2:0]hdmi_tx_p;
@@ -51,6 +65,7 @@ module hdmi_tx_bd
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 iic_clkgen SDA_O" *) output iic_clkgen_sda_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 iic_clkgen SDA_T" *) output iic_clkgen_sda_t;
 
+  wire HDMI_8T49N241_LOL;
   wire [0:0]HDMI_8T49N241_RST_N;
   wire HDMI_CLK_8T49N241_N;
   wire HDMI_CLK_8T49N241_P;
@@ -61,6 +76,12 @@ module hdmi_tx_bd
   wire SYS_CLK_N;
   wire SYS_CLK_P;
   wire SYS_RST_N;
+  wire TX_DDC_OUT_scl_i;
+  wire TX_DDC_OUT_scl_o;
+  wire TX_DDC_OUT_scl_t;
+  wire TX_DDC_OUT_sda_i;
+  wire TX_DDC_OUT_sda_o;
+  wire TX_DDC_OUT_sda_t;
   wire axi_iic_0_iic2intc_irpt;
   wire [0:0]gpo_0;
   wire [2:0]hdmi_tx_n;
@@ -253,6 +274,12 @@ module hdmi_tx_bd
   wire [0:0]rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn;
   wire [0:0]rst_video_clk_peripheral_aresetn;
   wire [0:0]system_resetn_inv_0_Res;
+  wire [39:0]v_hdmi_tx_ss_0_LINK_DATA0_OUT_TDATA;
+  wire v_hdmi_tx_ss_0_LINK_DATA0_OUT_TVALID;
+  wire [39:0]v_hdmi_tx_ss_0_LINK_DATA1_OUT_TDATA;
+  wire v_hdmi_tx_ss_0_LINK_DATA1_OUT_TVALID;
+  wire [39:0]v_hdmi_tx_ss_0_LINK_DATA2_OUT_TDATA;
+  wire v_hdmi_tx_ss_0_LINK_DATA2_OUT_TVALID;
   wire v_hdmi_tx_ss_0_VIDEO_IN_tready;
   wire v_hdmi_tx_ss_0_irq;
   wire [95:0]v_tpg_0_m_axis_video_TDATA;
@@ -265,7 +292,8 @@ module hdmi_tx_bd
   wire vid_phy_controller_0_vid_phy_status_sb_tx_tvalid;
 
   hdmi_tx_bd_axi_gpio_0_0 axi_gpio_0
-       (.gpio_io_o(HDMI_8T49N241_RST_N),
+       (.gpio2_io_i(HDMI_8T49N241_LOL),
+        .gpio_io_o(HDMI_8T49N241_RST_N),
         .s_axi_aclk(microblaze_0_Clk),
         .s_axi_araddr(microblaze_0_axi_periph_M06_AXI_ARADDR),
         .s_axi_aresetn(rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn),
@@ -620,8 +648,18 @@ module hdmi_tx_bd
        (.AUDIO_IN_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .AUDIO_IN_tid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .AUDIO_IN_tvalid(1'b0),
-        .DDC_OUT_scl_i(1'b0),
-        .DDC_OUT_sda_i(1'b0),
+        .DDC_OUT_scl_i(TX_DDC_OUT_scl_i),
+        .DDC_OUT_scl_o(TX_DDC_OUT_scl_o),
+        .DDC_OUT_scl_t(TX_DDC_OUT_scl_t),
+        .DDC_OUT_sda_i(TX_DDC_OUT_sda_i),
+        .DDC_OUT_sda_o(TX_DDC_OUT_sda_o),
+        .DDC_OUT_sda_t(TX_DDC_OUT_sda_t),
+        .LINK_DATA0_OUT_tdata(v_hdmi_tx_ss_0_LINK_DATA0_OUT_TDATA),
+        .LINK_DATA0_OUT_tvalid(v_hdmi_tx_ss_0_LINK_DATA0_OUT_TVALID),
+        .LINK_DATA1_OUT_tdata(v_hdmi_tx_ss_0_LINK_DATA1_OUT_TDATA),
+        .LINK_DATA1_OUT_tvalid(v_hdmi_tx_ss_0_LINK_DATA1_OUT_TVALID),
+        .LINK_DATA2_OUT_tdata(v_hdmi_tx_ss_0_LINK_DATA2_OUT_TDATA),
+        .LINK_DATA2_OUT_tvalid(v_hdmi_tx_ss_0_LINK_DATA2_OUT_TVALID),
         .SB_STATUS_IN_tdata(vid_phy_controller_0_vid_phy_status_sb_tx_tdata),
         .SB_STATUS_IN_tvalid(vid_phy_controller_0_vid_phy_status_sb_tx_tvalid),
         .S_AXI_CPU_IN_araddr(microblaze_0_axi_periph_M01_AXI_ARADDR),
@@ -727,15 +765,15 @@ module hdmi_tx_bd
         .vid_phy_status_sb_tx_tvalid(vid_phy_controller_0_vid_phy_status_sb_tx_tvalid),
         .vid_phy_tx_axi4s_aclk(vid_phy_controller_0_tx_video_clk),
         .vid_phy_tx_axi4s_aresetn(1'b1),
-        .vid_phy_tx_axi4s_ch0_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .vid_phy_tx_axi4s_ch0_tdata(v_hdmi_tx_ss_0_LINK_DATA0_OUT_TDATA),
         .vid_phy_tx_axi4s_ch0_tuser(1'b0),
-        .vid_phy_tx_axi4s_ch0_tvalid(1'b0),
-        .vid_phy_tx_axi4s_ch1_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .vid_phy_tx_axi4s_ch0_tvalid(v_hdmi_tx_ss_0_LINK_DATA0_OUT_TVALID),
+        .vid_phy_tx_axi4s_ch1_tdata(v_hdmi_tx_ss_0_LINK_DATA1_OUT_TDATA),
         .vid_phy_tx_axi4s_ch1_tuser(1'b0),
-        .vid_phy_tx_axi4s_ch1_tvalid(1'b0),
-        .vid_phy_tx_axi4s_ch2_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .vid_phy_tx_axi4s_ch1_tvalid(v_hdmi_tx_ss_0_LINK_DATA1_OUT_TVALID),
+        .vid_phy_tx_axi4s_ch2_tdata(v_hdmi_tx_ss_0_LINK_DATA2_OUT_TDATA),
         .vid_phy_tx_axi4s_ch2_tuser(1'b0),
-        .vid_phy_tx_axi4s_ch2_tvalid(1'b0));
+        .vid_phy_tx_axi4s_ch2_tvalid(v_hdmi_tx_ss_0_LINK_DATA2_OUT_TVALID));
   hdmi_tx_bd_xlconstant_0_0 xlconstant_0
        (.dout(HDMI_TX_EN));
 endmodule
