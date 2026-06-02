@@ -5,8 +5,8 @@
 # ==============================================================================
 # VIVADO PROJECT OUTPUT (Gerado automaticamente)
 # ==============================================================================
-# A pasta fft_fpga contém todo o projeto Vivado gerado.
-# NÃO versionar - cada usuário deve gerar localmente.
+# O projeto Vivado/Vitis fica em FPGA_PDS/. O conteúdo gerado
+# (.cache/, .gen/, .runs/, etc.) É versionado de propósito.
 
 # Logs de build do Vivado
 *.log
