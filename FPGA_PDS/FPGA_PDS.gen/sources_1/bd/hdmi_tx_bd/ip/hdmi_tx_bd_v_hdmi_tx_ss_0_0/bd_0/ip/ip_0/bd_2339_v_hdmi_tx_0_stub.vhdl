@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Wed Jan 21 13:57:08 2026
--- Host        : dan-alencar running 64-bit Linux Mint 22.2
--- Command     : write_vhdl -force -mode synth_stub -rename_top bd_2339_v_hdmi_tx_0 -prefix
---               bd_2339_v_hdmi_tx_0_ bd_2339_v_hdmi_tx_0_stub.vhdl
+-- Date        : Tue Jun  2 16:52:06 2026
+-- Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
+-- Command     : write_vhdl -force -mode synth_stub
+--               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_0/bd_2339_v_hdmi_tx_0_stub.vhdl
 -- Design      : bd_2339_v_hdmi_tx_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcau15p-ffvb676-2-e
@@ -154,7 +154,7 @@ architecture stub of bd_2339_v_hdmi_tx_0 is
   attribute X_INTERFACE_PARAMETER of video_clk : signal is "XIL_INTERFACENAME VIDEO_CLK, ASSOCIATED_BUSIF VIDEO_IN, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of link_clk : signal is "xilinx.com:signal:clock:1.0 LINK_CLK CLK";
   attribute X_INTERFACE_MODE of link_clk : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of link_clk : signal is "XIL_INTERFACENAME LINK_CLK, ASSOCIATED_BUSIF LINK_DATA0_OUT:LINK_DATA1_OUT:LINK_DATA2_OUT, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of link_clk : signal is "XIL_INTERFACENAME LINK_CLK, ASSOCIATED_BUSIF LINK_DATA0_OUT:LINK_DATA1_OUT:LINK_DATA2_OUT, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of video_vs : signal is "xilinx.com:interface:vid_io:1.0 VIDEO_IN VSYNC";
   attribute X_INTERFACE_MODE of video_vs : signal is "slave";
   attribute X_INTERFACE_INFO of video_hs : signal is "xilinx.com:interface:vid_io:1.0 VIDEO_IN HSYNC";
@@ -174,13 +174,13 @@ architecture stub of bd_2339_v_hdmi_tx_0 is
   attribute X_INTERFACE_INFO of s_axis_audio_tvalid : signal is "xilinx.com:interface:axis:1.0 AUDIO_IN TVALID";
   attribute X_INTERFACE_INFO of link_data0 : signal is "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TDATA";
   attribute X_INTERFACE_MODE of link_data0 : signal is "master";
-  attribute X_INTERFACE_PARAMETER of link_data0 : signal is "XIL_INTERFACENAME LINK_DATA0_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of link_data0 : signal is "XIL_INTERFACENAME LINK_DATA0_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of link_data1 : signal is "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TDATA";
   attribute X_INTERFACE_MODE of link_data1 : signal is "master";
-  attribute X_INTERFACE_PARAMETER of link_data1 : signal is "XIL_INTERFACENAME LINK_DATA1_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of link_data1 : signal is "XIL_INTERFACENAME LINK_DATA1_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of link_data2 : signal is "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TDATA";
   attribute X_INTERFACE_MODE of link_data2 : signal is "master";
-  attribute X_INTERFACE_PARAMETER of link_data2 : signal is "XIL_INTERFACENAME LINK_DATA2_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of link_data2 : signal is "XIL_INTERFACENAME LINK_DATA2_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of link_valid0 : signal is "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TVALID";
   attribute X_INTERFACE_INFO of link_valid1 : signal is "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TVALID";
   attribute X_INTERFACE_INFO of link_valid2 : signal is "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TVALID";

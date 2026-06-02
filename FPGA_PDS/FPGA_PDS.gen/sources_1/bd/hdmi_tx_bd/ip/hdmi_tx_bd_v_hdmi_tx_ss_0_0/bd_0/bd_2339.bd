@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7E957B902CCA493F",
+      "boundary_crc": "0x7E957B908DACAC92",
       "design_src": "SBD",
       "device": "xcau15p-ffvb676-2-e",
       "name": "bd_2339",
@@ -25,11 +25,11 @@
         "vlnv": "xilinx.com:interface:axis_rtl:1.0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk",
+            "value": "hdmi_tx_bd_vid_phy_controller_0_0_txoutclk",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "297000000",
+            "value": "148500000",
             "value_src": "user_prop"
           },
           "HAS_TKEEP": {
@@ -90,11 +90,11 @@
         "vlnv": "xilinx.com:interface:axis_rtl:1.0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk",
+            "value": "hdmi_tx_bd_vid_phy_controller_0_0_txoutclk",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "297000000",
+            "value": "148500000",
             "value_src": "user_prop"
           },
           "HAS_TKEEP": {
@@ -155,11 +155,11 @@
         "vlnv": "xilinx.com:interface:axis_rtl:1.0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk",
+            "value": "hdmi_tx_bd_vid_phy_controller_0_0_txoutclk",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "297000000",
+            "value": "148500000",
             "value_src": "user_prop"
           },
           "HAS_TKEEP": {
@@ -624,11 +624,11 @@
             "value_src": "default"
           },
           "CLK_DOMAIN": {
-            "value": "hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk",
+            "value": "hdmi_tx_bd_vid_phy_controller_0_0_txoutclk",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "297000000",
+            "value": "148500000",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {

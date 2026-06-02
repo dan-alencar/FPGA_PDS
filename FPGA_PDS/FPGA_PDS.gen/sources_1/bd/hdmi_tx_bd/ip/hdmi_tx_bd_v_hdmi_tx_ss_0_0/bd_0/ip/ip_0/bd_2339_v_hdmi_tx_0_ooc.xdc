@@ -60,6 +60,6 @@ create_clock -period 10 -name s_axis_audio_aclk [get_ports s_axis_audio_aclk]
 
 create_clock -period 3.367 -name video_clk [get_ports video_clk]
 
-create_clock -period 3.367 -name link_clk [get_ports link_clk]
+create_clock -period 6.734 -name link_clk [get_ports link_clk]
 
 

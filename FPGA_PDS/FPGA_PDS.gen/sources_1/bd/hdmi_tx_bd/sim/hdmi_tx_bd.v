@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Mon Jun  1 20:37:07 2026
+//Date        : Tue Jun  2 16:49:44 2026
 //Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
 //Command     : generate_target hdmi_tx_bd.bd
 //Design      : hdmi_tx_bd
@@ -288,6 +288,7 @@ module hdmi_tx_bd
   wire v_tpg_0_m_axis_video_TVALID;
   wire vid_phy_controller_0_irq;
   wire vid_phy_controller_0_tx_video_clk;
+  wire vid_phy_controller_0_txoutclk;
   wire [7:0]vid_phy_controller_0_vid_phy_status_sb_tx_tdata;
   wire vid_phy_controller_0_vid_phy_status_sb_tx_tvalid;
 
@@ -692,7 +693,7 @@ module hdmi_tx_bd
         .fid(1'b0),
         .hpd(HDMI_TX_HPD),
         .irq(v_hdmi_tx_ss_0_irq),
-        .link_clk(vid_phy_controller_0_tx_video_clk),
+        .link_clk(vid_phy_controller_0_txoutclk),
         .s_axi_cpu_aclk(microblaze_0_Clk),
         .s_axi_cpu_aresetn(rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn),
         .s_axis_audio_aclk(microblaze_0_Clk),
@@ -737,6 +738,7 @@ module hdmi_tx_bd
         .tx_tmds_clk_n(HDMI_TX_CLK_N),
         .tx_tmds_clk_p(HDMI_TX_CLK_P),
         .tx_video_clk(vid_phy_controller_0_tx_video_clk),
+        .txoutclk(vid_phy_controller_0_txoutclk),
         .vid_phy_axi4lite_aclk(microblaze_0_Clk),
         .vid_phy_axi4lite_araddr(microblaze_0_axi_periph_M04_AXI_ARADDR),
         .vid_phy_axi4lite_aresetn(rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn),
@@ -759,12 +761,12 @@ module hdmi_tx_bd
         .vid_phy_axi4lite_wstrb(microblaze_0_axi_periph_M04_AXI_WSTRB),
         .vid_phy_axi4lite_wvalid(microblaze_0_axi_periph_M04_AXI_WVALID),
         .vid_phy_sb_aclk(microblaze_0_Clk),
-        .vid_phy_sb_aresetn(1'b1),
+        .vid_phy_sb_aresetn(rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn),
         .vid_phy_status_sb_tx_tdata(vid_phy_controller_0_vid_phy_status_sb_tx_tdata),
         .vid_phy_status_sb_tx_tready(1'b1),
         .vid_phy_status_sb_tx_tvalid(vid_phy_controller_0_vid_phy_status_sb_tx_tvalid),
-        .vid_phy_tx_axi4s_aclk(vid_phy_controller_0_tx_video_clk),
-        .vid_phy_tx_axi4s_aresetn(1'b1),
+        .vid_phy_tx_axi4s_aclk(vid_phy_controller_0_txoutclk),
+        .vid_phy_tx_axi4s_aresetn(HDMI_TX_EN),
         .vid_phy_tx_axi4s_ch0_tdata(v_hdmi_tx_ss_0_LINK_DATA0_OUT_TDATA),
         .vid_phy_tx_axi4s_ch0_tuser(1'b0),
         .vid_phy_tx_axi4s_ch0_tvalid(v_hdmi_tx_ss_0_LINK_DATA0_OUT_TVALID),

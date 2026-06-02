@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date             : Mon Jun  1 20:45:53 2026
+| Date             : Tue Jun  2 16:59:18 2026
 | Host             : pop-os running 64-bit Pop!_OS 24.04 LTS
 | Command          : report_power -file hdmi_tx_bd_wrapper_power_routed.rpt -pb hdmi_tx_bd_wrapper_power_summary_routed.pb -rpx hdmi_tx_bd_wrapper_power_routed.rpx
 | Design           : hdmi_tx_bd_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.967        |
+| Total On-Chip Power (W)  | 0.974        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.704        |
+| Dynamic (W)              | 0.710        |
 | Device Static (W)        | 0.264        |
 | Effective TJA (C/W)      | 1.7          |
 | Max Ambient (C)          | 98.3         |
@@ -52,9 +52,9 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.090 |       30 |       --- |             --- |
-| CLB Logic                |     0.041 |    49793 |       --- |             --- |
-|   LUT as Logic           |     0.031 |    16617 |     77760 |           21.37 |
+| Clocks                   |     0.096 |       30 |       --- |             --- |
+| CLB Logic                |     0.041 |    49885 |       --- |             --- |
+|   LUT as Logic           |     0.031 |    16688 |     77760 |           21.46 |
 |   LUT as Shift Register  |     0.004 |      553 |     40320 |            1.37 |
 |   Register               |     0.003 |    24155 |    155520 |           15.53 |
 |   LUT as Distributed RAM |     0.002 |     1061 |     40320 |            2.63 |
@@ -62,14 +62,14 @@ Table of Contents
 |   BUFG                   |    <0.001 |        2 |        24 |            8.33 |
 |   Others                 |     0.000 |     2307 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |      311 |     77760 |            0.40 |
-| Signals                  |     0.037 |    40139 |       --- |             --- |
+| Signals                  |     0.038 |    40467 |       --- |             --- |
 | Block RAM                |     0.101 |      124 |       144 |           86.11 |
 | MMCM                     |     0.153 |        0 |       --- |             --- |
 | DSPs                     |     0.035 |       53 |       576 |            9.20 |
 | I/O                      |     0.011 |       14 |       228 |            6.14 |
 | GTH                      |     0.236 |        3 |        12 |           25.00 |
 | Static Power             |     0.264 |          |           |                 |
-| Total                    |     0.967 |          |           |                 |
+| Total                    |     0.974 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +79,7 @@ Table of Contents
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source           | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint           |       0.850 |     0.435 |       0.383 |      0.052 |       NA    | Unspecified | NA         |
+| Vccint           |       0.850 |     0.443 |       0.391 |      0.052 |       NA    | Unspecified | NA         |
 | Vccint_io        |       0.850 |     0.028 |       0.002 |      0.027 |       NA    | Unspecified | NA         |
 | Vccbram          |       0.850 |     0.006 |       0.005 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux           |       1.800 |     0.149 |       0.085 |      0.064 |       NA    | Unspecified | NA         |
@@ -164,7 +164,7 @@ Table of Contents
 | qpll1clk_in[0]                                                                                                                                                                                                                                                                                                                                                           | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/qpll1clk_in[0]                                                                                                                                                                                                                                                                          |             0.2 |
 | qpll1refclk_in[0]                                                                                                                                                                                                                                                                                                                                                        | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/qpll1refclk_in[0]                                                                                                                                                                                                                                                                       |             3.4 |
 | sys_clk_p                                                                                                                                                                                                                                                                                                                                                                | SYS_CLK_P                                                                                                                                                                                                                                                                                                                                                 |             3.3 |
-| txoutclk                                                                                                                                                                                                                                                                                                                                                                 | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/txoutclk                                                                                                                                                                                                                                                                                     |             6.7 |
+| vid_phy_controller_0_txoutclk                                                                                                                                                                                                                                                                                                                                            | hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/txoutclk                                                                                                                                                                                                                                                                                     |             6.7 |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
@@ -177,26 +177,26 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| hdmi_tx_bd_wrapper            |     0.704 |
-|   hdmi_tx_bd_i                |     0.702 |
+| hdmi_tx_bd_wrapper            |     0.710 |
+|   hdmi_tx_bd_i                |     0.709 |
 |     axi_iic_0                 |     0.002 |
 |       U0                      |     0.002 |
 |     microblaze_0              |     0.016 |
 |       U0                      |     0.016 |
 |     microblaze_0_axi_intc     |     0.001 |
 |       U0                      |     0.001 |
-|     microblaze_0_axi_periph   |     0.007 |
-|       inst                    |     0.007 |
+|     microblaze_0_axi_periph   |     0.008 |
+|       inst                    |     0.008 |
 |     microblaze_0_clk_wiz_1    |     0.102 |
 |       inst                    |     0.102 |
 |     microblaze_0_local_memory |     0.029 |
 |       lmb_bram                |     0.029 |
-|     v_hdmi_tx_ss_0            |     0.055 |
-|       inst                    |     0.055 |
-|     v_tpg_0                   |     0.157 |
-|       inst                    |     0.157 |
-|     vid_phy_controller_0      |     0.332 |
-|       inst                    |     0.332 |
+|     v_hdmi_tx_ss_0            |     0.058 |
+|       inst                    |     0.058 |
+|     v_tpg_0                   |     0.162 |
+|       inst                    |     0.162 |
+|     vid_phy_controller_0      |     0.331 |
+|       inst                    |     0.331 |
 +-------------------------------+-----------+
 
 

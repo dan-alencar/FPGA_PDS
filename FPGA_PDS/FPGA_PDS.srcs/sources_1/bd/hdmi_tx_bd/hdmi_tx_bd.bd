@@ -1439,7 +1439,8 @@
           "axi_iic_0/s_axi_aresetn",
           "v_hdmi_tx_ss_0/s_axi_cpu_aresetn",
           "mdm_1/S_AXI_ARESETN",
-          "axi_gpio_0/s_axi_aresetn"
+          "axi_gpio_0/s_axi_aresetn",
+          "vid_phy_controller_0/vid_phy_sb_aresetn"
         ]
       },
       "rst_video_clk_peripheral_aresetn": {
@@ -1524,12 +1525,17 @@
         "ports": [
           "vid_phy_controller_0/tx_video_clk",
           "v_tpg_0/ap_clk",
-          "vid_phy_controller_0/vid_phy_tx_axi4s_aclk",
           "microblaze_0_axi_periph/aclk1",
           "rst_video_clk/slowest_sync_clk",
-          "v_hdmi_tx_ss_0/link_clk",
           "v_hdmi_tx_ss_0/video_clk",
           "v_hdmi_tx_ss_0/s_axis_video_aclk"
+        ]
+      },
+      "vid_phy_controller_0_txoutclk": {
+        "ports": [
+          "vid_phy_controller_0/txoutclk",
+          "vid_phy_controller_0/vid_phy_tx_axi4s_aclk",
+          "v_hdmi_tx_ss_0/link_clk"
         ]
       },
       "vid_phy_controller_0_vid_phy_status_sb_tx_tdata": {
@@ -1549,7 +1555,8 @@
           "xlconstant_0/dout",
           "HDMI_TX_EN",
           "v_hdmi_tx_ss_0/s_axis_video_aresetn",
-          "vid_phy_controller_0/tx_refclk_rdy"
+          "vid_phy_controller_0/tx_refclk_rdy",
+          "vid_phy_controller_0/vid_phy_tx_axi4s_aresetn"
         ]
       }
     },

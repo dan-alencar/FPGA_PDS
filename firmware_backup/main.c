@@ -57,6 +57,7 @@ static u8          RstGpioReady = FALSE;
 
 static volatile u8 TxRestartColorbar = FALSE;
 static volatile u8 TxBusy            = TRUE;
+static volatile u8 TxStreamUpPending = FALSE;  /* re-enable TMDS clkout in main loop */
 static XTpg_PatternId Pattern = XTPG_BKGND_COLOR_BARS;
 
 /* diagnostics: did the VPHY/HDMI interrupt callbacks ever fire? */
@@ -120,6 +121,11 @@ static void TxStreamUpCallback(void *ref)
     XV_HdmiTxSs_AudioMute(p, TRUE);
     ConfigTpgColorbar();
     XV_HdmiTxSs_StreamStart(p);
+    /* Re-enable the TX TMDS clock output in the main loop (NOT here): the
+     * reference moved this out of the ISR callback to avoid a race condition
+     * (changelog 2.18). Without it the GT locks but no TMDS clock reaches the
+     * HDMI connector -> stream "up" but blank screen. */
+    TxStreamUpPending = TRUE;
     TxBusy = FALSE;
 }
 
@@ -342,6 +348,16 @@ int main(void)
         if (TxRestartColorbar) {
             TxRestartColorbar = FALSE;
             EnableColorBar(XVIDC_VM_1920x1080_60_P);
+        }
+
+        /* After the stream comes up, re-enable the TX TMDS clock output so the
+         * TMDS clock actually reaches the HDMI connector (reference does this
+         * in its main loop on IsStreamUp). EnableColorBar disabled it during
+         * reconfig; without re-enabling, the GT locks but the screen is blank. */
+        if (TxStreamUpPending) {
+            TxStreamUpPending = FALSE;
+            XVphy_Clkout1OBufTdsEnable(&Vphy, XVPHY_DIR_TX, TRUE);
+            xil_printf("TX: TMDS clock output enabled (colorbar should show)\r\n");
         }
 
         /* Heartbeat + live state so the terminal is never silent.

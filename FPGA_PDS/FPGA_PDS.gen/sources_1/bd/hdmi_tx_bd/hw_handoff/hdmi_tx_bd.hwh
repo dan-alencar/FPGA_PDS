@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun  1 20:37:13 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun  2 16:49:50 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="kintexuplus" DEVICE="xcau15p" NAME="hdmi_tx_bd" PACKAGE="ffvb676" SPEEDGRADE="-2"/>
 
@@ -7911,6 +7911,7 @@
             <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="s_axi_cpu_aresetn"/>
             <CONNECTION INSTANCE="mdm_1" PORT="S_AXI_ARESETN"/>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="vid_phy_controller_0" PORT="vid_phy_sb_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
@@ -8240,9 +8241,9 @@
             <CONNECTION INSTANCE="microblaze_0_xlconcat" PORT="In0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="297000000" DIR="I" NAME="link_clk" SIGIS="clk" SIGNAME="vid_phy_controller_0_tx_video_clk">
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="link_clk" SIGIS="clk" SIGNAME="vid_phy_controller_0_txoutclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="vid_phy_controller_0" PORT="tx_video_clk"/>
+            <CONNECTION INSTANCE="vid_phy_controller_0" PORT="txoutclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef"/>
@@ -8280,8 +8281,8 @@
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="v_hdmi_tx_ss_0_LINK_DATA0_OUT" NAME="LINK_DATA0_OUT" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="297000000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_txoutclk"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
@@ -8299,8 +8300,8 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="v_hdmi_tx_ss_0_LINK_DATA1_OUT" NAME="LINK_DATA1_OUT" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="297000000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_txoutclk"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
@@ -8318,8 +8319,8 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="v_hdmi_tx_ss_0_LINK_DATA2_OUT" NAME="LINK_DATA2_OUT" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="297000000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_txoutclk"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
@@ -8852,15 +8853,18 @@
         <PORT CLKFREQUENCY="297000000" DIR="O" NAME="tx_video_clk" SIGIS="clk" SIGNAME="vid_phy_controller_0_tx_video_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tpg_0" PORT="ap_clk"/>
-            <CONNECTION INSTANCE="vid_phy_controller_0" PORT="vid_phy_tx_axi4s_aclk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="aclk1"/>
             <CONNECTION INSTANCE="rst_video_clk" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="link_clk"/>
             <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="video_clk"/>
             <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="s_axis_video_aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="148500000" DIR="O" NAME="txoutclk" SIGIS="clk"/>
+        <PORT CLKFREQUENCY="148500000" DIR="O" NAME="txoutclk" SIGIS="clk" SIGNAME="vid_phy_controller_0_txoutclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vid_phy_controller_0" PORT="vid_phy_tx_axi4s_aclk"/>
+            <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="link_clk"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="vid_phy_axi4lite_aclk" SIGIS="clk" SIGNAME="microblaze_0_clk_wiz_1_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_clk_wiz_1" PORT="clk_out1"/>
@@ -8971,7 +8975,11 @@
             <CONNECTION INSTANCE="microblaze_0_clk_wiz_1" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="vid_phy_sb_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" NAME="vid_phy_sb_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_microblaze_0_clk_wiz_1_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="7" NAME="vid_phy_status_sb_tx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="vid_phy_controller_0_vid_phy_status_sb_tx_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="SB_STATUS_IN_tdata"/>
@@ -8983,12 +8991,16 @@
             <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="SB_STATUS_IN_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="297000000" DIR="I" NAME="vid_phy_tx_axi4s_aclk" SIGIS="clk" SIGNAME="vid_phy_controller_0_tx_video_clk">
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="vid_phy_tx_axi4s_aclk" SIGIS="clk" SIGNAME="vid_phy_controller_0_txoutclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="vid_phy_controller_0" PORT="tx_video_clk"/>
+            <CONNECTION INSTANCE="vid_phy_controller_0" PORT="txoutclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="vid_phy_tx_axi4s_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" NAME="vid_phy_tx_axi4s_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="39" NAME="vid_phy_tx_axi4s_ch0_tdata" RIGHT="0" SIGIS="undef" SIGNAME="v_hdmi_tx_ss_0_LINK_DATA0_OUT_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="LINK_DATA0_OUT_tdata"/>
@@ -9076,8 +9088,8 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="v_hdmi_tx_ss_0_LINK_DATA0_OUT" NAME="vid_phy_tx_axi4s_ch0" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="297000000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_txoutclk"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -9095,8 +9107,8 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="v_hdmi_tx_ss_0_LINK_DATA1_OUT" NAME="vid_phy_tx_axi4s_ch1" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="297000000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_txoutclk"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -9114,8 +9126,8 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="v_hdmi_tx_ss_0_LINK_DATA2_OUT" NAME="vid_phy_tx_axi4s_ch2" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="297000000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_txoutclk"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -9168,6 +9180,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="HDMI_TX_EN"/>
             <CONNECTION INSTANCE="v_hdmi_tx_ss_0" PORT="s_axis_video_aresetn"/>
             <CONNECTION INSTANCE="vid_phy_controller_0" PORT="tx_refclk_rdy"/>
+            <CONNECTION INSTANCE="vid_phy_controller_0" PORT="vid_phy_tx_axi4s_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

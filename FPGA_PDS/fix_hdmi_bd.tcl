@@ -32,6 +32,21 @@ connect_intf_if_needed v_hdmi_tx_ss_0/LINK_DATA0_OUT vid_phy_controller_0/vid_ph
 connect_intf_if_needed v_hdmi_tx_ss_0/LINK_DATA1_OUT vid_phy_controller_0/vid_phy_tx_axi4s_ch1
 connect_intf_if_needed v_hdmi_tx_ss_0/LINK_DATA2_OUT vid_phy_controller_0/vid_phy_tx_axi4s_ch2
 
+# The HDMI TX AXI video bridge must reset with the video clock domain.  Leaving
+# s_axis_video_aresetn tied high can let the bridge miss the first TPG frame and
+# stay unlocked/underflowing even though the TPG registers read back correctly.
+set hdmi_axis_rst [get_bd_pins v_hdmi_tx_ss_0/s_axis_video_aresetn]
+set video_rst [get_bd_pins rst_video_clk/peripheral_aresetn]
+set old_rst_net [get_bd_nets -quiet -of_objects $hdmi_axis_rst]
+if {[llength $old_rst_net] != 0} {
+    disconnect_bd_net $old_rst_net $hdmi_axis_rst
+}
+set video_rst_net [get_bd_nets -quiet -of_objects $video_rst]
+if {[llength $video_rst_net] == 0} {
+    error "Missing video reset net on rst_video_clk/peripheral_aresetn"
+}
+connect_bd_net $video_rst $hdmi_axis_rst
+
 if {[llength [get_bd_intf_ports -quiet TX_DDC_OUT]] == 0} {
     make_bd_intf_pins_external [get_bd_intf_pins v_hdmi_tx_ss_0/DDC_OUT]
     set ddc_port [get_bd_intf_ports -quiet DDC_OUT_0]

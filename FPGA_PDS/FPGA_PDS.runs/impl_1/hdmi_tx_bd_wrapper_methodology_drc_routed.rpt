@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Mon Jun  1 20:45:25 2026
+| Date         : Tue Jun  2 16:58:50 2026
 | Host         : pop-os running 64-bit Pop!_OS 24.04 LTS
 | Command      : report_methodology -file hdmi_tx_bd_wrapper_methodology_drc_routed.rpt -pb hdmi_tx_bd_wrapper_methodology_drc_routed.pb -rpx hdmi_tx_bd_wrapper_methodology_drc_routed.rpx
 | Design       : hdmi_tx_bd_wrapper
@@ -23,29 +23,23 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 29
-+-----------+------------------+-------------------------------------------------------------------------------------------------------+--------+
-| Rule      | Severity         | Description                                                                                           | Checks |
-+-----------+------------------+-------------------------------------------------------------------------------------------------------+--------+
-| TIMING-7  | Critical Warning | No common node between related clocks                                                                 | 1      |
-| LUTAR-1   | Warning          | LUT drives async reset alert                                                                          | 13     |
-| TIMING-9  | Warning          | Unknown CDC Logic                                                                                     | 1      |
-| TIMING-10 | Warning          | Missing property on synchronizer                                                                      | 1      |
-| TIMING-18 | Warning          | Missing input or output delay                                                                         | 2      |
-| TIMING-47 | Warning          | False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks | 6      |
-| XDCC-7    | Warning          | Scoped Clock constraint overwritten on the same source                                                | 1      |
-| CLKC-11   | Advisory         | MMCME4 divide could be done by BUFG_GT                                                                | 1      |
-| CLKC-40   | Advisory         | Substitute PLLE4 for MMCME4 check                                                                     | 1      |
-| CLKC-56   | Advisory         | MMCME4 with global clock driver has no LOC                                                            | 2      |
-+-----------+------------------+-------------------------------------------------------------------------------------------------------+--------+
+             Checks found: 28
++-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
+| Rule      | Severity | Description                                                                                           | Checks |
++-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
+| LUTAR-1   | Warning  | LUT drives async reset alert                                                                          | 13     |
+| TIMING-9  | Warning  | Unknown CDC Logic                                                                                     | 1      |
+| TIMING-10 | Warning  | Missing property on synchronizer                                                                      | 1      |
+| TIMING-18 | Warning  | Missing input or output delay                                                                         | 2      |
+| TIMING-47 | Warning  | False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks | 6      |
+| XDCC-7    | Warning  | Scoped Clock constraint overwritten on the same source                                                | 1      |
+| CLKC-11   | Advisory | MMCME4 divide could be done by BUFG_GT                                                                | 1      |
+| CLKC-40   | Advisory | Substitute PLLE4 for MMCME4 check                                                                     | 1      |
+| CLKC-56   | Advisory | MMCME4 with global clock driver has no LOC                                                            | 2      |
++-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
-TIMING-7#1 Critical Warning
-No common node between related clocks  
-The clocks clkout2 and txoutclk are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clkout2] -to [get_clocks txoutclk]
-Related violations: <none>
-
 LUTAR-1#1 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Use_UART.execute_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.

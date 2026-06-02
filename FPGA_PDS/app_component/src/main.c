@@ -21,6 +21,7 @@
  * stdout is the MDM JTAG-UART -> view in the Vitis "JTAG UART" terminal.
  */
 #include <stdio.h>
+#include <string.h>
 #include "xparameters.h"
 #include "xil_printf.h"
 #include "xstatus.h"
@@ -57,10 +58,22 @@ static u8          RstGpioReady = FALSE;
 
 static volatile u8 TxRestartColorbar = FALSE;
 static volatile u8 TxBusy            = TRUE;
+static volatile u8 TxStreamUpPending = FALSE;  /* finish video start in main loop */
+static volatile u8 TxWaitingForLink  = FALSE;
+static volatile u8 TxVideoStarted    = FALSE;
 static XTpg_PatternId Pattern = XTPG_BKGND_COLOR_BARS;
 
 /* diagnostics: did the VPHY/HDMI interrupt callbacks ever fire? */
 static volatile u32 g_txinit = 0, g_txready = 0, g_streamup = 0, g_streamdown = 0;
+static volatile u32 g_brdgunlock = 0, g_brdgof = 0, g_brdguf = 0;
+
+static void FatalLoop(const char *msg)
+{
+    while (1) {
+        xil_printf("FATAL: %s\r\n", msg);
+        usleep(1000000);
+    }
+}
 
 /* ---- clock chip reset: clean low->high pulse so its PLL restarts ---- */
 static void idt_release_reset(void)
@@ -92,6 +105,49 @@ static void ConfigTpgColorbar(void)
     XV_tpg_Set_enableInput(&Tpg, FALSE);   /* not pass-through */
     XV_tpg_EnableAutoRestart(&Tpg);
     XV_tpg_Start(&Tpg);
+
+    xil_printf("TPG: start %lux%lu cf=%lu pat=%lu | rb h=%lu w=%lu bg=%lu "
+               "ready=%lu idle=%lu done=%lu ctrl=0x%lx\r\n",
+               (unsigned long)s->Timing.HActive,
+               (unsigned long)s->Timing.VActive,
+               (unsigned long)s->ColorFormatId,
+               (unsigned long)Pattern,
+               (unsigned long)XV_tpg_Get_height(&Tpg),
+               (unsigned long)XV_tpg_Get_width(&Tpg),
+               (unsigned long)XV_tpg_Get_bckgndId(&Tpg),
+               (unsigned long)XV_tpg_IsReady(&Tpg),
+               (unsigned long)XV_tpg_IsIdle(&Tpg),
+               (unsigned long)XV_tpg_IsDone(&Tpg),
+               (unsigned long)XV_tpg_ReadReg(Tpg.Config.BaseAddress,
+                                             XV_TPG_CTRL_ADDR_AP_CTRL));
+}
+
+static void ConfigureTxInfoframes(void)
+{
+    XVidC_VideoStream *s = XV_HdmiTxSs_GetVideoStream(&HdmiTxSs);
+    XHdmiC_AVI_InfoFrame *avi = XV_HdmiTxSs_GetAviInfoframe(&HdmiTxSs);
+    XHdmiC_VSIF *vsif = XV_HdmiTxSs_GetVSIF(&HdmiTxSs);
+
+    memset(avi, 0, sizeof(*avi));
+    memset(vsif, 0, sizeof(*vsif));
+
+    avi->Version = 2;
+    avi->ColorSpace = XV_HdmiC_XVidC_To_IfColorformat(s->ColorFormatId);
+    avi->VIC = HdmiTxSs.HdmiTxPtr->Stream.Vic;
+}
+
+static u32 HdmiTxPioIn(void)
+{
+    return XV_HdmiTx_ReadReg(HdmiTxSs.HdmiTxPtr->Config.BaseAddress,
+                             XV_HDMITX_PIO_IN_OFFSET);
+}
+
+static void ReleaseHdmiTxResets(void)
+{
+    XV_HdmiTxSs_SYSRST(&HdmiTxSs, FALSE);
+    XV_HdmiTxSs_VRST(&HdmiTxSs, FALSE);
+    XV_HdmiTxSs_TXCore_LRST(&HdmiTxSs, FALSE);
+    XV_HdmiTxSs_TXCore_VRST(&HdmiTxSs, FALSE);
 }
 
 /* ---- HDMI TX SS callbacks ---- */
@@ -113,13 +169,11 @@ static void TxConnectCallback(void *ref)
 
 static void TxStreamUpCallback(void *ref)
 {
-    XV_HdmiTxSs *p = (XV_HdmiTxSs *)ref;
+    (void)ref;
     g_streamup++;
-    xil_printf("TX: stream UP -> GT TX locked, starting colorbar\r\n");
-    XV_HdmiTxSS_SetHdmiMode(p);
-    XV_HdmiTxSs_AudioMute(p, TRUE);
-    ConfigTpgColorbar();
-    XV_HdmiTxSs_StreamStart(p);
+    xil_printf("TX: stream UP -> GT TX locked\r\n");
+    if (!TxVideoStarted)
+        TxStreamUpPending = TRUE;
     TxBusy = FALSE;
 }
 
@@ -127,6 +181,35 @@ static void TxStreamDownCallback(void *ref)
 {
     (void)ref;
     g_streamdown++;
+    /* Re-arm: the stream dropped after we started it. Without clearing this
+     * latch the main loop's `if (!TxVideoStarted)` guard blocks every retry,
+     * so the link stays down forever. Let a subsequent stream-up / TXREADY
+     * re-run ConfigTpgColorbar + StreamStart. */
+    TxVideoStarted = FALSE;
+}
+
+static void TxBrdgUnlockedCallback(void *ref)
+{
+    (void)ref;
+    g_brdgunlock++;
+    xil_printf("TX: bridge unlocked (video input not locked)\r\n");
+}
+
+static void TxBrdgOverflowCallback(void *ref)
+{
+    (void)ref;
+    g_brdgof++;
+    xil_printf("TX: bridge overflow\r\n");
+}
+
+static void TxBrdgUnderflowCallback(void *ref)
+{
+    (void)ref;
+    /* Count only -- do NOT xil_printf here. While the link is down / video is
+     * not flowing, this fires every line and the slow UART print in the ISR
+     * livelocks the CPU (main loop never runs, no heartbeat, no recovery).
+     * The underflow total is reported by the heartbeat as brdg .../uf. */
+    g_brdguf++;
 }
 
 /* ---- VPHY callbacks ---- */
@@ -136,7 +219,13 @@ static void VphyHdmiTxInitCallback(void *ref)
     g_txinit++;
     XV_HdmiTxSs_RefClockChangeInit(&HdmiTxSs);
 }
-static void VphyHdmiTxReadyCallback(void *ref) { (void)ref; g_txready++; }
+static void VphyHdmiTxReadyCallback(void *ref)
+{
+    (void)ref;
+    g_txready++;
+    xil_printf("TX: VPHY TXREADY -> scheduling video start\r\n");
+    TxStreamUpPending = TRUE;
+}
 
 /* ---- start colorbar at a given mode (reprograms the clock chip) ----
  *
@@ -153,6 +242,7 @@ static void EnableColorBar(XVidC_VideoMode mode)
     u32 TmdsClock;
 
     TxBusy = TRUE;
+    TxVideoStarted = FALSE;
 
     /* Disable TX TMDS clock while we reconfigure. */
     XVphy_Clkout1OBufTdsEnable(&Vphy, XVPHY_DIR_TX, FALSE);
@@ -170,6 +260,7 @@ static void EnableColorBar(XVidC_VideoMode mode)
                              s->ColorFormatId) == XST_FAILURE) {
         xil_printf("TX: SetHdmiTxParam failed for this mode\r\n");
         TxBusy = FALSE;
+        TxWaitingForLink = FALSE;
         return;
     }
 
@@ -197,6 +288,7 @@ static void EnableColorBar(XVidC_VideoMode mode)
      * its clock program is a real nothing->TmdsClock change. */
     usleep(50000);   /* let the reprogrammed clock settle first */
     XVphy_ClkDetFreqReset(&Vphy, 0, XVPHY_DIR_TX);
+    TxWaitingForLink = TRUE;
 
     /* One-shot: let the PLL settle, dump the chip regs, and report the GT
      * refclk the VPHY clock-detector now sees (separates "clock not reaching
@@ -297,14 +389,14 @@ int main(void)
 
     /* 2) Interrupt controller. */
     xil_printf("step2: interrupts...\r\n");
-    if (SetupInterrupts() != XST_SUCCESS) return XST_FAILURE;
+    if (SetupInterrupts() != XST_SUCCESS) FatalLoop("interrupt setup failed");
 
     /* 3) HDMI TX subsystem. */
     xil_printf("step3: HDMI TX SS...\r\n");
     XV_HdmiTxSs_Config *txcfg = XV_HdmiTxSs_LookupConfig(HDMITX_BASE);
     if (!txcfg || XV_HdmiTxSs_CfgInitialize(&HdmiTxSs, txcfg, txcfg->BaseAddress)
                   != XST_SUCCESS) {
-        xil_printf("HDMI TX SS init failed\r\n"); return XST_FAILURE;
+        FatalLoop("HDMI TX SS init failed");
     }
     XV_HdmiTxSs_SetCallback(&HdmiTxSs, XV_HDMITXSS_HANDLER_CONNECT,
                             (void *)TxConnectCallback, &HdmiTxSs);
@@ -312,12 +404,19 @@ int main(void)
                             (void *)TxStreamUpCallback, &HdmiTxSs);
     XV_HdmiTxSs_SetCallback(&HdmiTxSs, XV_HDMITXSS_HANDLER_STREAM_DOWN,
                             (void *)TxStreamDownCallback, &HdmiTxSs);
+    XV_HdmiTxSs_SetCallback(&HdmiTxSs, XV_HDMITXSS_HANDLER_BRDGUNLOCK,
+                            (void *)TxBrdgUnlockedCallback, &HdmiTxSs);
+    XV_HdmiTxSs_SetCallback(&HdmiTxSs, XV_HDMITXSS_HANDLER_BRDGOVERFLOW,
+                            (void *)TxBrdgOverflowCallback, &HdmiTxSs);
+    XV_HdmiTxSs_SetCallback(&HdmiTxSs, XV_HDMITXSS_HANDLER_BRDGUNDERFLOW,
+                            (void *)TxBrdgUnderflowCallback, &HdmiTxSs);
+    XV_HdmiTxSS_MaskDisable(&HdmiTxSs);
 
     /* 4) Video PHY. */
     xil_printf("step4: VPHY...\r\n");
     XVphy_Config *vcfg = XVphy_LookupConfig(VPHY_BASE);
     if (!vcfg || XVphy_Hdmi_CfgInitialize(&Vphy, 0, vcfg) != XST_SUCCESS) {
-        xil_printf("VPHY init failed\r\n"); return XST_FAILURE;
+        FatalLoop("VPHY init failed");
     }
     XVphy_SetHdmiCallback(&Vphy, XVPHY_HDMI_HANDLER_TXINIT,
                           (void *)VphyHdmiTxInitCallback, &Vphy);
@@ -329,7 +428,7 @@ int main(void)
     XV_tpg_Config *tcfg = XV_tpg_LookupConfig(TPG_BASE);
     if (!tcfg || XV_tpg_CfgInitialize(&Tpg, tcfg, tcfg->BaseAddress)
                  != XST_SUCCESS) {
-        xil_printf("TPG init failed\r\n"); return XST_FAILURE;
+        FatalLoop("TPG init failed");
     }
 
     /* 6) Go. */
@@ -344,17 +443,85 @@ int main(void)
             EnableColorBar(XVIDC_VM_1920x1080_60_P);
         }
 
+        /* Finish colorbar start outside the HDMI TX interrupt context.  The
+         * reference also enables the TX TMDS clock from the main loop after
+         * stream-up; keeping TPG writes here makes the readback deterministic
+         * and avoids doing a burst of AXI-Lite accesses from the ISR. */
+        if (TxStreamUpPending) {
+            TxStreamUpPending = FALSE;
+            if (!TxVideoStarted) {
+                XV_HdmiTxSS_SetHdmiMode(&HdmiTxSs);
+                XV_HdmiTxSs_AudioMute(&HdmiTxSs, TRUE);
+                ConfigureTxInfoframes();
+                XV_HdmiTxSS_MaskDisable(&HdmiTxSs);
+                ReleaseHdmiTxResets();
+                ConfigTpgColorbar();
+                XV_HdmiTxSs_StreamStart(&HdmiTxSs);
+                XVphy_Clkout1OBufTdsEnable(&Vphy, XVPHY_DIR_TX, TRUE);
+                TxVideoStarted = TRUE;
+                xil_printf("TX: HDMI stream started from VPHY-ready path, "
+                           "video mask disabled, TMDS clock output enabled\r\n");
+            }
+        }
+
         /* Heartbeat + live state so the terminal is never silent.
          * txRefHz = VPHY clock-detector reading; txinit/ready = VPHY ISR
          * callbacks fired; up = HDMI stream-up. All-zero callbacks => the
          * VPHY interrupt isn't being delivered. */
         u32 txRefHz = XVphy_ClkDetGetRefClkFreqHz(&Vphy, XVPHY_DIR_TX);
         u32 idtLol = RstGpioReady ? XGpio_DiscreteRead(&RstGpio, 2) & 0x1 : 0xff;
-        xil_printf("hb #%u: conn=%d busy=%d txRefHz=%lu lol=%lu | txinit=%lu ready=%lu up=%lu down=%lu\r\n",
+        u32 pioIn = HdmiTxPioIn();
+        xil_printf("hb #%u: conn=%d busy=%d txRefHz=%lu lol=%lu | "
+                   "txinit=%lu ready=%lu up=%lu down=%lu | "
+                   "brdg unlock/of/uf=%lu/%lu/%lu mask=%u | "
+                   "pio=0x%lx lnk=%u vid=%u brdgLock=%u ppp=%lu\r\n",
                    hb++, (int)HdmiTxSs.IsStreamConnected, (int)TxBusy,
                    (unsigned long)txRefHz, (unsigned long)idtLol, (unsigned long)g_txinit,
                    (unsigned long)g_txready, (unsigned long)g_streamup,
-                   (unsigned long)g_streamdown);
+                   (unsigned long)g_streamdown,
+                   (unsigned long)g_brdgunlock, (unsigned long)g_brdgof,
+                   (unsigned long)g_brdguf,
+                   (unsigned)XV_HdmiTxSS_IsMasked(&HdmiTxSs),
+                   (unsigned long)pioIn,
+                   (unsigned)((pioIn & XV_HDMITX_PIO_IN_LNK_RDY_MASK) != 0),
+                   (unsigned)((pioIn & XV_HDMITX_PIO_IN_VID_RDY_MASK) != 0),
+                   (unsigned)((pioIn & XV_HDMITX_PIO_IN_BRDG_LOCKED_MASK) != 0),
+                   (unsigned long)((pioIn >> XV_HDMITX_PIO_IN_PPP_SHIFT) &
+                                   XV_HDMITX_PIO_IN_PPP_MASK));
+
+        /* Re-kick the GT TX out of IDLE whenever we're connected but the HDMI
+         * link is NOT ready. Gate on the actual LNK_RDY PIO bit, not on the
+         * latches (g_streamup / TxVideoStarted): the GT reaches READY once,
+         * a spurious 2nd TXINIT knocks it back to "TX state: idle", and it
+         * emits no further events -- so any latch-based gate gets stuck and
+         * never recovers. LNK_RDY=0 while connected is the ground truth that
+         * the link is down and needs a clock-detector re-kick. */
+        /* Decisive probe: HW QPLL0 lock bit vs the driver's SW TxState.
+         *   qpll0=1 + txstate<4  -> PLL is locked but the driver's state
+         *                           machine isn't advancing (interrupt/SW
+         *                           issue), recovery must re-drive events.
+         *   qpll0=0              -> PLL genuinely not locked -> GT refclk
+         *                           quality/config (8T49N241 -> GT path). */
+        u32 qpll0Lock =
+            (XVphy_IsPllLocked(&Vphy, 0, XVPHY_CHANNEL_ID_CMN0) == XST_SUCCESS);
+        u32 txState =
+            Vphy.Quads[0].Plls[XVPHY_CH2IDX(XVPHY_CHANNEL_ID_CH1)].TxState;
+        xil_printf("    gt: qpll0Lock=%lu txState=%lu (0=idle,1=lock,2=rst,"
+                   "3=align,4=ready)\r\n",
+                   (unsigned long)qpll0Lock, (unsigned long)txState);
+
+        u8 lnkRdy = (pioIn & XV_HDMITX_PIO_IN_LNK_RDY_MASK) != 0;
+        if (HdmiTxSs.IsStreamConnected && !lnkRdy && !TxBusy &&
+            (hb % 4 == 0)) {
+            /* Full re-bring-up, not a weak clkdet kick: the only thing that
+             * ever drove the GT to READY was EnableColorBar (it re-runs
+             * SetHdmiTxParam to reconfigure the QPLL/MMCM + GT TX and
+             * reprograms the clock chip). A bare ClkDetFreqReset cannot pull
+             * a GT that is sitting in "TX state: idle" back to READY. */
+            xil_printf("TX: link down (GT idle); full re-bring-up\r\n");
+            TxVideoStarted = FALSE;
+            TxRestartColorbar = TRUE;
+        }
 
         /* Every few beats, dump full VPHY/GT state (PLL lock, clk detector,
          * line rate) once the cable is connected. This is the definitive

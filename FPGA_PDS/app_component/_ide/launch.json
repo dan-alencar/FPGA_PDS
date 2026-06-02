@@ -20,14 +20,14 @@
 			"pathMap": [],
 			"targetSetup": {
 				"resetSystem": true,
-				"programDevice": false,
+				"programDevice": true,
 				"partialBitstream": false,
 				"skipRevisionCheck": false,
 				"device": {
-					"plDevice": "Avnet MiniZed V1 1234-oj1A/2-xcau15p",
-					"psDevice": "Avnet MiniZed V1 1234-oj1A/undefined-undefined"
+					"plDevice": "Auto Detect",
+					"psDevice": "Auto Detect"
 				},
-				"bitstreamFile": "${workspaceFolder}/app_component/_ide/bitstream/hdmi_tx_bd_wrapper.bit",
+				"bitstreamFile": "${workspaceFolder}/FPGA_PDS.runs/impl_1/hdmi_tx_bd_wrapper.bit",
 				"downloadElf": [
 					{
 						"core": "microblaze_0",
