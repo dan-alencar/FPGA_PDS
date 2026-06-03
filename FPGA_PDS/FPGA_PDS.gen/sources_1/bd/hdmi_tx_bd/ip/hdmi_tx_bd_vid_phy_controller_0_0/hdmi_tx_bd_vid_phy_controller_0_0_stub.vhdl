@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Wed Jan 21 15:09:32 2026
--- Host        : dan-alencar running 64-bit Linux Mint 22.2
--- Command     : write_vhdl -force -mode synth_stub -rename_top hdmi_tx_bd_vid_phy_controller_0_0 -prefix
---               hdmi_tx_bd_vid_phy_controller_0_0_ hdmi_tx_bd_vid_phy_controller_0_0_stub.vhdl
+-- Date        : Tue Jun  2 22:28:47 2026
+-- Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
+-- Command     : write_vhdl -force -mode synth_stub
+--               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0_stub.vhdl
 -- Design      : hdmi_tx_bd_vid_phy_controller_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcau15p-ffvb676-2-e
@@ -20,10 +20,19 @@ entity hdmi_tx_bd_vid_phy_controller_0_0 is
     tx_video_clk : out STD_LOGIC;
     tx_tmds_clk_p : out STD_LOGIC;
     tx_tmds_clk_n : out STD_LOGIC;
+    rx_tmds_clk : out STD_LOGIC;
+    rx_video_clk : out STD_LOGIC;
+    rx_tmds_clk_p : out STD_LOGIC;
+    rx_tmds_clk_n : out STD_LOGIC;
     mgtrefclk0_pad_p_in : in STD_LOGIC;
     mgtrefclk0_pad_n_in : in STD_LOGIC;
+    mgtrefclk1_pad_p_in : in STD_LOGIC;
+    mgtrefclk1_pad_n_in : in STD_LOGIC;
+    phy_rxn_in : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    phy_rxp_in : in STD_LOGIC_VECTOR ( 2 downto 0 );
     phy_txn_out : out STD_LOGIC_VECTOR ( 2 downto 0 );
     phy_txp_out : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    rxoutclk : out STD_LOGIC;
     txoutclk : out STD_LOGIC;
     vid_phy_tx_axi4s_aclk : in STD_LOGIC;
     vid_phy_tx_axi4s_aresetn : in STD_LOGIC;
@@ -39,12 +48,29 @@ entity hdmi_tx_bd_vid_phy_controller_0_0 is
     vid_phy_tx_axi4s_ch2_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     vid_phy_tx_axi4s_ch2_tvalid : in STD_LOGIC;
     vid_phy_tx_axi4s_ch2_tready : out STD_LOGIC;
+    vid_phy_rx_axi4s_ch0_tdata : out STD_LOGIC_VECTOR ( 39 downto 0 );
+    vid_phy_rx_axi4s_ch0_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
+    vid_phy_rx_axi4s_ch0_tvalid : out STD_LOGIC;
+    vid_phy_rx_axi4s_ch0_tready : in STD_LOGIC;
+    vid_phy_rx_axi4s_aclk : in STD_LOGIC;
+    vid_phy_rx_axi4s_aresetn : in STD_LOGIC;
+    vid_phy_rx_axi4s_ch1_tdata : out STD_LOGIC_VECTOR ( 39 downto 0 );
+    vid_phy_rx_axi4s_ch1_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
+    vid_phy_rx_axi4s_ch1_tvalid : out STD_LOGIC;
+    vid_phy_rx_axi4s_ch1_tready : in STD_LOGIC;
+    vid_phy_rx_axi4s_ch2_tdata : out STD_LOGIC_VECTOR ( 39 downto 0 );
+    vid_phy_rx_axi4s_ch2_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
+    vid_phy_rx_axi4s_ch2_tvalid : out STD_LOGIC;
+    vid_phy_rx_axi4s_ch2_tready : in STD_LOGIC;
     irq : out STD_LOGIC;
     vid_phy_sb_aclk : in STD_LOGIC;
     vid_phy_sb_aresetn : in STD_LOGIC;
     vid_phy_status_sb_tx_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
     vid_phy_status_sb_tx_tvalid : out STD_LOGIC;
     vid_phy_status_sb_tx_tready : in STD_LOGIC;
+    vid_phy_status_sb_rx_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    vid_phy_status_sb_rx_tvalid : out STD_LOGIC;
+    vid_phy_status_sb_rx_tready : in STD_LOGIC;
     vid_phy_axi4lite_awaddr : in STD_LOGIC_VECTOR ( 9 downto 0 );
     vid_phy_axi4lite_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     vid_phy_axi4lite_awvalid : in STD_LOGIC;
@@ -72,7 +98,7 @@ entity hdmi_tx_bd_vid_phy_controller_0_0 is
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of hdmi_tx_bd_vid_phy_controller_0_0 : entity is "hdmi_tx_bd_vid_phy_controller_0_0,hdmi_tx_bd_vid_phy_controller_0_0_top,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of hdmi_tx_bd_vid_phy_controller_0_0 : entity is "hdmi_tx_bd_vid_phy_controller_0_0,hdmi_tx_bd_vid_phy_controller_0_0_top,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=vid_phy_controller,x_ipVersion=2.2,x_ipCoreRevision=22,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_COMPONENT_NAME=hdmi_tx_bd_vid_phy_controller_0_0,C_FAMILY=kintexuplus,C_DEVICE=xcau15p,C_SILICON_REVISION=0,C_SPEEDGRADE=-2,C_SupportLevel=1,C_TransceiverControl=false,c_sub_core_name=hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper,C_Tx_Protocol=1,C_Tx_Dp_Protocol=0,C_Rx_Protocol=3,C_Rx_Dp_Protocol=0,C_Tx_No_Of_Channels=3,C_Rx_No_Of_Channels=3,C_TX_PLL_SELECTION=6,C_TX_REFCLK_SEL=0,C_RX_PLL_SELECTION=0,C_RX_REFCLK_SEL=1,C_NIDRU_REFCLK_SEL=0,C_vid_phy_tx_axi4s_ch_TDATA_WIDTH=40,C_vid_phy_tx_axi4s_ch_INT_TDATA_WIDTH=40,C_vid_phy_tx_axi4s_ch_TUSER_WIDTH=1,C_vid_phy_rx_axi4s_ch_TDATA_WIDTH=40,C_vid_phy_rx_axi4s_ch_INT_TDATA_WIDTH=40,C_vid_phy_rx_axi4s_ch_TUSER_WIDTH=1,C_vid_phy_control_sb_tx_TDATA_WIDTH=1,C_vid_phy_status_sb_tx_TDATA_WIDTH=8,C_vid_phy_control_sb_rx_TDATA_WIDTH=1,C_vid_phy_status_sb_rx_TDATA_WIDTH=1,C_vid_phy_axi4lite_DATA_WIDTH=32,C_vid_phy_axi4lite_ADDR_WIDTH=10,C_NIDRU=0,Tx_Buffer_Bypass=1,C_Txrefclk_Rdy_Invert=0,C_INPUT_PIXELS_PER_CLOCK=4,C_Hdmi_Fast_Switch=1,C_Err_Irq_En=0,C_Use_GT_CH4_HDMI=0,C_INT_WIDTH=0,C_TX_TDATA_WIDTH=40,C_RX_TDATA_WIDTH=40}";
+  attribute CORE_GENERATION_INFO of hdmi_tx_bd_vid_phy_controller_0_0 : entity is "hdmi_tx_bd_vid_phy_controller_0_0,hdmi_tx_bd_vid_phy_controller_0_0_top,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=vid_phy_controller,x_ipVersion=2.2,x_ipCoreRevision=22,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_COMPONENT_NAME=hdmi_tx_bd_vid_phy_controller_0_0,C_FAMILY=kintexuplus,C_DEVICE=xcau15p,C_SILICON_REVISION=0,C_SPEEDGRADE=-2,C_SupportLevel=1,C_TransceiverControl=false,c_sub_core_name=hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper,C_Tx_Protocol=1,C_Tx_Dp_Protocol=0,C_Rx_Protocol=1,C_Rx_Dp_Protocol=0,C_Tx_No_Of_Channels=3,C_Rx_No_Of_Channels=3,C_TX_PLL_SELECTION=6,C_TX_REFCLK_SEL=0,C_RX_PLL_SELECTION=0,C_RX_REFCLK_SEL=1,C_NIDRU_REFCLK_SEL=0,C_vid_phy_tx_axi4s_ch_TDATA_WIDTH=20,C_vid_phy_tx_axi4s_ch_INT_TDATA_WIDTH=20,C_vid_phy_tx_axi4s_ch_TUSER_WIDTH=1,C_vid_phy_rx_axi4s_ch_TDATA_WIDTH=20,C_vid_phy_rx_axi4s_ch_INT_TDATA_WIDTH=20,C_vid_phy_rx_axi4s_ch_TUSER_WIDTH=1,C_vid_phy_control_sb_tx_TDATA_WIDTH=1,C_vid_phy_status_sb_tx_TDATA_WIDTH=8,C_vid_phy_control_sb_rx_TDATA_WIDTH=1,C_vid_phy_status_sb_rx_TDATA_WIDTH=8,C_vid_phy_axi4lite_DATA_WIDTH=32,C_vid_phy_axi4lite_ADDR_WIDTH=10,C_NIDRU=1,Tx_Buffer_Bypass=1,C_Txrefclk_Rdy_Invert=0,C_INPUT_PIXELS_PER_CLOCK=2,C_Hdmi_Fast_Switch=1,C_Err_Irq_En=0,C_Use_GT_CH4_HDMI=0,C_INT_WIDTH=20,C_TX_TDATA_WIDTH=40,C_RX_TDATA_WIDTH=40}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of hdmi_tx_bd_vid_phy_controller_0_0 : entity is "yes";
 end hdmi_tx_bd_vid_phy_controller_0_0;
@@ -81,7 +107,7 @@ architecture stub of hdmi_tx_bd_vid_phy_controller_0_0 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "tx_refclk_rdy,tx_tmds_clk,tx_video_clk,tx_tmds_clk_p,tx_tmds_clk_n,mgtrefclk0_pad_p_in,mgtrefclk0_pad_n_in,phy_txn_out[2:0],phy_txp_out[2:0],txoutclk,vid_phy_tx_axi4s_aclk,vid_phy_tx_axi4s_aresetn,vid_phy_tx_axi4s_ch0_tdata[39:0],vid_phy_tx_axi4s_ch0_tuser[0:0],vid_phy_tx_axi4s_ch0_tvalid,vid_phy_tx_axi4s_ch0_tready,vid_phy_tx_axi4s_ch1_tdata[39:0],vid_phy_tx_axi4s_ch1_tuser[0:0],vid_phy_tx_axi4s_ch1_tvalid,vid_phy_tx_axi4s_ch1_tready,vid_phy_tx_axi4s_ch2_tdata[39:0],vid_phy_tx_axi4s_ch2_tuser[0:0],vid_phy_tx_axi4s_ch2_tvalid,vid_phy_tx_axi4s_ch2_tready,irq,vid_phy_sb_aclk,vid_phy_sb_aresetn,vid_phy_status_sb_tx_tdata[7:0],vid_phy_status_sb_tx_tvalid,vid_phy_status_sb_tx_tready,vid_phy_axi4lite_awaddr[9:0],vid_phy_axi4lite_awprot[2:0],vid_phy_axi4lite_awvalid,vid_phy_axi4lite_awready,vid_phy_axi4lite_wdata[31:0],vid_phy_axi4lite_wstrb[3:0],vid_phy_axi4lite_wvalid,vid_phy_axi4lite_wready,vid_phy_axi4lite_bresp[1:0],vid_phy_axi4lite_bvalid,vid_phy_axi4lite_bready,vid_phy_axi4lite_araddr[9:0],vid_phy_axi4lite_arprot[2:0],vid_phy_axi4lite_arvalid,vid_phy_axi4lite_arready,vid_phy_axi4lite_rdata[31:0],vid_phy_axi4lite_rresp[1:0],vid_phy_axi4lite_rvalid,vid_phy_axi4lite_rready,vid_phy_axi4lite_aclk,vid_phy_axi4lite_aresetn,drpclk";
+  attribute black_box_pad_pin of stub : architecture is "tx_refclk_rdy,tx_tmds_clk,tx_video_clk,tx_tmds_clk_p,tx_tmds_clk_n,rx_tmds_clk,rx_video_clk,rx_tmds_clk_p,rx_tmds_clk_n,mgtrefclk0_pad_p_in,mgtrefclk0_pad_n_in,mgtrefclk1_pad_p_in,mgtrefclk1_pad_n_in,phy_rxn_in[2:0],phy_rxp_in[2:0],phy_txn_out[2:0],phy_txp_out[2:0],rxoutclk,txoutclk,vid_phy_tx_axi4s_aclk,vid_phy_tx_axi4s_aresetn,vid_phy_tx_axi4s_ch0_tdata[39:0],vid_phy_tx_axi4s_ch0_tuser[0:0],vid_phy_tx_axi4s_ch0_tvalid,vid_phy_tx_axi4s_ch0_tready,vid_phy_tx_axi4s_ch1_tdata[39:0],vid_phy_tx_axi4s_ch1_tuser[0:0],vid_phy_tx_axi4s_ch1_tvalid,vid_phy_tx_axi4s_ch1_tready,vid_phy_tx_axi4s_ch2_tdata[39:0],vid_phy_tx_axi4s_ch2_tuser[0:0],vid_phy_tx_axi4s_ch2_tvalid,vid_phy_tx_axi4s_ch2_tready,vid_phy_rx_axi4s_ch0_tdata[39:0],vid_phy_rx_axi4s_ch0_tuser[0:0],vid_phy_rx_axi4s_ch0_tvalid,vid_phy_rx_axi4s_ch0_tready,vid_phy_rx_axi4s_aclk,vid_phy_rx_axi4s_aresetn,vid_phy_rx_axi4s_ch1_tdata[39:0],vid_phy_rx_axi4s_ch1_tuser[0:0],vid_phy_rx_axi4s_ch1_tvalid,vid_phy_rx_axi4s_ch1_tready,vid_phy_rx_axi4s_ch2_tdata[39:0],vid_phy_rx_axi4s_ch2_tuser[0:0],vid_phy_rx_axi4s_ch2_tvalid,vid_phy_rx_axi4s_ch2_tready,irq,vid_phy_sb_aclk,vid_phy_sb_aresetn,vid_phy_status_sb_tx_tdata[7:0],vid_phy_status_sb_tx_tvalid,vid_phy_status_sb_tx_tready,vid_phy_status_sb_rx_tdata[7:0],vid_phy_status_sb_rx_tvalid,vid_phy_status_sb_rx_tready,vid_phy_axi4lite_awaddr[9:0],vid_phy_axi4lite_awprot[2:0],vid_phy_axi4lite_awvalid,vid_phy_axi4lite_awready,vid_phy_axi4lite_wdata[31:0],vid_phy_axi4lite_wstrb[3:0],vid_phy_axi4lite_wvalid,vid_phy_axi4lite_wready,vid_phy_axi4lite_bresp[1:0],vid_phy_axi4lite_bvalid,vid_phy_axi4lite_bready,vid_phy_axi4lite_araddr[9:0],vid_phy_axi4lite_arprot[2:0],vid_phy_axi4lite_arvalid,vid_phy_axi4lite_arready,vid_phy_axi4lite_rdata[31:0],vid_phy_axi4lite_rresp[1:0],vid_phy_axi4lite_rvalid,vid_phy_axi4lite_rready,vid_phy_axi4lite_aclk,vid_phy_axi4lite_aresetn,drpclk";
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of tx_tmds_clk : signal is "xilinx.com:signal:clock:1.0 tx_tmds_clk CLK";
   attribute X_INTERFACE_MODE : string;
@@ -97,39 +123,84 @@ architecture stub of hdmi_tx_bd_vid_phy_controller_0_0 is
   attribute X_INTERFACE_INFO of tx_tmds_clk_n : signal is "xilinx.com:signal:clock:1.0 tx_tmds_clk_n CLK";
   attribute X_INTERFACE_MODE of tx_tmds_clk_n : signal is "master";
   attribute X_INTERFACE_PARAMETER of tx_tmds_clk_n : signal is "XIL_INTERFACENAME tx_tmds_clk_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_tmds_clk_n, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of rx_tmds_clk : signal is "xilinx.com:signal:clock:1.0 rx_tmds_clk CLK";
+  attribute X_INTERFACE_MODE of rx_tmds_clk : signal is "master";
+  attribute X_INTERFACE_PARAMETER of rx_tmds_clk : signal is "XIL_INTERFACENAME rx_tmds_clk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rx_tmds_clk, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of rx_video_clk : signal is "xilinx.com:signal:clock:1.0 rx_video_clk CLK";
+  attribute X_INTERFACE_MODE of rx_video_clk : signal is "master";
+  attribute X_INTERFACE_PARAMETER of rx_video_clk : signal is "XIL_INTERFACENAME rx_video_clk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rx_video_clk, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of rx_tmds_clk_p : signal is "xilinx.com:signal:clock:1.0 rx_tmds_clk_p CLK";
+  attribute X_INTERFACE_MODE of rx_tmds_clk_p : signal is "master";
+  attribute X_INTERFACE_PARAMETER of rx_tmds_clk_p : signal is "XIL_INTERFACENAME rx_tmds_clk_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rx_tmds_clk_p, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of rx_tmds_clk_n : signal is "xilinx.com:signal:clock:1.0 rx_tmds_clk_n CLK";
+  attribute X_INTERFACE_MODE of rx_tmds_clk_n : signal is "master";
+  attribute X_INTERFACE_PARAMETER of rx_tmds_clk_n : signal is "XIL_INTERFACENAME rx_tmds_clk_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rx_tmds_clk_n, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of mgtrefclk0_pad_p_in : signal is "xilinx.com:signal:clock:1.0 mgtrefclk0_pad_p_in CLK";
   attribute X_INTERFACE_MODE of mgtrefclk0_pad_p_in : signal is "slave";
   attribute X_INTERFACE_PARAMETER of mgtrefclk0_pad_p_in : signal is "XIL_INTERFACENAME mgtrefclk0_pad_p_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of mgtrefclk0_pad_n_in : signal is "xilinx.com:signal:clock:1.0 mgtrefclk0_pad_n_in CLK";
   attribute X_INTERFACE_MODE of mgtrefclk0_pad_n_in : signal is "slave";
   attribute X_INTERFACE_PARAMETER of mgtrefclk0_pad_n_in : signal is "XIL_INTERFACENAME mgtrefclk0_pad_n_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of mgtrefclk1_pad_p_in : signal is "xilinx.com:signal:clock:1.0 mgtrefclk1_pad_p_in CLK";
+  attribute X_INTERFACE_MODE of mgtrefclk1_pad_p_in : signal is "slave";
+  attribute X_INTERFACE_PARAMETER of mgtrefclk1_pad_p_in : signal is "XIL_INTERFACENAME mgtrefclk1_pad_p_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of mgtrefclk1_pad_n_in : signal is "xilinx.com:signal:clock:1.0 mgtrefclk1_pad_n_in CLK";
+  attribute X_INTERFACE_MODE of mgtrefclk1_pad_n_in : signal is "slave";
+  attribute X_INTERFACE_PARAMETER of mgtrefclk1_pad_n_in : signal is "XIL_INTERFACENAME mgtrefclk1_pad_n_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of rxoutclk : signal is "xilinx.com:signal:clock:1.0 rxoutclk CLK";
+  attribute X_INTERFACE_MODE of rxoutclk : signal is "slave";
+  attribute X_INTERFACE_PARAMETER of rxoutclk : signal is "XIL_INTERFACENAME rxoutclk, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rxoutclk, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of txoutclk : signal is "xilinx.com:signal:clock:1.0 txoutclk CLK";
   attribute X_INTERFACE_MODE of txoutclk : signal is "slave";
   attribute X_INTERFACE_PARAMETER of txoutclk : signal is "XIL_INTERFACENAME txoutclk, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_aclk : signal is "xilinx.com:signal:clock:1.0 vid_phy_tx_axi4s_CLK CLK";
   attribute X_INTERFACE_MODE of vid_phy_tx_axi4s_aclk : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of vid_phy_tx_axi4s_aclk : signal is "XIL_INTERFACENAME vid_phy_tx_axi4s_CLK, ASSOCIATED_BUSIF vid_phy_tx_axi4s_ch0:vid_phy_tx_axi4s_ch1:vid_phy_tx_axi4s_ch2:vid_phy_tx_axi4s_ch3, ASSOCIATED_RESET vid_phy_tx_axi4s_aresetn, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of vid_phy_tx_axi4s_aclk : signal is "XIL_INTERFACENAME vid_phy_tx_axi4s_CLK, ASSOCIATED_BUSIF vid_phy_tx_axi4s_ch0:vid_phy_tx_axi4s_ch1:vid_phy_tx_axi4s_ch2:vid_phy_tx_axi4s_ch3, ASSOCIATED_RESET vid_phy_tx_axi4s_aresetn, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_aresetn : signal is "xilinx.com:signal:reset:1.0 vid_phy_tx_axi4s_RST RST";
   attribute X_INTERFACE_MODE of vid_phy_tx_axi4s_aresetn : signal is "slave";
   attribute X_INTERFACE_PARAMETER of vid_phy_tx_axi4s_aresetn : signal is "XIL_INTERFACENAME vid_phy_tx_axi4s_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_ch0_tdata : signal is "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch0 TDATA";
   attribute X_INTERFACE_MODE of vid_phy_tx_axi4s_ch0_tdata : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of vid_phy_tx_axi4s_ch0_tdata : signal is "XIL_INTERFACENAME vid_phy_tx_axi4s_ch0, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of vid_phy_tx_axi4s_ch0_tdata : signal is "XIL_INTERFACENAME vid_phy_tx_axi4s_ch0, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_ch0_tuser : signal is "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch0 TUSER";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_ch0_tvalid : signal is "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch0 TVALID";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_ch0_tready : signal is "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch0 TREADY";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_ch1_tdata : signal is "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch1 TDATA";
   attribute X_INTERFACE_MODE of vid_phy_tx_axi4s_ch1_tdata : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of vid_phy_tx_axi4s_ch1_tdata : signal is "XIL_INTERFACENAME vid_phy_tx_axi4s_ch1, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of vid_phy_tx_axi4s_ch1_tdata : signal is "XIL_INTERFACENAME vid_phy_tx_axi4s_ch1, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_ch1_tuser : signal is "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch1 TUSER";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_ch1_tvalid : signal is "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch1 TVALID";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_ch1_tready : signal is "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch1 TREADY";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_ch2_tdata : signal is "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch2 TDATA";
   attribute X_INTERFACE_MODE of vid_phy_tx_axi4s_ch2_tdata : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of vid_phy_tx_axi4s_ch2_tdata : signal is "XIL_INTERFACENAME vid_phy_tx_axi4s_ch2, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of vid_phy_tx_axi4s_ch2_tdata : signal is "XIL_INTERFACENAME vid_phy_tx_axi4s_ch2, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_ch2_tuser : signal is "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch2 TUSER";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_ch2_tvalid : signal is "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch2 TVALID";
   attribute X_INTERFACE_INFO of vid_phy_tx_axi4s_ch2_tready : signal is "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch2 TREADY";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_ch0_tdata : signal is "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch0 TDATA";
+  attribute X_INTERFACE_MODE of vid_phy_rx_axi4s_ch0_tdata : signal is "master";
+  attribute X_INTERFACE_PARAMETER of vid_phy_rx_axi4s_ch0_tdata : signal is "XIL_INTERFACENAME vid_phy_rx_axi4s_ch0, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rxoutclk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_ch0_tuser : signal is "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch0 TUSER";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_ch0_tvalid : signal is "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch0 TVALID";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_ch0_tready : signal is "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch0 TREADY";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_aclk : signal is "xilinx.com:signal:clock:1.0 vid_phy_rx_axi4s_CLK CLK";
+  attribute X_INTERFACE_MODE of vid_phy_rx_axi4s_aclk : signal is "slave";
+  attribute X_INTERFACE_PARAMETER of vid_phy_rx_axi4s_aclk : signal is "XIL_INTERFACENAME vid_phy_rx_axi4s_CLK, ASSOCIATED_BUSIF vid_phy_rx_axi4s_ch0:vid_phy_rx_axi4s_ch1:vid_phy_rx_axi4s_ch2:vid_phy_rx_axi4s_ch3, ASSOCIATED_RESET vid_phy_rx_axi4s_aresetn, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rxoutclk, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_aresetn : signal is "xilinx.com:signal:reset:1.0 vid_phy_rx_axi4s_RST RST";
+  attribute X_INTERFACE_MODE of vid_phy_rx_axi4s_aresetn : signal is "slave";
+  attribute X_INTERFACE_PARAMETER of vid_phy_rx_axi4s_aresetn : signal is "XIL_INTERFACENAME vid_phy_rx_axi4s_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_ch1_tdata : signal is "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch1 TDATA";
+  attribute X_INTERFACE_MODE of vid_phy_rx_axi4s_ch1_tdata : signal is "master";
+  attribute X_INTERFACE_PARAMETER of vid_phy_rx_axi4s_ch1_tdata : signal is "XIL_INTERFACENAME vid_phy_rx_axi4s_ch1, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rxoutclk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_ch1_tuser : signal is "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch1 TUSER";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_ch1_tvalid : signal is "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch1 TVALID";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_ch1_tready : signal is "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch1 TREADY";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_ch2_tdata : signal is "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch2 TDATA";
+  attribute X_INTERFACE_MODE of vid_phy_rx_axi4s_ch2_tdata : signal is "master";
+  attribute X_INTERFACE_PARAMETER of vid_phy_rx_axi4s_ch2_tdata : signal is "XIL_INTERFACENAME vid_phy_rx_axi4s_ch2, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rxoutclk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_ch2_tuser : signal is "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch2 TUSER";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_ch2_tvalid : signal is "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch2 TVALID";
+  attribute X_INTERFACE_INFO of vid_phy_rx_axi4s_ch2_tready : signal is "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch2 TREADY";
   attribute X_INTERFACE_INFO of irq : signal is "xilinx.com:signal:interrupt:1.0 IRQ INTERRUPT";
   attribute X_INTERFACE_MODE of irq : signal is "master";
   attribute X_INTERFACE_PARAMETER of irq : signal is "XIL_INTERFACENAME IRQ, SENSITIVITY LEVEL_HIGH, PortWidth 1";
@@ -144,6 +215,11 @@ architecture stub of hdmi_tx_bd_vid_phy_controller_0_0 is
   attribute X_INTERFACE_PARAMETER of vid_phy_status_sb_tx_tdata : signal is "XIL_INTERFACENAME vid_phy_status_sb_tx, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of vid_phy_status_sb_tx_tvalid : signal is "xilinx.com:interface:axis:1.0 vid_phy_status_sb_tx TVALID";
   attribute X_INTERFACE_INFO of vid_phy_status_sb_tx_tready : signal is "xilinx.com:interface:axis:1.0 vid_phy_status_sb_tx TREADY";
+  attribute X_INTERFACE_INFO of vid_phy_status_sb_rx_tdata : signal is "xilinx.com:interface:axis:1.0 vid_phy_status_sb_rx TDATA";
+  attribute X_INTERFACE_MODE of vid_phy_status_sb_rx_tdata : signal is "master";
+  attribute X_INTERFACE_PARAMETER of vid_phy_status_sb_rx_tdata : signal is "XIL_INTERFACENAME vid_phy_status_sb_rx, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of vid_phy_status_sb_rx_tvalid : signal is "xilinx.com:interface:axis:1.0 vid_phy_status_sb_rx TVALID";
+  attribute X_INTERFACE_INFO of vid_phy_status_sb_rx_tready : signal is "xilinx.com:interface:axis:1.0 vid_phy_status_sb_rx TREADY";
   attribute X_INTERFACE_INFO of vid_phy_axi4lite_awaddr : signal is "xilinx.com:interface:aximm:1.0 vid_phy_axi4lite AWADDR";
   attribute X_INTERFACE_MODE of vid_phy_axi4lite_awaddr : signal is "slave";
   attribute X_INTERFACE_PARAMETER of vid_phy_axi4lite_awaddr : signal is "XIL_INTERFACENAME vid_phy_axi4lite, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 10, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";

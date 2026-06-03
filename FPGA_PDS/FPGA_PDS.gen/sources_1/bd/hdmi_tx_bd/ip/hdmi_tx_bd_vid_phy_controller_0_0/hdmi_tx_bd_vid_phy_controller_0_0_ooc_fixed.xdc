@@ -46,10 +46,12 @@
 
 create_clock -name hdmi_tx_bd_vid_phy_controller_0_0_vid_phy_axi4lite_aclk -period 10 [get_ports vid_phy_axi4lite_aclk]
 create_clock -name hdmi_tx_bd_vid_phy_controller_0_0_vid_phy_tx_axi4s_aclk -period 6.734 [get_ports vid_phy_tx_axi4s_aclk]
+create_clock -name hdmi_tx_bd_vid_phy_controller_0_0_vid_phy_rx_axi4s_aclk -period 6.734 [get_ports vid_phy_rx_axi4s_aclk]
 create_clock -name hdmi_tx_bd_vid_phy_controller_0_0_vid_phy_sb_aclk -period 10 [get_ports vid_phy_sb_aclk]
 
 # GTH, GTY
 create_clock -name hdmi_tx_bd_vid_phy_controller_0_0_drpclk -period 10 [get_ports drpclk]
 
 
-create_clock -name hdmi_tx_bd_vid_phy_controller_0_0_mgtrefclk0_pad_p_in -period 3.367 [get_ports mgtrefclk0_pad_p_in]
+create_clock -name hdmi_tx_bd_vid_phy_controller_0_0_mgtrefclk0_pad_p_in -period 6.400 [get_ports mgtrefclk0_pad_p_in]
+create_clock -name hdmi_tx_bd_vid_phy_controller_0_0_mgtrefclk1_pad_p_in -period 3.367 [get_ports mgtrefclk1_pad_p_in]

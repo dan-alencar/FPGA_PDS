@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Tue Jun  2 16:58:50 2026
+| Date         : Tue Jun  2 22:51:35 2026
 | Host         : pop-os running 64-bit Pop!_OS 24.04 LTS
 | Command      : report_methodology -file hdmi_tx_bd_wrapper_methodology_drc_routed.rpt -pb hdmi_tx_bd_wrapper_methodology_drc_routed.pb -rpx hdmi_tx_bd_wrapper_methodology_drc_routed.rpx
 | Design       : hdmi_tx_bd_wrapper
@@ -23,23 +23,746 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 28
+             Checks found: 194
 +-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
 | Rule      | Severity | Description                                                                                           | Checks |
 +-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
-| LUTAR-1   | Warning  | LUT drives async reset alert                                                                          | 13     |
+| DPIR-2    | Warning  | Asynchronous driver check                                                                             | 144    |
+| LUTAR-1   | Warning  | LUT drives async reset alert                                                                          | 14     |
 | TIMING-9  | Warning  | Unknown CDC Logic                                                                                     | 1      |
 | TIMING-10 | Warning  | Missing property on synchronizer                                                                      | 1      |
 | TIMING-18 | Warning  | Missing input or output delay                                                                         | 2      |
+| TIMING-46 | Warning  | Multicycle path with tied CE pins                                                                     | 18     |
 | TIMING-47 | Warning  | False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks | 6      |
+| ULMTCS-1  | Warning  | Control Sets use limits recommend reduction                                                           | 1      |
 | XDCC-7    | Warning  | Scoped Clock constraint overwritten on the same source                                                | 1      |
-| CLKC-11   | Advisory | MMCME4 divide could be done by BUFG_GT                                                                | 1      |
+| CLKC-11   | Advisory | MMCME4 divide could be done by BUFG_GT                                                                | 2      |
 | CLKC-40   | Advisory | Substitute PLLE4 for MMCME4 check                                                                     | 1      |
-| CLKC-56   | Advisory | MMCME4 with global clock driver has no LOC                                                            | 2      |
+| CLKC-56   | Advisory | MMCME4 with global clock driver has no LOC                                                            | 3      |
 +-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
+DPIR-2#1 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#2 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#3 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#4 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#5 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#6 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#7 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#8 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#9 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[17] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#10 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[18] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#11 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[19] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#12 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#13 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[20] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#14 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[21] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#15 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[22] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#16 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[23] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#17 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[24] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#18 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[25] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#19 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[26] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#20 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[27] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#21 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[28] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#22 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[29] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#23 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#24 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#25 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#26 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#27 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#28 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#29 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#30 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#31 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#32 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#33 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#34 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#35 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#36 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#37 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#38 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#39 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[17] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#40 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#41 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#42 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#43 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#44 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#45 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#46 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#47 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#48 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#49 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#50 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#51 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#52 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#53 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#54 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#55 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#56 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#57 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[17] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#58 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[18] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#59 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[19] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#60 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#61 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[20] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#62 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[21] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#63 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[22] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#64 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[23] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#65 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[24] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#66 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[25] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#67 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[26] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#68 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[27] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#69 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[28] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#70 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[29] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#71 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#72 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#73 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#74 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#75 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#76 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#77 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#78 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#79 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#80 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#81 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#82 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#83 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#84 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#85 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#86 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#87 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[17] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#88 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#89 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#90 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#91 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#92 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#93 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#94 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#95 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#96 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#97 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#98 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#99 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#100 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#101 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#102 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#103 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#104 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#105 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[17] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#106 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[18] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#107 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[19] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#108 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#109 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[20] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#110 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[21] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#111 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[22] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#112 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[23] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#113 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[24] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#114 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[25] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#115 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[26] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#116 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[27] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#117 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[28] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#118 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[29] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#119 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#120 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#121 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#122 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#123 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#124 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#125 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#126 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#127 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#128 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#129 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#130 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#131 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#132 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#133 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#134 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#135 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[17] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#136 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#137 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#138 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#139 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#140 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#141 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#142 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#143 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#144 Warning
+Asynchronous driver check  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input pin hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
 LUTAR-1#1 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Use_UART.execute_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
@@ -62,6 +785,26 @@ Related violations: <none>
 
 LUTAR-1#5 Warning
 LUT drives async reset alert  
+LUT cell hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/SCLK_LNK_RST_CAP_INST/sclk_rd_cnt[3]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_pkt_dat_reg[8][30]/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_pkt_dat_reg[8][31]/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_pkt_dat_reg[8][3]/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_pkt_dat_reg[8][4]/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_pkt_dat_reg[8][5]/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_pkt_dat_reg[8][6]/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_pkt_dat_reg[8][7]/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_pkt_dat_reg[8][8]/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_pkt_dat_reg[8][9]/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_pkt_dat_vld_reg/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_rd_cnt_reg[0]/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_rd_cnt_reg[1]/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_rd_cnt_reg[2]/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_rd_cnt_reg[3]/CLR,
+hdmi_tx_bd_i/v_hdmi_rx_ss_0/inst/v_hdmi_rx/inst/SYS_INST/AUX_INST/sclk_rd_lock_reg/CLR
+ (the first 15 of 338 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_common_inst/common_inst/gt_wrapper_inst_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_txprogdivreset_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_txprogdivreset_inst/rst_in_out_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_txprogdivreset_inst/rst_in_sync1_reg/PRE,
@@ -69,7 +812,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_txprogdivreset_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#6 Warning
+LUTAR-1#7 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_i_1__5, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_out_reg/PRE,
@@ -78,7 +821,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#7 Warning
+LUTAR-1#8 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_out_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_out_reg/PRE,
@@ -87,7 +830,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#8 Warning
+LUTAR-1#9 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/rst_in_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_out_reg/PRE,
@@ -96,7 +839,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#9 Warning
+LUTAR-1#10 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/rst_in_meta_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_out_reg/PRE,
@@ -105,7 +848,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#10 Warning
+LUTAR-1#11 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/rst_in_meta_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_out_reg/PRE,
@@ -114,7 +857,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#11 Warning
+LUTAR-1#12 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/rst_in_meta_i_1__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_out_reg/PRE,
@@ -123,7 +866,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#12 Warning
+LUTAR-1#13 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/rst_in_meta_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_out_reg/PRE,
@@ -132,7 +875,7 @@ hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_t
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_rx_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#13 Warning
+LUTAR-1#14 Warning
 LUT drives async reset alert  
 LUT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/rst_in_meta_i_1__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_meta_reg/PRE,
 hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_out_reg/PRE,
@@ -161,34 +904,129 @@ Missing input or output delay
 An output delay is missing on HDMI_TX_CLK_P relative to the rising and/or falling clock edge(s) of clk_ref_p.
 Related violations: <none>
 
+TIMING-46#1 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[0]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[1]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#2 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[1]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[2]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#3 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[2]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#4 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[3]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[4]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#5 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[4]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[5]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#6 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[5]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[6]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#7 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[0]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[1]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#8 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[1]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[2]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#9 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[2]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#10 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[3]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[4]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#11 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[4]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[5]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#12 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[5]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[6]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#13 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[0]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[1]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#14 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[1]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[2]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#15 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[2]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#16 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[3]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[4]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#17 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[4]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[5]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#18 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[5]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[6]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
 TIMING-47#1 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK (see constraint position 101 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK (see constraint position 102 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#2 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE (see constraint position 102 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE (see constraint position 103 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#3 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK (see constraint position 101 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK (see constraint position 102 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#4 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE (see constraint position 101 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE (see constraint position 102 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#5 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK (see constraint position 102 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK (see constraint position 103 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#6 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK (see constraint position 101 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK (see constraint position 102 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+Related violations: <none>
+
+ULMTCS-1#1 Warning
+Control Sets use limits recommend reduction  
+This design uses 1559 control sets (vs. available limit of 19440, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
 Related violations: <none>
 
 XDCC-7#1 Warning
@@ -199,6 +1037,11 @@ Previous: create_clock -period 3.333 [get_ports SYS_CLK_P] (Source: /home/dan-al
 Related violations: <none>
 
 CLKC-11#1 Advisory
+MMCME4 divide could be done by BUFG_GT  
+The MMCME4 cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/rx_mmcm.rxoutclk_mmcm0_i/mmcm_adv_inst driven by BUFG_GT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/bufg_gt_gtrefclk1_odiv2_inst uses CLKOUT* output(s) with a DIVIDE value of [1..8] which could be accomplished using a BUFG_GT divide capability. Consider using BUFG_GT(s) to accomplish the desired divide(s).
+Related violations: <none>
+
+CLKC-11#2 Advisory
 MMCME4 divide could be done by BUFG_GT  
 The MMCME4 cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.txoutclk_mmcm0_i/mmcm_adv_inst driven by BUFG_GT cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/bufg_gt_gtrefclk0_odiv2_inst uses CLKOUT* output(s) with a DIVIDE value of [1..8] which could be accomplished using a BUFG_GT divide capability. Consider using BUFG_GT(s) to accomplish the desired divide(s).
 Related violations: <none>
@@ -214,6 +1057,11 @@ The MMCME4_ADV cell hdmi_tx_bd_i/microblaze_0_clk_wiz_1/inst/mmcme4_adv_inst CLK
 Related violations: <none>
 
 CLKC-56#2 Advisory
+MMCME4 with global clock driver has no LOC  
+The MMCME4_ADV cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/rx_mmcm.rxoutclk_mmcm0_i/mmcm_adv_inst CLKIN1 or CLKIN2 pin is driven by global Clock buffer(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/bufg_gt_gtrefclk1_odiv2_inst and does not have a LOC constraint. It is recommended to LOC the MMCM and use the CLOCK_DEDICATED_ROUTE constraint on the net(s) driven by the global Clock buffer(s).
+Related violations: <none>
+
+CLKC-56#3 Advisory
 MMCME4 with global clock driver has no LOC  
 The MMCME4_ADV cell hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/tx_mmcm.txoutclk_mmcm0_i/mmcm_adv_inst CLKIN1 or CLKIN2 pin is driven by global Clock buffer(s) hdmi_tx_bd_i/vid_phy_controller_0/inst/gt_usrclk_source_inst/bufg_gt_gtrefclk0_odiv2_inst and does not have a LOC constraint. It is recommended to LOC the MMCM and use the CLOCK_DEDICATED_ROUTE constraint on the net(s) driven by the global Clock buffer(s).
 Related violations: <none>

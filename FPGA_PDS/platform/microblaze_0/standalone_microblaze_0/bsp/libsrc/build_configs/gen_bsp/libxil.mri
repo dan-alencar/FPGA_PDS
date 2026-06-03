@@ -5,6 +5,8 @@ addlib /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_
 addlib /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/v_tpg/src/libv_tpg.a
 addlib /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/v_hdmitxss/src/libv_hdmitxss.a
 addlib /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/v_hdmitx/src/libv_hdmitx.a
+addlib /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/v_hdmirxss/src/libv_hdmirxss.a
+addlib /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/v_hdmirx/src/libv_hdmirx.a
 addlib /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/v_hdmi_common/src/libv_hdmi_common.a
 addlib /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/uartlite/src/libuartlite.a
 addlib /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/intc/src/libintc.a

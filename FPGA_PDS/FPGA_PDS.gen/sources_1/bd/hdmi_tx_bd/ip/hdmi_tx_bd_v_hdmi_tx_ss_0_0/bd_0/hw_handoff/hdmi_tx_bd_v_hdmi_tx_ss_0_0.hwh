@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun  2 16:49:46 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun  2 22:46:17 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="kintexuplus" DEVICE="xcau15p" NAME="bd_2339" PACKAGE="ffvb676" SPEEDGRADE="-2"/>
 
@@ -189,7 +189,7 @@
         <CONNECTION INSTANCE="axi_smartconnect" PORT="S00_AXI_wvalid"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="95" NAME="VIDEO_IN_tdata" RIGHT="0" SIGIS="undef" SIGNAME="v_axi4s_vid_out_s_axis_video_tdata">
+    <PORT DIR="I" LEFT="47" NAME="VIDEO_IN_tdata" RIGHT="0" SIGIS="undef" SIGNAME="v_axi4s_vid_out_s_axis_video_tdata">
       <CONNECTIONS>
         <CONNECTION INSTANCE="v_axi4s_vid_out" PORT="s_axis_video_tdata"/>
       </CONNECTIONS>
@@ -278,7 +278,7 @@
         <CONNECTION INSTANCE="v_hdmi_tx" PORT="s_axis_audio_aresetn"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="297000000" DIR="I" NAME="s_axis_video_aclk" SIGIS="clk" SIGNAME="External_Ports_s_axis_video_aclk">
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axis_video_aclk" SIGIS="clk" SIGNAME="External_Ports_s_axis_video_aclk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="v_axi4s_vid_out" PORT="aclk"/>
         <CONNECTION INSTANCE="v_hdmi_tx" PORT="s_axis_video_aclk"/>
@@ -469,16 +469,16 @@
       </PORTMAPS>
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="External_Interface_VIDEO_IN" NAME="VIDEO_IN" TYPE="TARGET">
-      <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk"/>
-      <PARAMETER NAME="FREQ_HZ" VALUE="297000000"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
       <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
       <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
       <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
       <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
       <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-      <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+      <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value xilinx.com:video:G_B_R_444:1.0} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value rows} size {attribs {resolve_type generated dependency active_rows format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_rows_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cols} size {attribs {resolve_type generated dependency active_cols format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_cols_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_G {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value G} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_B {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value B} enabled {attribs {resolve_type generated dependency video_comp1_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp1_offset format long minimum {} maximum {}} value 8} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_R {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value R} enabled {attribs {resolve_type generated dependency video_comp2_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp2_offset format long minimum {} maximum {}} value 16} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}}}}} TDATA_WIDTH 24}"/>
       <PARAMETER NAME="PHASE" VALUE="0.0"/>
-      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="12"/>
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="6"/>
       <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
       <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
       <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
@@ -988,7 +988,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="10"/>
-        <PARAMETER NAME="C_ADDR_WIDTH_PIXEL_REMAP_420" VALUE="10"/>
+        <PARAMETER NAME="C_ADDR_WIDTH_PIXEL_REMAP_420" VALUE="11"/>
         <PARAMETER NAME="C_ARBITRARY_RES_EN" VALUE="0"/>
         <PARAMETER NAME="C_COMPONENTS_PER_PIXEL" VALUE="3"/>
         <PARAMETER NAME="C_FAMILY" VALUE="kintexuplus"/>
@@ -997,11 +997,11 @@
         <PARAMETER NAME="C_INCLUDE_PIXEL_REMAP_420" VALUE="1"/>
         <PARAMETER NAME="C_INCLUDE_PIXEL_REPEAT" VALUE="1"/>
         <PARAMETER NAME="C_NATIVE_COMPONENT_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="C_NATIVE_DATA_WIDTH" VALUE="96"/>
-        <PARAMETER NAME="C_PIXELS_PER_CLOCK" VALUE="4"/>
+        <PARAMETER NAME="C_NATIVE_DATA_WIDTH" VALUE="48"/>
+        <PARAMETER NAME="C_PIXELS_PER_CLOCK" VALUE="2"/>
         <PARAMETER NAME="C_SYNC_LOCK_THRESHOLD" VALUE="4"/>
         <PARAMETER NAME="C_S_AXIS_COMPONENT_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="C_S_AXIS_TDATA_WIDTH" VALUE="96"/>
+        <PARAMETER NAME="C_S_AXIS_TDATA_WIDTH" VALUE="48"/>
         <PARAMETER NAME="C_VTG_MASTER_SLAVE" VALUE="0"/>
         <PARAMETER NAME="ARBITRARY_RES_EN" VALUE="false"/>
         <PARAMETER NAME="C_S_AXIS_VIDEO_DATA_WIDTH" VALUE="8"/>
@@ -1010,7 +1010,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="297000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_s_axis_video_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_s_axis_video_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="s_axis_video_aclk"/>
           </CONNECTIONS>
@@ -1048,7 +1048,7 @@
             <CONNECTION INSTANCE="v_hdmi_tx" PORT="bridge_pixel_repeat"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="95" NAME="s_axis_video_tdata" RIGHT="0" SIGIS="undef" SIGNAME="v_axi4s_vid_out_s_axis_video_tdata">
+        <PORT DIR="I" LEFT="47" NAME="s_axis_video_tdata" RIGHT="0" SIGIS="undef" SIGNAME="v_axi4s_vid_out_s_axis_video_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_2339_imp" PORT="VIDEO_IN_tdata"/>
           </CONNECTIONS>
@@ -1085,7 +1085,7 @@
             <CONNECTION INSTANCE="v_hdmi_tx" PORT="video_de"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="95" NAME="vid_data" RIGHT="0" SIGIS="undef" SIGNAME="v_axi4s_vid_out_vid_data">
+        <PORT DIR="O" LEFT="47" NAME="vid_data" RIGHT="0" SIGIS="undef" SIGNAME="v_axi4s_vid_out_vid_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_hdmi_tx" PORT="video_data"/>
           </CONNECTIONS>
@@ -1154,16 +1154,16 @@
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="External_Interface_VIDEO_IN" NAME="video_in" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="297000000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value xilinx.com:video:G_B_R_444:1.0} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value rows} size {attribs {resolve_type generated dependency active_rows format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_rows_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cols} size {attribs {resolve_type generated dependency active_cols format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_cols_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_G {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value G} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_B {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value B} enabled {attribs {resolve_type generated dependency video_comp1_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp1_offset format long minimum {} maximum {}} value 8} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_R {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value R} enabled {attribs {resolve_type generated dependency video_comp2_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp2_offset format long minimum {} maximum {}} value 16} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}}}}} TDATA_WIDTH 24}"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="12"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="6"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
@@ -1203,9 +1203,9 @@
         <PARAMETER NAME="C_BITS_PER_COMPONENT" VALUE="8"/>
         <PARAMETER NAME="C_CH_WIDTH" VALUE="8"/>
         <PARAMETER NAME="C_DDC2_EN" VALUE="0"/>
-        <PARAMETER NAME="C_GT_LANES" VALUE="4"/>
+        <PARAMETER NAME="C_GT_LANES" VALUE="2"/>
         <PARAMETER NAME="C_HDCP_IF_ENABLE" VALUE="0"/>
-        <PARAMETER NAME="C_PIXELS_PER_CLOCK" VALUE="4"/>
+        <PARAMETER NAME="C_PIXELS_PER_CLOCK" VALUE="2"/>
         <PARAMETER NAME="C_SIM_DEVICE" VALUE="VERSAL_AI_CORE_ES1"/>
         <PARAMETER NAME="C_SIM_DEVICE_EN" VALUE="0"/>
         <PARAMETER NAME="C_SIM_SPEEDUP" VALUE="FALSE"/>
@@ -1547,7 +1547,7 @@
             <CONNECTION INSTANCE="v_hdmi_tx" PORT="m_axis_hdcp_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="297000000" DIR="I" NAME="s_axis_video_aclk" SIGIS="clk" SIGNAME="External_Ports_s_axis_video_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axis_video_aclk" SIGIS="clk" SIGNAME="External_Ports_s_axis_video_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="s_axis_video_aclk"/>
           </CONNECTIONS>
@@ -1582,24 +1582,24 @@
             <CONNECTION INSTANCE="External_Ports" PORT="video_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="95" NAME="video_data" RIGHT="0" SIGIS="undef" SIGNAME="v_axi4s_vid_out_vid_data">
+        <PORT DIR="I" LEFT="47" NAME="video_data" RIGHT="0" SIGIS="undef" SIGNAME="v_axi4s_vid_out_vid_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_axi4s_vid_out" PORT="vid_data"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="95" NAME="video_data_arb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="47" NAME="video_data_arb" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="video_de" SIGIS="undef" SIGNAME="v_axi4s_vid_out_vid_active_video">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_axi4s_vid_out" PORT="vid_active_video"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="video_de_arb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="video_de_arb" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="video_hs" SIGIS="undef" SIGNAME="v_axi4s_vid_out_vid_hsync">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_axi4s_vid_out" PORT="vid_hsync"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="video_hs_arb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="video_hs_arb" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="video_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="v_hdmi_tx_video_reset">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_axi4s_vid_out" PORT="vid_io_out_reset"/>
@@ -1611,7 +1611,7 @@
             <CONNECTION INSTANCE="v_axi4s_vid_out" PORT="vid_vsync"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="video_vs_arb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="video_vs_arb" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="axi_smartconnect_M00_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">

@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Tue Jun  2 16:49:44 2026
+//Date        : Tue Jun  2 22:46:15 2026
 //Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
 //Command     : generate_target hdmi_tx_bd.bd
 //Design      : hdmi_tx_bd
@@ -10,16 +10,26 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "hdmi_tx_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi_tx_bd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=21,numReposBlks=20,numNonXlnxBlks=0,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=10,da_clkrst_cnt=11,da_mb_cnt=5,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "hdmi_tx_bd.hwdef" *) 
+(* CORE_GENERATION_INFO = "hdmi_tx_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi_tx_bd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=24,numReposBlks=23,numNonXlnxBlks=0,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=10,da_clkrst_cnt=11,da_mb_cnt=5,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "hdmi_tx_bd.hwdef" *) 
 module hdmi_tx_bd
    (HDMI_8T49N241_LOL,
     HDMI_8T49N241_RST_N,
     HDMI_CLK_8T49N241_N,
     HDMI_CLK_8T49N241_P,
+    HDMI_RCLKOUT_N,
+    HDMI_RCLKOUT_P,
+    HDMI_RX_HPD,
+    HDMI_RX_PWR_DET,
     HDMI_TX_CLK_N,
     HDMI_TX_CLK_P,
     HDMI_TX_EN,
     HDMI_TX_HPD,
+    RX_DDC_OUT_scl_i,
+    RX_DDC_OUT_scl_o,
+    RX_DDC_OUT_scl_t,
+    RX_DDC_OUT_sda_i,
+    RX_DDC_OUT_sda_o,
+    RX_DDC_OUT_sda_t,
     SYS_CLK_N,
     SYS_CLK_P,
     SYS_RST_N,
@@ -30,6 +40,8 @@ module hdmi_tx_bd
     TX_DDC_OUT_sda_o,
     TX_DDC_OUT_sda_t,
     gpo_0,
+    hdmi_rx_n,
+    hdmi_rx_p,
     hdmi_tx_n,
     hdmi_tx_p,
     iic_clkgen_scl_i,
@@ -42,10 +54,20 @@ module hdmi_tx_bd
   output [0:0]HDMI_8T49N241_RST_N;
   input HDMI_CLK_8T49N241_N;
   input HDMI_CLK_8T49N241_P;
+  input HDMI_RCLKOUT_N;
+  input HDMI_RCLKOUT_P;
+  output HDMI_RX_HPD;
+  input HDMI_RX_PWR_DET;
   output HDMI_TX_CLK_N;
   output HDMI_TX_CLK_P;
   output [0:0]HDMI_TX_EN;
   input HDMI_TX_HPD;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 RX_DDC_OUT SCL_I" *) (* X_INTERFACE_MODE = "Master" *) input RX_DDC_OUT_scl_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 RX_DDC_OUT SCL_O" *) output RX_DDC_OUT_scl_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 RX_DDC_OUT SCL_T" *) output RX_DDC_OUT_scl_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 RX_DDC_OUT SDA_I" *) input RX_DDC_OUT_sda_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 RX_DDC_OUT SDA_O" *) output RX_DDC_OUT_sda_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 RX_DDC_OUT SDA_T" *) output RX_DDC_OUT_sda_t;
   input SYS_CLK_N;
   input SYS_CLK_P;
   input SYS_RST_N;
@@ -56,6 +78,8 @@ module hdmi_tx_bd
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 TX_DDC_OUT SDA_O" *) output TX_DDC_OUT_sda_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 TX_DDC_OUT SDA_T" *) output TX_DDC_OUT_sda_t;
   output [0:0]gpo_0;
+  input [2:0]hdmi_rx_n;
+  input [2:0]hdmi_rx_p;
   output [2:0]hdmi_tx_n;
   output [2:0]hdmi_tx_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 iic_clkgen SCL_I" *) (* X_INTERFACE_MODE = "Master" *) input iic_clkgen_scl_i;
@@ -69,10 +93,20 @@ module hdmi_tx_bd
   wire [0:0]HDMI_8T49N241_RST_N;
   wire HDMI_CLK_8T49N241_N;
   wire HDMI_CLK_8T49N241_P;
+  wire HDMI_RCLKOUT_N;
+  wire HDMI_RCLKOUT_P;
+  wire HDMI_RX_HPD;
+  wire HDMI_RX_PWR_DET;
   wire HDMI_TX_CLK_N;
   wire HDMI_TX_CLK_P;
   wire [0:0]HDMI_TX_EN;
   wire HDMI_TX_HPD;
+  wire RX_DDC_OUT_scl_i;
+  wire RX_DDC_OUT_scl_o;
+  wire RX_DDC_OUT_scl_t;
+  wire RX_DDC_OUT_sda_i;
+  wire RX_DDC_OUT_sda_o;
+  wire RX_DDC_OUT_sda_t;
   wire SYS_CLK_N;
   wire SYS_CLK_P;
   wire SYS_RST_N;
@@ -83,7 +117,14 @@ module hdmi_tx_bd
   wire TX_DDC_OUT_sda_o;
   wire TX_DDC_OUT_sda_t;
   wire axi_iic_0_iic2intc_irpt;
+  wire [47:0]axis_register_slice_0_M_AXIS_TDATA;
+  wire axis_register_slice_0_M_AXIS_TLAST;
+  wire axis_register_slice_0_M_AXIS_TREADY;
+  wire [0:0]axis_register_slice_0_M_AXIS_TUSER;
+  wire axis_register_slice_0_M_AXIS_TVALID;
   wire [0:0]gpo_0;
+  wire [2:0]hdmi_rx_n;
+  wire [2:0]hdmi_rx_p;
   wire [2:0]hdmi_tx_n;
   wire [2:0]hdmi_tx_p;
   wire iic_clkgen_scl_i;
@@ -219,6 +260,26 @@ module hdmi_tx_bd
   wire microblaze_0_axi_periph_M06_AXI_WREADY;
   wire [3:0]microblaze_0_axi_periph_M06_AXI_WSTRB;
   wire microblaze_0_axi_periph_M06_AXI_WVALID;
+  wire [15:0]microblaze_0_axi_periph_M07_AXI_ARADDR;
+  wire [2:0]microblaze_0_axi_periph_M07_AXI_ARPROT;
+  wire microblaze_0_axi_periph_M07_AXI_ARREADY;
+  wire microblaze_0_axi_periph_M07_AXI_ARVALID;
+  wire [15:0]microblaze_0_axi_periph_M07_AXI_AWADDR;
+  wire [2:0]microblaze_0_axi_periph_M07_AXI_AWPROT;
+  wire microblaze_0_axi_periph_M07_AXI_AWREADY;
+  wire microblaze_0_axi_periph_M07_AXI_AWVALID;
+  wire microblaze_0_axi_periph_M07_AXI_BREADY;
+  wire [1:0]microblaze_0_axi_periph_M07_AXI_BRESP;
+  wire microblaze_0_axi_periph_M07_AXI_BVALID;
+  wire [31:0]microblaze_0_axi_periph_M07_AXI_RDATA;
+  wire microblaze_0_axi_periph_M07_AXI_RREADY;
+  wire [1:0]microblaze_0_axi_periph_M07_AXI_RRESP;
+  wire microblaze_0_axi_periph_M07_AXI_RVALID;
+  wire [31:0]microblaze_0_axi_periph_M07_AXI_WDATA;
+  wire microblaze_0_axi_periph_M07_AXI_WREADY;
+  wire [3:0]microblaze_0_axi_periph_M07_AXI_WSTRB;
+  wire microblaze_0_axi_periph_M07_AXI_WVALID;
+  wire microblaze_0_clk_wiz_1_clk_out2;
   wire microblaze_0_clk_wiz_1_locked;
   wire microblaze_0_debug_CAPTURE;
   wire microblaze_0_debug_CLK;
@@ -268,27 +329,39 @@ module hdmi_tx_bd
   wire [0:1]microblaze_0_interrupt_ACK;
   wire [31:0]microblaze_0_interrupt_ADDRESS;
   wire microblaze_0_interrupt_INTERRUPT;
-  wire [2:0]microblaze_0_intr;
+  wire [3:0]microblaze_0_intr;
+  wire [0:0]rst_clk_out2_peripheral_aresetn;
   wire [0:0]rst_microblaze_0_clk_wiz_1_100M_bus_struct_reset;
   wire rst_microblaze_0_clk_wiz_1_100M_mb_reset;
   wire [0:0]rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn;
   wire [0:0]rst_video_clk_peripheral_aresetn;
   wire [0:0]system_resetn_inv_0_Res;
+  wire [47:0]v_hdmi_rx_ss_0_VIDEO_OUT_TDATA;
+  wire v_hdmi_rx_ss_0_VIDEO_OUT_TLAST;
+  wire v_hdmi_rx_ss_0_VIDEO_OUT_TREADY;
+  wire v_hdmi_rx_ss_0_VIDEO_OUT_TUSER;
+  wire v_hdmi_rx_ss_0_VIDEO_OUT_TVALID;
+  wire v_hdmi_rx_ss_0_irq;
   wire [39:0]v_hdmi_tx_ss_0_LINK_DATA0_OUT_TDATA;
   wire v_hdmi_tx_ss_0_LINK_DATA0_OUT_TVALID;
   wire [39:0]v_hdmi_tx_ss_0_LINK_DATA1_OUT_TDATA;
   wire v_hdmi_tx_ss_0_LINK_DATA1_OUT_TVALID;
   wire [39:0]v_hdmi_tx_ss_0_LINK_DATA2_OUT_TDATA;
   wire v_hdmi_tx_ss_0_LINK_DATA2_OUT_TVALID;
-  wire v_hdmi_tx_ss_0_VIDEO_IN_tready;
   wire v_hdmi_tx_ss_0_irq;
-  wire [95:0]v_tpg_0_m_axis_video_TDATA;
-  wire [0:0]v_tpg_0_m_axis_video_TLAST;
-  wire [0:0]v_tpg_0_m_axis_video_TUSER;
-  wire v_tpg_0_m_axis_video_TVALID;
   wire vid_phy_controller_0_irq;
+  wire vid_phy_controller_0_rx_video_clk;
+  wire vid_phy_controller_0_rxoutclk;
   wire vid_phy_controller_0_tx_video_clk;
   wire vid_phy_controller_0_txoutclk;
+  wire [39:0]vid_phy_controller_0_vid_phy_rx_axi4s_ch0_TDATA;
+  wire vid_phy_controller_0_vid_phy_rx_axi4s_ch0_TVALID;
+  wire [39:0]vid_phy_controller_0_vid_phy_rx_axi4s_ch1_TDATA;
+  wire vid_phy_controller_0_vid_phy_rx_axi4s_ch1_TVALID;
+  wire [39:0]vid_phy_controller_0_vid_phy_rx_axi4s_ch2_TDATA;
+  wire vid_phy_controller_0_vid_phy_rx_axi4s_ch2_TVALID;
+  wire [7:0]vid_phy_controller_0_vid_phy_status_sb_rx_TDATA;
+  wire vid_phy_controller_0_vid_phy_status_sb_rx_TVALID;
   wire [7:0]vid_phy_controller_0_vid_phy_status_sb_tx_tdata;
   wire vid_phy_controller_0_vid_phy_status_sb_tx_tvalid;
 
@@ -342,6 +415,19 @@ module hdmi_tx_bd
         .sda_i(iic_clkgen_sda_i),
         .sda_o(iic_clkgen_sda_o),
         .sda_t(iic_clkgen_sda_t));
+  hdmi_tx_bd_axis_register_slice_0_0 axis_register_slice_0
+       (.aclk(microblaze_0_clk_wiz_1_clk_out2),
+        .aresetn(rst_clk_out2_peripheral_aresetn),
+        .m_axis_tdata(axis_register_slice_0_M_AXIS_TDATA),
+        .m_axis_tlast(axis_register_slice_0_M_AXIS_TLAST),
+        .m_axis_tready(axis_register_slice_0_M_AXIS_TREADY),
+        .m_axis_tuser(axis_register_slice_0_M_AXIS_TUSER),
+        .m_axis_tvalid(axis_register_slice_0_M_AXIS_TVALID),
+        .s_axis_tdata(v_hdmi_rx_ss_0_VIDEO_OUT_TDATA),
+        .s_axis_tlast(v_hdmi_rx_ss_0_VIDEO_OUT_TLAST),
+        .s_axis_tready(v_hdmi_rx_ss_0_VIDEO_OUT_TREADY),
+        .s_axis_tuser(v_hdmi_rx_ss_0_VIDEO_OUT_TUSER),
+        .s_axis_tvalid(v_hdmi_rx_ss_0_VIDEO_OUT_TVALID));
   hdmi_tx_bd_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),
@@ -577,6 +663,25 @@ module hdmi_tx_bd
         .M06_AXI_wready(microblaze_0_axi_periph_M06_AXI_WREADY),
         .M06_AXI_wstrb(microblaze_0_axi_periph_M06_AXI_WSTRB),
         .M06_AXI_wvalid(microblaze_0_axi_periph_M06_AXI_WVALID),
+        .M07_AXI_araddr(microblaze_0_axi_periph_M07_AXI_ARADDR),
+        .M07_AXI_arprot(microblaze_0_axi_periph_M07_AXI_ARPROT),
+        .M07_AXI_arready(microblaze_0_axi_periph_M07_AXI_ARREADY),
+        .M07_AXI_arvalid(microblaze_0_axi_periph_M07_AXI_ARVALID),
+        .M07_AXI_awaddr(microblaze_0_axi_periph_M07_AXI_AWADDR),
+        .M07_AXI_awprot(microblaze_0_axi_periph_M07_AXI_AWPROT),
+        .M07_AXI_awready(microblaze_0_axi_periph_M07_AXI_AWREADY),
+        .M07_AXI_awvalid(microblaze_0_axi_periph_M07_AXI_AWVALID),
+        .M07_AXI_bready(microblaze_0_axi_periph_M07_AXI_BREADY),
+        .M07_AXI_bresp(microblaze_0_axi_periph_M07_AXI_BRESP),
+        .M07_AXI_bvalid(microblaze_0_axi_periph_M07_AXI_BVALID),
+        .M07_AXI_rdata(microblaze_0_axi_periph_M07_AXI_RDATA),
+        .M07_AXI_rready(microblaze_0_axi_periph_M07_AXI_RREADY),
+        .M07_AXI_rresp(microblaze_0_axi_periph_M07_AXI_RRESP),
+        .M07_AXI_rvalid(microblaze_0_axi_periph_M07_AXI_RVALID),
+        .M07_AXI_wdata(microblaze_0_axi_periph_M07_AXI_WDATA),
+        .M07_AXI_wready(microblaze_0_axi_periph_M07_AXI_WREADY),
+        .M07_AXI_wstrb(microblaze_0_axi_periph_M07_AXI_WSTRB),
+        .M07_AXI_wvalid(microblaze_0_axi_periph_M07_AXI_WVALID),
         .S00_AXI_araddr(microblaze_0_axi_dp_ARADDR),
         .S00_AXI_arprot(microblaze_0_axi_dp_ARPROT),
         .S00_AXI_arready(microblaze_0_axi_dp_ARREADY),
@@ -603,6 +708,7 @@ module hdmi_tx_bd
        (.clk_in1_n(SYS_CLK_N),
         .clk_in1_p(SYS_CLK_P),
         .clk_out1(microblaze_0_Clk),
+        .clk_out2(microblaze_0_clk_wiz_1_clk_out2),
         .locked(microblaze_0_clk_wiz_1_locked),
         .reset(system_resetn_inv_0_Res));
   microblaze_0_local_memory_imp_1EYEO40 microblaze_0_local_memory
@@ -627,7 +733,14 @@ module hdmi_tx_bd
         .ILMB_wait(microblaze_0_ilmb_1_WAIT),
         .LMB_Clk(microblaze_0_Clk),
         .SYS_Rst(rst_microblaze_0_clk_wiz_1_100M_bus_struct_reset));
-  assign microblaze_0_intr = {vid_phy_controller_0_irq, axi_iic_0_iic2intc_irpt, v_hdmi_tx_ss_0_irq};
+  assign microblaze_0_intr = {v_hdmi_rx_ss_0_irq, vid_phy_controller_0_irq, axi_iic_0_iic2intc_irpt, v_hdmi_tx_ss_0_irq};
+  hdmi_tx_bd_rst_clk_out2_0 rst_clk_out2
+       (.aux_reset_in(1'b1),
+        .dcm_locked(microblaze_0_clk_wiz_1_locked),
+        .ext_reset_in(SYS_RST_N),
+        .mb_debug_sys_rst(1'b0),
+        .peripheral_aresetn(rst_clk_out2_peripheral_aresetn),
+        .slowest_sync_clk(microblaze_0_clk_wiz_1_clk_out2));
   hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0 rst_microblaze_0_clk_wiz_1_100M
        (.aux_reset_in(1'b1),
         .bus_struct_reset(rst_microblaze_0_clk_wiz_1_100M_bus_struct_reset),
@@ -645,6 +758,57 @@ module hdmi_tx_bd
         .peripheral_aresetn(rst_video_clk_peripheral_aresetn),
         .slowest_sync_clk(vid_phy_controller_0_tx_video_clk));
   assign system_resetn_inv_0_Res = ~ SYS_RST_N;
+  hdmi_tx_bd_v_hdmi_rx_ss_0_0 v_hdmi_rx_ss_0
+       (.AUDIO_OUT_tready(1'b1),
+        .DDC_OUT_scl_i(RX_DDC_OUT_scl_i),
+        .DDC_OUT_scl_o(RX_DDC_OUT_scl_o),
+        .DDC_OUT_scl_t(RX_DDC_OUT_scl_t),
+        .DDC_OUT_sda_i(RX_DDC_OUT_sda_i),
+        .DDC_OUT_sda_o(RX_DDC_OUT_sda_o),
+        .DDC_OUT_sda_t(RX_DDC_OUT_sda_t),
+        .LINK_DATA0_IN_tdata(vid_phy_controller_0_vid_phy_rx_axi4s_ch0_TDATA),
+        .LINK_DATA0_IN_tvalid(vid_phy_controller_0_vid_phy_rx_axi4s_ch0_TVALID),
+        .LINK_DATA1_IN_tdata(vid_phy_controller_0_vid_phy_rx_axi4s_ch1_TDATA),
+        .LINK_DATA1_IN_tvalid(vid_phy_controller_0_vid_phy_rx_axi4s_ch1_TVALID),
+        .LINK_DATA2_IN_tdata(vid_phy_controller_0_vid_phy_rx_axi4s_ch2_TDATA),
+        .LINK_DATA2_IN_tvalid(vid_phy_controller_0_vid_phy_rx_axi4s_ch2_TVALID),
+        .SB_STATUS_IN_tdata(vid_phy_controller_0_vid_phy_status_sb_rx_TDATA),
+        .SB_STATUS_IN_tvalid(vid_phy_controller_0_vid_phy_status_sb_rx_TVALID),
+        .S_AXI_CPU_IN_araddr(microblaze_0_axi_periph_M07_AXI_ARADDR[8:0]),
+        .S_AXI_CPU_IN_arprot(microblaze_0_axi_periph_M07_AXI_ARPROT),
+        .S_AXI_CPU_IN_arready(microblaze_0_axi_periph_M07_AXI_ARREADY),
+        .S_AXI_CPU_IN_arvalid(microblaze_0_axi_periph_M07_AXI_ARVALID),
+        .S_AXI_CPU_IN_awaddr(microblaze_0_axi_periph_M07_AXI_AWADDR[8:0]),
+        .S_AXI_CPU_IN_awprot(microblaze_0_axi_periph_M07_AXI_AWPROT),
+        .S_AXI_CPU_IN_awready(microblaze_0_axi_periph_M07_AXI_AWREADY),
+        .S_AXI_CPU_IN_awvalid(microblaze_0_axi_periph_M07_AXI_AWVALID),
+        .S_AXI_CPU_IN_bready(microblaze_0_axi_periph_M07_AXI_BREADY),
+        .S_AXI_CPU_IN_bresp(microblaze_0_axi_periph_M07_AXI_BRESP),
+        .S_AXI_CPU_IN_bvalid(microblaze_0_axi_periph_M07_AXI_BVALID),
+        .S_AXI_CPU_IN_rdata(microblaze_0_axi_periph_M07_AXI_RDATA),
+        .S_AXI_CPU_IN_rready(microblaze_0_axi_periph_M07_AXI_RREADY),
+        .S_AXI_CPU_IN_rresp(microblaze_0_axi_periph_M07_AXI_RRESP),
+        .S_AXI_CPU_IN_rvalid(microblaze_0_axi_periph_M07_AXI_RVALID),
+        .S_AXI_CPU_IN_wdata(microblaze_0_axi_periph_M07_AXI_WDATA),
+        .S_AXI_CPU_IN_wready(microblaze_0_axi_periph_M07_AXI_WREADY),
+        .S_AXI_CPU_IN_wstrb(microblaze_0_axi_periph_M07_AXI_WSTRB),
+        .S_AXI_CPU_IN_wvalid(microblaze_0_axi_periph_M07_AXI_WVALID),
+        .VIDEO_OUT_tdata(v_hdmi_rx_ss_0_VIDEO_OUT_TDATA),
+        .VIDEO_OUT_tlast(v_hdmi_rx_ss_0_VIDEO_OUT_TLAST),
+        .VIDEO_OUT_tready(v_hdmi_rx_ss_0_VIDEO_OUT_TREADY),
+        .VIDEO_OUT_tuser(v_hdmi_rx_ss_0_VIDEO_OUT_TUSER),
+        .VIDEO_OUT_tvalid(v_hdmi_rx_ss_0_VIDEO_OUT_TVALID),
+        .cable_detect(HDMI_RX_PWR_DET),
+        .hpd(HDMI_RX_HPD),
+        .irq(v_hdmi_rx_ss_0_irq),
+        .link_clk(vid_phy_controller_0_rxoutclk),
+        .s_axi_cpu_aclk(microblaze_0_Clk),
+        .s_axi_cpu_aresetn(rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn),
+        .s_axis_audio_aclk(microblaze_0_Clk),
+        .s_axis_audio_aresetn(1'b0),
+        .s_axis_video_aclk(microblaze_0_clk_wiz_1_clk_out2),
+        .s_axis_video_aresetn(rst_clk_out2_peripheral_aresetn),
+        .video_clk(vid_phy_controller_0_rx_video_clk));
   hdmi_tx_bd_v_hdmi_tx_ss_0_0 v_hdmi_tx_ss_0
        (.AUDIO_IN_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .AUDIO_IN_tid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
@@ -682,11 +846,11 @@ module hdmi_tx_bd
         .S_AXI_CPU_IN_wready(microblaze_0_axi_periph_M01_AXI_WREADY),
         .S_AXI_CPU_IN_wstrb(microblaze_0_axi_periph_M01_AXI_WSTRB),
         .S_AXI_CPU_IN_wvalid(microblaze_0_axi_periph_M01_AXI_WVALID),
-        .VIDEO_IN_tdata(v_tpg_0_m_axis_video_TDATA),
-        .VIDEO_IN_tlast(v_tpg_0_m_axis_video_TLAST),
-        .VIDEO_IN_tready(v_hdmi_tx_ss_0_VIDEO_IN_tready),
-        .VIDEO_IN_tuser(v_tpg_0_m_axis_video_TUSER),
-        .VIDEO_IN_tvalid(v_tpg_0_m_axis_video_TVALID),
+        .VIDEO_IN_tdata(axis_register_slice_0_M_AXIS_TDATA),
+        .VIDEO_IN_tlast(axis_register_slice_0_M_AXIS_TLAST),
+        .VIDEO_IN_tready(axis_register_slice_0_M_AXIS_TREADY),
+        .VIDEO_IN_tuser(axis_register_slice_0_M_AXIS_TUSER),
+        .VIDEO_IN_tvalid(axis_register_slice_0_M_AXIS_TVALID),
         .acr_cts({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .acr_n({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .acr_valid(1'b0),
@@ -698,18 +862,14 @@ module hdmi_tx_bd
         .s_axi_cpu_aresetn(rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn),
         .s_axis_audio_aclk(microblaze_0_Clk),
         .s_axis_audio_aresetn(1'b0),
-        .s_axis_video_aclk(vid_phy_controller_0_tx_video_clk),
+        .s_axis_video_aclk(microblaze_0_clk_wiz_1_clk_out2),
         .s_axis_video_aresetn(HDMI_TX_EN),
         .video_clk(vid_phy_controller_0_tx_video_clk));
   hdmi_tx_bd_v_tpg_0_0 v_tpg_0
-       (.ap_clk(vid_phy_controller_0_tx_video_clk),
-        .ap_rst_n(rst_video_clk_peripheral_aresetn),
+       (.ap_clk(microblaze_0_clk_wiz_1_clk_out2),
+        .ap_rst_n(rst_clk_out2_peripheral_aresetn),
         .fid_in(1'b1),
-        .m_axis_video_TDATA(v_tpg_0_m_axis_video_TDATA),
-        .m_axis_video_TLAST(v_tpg_0_m_axis_video_TLAST),
-        .m_axis_video_TREADY(v_hdmi_tx_ss_0_VIDEO_IN_tready),
-        .m_axis_video_TUSER(v_tpg_0_m_axis_video_TUSER),
-        .m_axis_video_TVALID(v_tpg_0_m_axis_video_TVALID),
+        .m_axis_video_TREADY(1'b1),
         .s_axi_CTRL_ARADDR(microblaze_0_axi_periph_M03_AXI_ARADDR),
         .s_axi_CTRL_ARREADY(microblaze_0_axi_periph_M03_AXI_ARREADY),
         .s_axi_CTRL_ARVALID(microblaze_0_axi_periph_M03_AXI_ARVALID),
@@ -732,8 +892,14 @@ module hdmi_tx_bd
         .irq(vid_phy_controller_0_irq),
         .mgtrefclk0_pad_n_in(HDMI_CLK_8T49N241_N),
         .mgtrefclk0_pad_p_in(HDMI_CLK_8T49N241_P),
+        .mgtrefclk1_pad_n_in(HDMI_RCLKOUT_N),
+        .mgtrefclk1_pad_p_in(HDMI_RCLKOUT_P),
+        .phy_rxn_in(hdmi_rx_n),
+        .phy_rxp_in(hdmi_rx_p),
         .phy_txn_out(hdmi_tx_n),
         .phy_txp_out(hdmi_tx_p),
+        .rx_video_clk(vid_phy_controller_0_rx_video_clk),
+        .rxoutclk(vid_phy_controller_0_rxoutclk),
         .tx_refclk_rdy(HDMI_TX_EN),
         .tx_tmds_clk_n(HDMI_TX_CLK_N),
         .tx_tmds_clk_p(HDMI_TX_CLK_P),
@@ -760,8 +926,22 @@ module hdmi_tx_bd
         .vid_phy_axi4lite_wready(microblaze_0_axi_periph_M04_AXI_WREADY),
         .vid_phy_axi4lite_wstrb(microblaze_0_axi_periph_M04_AXI_WSTRB),
         .vid_phy_axi4lite_wvalid(microblaze_0_axi_periph_M04_AXI_WVALID),
+        .vid_phy_rx_axi4s_aclk(vid_phy_controller_0_rxoutclk),
+        .vid_phy_rx_axi4s_aresetn(HDMI_TX_EN),
+        .vid_phy_rx_axi4s_ch0_tdata(vid_phy_controller_0_vid_phy_rx_axi4s_ch0_TDATA),
+        .vid_phy_rx_axi4s_ch0_tready(1'b1),
+        .vid_phy_rx_axi4s_ch0_tvalid(vid_phy_controller_0_vid_phy_rx_axi4s_ch0_TVALID),
+        .vid_phy_rx_axi4s_ch1_tdata(vid_phy_controller_0_vid_phy_rx_axi4s_ch1_TDATA),
+        .vid_phy_rx_axi4s_ch1_tready(1'b1),
+        .vid_phy_rx_axi4s_ch1_tvalid(vid_phy_controller_0_vid_phy_rx_axi4s_ch1_TVALID),
+        .vid_phy_rx_axi4s_ch2_tdata(vid_phy_controller_0_vid_phy_rx_axi4s_ch2_TDATA),
+        .vid_phy_rx_axi4s_ch2_tready(1'b1),
+        .vid_phy_rx_axi4s_ch2_tvalid(vid_phy_controller_0_vid_phy_rx_axi4s_ch2_TVALID),
         .vid_phy_sb_aclk(microblaze_0_Clk),
         .vid_phy_sb_aresetn(rst_microblaze_0_clk_wiz_1_100M_peripheral_aresetn),
+        .vid_phy_status_sb_rx_tdata(vid_phy_controller_0_vid_phy_status_sb_rx_TDATA),
+        .vid_phy_status_sb_rx_tready(1'b1),
+        .vid_phy_status_sb_rx_tvalid(vid_phy_controller_0_vid_phy_status_sb_rx_TVALID),
         .vid_phy_status_sb_tx_tdata(vid_phy_controller_0_vid_phy_status_sb_tx_tdata),
         .vid_phy_status_sb_tx_tready(1'b1),
         .vid_phy_status_sb_tx_tvalid(vid_phy_controller_0_vid_phy_status_sb_tx_tvalid),

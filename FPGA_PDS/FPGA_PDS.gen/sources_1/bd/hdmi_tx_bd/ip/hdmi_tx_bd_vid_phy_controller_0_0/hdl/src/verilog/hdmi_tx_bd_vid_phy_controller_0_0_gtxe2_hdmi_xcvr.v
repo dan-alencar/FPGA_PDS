@@ -343,7 +343,7 @@ wire    cpll_pd_i;
             .ES_VERT_OFFSET                         (9'b000000000),
 
            //-----------------------FPGA RX Interface Attributes-------------------------
-            .RX_DATA_WIDTH                          (40),
+            .RX_DATA_WIDTH                          (20),
 
            //-------------------------PMA Attributes----------------------------
             .OUTREFCLK_SEL_INV                      (2'b11),
@@ -455,7 +455,7 @@ wire    cpll_pd_i;
             .TX_XCLK_SEL                            ("TXUSR"),
 
            //-----------------------FPGA TX Interface Attributes-------------------------
-            .TX_DATA_WIDTH                          (40),
+            .TX_DATA_WIDTH                          (20),
 
            //-----------------------TX Configurable Driver Attributes-------------------------
             .TX_DEEMPH0                             (5'b00000),
@@ -494,9 +494,8 @@ wire    cpll_pd_i;
             .CPLL_INIT_CFG                          (24'h00001E),
             .CPLL_LOCK_CFG                          (16'h01E8),
             .CPLL_REFCLK_DIV                        (1),
- 
             .RXOUT_DIV                              (2),
-            .TXOUT_DIV                              (4),
+            .TXOUT_DIV                              (2),
             .SATA_CPLL_CFG                          ("VCO_3000MHZ"),
 
            //------------RX Initialization and Reset Attributes-------------
@@ -521,10 +520,10 @@ wire    cpll_pd_i;
             .TX_CLKMUX_PD                           (1'b1),
 
            //-----------------------FPGA RX Interface Attribute-------------------------
-            .RX_INT_DATAWIDTH                       (1),
+            .RX_INT_DATAWIDTH                       (0),
 
            //-----------------------FPGA TX Interface Attribute-------------------------
-            .TX_INT_DATAWIDTH                       (1),
+            .TX_INT_DATAWIDTH                       (0),
 
            //----------------TX Configurable Driver Attributes---------------
             .TX_QPI_STATUS_EN                       (1'b0),

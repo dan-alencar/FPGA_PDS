@@ -54,7 +54,7 @@ module hdmi_tx_bd_vid_phy_controller_0_0_top #
         parameter         C_SILICON_REVISION            = "0",
         
         // HDMI
-        parameter integer C_NIDRU                       = 0,
+        parameter integer C_NIDRU                       = 1,
         parameter integer C_NIDRU_REFCLK_SEL            = 0,
         parameter integer C_TX_REFCLK_SEL               = 0,
         parameter integer C_RX_REFCLK_SEL               = 1,        
@@ -66,7 +66,7 @@ module hdmi_tx_bd_vid_phy_controller_0_0_top #
         parameter integer C_Tx_No_Of_Channels           =  3,   // baoshan: get from modelparam
         parameter integer C_Rx_No_Of_Channels           =  3,   // baoshan: get from modelparam
         parameter integer C_Tx_Protocol                 =  1,         // baoshan: get from modelparam
-        parameter integer C_Rx_Protocol                 =  3,         // baoshan: get from modelparam
+        parameter integer C_Rx_Protocol                 =  1,         // baoshan: get from modelparam
         parameter integer C_Tx_Dp_Protocol              =  0,         // DP 1.4 or DP2.0
         parameter integer C_Rx_Dp_Protocol              =  0,         // DP 1.4 or DP2.0
         parameter integer C_TX_PLL_SELECTION            =  6,                // baoshan: get from modelparam
@@ -77,7 +77,7 @@ module hdmi_tx_bd_vid_phy_controller_0_0_top #
         parameter integer Tx_Buffer_Bypass              = 1,
         parameter integer C_Hdmi_Fast_Switch            = 1,
         parameter integer C_Err_Irq_En                  = 0,
-        parameter integer C_INT_WIDTH                   = 0,
+        parameter integer C_INT_WIDTH                   = 20,
         parameter integer C_TX_TDATA_WIDTH              = 40,
         parameter integer C_RX_TDATA_WIDTH              = 40,
         
@@ -87,12 +87,12 @@ module hdmi_tx_bd_vid_phy_controller_0_0_top #
         // Parameters of Axi Slave Bus Interface vid_phy_axi4lite
         parameter integer C_vid_phy_axi4lite_DATA_WIDTH         = 32,
         parameter integer C_vid_phy_axi4lite_ADDR_WIDTH         = 10,   // baoshan: 1 bit added on addr width for HDMI - review this with Vamsi
-        parameter integer C_vid_phy_tx_axi4s_ch_TDATA_WIDTH     = 40,
-        parameter integer C_vid_phy_tx_axi4s_ch_INT_TDATA_WIDTH = 40,
+        parameter integer C_vid_phy_tx_axi4s_ch_TDATA_WIDTH     = 20,
+        parameter integer C_vid_phy_tx_axi4s_ch_INT_TDATA_WIDTH = 20,
         parameter integer C_vid_phy_tx_axi4s_ch_TUSER_WIDTH     = 1,
-        parameter integer C_vid_phy_rx_axi4s_ch_TDATA_WIDTH     = 40,
-        parameter integer C_vid_phy_rx_axi4s_ch_INT_TDATA_WIDTH = 40,
-        parameter integer C_vid_phy_rx_axi4s_ch_TUSER_WIDTH     = 4,
+        parameter integer C_vid_phy_rx_axi4s_ch_TDATA_WIDTH     = 20,
+        parameter integer C_vid_phy_rx_axi4s_ch_INT_TDATA_WIDTH = 20,
+        parameter integer C_vid_phy_rx_axi4s_ch_TUSER_WIDTH     = 1,
         parameter integer C_vid_phy_control_sb_tx_TDATA_WIDTH   = 32,
         parameter integer C_vid_phy_status_sb_tx_TDATA_WIDTH    = 32,
         parameter integer C_vid_phy_control_sb_rx_TDATA_WIDTH   = 32,
@@ -367,9 +367,9 @@ wire [2 : 0] gtnorthrefclk0_in_int;
 wire [2 : 0] gtnorthrefclk1_in_int;
 wire [2 : 0] gtsouthrefclk0_in_int;
 wire [2 : 0] gtsouthrefclk1_in_int;
-wire [119: 0] gtwiz_userdata_tx_in;
-wire [119: 0] gtwiz_userdata_rx_out;
-wire [119: 0] gtwiz_userdata_rx_out_i;   // for HDMI
+wire [59: 0] gtwiz_userdata_tx_in;
+wire [59: 0] gtwiz_userdata_rx_out;
+wire [59: 0] gtwiz_userdata_rx_out_i;   // for HDMI
 wire [16-1 : 0] drpaddr_common_in;
 wire [0 : 0] drpclk_common_in                        = drpclk_i;
 wire [15 : 0] drpdi_common_in;
@@ -481,29 +481,29 @@ reg [23 : 0] b0_MMCM_RX_DRP_LOCKED_DLY_CNT;
 
 
     // ---------------------- Bank 0, GT Channel 0 ------------------------------
-    assign gtwiz_userdata_tx_in[39: 0] = vid_phy_tx_axi4s_ch0_tdata[39: 0];
+    assign gtwiz_userdata_tx_in[19: 0] = vid_phy_tx_axi4s_ch0_tdata[19: 0];
     assign vid_phy_tx_axi4s_ch0_tready    = 1'b1;
 
 //Use the 128bit here to output
-    assign vid_phy_rx_axi4s_ch0_tdata        = gtwiz_userdata_rx_out[39: 0];
+    assign vid_phy_rx_axi4s_ch0_tdata[19: 0]        = gtwiz_userdata_rx_out[19: 0];
     assign vid_phy_rx_axi4s_ch0_tuser[0]     = 1'b0;
     assign vid_phy_rx_axi4s_ch0_tvalid       = (C_NIDRU==1)? vid_phy_rx_axi4s_tvalid[0] : 1'b1;
 
     // ---------------------- Bank 0, GT Channel 1 ------------------------------
-    assign gtwiz_userdata_tx_in[79: 40] = vid_phy_tx_axi4s_ch1_tdata[39: 0];
+    assign gtwiz_userdata_tx_in[39: 20] = vid_phy_tx_axi4s_ch1_tdata[19: 0];
     assign vid_phy_tx_axi4s_ch1_tready    = 1'b1;
 
 //Use the 128bit here to output
-    assign vid_phy_rx_axi4s_ch1_tdata        = gtwiz_userdata_rx_out[79: 40];
+    assign vid_phy_rx_axi4s_ch1_tdata[19: 0]        = gtwiz_userdata_rx_out[39: 20];
     assign vid_phy_rx_axi4s_ch1_tuser[0]     = 1'b0;
     assign vid_phy_rx_axi4s_ch1_tvalid       = (C_NIDRU==1)? vid_phy_rx_axi4s_tvalid[1] : 1'b1;
 
     // ---------------------- Bank 0, GT Channel 2 ------------------------------
-    assign gtwiz_userdata_tx_in[119: 80] = vid_phy_tx_axi4s_ch2_tdata[39: 0];
+    assign gtwiz_userdata_tx_in[59: 40] = vid_phy_tx_axi4s_ch2_tdata[19: 0];
     assign vid_phy_tx_axi4s_ch2_tready    = 1'b1;
 
 //Use the 128bit here to output
-    assign vid_phy_rx_axi4s_ch2_tdata        = gtwiz_userdata_rx_out[119: 80];
+    assign vid_phy_rx_axi4s_ch2_tdata[19: 0]        = gtwiz_userdata_rx_out[59: 40];
     assign vid_phy_rx_axi4s_ch2_tuser[0]     = 1'b0;
     assign vid_phy_rx_axi4s_ch2_tvalid       = (C_NIDRU==1)? vid_phy_rx_axi4s_tvalid[2] : 1'b1;
 
@@ -829,9 +829,8 @@ reg [23 : 0] b0_MMCM_RX_DRP_LOCKED_DLY_CNT;
        .rxprbscntreset_in                          (rxprbscntreset_in                     ),
        .rxprbssel_in                               (rxprbssel_in                          ),
        .rxsysclksel_in                             (rxsysclksel_in                        ),
-        //TX Only use-case connect txusrclk to rxusrclk to avoid critical warnings
-       .rxusrclk_in                                (txusrclk2_in                          ),
-       .rxusrclk2_in                               (txusrclk2_in                          ),
+       .rxusrclk_in                                (rxusrclk_in                           ),
+       .rxusrclk2_in                               (rxusrclk2_in                          ),
        .txelecidle_in                              (txelecidle_in                         ),
        .txdiffctrl_in                              (txdiffctrl_in                         ),
        .txpolarity_in                              (txpolarity_in                         ),
@@ -1402,9 +1401,21 @@ endgenerate
     wire        b0_clkdet_ctrl_tx_en;
     wire        b0_clkdet_ctrl_rx_en;   
 
-assign b0_clkdet_dru_refclk = 1'b0;
+    if      (C_NIDRU_REFCLK_SEL == GTREFCLK0)      assign b0_clkdet_dru_refclk = mgtrefclk0_odiv2_i;
+    else if (C_NIDRU_REFCLK_SEL == GTREFCLK1)      assign b0_clkdet_dru_refclk = mgtrefclk1_odiv2_i;
+    else if (C_NIDRU_REFCLK_SEL == GTNORTHREFCLK0) assign b0_clkdet_dru_refclk = gtnorthrefclk0_odiv2_in;
+    else if (C_NIDRU_REFCLK_SEL == GTNORTHREFCLK1) assign b0_clkdet_dru_refclk = gtnorthrefclk1_odiv2_in; 
+    else if (C_NIDRU_REFCLK_SEL == GTSOUTHREFCLK0) assign b0_clkdet_dru_refclk = gtsouthrefclk0_odiv2_in;
+    else if (C_NIDRU_REFCLK_SEL == GTSOUTHREFCLK1) assign b0_clkdet_dru_refclk = gtsouthrefclk1_odiv2_in;
+    else assign b0_clkdet_dru_refclk = 1'b0;
 
-assign b0_rx_refclk_sel = 1'b0;
+    if      (C_RX_REFCLK_SEL == GTREFCLK0)      assign b0_rx_refclk_sel = mgtrefclk0_odiv2_i;
+    else if (C_RX_REFCLK_SEL == GTREFCLK1)      assign b0_rx_refclk_sel = mgtrefclk1_odiv2_i;
+    else if (C_RX_REFCLK_SEL == GTNORTHREFCLK0) assign b0_rx_refclk_sel = gtnorthrefclk0_odiv2_in;
+    else if (C_RX_REFCLK_SEL == GTNORTHREFCLK1) assign b0_rx_refclk_sel = gtnorthrefclk1_odiv2_in; 
+    else if (C_RX_REFCLK_SEL == GTSOUTHREFCLK0) assign b0_rx_refclk_sel = gtsouthrefclk0_odiv2_in;
+    else if (C_RX_REFCLK_SEL == GTSOUTHREFCLK1) assign b0_rx_refclk_sel = gtsouthrefclk1_odiv2_in;
+    else assign b0_rx_refclk_sel = 1'b0;
     
     if      (C_TX_REFCLK_SEL == GTREFCLK0)      assign b0_tx_refclk_sel = mgtrefclk0_odiv2_i;
     else if (C_TX_REFCLK_SEL == GTREFCLK1)      assign b0_tx_refclk_sel = mgtrefclk1_odiv2_i;
@@ -1490,9 +1501,143 @@ assign b0_rx_refclk_sel = 1'b0;
       .clkdet_rx_freq_evt_clr           (b0_clkdet_rx_freq_evt_clr)
     );  
 
-    // without NIDRU
-    assign gtwiz_userdata_rx_out = gtwiz_userdata_rx_out_i;
- 
+    wire [36:0] dru_ctrl_center_freq_i;
+    wire        dru_ctrl_enable_i;
+    wire        dru_ctrl_reset_i;
+
+    xpm_cdc_array_single #(
+      .VERSION        (`XPM_CDC_VERSION       ),
+      .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+      .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+      .WIDTH          (39                      ),
+      .SRC_INPUT_REG  (0                      )
+    ) xpm_array_single_DRU_CTRL_in_sync_inst (
+      .src_clk         (vid_phy_axi4lite_aclk        ),
+      .src_in          ({
+                         cfg_phy_mem_map_control[`DRU_CENTER_FREQ],
+                         cfg_phy_mem_map_control[`DRU_ENABLE],
+                         cfg_phy_mem_map_control[`DRU_RESET]
+                        }),
+      .dest_clk        (rxusrclk2_in_ch0       ),
+      .dest_out        ({
+                         dru_ctrl_center_freq_i,
+                         dru_ctrl_enable_i,
+                         dru_ctrl_reset_i
+                        })
+    );
+
+	// with NIDRU
+    //----------------- DRU, Bank 0, GT 0 ----------------
+	
+    wire        b0gt0_dru_stat_act; 
+    wire  [7:0] b0gt0_dru_stat_version; 
+    wire [39:0] b0gt0_dru_data_out_i; 
+    
+
+    vid_phy_controller_v2_2_22_dru #(
+      .WIDTH_OUT            (20)
+    ) dru_b0gt0_inst (
+      .DRU_CLK_IN           (rxusrclk2_in_ch0),
+      .DRU_ACT_OUT          (b0gt0_dru_stat_act),
+      .DRU_DATA_IN          ({20'b0, gtwiz_userdata_rx_out_i[19 : 0]}),
+      .DRU_DATA_OUT         (b0gt0_dru_data_out_i),
+      .DRU_DATA_EN_OUT      (vid_phy_rx_axi4s_tvalid[0]),
+	  
+      .dru_ctrl_rst         (dru_ctrl_reset_i),
+      .dru_ctrl_enable      (dru_ctrl_enable_i),
+      .dru_ctrl_ph_est_dis  (1'b0),
+      
+      .dru_center_freq      (dru_ctrl_center_freq_i),
+      .dru_gain_g1          (5'd9),
+      .dru_gain_g1_p        (5'd16),
+      .dru_gain_g2          (5'd4),
+      
+      .dru_version          (b0gt0_dru_stat_version)
+    );
+    assign gtwiz_userdata_rx_out[19 : 0] = b0gt0_dru_data_out_i[19:0]; 
+    
+    assign cfg_phy_mem_map_status_b0[`CH1_DRU_ACTIVE] = cfg_phy_mem_map_control[`DRU_ENABLE];
+    
+    //----------------- DRU, Bank 0, GT 1 ----------------
+	
+    wire        b0gt1_dru_stat_act; 
+    wire  [7:0] b0gt1_dru_stat_version; 
+    wire [39:0] b0gt1_dru_data_out_i; 
+    
+
+    vid_phy_controller_v2_2_22_dru #(
+      .WIDTH_OUT            (20)
+    ) dru_b0gt1_inst (
+      .DRU_CLK_IN           (rxusrclk2_in_ch0),
+      .DRU_ACT_OUT          (b0gt1_dru_stat_act),
+      .DRU_DATA_IN          ({20'b0, gtwiz_userdata_rx_out_i[39 : 20]}),
+      .DRU_DATA_OUT         (b0gt1_dru_data_out_i),
+      .DRU_DATA_EN_OUT      (vid_phy_rx_axi4s_tvalid[1]),
+	  
+      .dru_ctrl_rst         (dru_ctrl_reset_i),
+      .dru_ctrl_enable      (dru_ctrl_enable_i),
+      .dru_ctrl_ph_est_dis  (1'b0),
+      
+      .dru_center_freq      (dru_ctrl_center_freq_i),
+      .dru_gain_g1          (5'd9),
+      .dru_gain_g1_p        (5'd16),
+      .dru_gain_g2          (5'd4),
+      
+      .dru_version          (b0gt1_dru_stat_version)
+    );
+    assign gtwiz_userdata_rx_out[39 : 20] = b0gt1_dru_data_out_i[19:0]; 
+    
+    assign cfg_phy_mem_map_status_b0[`CH2_DRU_ACTIVE] = cfg_phy_mem_map_control[`DRU_ENABLE];
+    
+    //----------------- DRU, Bank 0, GT 2 ----------------
+	
+    wire        b0gt2_dru_stat_act; 
+    wire  [7:0] b0gt2_dru_stat_version; 
+    wire [39:0] b0gt2_dru_data_out_i; 
+    
+
+    vid_phy_controller_v2_2_22_dru #(
+      .WIDTH_OUT            (20)
+    ) dru_b0gt2_inst (
+      .DRU_CLK_IN           (rxusrclk2_in_ch0),
+      .DRU_ACT_OUT          (b0gt2_dru_stat_act),
+      .DRU_DATA_IN          ({20'b0, gtwiz_userdata_rx_out_i[59 : 40]}),
+      .DRU_DATA_OUT         (b0gt2_dru_data_out_i),
+      .DRU_DATA_EN_OUT      (vid_phy_rx_axi4s_tvalid[2]),
+	  
+      .dru_ctrl_rst         (dru_ctrl_reset_i),
+      .dru_ctrl_enable      (dru_ctrl_enable_i),
+      .dru_ctrl_ph_est_dis  (1'b0),
+      
+      .dru_center_freq      (dru_ctrl_center_freq_i),
+      .dru_gain_g1          (5'd9),
+      .dru_gain_g1_p        (5'd16),
+      .dru_gain_g2          (5'd4),
+      
+      .dru_version          (b0gt2_dru_stat_version)
+    );
+    assign gtwiz_userdata_rx_out[59 : 40] = b0gt2_dru_data_out_i[19:0]; 
+    
+    assign cfg_phy_mem_map_status_b0[`CH3_DRU_ACTIVE] = cfg_phy_mem_map_control[`DRU_ENABLE];
+    
+
+    xpm_cdc_array_single #(
+      .VERSION        (`XPM_CDC_VERSION       ),
+      .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+      .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+      .WIDTH          (8                      ),
+      .SRC_INPUT_REG  (0                      )
+    ) xpm_array_single_DRU_VERSION_in_sync_b0gt0inst (
+      .src_clk         (rxusrclk2_in_ch0        ),
+      .src_in          (b0gt0_dru_stat_version),
+      .dest_clk        (vid_phy_axi4lite_aclk       ),
+      .dest_out        (cfg_phy_mem_map_status_b0[`DRU_VERSION])
+    );
+    
+    assign cfg_phy_mem_map_status_b0[`DRU_GAIN_G1]   = 5'd9;
+    assign cfg_phy_mem_map_status_b0[`DRU_GAIN_G1_P] = 5'd16;
+    assign cfg_phy_mem_map_status_b0[`DRU_GAIN_G2]   = 5'd4;
+    
 
 // baoshan://
   
@@ -1636,14 +1781,84 @@ assign b0_rx_refclk_sel = 1'b0;
 
 
   // ---------------------- Synchronizer: GT Channel 0 :: Control Path ----------------------------
+  xpm_cdc_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .SRC_INPUT_REG  (0                      )
+  ) xpm_array_single_rxcdrlock_b00_inst (
+    .src_clk         (rxusrclk2_in[0]       ),
+    .src_in          (rxcdrlock_out[0]),
+    .dest_clk        (vid_phy_axi4lite_aclk  ),
+    .dest_out        (cfg_phy_mem_map_status_b0[`CH1_RXCDRLOCK])
+  );
 
-//TX Only VPHY
-assign rxpolarity_in[0]     = 1'b0;
-assign rxprbscntreset_in[0] = 1'b0;
-assign cfg_phy_mem_map_status_b0[`CH1_RXPRBSERR] = 1'b0;
+  xpm_cdc_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .SRC_INPUT_REG  (0                      )
+  ) xpm_single_rxpolarity_b00_inst (
+    .src_clk         ( vid_phy_axi4lite_aclk    ),
+    .src_in          ( cfg_phy_mem_map_control_b0[`CH1_RXPOLARITY] ),
+    .dest_clk        ( rxusrclk2_in[0] ),
+    .dest_out        ( rxpolarity_in[0] )
+  );
 
-//TX Only VPHY
-assign rxprbssel_in[3 : 0] = 4'b0;
+  xpm_cdc_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .SRC_INPUT_REG  (0                      )
+  ) xpm_single_rxprbscntreset_b00_inst (
+    .src_clk         ( vid_phy_axi4lite_aclk    ),
+    .src_in          ( cfg_phy_mem_map_control_b0[`CH1_RXPRBSCNTRESET] ),
+    .dest_clk        ( rxusrclk2_in[0] ),
+    .dest_out        ( rxprbscntreset_in[0] )
+  );
+  
+  //Latch the PRBS error after tolerance window is lapsed
+  //User has to read PRBS Error Counter value using DRP access from GT (through SW)
+  reg [3:0] b0gt0_rxprbserr_out_cntr;
+  reg       b0gt0_rxprbserr_out_latch;
+  always@(posedge rxusrclk2_in[0]) begin
+    if(rxprbscntreset_in[0]) begin
+      b0gt0_rxprbserr_out_latch <= 1'b0;
+      b0gt0_rxprbserr_out_cntr  <= 'h0;
+    end else begin
+      if(rxprbserr_out[0]) begin
+        b0gt0_rxprbserr_out_cntr <= b0gt0_rxprbserr_out_cntr + 1'b1;  
+      end
+      if(&b0gt0_rxprbserr_out_cntr) begin
+        b0gt0_rxprbserr_out_latch <= 1'b1;
+      end
+    end
+  end
+
+  xpm_cdc_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .SRC_INPUT_REG  (0                      )
+  ) xpm_single_prbserr_out_sync_b0gt0inst (
+    .src_clk         (rxusrclk2_in_ch0        ),
+    .src_in          (b0gt0_rxprbserr_out_latch),
+    .dest_clk        (vid_phy_axi4lite_aclk       ),
+    .dest_out        (cfg_phy_mem_map_status_b0[`CH1_RXPRBSERR])
+  );
+
+  xpm_cdc_array_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .WIDTH          ( 4                     ),
+    .SRC_INPUT_REG  ( 0                     )
+  ) xpm_array_single_rxprbssel_b00_inst (
+    .src_clk         (vid_phy_axi4lite_aclk        ),
+    .src_in          ({cfg_phy_mem_map_control_b0[`CH1_RXPRBSSEL_US_MSB], cfg_phy_mem_map_control_b0[`CH1_RXPRBSSEL]}),
+    .dest_clk        (rxusrclk2_in[0]       ),
+    .dest_out        (rxprbssel_in[3 : 0])
+  );
 
   xpm_cdc_array_single #(
     .VERSION        (`XPM_CDC_VERSION       ),
@@ -1796,14 +2011,84 @@ assign rxprbssel_in[3 : 0] = 4'b0;
   
 
   // ---------------------- Synchronizer: GT Channel 1 :: Control Path ----------------------------
+  xpm_cdc_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .SRC_INPUT_REG  (0                      )
+  ) xpm_array_single_rxcdrlock_b01_inst (
+    .src_clk         (rxusrclk2_in[1]       ),
+    .src_in          (rxcdrlock_out[1]),
+    .dest_clk        (vid_phy_axi4lite_aclk  ),
+    .dest_out        (cfg_phy_mem_map_status_b0[`CH2_RXCDRLOCK])
+  );
 
-//TX Only VPHY
-assign rxpolarity_in[1]     = 1'b0;
-assign rxprbscntreset_in[1] = 1'b0;
-assign cfg_phy_mem_map_status_b0[`CH2_RXPRBSERR] = 1'b0;
+  xpm_cdc_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .SRC_INPUT_REG  (0                      )
+  ) xpm_single_rxpolarity_b01_inst (
+    .src_clk         ( vid_phy_axi4lite_aclk    ),
+    .src_in          ( cfg_phy_mem_map_control_b0[`CH2_RXPOLARITY] ),
+    .dest_clk        ( rxusrclk2_in[1] ),
+    .dest_out        ( rxpolarity_in[1] )
+  );
 
-//TX Only VPHY
-assign rxprbssel_in[7 : 4] = 4'b0;
+  xpm_cdc_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .SRC_INPUT_REG  (0                      )
+  ) xpm_single_rxprbscntreset_b01_inst (
+    .src_clk         ( vid_phy_axi4lite_aclk    ),
+    .src_in          ( cfg_phy_mem_map_control_b0[`CH2_RXPRBSCNTRESET] ),
+    .dest_clk        ( rxusrclk2_in[1] ),
+    .dest_out        ( rxprbscntreset_in[1] )
+  );
+  
+  //Latch the PRBS error after tolerance window is lapsed
+  //User has to read PRBS Error Counter value using DRP access from GT (through SW)
+  reg [3:0] b0gt1_rxprbserr_out_cntr;
+  reg       b0gt1_rxprbserr_out_latch;
+  always@(posedge rxusrclk2_in[1]) begin
+    if(rxprbscntreset_in[1]) begin
+      b0gt1_rxprbserr_out_latch <= 1'b0;
+      b0gt1_rxprbserr_out_cntr  <= 'h0;
+    end else begin
+      if(rxprbserr_out[1]) begin
+        b0gt1_rxprbserr_out_cntr <= b0gt1_rxprbserr_out_cntr + 1'b1;  
+      end
+      if(&b0gt1_rxprbserr_out_cntr) begin
+        b0gt1_rxprbserr_out_latch <= 1'b1;
+      end
+    end
+  end
+
+  xpm_cdc_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .SRC_INPUT_REG  (0                      )
+  ) xpm_single_prbserr_out_sync_b0gt1inst (
+    .src_clk         (rxusrclk2_in_ch0        ),
+    .src_in          (b0gt1_rxprbserr_out_latch),
+    .dest_clk        (vid_phy_axi4lite_aclk       ),
+    .dest_out        (cfg_phy_mem_map_status_b0[`CH2_RXPRBSERR])
+  );
+
+  xpm_cdc_array_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .WIDTH          ( 4                     ),
+    .SRC_INPUT_REG  ( 0                     )
+  ) xpm_array_single_rxprbssel_b01_inst (
+    .src_clk         (vid_phy_axi4lite_aclk        ),
+    .src_in          ({cfg_phy_mem_map_control_b0[`CH2_RXPRBSSEL_US_MSB], cfg_phy_mem_map_control_b0[`CH2_RXPRBSSEL]}),
+    .dest_clk        (rxusrclk2_in[1]       ),
+    .dest_out        (rxprbssel_in[7 : 4])
+  );
 
   xpm_cdc_array_single #(
     .VERSION        (`XPM_CDC_VERSION       ),
@@ -1956,14 +2241,84 @@ assign rxprbssel_in[7 : 4] = 4'b0;
   
 
   // ---------------------- Synchronizer: GT Channel 2 :: Control Path ----------------------------
+  xpm_cdc_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .SRC_INPUT_REG  (0                      )
+  ) xpm_array_single_rxcdrlock_b02_inst (
+    .src_clk         (rxusrclk2_in[2]       ),
+    .src_in          (rxcdrlock_out[2]),
+    .dest_clk        (vid_phy_axi4lite_aclk  ),
+    .dest_out        (cfg_phy_mem_map_status_b0[`CH3_RXCDRLOCK])
+  );
 
-//TX Only VPHY
-assign rxpolarity_in[2]     = 1'b0;
-assign rxprbscntreset_in[2] = 1'b0;
-assign cfg_phy_mem_map_status_b0[`CH3_RXPRBSERR] = 1'b0;
+  xpm_cdc_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .SRC_INPUT_REG  (0                      )
+  ) xpm_single_rxpolarity_b02_inst (
+    .src_clk         ( vid_phy_axi4lite_aclk    ),
+    .src_in          ( cfg_phy_mem_map_control_b0[`CH3_RXPOLARITY] ),
+    .dest_clk        ( rxusrclk2_in[2] ),
+    .dest_out        ( rxpolarity_in[2] )
+  );
 
-//TX Only VPHY
-assign rxprbssel_in[11 : 8] = 4'b0;
+  xpm_cdc_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .SRC_INPUT_REG  (0                      )
+  ) xpm_single_rxprbscntreset_b02_inst (
+    .src_clk         ( vid_phy_axi4lite_aclk    ),
+    .src_in          ( cfg_phy_mem_map_control_b0[`CH3_RXPRBSCNTRESET] ),
+    .dest_clk        ( rxusrclk2_in[2] ),
+    .dest_out        ( rxprbscntreset_in[2] )
+  );
+  
+  //Latch the PRBS error after tolerance window is lapsed
+  //User has to read PRBS Error Counter value using DRP access from GT (through SW)
+  reg [3:0] b0gt2_rxprbserr_out_cntr;
+  reg       b0gt2_rxprbserr_out_latch;
+  always@(posedge rxusrclk2_in[2]) begin
+    if(rxprbscntreset_in[2]) begin
+      b0gt2_rxprbserr_out_latch <= 1'b0;
+      b0gt2_rxprbserr_out_cntr  <= 'h0;
+    end else begin
+      if(rxprbserr_out[2]) begin
+        b0gt2_rxprbserr_out_cntr <= b0gt2_rxprbserr_out_cntr + 1'b1;  
+      end
+      if(&b0gt2_rxprbserr_out_cntr) begin
+        b0gt2_rxprbserr_out_latch <= 1'b1;
+      end
+    end
+  end
+
+  xpm_cdc_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .SRC_INPUT_REG  (0                      )
+  ) xpm_single_prbserr_out_sync_b0gt2inst (
+    .src_clk         (rxusrclk2_in_ch0        ),
+    .src_in          (b0gt2_rxprbserr_out_latch),
+    .dest_clk        (vid_phy_axi4lite_aclk       ),
+    .dest_out        (cfg_phy_mem_map_status_b0[`CH3_RXPRBSERR])
+  );
+
+  xpm_cdc_array_single #(
+    .VERSION        (`XPM_CDC_VERSION       ),
+    .SIM_ASSERT_CHK (`XPM_CDC_SIM_ASSERT_CHK),
+    .DEST_SYNC_FF   (`XPM_CDC_MTBF_FFS      ),
+    .WIDTH          ( 4                     ),
+    .SRC_INPUT_REG  ( 0                     )
+  ) xpm_array_single_rxprbssel_b02_inst (
+    .src_clk         (vid_phy_axi4lite_aclk        ),
+    .src_in          ({cfg_phy_mem_map_control_b0[`CH3_RXPRBSSEL_US_MSB], cfg_phy_mem_map_control_b0[`CH3_RXPRBSSEL]}),
+    .dest_clk        (rxusrclk2_in[2]       ),
+    .dest_out        (rxprbssel_in[11 : 8])
+  );
 
   xpm_cdc_array_single #(
     .VERSION        (`XPM_CDC_VERSION       ),
@@ -2392,6 +2747,24 @@ assign rxprbssel_in[11 : 8] = 4'b0;
   
 
  
+
+  // ----------------------------------- Rx Sideband Connections (Uses AXI4Lite Clock) -----------------------------
+
+  // Control Inputs - Driven from Link Layer to add protocol specific control
+  assign vid_phy_control_sb_rx_tready   = 1'b1;
+
+  // Status Outputs - Will be used by link layer
+  assign vid_phy_status_sb_rx_tvalid    = 1'b1;
+
+  assign vid_phy_status_sb_rx_tdata[0]  = gtwiz_reset_rx_done_out_sync & (C_RX_PLL_SELECTION==0 ? b0_CPLL_LOCK_DLY_SYNC_AXICLK : b0_QPLL_LOCK_DLY_SYNC_AXICLK);
+  assign vid_phy_status_sb_rx_tdata[1]  = b0_MMCM_RX_DRP_LOCKED_DLY;
+  assign vid_phy_status_sb_rx_tdata[2]  = 1'b0;
+  assign vid_phy_status_sb_rx_tdata[3]  = 1'b0;
+  assign vid_phy_status_sb_rx_tdata[4]  = 1'b0;
+  assign vid_phy_status_sb_rx_tdata[5]  = 1'b0;
+  assign vid_phy_status_sb_rx_tdata[6]  = 1'b0;
+  assign vid_phy_status_sb_rx_tdata[7]  = 1'b0; 
+
 
 
 endmodule

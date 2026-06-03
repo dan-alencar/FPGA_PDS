@@ -93,7 +93,7 @@ module bd_2339_v_axi4s_vid_out_0 (
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 aclk_intf CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk_intf, ASSOCIATED_BUSIF video_in, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk_intf, ASSOCIATED_BUSIF video_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *)
 input wire aclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clockenable:1.0 aclken_intf CE" *)
 (* X_INTERFACE_MODE = "slave" *)
@@ -105,8 +105,15 @@ input wire aclken;
 input wire aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TDATA" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME video_in, TDATA_NUM_BYTES 12, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0" *)
-input wire [95 : 0] s_axis_video_tdata;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME video_in, TDATA_NUM_BYTES 6, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value xilinx.com:video:G_B_R_444:1.0} bitwidth {attribs {resolve_type automatic dependency {} format long minim\
+um {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value rows} size {attribs {resolve_type generated dependency active_rows format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_rows_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type \
+immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cols} size {attribs {resolve_type generated dependency active_cols format long minimum {} maximum {}} value 1} stride {a\
+ttribs {resolve_type generated dependency active_cols_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_G {name {attribs {resolve_type immediate dependency {} format string \
+minimum {} maximum {}} value G} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type imm\
+ediate dependency {} format bool minimum {} maximum {}} value true}}}} field_B {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value B} enabled {attribs {resolve_type generated dependency video_comp1_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} m\
+aximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp1_offset format long minimum {} maximum {}} value 8} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_R {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value R} enabled {attribs {resolve_type generated dependency video_comp2_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs \
+{resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp2_offset format long minimum {} maximum {}} value 16} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}}}}} TDATA_WIDTH 24}, INSERT_VIP 0" *)
+input wire [47 : 0] s_axis_video_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TVALID" *)
 input wire s_axis_video_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TREADY" *)
@@ -142,7 +149,7 @@ output wire vid_hblank;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_io_out FIELD" *)
 output wire vid_field_id;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_io_out DATA" *)
-output wire [95 : 0] vid_data;
+output wire [47 : 0] vid_data;
 (* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 vtiming_in VSYNC" *)
 (* X_INTERFACE_MODE = "slave" *)
 input wire vtg_vsync;
@@ -169,12 +176,12 @@ input wire remap_420_en;
 
   v_axi4s_vid_out_v4_0_20 #(
     .C_FAMILY("kintexuplus"),
-    .C_PIXELS_PER_CLOCK(4),
+    .C_PIXELS_PER_CLOCK(2),
     .C_COMPONENTS_PER_PIXEL(3),
     .C_S_AXIS_COMPONENT_WIDTH(8),
     .C_NATIVE_COMPONENT_WIDTH(8),
-    .C_NATIVE_DATA_WIDTH(96),
-    .C_S_AXIS_TDATA_WIDTH(96),
+    .C_NATIVE_DATA_WIDTH(48),
+    .C_S_AXIS_TDATA_WIDTH(48),
     .C_HAS_ASYNC_CLK(1),
     .C_ADDR_WIDTH(10),
     .C_VTG_MASTER_SLAVE(0),
@@ -182,7 +189,7 @@ input wire remap_420_en;
     .C_SYNC_LOCK_THRESHOLD(4),
     .C_INCLUDE_PIXEL_REPEAT(1),
     .C_INCLUDE_PIXEL_REMAP_420(1),
-    .C_ADDR_WIDTH_PIXEL_REMAP_420(10),
+    .C_ADDR_WIDTH_PIXEL_REMAP_420(11),
     .C_ARBITRARY_RES_EN(0)
   ) inst (
     .aclk(aclk),
@@ -216,11 +223,11 @@ input wire remap_420_en;
     .vtg_active_video(vtg_active_video),
     .vtg_field_id(vtg_field_id),
     .vtg_ce(vtg_ce),
-    .vtg_hsync_arb(4'B0),
-    .vtg_hblank_arb(4'B0),
-    .vtg_vsync_arb(4'B0),
-    .vtg_vblank_arb(4'B0),
-    .vtg_active_video_arb(4'B0),
+    .vtg_hsync_arb(2'B0),
+    .vtg_hblank_arb(2'B0),
+    .vtg_vsync_arb(2'B0),
+    .vtg_vblank_arb(2'B0),
+    .vtg_active_video_arb(2'B0),
     .vtg_field_id_arb(1'B0),
     .video_format(video_format),
     .locked(locked),

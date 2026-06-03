@@ -1,0 +1,767 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Jun  2 22:26:02 2026
+# Process ID         : 42450
+# Current directory  : /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/hdmi_tx_bd_vid_phy_controller_0_0_synth_1
+# Command line       : vivado -log hdmi_tx_bd_vid_phy_controller_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_tx_bd_vid_phy_controller_0_0.tcl
+# Log file           : /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/hdmi_tx_bd_vid_phy_controller_0_0_synth_1/hdmi_tx_bd_vid_phy_controller_0_0.vds
+# Journal file       : /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/hdmi_tx_bd_vid_phy_controller_0_0_synth_1/vivado.jou
+# Running On         : pop-os
+# Platform           : Pop
+# Operating System   : Pop!_OS 24.04 LTS
+# Processor Detail   : Intel(R) Core(TM) 5 210H
+# CPU Frequency      : 3700.065 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 12
+# Host memory        : 24780 MB
+# Swap memory        : 21474 MB
+# Total Virtual      : 46254 MB
+# Available Virtual  : 35940 MB
+#-----------------------------------------------------------
+source hdmi_tx_bd_vid_phy_controller_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1630.883 ; gain = 64.059 ; free physical = 3432 ; free virtual = 30303
+Command: synth_design -top hdmi_tx_bd_vid_phy_controller_0_0 -part xcau15p-ffvb676-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Device 21-403] Loading part xcau15p-ffvb676-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 42991
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 2472.578 ; gain = 450.688 ; free physical = 416 ; free virtual = 20548
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'MMCM_DRP_SCLK', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_gt_usrclk_source.v:367]
+INFO: [Synth 8-11241] undeclared symbol 'vid_phy_axi4lite_aclk', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_8series.v:99]
+INFO: [Synth 8-11241] undeclared symbol 'clkin1', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_CLOCK_MODULE.v:103]
+INFO: [Synth 8-11241] undeclared symbol 'clkout0', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_CLOCK_MODULE.v:161]
+INFO: [Synth 8-11241] undeclared symbol 'clkin1', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_CLOCK_MODULE_8series.v:105]
+WARNING: [Synth 8-11065] parameter 'PLL0_FBDIV_IN' becomes localparam in 'vid_phy_controller_v2_2_22_gtp_common' with formal parameter declaration list [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:104]
+WARNING: [Synth 8-11065] parameter 'PLL1_FBDIV_IN' becomes localparam in 'vid_phy_controller_v2_2_22_gtp_common' with formal parameter declaration list [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:105]
+WARNING: [Synth 8-11065] parameter 'PLL0_FBDIV_45_IN' becomes localparam in 'vid_phy_controller_v2_2_22_gtp_common' with formal parameter declaration list [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:106]
+WARNING: [Synth 8-11065] parameter 'PLL1_FBDIV_45_IN' becomes localparam in 'vid_phy_controller_v2_2_22_gtp_common' with formal parameter declaration list [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:107]
+WARNING: [Synth 8-11065] parameter 'PLL0_REFCLK_DIV_IN' becomes localparam in 'vid_phy_controller_v2_2_22_gtp_common' with formal parameter declaration list [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:108]
+WARNING: [Synth 8-11065] parameter 'PLL1_REFCLK_DIV_IN' becomes localparam in 'vid_phy_controller_v2_2_22_gtp_common' with formal parameter declaration list [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_gtp_common.v:109]
+INFO: [Synth 8-11241] undeclared symbol 'gtwiz_buffbypass_tx_reset_in', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:779]
+INFO: [Synth 8-11241] undeclared symbol 'gtwiz_buffbypass_tx_start_user_in', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:780]
+INFO: [Synth 8-11241] undeclared symbol 'gtgrefclk0_in', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1063]
+INFO: [Synth 8-11241] undeclared symbol 'gtgrefclk1_in', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1071]
+INFO: [Synth 8-11241] undeclared symbol 'b0_MMCM_DRP_LOCKED', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1696]
+INFO: [Synth 8-11241] undeclared symbol 'b0_MMCM_DRP_LOCKED_sync', assumed default net type 'wire' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1698]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_top' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:46]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper.v:53]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_top' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_top.v:173]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4.v:141]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_channel_wrapper' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_channel_wrapper.v:56]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_channel' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/gtwizard_ultrascale_v1_7_gthe4_channel.v:53]
+INFO: [Synth 8-6157] synthesizing module 'GTHE4_CHANNEL' [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:53844]
+INFO: [Synth 8-6155] done synthesizing module 'GTHE4_CHANNEL' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:53844]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_channel' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/gtwizard_ultrascale_v1_7_gthe4_channel.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_channel_wrapper' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_channel_wrapper.v:56]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_reset_synchronizer' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_reset_sync.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_reset_synchronizer' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_reset_sync.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_bit_synchronizer' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_bit_sync.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_bit_synchronizer' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_bit_sync.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'BUFG_GT' [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2855]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG_GT' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2855]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_freq_counter' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_freq_counter' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gte4_drp_arb' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gte4_drp_arb.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gte4_drp_arb' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gte4_drp_arb.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_delay_powergood' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:53]
+INFO: [Synth 8-226] default block is never used [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:136]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gthe4_delay_powergood' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_buffbypass_tx' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gtwiz_buffbypass_tx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_reset_inv_synchronizer' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_reset_inv_synchronizer' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_buffbypass_tx' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gtwiz_buffbypass_tx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:53]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:162]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_userdata_tx' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_tx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_userdata_tx' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_tx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_userdata_rx' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_rx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_22_gtwiz_userdata_rx' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_rx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4.v:141]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_top' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_top.v:173]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper.v:53]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gt_usrclk_source_8series' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_gt_usrclk_source_8series.v:68]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE4' [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:83082]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE4' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:83082]
+INFO: [Synth 8-6157] synthesizing module 'BUFG_GT_SYNC' [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2877]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG_GT_SYNC' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2877]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_22_drp_control_hdmi' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:52]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized0' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized0' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized0' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized0' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized1' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized1' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_22_drp_control_hdmi' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:52]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_CLOCK_MODULE_8series' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_CLOCK_MODULE_8series.v:68]
+INFO: [Synth 8-6157] synthesizing module 'MMCME3_ADV' [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:96035]
+INFO: [Synth 8-6155] done synthesizing module 'MMCME3_ADV' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:96035]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2688]
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2688]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_CLOCK_MODULE_8series' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_CLOCK_MODULE_8series.v:68]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE3' [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:117917]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE3' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:117917]
+INFO: [Synth 8-6157] synthesizing module 'OBUFTDS' [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:113969]
+INFO: [Synth 8-6155] done synthesizing module 'OBUFTDS' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:113969]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_CLOCK_MODULE_8series__parameterized0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_CLOCK_MODULE_8series.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_CLOCK_MODULE_8series__parameterized0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_CLOCK_MODULE_8series.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gt_usrclk_source_8series' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_gt_usrclk_source_8series.v:68]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper.v:57]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gthe4_common' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_gthe4_common.v:55]
+INFO: [Synth 8-6157] synthesizing module 'GTHE4_COMMON' [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:55036]
+INFO: [Synth 8-6155] done synthesizing module 'GTHE4_COMMON' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:55036]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gthe4_common' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_gthe4_common.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper.v:57]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_PCIERATEQPLL0' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_PCIERATEQPLL1' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_QPLL0FBDIV' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_QPLL1FBDIV' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM0DATA' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM0RESET' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM0TOGGLE' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM0WIDTH' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM1DATA' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM1RESET' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM1TOGGLE' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM1WIDTH' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_TCONGPI' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_TCONPOWERUP' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_TCONRESET' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_TCONRSVDIN1' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM0FINALOUT' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM0TESTDATA' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM1FINALOUT' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_SDM1TESTDATA' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_TCONGPO' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7071] port 'GTHE4_COMMON_TCONRSVDOUT0' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' is unconnected for instance 'gt_common_inst' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-7023] instance 'gt_common_inst' of module 'hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gthe4_common_wrapper' has 87 connections declared, but only 65 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1040]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_22_axi4lite' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_axi4lite.v:51]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_22_interrupts' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_interrupts.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_22_interrupts' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_interrupts.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_22_axi4lite' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_axi4lite.v:51]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_22_drp_control_hdmi__parameterized0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_22_drp_control_hdmi__parameterized0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:52]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_clkdet' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_clkdet.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized2' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized2' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_22_lib_edge_v1_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_lib.sv:150]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_22_lib_edge_v1_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_lib.sv:150]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst__parameterized0' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst__parameterized0' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_clkdet' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdl/src/verilog/hdmi_tx_bd_vid_phy_controller_0_0_clkdet.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized3' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized3' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_22_dru' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_dru.sv:59]
+INFO: [Synth 8-6157] synthesizing module 'vid_phy_controller_v2_2_22_lib_rst_v1_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_lib.sv:64]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_22_lib_rst_v1_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_lib.sv:64]
+INFO: [Synth 8-638] synthesizing module 'nidru_20_wrapper' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/nidru_20_wrapper.vhd:99]
+	Parameter S_MAX bound to: 10 - type: integer 
+	Parameter MASK_CG bound to: 16'b1111111111111111 
+	Parameter MASK_PD bound to: 16'b1111111111111111 
+	Parameter MASK_VCO bound to: 37'b1111111111111111111111111111111111111 
+	Parameter EN_ADV_COMPR bound to: 1 - type: bool 
+INFO: [Synth 8-3491] module 'dru' declared at '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/nidru_20_v_7.vhd:89' bound to instance 'Inst_dru' of component 'dru' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/nidru_20_wrapper.vhd:169]
+	Parameter WDT_IN bound to: 10 - type: integer 
+	Parameter WDT_OUT bound to: 20 - type: integer 
+	Parameter S_MAX bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'bs_flex' declared at '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/bs_flex_v_2.vhd:73' bound to instance 'bs_flex_dru' of component 'bs_flex' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/nidru_20_wrapper.vhd:207]
+INFO: [Synth 8-638] synthesizing module 'bs_flex' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/bs_flex_v_2.vhd:91]
+	Parameter WDT_IN bound to: 10 - type: integer 
+	Parameter WDT_OUT bound to: 20 - type: integer 
+	Parameter WDT_OUT_1 bound to: 8'b00010100 
+	Parameter S_MAX bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'rotwdt' declared at '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/bs_flex_v_2.vhd:404' bound to instance 'Inst_mask_bs' of component 'rotwdt' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/bs_flex_v_2.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'rotwdt' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/bs_flex_v_2.vhd:422]
+INFO: [Synth 8-256] done synthesizing module 'rotwdt' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/bs_flex_v_2.vhd:422]
+	Parameter WDT_IN bound to: 10 - type: integer 
+	Parameter WDT_OUT bound to: 20 - type: integer 
+	Parameter WDT_OUT_1 bound to: 8'b00010100 
+	Parameter S_MAX bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'control' declared at '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/bs_flex_v_2.vhd:287' bound to instance 'I_control' of component 'control' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/bs_flex_v_2.vhd:171]
+INFO: [Synth 8-638] synthesizing module 'control' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/bs_flex_v_2.vhd:305]
+INFO: [Synth 8-256] done synthesizing module 'control' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/bs_flex_v_2.vhd:305]
+	Parameter WDT_IN bound to: 10 - type: integer 
+	Parameter WDT_OUT bound to: 20 - type: integer 
+	Parameter WDT_OUT_1 bound to: 8'b00010100 
+	Parameter S_MAX bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'rotwdt' declared at '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/bs_flex_v_2.vhd:404' bound to instance 'Inst_data_bs' of component 'rotwdt' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/bs_flex_v_2.vhd:193]
+INFO: [Synth 8-256] done synthesizing module 'bs_flex' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/bs_flex_v_2.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'nidru_20_wrapper' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/vhd/nidru_20_wrapper.vhd:99]
+INFO: [Synth 8-6155] done synthesizing module 'vid_phy_controller_v2_2_22_dru' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_dru.sv:59]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized4' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized4' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized5' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized5' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized6' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized6' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized7' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized7' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized8' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized8' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst__parameterized1' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst__parameterized1' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0_top' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0.v:53]
+WARNING: [Synth 8-7137] Register freq_cnt_o_reg in module gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_freq_counter has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v:188]
+WARNING: [Synth 8-6014] Unused sequential element mask_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:1077]
+WARNING: [Synth 8-6014] Unused sequential element gen_cal_rx_en.mask_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v:1000]
+WARNING: [Synth 8-6014] Unused sequential element DRP_Rsp_Rd_Toggle_q_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:203]
+WARNING: [Synth 8-6014] Unused sequential element DRP_Rsp_Rd_Toggle_pulse_cnt_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:215]
+INFO: [Synth 8-6014] Unused sequential element slv_reg_0x340_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_axi4lite.v:454]
+WARNING: [Synth 8-6014] Unused sequential element DRP_Rsp_Rd_Toggle_q_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:203]
+WARNING: [Synth 8-6014] Unused sequential element DRP_Rsp_Rd_Toggle_pulse_cnt_reg was removed.  [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/6d3a/hdl/src/verilog/vid_phy_controller_v2_2_drp_control_hdmi.v:215]
+INFO: [Synth 8-3848] Net vid_phy_tx_axi4s_ch3_tready in module/entity hdmi_tx_bd_vid_phy_controller_0_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:187]
+INFO: [Synth 8-3848] Net vid_phy_rx_axi4s_ch3_tvalid in module/entity hdmi_tx_bd_vid_phy_controller_0_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:214]
+INFO: [Synth 8-3848] Net vid_phy_rx_axi4s_ch3_tdata in module/entity hdmi_tx_bd_vid_phy_controller_0_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:215]
+INFO: [Synth 8-3848] Net vid_phy_rx_axi4s_ch3_tuser in module/entity hdmi_tx_bd_vid_phy_controller_0_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:216]
+INFO: [Synth 8-3848] Net tx_lnk_clk in module/entity hdmi_tx_bd_vid_phy_controller_0_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:271]
+INFO: [Synth 8-3848] Net tx_enc_clk in module/entity hdmi_tx_bd_vid_phy_controller_0_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:272]
+INFO: [Synth 8-3848] Net rx_lnk_clk in module/entity hdmi_tx_bd_vid_phy_controller_0_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:276]
+INFO: [Synth 8-3848] Net rx_dec_clk in module/entity hdmi_tx_bd_vid_phy_controller_0_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:277]
+INFO: [Synth 8-3848] Net gtgrefclk0_in in module/entity hdmi_tx_bd_vid_phy_controller_0_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1063]
+INFO: [Synth 8-3848] Net gtgrefclk1_in in module/entity hdmi_tx_bd_vid_phy_controller_0_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1071]
+INFO: [Synth 8-3848] Net b0_MMCM_DRP_LOCKED in module/entity hdmi_tx_bd_vid_phy_controller_0_0_top does not have driver. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_top.v:1696]
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_single__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized8 is either unconnected or has no load
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized6 is either unconnected or has no load
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port P[7] in module rotwdt is either unconnected or has no load
+INFO: [Synth 8-7129] Port P[6] in module rotwdt is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module brick_10_adv is either unconnected or has no load
+INFO: [Synth 8-7129] Port RST in module brick_10_adv is either unconnected or has no load
+INFO: [Synth 8-7129] Port EN in module brick_10_adv is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[311] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[310] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[309] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[308] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[307] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[306] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[305] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[304] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[295] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[294] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[293] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[292] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[291] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[290] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[289] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[288] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[279] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[278] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[277] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[276] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[275] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[274] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[273] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[272] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[263] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[262] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[261] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[260] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[259] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[258] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[257] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[256] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[247] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[246] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[245] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[244] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[243] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[242] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[241] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[240] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[231] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[230] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[229] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[228] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[227] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[226] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[225] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[224] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[215] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[214] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[213] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[212] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[211] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[210] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[209] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[208] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[199] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[198] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[197] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[196] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[195] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[194] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[193] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[192] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[183] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[182] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[181] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[180] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[179] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[178] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[177] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[176] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[167] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[166] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[165] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[164] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[163] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[162] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[161] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[160] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[151] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[150] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[149] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[148] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[147] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[146] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[145] in module ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port DELTA_VEC[144] in module ss is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 2669.516 ; gain = 647.625 ; free physical = 352 ; free virtual = 18372
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 2669.516 ; gain = 647.625 ; free physical = 350 ; free virtual = 18352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 2669.516 ; gain = 647.625 ; free physical = 350 ; free virtual = 18352
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.44 . Memory (MB): peak = 2669.516 ; gain = 0.000 ; free physical = 470 ; free virtual = 18131
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0_ooc_fixed.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2767.754 ; gain = 6.406 ; free physical = 979 ; free virtual = 16853
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0_ooc_fixed.xdc] for cell 'inst'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper.xdc] for cell 'inst/gt_wrapper_inst/inst'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper.xdc] for cell 'inst/gt_wrapper_inst/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/ip_0/synth/hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_tx_bd_vid_phy_controller_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_tx_bd_vid_phy_controller_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/vid_phy_controller_xdc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/vid_phy_controller_xdc.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/vid_phy_controller_xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_tx_bd_vid_phy_controller_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_tx_bd_vid_phy_controller_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+WARNING: [Timing 38-277] The instance 'inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL0REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'inst/gt_common_inst/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST' has QPLL1REFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST' has CPLLREFCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-252] The BUFG_GT instance 'inst/gt_usrclk_source_inst/rx_mmcm.bufg_gt_rx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+WARNING: [Timing 38-252] The BUFG_GT instance 'inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst' has DIV pins that are not constant, so the automatically derived generated clock will use a worst case divide of 1.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/hdmi_tx_bd_vid_phy_controller_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/hdmi_tx_bd_vid_phy_controller_0_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/hdmi_tx_bd_vid_phy_controller_0_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_tx_bd_vid_phy_controller_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_tx_bd_vid_phy_controller_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0_clocks.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0_clocks.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_vid_phy_controller_0_0/hdmi_tx_bd_vid_phy_controller_0_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_tx_bd_vid_phy_controller_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_tx_bd_vid_phy_controller_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/gt_usrclk_source_inst/rx_mmcm.RXPLL_DRP_INST/xpm_handshake_DRP_Config_inst' of design 'preSynthElab_1' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+WARNING: [XPM_CDC_ARRAY_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: inst/gt_usrclk_source_inst/rx_mmcm.RXPLL_DRP_INST/xpm_handshake_DRP_Config_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_handshake_DRP_Config_inst' of design 'preSynthElab_1' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+WARNING: [XPM_CDC_ARRAY_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_handshake_DRP_Config_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/gt_usrclk_source_inst/rx_mmcm.RXPLL_DRP_INST/xpm_handshake_DRP_Status_inst' of design 'preSynthElab_1' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+WARNING: [XPM_CDC_ARRAY_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: inst/gt_usrclk_source_inst/rx_mmcm.RXPLL_DRP_INST/xpm_handshake_DRP_Status_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_handshake_DRP_Status_inst' of design 'preSynthElab_1' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+WARNING: [XPM_CDC_ARRAY_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_handshake_DRP_Status_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_tx_bd_vid_phy_controller_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_tx_bd_vid_phy_controller_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/gt_usrclk_source_inst/rx_mmcm.RXPLL_DRP_INST/xpm_single_DRP_Rsp_Rd_Toggle_inst' of design 'preSynthElab_1' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: inst/gt_usrclk_source_inst/rx_mmcm.RXPLL_DRP_INST/xpm_single_DRP_Rsp_Rd_Toggle_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_single_DRP_Rsp_Rd_Toggle_inst' of design 'preSynthElab_1' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: inst/gt_usrclk_source_inst/tx_mmcm.TXPLL_DRP_INST/xpm_single_DRP_Rsp_Rd_Toggle_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/xpm_array_single_qpll0lock_b0_inst' of design 'preSynthElab_1' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: inst/xpm_array_single_qpll0lock_b0_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'inst/xpm_array_single_qpll1lock_b0_inst' of design 'preSynthElab_1' [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: inst/xpm_array_single_qpll1lock_b0_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dan-alencar/AMD_Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_tx_bd_vid_phy_controller_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_tx_bd_vid_phy_controller_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 117 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2767.754 ; gain = 0.000 ; free physical = 780 ; free virtual = 16675
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  BUFG => BUFGCE: 4 instances
+  MMCME3_ADV => MMCME4_ADV: 2 instances
+  OBUFTDS => OBUFTDS_DUAL_BUF (INV, OBUFT(x2)): 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.26 . Memory (MB): peak = 2767.789 ; gain = 0.000 ; free physical = 722 ; free virtual = 16620
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:58 ; elapsed = 00:01:08 . Memory (MB): peak = 2767.789 ; gain = 745.898 ; free physical = 2718 ; free virtual = 19905
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcau15p-ffvb676-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:58 ; elapsed = 00:01:08 . Memory (MB): peak = 2775.758 ; gain = 753.867 ; free physical = 2718 ; free virtual = 19905
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:10 . Memory (MB): peak = 2775.758 ; gain = 753.867 ; free physical = 2710 ; free virtual = 19906
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'progclk_sel_store_reg' and it is trimmed from '16' to '15' bits. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:705]
+WARNING: [Synth 8-3936] Found unconnected internal register 'x0e1_store_reg' and it is trimmed from '16' to '15' bits. [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/5da0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:778]
+INFO: [Synth 8-802] inferred FSM for state register 'arb_state_reg' in module 'gtwizard_ultrascale_v1_7_22_gte4_drp_arb'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_gtwiz_buffbypass_tx_main.gen_auto_mode.sm_buffbypass_tx_reg' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_buffbypass_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_all_reg' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset'
+INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_tx_reg' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset'
+INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_rx_reg' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset'
+INFO: [Synth 8-802] inferred FSM for state register 'clk_sm_cur_reg' in module 'hdmi_tx_bd_vid_phy_controller_0_0_clkdet'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               ARB_START |                             0001 |                             0001
+                ARB_WAIT |                             0010 |                             0010
+              ARB_REPORT |                             0100 |                             0100
+                 ARB_INC |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'arb_state_reg' using encoding 'one-hot' in module 'gtwizard_ultrascale_v1_7_22_gte4_drp_arb'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               00
+*
+ST_BUFFBYPASS_TX_DEASSERT_TXDLYSRESET |                             0010 |                               01
+ST_BUFFBYPASS_TX_WAIT_TXSYNCDONE |                             0100 |                               10
+   ST_BUFFBYPASS_TX_DONE |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_gtwiz_buffbypass_tx_main.gen_auto_mode.sm_buffbypass_tx_reg' using encoding 'one-hot' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_buffbypass_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+      ST_RESET_TX_BRANCH |                              000 |                              000
+         ST_RESET_TX_PLL |                              001 |                              001
+    ST_RESET_TX_DATAPATH |                              010 |                              010
+   ST_RESET_TX_WAIT_LOCK |                              011 |                              011
+ST_RESET_TX_WAIT_USERRDY |                              100 |                              100
+ST_RESET_TX_WAIT_RESETDONE |                              101 |                              101
+        ST_RESET_TX_IDLE |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_tx_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+      ST_RESET_RX_BRANCH |                              000 |                              000
+         ST_RESET_RX_PLL |                              001 |                              001
+    ST_RESET_RX_DATAPATH |                              010 |                              010
+   ST_RESET_RX_WAIT_LOCK |                              011 |                              011
+    ST_RESET_RX_WAIT_CDR |                              100 |                              100
+ST_RESET_RX_WAIT_USERRDY |                              101 |                              101
+ST_RESET_RX_WAIT_RESETDONE |                              110 |                              110
+        ST_RESET_RX_IDLE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_rx_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+       ST_RESET_ALL_INIT |                              000 |                              000
+     ST_RESET_ALL_BRANCH |                              001 |                              001
+     ST_RESET_ALL_TX_PLL |                              010 |                              010
+ST_RESET_ALL_TX_PLL_WAIT |                              011 |                              011
+      ST_RESET_ALL_RX_DP |                              100 |                              100
+     ST_RESET_ALL_RX_PLL |                              101 |                              101
+    ST_RESET_ALL_RX_WAIT |                              110 |                              110
+                  iSTATE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_all_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_22_gtwiz_reset'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 sm_idle |                              000 | 00000000000000000000000000000000
+                  sm_rst |                              001 | 00000000000000000000000000000001
+                 sm_wait |                              010 | 00000000000000000000000000000010
+                  sm_cnt |                              011 | 00000000000000000000000000000011
+                   sm_ld |                              100 | 00000000000000000000000000000100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'clk_sm_cur_reg' using encoding 'sequential' in module 'hdmi_tx_bd_vid_phy_controller_0_0_clkdet'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:18 . Memory (MB): peak = 2775.758 ; gain = 753.867 ; free physical = 4035 ; free virtual = 21714
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 576 (col length:72)
+BRAMs: 288 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (fnidru_1.Inst_pd/AVE_reg__15) is unused and will be removed from module dru.
+WARNING: [Synth 8-3332] Sequential element (fnidru_1.Inst_pd/AVE_reg__16) is unused and will be removed from module dru.
+WARNING: [Synth 8-3332] Sequential element (fnidru_1.Inst_pd/AVE_reg__17) is unused and will be removed from module dru.
+WARNING: [Synth 8-3332] Sequential element (fnidru_1.Inst_pd/AVE_reg__18) is unused and will be removed from module dru.
+WARNING: [Synth 8-3332] Sequential element (fnidru_1.Inst_pd/AVE_reg__19) is unused and will be removed from module dru.
+WARNING: [Synth 8-3332] Sequential element (fnidru_1.Inst_pd/AVE_reg__20) is unused and will be removed from module dru.
+WARNING: [Synth 8-3332] Sequential element (fnidru_1.Inst_pd/AVE_reg__21) is unused and will be removed from module dru.
+WARNING: [Synth 8-3332] Sequential element (fnidru_1.Inst_pd/AVE_reg__22) is unused and will be removed from module dru.
+WARNING: [Synth 8-3332] Sequential element (fnidru_1.Inst_pd/AVE_reg__23) is unused and will be removed from module dru.
+WARNING: [Synth 8-3332] Sequential element (fnidru_1.Inst_pd/AVE_reg__24) is unused and will be removed from module dru.
+WARNING: [Synth 8-3332] Sequential element (gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_tx_buffer_bypass_internal.gen_single_instance.gtwiz_buffbypass_tx_inst/FSM_onehot_gen_gtwiz_buffbypass_tx_main.gen_auto_mode.sm_buffbypass_tx_reg[0]) is unused and will be removed from module hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_top.
+WARNING: [Synth 8-3332] Sequential element (gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/FSM_sequential_sm_reset_all_reg[2]) is unused and will be removed from module hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_top.
+WARNING: [Synth 8-3332] Sequential element (gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/FSM_sequential_sm_reset_all_reg[1]) is unused and will be removed from module hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_top.
+WARNING: [Synth 8-3332] Sequential element (gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/FSM_sequential_sm_reset_all_reg[0]) is unused and will be removed from module hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:39 ; elapsed = 00:01:50 . Memory (MB): peak = 2776.758 ; gain = 754.867 ; free physical = 8024 ; free virtual = 27207
+---------------------------------------------------------------------------------
+ Sort Area is vid_phy_controller_v2_2_22_dru fnidru_1.Inst_pd/multOp_0 : 0 0 : 1685 1685 : Used 3 time 0
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock_detector_inst/DRUCLK_RST_INST/src_arst' to pin 'clock_detector_inst/clk_dru_freq_rst_reg/Q'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock_detector_inst/RXCLK_RST_INST/src_arst' to pin 'clock_detector_inst/clk_rx_freq_rst_reg/Q'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock_detector_inst/TXCLK_RST_INST/src_arst' to pin 'clock_detector_inst/clk_tx_freq_rst_reg/Q'
+INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:47 ; elapsed = 00:01:58 . Memory (MB): peak = 3071.371 ; gain = 1049.480 ; free physical = 7375 ; free virtual = 26721
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:00 ; elapsed = 00:02:12 . Memory (MB): peak = 3195.434 ; gain = 1173.543 ; free physical = 7865 ; free virtual = 27675
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:05 ; elapsed = 00:02:17 . Memory (MB): peak = 3195.434 ; gain = 1173.543 ; free physical = 7679 ; free virtual = 27488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:08 ; elapsed = 00:02:20 . Memory (MB): peak = 3284.246 ; gain = 1262.355 ; free physical = 7431 ; free virtual = 27239
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:08 ; elapsed = 00:02:20 . Memory (MB): peak = 3284.246 ; gain = 1262.355 ; free physical = 7423 ; free virtual = 27231
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:09 ; elapsed = 00:02:21 . Memory (MB): peak = 3284.246 ; gain = 1262.355 ; free physical = 7338 ; free virtual = 27146
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:09 ; elapsed = 00:02:21 . Memory (MB): peak = 3284.246 ; gain = 1262.355 ; free physical = 7336 ; free virtual = 27145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:09 ; elapsed = 00:02:21 . Memory (MB): peak = 3284.246 ; gain = 1262.355 ; free physical = 7294 ; free virtual = 27103
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:09 ; elapsed = 00:02:21 . Memory (MB): peak = 3284.246 ; gain = 1262.355 ; free physical = 7271 ; free virtual = 27079
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|pd          | (A*B)'      | 30     | 18     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pd          | (A*B)'      | 30     | 18     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pd          | (A*B)'      | 30     | 18     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |BUFG            |     4|
+|2     |BUFGCE          |     4|
+|3     |BUFG_GT         |    10|
+|4     |BUFG_GT_SYNC    |     2|
+|5     |CARRY8          |   534|
+|6     |DSP_ALU         |     3|
+|7     |DSP_A_B_DATA    |     3|
+|8     |DSP_C_DATA      |     3|
+|9     |DSP_MULTIPLIER  |     3|
+|10    |DSP_M_DATA      |     3|
+|11    |DSP_OUTPUT      |     3|
+|12    |DSP_PREADD      |     3|
+|13    |DSP_PREADD_DATA |     3|
+|14    |GTHE4_CHANNEL   |     3|
+|15    |GTHE4_COMMON    |     1|
+|16    |IBUFDS_GTE4     |     2|
+|17    |LUT1            |   335|
+|18    |LUT2            |  2567|
+|19    |LUT3            |  1225|
+|20    |LUT4            |  1676|
+|21    |LUT5            |  1120|
+|22    |LUT6            |  1624|
+|23    |MMCME3_ADV      |     2|
+|24    |MUXF7           |    37|
+|25    |MUXF8           |     4|
+|26    |OSERDESE3       |     2|
+|27    |FDCE            |  2635|
+|28    |FDPE            |   162|
+|29    |FDRE            |  6597|
+|30    |FDSE            |    82|
+|31    |OBUFTDS         |     2|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:10 ; elapsed = 00:02:21 . Memory (MB): peak = 3284.246 ; gain = 1262.355 ; free physical = 7270 ; free virtual = 27079
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:37 ; elapsed = 00:01:49 . Memory (MB): peak = 3284.246 ; gain = 1164.082 ; free physical = 7246 ; free virtual = 27080
+Synthesis Optimization Complete : Time (s): cpu = 00:02:10 ; elapsed = 00:02:22 . Memory (MB): peak = 3284.246 ; gain = 1262.355 ; free physical = 7246 ; free virtual = 27080
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.13 . Memory (MB): peak = 3284.246 ; gain = 0.000 ; free physical = 7299 ; free virtual = 27177
+INFO: [Netlist 29-17] Analyzing 586 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC for BUFG_GT inst/gt_usrclk_source_inst/rx_mmcm.bufg_gt_rx_usrclk_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_1 for BUFG_GT inst/gt_usrclk_source_inst/tx_mmcm.bufg_gt_tx_usrclk_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_2 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_3 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_4 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_rx_i/gen_cal_rx_en.bufg_gt_rxoutclkmon_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_5 for BUFG_GT inst/gt_wrapper_inst/inst/gen_gtwizard_gthe4_top.hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_22_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst
+INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance inst/gt_usrclk_source_inst/rx_mmcm.rxoutclk_mmcm0_i/mmcm_adv_inst with COMPENSATION=INTERNAL is optimized away to aid design routability
+INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance inst/gt_usrclk_source_inst/tx_mmcm.txoutclk_mmcm0_i/mmcm_adv_inst with COMPENSATION=INTERNAL is optimized away to aid design routability
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3284.246 ; gain = 0.000 ; free physical = 7464 ; free virtual = 27321
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 11 instances were transformed.
+  BUFG => BUFGCE: 4 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
+  MMCME3_ADV => MMCME4_ADV: 2 instances
+  OBUFTDS => OBUFTDS_DUAL_BUF (INV, OBUFT(x2)): 2 instances
+
+Synth Design complete | Checksum: 23261a6a
+INFO: [Common 17-83] Releasing license: Synthesis
+336 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:22 ; elapsed = 00:02:31 . Memory (MB): peak = 3284.246 ; gain = 1652.590 ; free physical = 9371 ; free virtual = 29228
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1822.920; main = 1684.224; forked = 216.023
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4308.281; main = 3284.250; forked = 1024.031
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3284.246 ; gain = 0.000 ; free physical = 9369 ; free virtual = 29229
+INFO: [Common 17-1381] The checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/hdmi_tx_bd_vid_phy_controller_0_0_synth_1/hdmi_tx_bd_vid_phy_controller_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP hdmi_tx_bd_vid_phy_controller_0_0, cache-ID = 97e992f9a4e826a6
+INFO: [Coretcl 2-1174] Renamed 275 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3284.246 ; gain = 0.000 ; free physical = 9365 ; free virtual = 29229
+INFO: [Common 17-1381] The checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/hdmi_tx_bd_vid_phy_controller_0_0_synth_1/hdmi_tx_bd_vid_phy_controller_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file hdmi_tx_bd_vid_phy_controller_0_0_utilization_synth.rpt -pb hdmi_tx_bd_vid_phy_controller_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  2 22:28:48 2026...

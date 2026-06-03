@@ -196,6 +196,24 @@
             },
             "V3": {
                 "VT": "AC",
+                "BA": "0x0000",
+                "HA": "0xFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "S_AXI_CPU_IN",
+                "MX": "/v_hdmi_rx_ss_0",
+                "MI": "S_AXI_CPU_IN",
+                "MS": "reg0",
+                "MV": "xilinx.com:ip:v_hdmi_rx_ss:3.2",
+                "SX": "/v_hdmi_rx_ss_0/v_hdmi_rx",
+                "SI": "CPU_IN",
+                "SS": "reg0",
+                "SV": "xilinx.com:ip:v_hdmi_rx:3.0",
+                "TM": "data",
+                "TU": "register"
+            },
+            "V4": {
+                "VT": "AC",
                 "BA": "0x00000",
                 "HA": "0x0FFFF",
                 "BP": "C_BASEADDR",
@@ -212,7 +230,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V4": {
+            "V5": {
                 "VT": "AC",
                 "BA": "0x00000000",
                 "HA": "0x0005FFFF",
@@ -230,7 +248,7 @@
                 "TM": "data",
                 "TU": "memory"
             },
-            "V5": {
+            "V6": {
                 "VT": "AC",
                 "BA": "0x00000000",
                 "HA": "0x0005FFFF",
@@ -248,7 +266,7 @@
                 "TM": "instruction",
                 "TU": "memory"
             },
-            "V6": {
+            "V7": {
                 "VT": "AC",
                 "BA": "0x10000",
                 "HA": "0x1FFFF",
@@ -266,7 +284,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V7": {
+            "V8": {
                 "VT": "AC",
                 "BA": "0x40000000",
                 "HA": "0x4000FFFF",
@@ -284,7 +302,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V8": {
+            "V9": {
                 "VT": "AC",
                 "BA": "0x40800000",
                 "HA": "0x4080FFFF",
@@ -302,7 +320,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V9": {
+            "V10": {
                 "VT": "AC",
                 "BA": "0x41200000",
                 "HA": "0x4120FFFF",
@@ -321,7 +339,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V10": {
+            "V11": {
                 "VT": "AC",
                 "BA": "0x41400000",
                 "HA": "0x41400FFF",
@@ -339,7 +357,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V11": {
+            "V12": {
                 "VT": "AC",
                 "BA": "0x44A00000",
                 "HA": "0x44A1FFFF",
@@ -357,7 +375,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V12": {
+            "V13": {
                 "VT": "AC",
                 "BA": "0x44A20000",
                 "HA": "0x44A2FFFF",
@@ -375,7 +393,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V13": {
+            "V14": {
                 "VT": "AC",
                 "BA": "0x44A30000",
                 "HA": "0x44A3FFFF",
@@ -390,6 +408,24 @@
                 "SI": "vid_phy_axi4lite",
                 "SS": "Reg",
                 "SV": "xilinx.com:ip:vid_phy_controller:2.2",
+                "TM": "data",
+                "TU": "register"
+            },
+            "V15": {
+                "VT": "AC",
+                "BA": "0x44A40000",
+                "HA": "0x44A4FFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data",
+                "MX": "/microblaze_0",
+                "MI": "M_AXI_DP",
+                "MS": "SEG_v_hdmi_rx_ss_0_Reg",
+                "MV": "xilinx.com:ip:microblaze:11.0",
+                "SX": "/v_hdmi_rx_ss_0",
+                "SI": "S_AXI_CPU_IN",
+                "SS": "Reg",
+                "SV": "xilinx.com:ip:v_hdmi_rx_ss:3.2",
                 "TM": "data",
                 "TU": "register"
             }
@@ -455,6 +491,16 @@
             },
             {
                 "src": "V13",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V14",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V15",
                 "trg": "V2",
                 "EH": "2"
             }

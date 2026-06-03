@@ -170,8 +170,8 @@ output wire [0 : 0] gtwiz_reset_qpll0reset_out;
 input wire [53 : 0] gtwiz_gthe4_cpll_cal_txoutclk_period_in;
 input wire [53 : 0] gtwiz_gthe4_cpll_cal_cnt_tol_in;
 input wire [2 : 0] gtwiz_gthe4_cpll_cal_bufg_ce_in;
-input wire [119 : 0] gtwiz_userdata_tx_in;
-output wire [119 : 0] gtwiz_userdata_rx_out;
+input wire [59 : 0] gtwiz_userdata_tx_in;
+output wire [59 : 0] gtwiz_userdata_rx_out;
 input wire [8 : 0] cpllrefclksel_in;
 input wire [29 : 0] drpaddr_in;
 input wire [2 : 0] drpclk_in;
@@ -287,11 +287,11 @@ output wire [2 : 0] txresetdone_out;
     .C_RX_COMMA_P_VAL(10'B0101111100),
     .C_RX_DATA_DECODING(0),
     .C_RX_ENABLE(1),
-    .C_RX_INT_DATA_WIDTH(40),
+    .C_RX_INT_DATA_WIDTH(20),
     .C_RX_LINE_RATE(5.94),
     .C_RX_MASTER_CHANNEL_IDX(8),
     .C_RX_OUTCLK_BUFG_GT_DIV(1),
-    .C_RX_OUTCLK_FREQUENCY(148.5000000),
+    .C_RX_OUTCLK_FREQUENCY(297.0000000),
     .C_RX_OUTCLK_SOURCE(1),
     .C_RX_PLL_TYPE(2),
     .C_RX_RECCLK_OUTPUT(192'H000000000000000000000000000000000000000000000000),
@@ -302,9 +302,9 @@ output wire [2 : 0] txresetdone_out;
     .C_RX_USER_CLOCKING_RATIO_FSRC_FUSRCLK(1),
     .C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2(1),
     .C_RX_USER_CLOCKING_SOURCE(0),
-    .C_RX_USER_DATA_WIDTH(40),
-    .C_RX_USRCLK_FREQUENCY(148.5000000),
-    .C_RX_USRCLK2_FREQUENCY(148.5000000),
+    .C_RX_USER_DATA_WIDTH(20),
+    .C_RX_USRCLK_FREQUENCY(297.0000000),
+    .C_RX_USRCLK2_FREQUENCY(297.0000000),
     .C_SECONDARY_QPLL_ENABLE(1),
     .C_SECONDARY_QPLL_REFCLK_FREQUENCY(297),
     .C_TOTAL_NUM_CHANNELS(3),
@@ -312,17 +312,17 @@ output wire [2 : 0] txresetdone_out;
     .C_TOTAL_NUM_COMMONS_EXAMPLE(1),
     .C_TXPROGDIV_FREQ_ENABLE(0),
     .C_TXPROGDIV_FREQ_SOURCE(0),
-    .C_TXPROGDIV_FREQ_VAL(148.5),
+    .C_TXPROGDIV_FREQ_VAL(297),
     .C_TX_BUFFBYPASS_MODE(0),
     .C_TX_BUFFER_BYPASS_INSTANCE_CTRL(0),
     .C_TX_BUFFER_MODE(0),
     .C_TX_DATA_ENCODING(0),
     .C_TX_ENABLE(1),
-    .C_TX_INT_DATA_WIDTH(40),
+    .C_TX_INT_DATA_WIDTH(20),
     .C_TX_LINE_RATE(5.94),
     .C_TX_MASTER_CHANNEL_IDX(8),
     .C_TX_OUTCLK_BUFG_GT_DIV(1),
-    .C_TX_OUTCLK_FREQUENCY(148.5000000),
+    .C_TX_OUTCLK_FREQUENCY(297.0000000),
     .C_TX_OUTCLK_SOURCE(4),
     .C_TX_PLL_TYPE(0),
     .C_TX_REFCLK_FREQUENCY(297),
@@ -331,9 +331,9 @@ output wire [2 : 0] txresetdone_out;
     .C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK(1),
     .C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2(1),
     .C_TX_USER_CLOCKING_SOURCE(0),
-    .C_TX_USER_DATA_WIDTH(40),
-    .C_TX_USRCLK_FREQUENCY(148.5000000),
-    .C_TX_USRCLK2_FREQUENCY(148.5000000)
+    .C_TX_USER_DATA_WIDTH(20),
+    .C_TX_USRCLK_FREQUENCY(297.0000000),
+    .C_TX_USRCLK2_FREQUENCY(297.0000000)
   ) inst (
     .gtwiz_userclk_tx_reset_in(gtwiz_userclk_tx_reset_in),
     .gtwiz_userclk_tx_active_in(gtwiz_userclk_tx_active_in),

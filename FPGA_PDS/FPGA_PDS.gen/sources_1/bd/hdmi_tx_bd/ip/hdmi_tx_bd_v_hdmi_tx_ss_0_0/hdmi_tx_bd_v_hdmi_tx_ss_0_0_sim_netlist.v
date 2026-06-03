@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-// Date        : Fri May 29 19:24:47 2026
+// Date        : Tue Jun  2 22:28:43 2026
 // Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top hdmi_tx_bd_v_hdmi_tx_ss_0_0 -prefix
-//               hdmi_tx_bd_v_hdmi_tx_ss_0_0_ hdmi_tx_bd_v_hdmi_tx_ss_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/hdmi_tx_bd_v_hdmi_tx_ss_0_0_sim_netlist.v
 // Design      : hdmi_tx_bd_v_hdmi_tx_ss_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,7 +13,244 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* HW_HANDOFF = "hdmi_tx_bd_v_hdmi_tx_ss_0_0.hwdef" *) 
+(* CHECK_LICENSE_TYPE = "hdmi_tx_bd_v_hdmi_tx_ss_0_0,bd_2339,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "bd_2339,Vivado 2025.2" *) 
+(* NotValidForBitStream *)
+module hdmi_tx_bd_v_hdmi_tx_ss_0_0
+   (s_axi_cpu_aclk,
+    s_axi_cpu_aresetn,
+    link_clk,
+    s_axis_audio_aclk,
+    s_axis_audio_aresetn,
+    acr_cts,
+    acr_n,
+    acr_valid,
+    hpd,
+    irq,
+    video_clk,
+    fid,
+    locked,
+    s_axis_video_aclk,
+    s_axis_video_aresetn,
+    VIDEO_IN_tdata,
+    VIDEO_IN_tlast,
+    VIDEO_IN_tready,
+    VIDEO_IN_tuser,
+    VIDEO_IN_tvalid,
+    SB_STATUS_IN_tdata,
+    SB_STATUS_IN_tvalid,
+    AUDIO_IN_tdata,
+    AUDIO_IN_tid,
+    AUDIO_IN_tready,
+    AUDIO_IN_tvalid,
+    S_AXI_CPU_IN_awaddr,
+    S_AXI_CPU_IN_awprot,
+    S_AXI_CPU_IN_awvalid,
+    S_AXI_CPU_IN_awready,
+    S_AXI_CPU_IN_wdata,
+    S_AXI_CPU_IN_wstrb,
+    S_AXI_CPU_IN_wvalid,
+    S_AXI_CPU_IN_wready,
+    S_AXI_CPU_IN_bresp,
+    S_AXI_CPU_IN_bvalid,
+    S_AXI_CPU_IN_bready,
+    S_AXI_CPU_IN_araddr,
+    S_AXI_CPU_IN_arprot,
+    S_AXI_CPU_IN_arvalid,
+    S_AXI_CPU_IN_arready,
+    S_AXI_CPU_IN_rdata,
+    S_AXI_CPU_IN_rresp,
+    S_AXI_CPU_IN_rvalid,
+    S_AXI_CPU_IN_rready,
+    DDC_OUT_scl_i,
+    DDC_OUT_scl_o,
+    DDC_OUT_scl_t,
+    DDC_OUT_sda_i,
+    DDC_OUT_sda_o,
+    DDC_OUT_sda_t,
+    LINK_DATA0_OUT_tdata,
+    LINK_DATA0_OUT_tvalid,
+    LINK_DATA1_OUT_tdata,
+    LINK_DATA1_OUT_tvalid,
+    LINK_DATA2_OUT_tdata,
+    LINK_DATA2_OUT_tvalid);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.s_axi_cpu_aclk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.s_axi_cpu_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, ASSOCIATED_BUSIF SB_STATUS_IN:S_AXI_CPU_IN, ASSOCIATED_RESET s_axi_cpu_aresetn, INSERT_VIP 0, ASSOCIATED_CLKEN s_sc_aclken" *) input s_axi_cpu_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.s_axi_cpu_aresetn RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.s_axi_cpu_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_cpu_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.link_clk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.link_clk, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, ASSOCIATED_BUSIF LINK_DATA0_OUT:LINK_DATA1_OUT:LINK_DATA2_OUT, INSERT_VIP 0" *) input link_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.s_axis_audio_aclk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.s_axis_audio_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, ASSOCIATED_BUSIF AUDIO_IN, ASSOCIATED_RESET s_axis_audio_aresetn, INSERT_VIP 0" *) input s_axis_audio_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.s_axis_audio_aresetn RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.s_axis_audio_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axis_audio_aresetn;
+  input [19:0]acr_cts;
+  input [19:0]acr_n;
+  input acr_valid;
+  input hpd;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.irq INTERRUPT" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.irq, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output irq;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.video_clk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.video_clk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, INSERT_VIP 0, ASSOCIATED_CLKEN clken" *) input video_clk;
+  input fid;
+  output locked;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.s_axis_video_aclk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.s_axis_video_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, ASSOCIATED_BUSIF VIDEO_IN, ASSOCIATED_RESET s_axis_video_aresetn, INSERT_VIP 0" *) input s_axis_video_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.s_axis_video_aresetn RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.s_axis_video_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axis_video_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TDATA" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME VIDEO_IN, TDATA_NUM_BYTES 6, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value xilinx.com:video:G_B_R_444:1.0} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value rows} size {attribs {resolve_type generated dependency active_rows format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_rows_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cols} size {attribs {resolve_type generated dependency active_cols format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_cols_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_G {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value G} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_B {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value B} enabled {attribs {resolve_type generated dependency video_comp1_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp1_offset format long minimum {} maximum {}} value 8} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_R {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value R} enabled {attribs {resolve_type generated dependency video_comp2_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp2_offset format long minimum {} maximum {}} value 16} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}}}}} TDATA_WIDTH 24}, INSERT_VIP 0" *) input [47:0]VIDEO_IN_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TLAST" *) input VIDEO_IN_tlast;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TREADY" *) output VIDEO_IN_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TUSER" *) input VIDEO_IN_tuser;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TVALID" *) input VIDEO_IN_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SB_STATUS_IN TDATA" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SB_STATUS_IN, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) input [7:0]SB_STATUS_IN_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SB_STATUS_IN TVALID" *) input SB_STATUS_IN_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 AUDIO_IN TDATA" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AUDIO_IN, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) input [31:0]AUDIO_IN_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 AUDIO_IN TID" *) input [7:0]AUDIO_IN_tid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 AUDIO_IN TREADY" *) output AUDIO_IN_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 AUDIO_IN TVALID" *) input AUDIO_IN_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN AWADDR" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_CPU_IN, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 17, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [16:0]S_AXI_CPU_IN_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN AWPROT" *) input [2:0]S_AXI_CPU_IN_awprot;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN AWVALID" *) input [0:0]S_AXI_CPU_IN_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN AWREADY" *) output [0:0]S_AXI_CPU_IN_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN WDATA" *) input [31:0]S_AXI_CPU_IN_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN WSTRB" *) input [3:0]S_AXI_CPU_IN_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN WVALID" *) input [0:0]S_AXI_CPU_IN_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN WREADY" *) output [0:0]S_AXI_CPU_IN_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN BRESP" *) output [1:0]S_AXI_CPU_IN_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN BVALID" *) output [0:0]S_AXI_CPU_IN_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN BREADY" *) input [0:0]S_AXI_CPU_IN_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN ARADDR" *) input [16:0]S_AXI_CPU_IN_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN ARPROT" *) input [2:0]S_AXI_CPU_IN_arprot;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN ARVALID" *) input [0:0]S_AXI_CPU_IN_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN ARREADY" *) output [0:0]S_AXI_CPU_IN_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN RDATA" *) output [31:0]S_AXI_CPU_IN_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN RRESP" *) output [1:0]S_AXI_CPU_IN_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN RVALID" *) output [0:0]S_AXI_CPU_IN_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN RREADY" *) input [0:0]S_AXI_CPU_IN_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SCL_I" *) (* X_INTERFACE_MODE = "master" *) input DDC_OUT_scl_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SCL_O" *) output DDC_OUT_scl_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SCL_T" *) output DDC_OUT_scl_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SDA_I" *) input DDC_OUT_sda_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SDA_O" *) output DDC_OUT_sda_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SDA_T" *) output DDC_OUT_sda_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA0_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [39:0]LINK_DATA0_OUT_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TVALID" *) output LINK_DATA0_OUT_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA1_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [39:0]LINK_DATA1_OUT_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TVALID" *) output LINK_DATA1_OUT_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA2_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [39:0]LINK_DATA2_OUT_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TVALID" *) output LINK_DATA2_OUT_tvalid;
+
+  wire [31:0]AUDIO_IN_tdata;
+  wire [7:0]AUDIO_IN_tid;
+  wire AUDIO_IN_tready;
+  wire AUDIO_IN_tvalid;
+  wire DDC_OUT_scl_i;
+  wire DDC_OUT_scl_o;
+  wire DDC_OUT_scl_t;
+  wire DDC_OUT_sda_i;
+  wire DDC_OUT_sda_o;
+  wire DDC_OUT_sda_t;
+  wire [39:0]LINK_DATA0_OUT_tdata;
+  wire LINK_DATA0_OUT_tvalid;
+  wire [39:0]LINK_DATA1_OUT_tdata;
+  wire LINK_DATA1_OUT_tvalid;
+  wire [39:0]LINK_DATA2_OUT_tdata;
+  wire LINK_DATA2_OUT_tvalid;
+  wire [7:0]SB_STATUS_IN_tdata;
+  wire SB_STATUS_IN_tvalid;
+  wire [16:0]S_AXI_CPU_IN_araddr;
+  wire [2:0]S_AXI_CPU_IN_arprot;
+  wire [0:0]S_AXI_CPU_IN_arready;
+  wire [0:0]S_AXI_CPU_IN_arvalid;
+  wire [16:0]S_AXI_CPU_IN_awaddr;
+  wire [2:0]S_AXI_CPU_IN_awprot;
+  wire [0:0]S_AXI_CPU_IN_awready;
+  wire [0:0]S_AXI_CPU_IN_awvalid;
+  wire [0:0]S_AXI_CPU_IN_bready;
+  wire [1:0]S_AXI_CPU_IN_bresp;
+  wire [0:0]S_AXI_CPU_IN_bvalid;
+  wire [31:0]S_AXI_CPU_IN_rdata;
+  wire [0:0]S_AXI_CPU_IN_rready;
+  wire [1:0]S_AXI_CPU_IN_rresp;
+  wire [0:0]S_AXI_CPU_IN_rvalid;
+  wire [31:0]S_AXI_CPU_IN_wdata;
+  wire [0:0]S_AXI_CPU_IN_wready;
+  wire [3:0]S_AXI_CPU_IN_wstrb;
+  wire [0:0]S_AXI_CPU_IN_wvalid;
+  wire [47:0]VIDEO_IN_tdata;
+  wire VIDEO_IN_tlast;
+  wire VIDEO_IN_tready;
+  wire VIDEO_IN_tuser;
+  wire VIDEO_IN_tvalid;
+  wire [19:0]acr_cts;
+  wire [19:0]acr_n;
+  wire acr_valid;
+  wire fid;
+  wire hpd;
+  wire irq;
+  wire link_clk;
+  wire locked;
+  wire s_axi_cpu_aclk;
+  wire s_axi_cpu_aresetn;
+  wire s_axis_audio_aclk;
+  wire s_axis_audio_aresetn;
+  wire s_axis_video_aclk;
+  wire s_axis_video_aresetn;
+  wire video_clk;
+
+  (* HW_HANDOFF = "hdmi_tx_bd_v_hdmi_tx_ss_0_0.hwdef" *) 
+  hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 inst
+       (.AUDIO_IN_tdata(AUDIO_IN_tdata),
+        .AUDIO_IN_tid(AUDIO_IN_tid),
+        .AUDIO_IN_tready(AUDIO_IN_tready),
+        .AUDIO_IN_tvalid(AUDIO_IN_tvalid),
+        .DDC_OUT_scl_i(DDC_OUT_scl_i),
+        .DDC_OUT_scl_o(DDC_OUT_scl_o),
+        .DDC_OUT_scl_t(DDC_OUT_scl_t),
+        .DDC_OUT_sda_i(DDC_OUT_sda_i),
+        .DDC_OUT_sda_o(DDC_OUT_sda_o),
+        .DDC_OUT_sda_t(DDC_OUT_sda_t),
+        .LINK_DATA0_OUT_tdata(LINK_DATA0_OUT_tdata),
+        .LINK_DATA0_OUT_tvalid(LINK_DATA0_OUT_tvalid),
+        .LINK_DATA1_OUT_tdata(LINK_DATA1_OUT_tdata),
+        .LINK_DATA1_OUT_tvalid(LINK_DATA1_OUT_tvalid),
+        .LINK_DATA2_OUT_tdata(LINK_DATA2_OUT_tdata),
+        .LINK_DATA2_OUT_tvalid(LINK_DATA2_OUT_tvalid),
+        .SB_STATUS_IN_tdata(SB_STATUS_IN_tdata),
+        .SB_STATUS_IN_tvalid(SB_STATUS_IN_tvalid),
+        .S_AXI_CPU_IN_araddr(S_AXI_CPU_IN_araddr),
+        .S_AXI_CPU_IN_arprot(S_AXI_CPU_IN_arprot),
+        .S_AXI_CPU_IN_arready(S_AXI_CPU_IN_arready),
+        .S_AXI_CPU_IN_arvalid(S_AXI_CPU_IN_arvalid),
+        .S_AXI_CPU_IN_awaddr(S_AXI_CPU_IN_awaddr),
+        .S_AXI_CPU_IN_awprot(S_AXI_CPU_IN_awprot),
+        .S_AXI_CPU_IN_awready(S_AXI_CPU_IN_awready),
+        .S_AXI_CPU_IN_awvalid(S_AXI_CPU_IN_awvalid),
+        .S_AXI_CPU_IN_bready(S_AXI_CPU_IN_bready),
+        .S_AXI_CPU_IN_bresp(S_AXI_CPU_IN_bresp),
+        .S_AXI_CPU_IN_bvalid(S_AXI_CPU_IN_bvalid),
+        .S_AXI_CPU_IN_rdata(S_AXI_CPU_IN_rdata),
+        .S_AXI_CPU_IN_rready(S_AXI_CPU_IN_rready),
+        .S_AXI_CPU_IN_rresp(S_AXI_CPU_IN_rresp),
+        .S_AXI_CPU_IN_rvalid(S_AXI_CPU_IN_rvalid),
+        .S_AXI_CPU_IN_wdata(S_AXI_CPU_IN_wdata),
+        .S_AXI_CPU_IN_wready(S_AXI_CPU_IN_wready),
+        .S_AXI_CPU_IN_wstrb(S_AXI_CPU_IN_wstrb),
+        .S_AXI_CPU_IN_wvalid(S_AXI_CPU_IN_wvalid),
+        .VIDEO_IN_tdata(VIDEO_IN_tdata),
+        .VIDEO_IN_tlast(VIDEO_IN_tlast),
+        .VIDEO_IN_tready(VIDEO_IN_tready),
+        .VIDEO_IN_tuser(VIDEO_IN_tuser),
+        .VIDEO_IN_tvalid(VIDEO_IN_tvalid),
+        .acr_cts(acr_cts),
+        .acr_n(acr_n),
+        .acr_valid(acr_valid),
+        .fid(fid),
+        .hpd(hpd),
+        .irq(irq),
+        .link_clk(link_clk),
+        .locked(locked),
+        .s_axi_cpu_aclk(s_axi_cpu_aclk),
+        .s_axi_cpu_aresetn(s_axi_cpu_aresetn),
+        .s_axis_audio_aclk(s_axis_audio_aclk),
+        .s_axis_audio_aresetn(s_axis_audio_aresetn),
+        .s_axis_video_aclk(s_axis_video_aclk),
+        .s_axis_video_aresetn(s_axis_video_aresetn),
+        .video_clk(video_clk));
+endmodule
+
+(* HW_HANDOFF = "hdmi_tx_bd_v_hdmi_tx_ss_0_0.hwdef" *) (* ORIG_REF_NAME = "bd_2339" *) 
 module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339
    (AUDIO_IN_tdata,
     AUDIO_IN_tid,
@@ -82,11 +319,11 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SDA_I" *) input DDC_OUT_sda_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SDA_O" *) output DDC_OUT_sda_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SDA_T" *) output DDC_OUT_sda_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TDATA" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA0_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, FREQ_HZ 297000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [39:0]LINK_DATA0_OUT_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TDATA" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA0_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, FREQ_HZ 148500000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [39:0]LINK_DATA0_OUT_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TVALID" *) output LINK_DATA0_OUT_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TDATA" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA1_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, FREQ_HZ 297000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [39:0]LINK_DATA1_OUT_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TDATA" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA1_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, FREQ_HZ 148500000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [39:0]LINK_DATA1_OUT_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TVALID" *) output LINK_DATA1_OUT_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TDATA" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA2_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, FREQ_HZ 297000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [39:0]LINK_DATA2_OUT_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TDATA" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA2_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, FREQ_HZ 148500000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [39:0]LINK_DATA2_OUT_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TVALID" *) output LINK_DATA2_OUT_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SB_STATUS_IN TDATA" *) (* X_INTERFACE_MODE = "Slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SB_STATUS_IN, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, FREQ_HZ 100000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [7:0]SB_STATUS_IN_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SB_STATUS_IN TVALID" *) input SB_STATUS_IN_tvalid;
@@ -109,7 +346,7 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN WREADY" *) output [0:0]S_AXI_CPU_IN_wready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN WSTRB" *) input [3:0]S_AXI_CPU_IN_wstrb;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN WVALID" *) input [0:0]S_AXI_CPU_IN_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TDATA" *) (* X_INTERFACE_MODE = "Slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME VIDEO_IN, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, FREQ_HZ 297000000, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 12, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1" *) input [95:0]VIDEO_IN_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TDATA" *) (* X_INTERFACE_MODE = "Slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME VIDEO_IN, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, FREQ_HZ 100000000, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value xilinx.com:video:G_B_R_444:1.0} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value rows} size {attribs {resolve_type generated dependency active_rows format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_rows_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cols} size {attribs {resolve_type generated dependency active_cols format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_cols_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_G {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value G} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_B {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value B} enabled {attribs {resolve_type generated dependency video_comp1_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp1_offset format long minimum {} maximum {}} value 8} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_R {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value R} enabled {attribs {resolve_type generated dependency video_comp2_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp2_offset format long minimum {} maximum {}} value 16} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}}}}} TDATA_WIDTH 24}, PHASE 0.0, TDATA_NUM_BYTES 6, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1" *) input [47:0]VIDEO_IN_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TLAST" *) input VIDEO_IN_tlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TREADY" *) output VIDEO_IN_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TUSER" *) input VIDEO_IN_tuser;
@@ -120,13 +357,13 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339
   input fid;
   input hpd;
   (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.IRQ INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.IRQ, PortWidth 1, SENSITIVITY LEVEL_HIGH" *) output irq;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.LINK_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.LINK_CLK, ASSOCIATED_BUSIF LINK_DATA0_OUT:LINK_DATA1_OUT:LINK_DATA2_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input link_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.LINK_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.LINK_CLK, ASSOCIATED_BUSIF LINK_DATA0_OUT:LINK_DATA1_OUT:LINK_DATA2_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input link_clk;
   output locked;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.S_AXI_CPU_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.S_AXI_CPU_ACLK, ASSOCIATED_BUSIF SB_STATUS_IN:S_AXI_CPU_IN, ASSOCIATED_CLKEN s_sc_aclken, ASSOCIATED_RESET s_axi_cpu_aresetn, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input s_axi_cpu_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.S_AXI_CPU_ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.S_AXI_CPU_ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input s_axi_cpu_aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.S_AXIS_AUDIO_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.S_AXIS_AUDIO_ACLK, ASSOCIATED_BUSIF AUDIO_IN, ASSOCIATED_RESET s_axis_audio_aresetn, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input s_axis_audio_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.S_AXIS_AUDIO_ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.S_AXIS_AUDIO_ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input s_axis_audio_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.S_AXIS_VIDEO_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.S_AXIS_VIDEO_ACLK, ASSOCIATED_BUSIF VIDEO_IN, ASSOCIATED_RESET s_axis_video_aresetn, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input s_axis_video_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.S_AXIS_VIDEO_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.S_AXIS_VIDEO_ACLK, ASSOCIATED_BUSIF VIDEO_IN, ASSOCIATED_RESET s_axis_video_aresetn, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input s_axis_video_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.S_AXIS_VIDEO_ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.S_AXIS_VIDEO_ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input s_axis_video_aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.VIDEO_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.VIDEO_CLK, ASSOCIATED_CLKEN clken, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input video_clk;
 
@@ -167,7 +404,7 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339
   wire [0:0]S_AXI_CPU_IN_wready;
   wire [3:0]S_AXI_CPU_IN_wstrb;
   wire [0:0]S_AXI_CPU_IN_wvalid;
-  wire [95:0]VIDEO_IN_tdata;
+  wire [47:0]VIDEO_IN_tdata;
   wire VIDEO_IN_tlast;
   wire VIDEO_IN_tready;
   wire VIDEO_IN_tuser;
@@ -214,7 +451,7 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339
   wire [3:0]intf_net_axi_smartconnect_M01_AXI_WSTRB;
   wire intf_net_axi_smartconnect_M01_AXI_WVALID;
   wire intf_net_v_axi4s_vid_out_vid_io_out_ACTIVE_VIDEO;
-  wire [95:0]intf_net_v_axi4s_vid_out_vid_io_out_DATA;
+  wire [47:0]intf_net_v_axi4s_vid_out_vid_io_out_DATA;
   wire intf_net_v_axi4s_vid_out_vid_io_out_HSYNC;
   wire intf_net_v_axi4s_vid_out_vid_io_out_VSYNC;
   wire [95:0]intf_net_v_hdmi_tx_hdcp_out_TDATA;
@@ -444,14 +681,14 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339
         .vid_format_out(net_v_hdmi_tx_vid_format_out),
         .video_clk(video_clk),
         .video_data(intf_net_v_axi4s_vid_out_vid_io_out_DATA),
-        .video_data_arb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .video_data_arb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .video_de(intf_net_v_axi4s_vid_out_vid_io_out_ACTIVE_VIDEO),
-        .video_de_arb({1'b0,1'b0,1'b0,1'b0}),
+        .video_de_arb({1'b0,1'b0}),
         .video_hs(intf_net_v_axi4s_vid_out_vid_io_out_HSYNC),
-        .video_hs_arb({1'b0,1'b0,1'b0,1'b0}),
+        .video_hs_arb({1'b0,1'b0}),
         .video_reset(net_v_hdmi_tx_video_reset),
         .video_vs(intf_net_v_axi4s_vid_out_vid_io_out_VSYNC),
-        .video_vs_arb({1'b0,1'b0,1'b0,1'b0}));
+        .video_vs_arb({1'b0,1'b0}));
   (* CHECK_LICENSE_TYPE = "bd_2339_v_tc_0,v_tc,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "v_tc,Vivado 2025.2" *) 
@@ -497,7 +734,8 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339
         .O(net_util_vector_logic_0_Res));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "bd_2339_axi_smartconnect_0,bd_6eeb,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "bd_6eeb,Vivado 2025.2" *) 
+(* CHECK_LICENSE_TYPE = "bd_2339_axi_smartconnect_0,bd_6eeb,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "bd_2339_axi_smartconnect_0" *) 
+(* X_CORE_INFO = "bd_6eeb,Vivado 2025.2" *) 
 module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_axi_smartconnect_0
    (aclk,
     aresetn,
@@ -622,7 +860,8 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_axi_smartconnect_0
 
 endmodule
 
-(* CHECK_LICENSE_TYPE = "bd_2339_v_axi4s_vid_out_0,v_axi4s_vid_out_v4_0_20,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "v_axi4s_vid_out_v4_0_20,Vivado 2025.2" *) 
+(* CHECK_LICENSE_TYPE = "bd_2339_v_axi4s_vid_out_0,v_axi4s_vid_out_v4_0_20,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "bd_2339_v_axi4s_vid_out_0" *) 
+(* X_CORE_INFO = "v_axi4s_vid_out_v4_0_20,Vivado 2025.2" *) 
 module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_axi4s_vid_out_0
    (aclk,
     aclken,
@@ -659,11 +898,11 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_axi4s_vid_out_0
     sof_state_out,
     repeat_en,
     remap_420_en);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 aclk_intf CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk_intf, ASSOCIATED_BUSIF video_in, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, INSERT_VIP 0" *) 
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 aclk_intf CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk_intf, ASSOCIATED_BUSIF video_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) 
   (* syn_isclock = "1" *) input aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clockenable:1.0 aclken_intf CE" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclken_intf, POLARITY ACTIVE_HIGH" *) input aclken;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 aresetn_intf RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aresetn_intf, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TDATA" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME video_in, TDATA_NUM_BYTES 12, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0" *) input [95:0]s_axis_video_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TDATA" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME video_in, TDATA_NUM_BYTES 6, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value xilinx.com:video:G_B_R_444:1.0} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value rows} size {attribs {resolve_type generated dependency active_rows format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_rows_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cols} size {attribs {resolve_type generated dependency active_cols format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_cols_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_G {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value G} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_B {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value B} enabled {attribs {resolve_type generated dependency video_comp1_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp1_offset format long minimum {} maximum {}} value 8} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_R {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value R} enabled {attribs {resolve_type generated dependency video_comp2_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp2_offset format long minimum {} maximum {}} value 16} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}}}}} TDATA_WIDTH 24}, INSERT_VIP 0" *) input [47:0]s_axis_video_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TVALID" *) input s_axis_video_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TREADY" *) output s_axis_video_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TUSER" *) input s_axis_video_tuser;
@@ -679,7 +918,7 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_axi4s_vid_out_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_io_out VBLANK" *) output vid_vblank;
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_io_out HBLANK" *) output vid_hblank;
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_io_out FIELD" *) output vid_field_id;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_io_out DATA" *) output [95:0]vid_data;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_io_out DATA" *) output [47:0]vid_data;
   (* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 vtiming_in VSYNC" *) (* X_INTERFACE_MODE = "slave" *) input vtg_vsync;
   (* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 vtiming_in HSYNC" *) input vtg_hsync;
   (* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 vtiming_in VBLANK" *) input vtg_vblank;
@@ -700,7 +939,8 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_axi4s_vid_out_0
 
 endmodule
 
-(* CHECK_LICENSE_TYPE = "bd_2339_v_hdmi_tx_0,v_hdmi_tx_v3_0_6,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "v_hdmi_tx_v3_0_6,Vivado 2025.2" *) 
+(* CHECK_LICENSE_TYPE = "bd_2339_v_hdmi_tx_0,v_hdmi_tx_v3_0_6,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "bd_2339_v_hdmi_tx_0" *) 
+(* X_CORE_INFO = "v_hdmi_tx_v3_0_6,Vivado 2025.2" *) 
 module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_hdmi_tx_0
    (s_axi_aclk,
     s_axi_aresetn,
@@ -788,7 +1028,7 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_hdmi_tx_0
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S_AXI_CLK CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_CLK, ASSOCIATED_BUSIF S_AXI:SB_STATUS_IN, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) 
   (* syn_isclock = "1" *) input s_axi_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S_AXI_RST RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S_AXIS_VIDEO_ACLK CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_VIDEO_ACLK, ASSOCIATED_RESET s_axis_video_aresetn_in, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, INSERT_VIP 0" *) 
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S_AXIS_VIDEO_ACLK CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_VIDEO_ACLK, ASSOCIATED_RESET s_axis_video_aresetn_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) 
   (* syn_isclock = "1" *) input s_axis_video_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S_AXIS_VIDEO_ARESETN_IN RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_VIDEO_ARESETN_IN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axis_video_aresetn_in;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, WIZ.DATA_WIDTH 32, WIZ.NUM_REG 32, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
@@ -812,16 +1052,16 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_hdmi_tx_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) input s_axi_rready;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 VIDEO_CLK CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME VIDEO_CLK, ASSOCIATED_BUSIF VIDEO_IN, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, INSERT_VIP 0" *) 
   (* syn_isclock = "1" *) input video_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 LINK_CLK CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_CLK, ASSOCIATED_BUSIF LINK_DATA0_OUT:LINK_DATA1_OUT:LINK_DATA2_OUT, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, INSERT_VIP 0" *) 
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 LINK_CLK CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_CLK, ASSOCIATED_BUSIF LINK_DATA0_OUT:LINK_DATA1_OUT:LINK_DATA2_OUT, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, INSERT_VIP 0" *) 
   (* syn_isclock = "1" *) input link_clk;
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 VIDEO_IN VSYNC" *) (* X_INTERFACE_MODE = "slave" *) input video_vs;
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 VIDEO_IN HSYNC" *) input video_hs;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 VIDEO_IN DATA" *) input [95:0]video_data;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 VIDEO_IN DATA" *) input [47:0]video_data;
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 VIDEO_IN ACTIVE_VIDEO" *) input video_de;
-  input [3:0]video_vs_arb;
-  input [3:0]video_hs_arb;
-  input [3:0]video_de_arb;
-  input [95:0]video_data_arb;
+  input [1:0]video_vs_arb;
+  input [1:0]video_hs_arb;
+  input [1:0]video_de_arb;
+  input [47:0]video_data_arb;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 AUD_AXI_RST RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AUD_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axis_audio_aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 AUD_AXI_CLK CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AUD_AXI_CLK, ASSOCIATED_BUSIF AUDIO_IN, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) 
   (* syn_isclock = "1" *) input s_axis_audio_aclk;
@@ -832,9 +1072,9 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_hdmi_tx_0
   input [19:0]acr_cts;
   input [19:0]acr_n;
   input acr_valid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA0_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [39:0]link_data0;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA1_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [39:0]link_data1;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA2_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [39:0]link_data2;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA0_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [39:0]link_data0;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA1_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [39:0]link_data1;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA2_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [39:0]link_data2;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TVALID" *) output link_valid0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TVALID" *) output link_valid1;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TVALID" *) output link_valid2;
@@ -877,7 +1117,8 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_hdmi_tx_0
 
 endmodule
 
-(* CHECK_LICENSE_TYPE = "bd_2339_v_tc_0,v_tc,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "v_tc,Vivado 2025.2" *) 
+(* CHECK_LICENSE_TYPE = "bd_2339_v_tc_0,v_tc,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "bd_2339_v_tc_0" *) 
+(* X_CORE_INFO = "v_tc,Vivado 2025.2" *) 
 module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_tc_0
    (clk,
     clken,
@@ -951,243 +1192,6 @@ module hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_tc_0
   output [0:0]fsync_out;
 
 
-endmodule
-
-(* CHECK_LICENSE_TYPE = "hdmi_tx_bd_v_hdmi_tx_ss_0_0,bd_2339,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "bd_2339,Vivado 2025.2" *) 
-(* NotValidForBitStream *)
-module hdmi_tx_bd_v_hdmi_tx_ss_0_0
-   (s_axi_cpu_aclk,
-    s_axi_cpu_aresetn,
-    link_clk,
-    s_axis_audio_aclk,
-    s_axis_audio_aresetn,
-    acr_cts,
-    acr_n,
-    acr_valid,
-    hpd,
-    irq,
-    video_clk,
-    fid,
-    locked,
-    s_axis_video_aclk,
-    s_axis_video_aresetn,
-    VIDEO_IN_tdata,
-    VIDEO_IN_tlast,
-    VIDEO_IN_tready,
-    VIDEO_IN_tuser,
-    VIDEO_IN_tvalid,
-    SB_STATUS_IN_tdata,
-    SB_STATUS_IN_tvalid,
-    AUDIO_IN_tdata,
-    AUDIO_IN_tid,
-    AUDIO_IN_tready,
-    AUDIO_IN_tvalid,
-    S_AXI_CPU_IN_awaddr,
-    S_AXI_CPU_IN_awprot,
-    S_AXI_CPU_IN_awvalid,
-    S_AXI_CPU_IN_awready,
-    S_AXI_CPU_IN_wdata,
-    S_AXI_CPU_IN_wstrb,
-    S_AXI_CPU_IN_wvalid,
-    S_AXI_CPU_IN_wready,
-    S_AXI_CPU_IN_bresp,
-    S_AXI_CPU_IN_bvalid,
-    S_AXI_CPU_IN_bready,
-    S_AXI_CPU_IN_araddr,
-    S_AXI_CPU_IN_arprot,
-    S_AXI_CPU_IN_arvalid,
-    S_AXI_CPU_IN_arready,
-    S_AXI_CPU_IN_rdata,
-    S_AXI_CPU_IN_rresp,
-    S_AXI_CPU_IN_rvalid,
-    S_AXI_CPU_IN_rready,
-    DDC_OUT_scl_i,
-    DDC_OUT_scl_o,
-    DDC_OUT_scl_t,
-    DDC_OUT_sda_i,
-    DDC_OUT_sda_o,
-    DDC_OUT_sda_t,
-    LINK_DATA0_OUT_tdata,
-    LINK_DATA0_OUT_tvalid,
-    LINK_DATA1_OUT_tdata,
-    LINK_DATA1_OUT_tvalid,
-    LINK_DATA2_OUT_tdata,
-    LINK_DATA2_OUT_tvalid);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.s_axi_cpu_aclk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.s_axi_cpu_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, ASSOCIATED_BUSIF SB_STATUS_IN:S_AXI_CPU_IN, ASSOCIATED_RESET s_axi_cpu_aresetn, INSERT_VIP 0, ASSOCIATED_CLKEN s_sc_aclken" *) input s_axi_cpu_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.s_axi_cpu_aresetn RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.s_axi_cpu_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_cpu_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.link_clk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.link_clk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, ASSOCIATED_BUSIF LINK_DATA0_OUT:LINK_DATA1_OUT:LINK_DATA2_OUT, INSERT_VIP 0" *) input link_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.s_axis_audio_aclk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.s_axis_audio_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, ASSOCIATED_BUSIF AUDIO_IN, ASSOCIATED_RESET s_axis_audio_aresetn, INSERT_VIP 0" *) input s_axis_audio_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.s_axis_audio_aresetn RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.s_axis_audio_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axis_audio_aresetn;
-  input [19:0]acr_cts;
-  input [19:0]acr_n;
-  input acr_valid;
-  input hpd;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.irq INTERRUPT" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.irq, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output irq;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.video_clk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.video_clk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, INSERT_VIP 0, ASSOCIATED_CLKEN clken" *) input video_clk;
-  input fid;
-  output locked;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.s_axis_video_aclk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.s_axis_video_aclk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, ASSOCIATED_BUSIF VIDEO_IN, ASSOCIATED_RESET s_axis_video_aresetn, INSERT_VIP 0" *) input s_axis_video_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.s_axis_video_aresetn RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.s_axis_video_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axis_video_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TDATA" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME VIDEO_IN, TDATA_NUM_BYTES 12, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0" *) input [95:0]VIDEO_IN_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TLAST" *) input VIDEO_IN_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TREADY" *) output VIDEO_IN_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TUSER" *) input VIDEO_IN_tuser;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 VIDEO_IN TVALID" *) input VIDEO_IN_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SB_STATUS_IN TDATA" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SB_STATUS_IN, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) input [7:0]SB_STATUS_IN_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SB_STATUS_IN TVALID" *) input SB_STATUS_IN_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 AUDIO_IN TDATA" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AUDIO_IN, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) input [31:0]AUDIO_IN_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 AUDIO_IN TID" *) input [7:0]AUDIO_IN_tid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 AUDIO_IN TREADY" *) output AUDIO_IN_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 AUDIO_IN TVALID" *) input AUDIO_IN_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN AWADDR" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_CPU_IN, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 17, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [16:0]S_AXI_CPU_IN_awaddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN AWPROT" *) input [2:0]S_AXI_CPU_IN_awprot;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN AWVALID" *) input [0:0]S_AXI_CPU_IN_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN AWREADY" *) output [0:0]S_AXI_CPU_IN_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN WDATA" *) input [31:0]S_AXI_CPU_IN_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN WSTRB" *) input [3:0]S_AXI_CPU_IN_wstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN WVALID" *) input [0:0]S_AXI_CPU_IN_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN WREADY" *) output [0:0]S_AXI_CPU_IN_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN BRESP" *) output [1:0]S_AXI_CPU_IN_bresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN BVALID" *) output [0:0]S_AXI_CPU_IN_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN BREADY" *) input [0:0]S_AXI_CPU_IN_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN ARADDR" *) input [16:0]S_AXI_CPU_IN_araddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN ARPROT" *) input [2:0]S_AXI_CPU_IN_arprot;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN ARVALID" *) input [0:0]S_AXI_CPU_IN_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN ARREADY" *) output [0:0]S_AXI_CPU_IN_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN RDATA" *) output [31:0]S_AXI_CPU_IN_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN RRESP" *) output [1:0]S_AXI_CPU_IN_rresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN RVALID" *) output [0:0]S_AXI_CPU_IN_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN RREADY" *) input [0:0]S_AXI_CPU_IN_rready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SCL_I" *) (* X_INTERFACE_MODE = "master" *) input DDC_OUT_scl_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SCL_O" *) output DDC_OUT_scl_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SCL_T" *) output DDC_OUT_scl_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SDA_I" *) input DDC_OUT_sda_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SDA_O" *) output DDC_OUT_sda_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 DDC_OUT SDA_T" *) output DDC_OUT_sda_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA0_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [39:0]LINK_DATA0_OUT_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TVALID" *) output LINK_DATA0_OUT_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA1_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [39:0]LINK_DATA1_OUT_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TVALID" *) output LINK_DATA1_OUT_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME LINK_DATA2_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [39:0]LINK_DATA2_OUT_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TVALID" *) output LINK_DATA2_OUT_tvalid;
-
-  wire [31:0]AUDIO_IN_tdata;
-  wire [7:0]AUDIO_IN_tid;
-  wire AUDIO_IN_tready;
-  wire AUDIO_IN_tvalid;
-  wire DDC_OUT_scl_i;
-  wire DDC_OUT_scl_o;
-  wire DDC_OUT_scl_t;
-  wire DDC_OUT_sda_i;
-  wire DDC_OUT_sda_o;
-  wire DDC_OUT_sda_t;
-  wire [39:0]LINK_DATA0_OUT_tdata;
-  wire LINK_DATA0_OUT_tvalid;
-  wire [39:0]LINK_DATA1_OUT_tdata;
-  wire LINK_DATA1_OUT_tvalid;
-  wire [39:0]LINK_DATA2_OUT_tdata;
-  wire LINK_DATA2_OUT_tvalid;
-  wire [7:0]SB_STATUS_IN_tdata;
-  wire SB_STATUS_IN_tvalid;
-  wire [16:0]S_AXI_CPU_IN_araddr;
-  wire [2:0]S_AXI_CPU_IN_arprot;
-  wire [0:0]S_AXI_CPU_IN_arready;
-  wire [0:0]S_AXI_CPU_IN_arvalid;
-  wire [16:0]S_AXI_CPU_IN_awaddr;
-  wire [2:0]S_AXI_CPU_IN_awprot;
-  wire [0:0]S_AXI_CPU_IN_awready;
-  wire [0:0]S_AXI_CPU_IN_awvalid;
-  wire [0:0]S_AXI_CPU_IN_bready;
-  wire [1:0]S_AXI_CPU_IN_bresp;
-  wire [0:0]S_AXI_CPU_IN_bvalid;
-  wire [31:0]S_AXI_CPU_IN_rdata;
-  wire [0:0]S_AXI_CPU_IN_rready;
-  wire [1:0]S_AXI_CPU_IN_rresp;
-  wire [0:0]S_AXI_CPU_IN_rvalid;
-  wire [31:0]S_AXI_CPU_IN_wdata;
-  wire [0:0]S_AXI_CPU_IN_wready;
-  wire [3:0]S_AXI_CPU_IN_wstrb;
-  wire [0:0]S_AXI_CPU_IN_wvalid;
-  wire [95:0]VIDEO_IN_tdata;
-  wire VIDEO_IN_tlast;
-  wire VIDEO_IN_tready;
-  wire VIDEO_IN_tuser;
-  wire VIDEO_IN_tvalid;
-  wire [19:0]acr_cts;
-  wire [19:0]acr_n;
-  wire acr_valid;
-  wire fid;
-  wire hpd;
-  wire irq;
-  wire link_clk;
-  wire locked;
-  wire s_axi_cpu_aclk;
-  wire s_axi_cpu_aresetn;
-  wire s_axis_audio_aclk;
-  wire s_axis_audio_aresetn;
-  wire s_axis_video_aclk;
-  wire s_axis_video_aresetn;
-  wire video_clk;
-
-  (* HW_HANDOFF = "hdmi_tx_bd_v_hdmi_tx_ss_0_0.hwdef" *) 
-  hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 inst
-       (.AUDIO_IN_tdata(AUDIO_IN_tdata),
-        .AUDIO_IN_tid(AUDIO_IN_tid),
-        .AUDIO_IN_tready(AUDIO_IN_tready),
-        .AUDIO_IN_tvalid(AUDIO_IN_tvalid),
-        .DDC_OUT_scl_i(DDC_OUT_scl_i),
-        .DDC_OUT_scl_o(DDC_OUT_scl_o),
-        .DDC_OUT_scl_t(DDC_OUT_scl_t),
-        .DDC_OUT_sda_i(DDC_OUT_sda_i),
-        .DDC_OUT_sda_o(DDC_OUT_sda_o),
-        .DDC_OUT_sda_t(DDC_OUT_sda_t),
-        .LINK_DATA0_OUT_tdata(LINK_DATA0_OUT_tdata),
-        .LINK_DATA0_OUT_tvalid(LINK_DATA0_OUT_tvalid),
-        .LINK_DATA1_OUT_tdata(LINK_DATA1_OUT_tdata),
-        .LINK_DATA1_OUT_tvalid(LINK_DATA1_OUT_tvalid),
-        .LINK_DATA2_OUT_tdata(LINK_DATA2_OUT_tdata),
-        .LINK_DATA2_OUT_tvalid(LINK_DATA2_OUT_tvalid),
-        .SB_STATUS_IN_tdata(SB_STATUS_IN_tdata),
-        .SB_STATUS_IN_tvalid(SB_STATUS_IN_tvalid),
-        .S_AXI_CPU_IN_araddr(S_AXI_CPU_IN_araddr),
-        .S_AXI_CPU_IN_arprot(S_AXI_CPU_IN_arprot),
-        .S_AXI_CPU_IN_arready(S_AXI_CPU_IN_arready),
-        .S_AXI_CPU_IN_arvalid(S_AXI_CPU_IN_arvalid),
-        .S_AXI_CPU_IN_awaddr(S_AXI_CPU_IN_awaddr),
-        .S_AXI_CPU_IN_awprot(S_AXI_CPU_IN_awprot),
-        .S_AXI_CPU_IN_awready(S_AXI_CPU_IN_awready),
-        .S_AXI_CPU_IN_awvalid(S_AXI_CPU_IN_awvalid),
-        .S_AXI_CPU_IN_bready(S_AXI_CPU_IN_bready),
-        .S_AXI_CPU_IN_bresp(S_AXI_CPU_IN_bresp),
-        .S_AXI_CPU_IN_bvalid(S_AXI_CPU_IN_bvalid),
-        .S_AXI_CPU_IN_rdata(S_AXI_CPU_IN_rdata),
-        .S_AXI_CPU_IN_rready(S_AXI_CPU_IN_rready),
-        .S_AXI_CPU_IN_rresp(S_AXI_CPU_IN_rresp),
-        .S_AXI_CPU_IN_rvalid(S_AXI_CPU_IN_rvalid),
-        .S_AXI_CPU_IN_wdata(S_AXI_CPU_IN_wdata),
-        .S_AXI_CPU_IN_wready(S_AXI_CPU_IN_wready),
-        .S_AXI_CPU_IN_wstrb(S_AXI_CPU_IN_wstrb),
-        .S_AXI_CPU_IN_wvalid(S_AXI_CPU_IN_wvalid),
-        .VIDEO_IN_tdata(VIDEO_IN_tdata),
-        .VIDEO_IN_tlast(VIDEO_IN_tlast),
-        .VIDEO_IN_tready(VIDEO_IN_tready),
-        .VIDEO_IN_tuser(VIDEO_IN_tuser),
-        .VIDEO_IN_tvalid(VIDEO_IN_tvalid),
-        .acr_cts(acr_cts),
-        .acr_n(acr_n),
-        .acr_valid(acr_valid),
-        .fid(fid),
-        .hpd(hpd),
-        .irq(irq),
-        .link_clk(link_clk),
-        .locked(locked),
-        .s_axi_cpu_aclk(s_axi_cpu_aclk),
-        .s_axi_cpu_aresetn(s_axi_cpu_aresetn),
-        .s_axis_audio_aclk(s_axis_audio_aclk),
-        .s_axis_audio_aresetn(s_axis_audio_aresetn),
-        .s_axis_video_aclk(s_axis_video_aclk),
-        .s_axis_video_aresetn(s_axis_video_aresetn),
-        .video_clk(video_clk));
 endmodule
 `ifndef GLBL
 `define GLBL

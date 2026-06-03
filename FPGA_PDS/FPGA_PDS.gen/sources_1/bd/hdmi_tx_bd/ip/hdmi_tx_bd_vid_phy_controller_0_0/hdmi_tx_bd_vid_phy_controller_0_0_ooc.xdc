@@ -52,7 +52,11 @@
 # #########################################################
 
 
+create_clock -period 3.367 -name rx_tmds_clk [get_ports rx_tmds_clk]
+
 create_clock -period 3.367 -name tx_tmds_clk [get_ports tx_tmds_clk]
+
+create_clock -period 3.367 -name rx_video_clk [get_ports rx_video_clk]
 
 create_clock -period 3.367 -name tx_video_clk [get_ports tx_video_clk]
 

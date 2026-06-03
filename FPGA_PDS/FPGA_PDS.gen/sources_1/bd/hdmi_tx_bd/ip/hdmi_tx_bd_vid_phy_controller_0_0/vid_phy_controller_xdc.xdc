@@ -49,7 +49,11 @@ set_case_analysis 1 [get_pins -of [get_cells -hierarchical -filter {name=~*hdmi_
 set_case_analysis 1 [get_pins -of [get_cells -hierarchical -filter {name=~*hdmi_tx_bd_vid_phy_controller_0_0_*GTHE4_CHANNEL_PRIM_INST}] -filter {REF_PIN_NAME == TXPLLCLKSEL[1]}]
 set_case_analysis 0 [get_pins -of [get_cells -hierarchical -filter {name=~*hdmi_tx_bd_vid_phy_controller_0_0_*GTHE4_CHANNEL_PRIM_INST}] -filter {REF_PIN_NAME == TXSYSCLKSEL[0]}]
 set_case_analysis 1 [get_pins -of [get_cells -hierarchical -filter {name=~*hdmi_tx_bd_vid_phy_controller_0_0_*GTHE4_CHANNEL_PRIM_INST}] -filter {REF_PIN_NAME == TXSYSCLKSEL[1]}]
-#create_clock -period 6.734 [get_pins -of [get_cells -hierarchical -filter {name=~*hdmi_tx_bd_vid_phy_controller_0_0_*GTHE4_CHANNEL_PRIM_INST}] -filter {REF_PIN_NAME == TXOUTCLK}]
+#create_clock -period 3.367 [get_pins -of [get_cells -hierarchical -filter {name=~*hdmi_tx_bd_vid_phy_controller_0_0_*GTHE4_CHANNEL_PRIM_INST}] -filter {REF_PIN_NAME == TXOUTCLK}]
+
+
+
+
 
 
 
@@ -61,12 +65,16 @@ set_case_analysis 0 [get_pins -of [get_cells -hierarchical -filter {name=~*hdmi_
 set_case_analysis 0 [get_pins -of [get_cells -hierarchical -filter {name=~*hdmi_tx_bd_vid_phy_controller_0_0_*GTHE4_CHANNEL_PRIM_INST}] -filter {REF_PIN_NAME == RXSYSCLKSEL[0]}]
 set_case_analysis 0 [get_pins -of [get_cells -hierarchical -filter {name=~*hdmi_tx_bd_vid_phy_controller_0_0_*GTHE4_CHANNEL_PRIM_INST}] -filter {REF_PIN_NAME == RXSYSCLKSEL[1]}]
 
-#create_clock -period 6.734 [get_pins -of [get_cells -hierarchical -filter {name=~*hdmi_tx_bd_vid_phy_controller_0_0_*GTHE4_CHANNEL_PRIM_INST}] -filter {REF_PIN_NAME == RXOUTCLK}]
-#create_clock -period 6.734 [get_pins -of [get_cells -hierarchical -filter {name=~*hdmi_tx_bd_vid_phy_controller_0_0_*GTHE4_CHANNEL_PRIM_INST}] -filter {REF_PIN_NAME == RXOUTCLKPCS}]
+
+
+
+#create_clock -period 3.367 [get_pins -of [get_cells -hierarchical -filter {name=~*hdmi_tx_bd_vid_phy_controller_0_0_*GTHE4_CHANNEL_PRIM_INST}] -filter {REF_PIN_NAME == RXOUTCLK}]
+#create_clock -period 3.367 [get_pins -of [get_cells -hierarchical -filter {name=~*hdmi_tx_bd_vid_phy_controller_0_0_*GTHE4_CHANNEL_PRIM_INST}] -filter {REF_PIN_NAME == RXOUTCLKPCS}]
 
 # BELOW ARE REQUIRED BY HDMI ONLY 
 
 # GTX, GTP
 
 # GTHE3/4
-#create_clock -name hdmi_tx_bd_vid_phy_controller_0_0_mgtrefclk0_pad_p_in -period 3.367 [get_ports mgtrefclk0_pad_p_in]
+#create_clock -name hdmi_tx_bd_vid_phy_controller_0_0_mgtrefclk0_pad_p_in -period 6.400 [get_ports mgtrefclk0_pad_p_in]
+#create_clock -name hdmi_tx_bd_vid_phy_controller_0_0_mgtrefclk1_pad_p_in -period 3.367 [get_ports mgtrefclk1_pad_p_in]

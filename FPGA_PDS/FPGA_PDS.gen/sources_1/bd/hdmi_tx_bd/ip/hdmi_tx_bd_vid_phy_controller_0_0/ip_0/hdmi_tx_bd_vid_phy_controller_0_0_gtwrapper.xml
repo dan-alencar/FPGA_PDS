@@ -14,7 +14,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:dd1857b0</spirit:value>
+            <spirit:value>9:00eafaed</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -25,7 +25,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bb35fdbe</spirit:value>
+            <spirit:value>9:5f17b23b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -41,11 +41,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 29 22:44:00 UTC 2026</spirit:value>
+            <spirit:value>Wed Jun 03 01:13:43 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8da93aa5</spirit:value>
+            <spirit:value>9:15b222a8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -61,11 +61,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 29 22:44:00 UTC 2026</spirit:value>
+            <spirit:value>Wed Jun 03 01:13:43 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8da93aa5</spirit:value>
+            <spirit:value>9:15b222a8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -81,11 +81,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 29 22:43:59 UTC 2026</spirit:value>
+            <spirit:value>Wed Jun 03 01:13:42 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bb35fdbe</spirit:value>
+            <spirit:value>9:5f17b23b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -101,11 +101,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 29 22:43:59 UTC 2026</spirit:value>
+            <spirit:value>Wed Jun 03 01:13:43 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bb35fdbe</spirit:value>
+            <spirit:value>9:5f17b23b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1346,7 +1346,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_TX_USER_DATA_WIDTH&apos;))) - 1)">119</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_TX_USER_DATA_WIDTH&apos;))) - 1)">59</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1374,7 +1374,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_RX_USER_DATA_WIDTH&apos;))) - 1)">119</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_TOTAL_NUM_CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_RX_USER_DATA_WIDTH&apos;))) - 1)">59</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -14949,7 +14949,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_INT_DATA_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_INT_DATA_WIDTH">40</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_INT_DATA_WIDTH">20</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed">
         <spirit:name>C_RX_LINE_RATE</spirit:name>
@@ -14965,7 +14965,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed">
         <spirit:name>C_RX_OUTCLK_FREQUENCY</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_OUTCLK_FREQUENCY">148.5000000</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_OUTCLK_FREQUENCY">297.0000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_OUTCLK_SOURCE</spirit:name>
@@ -15009,15 +15009,15 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_USER_DATA_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_USER_DATA_WIDTH">40</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_USER_DATA_WIDTH">20</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed">
         <spirit:name>C_RX_USRCLK_FREQUENCY</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_USRCLK_FREQUENCY">148.5000000</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_USRCLK_FREQUENCY">297.0000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed">
         <spirit:name>C_RX_USRCLK2_FREQUENCY</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_USRCLK2_FREQUENCY">148.5000000</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_USRCLK2_FREQUENCY">297.0000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_SECONDARY_QPLL_ENABLE</spirit:name>
@@ -15049,7 +15049,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed">
         <spirit:name>C_TXPROGDIV_FREQ_VAL</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TXPROGDIV_FREQ_VAL">148.5</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TXPROGDIV_FREQ_VAL">297</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_TX_BUFFBYPASS_MODE</spirit:name>
@@ -15073,7 +15073,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_TX_INT_DATA_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_INT_DATA_WIDTH">40</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_INT_DATA_WIDTH">20</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed">
         <spirit:name>C_TX_LINE_RATE</spirit:name>
@@ -15089,7 +15089,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed">
         <spirit:name>C_TX_OUTCLK_FREQUENCY</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_OUTCLK_FREQUENCY">148.5000000</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_OUTCLK_FREQUENCY">297.0000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_TX_OUTCLK_SOURCE</spirit:name>
@@ -15125,19 +15125,35 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_TX_USER_DATA_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_USER_DATA_WIDTH">40</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_USER_DATA_WIDTH">20</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed">
         <spirit:name>C_TX_USRCLK_FREQUENCY</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_USRCLK_FREQUENCY">148.5000000</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_USRCLK_FREQUENCY">297.0000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed">
         <spirit:name>C_TX_USRCLK2_FREQUENCY</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_USRCLK2_FREQUENCY">148.5000000</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_USRCLK2_FREQUENCY">297.0000000</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_04c1b6c3</spirit:name>
+      <spirit:enumeration>RXOUTCLKPMA</spirit:enumeration>
+      <spirit:enumeration>RXOUTCLKPCS</spirit:enumeration>
+      <spirit:enumeration>RXPLLREFCLK_DIV1</spirit:enumeration>
+      <spirit:enumeration>RXPROGDIVCLK</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_0aa04840</spirit:name>
+      <spirit:enumeration>TXPLLREFCLK_DIV1</spirit:enumeration>
+      <spirit:enumeration>TXPROGDIVCLK</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_0fbde0c1</spirit:name>
+      <spirit:enumeration>20</spirit:enumeration>
+    </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_24871ac1</spirit:name>
       <spirit:enumeration>AC</spirit:enumeration>
@@ -15258,14 +15274,6 @@
       <spirit:enumeration>250</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_6c5a0a73</spirit:name>
-      <spirit:enumeration>RXOUTCLKPMA</spirit:enumeration>
-      <spirit:enumeration>RXOUTCLKPCS</spirit:enumeration>
-      <spirit:enumeration>RXPLLREFCLK_DIV1</spirit:enumeration>
-      <spirit:enumeration>RXPLLREFCLK_DIV2</spirit:enumeration>
-      <spirit:enumeration>RXPROGDIVCLK</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_717a601e</spirit:name>
       <spirit:enumeration>X0Y8</spirit:enumeration>
       <spirit:enumeration>X0Y9</spirit:enumeration>
@@ -15298,6 +15306,10 @@
       <spirit:enumeration>80</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
+      <spirit:name>choice_list_9ca45878</spirit:name>
+      <spirit:enumeration>297</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
       <spirit:name>choice_list_a533ccf9</spirit:name>
       <spirit:enumeration>250</spirit:enumeration>
       <spirit:enumeration>125</spirit:enumeration>
@@ -15325,20 +15337,10 @@
       <spirit:enumeration>-20</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_c70dfaa0</spirit:name>
-      <spirit:enumeration>20</spirit:enumeration>
-      <spirit:enumeration>40</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_e6469819</spirit:name>
       <spirit:enumeration>1</spirit:enumeration>
       <spirit:enumeration>2</spirit:enumeration>
       <spirit:enumeration>4</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_ebb50ad4</spirit:name>
-      <spirit:enumeration>148.5</spirit:enumeration>
-      <spirit:enumeration>297</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_ed5e3eb0</spirit:name>
@@ -15706,12 +15708,6 @@
       <spirit:enumeration>915</spirit:enumeration>
       <spirit:enumeration>960</spirit:enumeration>
       <spirit:enumeration>1030</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_f5ef04b2</spirit:name>
-      <spirit:enumeration>TXPLLREFCLK_DIV1</spirit:enumeration>
-      <spirit:enumeration>TXPLLREFCLK_DIV2</spirit:enumeration>
-      <spirit:enumeration>TXPROGDIVCLK</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_03018cc1</spirit:name>
@@ -16338,7 +16334,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>INTERNAL_TX_USRCLK_FREQUENCY</spirit:name>
-      <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="PARAM_VALUE.INTERNAL_TX_USRCLK_FREQUENCY" spirit:order="16">148.5000000</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="PARAM_VALUE.INTERNAL_TX_USRCLK_FREQUENCY" spirit:order="16">297.0000000</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -16349,7 +16345,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>INTERNAL_RX_USRCLK_FREQUENCY</spirit:name>
-      <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="PARAM_VALUE.INTERNAL_RX_USRCLK_FREQUENCY" spirit:order="17">148.5000000</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="PARAM_VALUE.INTERNAL_RX_USRCLK_FREQUENCY" spirit:order="17">297.0000000</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -16425,13 +16421,13 @@
       <spirit:name>TX_USER_DATA_WIDTH</spirit:name>
       <spirit:displayName>User data width</spirit:displayName>
       <spirit:description>Select the width at which the user logic will provide parallel data to the serial transceiver for transmission</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TX_USER_DATA_WIDTH" spirit:choiceRef="choice_list_7f4090d6" spirit:order="28">40</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TX_USER_DATA_WIDTH" spirit:choiceRef="choice_list_7f4090d6" spirit:order="28">20</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TX_INT_DATA_WIDTH</spirit:name>
       <spirit:displayName>Internal data width</spirit:displayName>
       <spirit:description>Select the width of the serial transceiver internal transmitter data path</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TX_INT_DATA_WIDTH" spirit:choiceRef="choice_list_c70dfaa0" spirit:order="29">40</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TX_INT_DATA_WIDTH" spirit:choiceRef="choice_list_0fbde0c1" spirit:order="29">20</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TX_BUFFER_MODE</spirit:name>
@@ -16449,7 +16445,7 @@
       <spirit:name>TX_OUTCLK_SOURCE</spirit:name>
       <spirit:displayName>TXOUTCLK source</spirit:displayName>
       <spirit:description>Select the source of TXOUTCLK</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TX_OUTCLK_SOURCE" spirit:choiceRef="choice_list_f5ef04b2" spirit:order="32">TXPROGDIVCLK</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TX_OUTCLK_SOURCE" spirit:choiceRef="choice_list_0aa04840" spirit:order="32">TXPROGDIVCLK</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TX_DIFF_SWING_EMPH_MODE</spirit:name>
@@ -16485,13 +16481,13 @@
       <spirit:name>RX_USER_DATA_WIDTH</spirit:name>
       <spirit:displayName>User data width</spirit:displayName>
       <spirit:description>Select the width at which the serial transceiver will provide received parallel data to the user logic</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_USER_DATA_WIDTH" spirit:choiceRef="choice_list_7f4090d6" spirit:order="38">40</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_USER_DATA_WIDTH" spirit:choiceRef="choice_list_7f4090d6" spirit:order="38">20</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_INT_DATA_WIDTH</spirit:name>
       <spirit:displayName>Internal data width</spirit:displayName>
       <spirit:description>Select the width of the serial transceiver internal receiver data path</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_INT_DATA_WIDTH" spirit:choiceRef="choice_list_c70dfaa0" spirit:order="39">40</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_INT_DATA_WIDTH" spirit:choiceRef="choice_list_0fbde0c1" spirit:order="39">20</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_BUFFER_MODE</spirit:name>
@@ -16527,7 +16523,7 @@
       <spirit:name>RX_OUTCLK_SOURCE</spirit:name>
       <spirit:displayName>RXOUTCLK source</spirit:displayName>
       <spirit:description>Select the source of RXOUTCLK</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_OUTCLK_SOURCE" spirit:choiceRef="choice_list_6c5a0a73" spirit:order="45">RXOUTCLKPMA</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_OUTCLK_SOURCE" spirit:choiceRef="choice_list_04c1b6c3" spirit:order="45">RXOUTCLKPMA</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SIM_CPLL_CAL_BYPASS</spirit:name>
@@ -17775,7 +17771,7 @@ t rxbufstatus_out rxprbserr_out rxprbslocked_out rxresetdone_out txbufstatus_out
       <spirit:name>RX_REFCLK_SOURCE</spirit:name>
       <spirit:displayName>Receiver reference clock source</spirit:displayName>
       <spirit:description>Select a reference clock input to drive the PLL chosen for receiver operation</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_REFCLK_SOURCE" spirit:order="151">X0Y8 clk1 X0Y9 clk1 X0Y10 clk1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_REFCLK_SOURCE" spirit:order="151">X0Y8 clk0 X0Y9 clk0 X0Y10 clk0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TX_REFCLK_SOURCE</spirit:name>
@@ -17968,7 +17964,7 @@ t rxbufstatus_out rxprbserr_out rxprbslocked_out rxresetdone_out txbufstatus_out
       <spirit:name>TXPROGDIV_FREQ_VAL</spirit:name>
       <spirit:displayName>TXOUTCLK frequency (MHz)</spirit:displayName>
       <spirit:description>Select the TXOUTCLK frequency to be generated by the TX programmable divider</spirit:description>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.TXPROGDIV_FREQ_VAL" spirit:choiceRef="choice_list_ebb50ad4" spirit:order="176">148.5</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.TXPROGDIV_FREQ_VAL" spirit:choiceRef="choice_list_9ca45878" spirit:order="176">297</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -17987,7 +17983,7 @@ t rxbufstatus_out rxprbserr_out rxprbslocked_out rxresetdone_out txbufstatus_out
       <spirit:name>FREERUN_FREQUENCY</spirit:name>
       <spirit:displayName>Free-running and DRP clock frequency (MHz)</spirit:displayName>
       <spirit:description>Enter the frequency of the free-running clock used to bring up the core. For configurations which use the CPLL, this clock must also be used for the transceiver channel DRP interface</spirit:description>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.FREERUN_FREQUENCY" spirit:order="178" spirit:minimum="6.25" spirit:maximum="148.5">100.0</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.FREERUN_FREQUENCY" spirit:order="178" spirit:minimum="6.25" spirit:maximum="200">100.0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>INCLUDE_CPLL_CAL</spirit:name>

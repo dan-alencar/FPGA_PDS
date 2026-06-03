@@ -108,3 +108,52 @@ set_property IOSTANDARD DIFF_HSUL_12 [get_ports HDMI_TX_CLK_N]
 set_property OUTPUT_IMPEDANCE RDRV_40_40 [get_ports HDMI_TX_CLK_P]
 set_property SLEW SLOW [get_ports HDMI_TX_CLK_P]
 set_property SLEW SLOW [get_ports HDMI_TX_CLK_N]
+
+################################################################################
+# HDMI RX PHY REFERENCE CLOCK (MGTREFCLK1 - Recovered Clock) - Bank 226
+################################################################################
+# Clock recuperado do retimer HDMI RX, realimentado ao GT como refclk de RX.
+# Equivalente de RX ao HDMI_CLK_8T49N241 (que é o refclk de TX em MGTREFCLK0).
+# Sem IOSTANDARD: pinos de refclk do GT não aceitam IOSTANDARD.
+set_property PACKAGE_PIN M7 [get_ports HDMI_RCLKOUT_P]
+set_property PACKAGE_PIN M6 [get_ports HDMI_RCLKOUT_N]
+
+create_clock -period 3.367 -name hdmi_rclkout [get_ports HDMI_RCLKOUT_P]
+
+################################################################################
+# HDMI RX DATA LANES (GTH Lanes 0, 1, 2 - QUAD226) - Bank 226
+################################################################################
+# Pinos seriais do GT: apenas PACKAGE_PIN, sem IOSTANDARD (igual ao hdmi_tx).
+# Lane 0 - Blue
+set_property PACKAGE_PIN M2 [get_ports {hdmi_rx_p[0]}]
+set_property PACKAGE_PIN M1 [get_ports {hdmi_rx_n[0]}]
+
+# Lane 1 - Green
+set_property PACKAGE_PIN K2 [get_ports {hdmi_rx_p[1]}]
+set_property PACKAGE_PIN K1 [get_ports {hdmi_rx_n[1]}]
+
+# Lane 2 - Red
+set_property PACKAGE_PIN H2 [get_ports {hdmi_rx_p[2]}]
+set_property PACKAGE_PIN H1 [get_ports {hdmi_rx_n[2]}]
+
+################################################################################
+# HDMI RX DDC / EDID (slave interno do v_hdmi_rx_ss) - Bank 65
+################################################################################
+set_property PACKAGE_PIN N26 [get_ports RX_DDC_OUT_scl_io]
+set_property IOSTANDARD LVCMOS12 [get_ports RX_DDC_OUT_scl_io]
+set_property DRIVE 8 [get_ports RX_DDC_OUT_scl_io]
+
+set_property PACKAGE_PIN T19 [get_ports RX_DDC_OUT_sda_io]
+set_property IOSTANDARD LVCMOS12 [get_ports RX_DDC_OUT_sda_io]
+set_property DRIVE 8 [get_ports RX_DDC_OUT_sda_io]
+
+################################################################################
+# SINAIS DE CONTROLE HDMI RX - Bank 65
+################################################################################
+# Hot Plug Detect (Saída: FPGA dirige HPD ao source)
+set_property PACKAGE_PIN T24 [get_ports HDMI_RX_HPD]
+set_property IOSTANDARD LVCMOS12 [get_ports HDMI_RX_HPD]
+
+# Cable / +5V detect (Entrada)
+set_property PACKAGE_PIN U24 [get_ports HDMI_RX_PWR_DET]
+set_property IOSTANDARD LVCMOS12 [get_ports HDMI_RX_PWR_DET]

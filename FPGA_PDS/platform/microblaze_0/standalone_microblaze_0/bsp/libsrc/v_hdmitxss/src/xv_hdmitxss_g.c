@@ -6,7 +6,7 @@ XV_HdmiTxSs_Config XV_HdmiTxSs_ConfigTable[] __attribute__ ((section (".drvcfg_s
 		"xlnx,v-hdmi-tx-ss-3.2", /* compatible */
 		0x44a00000, /* reg */
 		0x44a1ffff, /* xlnx,highaddr */
-		0x4, /* xlnx,input-pixels-per-clock */
+		0x2, /* xlnx,input-pixels-per-clock */
 		0x8, /* xlnx,max-bits-per-component */
 		0x1, /* xlnx,include-low-reso-vid */
 		0x1, /* xlnx,include-yuv420-sup */

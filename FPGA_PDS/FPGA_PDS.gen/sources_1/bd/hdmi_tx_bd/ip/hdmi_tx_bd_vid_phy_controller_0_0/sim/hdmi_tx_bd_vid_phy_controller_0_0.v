@@ -59,10 +59,19 @@ module hdmi_tx_bd_vid_phy_controller_0_0 (
   tx_video_clk,
   tx_tmds_clk_p,
   tx_tmds_clk_n,
+  rx_tmds_clk,
+  rx_video_clk,
+  rx_tmds_clk_p,
+  rx_tmds_clk_n,
   mgtrefclk0_pad_p_in,
   mgtrefclk0_pad_n_in,
+  mgtrefclk1_pad_p_in,
+  mgtrefclk1_pad_n_in,
+  phy_rxn_in,
+  phy_rxp_in,
   phy_txn_out,
   phy_txp_out,
+  rxoutclk,
   txoutclk,
   vid_phy_tx_axi4s_aclk,
   vid_phy_tx_axi4s_aresetn,
@@ -78,12 +87,29 @@ module hdmi_tx_bd_vid_phy_controller_0_0 (
   vid_phy_tx_axi4s_ch2_tuser,
   vid_phy_tx_axi4s_ch2_tvalid,
   vid_phy_tx_axi4s_ch2_tready,
+  vid_phy_rx_axi4s_ch0_tdata,
+  vid_phy_rx_axi4s_ch0_tuser,
+  vid_phy_rx_axi4s_ch0_tvalid,
+  vid_phy_rx_axi4s_ch0_tready,
+  vid_phy_rx_axi4s_aclk,
+  vid_phy_rx_axi4s_aresetn,
+  vid_phy_rx_axi4s_ch1_tdata,
+  vid_phy_rx_axi4s_ch1_tuser,
+  vid_phy_rx_axi4s_ch1_tvalid,
+  vid_phy_rx_axi4s_ch1_tready,
+  vid_phy_rx_axi4s_ch2_tdata,
+  vid_phy_rx_axi4s_ch2_tuser,
+  vid_phy_rx_axi4s_ch2_tvalid,
+  vid_phy_rx_axi4s_ch2_tready,
   irq,
   vid_phy_sb_aclk,
   vid_phy_sb_aresetn,
   vid_phy_status_sb_tx_tdata,
   vid_phy_status_sb_tx_tvalid,
   vid_phy_status_sb_tx_tready,
+  vid_phy_status_sb_rx_tdata,
+  vid_phy_status_sb_rx_tvalid,
+  vid_phy_status_sb_rx_tready,
   vid_phy_axi4lite_awaddr,
   vid_phy_axi4lite_awprot,
   vid_phy_axi4lite_awvalid,
@@ -125,6 +151,22 @@ output wire tx_tmds_clk_p;
 (* X_INTERFACE_MODE = "master" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME tx_tmds_clk_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_tmds_clk_n, INSERT_VIP 0" *)
 output wire tx_tmds_clk_n;
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 rx_tmds_clk CLK" *)
+(* X_INTERFACE_MODE = "master" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rx_tmds_clk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rx_tmds_clk, INSERT_VIP 0" *)
+output wire rx_tmds_clk;
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 rx_video_clk CLK" *)
+(* X_INTERFACE_MODE = "master" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rx_video_clk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rx_video_clk, INSERT_VIP 0" *)
+output wire rx_video_clk;
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 rx_tmds_clk_p CLK" *)
+(* X_INTERFACE_MODE = "master" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rx_tmds_clk_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rx_tmds_clk_p, INSERT_VIP 0" *)
+output wire rx_tmds_clk_p;
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 rx_tmds_clk_n CLK" *)
+(* X_INTERFACE_MODE = "master" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rx_tmds_clk_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rx_tmds_clk_n, INSERT_VIP 0" *)
+output wire rx_tmds_clk_n;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 mgtrefclk0_pad_p_in CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mgtrefclk0_pad_p_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
@@ -133,15 +175,29 @@ input wire mgtrefclk0_pad_p_in;
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mgtrefclk0_pad_n_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
 input wire mgtrefclk0_pad_n_in;
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 mgtrefclk1_pad_p_in CLK" *)
+(* X_INTERFACE_MODE = "slave" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mgtrefclk1_pad_p_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
+input wire mgtrefclk1_pad_p_in;
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 mgtrefclk1_pad_n_in CLK" *)
+(* X_INTERFACE_MODE = "slave" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mgtrefclk1_pad_n_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
+input wire mgtrefclk1_pad_n_in;
+input wire [2 : 0] phy_rxn_in;
+input wire [2 : 0] phy_rxp_in;
 output wire [2 : 0] phy_txn_out;
 output wire [2 : 0] phy_txp_out;
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 rxoutclk CLK" *)
+(* X_INTERFACE_MODE = "slave" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rxoutclk, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rxoutclk, INSERT_VIP 0" *)
+output wire rxoutclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 txoutclk CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME txoutclk, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, INSERT_VIP 0" *)
 output wire txoutclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 vid_phy_tx_axi4s_CLK CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_tx_axi4s_CLK, ASSOCIATED_BUSIF vid_phy_tx_axi4s_ch0:vid_phy_tx_axi4s_ch1:vid_phy_tx_axi4s_ch2:vid_phy_tx_axi4s_ch3, ASSOCIATED_RESET vid_phy_tx_axi4s_aresetn, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_tx_axi4s_CLK, ASSOCIATED_BUSIF vid_phy_tx_axi4s_ch0:vid_phy_tx_axi4s_ch1:vid_phy_tx_axi4s_ch2:vid_phy_tx_axi4s_ch3, ASSOCIATED_RESET vid_phy_tx_axi4s_aresetn, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, INSERT_VIP 0" *)
 input wire vid_phy_tx_axi4s_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 vid_phy_tx_axi4s_RST RST" *)
 (* X_INTERFACE_MODE = "slave" *)
@@ -149,7 +205,7 @@ input wire vid_phy_tx_axi4s_aclk;
 input wire vid_phy_tx_axi4s_aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch0 TDATA" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_tx_axi4s_ch0, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_tx_axi4s_ch0, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
 input wire [39 : 0] vid_phy_tx_axi4s_ch0_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch0 TUSER" *)
 input wire [0 : 0] vid_phy_tx_axi4s_ch0_tuser;
@@ -159,7 +215,7 @@ input wire vid_phy_tx_axi4s_ch0_tvalid;
 output wire vid_phy_tx_axi4s_ch0_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch1 TDATA" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_tx_axi4s_ch1, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_tx_axi4s_ch1, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
 input wire [39 : 0] vid_phy_tx_axi4s_ch1_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch1 TUSER" *)
 input wire [0 : 0] vid_phy_tx_axi4s_ch1_tuser;
@@ -169,7 +225,7 @@ input wire vid_phy_tx_axi4s_ch1_tvalid;
 output wire vid_phy_tx_axi4s_ch1_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch2 TDATA" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_tx_axi4s_ch2, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_tx_axi4s_ch2, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
 input wire [39 : 0] vid_phy_tx_axi4s_ch2_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch2 TUSER" *)
 input wire [0 : 0] vid_phy_tx_axi4s_ch2_tuser;
@@ -177,6 +233,44 @@ input wire [0 : 0] vid_phy_tx_axi4s_ch2_tuser;
 input wire vid_phy_tx_axi4s_ch2_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_tx_axi4s_ch2 TREADY" *)
 output wire vid_phy_tx_axi4s_ch2_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch0 TDATA" *)
+(* X_INTERFACE_MODE = "master" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_rx_axi4s_ch0, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rxoutclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
+output wire [39 : 0] vid_phy_rx_axi4s_ch0_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch0 TUSER" *)
+output wire [0 : 0] vid_phy_rx_axi4s_ch0_tuser;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch0 TVALID" *)
+output wire vid_phy_rx_axi4s_ch0_tvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch0 TREADY" *)
+input wire vid_phy_rx_axi4s_ch0_tready;
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 vid_phy_rx_axi4s_CLK CLK" *)
+(* X_INTERFACE_MODE = "slave" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_rx_axi4s_CLK, ASSOCIATED_BUSIF vid_phy_rx_axi4s_ch0:vid_phy_rx_axi4s_ch1:vid_phy_rx_axi4s_ch2:vid_phy_rx_axi4s_ch3, ASSOCIATED_RESET vid_phy_rx_axi4s_aresetn, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rxoutclk, INSERT_VIP 0" *)
+input wire vid_phy_rx_axi4s_aclk;
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 vid_phy_rx_axi4s_RST RST" *)
+(* X_INTERFACE_MODE = "slave" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_rx_axi4s_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+input wire vid_phy_rx_axi4s_aresetn;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch1 TDATA" *)
+(* X_INTERFACE_MODE = "master" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_rx_axi4s_ch1, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rxoutclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
+output wire [39 : 0] vid_phy_rx_axi4s_ch1_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch1 TUSER" *)
+output wire [0 : 0] vid_phy_rx_axi4s_ch1_tuser;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch1 TVALID" *)
+output wire vid_phy_rx_axi4s_ch1_tvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch1 TREADY" *)
+input wire vid_phy_rx_axi4s_ch1_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch2 TDATA" *)
+(* X_INTERFACE_MODE = "master" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_rx_axi4s_ch2, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_rxoutclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
+output wire [39 : 0] vid_phy_rx_axi4s_ch2_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch2 TUSER" *)
+output wire [0 : 0] vid_phy_rx_axi4s_ch2_tuser;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch2 TVALID" *)
+output wire vid_phy_rx_axi4s_ch2_tvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_rx_axi4s_ch2 TREADY" *)
+input wire vid_phy_rx_axi4s_ch2_tready;
 (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 IRQ INTERRUPT" *)
 (* X_INTERFACE_MODE = "master" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME IRQ, SENSITIVITY LEVEL_HIGH, PortWidth 1" *)
@@ -197,6 +291,14 @@ output wire [7 : 0] vid_phy_status_sb_tx_tdata;
 output wire vid_phy_status_sb_tx_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_status_sb_tx TREADY" *)
 input wire vid_phy_status_sb_tx_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_status_sb_rx TDATA" *)
+(* X_INTERFACE_MODE = "master" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_status_sb_rx, WIZ.DATA_WIDTH 32, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
+output wire [7 : 0] vid_phy_status_sb_rx_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_status_sb_rx TVALID" *)
+output wire vid_phy_status_sb_rx_tvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 vid_phy_status_sb_rx TREADY" *)
+input wire vid_phy_status_sb_rx_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 vid_phy_axi4lite AWADDR" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_phy_axi4lite, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 10, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, NUM\
@@ -262,7 +364,7 @@ input wire drpclk;
     .c_sub_core_name("hdmi_tx_bd_vid_phy_controller_0_0_gtwrapper"),
     .C_Tx_Protocol(1),  // Tx Protocol
     .C_Tx_Dp_Protocol(0),  // Tx DP Protocol
-    .C_Rx_Protocol(3),  // Rx Protocol
+    .C_Rx_Protocol(1),  // Rx Protocol
     .C_Rx_Dp_Protocol(0),  // Rx DP Protocol
     .C_Tx_No_Of_Channels(3),  // No Of Tx Channels
     .C_Rx_No_Of_Channels(3),  // No Of Rx Channels
@@ -271,26 +373,26 @@ input wire drpclk;
     .C_RX_PLL_SELECTION(0),  // Rx PLL Selection
     .C_RX_REFCLK_SEL(1),  // Rx Ref Clk Selection
     .C_NIDRU_REFCLK_SEL(0),  // Ni DRU Ref Clk Selection
-    .C_vid_phy_tx_axi4s_ch_TDATA_WIDTH(40),  // Tx Data Width
-    .C_vid_phy_tx_axi4s_ch_INT_TDATA_WIDTH(40),  // Tx Int Data Width
+    .C_vid_phy_tx_axi4s_ch_TDATA_WIDTH(20),  // Tx Data Width
+    .C_vid_phy_tx_axi4s_ch_INT_TDATA_WIDTH(20),  // Tx Int Data Width
     .C_vid_phy_tx_axi4s_ch_TUSER_WIDTH(1),  // Tx Data Width
-    .C_vid_phy_rx_axi4s_ch_TDATA_WIDTH(40),  // Rx Data Width
-    .C_vid_phy_rx_axi4s_ch_INT_TDATA_WIDTH(40),  // Rx Int Data Width
+    .C_vid_phy_rx_axi4s_ch_TDATA_WIDTH(20),  // Rx Data Width
+    .C_vid_phy_rx_axi4s_ch_INT_TDATA_WIDTH(20),  // Rx Int Data Width
     .C_vid_phy_rx_axi4s_ch_TUSER_WIDTH(1),  // Rx Data Width
     .C_vid_phy_control_sb_tx_TDATA_WIDTH(1),  // Tx Control Data Width
     .C_vid_phy_status_sb_tx_TDATA_WIDTH(8),  // Tx Status Data Width
     .C_vid_phy_control_sb_rx_TDATA_WIDTH(1),  // Rx Control Data Width
-    .C_vid_phy_status_sb_rx_TDATA_WIDTH(1),  // Rx Status Data Width
+    .C_vid_phy_status_sb_rx_TDATA_WIDTH(8),  // Rx Status Data Width
     .C_vid_phy_axi4lite_DATA_WIDTH(32),  // Width of S_AXI data bus
     .C_vid_phy_axi4lite_ADDR_WIDTH(10),  // Width of S_AXI address bus
-    .C_NIDRU(0),  // Include NIDRU
+    .C_NIDRU(1),  // Include NIDRU
     .Tx_Buffer_Bypass(1),  // Bypass TX Buffer
     .C_Txrefclk_Rdy_Invert(0),  // Tx RefClk Rdy Invert
-    .C_INPUT_PIXELS_PER_CLOCK(4),  // Number of pixels per clock
+    .C_INPUT_PIXELS_PER_CLOCK(2),  // Number of pixels per clock
     .C_Hdmi_Fast_Switch(1),  // HDMI Fast Switching
     .C_Err_Irq_En(0),  // Enable Error irq port
     .C_Use_GT_CH4_HDMI(0),  // Enable GT Channel for TMDS Clock
-    .C_INT_WIDTH(0),  // INT Width
+    .C_INT_WIDTH(20),  // INT Width
     .C_TX_TDATA_WIDTH(40),  // TX TDATA Width
     .C_RX_TDATA_WIDTH(40)  // RX TDATA Width
   ) inst (
@@ -299,14 +401,14 @@ input wire drpclk;
     .tx_video_clk(tx_video_clk),
     .tx_tmds_clk_p(tx_tmds_clk_p),
     .tx_tmds_clk_n(tx_tmds_clk_n),
-    .rx_tmds_clk(),
-    .rx_video_clk(),
-    .rx_tmds_clk_p(),
-    .rx_tmds_clk_n(),
+    .rx_tmds_clk(rx_tmds_clk),
+    .rx_video_clk(rx_video_clk),
+    .rx_tmds_clk_p(rx_tmds_clk_p),
+    .rx_tmds_clk_n(rx_tmds_clk_n),
     .mgtrefclk0_pad_p_in(mgtrefclk0_pad_p_in),
     .mgtrefclk0_pad_n_in(mgtrefclk0_pad_n_in),
-    .mgtrefclk1_pad_p_in(1'B0),
-    .mgtrefclk1_pad_n_in(1'B0),
+    .mgtrefclk1_pad_p_in(mgtrefclk1_pad_p_in),
+    .mgtrefclk1_pad_n_in(mgtrefclk1_pad_n_in),
     .mgtrefclk0_in(1'B0),
     .mgtrefclk1_in(1'B0),
     .mgtrefclk0_odiv2_in(1'B0),
@@ -333,11 +435,11 @@ input wire drpclk;
     .gtwestrefclk1_in(1'B0),
     .txrefclk_ceb(),
     .rxrefclk_ceb(),
-    .phy_rxn_in(3'B1),
-    .phy_rxp_in(3'B0),
+    .phy_rxn_in(phy_rxn_in),
+    .phy_rxp_in(phy_rxp_in),
     .phy_txn_out(phy_txn_out),
     .phy_txp_out(phy_txp_out),
-    .rxoutclk(),
+    .rxoutclk(rxoutclk),
     .txoutclk(txoutclk),
     .rx_lnk_clk(),
     .rx_dec_clk(),
@@ -361,20 +463,20 @@ input wire drpclk;
     .vid_phy_tx_axi4s_ch3_tuser(1'B0),
     .vid_phy_tx_axi4s_ch3_tvalid(1'B0),
     .vid_phy_tx_axi4s_ch3_tready(),
-    .vid_phy_rx_axi4s_ch0_tdata(),
-    .vid_phy_rx_axi4s_ch0_tuser(),
-    .vid_phy_rx_axi4s_ch0_tvalid(),
-    .vid_phy_rx_axi4s_ch0_tready(1'B0),
-    .vid_phy_rx_axi4s_aclk(1'B0),
-    .vid_phy_rx_axi4s_aresetn(1'B1),
-    .vid_phy_rx_axi4s_ch1_tdata(),
-    .vid_phy_rx_axi4s_ch1_tuser(),
-    .vid_phy_rx_axi4s_ch1_tvalid(),
-    .vid_phy_rx_axi4s_ch1_tready(1'B0),
-    .vid_phy_rx_axi4s_ch2_tdata(),
-    .vid_phy_rx_axi4s_ch2_tuser(),
-    .vid_phy_rx_axi4s_ch2_tvalid(),
-    .vid_phy_rx_axi4s_ch2_tready(1'B0),
+    .vid_phy_rx_axi4s_ch0_tdata(vid_phy_rx_axi4s_ch0_tdata),
+    .vid_phy_rx_axi4s_ch0_tuser(vid_phy_rx_axi4s_ch0_tuser),
+    .vid_phy_rx_axi4s_ch0_tvalid(vid_phy_rx_axi4s_ch0_tvalid),
+    .vid_phy_rx_axi4s_ch0_tready(vid_phy_rx_axi4s_ch0_tready),
+    .vid_phy_rx_axi4s_aclk(vid_phy_rx_axi4s_aclk),
+    .vid_phy_rx_axi4s_aresetn(vid_phy_rx_axi4s_aresetn),
+    .vid_phy_rx_axi4s_ch1_tdata(vid_phy_rx_axi4s_ch1_tdata),
+    .vid_phy_rx_axi4s_ch1_tuser(vid_phy_rx_axi4s_ch1_tuser),
+    .vid_phy_rx_axi4s_ch1_tvalid(vid_phy_rx_axi4s_ch1_tvalid),
+    .vid_phy_rx_axi4s_ch1_tready(vid_phy_rx_axi4s_ch1_tready),
+    .vid_phy_rx_axi4s_ch2_tdata(vid_phy_rx_axi4s_ch2_tdata),
+    .vid_phy_rx_axi4s_ch2_tuser(vid_phy_rx_axi4s_ch2_tuser),
+    .vid_phy_rx_axi4s_ch2_tvalid(vid_phy_rx_axi4s_ch2_tvalid),
+    .vid_phy_rx_axi4s_ch2_tready(vid_phy_rx_axi4s_ch2_tready),
     .vid_phy_rx_axi4s_ch3_tdata(),
     .vid_phy_rx_axi4s_ch3_tuser(),
     .vid_phy_rx_axi4s_ch3_tvalid(),
@@ -391,9 +493,9 @@ input wire drpclk;
     .vid_phy_control_sb_rx_tdata(1'B0),
     .vid_phy_control_sb_rx_tvalid(1'B0),
     .vid_phy_control_sb_rx_tready(),
-    .vid_phy_status_sb_rx_tdata(),
-    .vid_phy_status_sb_rx_tvalid(),
-    .vid_phy_status_sb_rx_tready(1'B0),
+    .vid_phy_status_sb_rx_tdata(vid_phy_status_sb_rx_tdata),
+    .vid_phy_status_sb_rx_tvalid(vid_phy_status_sb_rx_tvalid),
+    .vid_phy_status_sb_rx_tready(vid_phy_status_sb_rx_tready),
     .vid_phy_axi4lite_awaddr(vid_phy_axi4lite_awaddr),
     .vid_phy_axi4lite_awprot(vid_phy_axi4lite_awprot),
     .vid_phy_axi4lite_awvalid(vid_phy_axi4lite_awvalid),

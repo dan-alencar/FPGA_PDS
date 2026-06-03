@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "v_hdmi_tx_v3_0_6,Vivado 2025.2" *)
 (* CHECK_LICENSE_TYPE = "bd_2339_v_hdmi_tx_0,v_hdmi_tx_v3_0_6,{}" *)
-(* CORE_GENERATION_INFO = "bd_2339_v_hdmi_tx_0,v_hdmi_tx_v3_0_6,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=v_hdmi_tx,x_ipVersion=3.0,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=9,C_BITS_PER_COMPONENT=8,C_PIXELS_PER_CLOCK=4,C_GT_LANES=4,C_HDCP_IF_ENABLE=0,C_VIDEO_MASK_ENABLE=1,C_DDC2_EN=0,C_VECTOR_DE_ENABLE=0,C_CH_WIDTH=8,C_SIM_SPEEDUP=FALSE,C_SIM_DEVICE_EN=0,C_SIM_DEVICE=VERSAL_AI_CORE_ES1,C_TST_DBG=0,x_ipLicense=v_hdmi@2017.10(hardwa\
+(* CORE_GENERATION_INFO = "bd_2339_v_hdmi_tx_0,v_hdmi_tx_v3_0_6,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=v_hdmi_tx,x_ipVersion=3.0,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=9,C_BITS_PER_COMPONENT=8,C_PIXELS_PER_CLOCK=2,C_GT_LANES=2,C_HDCP_IF_ENABLE=0,C_VIDEO_MASK_ENABLE=1,C_DDC2_EN=0,C_VECTOR_DE_ENABLE=0,C_CH_WIDTH=8,C_SIM_SPEEDUP=FALSE,C_SIM_DEVICE_EN=0,C_SIM_DEVICE=VERSAL_AI_CORE_ES1,C_TST_DBG=0,x_ipLicense=v_hdmi@2017.10(hardwa\
 re_evaluation)}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bd_2339_v_hdmi_tx_0 (
@@ -151,7 +151,7 @@ input wire s_axi_aclk;
 input wire s_axi_aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S_AXIS_VIDEO_ACLK CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_VIDEO_ACLK, ASSOCIATED_RESET s_axis_video_aresetn_in, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_VIDEO_ACLK, ASSOCIATED_RESET s_axis_video_aresetn_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *)
 input wire s_axis_video_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S_AXIS_VIDEO_ARESETN_IN RST" *)
 (* X_INTERFACE_MODE = "slave" *)
@@ -212,13 +212,13 @@ input wire video_vs;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 VIDEO_IN HSYNC" *)
 input wire video_hs;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 VIDEO_IN DATA" *)
-input wire [95 : 0] video_data;
+input wire [47 : 0] video_data;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 VIDEO_IN ACTIVE_VIDEO" *)
 input wire video_de;
-input wire [3 : 0] video_vs_arb;
-input wire [3 : 0] video_hs_arb;
-input wire [3 : 0] video_de_arb;
-input wire [95 : 0] video_data_arb;
+input wire [1 : 0] video_vs_arb;
+input wire [1 : 0] video_hs_arb;
+input wire [1 : 0] video_de_arb;
+input wire [47 : 0] video_data_arb;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 AUD_AXI_RST RST" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AUD_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -342,8 +342,8 @@ output wire bridge_pixel_repeat;
     .C_S_AXI_DATA_WIDTH(32),  // Width of S_AXI data bus
     .C_S_AXI_ADDR_WIDTH(9),  // Width of S_AXI address bus
     .C_BITS_PER_COMPONENT(8),
-    .C_PIXELS_PER_CLOCK(4),
-    .C_GT_LANES(4),
+    .C_PIXELS_PER_CLOCK(2),
+    .C_GT_LANES(2),
     .C_HDCP_IF_ENABLE(0),
     .C_VIDEO_MASK_ENABLE(1),
     .C_DDC2_EN(0),

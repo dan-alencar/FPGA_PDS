@@ -78,7 +78,19 @@ COMPONENT hdmi_tx_bd
     HDMI_TX_CLK_P : OUT STD_LOGIC;
     HDMI_TX_CLK_N : OUT STD_LOGIC;
     HDMI_8T49N241_RST_N : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    HDMI_8T49N241_LOL : IN STD_LOGIC
+    HDMI_8T49N241_LOL : IN STD_LOGIC;
+    HDMI_RCLKOUT_P : IN STD_LOGIC;
+    HDMI_RCLKOUT_N : IN STD_LOGIC;
+    hdmi_rx_p : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    hdmi_rx_n : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    RX_DDC_OUT_scl_i : IN STD_LOGIC;
+    RX_DDC_OUT_scl_o : OUT STD_LOGIC;
+    RX_DDC_OUT_scl_t : OUT STD_LOGIC;
+    RX_DDC_OUT_sda_i : IN STD_LOGIC;
+    RX_DDC_OUT_sda_o : OUT STD_LOGIC;
+    RX_DDC_OUT_sda_t : OUT STD_LOGIC;
+    HDMI_RX_HPD : OUT STD_LOGIC;
+    HDMI_RX_PWR_DET : IN STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -114,7 +126,19 @@ your_instance_name : hdmi_tx_bd
     HDMI_TX_CLK_P => HDMI_TX_CLK_P,
     HDMI_TX_CLK_N => HDMI_TX_CLK_N,
     HDMI_8T49N241_RST_N => HDMI_8T49N241_RST_N,
-    HDMI_8T49N241_LOL => HDMI_8T49N241_LOL
+    HDMI_8T49N241_LOL => HDMI_8T49N241_LOL,
+    HDMI_RCLKOUT_P => HDMI_RCLKOUT_P,
+    HDMI_RCLKOUT_N => HDMI_RCLKOUT_N,
+    hdmi_rx_p => hdmi_rx_p,
+    hdmi_rx_n => hdmi_rx_n,
+    RX_DDC_OUT_scl_i => RX_DDC_OUT_scl_i,
+    RX_DDC_OUT_scl_o => RX_DDC_OUT_scl_o,
+    RX_DDC_OUT_scl_t => RX_DDC_OUT_scl_t,
+    RX_DDC_OUT_sda_i => RX_DDC_OUT_sda_i,
+    RX_DDC_OUT_sda_o => RX_DDC_OUT_sda_o,
+    RX_DDC_OUT_sda_t => RX_DDC_OUT_sda_t,
+    HDMI_RX_HPD => HDMI_RX_HPD,
+    HDMI_RX_PWR_DET => HDMI_RX_PWR_DET
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

@@ -48,20 +48,24 @@ set_false_path -to [get_pins -of [get_cells -hierarchical -filter {name=~*arstst
 
 set_false_path -to [get_cells -hierarchical -filter {NAME =~ *gt_usrclk_source_inst/*gtwiz_userclk_tx_active_*_reg}]
 set_false_path -to [get_pins -of [get_cells -hierarchical -filter {NAME =~ *gt_usrclk_source_inst/*GT0_TX_MMCM_CLKOUT1_ODDR_INST}] -filter {REF_PIN_NAME=~D*}]
+set_false_path -to [get_cells -hierarchical -filter {NAME =~ *gt_usrclk_source_inst/*gtwiz_userclk_rx_active_*_reg}]
+set_false_path -to [get_pins -of [get_cells -hierarchical -filter {NAME =~ *gt_usrclk_source_inst/*GT0_RX_MMCM_CLKOUT1_ODDR_INST}] -filter {REF_PIN_NAME=~D*}]
 
 #set_false_path -from [get_cells -hierarchical -filter {NAME =~*DRP_Config_Reg_reg[*]}] -to [get_cells -hierarchical -filter {NAME =~*DRPDI_reg[*]}]
 #set_false_path -from [get_cells -hierarchical -filter {NAME =~*DRP_Config_Reg_reg[*]}] -to [get_cells -hierarchical -filter {NAME =~*DRPADDR_reg[*]}]
 #set_false_path -from [get_cells -hierarchical -filter {NAME =~*DRP_Config_Reg_reg[*]}] -to [get_cells -hierarchical -filter {NAME =~*DRPEN_reg}]
 #set_false_path -from [get_cells -hierarchical -filter {NAME =~*DRP_Config_Reg_reg[*]}] -to [get_cells -hierarchical -filter {NAME =~*DRPWE_reg}]
 
-# TX Only 
-# Set false_path to invalid CDC between TXOUTCLK and RXCLKOUT
-# CDC path is due to the GT Wizard requirement of having active clocks on both TXUSRCLK2 & RXUSRCLK2 ports
-
 
 set_false_path -from [get_cells -hierarchical -filter {name=~*/clock_detector_inst/clk_tx_freq_rst_reg && IS_SEQUENTIAL}]
 set_false_path -from [get_cells -hierarchical -filter {name=~*/clock_detector_inst/clk_rx_freq_rst_reg && IS_SEQUENTIAL}]
 
+#NI-DRU
+#Constraint DRU at 297/2 MHz when transceiver width is 20
+set_multicycle_path -setup 2 -from [get_cells -hierarchical -filter {NAME=~*/dru_b0gt?_inst* && IS_SEQUENTIAL}] -to [get_cells -hierarchical -filter {NAME=~*/dru_b0gt?_inst* && IS_SEQUENTIAL}]
+set_multicycle_path -hold 1 -from [get_cells -hierarchical -filter {NAME=~*/dru_b0gt?_inst* && IS_SEQUENTIAL}] -to [get_cells -hierarchical -filter {NAME=~*/dru_b0gt?_inst* && IS_SEQUENTIAL}]
+set_multicycle_path -setup 2 -from [get_cells -hierarchical -filter {NAME=~*/*DRU_CTRL_in_sync_inst/* && IS_SEQUENTIAL}] -to [get_cells -hierarchical -filter {NAME=~*/dru_b0gt?_inst* && IS_SEQUENTIAL}]
+set_multicycle_path -hold 1 -from [get_cells -hierarchical -filter {NAME=~*/*DRU_CTRL_in_sync_inst/* && IS_SEQUENTIAL}] -to [get_cells -hierarchical -filter {NAME=~*/dru_b0gt?_inst* && IS_SEQUENTIAL}]
 
 #GTHE4_COMMOM DRP Holdtime correction
 set_min_delay 0.300 \
@@ -87,4 +91,8 @@ set_min_delay 0.300 \
 
             create_waiver -type CDC -id CDC-13 -internal -scope -desc "waiver for cdc" -from [get_pins -of [get_cells -hier -filter {name =~ *vid_phy_controller*vid_phy_axi4lite_inst/slv_reg_0x138_reg[0]}] -filter {REF_PIN_NAME == C}]  -to [get_pins -of  [get_cells -hier -filter  {name =~ *gt_usrclk_source_inst/tx_mmcm.GT0_TX_MMCM_CLKOUT1_ODDR_INST}] -filter {REF_PIN_NAME == D[1]}]  -user "vid_phy_controller"
 
+
+          
+
+          create_waiver -type CDC -id CDC-13 -internal -scope -desc "waiver for cdc" -from [get_pins -of [get_cells -hier -filter {name=~ *vid_phy_controller*vid_phy_axi4lite_inst/slv_reg_0x158_reg[0]}] -filter {REF_PIN_NAME==C}]  -to [get_pins -of [get_cells -hier -filter {name=~ *gt_usrclk_source_inst/rx_mmcm.GT0_RX_MMCM_CLKOUT1_ODDR_INST}] -filter {REF_PIN_NAME==D[1]}]  -user "vid_phy_controller"
 

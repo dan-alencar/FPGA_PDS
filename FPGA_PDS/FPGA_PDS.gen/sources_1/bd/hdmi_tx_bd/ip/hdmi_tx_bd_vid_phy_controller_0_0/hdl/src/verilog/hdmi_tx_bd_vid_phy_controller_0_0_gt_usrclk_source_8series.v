@@ -481,7 +481,7 @@ module hdmi_tx_bd_vid_phy_controller_0_0_gt_usrclk_source_8series #
                .OUT0_DIVIDE                    (8),
                .OUT1_DIVIDE                    (4),
  
-               .OUT2_DIVIDE                    (8),
+               .OUT2_DIVIDE                    (4),
                .OUT3_DIVIDE                    (12),
                .INST_DIRECTION                 (0),
  
@@ -643,7 +643,7 @@ module hdmi_tx_bd_vid_phy_controller_0_0_gt_usrclk_source_8series #
                .OUT0_DIVIDE                    (8),
                .OUT1_DIVIDE                    (4),
  
-               .OUT2_DIVIDE                    (8),
+               .OUT2_DIVIDE                    (4),
 	
                .OUT3_DIVIDE                    (12),
                .INST_DIRECTION                 (1),

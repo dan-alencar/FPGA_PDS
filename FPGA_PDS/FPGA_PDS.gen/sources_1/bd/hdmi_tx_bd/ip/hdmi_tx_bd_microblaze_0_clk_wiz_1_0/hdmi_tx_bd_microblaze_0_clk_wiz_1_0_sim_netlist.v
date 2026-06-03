@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-// Date        : Fri May 29 17:13:29 2026
+// Date        : Tue Jun  2 22:27:16 2026
 // Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top hdmi_tx_bd_microblaze_0_clk_wiz_1_0 -prefix
-//               hdmi_tx_bd_microblaze_0_clk_wiz_1_0_ hdmi_tx_bd_microblaze_0_clk_wiz_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_sim_netlist.v
 // Design      : hdmi_tx_bd_microblaze_0_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,11 +16,13 @@
 (* NotValidForBitStream *)
 module hdmi_tx_bd_microblaze_0_clk_wiz_1_0
    (clk_out1,
+    clk_out2,
     reset,
     locked,
     clk_in1_p,
     clk_in1_n);
   output clk_out1;
+  output clk_out2;
   input reset;
   output locked;
   input clk_in1_p;
@@ -29,24 +31,28 @@ module hdmi_tx_bd_microblaze_0_clk_wiz_1_0
   (* IBUF_LOW_PWR *) wire clk_in1_n;
   (* IBUF_LOW_PWR *) wire clk_in1_p;
   wire clk_out1;
+  wire clk_out2;
   wire locked;
   wire reset;
 
-  hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz inst
+  hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz inst
        (.clk_in1_n(clk_in1_n),
         .clk_in1_p(clk_in1_p),
         .clk_out1(clk_out1),
+        .clk_out2(clk_out2),
         .locked(locked),
         .reset(reset));
 endmodule
 
-module hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz
+module hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz
    (clk_out1,
+    clk_out2,
     reset,
     locked,
     clk_in1_p,
     clk_in1_n);
   output clk_out1;
+  output clk_out2;
   input reset;
   output locked;
   input clk_in1_p;
@@ -58,6 +64,8 @@ module hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_c
   wire clk_in1_p;
   wire clk_out1;
   wire clk_out1_hdmi_tx_bd_microblaze_0_clk_wiz_1_0;
+  wire clk_out2;
+  wire clk_out2_hdmi_tx_bd_microblaze_0_clk_wiz_1_0;
   wire locked;
   wire reset;
   wire NLW_mmcme4_adv_inst_CDDCDONE_UNCONNECTED;
@@ -67,7 +75,6 @@ module hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_c
   wire NLW_mmcme4_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT0B_UNCONNECTED;
-  wire NLW_mmcme4_adv_inst_CLKOUT1_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT1B_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT2B_UNCONNECTED;
@@ -112,6 +119,16 @@ module hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_c
         .I(clk_out1_hdmi_tx_bd_microblaze_0_clk_wiz_1_0),
         .O(clk_out1));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  (* XILINX_LEGACY_PRIM = "BUFG" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
+  BUFGCE #(
+    .CE_TYPE("ASYNC"),
+    .SIM_DEVICE("ULTRASCALE_PLUS")) 
+    clkout2_buf
+       (.CE(1'b1),
+        .I(clk_out2_hdmi_tx_bd_microblaze_0_clk_wiz_1_0),
+        .O(clk_out2));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* OPT_MODIFIED = "MLO" *) 
   MMCME4_ADV #(
     .BANDWIDTH("OPTIMIZED"),
@@ -124,7 +141,7 @@ module hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_c
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(1),
+    .CLKOUT1_DIVIDE(12),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
@@ -178,7 +195,7 @@ module hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_c
         .CLKINSTOPPED(NLW_mmcme4_adv_inst_CLKINSTOPPED_UNCONNECTED),
         .CLKOUT0(clk_out1_hdmi_tx_bd_microblaze_0_clk_wiz_1_0),
         .CLKOUT0B(NLW_mmcme4_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(NLW_mmcme4_adv_inst_CLKOUT1_UNCONNECTED),
+        .CLKOUT1(clk_out2_hdmi_tx_bd_microblaze_0_clk_wiz_1_0),
         .CLKOUT1B(NLW_mmcme4_adv_inst_CLKOUT1B_UNCONNECTED),
         .CLKOUT2(NLW_mmcme4_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT2B(NLW_mmcme4_adv_inst_CLKOUT2B_UNCONNECTED),

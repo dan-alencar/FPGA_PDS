@@ -15,8 +15,8 @@
         "Component_Name": [ { "value": "bd_2339_v_hdmi_tx_0", "resolve_type": "user", "usage": "all" } ],
         "C_NUM_OF_INTR": [ { "value": "1", "resolve_type": "generated", "format": "long", "enabled": false, "usage": "all" } ],
         "C_BITS_PER_COMPONENT": [ { "value": "8", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_PIXELS_PER_CLOCK": [ { "value": "4", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_GT_LANES": [ { "value": "4", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_PIXELS_PER_CLOCK": [ { "value": "2", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_GT_LANES": [ { "value": "2", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_HDCP_IF_ENABLE": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_VIDEO_MASK_ENABLE": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_DDC2_EN": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -32,8 +32,8 @@
         "C_S_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_S_AXI_ADDR_WIDTH": [ { "value": "9", "resolve_type": "generated", "format": "long", "enabled": false, "usage": "all" } ],
         "C_BITS_PER_COMPONENT": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_PIXELS_PER_CLOCK": [ { "value": "4", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_GT_LANES": [ { "value": "4", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_PIXELS_PER_CLOCK": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_GT_LANES": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_HDCP_IF_ENABLE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_VIDEO_MASK_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_DDC2_EN": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -97,12 +97,12 @@
         "link_clk": [ { "direction": "in", "driver_value": "0" } ],
         "video_vs": [ { "direction": "in", "driver_value": "0" } ],
         "video_hs": [ { "direction": "in", "driver_value": "0" } ],
-        "video_data": [ { "direction": "in", "size_left": "95", "size_right": "0", "driver_value": "0" } ],
+        "video_data": [ { "direction": "in", "size_left": "47", "size_right": "0", "driver_value": "0" } ],
         "video_de": [ { "direction": "in", "driver_value": "0" } ],
-        "video_vs_arb": [ { "direction": "in", "size_left": "3", "size_right": "0", "driver_value": "0" } ],
-        "video_hs_arb": [ { "direction": "in", "size_left": "3", "size_right": "0", "driver_value": "0" } ],
-        "video_de_arb": [ { "direction": "in", "size_left": "3", "size_right": "0", "driver_value": "0" } ],
-        "video_data_arb": [ { "direction": "in", "size_left": "95", "size_right": "0", "driver_value": "0" } ],
+        "video_vs_arb": [ { "direction": "in", "size_left": "1", "size_right": "0", "driver_value": "0" } ],
+        "video_hs_arb": [ { "direction": "in", "size_left": "1", "size_right": "0", "driver_value": "0" } ],
+        "video_de_arb": [ { "direction": "in", "size_left": "1", "size_right": "0", "driver_value": "0" } ],
+        "video_data_arb": [ { "direction": "in", "size_left": "47", "size_right": "0", "driver_value": "0" } ],
         "s_axis_audio_aresetn": [ { "direction": "in", "driver_value": "0" } ],
         "s_axis_audio_aclk": [ { "direction": "in", "driver_value": "0" } ],
         "s_axis_audio_tready": [ { "direction": "out" } ],
@@ -253,10 +253,10 @@
           "mode": "slave",
           "parameters": {
             "ASSOCIATED_RESET": [ { "value": "s_axis_video_aresetn_in", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
-            "FREQ_HZ": [ { "value": "297000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
             "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
-            "CLK_DOMAIN": [ { "value": "hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "ASSOCIATED_BUSIF": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
@@ -627,5 +627,5 @@
       }
     }
   },
-  "checksum": "d386a8a6"
+  "checksum": "cbe8fbf8"
 }

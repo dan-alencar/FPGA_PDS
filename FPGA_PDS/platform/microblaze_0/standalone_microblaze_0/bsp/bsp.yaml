@@ -172,6 +172,14 @@ drv_info:
     driver: bram
     ip_name: lmb_bram_if_cntlr
     path: /home/dan-alencar/AMD_Xilinx/2025.2/Vitis/data/embeddedsw/XilinxProcessorIPLib/drivers/bram_v4_13
+  v_hdmi_rx_ss_0:
+    driver: v_hdmirxss
+    ip_name: v_hdmi_rx_ss
+    path: /home/dan-alencar/AMD_Xilinx/2025.2/Vitis/data/embeddedsw/XilinxProcessorIPLib/drivers/v_hdmirxss_v6_8
+  v_hdmi_rx_ss_0_v_hdmi_rx:
+    driver: v_hdmirx
+    ip_name: v_hdmi_rx
+    path: /home/dan-alencar/AMD_Xilinx/2025.2/Vitis/data/embeddedsw/XilinxProcessorIPLib/drivers/v_hdmirx_v2_9
   v_hdmi_tx_ss_0:
     driver: v_hdmitxss
     ip_name: v_hdmi_tx_ss

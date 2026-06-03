@@ -60,4 +60,13 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_
 # IP: bd/hdmi_tx_bd/ip/hdmi_tx_bd_xlconstant_0_0/hdmi_tx_bd_xlconstant_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_xlconstant_0_0 || ORIG_REF_NAME==hdmi_tx_bd_xlconstant_0_0} -quiet] -quiet
 
+# IP: bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_rx_ss_0_0/hdmi_tx_bd_v_hdmi_rx_ss_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_v_hdmi_rx_ss_0_0 || ORIG_REF_NAME==hdmi_tx_bd_v_hdmi_rx_ss_0_0} -quiet] -quiet
+
+# IP: bd/hdmi_tx_bd/ip/hdmi_tx_bd_axis_register_slice_0_0/hdmi_tx_bd_axis_register_slice_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_axis_register_slice_0_0 || ORIG_REF_NAME==hdmi_tx_bd_axis_register_slice_0_0} -quiet] -quiet
+
+# IP: bd/hdmi_tx_bd/ip/hdmi_tx_bd_rst_clk_out2_0/hdmi_tx_bd_rst_clk_out2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_bd_rst_clk_out2_0 || ORIG_REF_NAME==hdmi_tx_bd_rst_clk_out2_0} -quiet] -quiet
+
 # XDC: /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/hdmi_tx_bd_ooc.xdc

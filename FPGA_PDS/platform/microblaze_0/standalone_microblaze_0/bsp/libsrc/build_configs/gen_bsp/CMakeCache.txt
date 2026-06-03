@@ -421,6 +421,24 @@ v_hdmi_common_IS_TOP_LEVEL:STATIC=OFF
 v_hdmi_common_SOURCE_DIR:STATIC=/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/v_hdmi_common/src
 
 //Value Computed by CMake
+v_hdmirx_BINARY_DIR:STATIC=/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/v_hdmirx/src
+
+//Value Computed by CMake
+v_hdmirx_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+v_hdmirx_SOURCE_DIR:STATIC=/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/v_hdmirx/src
+
+//Value Computed by CMake
+v_hdmirxss_BINARY_DIR:STATIC=/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/v_hdmirxss/src
+
+//Value Computed by CMake
+v_hdmirxss_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+v_hdmirxss_SOURCE_DIR:STATIC=/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/v_hdmirxss/src
+
+//Value Computed by CMake
 v_hdmitx_BINARY_DIR:STATIC=/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/v_hdmitx/src
 
 //Value Computed by CMake
@@ -604,7 +622,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=22
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=24
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

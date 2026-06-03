@@ -197,7 +197,7 @@
 			xlnx,s-axi-aclk-freq-mhz = <100>;
 			xlnx,num-sw-intr = <3>;
 			xlnx,irq-connection = <0>;
-			xlnx,num-intr-inputs = <0x3>;
+			xlnx,num-intr-inputs = <0x4>;
 			xlnx,has-sie = <1>;
 			xlnx,enable-async = <0>;
 			xlnx,has-cie = <1>;
@@ -398,11 +398,61 @@
 			xlnx,lmb-awidth = <32>;
 			xlnx,name = "microblaze_0_local_memory_ilmb_bram_if_cntlr";
 		};
+		v_hdmi_rx_ss_0: v_hdmi_rx_ss@44a40000 {
+			interrupts = < 3 2 >;
+			compatible = "xlnx,v-hdmi-rx-ss-3.2" , "xlnx,v-hdmi-rx-ss-3.1";
+			xlnx,highaddr = <0x44a4ffff>;
+			xlnx,exdes-topology = <0>;
+			xlnx,edid-ram-size = <256>;
+			hdmirx-present = <1>;
+			hdcp14-present = <0>;
+			xlnx,hdmi-version = <3>;
+			hdmirx-connected = <&v_hdmi_rx_ss_0_v_hdmi_rx>;
+			interrupt-parent = <&microblaze_0_axi_intc>;
+			xlnx,ip-name = "v_hdmi_rx_ss";
+			xlnx,exdes-rx-pll-selection = <0>;
+			reg = <0x44a40000 0x10000>;
+			xlnx,addr-width = <10>;
+			xlnx,ch-width = <8>;
+			xlnx,exdes-nidru;
+			xlnx,vid-interface = <0>;
+			xlnx,max-bits-per-component = <8>;
+			xlnx,exdes-tx-pll-selection = <6>;
+			hdcp22-present = <0>;
+			xlnx,add-mark-dbg = <0>;
+			phy-names = "hdmi-phy0" , "hdmi-phy1" , "hdmi-phy2";
+			xlnx,edk-iptype = "PERIPHERAL";
+			xlnx,cd-invert;
+			xlnx,max-res = <0>;
+			phys = <&vid_phy_controller_0rxphy_lane0 0 1 1 0>, <&vid_phy_controller_0rxphy_lane1 0 1 1 0>, <&vid_phy_controller_0rxphy_lane2 0 1 1 0>;
+			xlnx,relax-dvi-constraint = <0>;
+			status = "okay";
+			xlnx,axi-lite-freq-hz = <0x5f5e100>;
+			xlnx,input-pixels-per-clock = <2>;
+			hdcptimer-present = <0>;
+			interrupt-names = "irq";
+			xlnx,include-yuv420-sup;
+			xlnx,include-low-reso-vid;
+			xlnx,name = "v_hdmi_rx_ss_0";
+			xlnx,exdes-axilite-freq = <100>;
+			hdmirx_portsv_hdmi_rx_ss_0: ports {
+				#address-cells = <1>;
+				#size-cells = <0>;
+				hdmirx_portv_hdmi_rx_ss_0: port@0 {
+					reg = <0>;
+					xlnx,video-width = <10>;
+					xlnx,video-format = <0>;
+					hdmirx_outv_hdmi_rx_ss_0: endpoint {
+						remote-endpoint = <&v_hdmi_tx_ss_0v_hdmi_rx_ss_0>;
+					};
+				};
+			};
+		};
 		v_hdmi_tx_ss_0: v_hdmi_tx_ss@44a00000 {
 			interrupts = < 0 2 >;
 			compatible = "xlnx,v-hdmi-tx-ss-3.2" , "xlnx,v-hdmi-tx-ss-3.1";
 			xlnx,highaddr = <0x44a1ffff>;
-			xlnx,exdes-topology = <1>;
+			xlnx,exdes-topology = <0>;
 			hdcp14-present = <0>;
 			xlnx,video-mask-enable = <1>;
 			xlnx,hdmi-version = <3>;
@@ -429,7 +479,7 @@
 			status = "okay";
 			xlnx,axi-lite-freq-hz = <0x5f5e100>;
 			vtc-connected = <&v_hdmi_tx_ss_0_v_tc>;
-			xlnx,input-pixels-per-clock = <4>;
+			xlnx,input-pixels-per-clock = <2>;
 			hdcptimer-present = <0>;
 			interrupt-names = "irq";
 			xlnx,include-yuv420-sup;
@@ -441,6 +491,9 @@
 				#size-cells = <0>;
 				encoder_hdmi_portv_hdmi_tx_ss_0: port@0 {
 					reg = <0>;
+					v_hdmi_tx_ss_0v_hdmi_rx_ss_0: endpoint {
+						remote-endpoint = <&hdmirx_outv_hdmi_rx_ss_0>;
+					};
 				};
 			};
 		};
@@ -488,20 +541,20 @@
 		vid_phy_controller_0: vid_phy_controller@44a30000 {
 			xlnx,tx-outclk-buffer = "none";
 			xlnx,check-valid-protocol = <0>;
-			xlnx,transceiver-width = <4>;
+			xlnx,transceiver-width = <2>;
 			xlnx,tx-refclk-fabric-buffer = "none";
 			xlnx,txrefclk-rdy-invert = <0>;
 			xlnx,tx-dp-protocol = <0>;
 			xlnx,user-loss = <20>;
 			xlnx,for-upgrade-speedgrade = <0xfffffffe>;
 			xlnx,silicon-revision = <0>;
-			xlnx,vid-phy-rx-axi4s-ch-tdata-width = <40>;
+			xlnx,vid-phy-rx-axi4s-ch-tdata-width = <20>;
 			xlnx,tx-tmds-clk-buffer = "bufg";
 			xlnx,ip-name = "vid_phy_controller";
 			xlnx,rx-clk-primitive = <0x0>;
 			reg = <0x44a30000 0x10000>;
 			xlnx,drpclk-freq = <0x5f5e100>;
-			xlnx,vid-phy-status-sb-rx-tdata-width = <1>;
+			xlnx,vid-phy-status-sb-rx-tdata-width = <8>;
 			xlnx,hdio-rx = <0>;
 			xlnx,supportlevel = <1>;
 			xlnx,check-pll-selection = <0>;
@@ -521,7 +574,7 @@
 			xlnx,transceiver = "GTHE4";
 			xlnx,nidru-refclk-sel = <0>;
 			xlnx,rx-gt-line-rate = <0x5aa320>;
-			xlnx,vid-phy-tx-axi4s-ch-int-tdata-width = <40>;
+			xlnx,vid-phy-tx-axi4s-ch-int-tdata-width = <20>;
 			xlnx,dru-refclk-fabric-buffer = "none";
 			xlnx,err-irq-en = <0>;
 			xlnx,vid-phy-rx-axi4s-ch-tuser-width = <1>;
@@ -529,7 +582,7 @@
 			xlnx,vid-phy-status-sb-tx-tdata-width = <8>;
 			xlnx,hdio-tx = <0>;
 			status = "okay";
-			xlnx,input-pixels-per-clock = <4>;
+			xlnx,input-pixels-per-clock = <2>;
 			xlnx,axi4lite-enable;
 			xlnx,axi-aclk-freq-mhz = <0x5f5e100>;
 			xlnx,name = "vid_phy_controller_0";
@@ -537,25 +590,25 @@
 			interrupts = < 2 2 >;
 			xlnx,rx-tdata-width = <40>;
 			xlnx,tx-pll-selection = <6>;
-			xlnx,vid-phy-tx-axi4s-ch-tdata-width = <40>;
+			xlnx,vid-phy-tx-axi4s-ch-tdata-width = <20>;
 			xlnx,use-oddr-for-tmds-clkout;
 			xlnx,for-upgrade-maxoptvol = <0xd5de0>;
 			xlnx,edk-iptype = "PERIPHERAL";
 			xlnx,speedgrade = <0xfffffffe>;
 			xlnx,for-upgrade-package = "ffvb676";
 			xlnx,int-hdmi-ver-cmptble = <3>;
-			xlnx,int-width = <0>;
+			xlnx,int-width = <20>;
 			xlnx,rx-sb-ports;
 			xlnx,tx-gt-ref-clock-freq = <297>;
 			xlnx,tx-buffer-bypass = <1>;
-			xlnx,nidru = <0>;
+			xlnx,nidru = <1>;
 			xlnx,rx-dp-protocol = <0>;
 			xlnx,rx-pll-selection = <0>;
 			xlnx,tx-tdata-width = <40>;
 			xlnx,transceiver-type = <5>;
 			xlnx,tx-max-gt-line-rate = <0x5aa320>;
 			xlnx,rx-tmds-clk-buffer = "bufg";
-			xlnx,vid-phy-rx-axi4s-ch-int-tdata-width = <40>;
+			xlnx,vid-phy-rx-axi4s-ch-int-tdata-width = <20>;
 			xlnx,vid-phy-axi4lite-data-width = <32>;
 			xlnx,tx-video-clk-buffer = "bufg";
 			xlnx,for-upgrade-refvol = <0xcf850>;
@@ -564,7 +617,7 @@
 			xlnx,for-upgrade-part = "xcau15p-ffvb676-2-e";
 			xlnx,tx-refclk-sel = <0>;
 			xlnx,for-upgrade-device = "xcau15p";
-			xlnx,rx-protocol = <3>;
+			xlnx,rx-protocol = <1>;
 			xlnx,tx-clk-primitive = <0x0>;
 			xlnx,tx-gt-line-rate = <0x5aa320>;
 			xlnx,channel-site = "X0Y8";
@@ -577,6 +630,15 @@
 			xlnx,device = "xcau15p";
 			xlnx,tx-no-of-channels = <3>;
 			xlnx,component-name = "hdmi_tx_bd_vid_phy_controller_0_0";
+			vid_phy_controller_0rxphy_lane0: vid_phy_rx_axi4s_ch0v_hdmi_rx_ss_0 {
+				#phy-cells = <4>;
+			};
+			vid_phy_controller_0rxphy_lane1: vid_phy_rx_axi4s_ch1v_hdmi_rx_ss_0 {
+				#phy-cells = <4>;
+			};
+			vid_phy_controller_0rxphy_lane2: vid_phy_rx_axi4s_ch2v_hdmi_rx_ss_0 {
+				#phy-cells = <4>;
+			};
 			vid_phy_controller_0txphy_lane0: vid_phy_tx_axi4s_ch0v_hdmi_tx_ss_0 {
 				#phy-cells = <4>;
 			};
@@ -587,9 +649,34 @@
 				#phy-cells = <4>;
 			};
 		};
+		v_hdmi_rx_ss_0_v_hdmi_rx: v_hdmi_rx_ss_0_v_hdmi_rx@0 {
+			compatible = "xlnx,v-hdmi-rx-3.0";
+			xlnx,gt-lanes = <2>;
+			xlnx,sim-speedup;
+			xlnx,vector-de-enable = <0>;
+			xlnx,sim-device = "VERSAL_AI_CORE_ES1";
+			xlnx,ip-name = "v_hdmi_rx";
+			xlnx,hdcp-if-enable = <0>;
+			xlnx,is-hierarchy;
+			reg = <0x00000000 0x10000>;
+			xlnx,ch-width = <8>;
+			xlnx,pixels-per-clock = <2>;
+			xlnx,edk-iptype = "PERIPHERAL";
+			xlnx,num-of-intr = <1>;
+			xlnx,tst-dbg = <0>;
+			xlnx,max-res = <0>;
+			xlnx,sim-device-en = <0>;
+			xlnx,relax-dvi-constraint = <0>;
+			status = "okay";
+			xlnx,bits-per-component = <8>;
+			xlnx,ddc-edid-size = <256>;
+			xlnx,is-versal = <0>;
+			xlnx,axi-lite-freq-hz = <0x5f5e100>;
+			xlnx,name = "v_hdmi_rx_ss_0_v_hdmi_rx";
+		};
 		v_hdmi_tx_ss_0_v_hdmi_tx: v_hdmi_tx_ss_0_v_hdmi_tx@0 {
 			compatible = "xlnx,v-hdmi-tx-3.0";
-			xlnx,gt-lanes = <4>;
+			xlnx,gt-lanes = <2>;
 			xlnx,video-mask-enable = <1>;
 			xlnx,sim-speedup;
 			xlnx,vector-de-enable = <0>;
@@ -599,7 +686,7 @@
 			xlnx,is-hierarchy;
 			reg = <0x44a00000 0x10000>;
 			xlnx,ch-width = <8>;
-			xlnx,pixels-per-clock = <4>;
+			xlnx,pixels-per-clock = <2>;
 			xlnx,edk-iptype = "PERIPHERAL";
 			xlnx,num-of-intr = <1>;
 			xlnx,tst-dbg = <0>;

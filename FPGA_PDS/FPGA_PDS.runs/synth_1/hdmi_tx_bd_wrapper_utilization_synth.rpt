@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Tue Jun  2 16:53:03 2026
+| Date         : Tue Jun  2 22:47:29 2026
 | Host         : pop-os running 64-bit Pop!_OS 24.04 LTS
 | Command      : report_utilization -file hdmi_tx_bd_wrapper_utilization_synth.rpt -pb hdmi_tx_bd_wrapper_utilization_synth.pb
 | Design       : hdmi_tx_bd_wrapper
@@ -98,7 +98,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------------+------+-------+------------+-----------+-------+
 |     Site Type    | Used | Fixed | Prohibited | Available | Util% |
 +------------------+------+-------+------------+-----------+-------+
-| Bonded IOB       |   10 |     0 |          0 |       228 |  4.39 |
+| Bonded IOB       |   14 |     0 |          0 |       228 |  6.14 |
 |   HPIOB_M        |    0 |     0 |          0 |        72 |  0.00 |
 |   HPIOB_S        |    0 |     0 |          0 |        72 |  0.00 |
 |   HDIOB_M        |    0 |     0 |          0 |        36 |  0.00 |
@@ -167,10 +167,10 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| INBUF    |    7 |                 I/O |
-| IBUFCTRL |    7 |              Others |
-| OBUFT    |    4 |                 I/O |
-| OBUF     |    3 |                 I/O |
+| INBUF    |   10 |                 I/O |
+| IBUFCTRL |   10 |              Others |
+| OBUFT    |    6 |                 I/O |
+| OBUF     |    4 |                 I/O |
 | LUT1     |    1 |                 CLB |
 +----------+------+---------------------+
 
@@ -184,7 +184,9 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | hdmi_tx_bd_vid_phy_controller_0_0            |    1 |
 | hdmi_tx_bd_v_tpg_0_0                         |    1 |
 | hdmi_tx_bd_v_hdmi_tx_ss_0_0                  |    1 |
+| hdmi_tx_bd_v_hdmi_rx_ss_0_0                  |    1 |
 | hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0 |    1 |
+| hdmi_tx_bd_rst_clk_out2_0                    |    1 |
 | hdmi_tx_bd_proc_sys_reset_0_0                |    1 |
 | hdmi_tx_bd_microblaze_0_clk_wiz_1_0          |    1 |
 | hdmi_tx_bd_microblaze_0_axi_periph_0         |    1 |
@@ -196,6 +198,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | hdmi_tx_bd_ilmb_bram_if_cntlr_1              |    1 |
 | hdmi_tx_bd_dlmb_v10_1                        |    1 |
 | hdmi_tx_bd_dlmb_bram_if_cntlr_1              |    1 |
+| hdmi_tx_bd_axis_register_slice_0_0           |    1 |
 | hdmi_tx_bd_axi_iic_0_0                       |    1 |
 | hdmi_tx_bd_axi_gpio_0_0                      |    1 |
 +----------------------------------------------+------+

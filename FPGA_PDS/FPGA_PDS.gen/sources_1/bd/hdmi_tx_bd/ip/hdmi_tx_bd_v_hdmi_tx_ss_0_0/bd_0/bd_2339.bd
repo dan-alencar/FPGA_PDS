@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7E957B908DACAC92",
+      "boundary_crc": "0x2E6BDFA7B89A9856",
       "design_src": "SBD",
       "device": "xcau15p-ffvb676-2-e",
       "name": "bd_2339",
@@ -505,12 +505,12 @@
         "vlnv": "xilinx.com:interface:axis_rtl:1.0",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk",
-            "value_src": "default_prop"
+            "value": "hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1",
+            "value_src": "ip_prop"
           },
           "FREQ_HZ": {
-            "value": "297000000",
-            "value_src": "user_prop"
+            "value": "100000000",
+            "value_src": "ip_prop"
           },
           "HAS_TKEEP": {
             "value": "0",
@@ -533,15 +533,37 @@
             "value_src": "default"
           },
           "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
+            "value": [
+              "xilinx.com:interface:datatypes:1.0 {",
+              "TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value xilinx.com:video:G_B_R_444:1.0} bitwidth {attribs {resolve_type automatic dependency {}",
+              "format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate",
+              "dependency {} format string minimum {} maximum {}} value rows} size {attribs {resolve_type generated dependency active_rows format long minimum {} maximum {}} value 1} stride {attribs {resolve_type",
+              "generated dependency active_rows_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}}",
+              "bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value",
+              "0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cols} size {attribs {resolve_type generated dependency active_cols format long minimum {}",
+              "maximum {}} value 1} stride {attribs {resolve_type generated dependency active_cols_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {}",
+              "format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate",
+              "dependency {} format long minimum {} maximum {}} value 0} struct {field_G {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value G} enabled {attribs",
+              "{resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}}",
+              "bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {}",
+              "maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_B {name {attribs {resolve_type immediate dependency {}",
+              "format string minimum {} maximum {}} value B} enabled {attribs {resolve_type generated dependency video_comp1_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs",
+              "{resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8}",
+              "bitoffset {attribs {resolve_type generated dependency video_comp1_offset format long minimum {} maximum {}} value 8} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum",
+              "{} maximum {}} value true}}}} field_R {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value R} enabled {attribs {resolve_type generated dependency",
+              "video_comp2_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs",
+              "{resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp2_offset format long minimum {} maximum",
+              "{}} value 16} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}}}}} TDATA_WIDTH 24",
+              "}"
+            ],
+            "value_src": "user_prop"
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "default"
+            "value_src": "ip_prop"
           },
           "TDATA_NUM_BYTES": {
-            "value": "12",
+            "value": "6",
             "value_src": "auto"
           },
           "TDEST_WIDTH": {
@@ -768,12 +790,12 @@
             "value": "s_axis_video_aresetn"
           },
           "CLK_DOMAIN": {
-            "value": "hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk",
-            "value_src": "default_prop"
+            "value": "hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1",
+            "value_src": "ip_prop"
           },
           "FREQ_HZ": {
-            "value": "297000000",
-            "value_src": "user_prop"
+            "value": "100000000",
+            "value_src": "ip_prop"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -785,7 +807,7 @@
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "default"
+            "value_src": "ip_prop"
           }
         }
       },
@@ -823,7 +845,7 @@
             "value": "0"
           },
           "C_PIXELS_PER_CLOCK": {
-            "value": "4"
+            "value": "2"
           },
           "C_SIM_DEVICE": {
             "value": "VERSAL_AI_CORE_ES1"
@@ -879,7 +901,7 @@
             "value": "10"
           },
           "C_ADDR_WIDTH_PIXEL_REMAP_420": {
-            "value": "10"
+            "value": "11"
           },
           "C_HAS_ASYNC_CLK": {
             "value": "1"
@@ -897,7 +919,7 @@
             "value": "8"
           },
           "C_PIXELS_PER_CLOCK": {
-            "value": "4"
+            "value": "2"
           },
           "C_S_AXIS_VIDEO_DATA_WIDTH": {
             "value": "8"

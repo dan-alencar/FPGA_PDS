@@ -33,6 +33,8 @@
 			      <0x44a00000 &v_hdmi_tx_ss_0 0x44a00000 0x20000>, 
 			      <0x44a20000 &v_tpg_0 0x44a20000 0x10000>, 
 			      <0x44a30000 &vid_phy_controller_0 0x44a30000 0x10000>, 
+			      <0x44a40000 &v_hdmi_rx_ss_0 0x44a40000 0x10000>, 
+			      <0x00000000 &v_hdmi_rx_ss_0_v_hdmi_rx 0x00000000 0x10000>, 
 			      <0x00000000 &v_hdmi_tx_ss_0_v_hdmi_tx 0x00000000 0x10000>, 
 			      <0x00010000 &v_hdmi_tx_ss_0_v_tc 0x00010000 0x10000>;
 		#ranges-address-cells = <0x1>;

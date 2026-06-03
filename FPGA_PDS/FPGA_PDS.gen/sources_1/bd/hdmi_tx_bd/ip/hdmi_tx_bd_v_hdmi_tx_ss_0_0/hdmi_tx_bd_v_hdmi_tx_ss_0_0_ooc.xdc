@@ -6,10 +6,10 @@
 
 #Project Device Family : artixuplus
 #Project Device SpeedGrade : -2
-#Project Device PPC : 4
+#Project Device PPC : 2
 
-set clock_period 6.666
 
+set clock_period 3.333
 
 create_clock -name s_axi_cpu_aclk -period 10.0 [get_ports s_axi_cpu_aclk]
 create_clock -name s_axis_audio_aclk -period 10.0 [get_ports s_axis_audio_aclk]

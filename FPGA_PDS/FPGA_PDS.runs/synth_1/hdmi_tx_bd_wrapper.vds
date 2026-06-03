@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Tue Jun  2 16:52:10 2026
-# Process ID         : 992720
+# Start of session at: Tue Jun  2 22:46:58 2026
+# Process ID         : 138432
 # Current directory  : /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1
 # Command line       : vivado -log hdmi_tx_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_tx_bd_wrapper.tcl
 # Log file           : /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/hdmi_tx_bd_wrapper.vds
@@ -13,13 +13,13 @@
 # Platform           : Pop
 # Operating System   : Pop!_OS 24.04 LTS
 # Processor Detail   : Intel(R) Core(TM) 5 210H
-# CPU Frequency      : 1293.921 MHz
+# CPU Frequency      : 628.469 MHz
 # CPU Physical cores : 8
 # CPU Logical cores  : 12
 # Host memory        : 24780 MB
 # Swap memory        : 21474 MB
 # Total Virtual      : 46254 MB
-# Available Virtual  : 27507 MB
+# Available Virtual  : 34783 MB
 #-----------------------------------------------------------
 source hdmi_tx_bd_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -30,7 +30,6 @@ It is recommended to migrate these utility IPs to inline hdl  using the command 
 More information on inline hdl is available in UG994.
 Utility IP Component Instances:
  hdmi_tx_bd_xlconstant_0_0
-add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1677.957 ; gain = 45.648 ; free physical = 4464 ; free virtual = 25716
 Command: read_checkpoint -auto_incremental -incremental /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/utils_1/imports/synth_1/hdmi_tx_bd_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/utils_1/imports/synth_1/hdmi_tx_bd_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -43,93 +42,122 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 992939
+INFO: [Synth 8-7075] Helper process launched with PID 138525
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2579.551 ; gain = 459.688 ; free physical = 3308 ; free virtual = 24734
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2581.598 ; gain = 459.688 ; free physical = 8661 ; free virtual = 31447
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_wrapper' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/hdl/hdmi_tx_bd_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [/home/dan-alencar/AMD_Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
 INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:13]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_axi_gpio_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_axi_gpio_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_axi_iic_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_axi_iic_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_axi_iic_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_axi_iic_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_mdm_1_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_mdm_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_mdm_1_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_mdm_1_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'Interrupt' of module 'hdmi_tx_bd_mdm_1_0' is unconnected for instance 'mdm_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:345]
-WARNING: [Synth 8-7023] instance 'mdm_1' of module 'hdmi_tx_bd_mdm_1_0' has 30 connections declared, but only 29 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:345]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_microblaze_0_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_microblaze_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_microblaze_0_1' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_microblaze_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_microblaze_0_axi_intc_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_microblaze_0_axi_intc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_microblaze_0_axi_intc_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_microblaze_0_axi_intc_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_microblaze_0_axi_periph_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_microblaze_0_axi_periph_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_microblaze_0_axi_periph_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_microblaze_0_axi_periph_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:456]
-WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:456]
-WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:456]
-WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:456]
-WARNING: [Synth 8-7071] port 'M03_AXI_awprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:456]
-WARNING: [Synth 8-7071] port 'M03_AXI_arprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:456]
-WARNING: [Synth 8-7071] port 'M05_AXI_awprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:456]
-WARNING: [Synth 8-7071] port 'M05_AXI_arprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:456]
-WARNING: [Synth 8-7071] port 'M06_AXI_awprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:456]
-WARNING: [Synth 8-7071] port 'M06_AXI_arprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:456]
-WARNING: [Synth 8-7023] instance 'microblaze_0_axi_periph' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' has 155 connections declared, but only 145 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:456]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_microblaze_0_clk_wiz_1_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_microblaze_0_clk_wiz_1_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1EYEO40' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:783]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_dlmb_bram_if_cntlr_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_dlmb_bram_if_cntlr_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_dlmb_bram_if_cntlr_1' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_dlmb_bram_if_cntlr_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_dlmb_v10_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_dlmb_v10_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_dlmb_v10_1' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_dlmb_v10_1_stub.v:6]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'hdmi_tx_bd_dlmb_v10_1' is unconnected for instance 'dlmb_v10' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:908]
-WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'hdmi_tx_bd_dlmb_v10_1' has 25 connections declared, but only 24 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:908]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_ilmb_bram_if_cntlr_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_ilmb_bram_if_cntlr_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_ilmb_bram_if_cntlr_1' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_ilmb_bram_if_cntlr_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_ilmb_v10_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_ilmb_v10_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_ilmb_v10_1' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_ilmb_v10_1_stub.v:6]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'hdmi_tx_bd_ilmb_v10_1' is unconnected for instance 'ilmb_v10' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:954]
-WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'hdmi_tx_bd_ilmb_v10_1' has 25 connections declared, but only 24 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:954]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_lmb_bram_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_lmb_bram_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_lmb_bram_1' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_lmb_bram_1_stub.v:6]
-WARNING: [Synth 8-7071] port 'rsta_busy' of module 'hdmi_tx_bd_lmb_bram_1' is unconnected for instance 'lmb_bram' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:979]
-WARNING: [Synth 8-7071] port 'rstb_busy' of module 'hdmi_tx_bd_lmb_bram_1' is unconnected for instance 'lmb_bram' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:979]
-WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'hdmi_tx_bd_lmb_bram_1' has 16 connections declared, but only 14 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:979]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1EYEO40' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:783]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0' is unconnected for instance 'rst_microblaze_0_clk_wiz_1_100M' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:631]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0' is unconnected for instance 'rst_microblaze_0_clk_wiz_1_100M' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:631]
-WARNING: [Synth 8-7023] instance 'rst_microblaze_0_clk_wiz_1_100M' of module 'hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:631]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_proc_sys_reset_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_proc_sys_reset_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'hdmi_tx_bd_proc_sys_reset_0_0' is unconnected for instance 'rst_video_clk' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:640]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'hdmi_tx_bd_proc_sys_reset_0_0' is unconnected for instance 'rst_video_clk' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:640]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'hdmi_tx_bd_proc_sys_reset_0_0' is unconnected for instance 'rst_video_clk' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:640]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'hdmi_tx_bd_proc_sys_reset_0_0' is unconnected for instance 'rst_video_clk' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:640]
-WARNING: [Synth 8-7023] instance 'rst_video_clk' of module 'hdmi_tx_bd_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:640]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_v_hdmi_tx_ss_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_v_hdmi_tx_ss_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_v_hdmi_tx_ss_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_v_hdmi_tx_ss_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'locked' of module 'hdmi_tx_bd_v_hdmi_tx_ss_0_0' is unconnected for instance 'v_hdmi_tx_ss_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:648]
-WARNING: [Synth 8-7071] port 'AUDIO_IN_tready' of module 'hdmi_tx_bd_v_hdmi_tx_ss_0_0' is unconnected for instance 'v_hdmi_tx_ss_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:648]
-WARNING: [Synth 8-7023] instance 'v_hdmi_tx_ss_0' of module 'hdmi_tx_bd_v_hdmi_tx_ss_0_0' has 57 connections declared, but only 55 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:648]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_v_tpg_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_v_tpg_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_v_tpg_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_v_tpg_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'fid' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:704]
-WARNING: [Synth 8-7071] port 'interrupt' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:704]
-WARNING: [Synth 8-7071] port 'm_axis_video_TKEEP' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:704]
-WARNING: [Synth 8-7071] port 'm_axis_video_TSTRB' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:704]
-WARNING: [Synth 8-7071] port 'm_axis_video_TID' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:704]
-WARNING: [Synth 8-7071] port 'm_axis_video_TDEST' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:704]
-WARNING: [Synth 8-7023] instance 'v_tpg_0' of module 'hdmi_tx_bd_v_tpg_0_0' has 31 connections declared, but only 25 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:704]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_vid_phy_controller_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-992720-pop-os/realtime/hdmi_tx_bd_vid_phy_controller_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'tx_tmds_clk' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:730]
-WARNING: [Synth 8-7071] port 'vid_phy_tx_axi4s_ch0_tready' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:730]
-WARNING: [Synth 8-7071] port 'vid_phy_tx_axi4s_ch1_tready' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:730]
-WARNING: [Synth 8-7071] port 'vid_phy_tx_axi4s_ch2_tready' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:730]
-WARNING: [Synth 8-7023] instance 'vid_phy_controller_0' of module 'hdmi_tx_bd_vid_phy_controller_0_0' has 52 connections declared, but only 48 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:730]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_axi_gpio_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_axi_gpio_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_axi_iic_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_axi_iic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_axi_iic_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_axi_iic_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_axis_register_slice_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_axis_register_slice_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_axis_register_slice_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_axis_register_slice_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_mdm_1_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_mdm_1_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_mdm_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'Interrupt' of module 'hdmi_tx_bd_mdm_1_0' is unconnected for instance 'mdm_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:431]
+WARNING: [Synth 8-7023] instance 'mdm_1' of module 'hdmi_tx_bd_mdm_1_0' has 30 connections declared, but only 29 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:431]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_microblaze_0_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_microblaze_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_microblaze_0_1' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_microblaze_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_microblaze_0_axi_intc_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_microblaze_0_axi_intc_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_microblaze_0_axi_periph_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_microblaze_0_axi_periph_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_microblaze_0_axi_periph_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_microblaze_0_axi_periph_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:542]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:542]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:542]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:542]
+WARNING: [Synth 8-7071] port 'M03_AXI_awprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:542]
+WARNING: [Synth 8-7071] port 'M03_AXI_arprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:542]
+WARNING: [Synth 8-7071] port 'M05_AXI_awprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:542]
+WARNING: [Synth 8-7071] port 'M05_AXI_arprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:542]
+WARNING: [Synth 8-7071] port 'M06_AXI_awprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:542]
+WARNING: [Synth 8-7071] port 'M06_AXI_arprot' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:542]
+WARNING: [Synth 8-7023] instance 'microblaze_0_axi_periph' of module 'hdmi_tx_bd_microblaze_0_axi_periph_0' has 174 connections declared, but only 164 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:542]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_microblaze_0_clk_wiz_1_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_microblaze_0_clk_wiz_1_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1EYEO40' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:963]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_dlmb_bram_if_cntlr_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_dlmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_dlmb_bram_if_cntlr_1' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_dlmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_dlmb_v10_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_dlmb_v10_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_dlmb_v10_1' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_dlmb_v10_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'hdmi_tx_bd_dlmb_v10_1' is unconnected for instance 'dlmb_v10' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:1088]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'hdmi_tx_bd_dlmb_v10_1' has 25 connections declared, but only 24 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:1088]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_ilmb_bram_if_cntlr_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_ilmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_ilmb_bram_if_cntlr_1' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_ilmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_ilmb_v10_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_ilmb_v10_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_ilmb_v10_1' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_ilmb_v10_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'hdmi_tx_bd_ilmb_v10_1' is unconnected for instance 'ilmb_v10' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:1134]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'hdmi_tx_bd_ilmb_v10_1' has 25 connections declared, but only 24 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:1134]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_lmb_bram_1' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_lmb_bram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_lmb_bram_1' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_lmb_bram_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'hdmi_tx_bd_lmb_bram_1' is unconnected for instance 'lmb_bram' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:1159]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'hdmi_tx_bd_lmb_bram_1' is unconnected for instance 'lmb_bram' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:1159]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'hdmi_tx_bd_lmb_bram_1' has 16 connections declared, but only 14 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:1159]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1EYEO40' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:963]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_rst_clk_out2_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_rst_clk_out2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_rst_clk_out2_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_rst_clk_out2_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'hdmi_tx_bd_rst_clk_out2_0' is unconnected for instance 'rst_clk_out2' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:737]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'hdmi_tx_bd_rst_clk_out2_0' is unconnected for instance 'rst_clk_out2' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:737]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'hdmi_tx_bd_rst_clk_out2_0' is unconnected for instance 'rst_clk_out2' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:737]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'hdmi_tx_bd_rst_clk_out2_0' is unconnected for instance 'rst_clk_out2' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:737]
+WARNING: [Synth 8-7023] instance 'rst_clk_out2' of module 'hdmi_tx_bd_rst_clk_out2_0' has 10 connections declared, but only 6 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:737]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0' is unconnected for instance 'rst_microblaze_0_clk_wiz_1_100M' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:744]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0' is unconnected for instance 'rst_microblaze_0_clk_wiz_1_100M' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:744]
+WARNING: [Synth 8-7023] instance 'rst_microblaze_0_clk_wiz_1_100M' of module 'hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:744]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_proc_sys_reset_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_proc_sys_reset_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'hdmi_tx_bd_proc_sys_reset_0_0' is unconnected for instance 'rst_video_clk' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:753]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'hdmi_tx_bd_proc_sys_reset_0_0' is unconnected for instance 'rst_video_clk' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:753]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'hdmi_tx_bd_proc_sys_reset_0_0' is unconnected for instance 'rst_video_clk' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:753]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'hdmi_tx_bd_proc_sys_reset_0_0' is unconnected for instance 'rst_video_clk' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:753]
+WARNING: [Synth 8-7023] instance 'rst_video_clk' of module 'hdmi_tx_bd_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:753]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_v_hdmi_rx_ss_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_v_hdmi_rx_ss_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_v_hdmi_rx_ss_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_v_hdmi_rx_ss_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'acr_cts' of module 'hdmi_tx_bd_v_hdmi_rx_ss_0_0' is unconnected for instance 'v_hdmi_rx_ss_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:761]
+WARNING: [Synth 8-7071] port 'acr_n' of module 'hdmi_tx_bd_v_hdmi_rx_ss_0_0' is unconnected for instance 'v_hdmi_rx_ss_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:761]
+WARNING: [Synth 8-7071] port 'acr_valid' of module 'hdmi_tx_bd_v_hdmi_rx_ss_0_0' is unconnected for instance 'v_hdmi_rx_ss_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:761]
+WARNING: [Synth 8-7071] port 'fid' of module 'hdmi_tx_bd_v_hdmi_rx_ss_0_0' is unconnected for instance 'v_hdmi_rx_ss_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:761]
+WARNING: [Synth 8-7071] port 'AUDIO_OUT_tdata' of module 'hdmi_tx_bd_v_hdmi_rx_ss_0_0' is unconnected for instance 'v_hdmi_rx_ss_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:761]
+WARNING: [Synth 8-7071] port 'AUDIO_OUT_tid' of module 'hdmi_tx_bd_v_hdmi_rx_ss_0_0' is unconnected for instance 'v_hdmi_rx_ss_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:761]
+WARNING: [Synth 8-7071] port 'AUDIO_OUT_tvalid' of module 'hdmi_tx_bd_v_hdmi_rx_ss_0_0' is unconnected for instance 'v_hdmi_rx_ss_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:761]
+WARNING: [Synth 8-7023] instance 'v_hdmi_rx_ss_0' of module 'hdmi_tx_bd_v_hdmi_rx_ss_0_0' has 57 connections declared, but only 50 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:761]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_v_hdmi_tx_ss_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_v_hdmi_tx_ss_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_v_hdmi_tx_ss_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_v_hdmi_tx_ss_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'locked' of module 'hdmi_tx_bd_v_hdmi_tx_ss_0_0' is unconnected for instance 'v_hdmi_tx_ss_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:812]
+WARNING: [Synth 8-7071] port 'AUDIO_IN_tready' of module 'hdmi_tx_bd_v_hdmi_tx_ss_0_0' is unconnected for instance 'v_hdmi_tx_ss_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:812]
+WARNING: [Synth 8-7023] instance 'v_hdmi_tx_ss_0' of module 'hdmi_tx_bd_v_hdmi_tx_ss_0_0' has 57 connections declared, but only 55 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:812]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_v_tpg_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_v_tpg_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_v_tpg_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_v_tpg_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'fid' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:868]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:868]
+WARNING: [Synth 8-7071] port 'm_axis_video_TVALID' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:868]
+WARNING: [Synth 8-7071] port 'm_axis_video_TDATA' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:868]
+WARNING: [Synth 8-7071] port 'm_axis_video_TKEEP' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:868]
+WARNING: [Synth 8-7071] port 'm_axis_video_TSTRB' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:868]
+WARNING: [Synth 8-7071] port 'm_axis_video_TUSER' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:868]
+WARNING: [Synth 8-7071] port 'm_axis_video_TLAST' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:868]
+WARNING: [Synth 8-7071] port 'm_axis_video_TID' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:868]
+WARNING: [Synth 8-7071] port 'm_axis_video_TDEST' of module 'hdmi_tx_bd_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:868]
+WARNING: [Synth 8-7023] instance 'v_tpg_0' of module 'hdmi_tx_bd_v_tpg_0_0' has 31 connections declared, but only 21 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:868]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_vid_phy_controller_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_vid_phy_controller_0_0' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/.Xil/Vivado-138432-pop-os/realtime/hdmi_tx_bd_vid_phy_controller_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'tx_tmds_clk' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:890]
+WARNING: [Synth 8-7071] port 'rx_tmds_clk' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:890]
+WARNING: [Synth 8-7071] port 'rx_tmds_clk_p' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:890]
+WARNING: [Synth 8-7071] port 'rx_tmds_clk_n' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:890]
+WARNING: [Synth 8-7071] port 'vid_phy_tx_axi4s_ch0_tready' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:890]
+WARNING: [Synth 8-7071] port 'vid_phy_tx_axi4s_ch1_tready' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:890]
+WARNING: [Synth 8-7071] port 'vid_phy_tx_axi4s_ch2_tready' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:890]
+WARNING: [Synth 8-7071] port 'vid_phy_rx_axi4s_ch0_tuser' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:890]
+WARNING: [Synth 8-7071] port 'vid_phy_rx_axi4s_ch1_tuser' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:890]
+WARNING: [Synth 8-7071] port 'vid_phy_rx_axi4s_ch2_tuser' of module 'hdmi_tx_bd_vid_phy_controller_0_0' is unconnected for instance 'vid_phy_controller_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:890]
+WARNING: [Synth 8-7023] instance 'vid_phy_controller_0' of module 'hdmi_tx_bd_vid_phy_controller_0_0' has 78 connections declared, but only 68 given [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:890]
 INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_bd_xlconstant_0_0' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_xlconstant_0_0/synth/hdmi_tx_bd_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant' [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
@@ -137,19 +165,19 @@ INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_xlconstant_0_0' (0#1) 
 INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/synth/hdmi_tx_bd.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_bd_wrapper' (0#1) [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/hdl/hdmi_tx_bd_wrapper.v:13]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2677.520 ; gain = 557.656 ; free physical = 2991 ; free virtual = 24550
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2681.535 ; gain = 559.625 ; free physical = 8561 ; free virtual = 31349
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2683.457 ; gain = 563.594 ; free physical = 2991 ; free virtual = 24549
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2681.535 ; gain = 559.625 ; free physical = 8561 ; free virtual = 31349
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2683.457 ; gain = 563.594 ; free physical = 2991 ; free virtual = 24549
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2681.535 ; gain = 559.625 ; free physical = 8561 ; free virtual = 31349
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2689.395 ; gain = 0.000 ; free physical = 2923 ; free virtual = 24482
-INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2681.535 ; gain = 0.000 ; free physical = 8561 ; free virtual = 31349
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -164,7 +192,7 @@ Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/
 Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0_in_context.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_intc'
 Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0/hdmi_tx_bd_microblaze_0_axi_intc_0_in_context.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_axi_intc'
 Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0_in_context.xdc] for cell 'hdmi_tx_bd_i/mdm_1'
-create_clock: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2752.664 ; gain = 23.250 ; free physical = 3244 ; free virtual = 24609
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2754.406 ; gain = 25.219 ; free physical = 8608 ; free virtual = 31404
 Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0/hdmi_tx_bd_mdm_1_0_in_context.xdc] for cell 'hdmi_tx_bd_i/mdm_1'
 Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_in_context.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_clk_wiz_1'
 Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_in_context.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_clk_wiz_1'
@@ -190,6 +218,12 @@ Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.
 Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_lmb_bram_1/hdmi_tx_bd_lmb_bram_1/hdmi_tx_bd_lmb_bram_1_in_context.xdc] for cell 'hdmi_tx_bd_i/microblaze_0_local_memory/lmb_bram'
 Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axi_gpio_0_0/hdmi_tx_bd_axi_gpio_0_0/hdmi_tx_bd_axi_gpio_0_0_in_context.xdc] for cell 'hdmi_tx_bd_i/axi_gpio_0'
 Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axi_gpio_0_0/hdmi_tx_bd_axi_gpio_0_0/hdmi_tx_bd_axi_gpio_0_0_in_context.xdc] for cell 'hdmi_tx_bd_i/axi_gpio_0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_rx_ss_0_0/hdmi_tx_bd_v_hdmi_rx_ss_0_0/hdmi_tx_bd_v_hdmi_rx_ss_0_0_in_context.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_rx_ss_0'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_rx_ss_0_0/hdmi_tx_bd_v_hdmi_rx_ss_0_0/hdmi_tx_bd_v_hdmi_rx_ss_0_0_in_context.xdc] for cell 'hdmi_tx_bd_i/v_hdmi_rx_ss_0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axis_register_slice_0_0/hdmi_tx_bd_axis_register_slice_0_0/hdmi_tx_bd_axis_register_slice_0_0_in_context.xdc] for cell 'hdmi_tx_bd_i/axis_register_slice_0'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axis_register_slice_0_0/hdmi_tx_bd_axis_register_slice_0_0/hdmi_tx_bd_axis_register_slice_0_0_in_context.xdc] for cell 'hdmi_tx_bd_i/axis_register_slice_0'
+Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_rst_clk_out2_0/hdmi_tx_bd_rst_clk_out2_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_in_context.xdc] for cell 'hdmi_tx_bd_i/rst_clk_out2'
+Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_rst_clk_out2_0/hdmi_tx_bd_rst_clk_out2_0/hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0_in_context.xdc] for cell 'hdmi_tx_bd_i/rst_clk_out2'
 Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/constrs_1/new/constraints.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'sys_clk_p' completely overrides clock 'SYS_CLK_P'.
 New: create_clock -period 3.333 -name sys_clk_p [get_ports SYS_CLK_P], [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.srcs/constrs_1/new/constraints.xdc:17]
@@ -202,19 +236,19 @@ Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.
 Finished Parsing XDC File [/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2752.664 ; gain = 0.000 ; free physical = 3243 ; free virtual = 24608
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2754.406 ; gain = 0.000 ; free physical = 8608 ; free virtual = 31404
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 4 instances were transformed.
-  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 4 instances
+  A total of 6 instances were transformed.
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 6 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2752.699 ; gain = 0.000 ; free physical = 3243 ; free virtual = 24608
-WARNING: [Timing 38-316] Clock period '6.666' specified during out-of-context synthesis of instance 'hdmi_tx_bd_i/v_hdmi_tx_ss_0' at clock pin 'link_clk' is different from the actual clock period '6.570', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '6.734' specified during out-of-context synthesis of instance 'hdmi_tx_bd_i/vid_phy_controller_0' at clock pin 'vid_phy_tx_axi4s_aclk' is different from the actual clock period '6.570', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2754.441 ; gain = 0.000 ; free physical = 8608 ; free virtual = 31404
+WARNING: [Timing 38-316] Clock period '3.333' specified during out-of-context synthesis of instance 'hdmi_tx_bd_i/v_hdmi_tx_ss_0' at clock pin 'link_clk' is different from the actual clock period '3.285', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.400' specified during out-of-context synthesis of instance 'hdmi_tx_bd_i/vid_phy_controller_0' at clock pin 'mgtrefclk0_pad_p_in' is different from the actual clock period '3.367', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'hdmi_tx_bd_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2752.699 ; gain = 632.836 ; free physical = 2818 ; free virtual = 24528
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2754.441 ; gain = 632.531 ; free physical = 8623 ; free virtual = 31420
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -222,16 +256,16 @@ Start Loading Part and Timing Information
 Loading part: xcau15p-ffvb676-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2760.668 ; gain = 640.805 ; free physical = 2810 ; free virtual = 24520
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2762.410 ; gain = 640.500 ; free physical = 8623 ; free virtual = 31420
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2760.668 ; gain = 640.805 ; free physical = 2871 ; free virtual = 24460
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2762.410 ; gain = 640.500 ; free physical = 8623 ; free virtual = 31420
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2760.668 ; gain = 640.805 ; free physical = 2872 ; free virtual = 24462
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2762.410 ; gain = 640.500 ; free physical = 8639 ; free virtual = 31437
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -253,25 +287,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2760.668 ; gain = 640.805 ; free physical = 3133 ; free virtual = 24471
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2762.410 ; gain = 640.500 ; free physical = 8637 ; free virtual = 31440
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3042.156 ; gain = 922.293 ; free physical = 3040 ; free virtual = 24379
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 3045.867 ; gain = 923.957 ; free physical = 8443 ; free virtual = 31247
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3042.156 ; gain = 922.293 ; free physical = 3040 ; free virtual = 24379
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 3045.867 ; gain = 923.957 ; free physical = 8443 ; free virtual = 31247
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3052.164 ; gain = 932.301 ; free physical = 3040 ; free virtual = 24379
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3056.875 ; gain = 934.965 ; free physical = 8440 ; free virtual = 31243
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -289,37 +323,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 3237.977 ; gain = 1118.113 ; free physical = 2823 ; free virtual = 24164
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3241.688 ; gain = 1119.777 ; free physical = 8260 ; free virtual = 31054
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 3237.977 ; gain = 1118.113 ; free physical = 2823 ; free virtual = 24164
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3241.688 ; gain = 1119.777 ; free physical = 8260 ; free virtual = 31054
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 3237.977 ; gain = 1118.113 ; free physical = 2823 ; free virtual = 24164
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3241.688 ; gain = 1119.777 ; free physical = 8260 ; free virtual = 31054
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 3237.977 ; gain = 1118.113 ; free physical = 2823 ; free virtual = 24164
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3241.688 ; gain = 1119.777 ; free physical = 8260 ; free virtual = 31054
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 3237.977 ; gain = 1118.113 ; free physical = 2823 ; free virtual = 24164
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3241.688 ; gain = 1119.777 ; free physical = 8260 ; free virtual = 31054
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 3237.977 ; gain = 1118.113 ; free physical = 2823 ; free virtual = 24164
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3241.688 ; gain = 1119.777 ; free physical = 8259 ; free virtual = 31053
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -331,21 +365,24 @@ Report BlackBoxes:
 +------+---------------------------------------------+----------+
 |1     |hdmi_tx_bd_axi_gpio_0_0                      |         1|
 |2     |hdmi_tx_bd_axi_iic_0_0                       |         1|
-|3     |hdmi_tx_bd_mdm_1_0                           |         1|
-|4     |hdmi_tx_bd_microblaze_0_1                    |         1|
-|5     |hdmi_tx_bd_microblaze_0_axi_intc_0           |         1|
-|6     |hdmi_tx_bd_microblaze_0_axi_periph_0         |         1|
-|7     |hdmi_tx_bd_microblaze_0_clk_wiz_1_0          |         1|
-|8     |hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0 |         1|
-|9     |hdmi_tx_bd_proc_sys_reset_0_0                |         1|
-|10    |hdmi_tx_bd_v_hdmi_tx_ss_0_0                  |         1|
-|11    |hdmi_tx_bd_v_tpg_0_0                         |         1|
-|12    |hdmi_tx_bd_vid_phy_controller_0_0            |         1|
-|13    |hdmi_tx_bd_dlmb_bram_if_cntlr_1              |         1|
-|14    |hdmi_tx_bd_dlmb_v10_1                        |         1|
-|15    |hdmi_tx_bd_ilmb_bram_if_cntlr_1              |         1|
-|16    |hdmi_tx_bd_ilmb_v10_1                        |         1|
-|17    |hdmi_tx_bd_lmb_bram_1                        |         1|
+|3     |hdmi_tx_bd_axis_register_slice_0_0           |         1|
+|4     |hdmi_tx_bd_mdm_1_0                           |         1|
+|5     |hdmi_tx_bd_microblaze_0_1                    |         1|
+|6     |hdmi_tx_bd_microblaze_0_axi_intc_0           |         1|
+|7     |hdmi_tx_bd_microblaze_0_axi_periph_0         |         1|
+|8     |hdmi_tx_bd_microblaze_0_clk_wiz_1_0          |         1|
+|9     |hdmi_tx_bd_rst_clk_out2_0                    |         1|
+|10    |hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M_0 |         1|
+|11    |hdmi_tx_bd_proc_sys_reset_0_0                |         1|
+|12    |hdmi_tx_bd_v_hdmi_rx_ss_0_0                  |         1|
+|13    |hdmi_tx_bd_v_hdmi_tx_ss_0_0                  |         1|
+|14    |hdmi_tx_bd_v_tpg_0_0                         |         1|
+|15    |hdmi_tx_bd_vid_phy_controller_0_0            |         1|
+|16    |hdmi_tx_bd_dlmb_bram_if_cntlr_1              |         1|
+|17    |hdmi_tx_bd_dlmb_v10_1                        |         1|
+|18    |hdmi_tx_bd_ilmb_bram_if_cntlr_1              |         1|
+|19    |hdmi_tx_bd_ilmb_v10_1                        |         1|
+|20    |hdmi_tx_bd_lmb_bram_1                        |         1|
 +------+---------------------------------------------+----------+
 
 Report Cell Usage: 
@@ -354,53 +391,56 @@ Report Cell Usage:
 +------+-------------------------------------------+------+
 |1     |hdmi_tx_bd_axi_gpio_0                      |     1|
 |2     |hdmi_tx_bd_axi_iic_0                       |     1|
-|3     |hdmi_tx_bd_dlmb_bram_if_cntlr              |     1|
-|4     |hdmi_tx_bd_dlmb_v10                        |     1|
-|5     |hdmi_tx_bd_ilmb_bram_if_cntlr              |     1|
-|6     |hdmi_tx_bd_ilmb_v10                        |     1|
-|7     |hdmi_tx_bd_lmb_bram                        |     1|
-|8     |hdmi_tx_bd_mdm_1                           |     1|
-|9     |hdmi_tx_bd_microblaze_0                    |     1|
-|10    |hdmi_tx_bd_microblaze_0_axi_intc           |     1|
-|11    |hdmi_tx_bd_microblaze_0_axi_periph         |     1|
-|12    |hdmi_tx_bd_microblaze_0_clk_wiz_1          |     1|
-|13    |hdmi_tx_bd_proc_sys_reset_0                |     1|
-|14    |hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M |     1|
-|15    |hdmi_tx_bd_v_hdmi_tx_ss_0                  |     1|
-|16    |hdmi_tx_bd_v_tpg_0                         |     1|
-|17    |hdmi_tx_bd_vid_phy_controller_0            |     1|
-|18    |LUT1                                       |     1|
-|19    |IBUF                                       |     3|
-|20    |IOBUF                                      |     4|
-|21    |OBUF                                       |     3|
+|3     |hdmi_tx_bd_axis_register_slice_0           |     1|
+|4     |hdmi_tx_bd_dlmb_bram_if_cntlr              |     1|
+|5     |hdmi_tx_bd_dlmb_v10                        |     1|
+|6     |hdmi_tx_bd_ilmb_bram_if_cntlr              |     1|
+|7     |hdmi_tx_bd_ilmb_v10                        |     1|
+|8     |hdmi_tx_bd_lmb_bram                        |     1|
+|9     |hdmi_tx_bd_mdm_1                           |     1|
+|10    |hdmi_tx_bd_microblaze_0                    |     1|
+|11    |hdmi_tx_bd_microblaze_0_axi_intc           |     1|
+|12    |hdmi_tx_bd_microblaze_0_axi_periph         |     1|
+|13    |hdmi_tx_bd_microblaze_0_clk_wiz_1          |     1|
+|14    |hdmi_tx_bd_proc_sys_reset_0                |     1|
+|15    |hdmi_tx_bd_rst_clk_out2                    |     1|
+|16    |hdmi_tx_bd_rst_microblaze_0_clk_wiz_1_100M |     1|
+|17    |hdmi_tx_bd_v_hdmi_rx_ss_0                  |     1|
+|18    |hdmi_tx_bd_v_hdmi_tx_ss_0                  |     1|
+|19    |hdmi_tx_bd_v_tpg_0                         |     1|
+|20    |hdmi_tx_bd_vid_phy_controller_0            |     1|
+|21    |LUT1                                       |     1|
+|22    |IBUF                                       |     4|
+|23    |IOBUF                                      |     6|
+|24    |OBUF                                       |     4|
 +------+-------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 3237.977 ; gain = 1118.113 ; free physical = 2823 ; free virtual = 24164
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3241.688 ; gain = 1119.777 ; free physical = 8259 ; free virtual = 31053
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3237.977 ; gain = 1048.871 ; free physical = 2823 ; free virtual = 24164
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 3237.977 ; gain = 1118.113 ; free physical = 2823 ; free virtual = 24164
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 3241.688 ; gain = 1046.871 ; free physical = 8250 ; free virtual = 31053
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3241.688 ; gain = 1119.777 ; free physical = 8250 ; free virtual = 31053
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3237.977 ; gain = 0.000 ; free physical = 2800 ; free virtual = 24141
-INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3241.688 ; gain = 0.000 ; free physical = 8312 ; free virtual = 31116
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3237.977 ; gain = 0.000 ; free physical = 2917 ; free virtual = 24259
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3241.688 ; gain = 0.000 ; free physical = 8415 ; free virtual = 31219
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 7 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
-  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 4 instances
+  A total of 10 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 4 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 6 instances
 
-Synth Design complete | Checksum: 4023e1ff
+Synth Design complete | Checksum: d02d4658
 INFO: [Common 17-83] Releasing license: Synthesis
-74 Infos, 46 Warnings, 1 Critical Warnings and 0 Errors encountered.
+80 Infos, 69 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:41 . Memory (MB): peak = 3237.977 ; gain = 1557.051 ; free physical = 2917 ; free virtual = 24259
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2342.925; main = 2261.815; forked = 280.837
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4076.203; main = 3146.430; forked = 1024.035
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 3241.688 ; gain = 1554.715 ; free physical = 8415 ; free virtual = 31219
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2280.284; main = 2280.284; forked = 283.396
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3778.441; main = 3150.141; forked = 1024.031
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3237.977 ; gain = 0.000 ; free physical = 2917 ; free virtual = 24259
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3241.688 ; gain = 0.000 ; free physical = 8415 ; free virtual = 31219
 INFO: [Common 17-1381] The checkpoint '/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/synth_1/hdmi_tx_bd_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file hdmi_tx_bd_wrapper_utilization_synth.rpt -pb hdmi_tx_bd_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  2 16:53:03 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  2 22:47:29 2026...

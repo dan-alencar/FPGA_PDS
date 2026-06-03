@@ -13,6 +13,12 @@ microblaze_0_axi_intc:
 microblaze_0_local_memory_dlmb_bram_if_cntlr:
 - lmb_bram_if_cntlr
 - bram
+v_hdmi_rx_ss_0:
+- v_hdmi_rx_ss
+- v_hdmirxss
+v_hdmi_rx_ss_0_v_hdmi_rx:
+- v_hdmi_rx
+- v_hdmirx
 v_hdmi_tx_ss_0:
 - v_hdmi_tx_ss
 - v_hdmitxss

@@ -1,0 +1,4 @@
+set(DRIVER_INSTANCES "v_hdmi_rx_ss_0_v_hdmi_rx@0")
+set(DRIVER_PROP_0_LIST "xlnx,v-hdmi-rx-3.0;0x0;0x5f5e100")
+set(DRIVER_OPTPROP_0_LIST "")
+list(APPEND TOTAL_DRIVER_PROP_LIST DRIVER_PROP_0_LIST)

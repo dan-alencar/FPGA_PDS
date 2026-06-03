@@ -104,7 +104,31 @@ module hdmi_tx_bd_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [0:0] HDMI_8T49N241_RST_N,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire HDMI_8T49N241_LOL
+  input wire HDMI_8T49N241_LOL,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire HDMI_RCLKOUT_P,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire HDMI_RCLKOUT_N,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire [2:0] hdmi_rx_p,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire [2:0] hdmi_rx_n,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire RX_DDC_OUT_scl_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire RX_DDC_OUT_scl_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire RX_DDC_OUT_scl_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire RX_DDC_OUT_sda_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire RX_DDC_OUT_sda_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire RX_DDC_OUT_sda_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire HDMI_RX_HPD,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire HDMI_RX_PWR_DET
 );
 
   hdmi_tx_bd inst (
@@ -133,7 +157,19 @@ module hdmi_tx_bd_sv (
     .HDMI_TX_CLK_P(HDMI_TX_CLK_P),
     .HDMI_TX_CLK_N(HDMI_TX_CLK_N),
     .HDMI_8T49N241_RST_N(HDMI_8T49N241_RST_N),
-    .HDMI_8T49N241_LOL(HDMI_8T49N241_LOL)
+    .HDMI_8T49N241_LOL(HDMI_8T49N241_LOL),
+    .HDMI_RCLKOUT_P(HDMI_RCLKOUT_P),
+    .HDMI_RCLKOUT_N(HDMI_RCLKOUT_N),
+    .hdmi_rx_p(hdmi_rx_p),
+    .hdmi_rx_n(hdmi_rx_n),
+    .RX_DDC_OUT_scl_i(RX_DDC_OUT_scl_i),
+    .RX_DDC_OUT_scl_o(RX_DDC_OUT_scl_o),
+    .RX_DDC_OUT_scl_t(RX_DDC_OUT_scl_t),
+    .RX_DDC_OUT_sda_i(RX_DDC_OUT_sda_i),
+    .RX_DDC_OUT_sda_o(RX_DDC_OUT_sda_o),
+    .RX_DDC_OUT_sda_t(RX_DDC_OUT_sda_t),
+    .HDMI_RX_HPD(HDMI_RX_HPD),
+    .HDMI_RX_PWR_DET(HDMI_RX_PWR_DET)
   );
 
 endmodule

@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Fri May 29 19:24:47 2026
+-- Date        : Tue Jun  2 22:28:43 2026
 -- Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top hdmi_tx_bd_v_hdmi_tx_ss_0_0 -prefix
---               hdmi_tx_bd_v_hdmi_tx_ss_0_0_ hdmi_tx_bd_v_hdmi_tx_ss_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/hdmi_tx_bd_v_hdmi_tx_ss_0_0_sim_netlist.vhdl
 -- Design      : hdmi_tx_bd_v_hdmi_tx_ss_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -54,7 +54,7 @@ entity hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 is
     S_AXI_CPU_IN_wready : out STD_LOGIC_VECTOR ( 0 to 0 );
     S_AXI_CPU_IN_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     S_AXI_CPU_IN_wvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    VIDEO_IN_tdata : in STD_LOGIC_VECTOR ( 95 downto 0 );
+    VIDEO_IN_tdata : in STD_LOGIC_VECTOR ( 47 downto 0 );
     VIDEO_IN_tlast : in STD_LOGIC;
     VIDEO_IN_tready : out STD_LOGIC;
     VIDEO_IN_tuser : in STD_LOGIC;
@@ -77,6 +77,8 @@ entity hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 is
   );
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 : entity is "hdmi_tx_bd_v_hdmi_tx_ss_0_0.hwdef";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 : entity is "bd_2339";
 end hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339;
 
 architecture STRUCTURE of hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 is
@@ -148,7 +150,7 @@ architecture STRUCTURE of hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 is
     aclk : in STD_LOGIC;
     aclken : in STD_LOGIC;
     aresetn : in STD_LOGIC;
-    s_axis_video_tdata : in STD_LOGIC_VECTOR ( 95 downto 0 );
+    s_axis_video_tdata : in STD_LOGIC_VECTOR ( 47 downto 0 );
     s_axis_video_tvalid : in STD_LOGIC;
     s_axis_video_tready : out STD_LOGIC;
     s_axis_video_tuser : in STD_LOGIC;
@@ -163,7 +165,7 @@ architecture STRUCTURE of hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 is
     vid_vblank : out STD_LOGIC;
     vid_hblank : out STD_LOGIC;
     vid_field_id : out STD_LOGIC;
-    vid_data : out STD_LOGIC_VECTOR ( 95 downto 0 );
+    vid_data : out STD_LOGIC_VECTOR ( 47 downto 0 );
     vtg_vsync : in STD_LOGIC;
     vtg_hsync : in STD_LOGIC;
     vtg_vblank : in STD_LOGIC;
@@ -211,12 +213,12 @@ architecture STRUCTURE of hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 is
     link_clk : in STD_LOGIC;
     video_vs : in STD_LOGIC;
     video_hs : in STD_LOGIC;
-    video_data : in STD_LOGIC_VECTOR ( 95 downto 0 );
+    video_data : in STD_LOGIC_VECTOR ( 47 downto 0 );
     video_de : in STD_LOGIC;
-    video_vs_arb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    video_hs_arb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    video_de_arb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    video_data_arb : in STD_LOGIC_VECTOR ( 95 downto 0 );
+    video_vs_arb : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    video_hs_arb : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    video_de_arb : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    video_data_arb : in STD_LOGIC_VECTOR ( 47 downto 0 );
     s_axis_audio_aresetn : in STD_LOGIC;
     s_axis_audio_aclk : in STD_LOGIC;
     s_axis_audio_tready : out STD_LOGIC;
@@ -344,7 +346,7 @@ architecture STRUCTURE of hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 is
   signal intf_net_axi_smartconnect_M01_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal intf_net_axi_smartconnect_M01_AXI_WVALID : STD_LOGIC;
   signal intf_net_v_axi4s_vid_out_vid_io_out_ACTIVE_VIDEO : STD_LOGIC;
-  signal intf_net_v_axi4s_vid_out_vid_io_out_DATA : STD_LOGIC_VECTOR ( 95 downto 0 );
+  signal intf_net_v_axi4s_vid_out_vid_io_out_DATA : STD_LOGIC_VECTOR ( 47 downto 0 );
   signal intf_net_v_axi4s_vid_out_vid_io_out_HSYNC : STD_LOGIC;
   signal intf_net_v_axi4s_vid_out_vid_io_out_VSYNC : STD_LOGIC;
   signal intf_net_v_hdmi_tx_hdcp_out_TDATA : STD_LOGIC_VECTOR ( 95 downto 0 );
@@ -421,7 +423,7 @@ architecture STRUCTURE of hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 is
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of irq : signal is "XIL_INTERFACENAME INTR.IRQ, PortWidth 1, SENSITIVITY LEVEL_HIGH";
   attribute X_INTERFACE_INFO of link_clk : signal is "xilinx.com:signal:clock:1.0 CLK.LINK_CLK CLK";
-  attribute X_INTERFACE_PARAMETER of link_clk : signal is "XIL_INTERFACENAME CLK.LINK_CLK, ASSOCIATED_BUSIF LINK_DATA0_OUT:LINK_DATA1_OUT:LINK_DATA2_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_PARAMETER of link_clk : signal is "XIL_INTERFACENAME CLK.LINK_CLK, ASSOCIATED_BUSIF LINK_DATA0_OUT:LINK_DATA1_OUT:LINK_DATA2_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of s_axi_cpu_aclk : signal is "xilinx.com:signal:clock:1.0 CLK.S_AXI_CPU_ACLK CLK";
   attribute X_INTERFACE_PARAMETER of s_axi_cpu_aclk : signal is "XIL_INTERFACENAME CLK.S_AXI_CPU_ACLK, ASSOCIATED_BUSIF SB_STATUS_IN:S_AXI_CPU_IN, ASSOCIATED_CLKEN s_sc_aclken, ASSOCIATED_RESET s_axi_cpu_aresetn, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of s_axi_cpu_aresetn : signal is "xilinx.com:signal:reset:1.0 RST.S_AXI_CPU_ARESETN RST";
@@ -431,7 +433,7 @@ architecture STRUCTURE of hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 is
   attribute X_INTERFACE_INFO of s_axis_audio_aresetn : signal is "xilinx.com:signal:reset:1.0 RST.S_AXIS_AUDIO_ARESETN RST";
   attribute X_INTERFACE_PARAMETER of s_axis_audio_aresetn : signal is "XIL_INTERFACENAME RST.S_AXIS_AUDIO_ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW";
   attribute X_INTERFACE_INFO of s_axis_video_aclk : signal is "xilinx.com:signal:clock:1.0 CLK.S_AXIS_VIDEO_ACLK CLK";
-  attribute X_INTERFACE_PARAMETER of s_axis_video_aclk : signal is "XIL_INTERFACENAME CLK.S_AXIS_VIDEO_ACLK, ASSOCIATED_BUSIF VIDEO_IN, ASSOCIATED_RESET s_axis_video_aresetn, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_PARAMETER of s_axis_video_aclk : signal is "XIL_INTERFACENAME CLK.S_AXIS_VIDEO_ACLK, ASSOCIATED_BUSIF VIDEO_IN, ASSOCIATED_RESET s_axis_video_aresetn, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of s_axis_video_aresetn : signal is "xilinx.com:signal:reset:1.0 RST.S_AXIS_VIDEO_ARESETN RST";
   attribute X_INTERFACE_PARAMETER of s_axis_video_aresetn : signal is "XIL_INTERFACENAME RST.S_AXIS_VIDEO_ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW";
   attribute X_INTERFACE_INFO of video_clk : signal is "xilinx.com:signal:clock:1.0 CLK.VIDEO_CLK CLK";
@@ -442,13 +444,13 @@ architecture STRUCTURE of hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 is
   attribute X_INTERFACE_INFO of AUDIO_IN_tid : signal is "xilinx.com:interface:axis:1.0 AUDIO_IN TID";
   attribute X_INTERFACE_INFO of LINK_DATA0_OUT_tdata : signal is "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TDATA";
   attribute X_INTERFACE_MODE of LINK_DATA0_OUT_tdata : signal is "Master";
-  attribute X_INTERFACE_PARAMETER of LINK_DATA0_OUT_tdata : signal is "XIL_INTERFACENAME LINK_DATA0_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, FREQ_HZ 297000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
+  attribute X_INTERFACE_PARAMETER of LINK_DATA0_OUT_tdata : signal is "XIL_INTERFACENAME LINK_DATA0_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, FREQ_HZ 148500000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
   attribute X_INTERFACE_INFO of LINK_DATA1_OUT_tdata : signal is "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TDATA";
   attribute X_INTERFACE_MODE of LINK_DATA1_OUT_tdata : signal is "Master";
-  attribute X_INTERFACE_PARAMETER of LINK_DATA1_OUT_tdata : signal is "XIL_INTERFACENAME LINK_DATA1_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, FREQ_HZ 297000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
+  attribute X_INTERFACE_PARAMETER of LINK_DATA1_OUT_tdata : signal is "XIL_INTERFACENAME LINK_DATA1_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, FREQ_HZ 148500000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
   attribute X_INTERFACE_INFO of LINK_DATA2_OUT_tdata : signal is "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TDATA";
   attribute X_INTERFACE_MODE of LINK_DATA2_OUT_tdata : signal is "Master";
-  attribute X_INTERFACE_PARAMETER of LINK_DATA2_OUT_tdata : signal is "XIL_INTERFACENAME LINK_DATA2_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, FREQ_HZ 297000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
+  attribute X_INTERFACE_PARAMETER of LINK_DATA2_OUT_tdata : signal is "XIL_INTERFACENAME LINK_DATA2_OUT, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, FREQ_HZ 148500000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
   attribute X_INTERFACE_INFO of SB_STATUS_IN_tdata : signal is "xilinx.com:interface:axis:1.0 SB_STATUS_IN TDATA";
   attribute X_INTERFACE_MODE of SB_STATUS_IN_tdata : signal is "Slave";
   attribute X_INTERFACE_PARAMETER of SB_STATUS_IN_tdata : signal is "XIL_INTERFACENAME SB_STATUS_IN, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, FREQ_HZ 100000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
@@ -475,7 +477,7 @@ architecture STRUCTURE of hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339 is
   attribute X_INTERFACE_INFO of S_AXI_CPU_IN_wvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN WVALID";
   attribute X_INTERFACE_INFO of VIDEO_IN_tdata : signal is "xilinx.com:interface:axis:1.0 VIDEO_IN TDATA";
   attribute X_INTERFACE_MODE of VIDEO_IN_tdata : signal is "Slave";
-  attribute X_INTERFACE_PARAMETER of VIDEO_IN_tdata : signal is "XIL_INTERFACENAME VIDEO_IN, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, FREQ_HZ 297000000, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 12, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1";
+  attribute X_INTERFACE_PARAMETER of VIDEO_IN_tdata : signal is "XIL_INTERFACENAME VIDEO_IN, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, FREQ_HZ 100000000, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value xilinx.com:video:G_B_R_444:1.0} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value rows} size {attribs {resolve_type generated dependency active_rows format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_rows_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cols} size {attribs {resolve_type generated dependency active_cols format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_cols_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_G {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value G} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_B {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value B} enabled {attribs {resolve_type generated dependency video_comp1_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp1_offset format long minimum {} maximum {}} value 8} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_R {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value R} enabled {attribs {resolve_type generated dependency video_comp2_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp2_offset format long minimum {} maximum {}} value 16} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}}}}} TDATA_WIDTH 24}, PHASE 0.0, TDATA_NUM_BYTES 6, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1";
 begin
   locked <= \^locked\;
 axi_smartconnect: component hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_axi_smartconnect_0
@@ -551,7 +553,7 @@ v_axi4s_vid_out: component hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_axi4s_vid_out_0
       overflow => net_v_axi4s_vid_out_overflow,
       remap_420_en => net_v_hdmi_tx_bridge_yuv420,
       repeat_en => net_v_hdmi_tx_bridge_pixel_repeat,
-      s_axis_video_tdata(95 downto 0) => VIDEO_IN_tdata(95 downto 0),
+      s_axis_video_tdata(47 downto 0) => VIDEO_IN_tdata(47 downto 0),
       s_axis_video_tlast => VIDEO_IN_tlast,
       s_axis_video_tready => VIDEO_IN_tready,
       s_axis_video_tuser => VIDEO_IN_tuser,
@@ -560,7 +562,7 @@ v_axi4s_vid_out: component hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_axi4s_vid_out_0
       status(31 downto 0) => NLW_v_axi4s_vid_out_status_UNCONNECTED(31 downto 0),
       underflow => net_v_axi4s_vid_out_underflow,
       vid_active_video => intf_net_v_axi4s_vid_out_vid_io_out_ACTIVE_VIDEO,
-      vid_data(95 downto 0) => intf_net_v_axi4s_vid_out_vid_io_out_DATA(95 downto 0),
+      vid_data(47 downto 0) => intf_net_v_axi4s_vid_out_vid_io_out_DATA(47 downto 0),
       vid_field_id => NLW_v_axi4s_vid_out_vid_field_id_UNCONNECTED,
       vid_hblank => NLW_v_axi4s_vid_out_vid_hblank_UNCONNECTED,
       vid_hsync => intf_net_v_axi4s_vid_out_vid_io_out_HSYNC,
@@ -654,15 +656,15 @@ v_hdmi_tx: component hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_hdmi_tx_0
       sb_status_valid => SB_STATUS_IN_tvalid,
       vid_format_out(1 downto 0) => net_v_hdmi_tx_vid_format_out(1 downto 0),
       video_clk => video_clk,
-      video_data(95 downto 0) => intf_net_v_axi4s_vid_out_vid_io_out_DATA(95 downto 0),
-      video_data_arb(95 downto 0) => B"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      video_data(47 downto 0) => intf_net_v_axi4s_vid_out_vid_io_out_DATA(47 downto 0),
+      video_data_arb(47 downto 0) => B"000000000000000000000000000000000000000000000000",
       video_de => intf_net_v_axi4s_vid_out_vid_io_out_ACTIVE_VIDEO,
-      video_de_arb(3 downto 0) => B"0000",
+      video_de_arb(1 downto 0) => B"00",
       video_hs => intf_net_v_axi4s_vid_out_vid_io_out_HSYNC,
-      video_hs_arb(3 downto 0) => B"0000",
+      video_hs_arb(1 downto 0) => B"00",
       video_reset => net_v_hdmi_tx_video_reset,
       video_vs => intf_net_v_axi4s_vid_out_vid_io_out_VSYNC,
-      video_vs_arb(3 downto 0) => B"0000"
+      video_vs_arb(1 downto 0) => B"00"
     );
 v_tc: component hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339_v_tc_0
      port map (
@@ -731,7 +733,7 @@ entity hdmi_tx_bd_v_hdmi_tx_ss_0_0 is
     locked : out STD_LOGIC;
     s_axis_video_aclk : in STD_LOGIC;
     s_axis_video_aresetn : in STD_LOGIC;
-    VIDEO_IN_tdata : in STD_LOGIC_VECTOR ( 95 downto 0 );
+    VIDEO_IN_tdata : in STD_LOGIC_VECTOR ( 47 downto 0 );
     VIDEO_IN_tlast : in STD_LOGIC;
     VIDEO_IN_tready : out STD_LOGIC;
     VIDEO_IN_tuser : in STD_LOGIC;
@@ -812,7 +814,7 @@ architecture STRUCTURE of hdmi_tx_bd_v_hdmi_tx_ss_0_0 is
   attribute X_INTERFACE_PARAMETER of irq : signal is "XIL_INTERFACENAME INTR.irq, SENSITIVITY LEVEL_HIGH, PortWidth 1";
   attribute X_INTERFACE_INFO of link_clk : signal is "xilinx.com:signal:clock:1.0 CLK.link_clk CLK";
   attribute X_INTERFACE_MODE of link_clk : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of link_clk : signal is "XIL_INTERFACENAME CLK.link_clk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, ASSOCIATED_BUSIF LINK_DATA0_OUT:LINK_DATA1_OUT:LINK_DATA2_OUT, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of link_clk : signal is "XIL_INTERFACENAME CLK.link_clk, FREQ_HZ 148500000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, ASSOCIATED_BUSIF LINK_DATA0_OUT:LINK_DATA1_OUT:LINK_DATA2_OUT, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axi_cpu_aclk : signal is "xilinx.com:signal:clock:1.0 CLK.s_axi_cpu_aclk CLK";
   attribute X_INTERFACE_MODE of s_axi_cpu_aclk : signal is "slave";
   attribute X_INTERFACE_PARAMETER of s_axi_cpu_aclk : signal is "XIL_INTERFACENAME CLK.s_axi_cpu_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, ASSOCIATED_BUSIF SB_STATUS_IN:S_AXI_CPU_IN, ASSOCIATED_RESET s_axi_cpu_aresetn, INSERT_VIP 0, ASSOCIATED_CLKEN s_sc_aclken";
@@ -827,7 +829,7 @@ architecture STRUCTURE of hdmi_tx_bd_v_hdmi_tx_ss_0_0 is
   attribute X_INTERFACE_PARAMETER of s_axis_audio_aresetn : signal is "XIL_INTERFACENAME RST.s_axis_audio_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axis_video_aclk : signal is "xilinx.com:signal:clock:1.0 CLK.s_axis_video_aclk CLK";
   attribute X_INTERFACE_MODE of s_axis_video_aclk : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of s_axis_video_aclk : signal is "XIL_INTERFACENAME CLK.s_axis_video_aclk, FREQ_HZ 297000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, ASSOCIATED_BUSIF VIDEO_IN, ASSOCIATED_RESET s_axis_video_aresetn, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axis_video_aclk : signal is "XIL_INTERFACENAME CLK.s_axis_video_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, ASSOCIATED_BUSIF VIDEO_IN, ASSOCIATED_RESET s_axis_video_aresetn, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axis_video_aresetn : signal is "xilinx.com:signal:reset:1.0 RST.s_axis_video_aresetn RST";
   attribute X_INTERFACE_MODE of s_axis_video_aresetn : signal is "slave";
   attribute X_INTERFACE_PARAMETER of s_axis_video_aresetn : signal is "XIL_INTERFACENAME RST.s_axis_video_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
@@ -840,13 +842,13 @@ architecture STRUCTURE of hdmi_tx_bd_v_hdmi_tx_ss_0_0 is
   attribute X_INTERFACE_INFO of AUDIO_IN_tid : signal is "xilinx.com:interface:axis:1.0 AUDIO_IN TID";
   attribute X_INTERFACE_INFO of LINK_DATA0_OUT_tdata : signal is "xilinx.com:interface:axis:1.0 LINK_DATA0_OUT TDATA";
   attribute X_INTERFACE_MODE of LINK_DATA0_OUT_tdata : signal is "master";
-  attribute X_INTERFACE_PARAMETER of LINK_DATA0_OUT_tdata : signal is "XIL_INTERFACENAME LINK_DATA0_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of LINK_DATA0_OUT_tdata : signal is "XIL_INTERFACENAME LINK_DATA0_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of LINK_DATA1_OUT_tdata : signal is "xilinx.com:interface:axis:1.0 LINK_DATA1_OUT TDATA";
   attribute X_INTERFACE_MODE of LINK_DATA1_OUT_tdata : signal is "master";
-  attribute X_INTERFACE_PARAMETER of LINK_DATA1_OUT_tdata : signal is "XIL_INTERFACENAME LINK_DATA1_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of LINK_DATA1_OUT_tdata : signal is "XIL_INTERFACENAME LINK_DATA1_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of LINK_DATA2_OUT_tdata : signal is "xilinx.com:interface:axis:1.0 LINK_DATA2_OUT TDATA";
   attribute X_INTERFACE_MODE of LINK_DATA2_OUT_tdata : signal is "master";
-  attribute X_INTERFACE_PARAMETER of LINK_DATA2_OUT_tdata : signal is "XIL_INTERFACENAME LINK_DATA2_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of LINK_DATA2_OUT_tdata : signal is "XIL_INTERFACENAME LINK_DATA2_OUT, TDATA_NUM_BYTES 5, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 148500000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_txoutclk, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of SB_STATUS_IN_tdata : signal is "xilinx.com:interface:axis:1.0 SB_STATUS_IN TDATA";
   attribute X_INTERFACE_MODE of SB_STATUS_IN_tdata : signal is "slave";
   attribute X_INTERFACE_PARAMETER of SB_STATUS_IN_tdata : signal is "XIL_INTERFACENAME SB_STATUS_IN, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0";
@@ -873,7 +875,7 @@ architecture STRUCTURE of hdmi_tx_bd_v_hdmi_tx_ss_0_0 is
   attribute X_INTERFACE_INFO of S_AXI_CPU_IN_wvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI_CPU_IN WVALID";
   attribute X_INTERFACE_INFO of VIDEO_IN_tdata : signal is "xilinx.com:interface:axis:1.0 VIDEO_IN TDATA";
   attribute X_INTERFACE_MODE of VIDEO_IN_tdata : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of VIDEO_IN_tdata : signal is "XIL_INTERFACENAME VIDEO_IN, TDATA_NUM_BYTES 12, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 297000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_vid_phy_controller_0_0_tx_video_clk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of VIDEO_IN_tdata : signal is "XIL_INTERFACENAME VIDEO_IN, TDATA_NUM_BYTES 6, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_out1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value xilinx.com:video:G_B_R_444:1.0} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value rows} size {attribs {resolve_type generated dependency active_rows format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_rows_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cols} size {attribs {resolve_type generated dependency active_cols format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency active_cols_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_G {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value G} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_B {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value B} enabled {attribs {resolve_type generated dependency video_comp1_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp1_offset format long minimum {} maximum {}} value 8} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} field_R {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value R} enabled {attribs {resolve_type generated dependency video_comp2_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency video_data_width format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type generated dependency video_comp2_offset format long minimum {} maximum {}} value 16} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}}}}} TDATA_WIDTH 24}, INSERT_VIP 0";
 begin
 inst: entity work.hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339
      port map (
@@ -914,7 +916,7 @@ inst: entity work.hdmi_tx_bd_v_hdmi_tx_ss_0_0_bd_2339
       S_AXI_CPU_IN_wready(0) => S_AXI_CPU_IN_wready(0),
       S_AXI_CPU_IN_wstrb(3 downto 0) => S_AXI_CPU_IN_wstrb(3 downto 0),
       S_AXI_CPU_IN_wvalid(0) => S_AXI_CPU_IN_wvalid(0),
-      VIDEO_IN_tdata(95 downto 0) => VIDEO_IN_tdata(95 downto 0),
+      VIDEO_IN_tdata(47 downto 0) => VIDEO_IN_tdata(47 downto 0),
       VIDEO_IN_tlast => VIDEO_IN_tlast,
       VIDEO_IN_tready => VIDEO_IN_tready,
       VIDEO_IN_tuser => VIDEO_IN_tuser,
