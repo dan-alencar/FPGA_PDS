@@ -1,0 +1,23 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/hdmi_tx_bd_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.runs/hdmi_tx_bd_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp</string>
+      <key>line</key>
+      <integer>428</integer>
+      <key>column</key>
+      <integer>33</integer>
+      <key>message</key>
+      <string>extra token before variable expression is ignored</string>
+      <key>ID</key>
+      <integer>7002</integer>
+      <key>WarningOption</key>
+      <string>extra-tokens</string>
+    </dict>
+  </array>
+</dict>

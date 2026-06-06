@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
 -- Date        : Mon Jun  1 18:25:23 2026
 -- Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axi_gpio_0_0/hdmi_tx_bd_axi_gpio_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top hdmi_tx_bd_axi_gpio_0_0 -prefix
+--               hdmi_tx_bd_axi_gpio_0_0_ hdmi_tx_bd_axi_gpio_0_0_sim_netlist.vhdl
 -- Design      : hdmi_tx_bd_axi_gpio_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -39,8 +39,6 @@ entity hdmi_tx_bd_axi_gpio_0_0_address_decoder is
     \Dual.ALLIN0_ND_G2.READ_REG2_GEN[0].reg3_reg\ : in STD_LOGIC;
     \Dual.ALLOUT0_ND_G1.READ_REG_GEN[0].reg1_reg\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_tx_bd_axi_gpio_0_0_address_decoder : entity is "address_decoder";
 end hdmi_tx_bd_axi_gpio_0_0_address_decoder;
 
 architecture STRUCTURE of hdmi_tx_bd_axi_gpio_0_0_address_decoder is
@@ -306,8 +304,6 @@ entity hdmi_tx_bd_axi_gpio_0_0_xpm_cdc_array_single is
   attribute DEST_SYNC_FF of hdmi_tx_bd_axi_gpio_0_0_xpm_cdc_array_single : entity is 4;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of hdmi_tx_bd_axi_gpio_0_0_xpm_cdc_array_single : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_tx_bd_axi_gpio_0_0_xpm_cdc_array_single : entity is "xpm_cdc_array_single";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of hdmi_tx_bd_axi_gpio_0_0_xpm_cdc_array_single : entity is 0;
   attribute SRC_INPUT_REG : integer;
@@ -521,8 +517,6 @@ entity hdmi_tx_bd_axi_gpio_0_0_GPIO_Core is
     bus2ip_rnw : in STD_LOGIC;
     bus2ip_cs : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_tx_bd_axi_gpio_0_0_GPIO_Core : entity is "GPIO_Core";
 end hdmi_tx_bd_axi_gpio_0_0_GPIO_Core;
 
 architecture STRUCTURE of hdmi_tx_bd_axi_gpio_0_0_GPIO_Core is
@@ -730,8 +724,6 @@ entity hdmi_tx_bd_axi_gpio_0_0_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_tx_bd_axi_gpio_0_0_slave_attachment : entity is "slave_attachment";
 end hdmi_tx_bd_axi_gpio_0_0_slave_attachment;
 
 architecture STRUCTURE of hdmi_tx_bd_axi_gpio_0_0_slave_attachment is
@@ -1341,8 +1333,6 @@ entity hdmi_tx_bd_axi_gpio_0_0_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_tx_bd_axi_gpio_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end hdmi_tx_bd_axi_gpio_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of hdmi_tx_bd_axi_gpio_0_0_axi_lite_ipif is
@@ -1447,8 +1437,6 @@ entity hdmi_tx_bd_axi_gpio_0_0_axi_gpio is
   attribute C_TRI_DEFAULT of hdmi_tx_bd_axi_gpio_0_0_axi_gpio : entity is "32'b11111111111111111111111111111111";
   attribute C_TRI_DEFAULT_2 : string;
   attribute C_TRI_DEFAULT_2 of hdmi_tx_bd_axi_gpio_0_0_axi_gpio : entity is "32'b11111111111111111111111111111111";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_tx_bd_axi_gpio_0_0_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of hdmi_tx_bd_axi_gpio_0_0_axi_gpio : entity is "yes";
   attribute ip_group : string;

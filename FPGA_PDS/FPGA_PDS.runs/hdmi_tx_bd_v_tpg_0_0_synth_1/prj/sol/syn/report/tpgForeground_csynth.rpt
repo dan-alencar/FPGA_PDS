@@ -1,0 +1,221 @@
+
+
+================================================================
+== Vitis HLS Report for 'tpgForeground'
+================================================================
+* Date:           Wed Jun  3 12:59:10 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: artixuplus
+* Target device:  xcau15p-ffvb676-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.088 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+------------+-----------+------------+-----+------------+---------+
+    |   Latency (cycles)   |   Latency (absolute)   |     Interval     | Pipeline|
+    |   min   |     max    |    min    |     max    | min |     max    |   Type  |
+    +---------+------------+-----------+------------+-----+------------+---------+
+    |        2|  2147713022|  20.000 ns|  21.477 sec|    2|  2147713022|       no|
+    +---------+------------+-----------+------------+-----+------------+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------+-----------------------------------------+---------+---------+-----------+----------+-----+-----+-------------------+
+        |                                                    |                                         |  Latency (cycles) |  Latency (absolute)  |  Interval |      Pipeline     |
+        |                      Instance                      |                  Module                 |   min   |   max   |    min    |    max   | min | max |        Type       |
+        +----------------------------------------------------+-----------------------------------------+---------+---------+-----------+----------+-----+-----+-------------------+
+        |grp_tpgForeground_Pipeline_VITIS_LOOP_774_2_fu_201  |tpgForeground_Pipeline_VITIS_LOOP_774_2  |        3|    32770|  30.000 ns|  0.328 ms|    0|    0|  loop pipeline stp|
+        +----------------------------------------------------+-----------------------------------------+---------+---------+-----------+----------+-----+-----+-------------------+
+
+        * Loop: 
+        +--------------------+---------+------------+-----------+-----------+-----------+-----------+----------+
+        |                    |   Latency (cycles)   | Iteration |  Initiation Interval  |    Trip   |          |
+        |      Loop Name     |   min   |     max    |  Latency  |  achieved |   target  |   Count   | Pipelined|
+        +--------------------+---------+------------+-----------+-----------+-----------+-----------+----------+
+        |- VITIS_LOOP_772_1  |        0|  2147713020|  5 ~ 32772|          -|          -|  0 ~ 65535|        no|
+        +--------------------+---------+------------+-----------+-----------+-----------+-----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    186|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|     143|    954|    -|
+|Memory           |        0|    -|       8|      1|    -|
+|Multiplexer      |        -|    -|       0|     71|    -|
+|Register         |        -|    -|     303|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     454|   1212|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      288|  576|  155520|  77760|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------+-----------------------------------------+---------+----+-----+-----+-----+
+    |                      Instance                      |                  Module                 | BRAM_18K| DSP|  FF | LUT | URAM|
+    +----------------------------------------------------+-----------------------------------------+---------+----+-----+-----+-----+
+    |grp_tpgForeground_Pipeline_VITIS_LOOP_774_2_fu_201  |tpgForeground_Pipeline_VITIS_LOOP_774_2  |        0|   0|  143|  954|    0|
+    +----------------------------------------------------+-----------------------------------------+---------+----+-----+-----+-----+
+    |Total                                               |                                         |        0|   0|  143|  954|    0|
+    +----------------------------------------------------+-----------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +------------+------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |   Memory   |               Module               | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +------------+------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |whiYuv_2_U  |tpgForeground_whiYuv_2_ROM_AUTO_1R  |        0|  8|   1|    0|     3|    8|     1|           24|
+    +------------+------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total       |                                    |        0|  8|   1|    0|     3|    8|     1|           24|
+    +------------+------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |y_2_fu_382_p2            |         +|   0|  0|  23|          16|           1|
+    |sub_ln1881_fu_346_p2     |         -|   0|  0|  23|          16|          16|
+    |sub_ln1882_fu_352_p2     |         -|   0|  0|  23|          16|          16|
+    |and_ln1989_fu_312_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln1991_fu_326_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln1993_fu_340_p2     |       and|   0|  0|   2|           1|           1|
+    |icmp_ln1947_fu_266_p2    |      icmp|   0|  0|  14|           7|           1|
+    |icmp_ln1963_fu_388_p2    |      icmp|   0|  0|  23|          16|          16|
+    |icmp_ln1974_fu_295_p2    |      icmp|   0|  0|  15|           8|           1|
+    |icmp_ln1975_fu_241_p2    |      icmp|   0|  0|  15|           8|           1|
+    |icmp_ln772_fu_377_p2     |      icmp|   0|  0|  23|          16|          16|
+    |ap_block_state1          |        or|   0|  0|   2|           1|           1|
+    |select_ln1947_fu_358_p3  |    select|   0|  0|   8|           1|           8|
+    |select_ln1975_fu_247_p3  |    select|   0|  0|   2|           1|           1|
+    |select_ln1977_fu_300_p3  |    select|   0|  0|   9|           1|           6|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |Total                    |          |   0|  0| 186|         110|          87|
+    +-------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------+----+-----------+-----+-----------+
+    |          Name          | LUT| Input Size| Bits| Total Bits|
+    +------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm               |  26|          5|    1|          5|
+    |ap_done                 |   9|          2|    1|          2|
+    |boxHCoord_loc_0_fu_112  |   9|          2|   16|         32|
+    |boxVCoord_loc_0_fu_108  |   9|          2|   16|         32|
+    |real_start              |   9|          2|    1|          2|
+    |y_fu_104                |   9|          2|   16|         32|
+    +------------------------+----+-----------+-----+-----------+
+    |Total                   |  71|         15|   51|        105|
+    +------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |                               Name                              | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |and_ln1989_reg_495                                               |   1|   0|    1|          0|
+    |and_ln1991_reg_500                                               |   1|   0|    1|          0|
+    |and_ln1993_reg_505                                               |   1|   0|    1|          0|
+    |ap_CS_fsm                                                        |   4|   0|    4|          0|
+    |ap_done_reg                                                      |   1|   0|    1|          0|
+    |boxColorB_val_read_reg_439                                       |   8|   0|    8|          0|
+    |boxColorG_val_read_reg_444                                       |   8|   0|    8|          0|
+    |boxColorR_val_read_reg_449                                       |   8|   0|    8|          0|
+    |boxHCoord                                                        |  16|   0|   16|          0|
+    |boxHCoord_loc_0_fu_112                                           |  16|   0|   16|          0|
+    |boxSize_val_read_reg_454                                         |  16|   0|   16|          0|
+    |boxVCoord                                                        |  16|   0|   16|          0|
+    |boxVCoord_loc_0_fu_108                                           |  16|   0|   16|          0|
+    |colorFormat_val_read_reg_418                                     |   8|   0|    8|          0|
+    |crossHairX_val_read_reg_464                                      |  16|   0|   16|          0|
+    |crossHairY_val_read_reg_459                                      |  16|   0|   16|          0|
+    |grp_tpgForeground_Pipeline_VITIS_LOOP_774_2_fu_201_ap_start_reg  |   1|   0|    1|          0|
+    |height_val_read_reg_485                                          |  16|   0|   16|          0|
+    |icmp_ln1947_reg_429                                              |   1|   0|    1|          0|
+    |icmp_ln1963_reg_543                                              |   1|   0|    1|          0|
+    |maskId_val_read_reg_470                                          |   8|   0|    8|          0|
+    |motionSpeed_val_read_reg_434                                     |   8|   0|    8|          0|
+    |patternId_val_read_reg_475                                       |   8|   0|    8|          0|
+    |select_ln1947_reg_520                                            |   8|   0|    8|          0|
+    |select_ln1977_reg_490                                            |   3|   0|    8|          5|
+    |shl_ln_reg_525                                                   |   8|   0|    9|          1|
+    |start_once_reg                                                   |   1|   0|    1|          0|
+    |sub_ln1881_reg_510                                               |  16|   0|   16|          0|
+    |sub_ln1882_reg_515                                               |  16|   0|   16|          0|
+    |whiYuv_2_load_reg_530                                            |   8|   0|    8|          0|
+    |width_val_read_reg_480                                           |  16|   0|   16|          0|
+    |y_1_reg_535                                                      |  16|   0|   16|          0|
+    |y_fu_104                                                         |  16|   0|   16|          0|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                            | 303|   0|  309|          6|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+-----------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++--------------------------+-----+-----+------------+-----------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|    tpgForeground|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|    tpgForeground|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|    tpgForeground|  return value|
+|start_full_n              |   in|    1|  ap_ctrl_hs|    tpgForeground|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|    tpgForeground|  return value|
+|ap_continue               |   in|    1|  ap_ctrl_hs|    tpgForeground|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|    tpgForeground|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|    tpgForeground|  return value|
+|start_out                 |  out|    1|  ap_ctrl_hs|    tpgForeground|  return value|
+|start_write               |  out|    1|  ap_ctrl_hs|    tpgForeground|  return value|
+|bckgndYUV_dout            |   in|   48|     ap_fifo|        bckgndYUV|       pointer|
+|bckgndYUV_empty_n         |   in|    1|     ap_fifo|        bckgndYUV|       pointer|
+|bckgndYUV_read            |  out|    1|     ap_fifo|        bckgndYUV|       pointer|
+|bckgndYUV_num_data_valid  |   in|    5|     ap_fifo|        bckgndYUV|       pointer|
+|bckgndYUV_fifo_cap        |   in|    5|     ap_fifo|        bckgndYUV|       pointer|
+|height_val                |   in|   16|   ap_stable|       height_val|        scalar|
+|width_val                 |   in|   16|   ap_stable|        width_val|        scalar|
+|patternId_val             |   in|    8|   ap_stable|    patternId_val|        scalar|
+|maskId_val                |   in|    8|   ap_stable|       maskId_val|        scalar|
+|colorFormat_val           |   in|    8|   ap_stable|  colorFormat_val|        scalar|
+|crossHairX_val            |   in|   16|   ap_stable|   crossHairX_val|        scalar|
+|crossHairY_val            |   in|   16|   ap_stable|   crossHairY_val|        scalar|
+|boxSize_val               |   in|   16|   ap_stable|      boxSize_val|        scalar|
+|boxColorR_val             |   in|    8|   ap_stable|    boxColorR_val|        scalar|
+|boxColorG_val             |   in|    8|   ap_stable|    boxColorG_val|        scalar|
+|boxColorB_val             |   in|    8|   ap_stable|    boxColorB_val|        scalar|
+|motionSpeed_val           |   in|    8|   ap_stable|  motionSpeed_val|        scalar|
+|ovrlayYUV_din             |  out|   48|     ap_fifo|        ovrlayYUV|       pointer|
+|ovrlayYUV_full_n          |   in|    1|     ap_fifo|        ovrlayYUV|       pointer|
+|ovrlayYUV_write           |  out|    1|     ap_fifo|        ovrlayYUV|       pointer|
+|ovrlayYUV_num_data_valid  |   in|   32|     ap_fifo|        ovrlayYUV|       pointer|
+|ovrlayYUV_fifo_cap        |   in|   32|     ap_fifo|        ovrlayYUV|       pointer|
++--------------------------+-----+-----+------------+-----------------+--------------+
+

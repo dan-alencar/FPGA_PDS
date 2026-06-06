@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-// Date        : Tue Jun  2 22:27:16 2026
+// Date        : Tue Jun  2 22:27:15 2026
 // Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_microblaze_0_clk_wiz_1_0/hdmi_tx_bd_microblaze_0_clk_wiz_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top hdmi_tx_bd_microblaze_0_clk_wiz_1_0 -prefix
+//               hdmi_tx_bd_microblaze_0_clk_wiz_1_0_ hdmi_tx_bd_microblaze_0_clk_wiz_1_0_sim_netlist.v
 // Design      : hdmi_tx_bd_microblaze_0_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -35,7 +35,7 @@ module hdmi_tx_bd_microblaze_0_clk_wiz_1_0
   wire locked;
   wire reset;
 
-  hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz inst
+  hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz inst
        (.clk_in1_n(clk_in1_n),
         .clk_in1_p(clk_in1_p),
         .clk_out1(clk_out1),
@@ -44,7 +44,7 @@ module hdmi_tx_bd_microblaze_0_clk_wiz_1_0
         .reset(reset));
 endmodule
 
-module hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz
+module hdmi_tx_bd_microblaze_0_clk_wiz_1_0_hdmi_tx_bd_microblaze_0_clk_wiz_1_0_clk_wiz
    (clk_out1,
     clk_out2,
     reset,

@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Tue Jun  2 22:46:15 2026
+//Date        : Wed Jun  3 12:58:12 2026
 //Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
 //Command     : generate_target hdmi_tx_bd.bd
 //Design      : hdmi_tx_bd
@@ -349,6 +349,11 @@ module hdmi_tx_bd
   wire [39:0]v_hdmi_tx_ss_0_LINK_DATA2_OUT_TDATA;
   wire v_hdmi_tx_ss_0_LINK_DATA2_OUT_TVALID;
   wire v_hdmi_tx_ss_0_irq;
+  wire [47:0]v_tpg_0_m_axis_video_TDATA;
+  wire [0:0]v_tpg_0_m_axis_video_TLAST;
+  wire v_tpg_0_m_axis_video_TREADY;
+  wire [0:0]v_tpg_0_m_axis_video_TUSER;
+  wire v_tpg_0_m_axis_video_TVALID;
   wire vid_phy_controller_0_irq;
   wire vid_phy_controller_0_rx_video_clk;
   wire vid_phy_controller_0_rxoutclk;
@@ -846,11 +851,11 @@ module hdmi_tx_bd
         .S_AXI_CPU_IN_wready(microblaze_0_axi_periph_M01_AXI_WREADY),
         .S_AXI_CPU_IN_wstrb(microblaze_0_axi_periph_M01_AXI_WSTRB),
         .S_AXI_CPU_IN_wvalid(microblaze_0_axi_periph_M01_AXI_WVALID),
-        .VIDEO_IN_tdata(axis_register_slice_0_M_AXIS_TDATA),
-        .VIDEO_IN_tlast(axis_register_slice_0_M_AXIS_TLAST),
-        .VIDEO_IN_tready(axis_register_slice_0_M_AXIS_TREADY),
-        .VIDEO_IN_tuser(axis_register_slice_0_M_AXIS_TUSER),
-        .VIDEO_IN_tvalid(axis_register_slice_0_M_AXIS_TVALID),
+        .VIDEO_IN_tdata(v_tpg_0_m_axis_video_TDATA),
+        .VIDEO_IN_tlast(v_tpg_0_m_axis_video_TLAST),
+        .VIDEO_IN_tready(v_tpg_0_m_axis_video_TREADY),
+        .VIDEO_IN_tuser(v_tpg_0_m_axis_video_TUSER),
+        .VIDEO_IN_tvalid(v_tpg_0_m_axis_video_TVALID),
         .acr_cts({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .acr_n({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .acr_valid(1'b0),
@@ -869,7 +874,11 @@ module hdmi_tx_bd
        (.ap_clk(microblaze_0_clk_wiz_1_clk_out2),
         .ap_rst_n(rst_clk_out2_peripheral_aresetn),
         .fid_in(1'b1),
-        .m_axis_video_TREADY(1'b1),
+        .m_axis_video_TDATA(v_tpg_0_m_axis_video_TDATA),
+        .m_axis_video_TLAST(v_tpg_0_m_axis_video_TLAST),
+        .m_axis_video_TREADY(v_tpg_0_m_axis_video_TREADY),
+        .m_axis_video_TUSER(v_tpg_0_m_axis_video_TUSER),
+        .m_axis_video_TVALID(v_tpg_0_m_axis_video_TVALID),
         .s_axi_CTRL_ARADDR(microblaze_0_axi_periph_M03_AXI_ARADDR),
         .s_axi_CTRL_ARREADY(microblaze_0_axi_periph_M03_AXI_ARREADY),
         .s_axi_CTRL_ARVALID(microblaze_0_axi_periph_M03_AXI_ARVALID),
@@ -886,7 +895,16 @@ module hdmi_tx_bd
         .s_axi_CTRL_WDATA(microblaze_0_axi_periph_M03_AXI_WDATA),
         .s_axi_CTRL_WREADY(microblaze_0_axi_periph_M03_AXI_WREADY),
         .s_axi_CTRL_WSTRB(microblaze_0_axi_periph_M03_AXI_WSTRB),
-        .s_axi_CTRL_WVALID(microblaze_0_axi_periph_M03_AXI_WVALID));
+        .s_axi_CTRL_WVALID(microblaze_0_axi_periph_M03_AXI_WVALID),
+        .s_axis_video_TDATA(axis_register_slice_0_M_AXIS_TDATA),
+        .s_axis_video_TDEST(1'b0),
+        .s_axis_video_TID(1'b0),
+        .s_axis_video_TKEEP({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_video_TLAST(axis_register_slice_0_M_AXIS_TLAST),
+        .s_axis_video_TREADY(axis_register_slice_0_M_AXIS_TREADY),
+        .s_axis_video_TSTRB({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_video_TUSER(axis_register_slice_0_M_AXIS_TUSER),
+        .s_axis_video_TVALID(axis_register_slice_0_M_AXIS_TVALID));
   hdmi_tx_bd_vid_phy_controller_0_0 vid_phy_controller_0
        (.drpclk(microblaze_0_Clk),
         .irq(vid_phy_controller_0_irq),

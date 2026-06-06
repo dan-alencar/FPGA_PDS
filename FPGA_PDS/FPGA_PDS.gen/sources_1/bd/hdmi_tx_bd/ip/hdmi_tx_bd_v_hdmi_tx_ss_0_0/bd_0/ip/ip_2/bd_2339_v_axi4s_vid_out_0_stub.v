@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-// Date        : Tue Jun  2 22:27:37 2026
+// Date        : Tue Jun  2 22:27:35 2026
 // Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_v_hdmi_tx_ss_0_0/bd_0/ip/ip_2/bd_2339_v_axi4s_vid_out_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top bd_2339_v_axi4s_vid_out_0 -prefix
+//               bd_2339_v_axi4s_vid_out_0_ bd_2339_v_axi4s_vid_out_0_stub.v
 // Design      : bd_2339_v_axi4s_vid_out_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcau15p-ffvb676-2-e

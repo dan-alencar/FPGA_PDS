@@ -106,7 +106,7 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
   set_param general.usePosixSpawnForFork 1
-  set_param physdb.placeDBImplUsesPlaceStorage 0
+  set_param bd.open.in_stealth_mode 4
   set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xcau15p-ffvb676-2-e

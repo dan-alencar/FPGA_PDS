@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
 -- Date        : Mon Jun  1 20:38:20 2026
 -- Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_ilmb_bram_if_cntlr_1/hdmi_tx_bd_ilmb_bram_if_cntlr_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top hdmi_tx_bd_ilmb_bram_if_cntlr_1 -prefix
+--               hdmi_tx_bd_ilmb_bram_if_cntlr_1_ hdmi_tx_bd_ilmb_bram_if_cntlr_1_sim_netlist.vhdl
 -- Design      : hdmi_tx_bd_ilmb_bram_if_cntlr_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -225,8 +225,6 @@ entity hdmi_tx_bd_ilmb_bram_if_cntlr_1_lmb_bram_if_cntlr is
   attribute C_UE_FAILING_REGISTERS of hdmi_tx_bd_ilmb_bram_if_cntlr_1_lmb_bram_if_cntlr : entity is 0;
   attribute C_WRITE_ACCESS : integer;
   attribute C_WRITE_ACCESS of hdmi_tx_bd_ilmb_bram_if_cntlr_1_lmb_bram_if_cntlr : entity is 2;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_tx_bd_ilmb_bram_if_cntlr_1_lmb_bram_if_cntlr : entity is "lmb_bram_if_cntlr";
 end hdmi_tx_bd_ilmb_bram_if_cntlr_1_lmb_bram_if_cntlr;
 
 architecture STRUCTURE of hdmi_tx_bd_ilmb_bram_if_cntlr_1_lmb_bram_if_cntlr is

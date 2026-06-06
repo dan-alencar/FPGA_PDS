@@ -78,6 +78,18 @@ module hdmi_tx_bd_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire TX_DDC_OUT_sda_t,
   (* X_INTERFACE_IGNORE = "true" *)
+  input wire RX_DDC_OUT_scl_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire RX_DDC_OUT_scl_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire RX_DDC_OUT_scl_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire RX_DDC_OUT_sda_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire RX_DDC_OUT_sda_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire RX_DDC_OUT_sda_t,
+  (* X_INTERFACE_IGNORE = "true" *)
   input wire SYS_CLK_N,
   (* X_INTERFACE_IGNORE = "true" *)
   input wire SYS_CLK_P,
@@ -114,18 +126,6 @@ module hdmi_tx_bd_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   input wire [2:0] hdmi_rx_n,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire RX_DDC_OUT_scl_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire RX_DDC_OUT_scl_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire RX_DDC_OUT_scl_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire RX_DDC_OUT_sda_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire RX_DDC_OUT_sda_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire RX_DDC_OUT_sda_t,
-  (* X_INTERFACE_IGNORE = "true" *)
   output wire HDMI_RX_HPD,
   (* X_INTERFACE_IGNORE = "true" *)
   input wire HDMI_RX_PWR_DET
@@ -144,6 +144,12 @@ module hdmi_tx_bd_sv (
     .TX_DDC_OUT_sda_i(TX_DDC_OUT_sda_i),
     .TX_DDC_OUT_sda_o(TX_DDC_OUT_sda_o),
     .TX_DDC_OUT_sda_t(TX_DDC_OUT_sda_t),
+    .RX_DDC_OUT_scl_i(RX_DDC_OUT_scl_i),
+    .RX_DDC_OUT_scl_o(RX_DDC_OUT_scl_o),
+    .RX_DDC_OUT_scl_t(RX_DDC_OUT_scl_t),
+    .RX_DDC_OUT_sda_i(RX_DDC_OUT_sda_i),
+    .RX_DDC_OUT_sda_o(RX_DDC_OUT_sda_o),
+    .RX_DDC_OUT_sda_t(RX_DDC_OUT_sda_t),
     .SYS_CLK_N(SYS_CLK_N),
     .SYS_CLK_P(SYS_CLK_P),
     .SYS_RST_N(SYS_RST_N),
@@ -162,12 +168,6 @@ module hdmi_tx_bd_sv (
     .HDMI_RCLKOUT_N(HDMI_RCLKOUT_N),
     .hdmi_rx_p(hdmi_rx_p),
     .hdmi_rx_n(hdmi_rx_n),
-    .RX_DDC_OUT_scl_i(RX_DDC_OUT_scl_i),
-    .RX_DDC_OUT_scl_o(RX_DDC_OUT_scl_o),
-    .RX_DDC_OUT_scl_t(RX_DDC_OUT_scl_t),
-    .RX_DDC_OUT_sda_i(RX_DDC_OUT_sda_i),
-    .RX_DDC_OUT_sda_o(RX_DDC_OUT_sda_o),
-    .RX_DDC_OUT_sda_t(RX_DDC_OUT_sda_t),
     .HDMI_RX_HPD(HDMI_RX_HPD),
     .HDMI_RX_PWR_DET(HDMI_RX_PWR_DET)
   );

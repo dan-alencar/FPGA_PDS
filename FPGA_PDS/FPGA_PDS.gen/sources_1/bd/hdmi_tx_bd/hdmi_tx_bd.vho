@@ -65,6 +65,12 @@ COMPONENT hdmi_tx_bd
     TX_DDC_OUT_sda_i : IN STD_LOGIC;
     TX_DDC_OUT_sda_o : OUT STD_LOGIC;
     TX_DDC_OUT_sda_t : OUT STD_LOGIC;
+    RX_DDC_OUT_scl_i : IN STD_LOGIC;
+    RX_DDC_OUT_scl_o : OUT STD_LOGIC;
+    RX_DDC_OUT_scl_t : OUT STD_LOGIC;
+    RX_DDC_OUT_sda_i : IN STD_LOGIC;
+    RX_DDC_OUT_sda_o : OUT STD_LOGIC;
+    RX_DDC_OUT_sda_t : OUT STD_LOGIC;
     SYS_CLK_N : IN STD_LOGIC;
     SYS_CLK_P : IN STD_LOGIC;
     SYS_RST_N : IN STD_LOGIC;
@@ -83,12 +89,6 @@ COMPONENT hdmi_tx_bd
     HDMI_RCLKOUT_N : IN STD_LOGIC;
     hdmi_rx_p : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     hdmi_rx_n : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-    RX_DDC_OUT_scl_i : IN STD_LOGIC;
-    RX_DDC_OUT_scl_o : OUT STD_LOGIC;
-    RX_DDC_OUT_scl_t : OUT STD_LOGIC;
-    RX_DDC_OUT_sda_i : IN STD_LOGIC;
-    RX_DDC_OUT_sda_o : OUT STD_LOGIC;
-    RX_DDC_OUT_sda_t : OUT STD_LOGIC;
     HDMI_RX_HPD : OUT STD_LOGIC;
     HDMI_RX_PWR_DET : IN STD_LOGIC
   );
@@ -113,6 +113,12 @@ your_instance_name : hdmi_tx_bd
     TX_DDC_OUT_sda_i => TX_DDC_OUT_sda_i,
     TX_DDC_OUT_sda_o => TX_DDC_OUT_sda_o,
     TX_DDC_OUT_sda_t => TX_DDC_OUT_sda_t,
+    RX_DDC_OUT_scl_i => RX_DDC_OUT_scl_i,
+    RX_DDC_OUT_scl_o => RX_DDC_OUT_scl_o,
+    RX_DDC_OUT_scl_t => RX_DDC_OUT_scl_t,
+    RX_DDC_OUT_sda_i => RX_DDC_OUT_sda_i,
+    RX_DDC_OUT_sda_o => RX_DDC_OUT_sda_o,
+    RX_DDC_OUT_sda_t => RX_DDC_OUT_sda_t,
     SYS_CLK_N => SYS_CLK_N,
     SYS_CLK_P => SYS_CLK_P,
     SYS_RST_N => SYS_RST_N,
@@ -131,12 +137,6 @@ your_instance_name : hdmi_tx_bd
     HDMI_RCLKOUT_N => HDMI_RCLKOUT_N,
     hdmi_rx_p => hdmi_rx_p,
     hdmi_rx_n => hdmi_rx_n,
-    RX_DDC_OUT_scl_i => RX_DDC_OUT_scl_i,
-    RX_DDC_OUT_scl_o => RX_DDC_OUT_scl_o,
-    RX_DDC_OUT_scl_t => RX_DDC_OUT_scl_t,
-    RX_DDC_OUT_sda_i => RX_DDC_OUT_sda_i,
-    RX_DDC_OUT_sda_o => RX_DDC_OUT_sda_o,
-    RX_DDC_OUT_sda_t => RX_DDC_OUT_sda_t,
     HDMI_RX_HPD => HDMI_RX_HPD,
     HDMI_RX_PWR_DET => HDMI_RX_PWR_DET
   );

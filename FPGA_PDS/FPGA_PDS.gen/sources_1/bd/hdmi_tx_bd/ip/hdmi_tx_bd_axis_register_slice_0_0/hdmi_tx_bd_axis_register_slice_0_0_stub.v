@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
 // Date        : Tue Jun  2 22:27:19 2026
 // Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axis_register_slice_0_0/hdmi_tx_bd_axis_register_slice_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top hdmi_tx_bd_axis_register_slice_0_0 -prefix
+//               hdmi_tx_bd_axis_register_slice_0_0_ hdmi_tx_bd_axis_register_slice_0_0_stub.v
 // Design      : hdmi_tx_bd_axis_register_slice_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcau15p-ffvb676-2-e

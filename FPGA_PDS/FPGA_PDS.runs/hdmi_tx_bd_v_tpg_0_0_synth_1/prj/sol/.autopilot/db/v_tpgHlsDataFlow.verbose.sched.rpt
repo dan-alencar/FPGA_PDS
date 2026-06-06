@@ -1,0 +1,241 @@
+
+
+================================================================
+== Vitis HLS Report for 'v_tpgHlsDataFlow'
+================================================================
+* Date:           Wed Jun  3 12:59:09 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: artixuplus
+* Target device:  xcau15p-ffvb676-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.199 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+------------+----------+------------+-----+------------+----------+
+    |   Latency (cycles)   |   Latency (absolute)  |     Interval     | Pipeline |
+    |   min   |     max    |    min   |     max    | min |     max    |   Type   |
+    +---------+------------+----------+------------+-----+------------+----------+
+    |       22|  2148958187|  0.220 us|  21.490 sec|    3|  2148958188|  dataflow|
+    +---------+------------+----------+------------+-----+------------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 8, States = { 1 2 3 4 5 6 7 8 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.83>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%colorFormat_val27_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %colorFormat_val27" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 9 'read' 'colorFormat_val27_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%enableInput_val18_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %enableInput_val18" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 10 'read' 'enableInput_val18_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%width_val10_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %width_val10" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 11 'read' 'width_val10_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%height_val5_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %height_val5" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 12 'read' 'height_val5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%trunc_ln332 = trunc i16 %width_val10_read" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 13 'trunc' 'trunc_ln332' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%trunc_ln332_1 = trunc i16 %height_val5_read" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 14 'trunc' 'trunc_ln332_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%srcYUV = alloca i64 1" [prj/sol/.autopilot/db/v_tpg.cpp:322]   --->   Operation 15 'alloca' 'srcYUV' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 16> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%bckgndYUV = alloca i64 1" [prj/sol/.autopilot/db/v_tpg.cpp:324]   --->   Operation 16 'alloca' 'bckgndYUV' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 16> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%ovrlayYUV = alloca i64 1" [prj/sol/.autopilot/db/v_tpg.cpp:325]   --->   Operation 17 'alloca' 'ovrlayYUV' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 16> <FIFO>
+ST_1 : Operation 18 [2/2] (1.83ns)   --->   "%call_ln342 = call void @AXIvideo2MultiPixStream, i48 %s_axis_video_V_data_V, i6 %s_axis_video_V_keep_V, i6 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, i48 %srcYUV, i8 %enableInput_val18_read, i11 %trunc_ln332_1, i11 %trunc_ln332, i8 %colorFormat_val27_read" [prj/sol/.autopilot/db/v_tpg.cpp:342]   --->   Operation 18 'call' 'call_ln342' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 19 [1/2] (0.00ns)   --->   "%call_ln342 = call void @AXIvideo2MultiPixStream, i48 %s_axis_video_V_data_V, i6 %s_axis_video_V_keep_V, i6 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, i48 %srcYUV, i8 %enableInput_val18_read, i11 %trunc_ln332_1, i11 %trunc_ln332, i8 %colorFormat_val27_read" [prj/sol/.autopilot/db/v_tpg.cpp:342]   --->   Operation 19 'call' 'call_ln342' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 1.79>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%dpYUVCoef_val39_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %dpYUVCoef_val39" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 20 'read' 'dpYUVCoef_val39_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%dpDynamicRange_val38_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %dpDynamicRange_val38" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 21 'read' 'dpDynamicRange_val38_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%ZplateVerContDelta_val33_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %ZplateVerContDelta_val33" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 22 'read' 'ZplateVerContDelta_val33_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%ZplateVerContStart_val32_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %ZplateVerContStart_val32" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 23 'read' 'ZplateVerContStart_val32_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%ZplateHorContDelta_val31_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %ZplateHorContDelta_val31" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 24 'read' 'ZplateHorContDelta_val31_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%ZplateHorContStart_val30_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %ZplateHorContStart_val30" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 25 'read' 'ZplateHorContStart_val30_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%motionSpeed_val23_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %motionSpeed_val23" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 26 'read' 'motionSpeed_val23_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%bckgndId_val19_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %bckgndId_val19" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 27 'read' 'bckgndId_val19_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%passthruEndY_val16_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %passthruEndY_val16" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 28 'read' 'passthruEndY_val16_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%passthruEndX_val15_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %passthruEndX_val15" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 29 'read' 'passthruEndX_val15_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%passthruStartY_val14_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %passthruStartY_val14" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 30 'read' 'passthruStartY_val14_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%passthruStartX_val13_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %passthruStartX_val13" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 31 'read' 'passthruStartX_val13_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 32 [2/2] (1.79ns)   --->   "%call_ln345 = call void @tpgBackground, i48 %srcYUV, i16 %height_val5_read, i16 %width_val10_read, i16 %passthruStartX_val13_read, i16 %passthruStartY_val14_read, i16 %passthruEndX_val15_read, i16 %passthruEndY_val16_read, i8 %enableInput_val18_read, i8 %bckgndId_val19_read, i16 %ZplateHorContStart_val30_read, i16 %ZplateHorContDelta_val31_read, i16 %ZplateVerContStart_val32_read, i16 %ZplateVerContDelta_val33_read, i8 %dpDynamicRange_val38_read, i8 %dpYUVCoef_val39_read, i8 %motionSpeed_val23_read, i8 %colorFormat_val27_read, i48 %bckgndYUV, i8 %rampStart, i32 %s, i8 %redYuv, i8 %grnYuv, i8 %bluYuv, i8 %blkYuv, i8 %whiYuv, i8 %whiYuv_1, i8 %blkYuv_1, i16 %rampVal_1, i8 %rampVal, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_8, i16 %zonePlateVAddr, i3 %vBarSel, i3 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_3, i3 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_2, i16 %hdata, i8 %vBarSel_2, i3 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_3, i3 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_2, i16 %rampVal_2, i1 %vBarSel_1, i3 %tpgPatternDPColorSquare_unsigned_short_unsigned_short_unsigned_char_unsigned_3, i3 %tpgPatternDPColorSquare_unsigned_short_unsigned_short_unsigned_char_unsigned_2, i8 %tpgBarSelYuv_y, i8 %tpgBarSelYuv_u, i8 %tpgBarSelYuv_v, i11 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_xBar_9, i2 %tpgBarSelRgb_r, i2 %tpgBarSelRgb_g, i2 %tpgBarSelRgb_b, i11 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_xBar, i20 %tpgSinTableArray, i16 %zonePlateVDelta, i3 %tpgTartanBarArray, i10 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign, i10 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_1, i10 %yCount, i10 %tpgPatternCrossHatch_unsigned_short_unsigned_short_unsigned_short_unsigned_sh, i10 %tpgPatternCrossHatch_unsigned_short_unsigned_short_unsigned_short_unsigned_sh_1, i1 %vHatch, i10 %yCount_2, i8 %tpgSinTableArray_9bit_0, i8 %tpgSinTableArray_9bit_1, i9 %tpgSinTableArray_9bit_2, i2 %tpgCheckerBoardArray, i10 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_s, i10 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_1, i10 %yCount_3, i28 %rSerie, i28 %gSerie, i28 %bSerie, i8 %DPtpgBarSelYuv_709_y, i8 %DPtpgBarSelYuv_709_u, i8 %DPtpgBarSelYuv_709_v, i3 %DPtpgBarArray, i10 %tpgPatternDPColorSquare_unsigned_short_unsigned_short_unsigned_char_unsigned_s, i2 %DPtpgBarSelRgb_VESA_r, i2 %DPtpgBarSelRgb_VESA_g, i2 %DPtpgBarSelRgb_VESA_b, i6 %DPtpgBarSelRgb_CEA_r, i6 %DPtpgBarSelRgb_CEA_g, i6 %DPtpgBarSelRgb_CEA_b, i8 %DPtpgBarSelYuv_601_y, i8 %DPtpgBarSelYuv_601_u, i8 %DPtpgBarSelYuv_601_v, i10 %tpgPatternDPColorSquare_unsigned_short_unsigned_short_unsigned_char_unsigned_1, i6 %yCount_1" [prj/sol/.autopilot/db/v_tpg.cpp:345]   --->   Operation 32 'call' 'call_ln345' <Predicate = true> <Delay = 1.79> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 0.85>
+ST_4 : Operation 33 [1/2] (0.85ns)   --->   "%call_ln345 = call void @tpgBackground, i48 %srcYUV, i16 %height_val5_read, i16 %width_val10_read, i16 %passthruStartX_val13_read, i16 %passthruStartY_val14_read, i16 %passthruEndX_val15_read, i16 %passthruEndY_val16_read, i8 %enableInput_val18_read, i8 %bckgndId_val19_read, i16 %ZplateHorContStart_val30_read, i16 %ZplateHorContDelta_val31_read, i16 %ZplateVerContStart_val32_read, i16 %ZplateVerContDelta_val33_read, i8 %dpDynamicRange_val38_read, i8 %dpYUVCoef_val39_read, i8 %motionSpeed_val23_read, i8 %colorFormat_val27_read, i48 %bckgndYUV, i8 %rampStart, i32 %s, i8 %redYuv, i8 %grnYuv, i8 %bluYuv, i8 %blkYuv, i8 %whiYuv, i8 %whiYuv_1, i8 %blkYuv_1, i16 %rampVal_1, i8 %rampVal, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel, i8 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_hBarSel_8, i16 %zonePlateVAddr, i3 %vBarSel, i3 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_3, i3 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_2, i16 %hdata, i8 %vBarSel_2, i3 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_3, i3 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_2, i16 %rampVal_2, i1 %vBarSel_1, i3 %tpgPatternDPColorSquare_unsigned_short_unsigned_short_unsigned_char_unsigned_3, i3 %tpgPatternDPColorSquare_unsigned_short_unsigned_short_unsigned_char_unsigned_2, i8 %tpgBarSelYuv_y, i8 %tpgBarSelYuv_u, i8 %tpgBarSelYuv_v, i11 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_xBar_9, i2 %tpgBarSelRgb_r, i2 %tpgBarSelRgb_g, i2 %tpgBarSelRgb_b, i11 %tpgPatternColorBars_unsigned_short_unsigned_short_unsigned_char_int_xBar, i20 %tpgSinTableArray, i16 %zonePlateVDelta, i3 %tpgTartanBarArray, i10 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign, i10 %tpgPatternTartanColorBars_unsigned_short_unsigned_short_unsigned_short_unsign_1, i10 %yCount, i10 %tpgPatternCrossHatch_unsigned_short_unsigned_short_unsigned_short_unsigned_sh, i10 %tpgPatternCrossHatch_unsigned_short_unsigned_short_unsigned_short_unsigned_sh_1, i1 %vHatch, i10 %yCount_2, i8 %tpgSinTableArray_9bit_0, i8 %tpgSinTableArray_9bit_1, i9 %tpgSinTableArray_9bit_2, i2 %tpgCheckerBoardArray, i10 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_s, i10 %tpgPatternCheckerBoard_unsigned_short_unsigned_short_unsigned_short_unsigned_1, i10 %yCount_3, i28 %rSerie, i28 %gSerie, i28 %bSerie, i8 %DPtpgBarSelYuv_709_y, i8 %DPtpgBarSelYuv_709_u, i8 %DPtpgBarSelYuv_709_v, i3 %DPtpgBarArray, i10 %tpgPatternDPColorSquare_unsigned_short_unsigned_short_unsigned_char_unsigned_s, i2 %DPtpgBarSelRgb_VESA_r, i2 %DPtpgBarSelRgb_VESA_g, i2 %DPtpgBarSelRgb_VESA_b, i6 %DPtpgBarSelRgb_CEA_r, i6 %DPtpgBarSelRgb_CEA_g, i6 %DPtpgBarSelRgb_CEA_b, i8 %DPtpgBarSelYuv_601_y, i8 %DPtpgBarSelYuv_601_u, i8 %DPtpgBarSelYuv_601_v, i10 %tpgPatternDPColorSquare_unsigned_short_unsigned_short_unsigned_char_unsigned_1, i6 %yCount_1" [prj/sol/.autopilot/db/v_tpg.cpp:345]   --->   Operation 33 'call' 'call_ln345' <Predicate = true> <Delay = 0.85> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 1.79>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "%boxColorB_val37_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %boxColorB_val37" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 34 'read' 'boxColorB_val37_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%boxColorG_val36_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %boxColorG_val36" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 35 'read' 'boxColorG_val36_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 36 [1/1] (0.00ns)   --->   "%boxColorR_val35_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %boxColorR_val35" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 36 'read' 'boxColorR_val35_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%boxSize_val34_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %boxSize_val34" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 37 'read' 'boxSize_val34_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%crossHairY_val29_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %crossHairY_val29" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 38 'read' 'crossHairY_val29_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%crossHairX_val28_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %crossHairX_val28" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 39 'read' 'crossHairX_val28_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 40 [1/1] (0.00ns)   --->   "%maskId_val21_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %maskId_val21" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 40 'read' 'maskId_val21_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 41 [1/1] (0.00ns)   --->   "%ovrlayId_val20_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %ovrlayId_val20" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 41 'read' 'ovrlayId_val20_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 42 [2/2] (1.79ns)   --->   "%call_ln358 = call void @tpgForeground, i48 %bckgndYUV, i16 %height_val5_read, i16 %width_val10_read, i8 %ovrlayId_val20_read, i8 %maskId_val21_read, i8 %colorFormat_val27_read, i16 %crossHairX_val28_read, i16 %crossHairY_val29_read, i16 %boxSize_val34_read, i8 %boxColorR_val35_read, i8 %boxColorG_val36_read, i8 %boxColorB_val37_read, i8 %motionSpeed_val23_read, i48 %ovrlayYUV, i8 %whiYuv_2, i16 %boxHCoord, i16 %boxVCoord, i1 %vDir, i1 %hDir" [prj/sol/.autopilot/db/v_tpg.cpp:358]   --->   Operation 42 'call' 'call_ln358' <Predicate = true> <Delay = 1.79> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 0.85>
+ST_6 : Operation 43 [1/2] (0.85ns)   --->   "%call_ln358 = call void @tpgForeground, i48 %bckgndYUV, i16 %height_val5_read, i16 %width_val10_read, i8 %ovrlayId_val20_read, i8 %maskId_val21_read, i8 %colorFormat_val27_read, i16 %crossHairX_val28_read, i16 %crossHairY_val29_read, i16 %boxSize_val34_read, i8 %boxColorR_val35_read, i8 %boxColorG_val36_read, i8 %boxColorB_val37_read, i8 %motionSpeed_val23_read, i48 %ovrlayYUV, i8 %whiYuv_2, i16 %boxHCoord, i16 %boxVCoord, i1 %vDir, i1 %hDir" [prj/sol/.autopilot/db/v_tpg.cpp:358]   --->   Operation 43 'call' 'call_ln358' <Predicate = true> <Delay = 0.85> <CoreType = "Generic">   --->   Generic Core
+
+State 7 <SV = 6> <Delay = 2.62>
+ST_7 : Operation 44 [1/1] (0.00ns)   --->   "%fid_in_val12_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %fid_in_val12" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 44 'read' 'fid_in_val12_read' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 45 [1/1] (0.00ns)   --->   "%field_id_val11_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %field_id_val11" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 45 'read' 'field_id_val11_read' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 46 [2/2] (2.62ns)   --->   "%call_ln399 = call void @MultiPixStream2AXIvideo, i48 %ovrlayYUV, i48 %m_axis_video_V_data_V, i6 %m_axis_video_V_keep_V, i6 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, i11 %trunc_ln332_1, i11 %trunc_ln332, i8 %colorFormat_val27_read, i1 %fid_in_val12_read, i1 %fid, i16 %field_id_val11_read, i1 %fidStored, i16 %counter" [prj/sol/.autopilot/db/v_tpg.cpp:399]   --->   Operation 46 'call' 'call_ln399' <Predicate = true> <Delay = 2.62> <CoreType = "Generic">   --->   Generic Core
+
+State 8 <SV = 7> <Delay = 0.79>
+ST_8 : Operation 47 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %dpYUVCoef_val39, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 47 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 48 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %dpDynamicRange_val38, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 48 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 49 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %boxColorB_val37, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 49 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 50 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %boxColorG_val36, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 50 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 51 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %boxColorR_val35, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 51 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 52 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %boxSize_val34, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 52 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 53 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %ZplateVerContDelta_val33, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 53 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 54 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %ZplateVerContStart_val32, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 54 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 55 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %ZplateHorContDelta_val31, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 55 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 56 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %ZplateHorContStart_val30, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 56 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 57 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %crossHairY_val29, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 57 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 58 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %crossHairX_val28, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 58 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 59 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %colorFormat_val27, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 59 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 60 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %motionSpeed_val23, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 60 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 61 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %maskId_val21, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 61 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 62 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %ovrlayId_val20, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 62 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 63 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %bckgndId_val19, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 63 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 64 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %enableInput_val18, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 64 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 65 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %passthruEndY_val16, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 65 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 66 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %passthruEndX_val15, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 66 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 67 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %passthruStartY_val14, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 67 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 68 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %passthruStartX_val13, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 68 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 69 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i1 %fid_in_val12, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 69 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 70 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %field_id_val11, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 70 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 71 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %width_val10, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 71 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 72 [1/1] (0.00ns)   --->   "%specstablecontent_ln332 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %height_val5, i1 1, void @p_str" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 72 'specstablecontent' 'specstablecontent_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 73 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln332 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_15" [prj/sol/.autopilot/db/v_tpg.cpp:332]   --->   Operation 73 'specdataflowpipeline' 'specdataflowpipeline_ln332' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 74 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i48 %m_axis_video_V_data_V, i6 %m_axis_video_V_keep_V, i6 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, void @empty_45"   --->   Operation 74 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 75 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i48 %s_axis_video_V_data_V, i6 %s_axis_video_V_keep_V, i6 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, void @empty_34"   --->   Operation 75 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 76 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %m_axis_video_V_dest_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_user_V, i6 %m_axis_video_V_strb_V, i6 %m_axis_video_V_keep_V, i48 %m_axis_video_V_data_V, void @empty_13, i32 0, i32 0, void @empty_4, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 76 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 77 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axis_video_V_dest_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_user_V, i6 %s_axis_video_V_strb_V, i6 %s_axis_video_V_keep_V, i48 %s_axis_video_V_data_V, void @empty_13, i32 0, i32 0, void @empty_4, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 77 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 78 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @srcYUV_str, i32 1, void @p_str, void @p_str, i32 16, i32 16, i48 %srcYUV, i48 %srcYUV"   --->   Operation 78 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 79 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %srcYUV, void @empty_35, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 79 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 80 [1/1] (0.00ns)   --->   "%empty_71 = specchannel i32 @_ssdm_op_SpecChannel, void @bckgndYUV_str, i32 1, void @p_str, void @p_str, i32 16, i32 16, i48 %bckgndYUV, i48 %bckgndYUV"   --->   Operation 80 'specchannel' 'empty_71' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 81 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %bckgndYUV, void @empty_35, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 81 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 82 [1/1] (0.00ns)   --->   "%empty_72 = specchannel i32 @_ssdm_op_SpecChannel, void @ovrlayYUV_str, i32 1, void @p_str, void @p_str, i32 16, i32 16, i48 %ovrlayYUV, i48 %ovrlayYUV"   --->   Operation 82 'specchannel' 'empty_72' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 83 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %ovrlayYUV, void @empty_35, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 83 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 84 [1/2] (0.79ns)   --->   "%call_ln399 = call void @MultiPixStream2AXIvideo, i48 %ovrlayYUV, i48 %m_axis_video_V_data_V, i6 %m_axis_video_V_keep_V, i6 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, i11 %trunc_ln332_1, i11 %trunc_ln332, i8 %colorFormat_val27_read, i1 %fid_in_val12_read, i1 %fid, i16 %field_id_val11_read, i1 %fidStored, i16 %counter" [prj/sol/.autopilot/db/v_tpg.cpp:399]   --->   Operation 84 'call' 'call_ln399' <Predicate = true> <Delay = 0.79> <CoreType = "Generic">   --->   Generic Core
+ST_8 : Operation 85 [1/1] (0.00ns)   --->   "%ret_ln401 = ret" [prj/sol/.autopilot/db/v_tpg.cpp:401]   --->   Operation 85 'ret' 'ret_ln401' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.838ns
+The critical path consists of the following:
+	wire read operation ('colorFormat_val27_read', prj/sol/.autopilot/db/v_tpg.cpp:332) on port 'colorFormat_val27' (prj/sol/.autopilot/db/v_tpg.cpp:332) [130]  (0.000 ns)
+	'call' operation ('call_ln342', prj/sol/.autopilot/db/v_tpg.cpp:342) to 'AXIvideo2MultiPixStream' [186]  (1.838 ns)
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+ <State 3>: 1.792ns
+The critical path consists of the following:
+	wire read operation ('dpYUVCoef_val39_read', prj/sol/.autopilot/db/v_tpg.cpp:332) on port 'dpYUVCoef_val39' (prj/sol/.autopilot/db/v_tpg.cpp:332) [118]  (0.000 ns)
+	'call' operation ('call_ln345', prj/sol/.autopilot/db/v_tpg.cpp:345) to 'tpgBackground' [187]  (1.792 ns)
+
+ <State 4>: 0.853ns
+The critical path consists of the following:
+	'call' operation ('call_ln345', prj/sol/.autopilot/db/v_tpg.cpp:345) to 'tpgBackground' [187]  (0.853 ns)
+
+ <State 5>: 1.792ns
+The critical path consists of the following:
+	wire read operation ('boxColorB_val37_read', prj/sol/.autopilot/db/v_tpg.cpp:332) on port 'boxColorB_val37' (prj/sol/.autopilot/db/v_tpg.cpp:332) [120]  (0.000 ns)
+	'call' operation ('call_ln358', prj/sol/.autopilot/db/v_tpg.cpp:358) to 'tpgForeground' [188]  (1.792 ns)
+
+ <State 6>: 0.853ns
+The critical path consists of the following:
+	'call' operation ('call_ln358', prj/sol/.autopilot/db/v_tpg.cpp:358) to 'tpgForeground' [188]  (0.853 ns)
+
+ <State 7>: 2.625ns
+The critical path consists of the following:
+	wire read operation ('fid_in_val12_read', prj/sol/.autopilot/db/v_tpg.cpp:332) on port 'fid_in_val12' (prj/sol/.autopilot/db/v_tpg.cpp:332) [140]  (0.000 ns)
+	'call' operation ('call_ln399', prj/sol/.autopilot/db/v_tpg.cpp:399) to 'MultiPixStream2AXIvideo' [189]  (2.625 ns)
+
+ <State 8>: 0.798ns
+The critical path consists of the following:
+	'call' operation ('call_ln399', prj/sol/.autopilot/db/v_tpg.cpp:399) to 'MultiPixStream2AXIvideo' [189]  (0.798 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

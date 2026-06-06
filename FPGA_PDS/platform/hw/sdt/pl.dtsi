@@ -443,7 +443,7 @@
 					xlnx,video-width = <10>;
 					xlnx,video-format = <0>;
 					hdmirx_outv_hdmi_rx_ss_0: endpoint {
-						remote-endpoint = <&v_hdmi_tx_ss_0v_hdmi_rx_ss_0>;
+						remote-endpoint = <&v_tpg_0v_hdmi_rx_ss_0>;
 					};
 				};
 			};
@@ -491,8 +491,8 @@
 				#size-cells = <0>;
 				encoder_hdmi_portv_hdmi_tx_ss_0: port@0 {
 					reg = <0>;
-					v_hdmi_tx_ss_0v_hdmi_rx_ss_0: endpoint {
-						remote-endpoint = <&hdmirx_outv_hdmi_rx_ss_0>;
+					v_hdmi_tx_ss_0v_tpg_0: endpoint {
+						remote-endpoint = <&tpg_outv_tpg_0>;
 					};
 				};
 			};
@@ -509,10 +509,10 @@
 			reg = <0x44a20000 0x10000>;
 			xlnx,color-bar = <1>;
 			xlnx,s-axi-ctrl-addr-width = <8>;
-			xlnx,samples-per-clock = <4>;
+			xlnx,samples-per-clock = <2>;
 			xlnx,max-data-width = <8>;
-			xlnx,has-axi4s-slave = <0>;
-			xlnx,ppc = <4>;
+			xlnx,has-axi4s-slave = <1>;
+			xlnx,ppc = <2>;
 			xlnx,max-cols = <1920>;
 			xlnx,edk-iptype = "PERIPHERAL";
 			status = "okay";
@@ -530,11 +530,17 @@
 					xlnx,video-width = <8>;
 					reg = <1>;
 					xlnx,video-format = <2>;
+					tpg_outv_tpg_0: endpoint {
+						remote-endpoint = <&v_hdmi_tx_ss_0v_tpg_0>;
+					};
 				};
 				tpg_port0v_tpg_0: port@0 {
 					xlnx,video-width = <8>;
 					reg = <0>;
 					xlnx,video-format = <2>;
+					v_tpg_0v_hdmi_rx_ss_0: endpoint {
+						remote-endpoint = <&hdmirx_outv_hdmi_rx_ss_0>;
+					};
 				};
 			};
 		};

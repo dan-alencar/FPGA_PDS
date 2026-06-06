@@ -5,9 +5,13 @@
  * BD (has v_hdmi_rx_ss_0). The previous colorbar firmware lives on the
  * colorbars branch / git history.
  *
- * Pure passthrough: RX VIDEO_OUT -> axis_register_slice -> TX VIDEO_IN.
- * The TPG is NOT in the datapath (no colorbar fallback; TX goes dark when the
- * source disconnects).
+ * Datapath: RX VIDEO_OUT -> axis_register_slice -> v_tpg (re-timer) -> TX
+ * VIDEO_IN. The TPG runs in passthrough mode (enableInput=TRUE) and regenerates
+ * clean video timing so the TX AXIS->video bridge locks (brdg=1) -- a bare
+ * register slice straight into TX did not. With IsPassThrough=FALSE the same
+ * TPG instead GENERATES color bars (drop-in fallback; bring-up trigger TBD).
+ * Requires the BD with TPG SAMPLES_PER_CLOCK=2 + HAS_AXI4S_SLAVE=1 and the
+ * datapath rewired through the TPG.
  *
  * Flow (interrupt-driven, mirrors the AUBoard Pass-Thru reference):
  *   RX cable HPD      -> RxConnectCallback enables RX refclk buffer
@@ -38,6 +42,7 @@
 #include "xv_hdmitxss.h"
 #include "xv_hdmirxss.h"
 #include "xvidc.h"
+#include "xv_tpg.h"
 #include "idt_8t49n24x.h"
 
 /* ------------------------------------------------------------------ bases */
@@ -50,6 +55,7 @@
 #define HDMITX_BASE     XPAR_XV_HDMITXSS_0_BASEADDR
 #define HDMIRX_BASE     XPAR_XV_HDMIRXSS_0_BASEADDR
 #define VPHY_BASE       XPAR_XVPHY_0_BASEADDR
+#define TPG_BASE        XPAR_XV_TPG_0_BASEADDR
 
 /* INTC input lines (concat order) — confirm against xparameters.h after export */
 #define INTR_HDMITX     XPAR_FABRIC_XV_HDMITXSS_0_INTR   /* = 0 */
@@ -61,6 +67,7 @@ static XIntc       Intc;
 static XVphy       Vphy;
 static XV_HdmiTxSs HdmiTxSs;
 static XV_HdmiRxSs HdmiRxSs;
+static XV_tpg      Tpg;          /* in the RX->TPG->TX datapath (re-timer + colorbar) */
 static XGpio       RstGpio;
 static u8          RstGpioReady = FALSE;
 
@@ -74,6 +81,8 @@ static volatile u8 EdidCloned        = FALSE;  /* TX sink EDID copied to RX yet 
 static volatile u32 g_rxconn=0, g_rxinit=0, g_rxup=0, g_rxdown=0;
 static volatile u32 g_txup=0, g_txdown=0, g_txconn=0;
 static volatile u32 g_txinit=0, g_txready=0;
+static volatile u32 g_txbrdg_unlock=0, g_txbrdg_overflow=0, g_txbrdg_underflow=0;
+static volatile u8  g_txbrdg_recover=FALSE;
 
 /* EDID advertised to the source. Copy the 256-byte Edid[] table from the
  * reference (xhdmi_example.c / xhdmi_edid.c) — a 1080p60-capable block. */
@@ -103,6 +112,8 @@ static void idt_release_reset(void)
 /* Defined further down; needed by TxStreamUpCallback (runs after GT TX lock). */
 static void ConfigureTxInfoframes(void);
 static void ReleaseHdmiTxResets(void);
+static void RestartVideoPipe(void);
+static void ConfigTpg(void);
 
 /* ========================================================================
  *  TX (sink-facing) callbacks
@@ -132,11 +143,41 @@ static void TxStreamUpCallback(void *ref)   { (void)ref; g_txup++;
      * reference TxStreamUpCallback (xhdmi_example.c). See [[hdmi-rx-passthrough-bd]]. */
     XV_HdmiTxSS_SetHdmiMode(&HdmiTxSs);
     XV_HdmiTxSs_AudioMute(&HdmiTxSs, TRUE);
+    XV_HdmiTxSs_SetSamplingRate(&HdmiTxSs, Vphy.HdmiTxSampleRate);
     ConfigureTxInfoframes();
+    RestartVideoPipe();
+    ConfigTpg();                            /* feed TX VIDEO_IN (RX passthrough) */
     XV_HdmiTxSS_MaskDisable(&HdmiTxSs);     /* unblank */
     ReleaseHdmiTxResets();
+    /* Now that the TPG is configured for passthrough and the TX output is set
+     * up, UN-mute the RX so its pixels flow into the (ready) TPG. Releasing RX
+     * video reset earlier (in StartTxAfterRx, before GT lock + ConfigTpg) made
+     * RX push pixels into a not-yet-passthrough TPG -> black. Mirrors the
+     * reference, which releases RX VRST here in TxStreamUp. */
+    XV_HdmiRxSs_VRST(&HdmiRxSs, FALSE);
 }
 static void TxStreamDownCallback(void *ref) { (void)ref; g_txdown++; }
+
+static void TxBrdgUnlockedCallback(void *ref)
+{
+    (void)ref;
+    g_txbrdg_unlock++;
+    g_txbrdg_recover = TRUE;
+}
+
+static void TxBrdgOverflowCallback(void *ref)
+{
+    (void)ref;
+    g_txbrdg_overflow++;
+    g_txbrdg_recover = TRUE;
+}
+
+static void TxBrdgUnderflowCallback(void *ref)
+{
+    (void)ref;
+    g_txbrdg_underflow++;
+    g_txbrdg_recover = TRUE;
+}
 
 static void VphyHdmiTxInitCallback(void *ref)  { (void)ref; g_txinit++;
     XV_HdmiTxSs_RefClockChangeInit(&HdmiTxSs); }
@@ -203,10 +244,23 @@ static void RxStreamUpCallback(void *ref)
 {
     XV_HdmiRxSs *p = (XV_HdmiRxSs *)ref;
     g_rxup++;
-    xil_printf("RX: stream UP\r\n");
 
     XVidC_VideoStream *rx = XV_HdmiRxSs_GetVideoStream(p);
     XVidC_VideoStream *tx = XV_HdmiTxSs_GetVideoStream(&HdmiTxSs);
+
+    xil_printf("RX: stream UP  %lux%lu fmt=%d bpc=%d ppc=%d vmid=%d intl=%d\r\n",
+               (unsigned long)rx->Timing.HActive,
+               (unsigned long)rx->Timing.VActive,
+               (int)rx->ColorFormatId, (int)rx->ColorDepth,
+               (int)rx->PixPerClk, (int)rx->VmId, (int)rx->IsInterlaced);
+    /* Proof the RX decoded the LIVE incoming stream: real timing totals + rate +
+     * the source's AVI. These come only from an actively-transmitting source. */
+    XHdmiC_AVI_InfoFrame *ra = XV_HdmiRxSs_GetAviInfoframe(p);
+    xil_printf("RX:   HTotal=%u VTotal=%u %uHz | AVI cs=%d colorimetry=%d qrange=%d vic=%d\r\n",
+               (unsigned)rx->Timing.HTotal, (unsigned)rx->Timing.F0PVTotal,
+               (unsigned)rx->FrameRate,
+               (int)ra->ColorSpace, (int)ra->Colorimetry,
+               (int)ra->QuantizationRange, (int)ra->VIC);
 
     /* Copy RX video parameters straight into TX */
     *tx = *rx;
@@ -250,11 +304,110 @@ static void ConfigureTxInfoframes(void)
     XHdmiC_AVI_InfoFrame *avi = XV_HdmiTxSs_GetAviInfoframe(&HdmiTxSs);
     XHdmiC_VSIF *vsif = XV_HdmiTxSs_GetVSIF(&HdmiTxSs);
 
-    memset(avi, 0, sizeof(*avi));
     memset(vsif, 0, sizeof(*vsif));
-    avi->Version = 2;
-    avi->ColorSpace = XV_HdmiC_XVidC_To_IfColorformat(s->ColorFormatId);
-    avi->VIC = HdmiTxSs.HdmiTxPtr->Stream.Vic;
+
+    if (IsPassThrough) {
+        /* Passthrough: copy the SOURCE's actual AVI InfoFrame from the RX so the
+         * sink interprets the forwarded pixels correctly -- colorimetry, RGB/YCC
+         * quantization range, VIC, etc. A minimal hand-built AVI shows generated
+         * colorbars fine but blanks REAL video when the source uses YCbCr or
+         * limited range (locked chain, brdg=1, but black). Mirrors the reference
+         * TxStreamUp AVI copy (xhdmi_example.c). */
+        XHdmiC_AVI_InfoFrame *rxavi = XV_HdmiRxSs_GetAviInfoframe(&HdmiRxSs);
+        memcpy(avi, rxavi, sizeof(*avi));
+    } else {
+        memset(avi, 0, sizeof(*avi));
+        avi->Version = 2;
+        avi->ColorSpace = XV_HdmiC_XVidC_To_IfColorformat(s->ColorFormatId);
+        avi->VIC = HdmiTxSs.HdmiTxPtr->Stream.Vic;
+    }
+}
+
+/* Configure the in-datapath TPG (RX VIDEO_OUT -> slice -> TPG -> TX VIDEO_IN).
+ * In passthrough (IsPassThrough==TRUE) the TPG is a transparent re-timer
+ * (enableInput=TRUE): it regenerates clean, gap-free video timing from the RX
+ * stream so the TX AXIS->video bridge can lock (this is what gives brdg=1 --
+ * a bare register slice did not). With IsPassThrough==FALSE it instead
+ * GENERATES the bckgndId pattern (colorbars) -> drop-in fallback path.
+ * Mirrors the reference XV_ConfigTpg (xhdmi_example.c). */
+/* DIAGNOSTIC: set to 1 to force the in-path TPG to GENERATE colorbars instead
+ * of passing RX through, even while passthrough is active. Bisects "locked but
+ * black": if bars appear, the whole TX output path (TMDS / AVI / mask / monitor
+ * mode) is good and the fault is RX->TPG video forwarding; if still black, the
+ * fault is the TX output config, independent of RX. Set back to 0 for real
+ * passthrough. */
+#define TPG_COLORBAR_TEST 0
+
+/* DIAGNOSTIC: set to 1 to overlay a moving RED box ON TOP of the passthrough
+ * video. The box is TPG-GENERATED (independent of the RX input), so:
+ *   - moving box visible over the SOURCE's video -> passthrough fully works;
+ *   - moving box visible over BLACK -> TPG runs + reaches TX, but no RX pixels
+ *     are arriving at the TPG (look at the RX VIDEO_OUT AXIS next, e.g. ILA);
+ *   - no box at all -> TPG output isn't reaching the TX as visible pixels.
+ * Set back to 0 for clean passthrough. */
+#define TPG_BOX_TEST 1
+
+static void RestartVideoPipe(void)
+{
+    if (Tpg.IsReady != XIL_COMPONENT_IS_READY)
+        return;
+
+    /* The current BD has no firmware-controlled reset for TPG/ap_rst_n or the
+     * TX video AXIS reset. This is the closest firmware-only equivalent: stop
+     * the HLS core cleanly, clear passthrough input, then let ConfigTpg restart
+     * with fresh per-stream timing. A real reset net is still preferable. */
+    XV_tpg_DisableAutoRestart(&Tpg);
+    XV_tpg_Set_enableInput(&Tpg, FALSE);
+    XV_tpg_WriteReg(Tpg.Config.BaseAddress, XV_TPG_CTRL_ADDR_AP_CTRL, 0x0);
+    usleep(1000);
+}
+
+static void ConfigTpg(void)
+{
+    XVidC_VideoStream *s = XV_HdmiTxSs_GetVideoStream(&HdmiTxSs);
+    u32 width  = s->Timing.HActive;
+    u32 height = s->Timing.VActive;
+    if (width == 0 || height == 0) return;   /* nothing valid to time to yet */
+
+    u8 passthru = IsPassThrough && !TPG_COLORBAR_TEST;
+    if (passthru && !Tpg.Config.HasAxi4sSlave) {
+        xil_printf("TPG: WARN BSP says no AXI4S slave; forcing generator mode\r\n");
+        passthru = FALSE;
+    }
+
+    XV_tpg_DisableAutoRestart(&Tpg);
+    XV_tpg_Set_height(&Tpg, height);
+    XV_tpg_Set_width(&Tpg,  width);
+    XV_tpg_Set_colorFormat(&Tpg, s->ColorFormatId);
+    XV_tpg_Set_bckgndId(&Tpg, XTPG_BKGND_COLOR_BARS);   /* used when not passthru */
+    XV_tpg_Set_ovrlayId(&Tpg, (passthru && TPG_BOX_TEST) ? 1 : 0);  /* 1 = moving box */
+    XV_tpg_Set_enableInput(&Tpg, passthru);
+    if (passthru) {
+        XV_tpg_Set_passthruStartX(&Tpg, 0);
+        XV_tpg_Set_passthruStartY(&Tpg, 0);
+        XV_tpg_Set_passthruEndX(&Tpg, width);
+        XV_tpg_Set_passthruEndY(&Tpg, height);
+#if TPG_BOX_TEST
+        XV_tpg_Set_boxSize(&Tpg, 200);
+        XV_tpg_Set_boxColorR(&Tpg, 255);
+        XV_tpg_Set_boxColorG(&Tpg, 0);
+        XV_tpg_Set_boxColorB(&Tpg, 0);
+        XV_tpg_Set_motionSpeed(&Tpg, 4);
+#endif
+    }
+    XV_tpg_EnableAutoRestart(&Tpg);
+    XV_tpg_Start(&Tpg);
+    /* Print only on change -- TxStreamUp can fire repeatedly during bring-up and
+     * xil_printf from ISR context floods the slow JTAG-UART. */
+    static int last = -1;
+    int cur = (passthru ? 1 : 0) | ((int)width << 1);
+    if (cur != last) {
+        last = cur;
+        xil_printf("TPG: %s %lux%lu fmt=%d\r\n",
+                   passthru ? "PASSTHRU" : "COLORBAR-GEN",
+                   (unsigned long)width, (unsigned long)height,
+                   (int)s->ColorFormatId);
+    }
 }
 
 static void ReleaseHdmiTxResets(void)
@@ -332,8 +485,9 @@ static void StartTxAfterRx(void)
     usleep(50000);   /* let the locked clock settle first */
     XVphy_ClkDetFreqReset(&Vphy, 0, XVPHY_DIR_TX);
 
-    /* Release RX video reset so passthrough data flows */
-    XV_HdmiRxSs_VRST(&HdmiRxSs, FALSE);
+    /* NOTE: RX video reset is released in TxStreamUpCallback (after the TPG is
+     * configured for passthrough), NOT here -- releasing it before the GT is up
+     * and the TPG is ready pushed RX pixels into a non-passthrough TPG -> black. */
 
     /* Enable TX TMDS clock output */
     XVphy_Clkout1OBufTdsEnable(&Vphy, XVPHY_DIR_TX, TRUE);
@@ -390,6 +544,7 @@ int main(void)
 {
     unsigned hb = 0;
     unsigned falseReady = 0;   /* consecutive false-READY beats (qpll0=0) */
+    unsigned bridgeMiss = 0;
 
     for (int i = 0; i < 3; i++) {
         xil_printf("\r\n=== HDMI RX->TX passthrough bring-up (boot) ===\r\n");
@@ -419,6 +574,12 @@ int main(void)
                             (void *)TxStreamUpCallback, &HdmiTxSs);
     XV_HdmiTxSs_SetCallback(&HdmiTxSs, XV_HDMITXSS_HANDLER_STREAM_DOWN,
                             (void *)TxStreamDownCallback, &HdmiTxSs);
+    XV_HdmiTxSs_SetCallback(&HdmiTxSs, XV_HDMITXSS_HANDLER_BRDGUNLOCK,
+                            (void *)TxBrdgUnlockedCallback, &HdmiTxSs);
+    XV_HdmiTxSs_SetCallback(&HdmiTxSs, XV_HDMITXSS_HANDLER_BRDGOVERFLOW,
+                            (void *)TxBrdgOverflowCallback, &HdmiTxSs);
+    XV_HdmiTxSs_SetCallback(&HdmiTxSs, XV_HDMITXSS_HANDLER_BRDGUNDERFLOW,
+                            (void *)TxBrdgUnderflowCallback, &HdmiTxSs);
 
     /* 4) Video PHY (TX + RX callbacks). */
     xil_printf("step4: VPHY...\r\n");
@@ -452,6 +613,18 @@ int main(void)
     XV_HdmiRxSs_SetCallback(&HdmiRxSs, XV_HDMIRXSS_HANDLER_STREAM_DOWN,
                             (void *)RxStreamDownCallback, &HdmiRxSs);
 
+    /* 5b) TPG (in the RX->TPG->TX datapath). Just bring the driver up; the
+     * stream-specific config happens in TxStreamUpCallback via ConfigTpg(). */
+    xil_printf("step5b: TPG...\r\n");
+    if (XV_tpg_Initialize(&Tpg, TPG_BASE) != XST_SUCCESS)
+        xil_printf("WARN: TPG init failed\r\n");
+    else
+        xil_printf("TPG cfg: axi4s=%u ppc=%u max=%ux%u\r\n",
+                   (unsigned)Tpg.Config.HasAxi4sSlave,
+                   (unsigned)Tpg.Config.PixPerClk,
+                   (unsigned)Tpg.Config.MaxWidth,
+                   (unsigned)Tpg.Config.MaxHeight);
+
     /* 6) Go. */
     Xil_ExceptionEnable();
     xil_printf("Init done. Connect HDMI source (RX) and sink (TX)...\r\n");
@@ -483,14 +656,17 @@ int main(void)
         xil_printf("hb #%u: rxConn=%d txConn=%d pt=%d | "
                    "rxRefHz=%lu txRefHz=%lu | rxup=%lu txup=%lu | "
                    "txPll=%lu txLock=%lu rxPll=%lu rxLock=%lu | "
-                   "lnk=%u vid=%u brdg=%u\r\n",
+                   "lnk=%u vid=%u brdg=%u | brdgEvt=%lu/%lu/%lu\r\n",
                    hb++, (int)HdmiRxSs.IsStreamConnected, (int)TxCableConnect,
                    (int)IsPassThrough,
                    (unsigned long)rxRefHz, (unsigned long)txRefHz,
                    (unsigned long)g_rxup, (unsigned long)g_txup,
                    (unsigned long)txPll, (unsigned long)txLock,
                    (unsigned long)rxPll, (unsigned long)rxLock,
-                   (unsigned)lnkRdy, (unsigned)vidRdy, (unsigned)brdgLk);
+                   (unsigned)lnkRdy, (unsigned)vidRdy, (unsigned)brdgLk,
+                   (unsigned long)g_txbrdg_unlock,
+                   (unsigned long)g_txbrdg_overflow,
+                   (unsigned long)g_txbrdg_underflow);
 
         /* Periodic full GT/PLL dump while passthrough is active. */
         if (IsPassThrough && (hb % 4 == 0)) {
@@ -511,6 +687,27 @@ int main(void)
             }
         } else {
             falseReady = 0;
+        }
+
+        if (IsPassThrough && TxCableConnect && lnkRdy && vidRdy) {
+            if (!brdgLk) {
+                bridgeMiss++;
+            } else {
+                bridgeMiss = 0;
+                g_txbrdg_recover = FALSE;
+            }
+
+            if (!brdgLk && (g_txbrdg_recover || bridgeMiss >= 4)) {
+                bridgeMiss = 0;
+                g_txbrdg_recover = FALSE;
+                xil_printf("PT: TX bridge unlocked with link/video ready -> restart TPG path\r\n");
+                RestartVideoPipe();
+                ConfigTpg();
+                ReleaseHdmiTxResets();
+                XV_HdmiRxSs_VRST(&HdmiRxSs, FALSE);
+            }
+        } else {
+            bridgeMiss = 0;
         }
 
         for (volatile int i = 0; i < 8000000; i++) { ; }

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Tue Jun  2 22:48:36 2026
+| Date         : Wed Jun  3 13:02:24 2026
 | Host         : pop-os running 64-bit Pop!_OS 24.04 LTS
 | Command      : report_drc -file hdmi_tx_bd_wrapper_drc_opted.rpt -pb hdmi_tx_bd_wrapper_drc_opted.pb -rpx hdmi_tx_bd_wrapper_drc_opted.rpx
 | Design       : hdmi_tx_bd_wrapper
@@ -24,57 +24,178 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 9
+             Checks found: 33
 +--------+----------+------------------------+--------+
 | Rule   | Severity | Description            | Checks |
 +--------+----------+------------------------+--------+
-| DPIP-2 | Warning  | Input pipelining       | 6      |
-| DPOP-4 | Warning  | MREG Output pipelining | 3      |
+| DPIP-2 | Warning  | Input pipelining       | 14     |
+| DPOP-3 | Warning  | PREG Output pipelining | 8      |
+| DPOP-4 | Warning  | MREG Output pipelining | 11     |
 +--------+----------+------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
 DPIP-2#1 Warning
 Input pipelining  
-DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mac_muladd_16ns_16s_16s_16_4_1_U87/hdmi_tx_bd_v_tpg_0_0_mac_muladd_16ns_16s_16s_16_4_1_DSP48_0_U/p_reg_reg input hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mac_muladd_16ns_16s_16s_16_4_1_U87/hdmi_tx_bd_v_tpg_0_0_mac_muladd_16ns_16s_16s_16_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#2 Warning
 Input pipelining  
-DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mac_muladd_8ns_5ns_16ns_17_4_1_U100/hdmi_tx_bd_v_tpg_0_0_mac_muladd_8ns_5ns_16ns_17_4_1_DSP48_0_U/p_reg_reg input hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mac_muladd_8ns_5ns_16ns_17_4_1_U100/hdmi_tx_bd_v_tpg_0_0_mac_muladd_8ns_5ns_16ns_17_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#3 Warning
 Input pipelining  
-DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mac_muladd_8ns_5ns_16ns_17_4_1_U101/hdmi_tx_bd_v_tpg_0_0_mac_muladd_8ns_5ns_16ns_17_4_1_DSP48_0_U/p_reg_reg input hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mac_muladd_8ns_5ns_16ns_17_4_1_U101/hdmi_tx_bd_v_tpg_0_0_mac_muladd_8ns_5ns_16ns_17_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#4 Warning
 Input pipelining  
-DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mac_muladd_8ns_8ns_15ns_16_4_1_U96/hdmi_tx_bd_v_tpg_0_0_mac_muladd_8ns_8ns_15ns_16_4_1_DSP48_0_U/p_reg_reg input hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mac_muladd_8ns_8ns_15ns_16_4_1_U96/hdmi_tx_bd_v_tpg_0_0_mac_muladd_8ns_8ns_15ns_16_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#5 Warning
 Input pipelining  
-DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mac_muladd_8ns_8ns_15ns_16_4_1_U98/hdmi_tx_bd_v_tpg_0_0_mac_muladd_8ns_8ns_15ns_16_4_1_DSP48_0_U/p_reg_reg input hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mac_muladd_8ns_8ns_15ns_16_4_1_U98/hdmi_tx_bd_v_tpg_0_0_mac_muladd_8ns_8ns_15ns_16_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#6 Warning
 Input pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U64/tmp_product input hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U64/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#7 Warning
+Input pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U65/tmp_product input hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U65/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#8 Warning
+Input pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U66/tmp_product input hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U66/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#9 Warning
+Input pipelining  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#10 Warning
+Input pipelining  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#11 Warning
+Input pipelining  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#12 Warning
+Input pipelining  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#13 Warning
+Input pipelining  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#14 Warning
+Input pipelining  
 DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-3#1 Warning
+PREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U61/tmp_product output hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U61/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#2 Warning
+PREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U62/tmp_product output hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U62/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#3 Warning
+PREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U63/tmp_product output hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U63/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#4 Warning
+PREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U64/tmp_product output hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U64/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#5 Warning
+PREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U65/tmp_product output hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U65/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#6 Warning
+PREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U66/tmp_product output hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U66/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#7 Warning
+PREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_20s_9ns_28_1_1_U82/tmp_product output hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_20s_9ns_28_1_1_U82/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#8 Warning
+PREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_20s_9ns_28_1_1_U83/tmp_product output hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_20s_9ns_28_1_1_U83/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-4#1 Warning
 MREG Output pipelining  
-DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp multiplier stage hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U61/tmp_product multiplier stage hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U61/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#2 Warning
 MREG Output pipelining  
-DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp multiplier stage hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U62/tmp_product multiplier stage hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U62/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#3 Warning
+MREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U63/tmp_product multiplier stage hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U63/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#4 Warning
+MREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U64/tmp_product multiplier stage hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U64/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#5 Warning
+MREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U65/tmp_product multiplier stage hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U65/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#6 Warning
+MREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U66/tmp_product multiplier stage hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_11ns_13ns_23_1_1_U66/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#7 Warning
+MREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_20s_9ns_28_1_1_U82/tmp_product multiplier stage hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_20s_9ns_28_1_1_U82/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#8 Warning
+MREG Output pipelining  
+DSP hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_20s_9ns_28_1_1_U83/tmp_product multiplier stage hdmi_tx_bd_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_525/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_565_2_fu_621/mul_20s_9ns_28_1_1_U83/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#9 Warning
+MREG Output pipelining  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp multiplier stage hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#10 Warning
+MREG Output pipelining  
+DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp multiplier stage hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#11 Warning
 MREG Output pipelining  
 DSP hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp multiplier stage hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>

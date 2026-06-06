@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Tue Jun  2 22:27:20 2026
+-- Date        : Tue Jun  2 22:27:19 2026
 -- Host        : pop-os running 64-bit Pop!_OS 24.04 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/dan-alencar/Documents/GitHub/FPGA_PDS/FPGA_PDS/FPGA_PDS.gen/sources_1/bd/hdmi_tx_bd/ip/hdmi_tx_bd_axis_register_slice_0_0/hdmi_tx_bd_axis_register_slice_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top hdmi_tx_bd_axis_register_slice_0_0 -prefix
+--               hdmi_tx_bd_axis_register_slice_0_0_ hdmi_tx_bd_axis_register_slice_0_0_sim_netlist.vhdl
 -- Design      : hdmi_tx_bd_axis_register_slice_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,8 +28,6 @@ entity hdmi_tx_bd_axis_register_slice_0_0_axis_register_slice_v1_1_35_axisc_regi
     s_axis_tvalid : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 49 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_tx_bd_axis_register_slice_0_0_axis_register_slice_v1_1_35_axisc_register_slice : entity is "axis_register_slice_v1_1_35_axisc_register_slice";
 end hdmi_tx_bd_axis_register_slice_0_0_axis_register_slice_v1_1_35_axisc_register_slice;
 
 architecture STRUCTURE of hdmi_tx_bd_axis_register_slice_0_0_axis_register_slice_v1_1_35_axisc_register_slice is
@@ -1602,8 +1600,6 @@ entity hdmi_tx_bd_axis_register_slice_0_0_axis_register_slice_v1_1_35_axis_regis
   attribute G_TASK_SEVERITY_INFO of hdmi_tx_bd_axis_register_slice_0_0_axis_register_slice_v1_1_35_axis_register_slice : entity is 0;
   attribute G_TASK_SEVERITY_WARNING : integer;
   attribute G_TASK_SEVERITY_WARNING of hdmi_tx_bd_axis_register_slice_0_0_axis_register_slice_v1_1_35_axis_register_slice : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_tx_bd_axis_register_slice_0_0_axis_register_slice_v1_1_35_axis_register_slice : entity is "axis_register_slice_v1_1_35_axis_register_slice";
   attribute P_TPAYLOAD_WIDTH : integer;
   attribute P_TPAYLOAD_WIDTH of hdmi_tx_bd_axis_register_slice_0_0_axis_register_slice_v1_1_35_axis_register_slice : entity is 50;
 end hdmi_tx_bd_axis_register_slice_0_0_axis_register_slice_v1_1_35_axis_register_slice;

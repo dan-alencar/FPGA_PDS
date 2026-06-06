@@ -1,0 +1,10 @@
+# Inferred from performance & pipeline pragmas/directives
+set_directive_inline tpgpatterndpcolorsquare
+set_directive_inline tpgpatterndpcolorramp
+set_directive_inline tpgpatterncheckerboard
+set_directive_inline tpgpatternrainbow
+set_directive_inline tpgpatterncrosshatch
+set_directive_inline tpgpatterntartancolorbars
+set_directive_inline tpgpatterncolorbars
+set_directive_array_partition v_tpg/tpgSinTableArray_9bit -dim=1 -type=cyclic -factor=3 tpgSinTableArray_9bit
+set_directive_inline tpgpatternbox

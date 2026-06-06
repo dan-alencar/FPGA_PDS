@@ -10,7 +10,7 @@
         speed_grade = "2";
 
         cpus_microblaze_0: cpus_microblaze@0 {
-                phandle = <0x18>;
+                phandle = <0x1a>;
                 #cpu-mask-cells = <0x1>;
                 compatible = "cpus,cluster";
                 #address-cells = <0x1>;
@@ -32,7 +32,7 @@
                 #ranges-size-cells = <0x1>;
 
                 microblaze_0: cpu@0 {
-                        phandle = <0x19>;
+                        phandle = <0x1b>;
                         xlnx,reset-msr-dce = <0x0>;
                         model = "microblaze,11.0";
                         xlnx,addr-tag-bits = <0x0>;
@@ -183,12 +183,12 @@
         };
 
         clock: clocks {
-                phandle = <0x1a>;
+                phandle = <0x1c>;
                 #address-cells = <0x1>;
                 #size-cells = <0x0>;
 
                 clk_cpu_0: clk_cpu@0 {
-                        phandle = <0x1b>;
+                        phandle = <0x1d>;
                         compatible = "fixed-clock";
                         reg = <0x0>;
                         clock-frequency = <0x5f5e100>;
@@ -401,7 +401,7 @@
                 };
 
                 microblaze_0_local_memory_ilmb_bram_if_cntlr: microblaze_0_local_memory_ilmb_bram_if_cntlr@0 {
-                        phandle = <0x1c>;
+                        phandle = <0x1e>;
                         xlnx,edk-special = "BRAM_CTRL";
                         xlnx,write-access = <0x2>;
                         compatible = "xlnx,lmb-bram-if-cntlr-4.0", "xlnx,axi-bram-ctrl";
@@ -489,19 +489,19 @@
                         xlnx,exdes-axilite-freq = <0x64>;
 
                         hdmirx_portsv_hdmi_rx_ss_0: ports {
-                                phandle = <0x1d>;
+                                phandle = <0x1f>;
                                 #address-cells = <0x1>;
                                 #size-cells = <0x0>;
 
                                 hdmirx_portv_hdmi_rx_ss_0: port@0 {
-                                        phandle = <0x1e>;
+                                        phandle = <0x20>;
                                         reg = <0x0>;
                                         xlnx,video-width = <0xa>;
                                         xlnx,video-format = <0x0>;
 
                                         hdmirx_outv_hdmi_rx_ss_0: endpoint {
-                                                phandle = <0x17>;
-                                                remote-endpoint = <&v_hdmi_tx_ss_0v_hdmi_rx_ss_0>;
+                                                phandle = <0x19>;
+                                                remote-endpoint = <&v_tpg_0v_hdmi_rx_ss_0>;
                                         };
                                 };
                         };
@@ -550,17 +550,17 @@
                         xlnx,exdes-axilite-freq = <0x64>;
 
                         hdmitx_portsv_hdmi_tx_ss_0: ports {
-                                phandle = <0x1f>;
+                                phandle = <0x21>;
                                 #address-cells = <0x1>;
                                 #size-cells = <0x0>;
 
                                 encoder_hdmi_portv_hdmi_tx_ss_0: port@0 {
-                                        phandle = <0x20>;
+                                        phandle = <0x22>;
                                         reg = <0x0>;
 
-                                        v_hdmi_tx_ss_0v_hdmi_rx_ss_0: endpoint {
-                                                phandle = <0x13>;
-                                                remote-endpoint = <&hdmirx_outv_hdmi_rx_ss_0>;
+                                        v_hdmi_tx_ss_0v_tpg_0: endpoint {
+                                                phandle = <0x18>;
+                                                remote-endpoint = <&tpg_outv_tpg_0>;
                                         };
                                 };
                         };
@@ -579,10 +579,10 @@
                         reg = <0x44a20000 0x10000>;
                         xlnx,color-bar = <0x1>;
                         xlnx,s-axi-ctrl-addr-width = <0x8>;
-                        xlnx,samples-per-clock = <0x4>;
+                        xlnx,samples-per-clock = <0x2>;
                         xlnx,max-data-width = <0x8>;
-                        xlnx,has-axi4s-slave = <0x0>;
-                        xlnx,ppc = <0x4>;
+                        xlnx,has-axi4s-slave = <0x1>;
+                        xlnx,ppc = <0x2>;
                         xlnx,max-cols = <0x780>;
                         xlnx,edk-iptype = "PERIPHERAL";
                         status = "okay";
@@ -595,22 +595,32 @@
                         xlnx,name = "v_tpg_0";
 
                         tpg_portsv_tpg_0: ports {
-                                phandle = <0x21>;
+                                phandle = <0x23>;
                                 #address-cells = <0x1>;
                                 #size-cells = <0x0>;
 
                                 tpg_port1v_tpg_0: port@1 {
-                                        phandle = <0x22>;
+                                        phandle = <0x24>;
                                         xlnx,video-width = <0x8>;
                                         reg = <0x1>;
                                         xlnx,video-format = <0x2>;
+
+                                        tpg_outv_tpg_0: endpoint {
+                                                phandle = <0x17>;
+                                                remote-endpoint = <&v_hdmi_tx_ss_0v_tpg_0>;
+                                        };
                                 };
 
                                 tpg_port0v_tpg_0: port@0 {
-                                        phandle = <0x23>;
+                                        phandle = <0x25>;
                                         xlnx,video-width = <0x8>;
                                         reg = <0x0>;
                                         xlnx,video-format = <0x2>;
+
+                                        v_tpg_0v_hdmi_rx_ss_0: endpoint {
+                                                phandle = <0x13>;
+                                                remote-endpoint = <&hdmirx_outv_hdmi_rx_ss_0>;
+                                        };
                                 };
                         };
                 };
@@ -947,11 +957,13 @@
                 v_hdmi_tx_ss_0 = "/amba_pl/v_hdmi_tx_ss@44a00000";
                 hdmitx_portsv_hdmi_tx_ss_0 = "/amba_pl/v_hdmi_tx_ss@44a00000/ports";
                 encoder_hdmi_portv_hdmi_tx_ss_0 = "/amba_pl/v_hdmi_tx_ss@44a00000/ports/port@0";
-                v_hdmi_tx_ss_0v_hdmi_rx_ss_0 = "/amba_pl/v_hdmi_tx_ss@44a00000/ports/port@0/endpoint";
+                v_hdmi_tx_ss_0v_tpg_0 = "/amba_pl/v_hdmi_tx_ss@44a00000/ports/port@0/endpoint";
                 v_tpg_0 = "/amba_pl/v_tpg@44a20000";
                 tpg_portsv_tpg_0 = "/amba_pl/v_tpg@44a20000/ports";
                 tpg_port1v_tpg_0 = "/amba_pl/v_tpg@44a20000/ports/port@1";
+                tpg_outv_tpg_0 = "/amba_pl/v_tpg@44a20000/ports/port@1/endpoint";
                 tpg_port0v_tpg_0 = "/amba_pl/v_tpg@44a20000/ports/port@0";
+                v_tpg_0v_hdmi_rx_ss_0 = "/amba_pl/v_tpg@44a20000/ports/port@0/endpoint";
                 vid_phy_controller_0 = "/amba_pl/vid_phy_controller@44a30000";
                 vid_phy_controller_0rxphy_lane0 = "/amba_pl/vid_phy_controller@44a30000/vid_phy_rx_axi4s_ch0v_hdmi_rx_ss_0";
                 vid_phy_controller_0rxphy_lane1 = "/amba_pl/vid_phy_controller@44a30000/vid_phy_rx_axi4s_ch1v_hdmi_rx_ss_0";

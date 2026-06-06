@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Tue Jun  2 22:51:35 2026
+| Date         : Wed Jun  3 13:05:38 2026
 | Host         : pop-os running 64-bit Pop!_OS 24.04 LTS
 | Command      : report_methodology -file hdmi_tx_bd_wrapper_methodology_drc_routed.rpt -pb hdmi_tx_bd_wrapper_methodology_drc_routed.pb -rpx hdmi_tx_bd_wrapper_methodology_drc_routed.rpx
 | Design       : hdmi_tx_bd_wrapper
@@ -906,127 +906,127 @@ Related violations: <none>
 
 TIMING-46#1 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[0]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[1]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[0]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[1]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#2 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[1]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[2]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[1]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[2]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#3 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[2]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[2]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#4 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[3]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[4]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[3]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[4]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#5 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[4]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[5]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[4]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[5]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#6 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[5]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[6]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[5]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt0_inst/LRST_INST/clk_rst_reg[6]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#7 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[0]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[1]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[0]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[1]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#8 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[1]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[2]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[1]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[2]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#9 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[2]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[2]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#10 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[3]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[4]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[3]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[4]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#11 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[4]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[5]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[4]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[5]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#12 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[5]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[6]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[5]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt1_inst/LRST_INST/clk_rst_reg[6]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#13 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[0]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[1]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[0]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[1]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#14 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[1]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[2]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[1]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[2]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#15 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[2]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[2]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#16 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[3]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[4]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[3]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[4]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#17 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[4]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[5]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[4]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[5]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#18 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[5]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[6]/D with a direct connection and the CE pins connected to VCC (see constraint position 113 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[5]/Q and hdmi_tx_bd_i/vid_phy_controller_0/inst/dru_b0gt2_inst/LRST_INST/clk_rst_reg[6]/D with a direct connection and the CE pins connected to VCC (see constraint position 118 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-47#1 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK (see constraint position 102 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK (see constraint position 107 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#2 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE (see constraint position 103 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE (see constraint position 108 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#3 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK (see constraint position 102 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK (see constraint position 107 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#4 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE (see constraint position 102 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE (see constraint position 107 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#5 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK (see constraint position 103 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK (see constraint position 108 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 TIMING-47#6 Warning
 False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
-A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK (see constraint position 102 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+A Clock Group timing constraint is set between synchronous clocks hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE and hdmi_tx_bd_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/INTERNAL_TCK (see constraint position 107 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
 Related violations: <none>
 
 ULMTCS-1#1 Warning
 Control Sets use limits recommend reduction  
-This design uses 1559 control sets (vs. available limit of 19440, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
+This design uses 1700 control sets (vs. available limit of 19440, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
 Related violations: <none>
 
 XDCC-7#1 Warning

@@ -18,6 +18,12 @@
 #set_false_path -from [get_cells v_tpg_CTRL_s_axi_U/int_boxColorB_reg[*]]
 #
 #
+#set_false_path -from [get_cells v_tpg_CTRL_s_axi_U/int_enableInput_reg[*]]
+#set_false_path -from [get_cells v_tpg_CTRL_s_axi_U/int_passthruStartX_reg[*]]
+#set_false_path -from [get_cells v_tpg_CTRL_s_axi_U/int_passthruStartY_reg[*]]
+#set_false_path -from [get_cells v_tpg_CTRL_s_axi_U/int_passthruEndX_reg[*]]
+#set_false_path -from [get_cells v_tpg_CTRL_s_axi_U/int_passthruEndY_reg[*]]
+#
 
 set_false_path -from [get_cells CTRL_s_axi_U/int_height_reg[*]]
 set_false_path -from [get_cells CTRL_s_axi_U/int_width_reg[*]]
@@ -41,3 +47,8 @@ set_false_path -from [get_cells CTRL_s_axi_U/int_field_id_reg[*]]
 set_false_path -from [get_cells CTRL_s_axi_U/int_bck_motion_en_reg[*]]
 set_false_path -from [get_cells CTRL_s_axi_U/int_dpYUVCoef_reg[*]]
 
+set_false_path -from [get_cells CTRL_s_axi_U/int_enableInput_reg[*]]
+set_false_path -from [get_cells CTRL_s_axi_U/int_passthruStartX_reg[*]]
+set_false_path -from [get_cells CTRL_s_axi_U/int_passthruStartY_reg[*]]
+set_false_path -from [get_cells CTRL_s_axi_U/int_passthruEndX_reg[*]]
+set_false_path -from [get_cells CTRL_s_axi_U/int_passthruEndY_reg[*]]

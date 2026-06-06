@@ -5,8 +5,8 @@ XV_tpg_Config XV_tpg_ConfigTable[] __attribute__ ((section (".drvcfg_sec"))) = {
 	{
 		"xlnx,v-tpg-8.2", /* compatible */
 		0x44a20000, /* reg */
-		0x0, /* xlnx,axi4s-slave */
-		0x4, /* xlnx,samples-per-clock */
+		0x1, /* xlnx,axi4s-slave */
+		0x2, /* xlnx,samples-per-clock */
 		0x3, /* xlnx,num-video-components */
 		0x780, /* xlnx,max-cols */
 		0x438, /* xlnx,max-rows */
